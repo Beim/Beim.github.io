@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[ubuntu 启动初始化]]></title>
+      <url>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</url>
+      <content type="html"><![CDATA[<h2 id="首先看这几个目录："><a href="#首先看这几个目录：" class="headerlink" title="首先看这几个目录："></a>首先看这几个目录：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># sysvinit 的文件</div><div class="line">/etc/init.d # sysvinit 启动服务的脚本</div><div class="line">/etc/rc$&#123;runlevel&#125;.d # 指向sysvinit 目录下脚本的软链接，系统通过区分不同目录来加载对应运行级别的程序。</div><div class="line"></div><div class="line"># upstart 的文件</div><div class="line">/etc/init # upstart 的启动配置文件。</div><div class="line"></div><div class="line"># systemd 的文件</div><div class="line">/etc/systemd/system # 指向/lib/systemd/system 的软链接，可以通过增删软链接来启用或者禁用启动服务。</div><div class="line">/lib/systemd/system # systemd 的启动配置文件。</div></pre></td></tr></table></figure>
+<p>ubuntu 16采用的是systemd 初始化系统<br>ubuntu 14采用的是upstart 初始化系统<br>sysvinit 则是更早版本的启动服务<br><a id="more"></a></p>
+<p>为了兼容性，systemd 和upstart 都会支持sysvinit</p>
+<h2 id="一些工具"><a href="#一些工具" class="headerlink" title="一些工具"></a>一些工具</h2><p>sysvinit 启动的服务可以通过service 来控制</p>
+<ul>
+<li><code>$ service --status-all</code> 查看服务启动的状态，列出的服务和/etc/init.d 目录下的脚本是一一对应的。</li>
+<li><code>$ service serviceName start/stop</code> 启用或者关闭服务。</li>
+</ul>
+<p>进入<code>/etc/rc2.d</code> 目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd /etc/rc2.d</div><div class="line">$ ll</div></pre></td></tr></table></figure></p>
+<p>可以看到除了README 外，其他程序都是S || K + 数字 + 程序名的形式。S表示Start，也就是启动，K表示Kill（从其他运行级别切换过来需要关闭的程序）。后面的数字表示处理顺序，数字越小越早处理，数字相同时按照程序名的字母顺序启动。<br>可以通过修改S 或者K 来管理服务启动项。更建议使用工具来修改：<a href="http://wiki.ubuntu.org.cn/%E5%90%AF%E5%8A%A8#sysv-rc-conf" target="_blank" rel="external">sysv-rc-conf</a>(修改不同运行级别的启动项)，<a href="http://wiki.ubuntu.org.cn/%E5%90%AF%E5%8A%A8#rcconf" target="_blank" rel="external">rcconf</a>（修改当前运行级别的启动项）。</p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li><a href="http://www.ruanyifeng.com/blog/2013/08/linux_boot_process.html" target="_blank" rel="external">Linux 的启动流程_阮一峰</a>（初始化部分与ubuntu 不同，ubuntu 现在采用的是Upstart 启动服务）</li>
+<li><a href="http://www.cnblogs.com/cassvin/archive/2011/12/25/ubuntu_init_analysis.html" target="_blank" rel="external">Ubuntu init启动流程分析</a>(解释了System V initialization 和 Upstart 两种方式)</li>
+<li><a href="http://wiki.ubuntu.org.cn/%E5%90%AF%E5%8A%A8#rcconf" target="_blank" rel="external">ubuntuwiki启动</a></li>
+<li><a href="https://www.ibm.com/developerworks/cn/linux/1407_liuming_init2/" target="_blank" rel="external">浅析 Linux 初始化 init 系统，第 2 部分: UpStart</a></li>
+<li><a href="http://blog.fens.me/linux-upstart/" target="_blank" rel="external">upstart把应用封装成系统服务</a></li>
+<li><a href="http://wiki.ubuntu.org.cn/%E5%90%AF%E5%8A%A8#rcconf" target="_blank" rel="external">upstart_cookbook</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html" target="_blank" rel="external">Systemd 入门教程：命令篇</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html" target="_blank" rel="external">Systemd 入门教程：实战篇</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2016/03/node-systemd-tutorial.html" target="_blank" rel="external">Node 应用的 Systemd 启动</a></li>
+<li><a href="http://www.ibm.com/developerworks/cn/linux/1407_liuming_init3/index.html" target="_blank" rel="external">浅析 Linux 初始化 init 系统，第 3 部分: Systemd</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[git命令之 git tag]]></title>
+      <url>https://beim.github.io/2016/08/05/git%E5%91%BD%E4%BB%A4%E4%B9%8B-git-tag/</url>
+      <content type="html"><![CDATA[<h2 id="列出标签"><a href="#列出标签" class="headerlink" title="列出标签"></a>列出标签</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag</div></pre></td></tr></table></figure>
+<h2 id="打标签"><a href="#打标签" class="headerlink" title="打标签"></a>打标签</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#创建轻量标签</div><div class="line">git tag v0.1.2</div><div class="line"></div><div class="line">#创建附注标签</div><div class="line">git tag -a v0.1.2 -m &apos;0.1.2版本&apos;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="切换到标签"><a href="#切换到标签" class="headerlink" title="切换到标签"></a>切换到标签</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout tagname</div></pre></td></tr></table></figure>
+<h2 id="查看标签信息"><a href="#查看标签信息" class="headerlink" title="查看标签信息"></a>查看标签信息</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git show v0.1</div></pre></td></tr></table></figure>
+<h2 id="删除标签"><a href="#删除标签" class="headerlink" title="删除标签"></a>删除标签</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag -d v0.1.2</div></pre></td></tr></table></figure>
+<h2 id="给指定的commit打标签"><a href="#给指定的commit打标签" class="headerlink" title="给指定的commit打标签"></a>给指定的commit打标签</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag -a v0.1.1 0fbc3d0</div></pre></td></tr></table></figure>
+<h2 id="标签发布到git服务器"><a href="#标签发布到git服务器" class="headerlink" title="标签发布到git服务器"></a>标签发布到git服务器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git push origin v0.1.2</div><div class="line"></div><div class="line">#一次性提交所有标签到origin</div><div class="line">git push origin --tags</div></pre></td></tr></table></figure>
+<h2 id="删除远程tag"><a href="#删除远程tag" class="headerlink" title="删除远程tag"></a>删除远程tag</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git push origin :refs/tags/tag-name</div><div class="line">#其实分支也是这样</div><div class="line">git push origin :branch-name</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Node.js的内部结构]]></title>
+      <url>https://beim.github.io/2016/08/05/Node-js%E7%9A%84%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84/</url>
+      <content type="html"><![CDATA[<p>首先, 关于JavaScript的一些话……</p>
+<p>Jeff Atwood, Stack Overflow的联合创始人之一, 曾经在它的博客Coding Horror中写道:</p>
+<p>any application that can be written in JavaScript, will eventually be written in JavaScript</p>
+<a id="more"></a>
+<p>JavaScript影响范围在过去几年中有相当大的增长, 以至于它现在已经成为最受欢迎的编程语言之一. 实际上, 在2016 SO Deverloper Survey中, JavaScript在Most Popular Technology和 Top Tech on Stack Overflow上都排名第一, 并且在其他几个调查结果的排名都不错.</p>
+<p>Node.js是一个服务端JavaScript运行环境, 它奠定了服务端重要功能的基础,如二进制数据操作, 文件系统I/O操作, 数据库访问, 计算机网络等等. 它独特的特性让它在现有的久经考验的框架中突显出来,(如Django(Python), Laravel(PHP), RoR(Ruby)等).也正是这些特性让科技公司如PayPal, Tinder, Medium, LinkedIn 和 Netflix 接受了它, 有些甚至在Node.js达到1.0版本之前就开始使用.</p>
+<p>我最近回答了一个<a href="http://stackoverflow.com/questions/36766696/which-is-correct-node-js-architecture/37512766#37512766" target="_blank" rel="external">关于Node.js内部结构的问题</a>,正是这个问题激励我写下这篇文章.</p>
+<hr>
+<p>官方文档对于理解Node.js究竟是什么并没有什么帮助:</p>
+<blockquote>
+<p>a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model ……</p>
+</blockquote>
+<p>为了理解这则声明,和它有多强大, 让我们将Node.js的组件分解, 解释其中关键的术语, 然后解释这些组件是怎样互相影响并让Node.js如此强大.</p>
+<p><img src="/images/nodejsstructure.png" alt="nodejsstructure"></p>
+<h2 id="COMPONENTS-DEPENDENCIES-组件-依赖"><a href="#COMPONENTS-DEPENDENCIES-组件-依赖" class="headerlink" title="COMPONENTS/DEPENDENCIES(组件/依赖)"></a>COMPONENTS/DEPENDENCIES(组件/依赖)</h2><p><strong>V8</strong>: Google开源,以C++实现的高性能JavaScript引擎. 这和你的Chrome浏览器的引擎是一样的. V8会处理你的JavaScript代码, 并将它编译成机器码(因此它飞一样快), 并执行. V8到底有多快? 查看这个<a href="http://stackoverflow.com/a/41932/4603550" target="_blank" rel="external">SO答案</a></p>
+<p><strong>libuv</strong>: 提供异步特性的C library. 它用来支持event loop(事件循环), a thread pool(线程池), file system events(文件系统事件), 和 child processes(子进程), 还有其他关键功能.</p>
+<p><strong>Other C/C++ Components/Dependencies</strong>: 例如 c-ares, crypto(OpenSSL), http-parser, 和zlib. 这些依赖提供了与服务器的较低层次的交互, 建立一些重要的功能如networking(网络),compressing(压缩),encrypting(加密)等等.</p>
+<p><strong>Application/Modules</strong>这是所有的JavaScript 代码存在的地方: 你的程序代码, Node.js核心模块, 你从npm下载的模块, 和你自己写的模块. 你大部分的工作都在这个部分.</p>
+<p><strong>Bindings</strong>: 你可能已经注意到, Node.js是用JavaScript和C/C++写成的. 用这么多C/C++代码或者libraries的原因很简单:他们很快啊! 然后你写的JavaScript代码是怎么平滑地转换成C/C++代码的呢? 难道他们不是两种不同的语言吗? 对确实是. 并且通常来说用不同语言写代码不能互相通信. 但是有bindings(绑定)就不一样了. Bindings(绑定), 正像它名字一样, 是将一种语言和另一种语言”绑定”起来的胶水代码, 这样的话他们就能够进行交互了. 在这种情况下(Node.js), bindings只将C/C++写的Node.js核心内部库(c-ares, zlib, OpenSSL, http-parser, 等等)暴露给JavaScript. 写bindings的动机之一是代码复用: 如果想要的功能已经实现了,为什么要再重新写一遍呢?只是因为它们是不同的语言吗?只是连接他们不就好了? 另一个动机是性能: 像C/C++这样的系统编程语言的性能通常比其他高级语言更好(如 Python, JavaScript, Ruby等). 因此对于像CPU密集型这样的操作让C/C++写的代码去做就好了.</p>
+<p><strong>C/C++ Addons</strong>: bindings只提供Node.js的核心内部库的胶水代码(如 zlib, OpenSSL, c-ares, http-parser等等). 如果你想要在你的程序中加入第三方或者你自己的C/C++库, 你自己要为你的库写胶水代码. 你写的这些胶水代码被叫做addons(插件). 你可以把bindings和addons看做你的JavaScript代码和Node.js的C/C++代码沟通的桥梁.</p>
+<h2 id="TERMINOLOGIES-术语"><a href="#TERMINOLOGIES-术语" class="headerlink" title="TERMINOLOGIES(术语)"></a>TERMINOLOGIES(术语)</h2><p><strong>I/O</strong>: Input/Output的缩写. 它基本代表了系统的I/O子系统的所有操作. I/O-bound(I/O密集型)操作通常涉及与硬盘/驱动器的交互. 例如数据库访问和文件系统操作. 其他相关的概念有CPU-bound, memory-bound等等. 检测一个操作是否属于I/O-bound, CPU-bound,或者其他类型, 需要增加特定操作所用的资源, 看哪个会获得更好的性能. 例如,如果CPU计算能力增强, 该操作会明显变快, 那么它属于CPU-bound.</p>
+<p><strong>Non-blocking/Asynchronous(非阻塞/异步)</strong>: 通常来说, 当一个请求进来时, 程序会处理这个请求并在这个请求处理完成之前停止其他所有操作. 这立刻暴露出一个问题: 当大量请求同时到来时, 每个请求都得等之前的请求处理完. 换句话说, 先前的操作会阻塞它之后的操作. 情况还可能更糟, 如果先前的操作响应时间很长(例如,计算前1000个质数,或者从数据库中读取3GB的数据),其他所有的请求都会被终止/阻塞很长事件. 为了解决这个问题, 你可以采取多进程 和/或 多线程的解决方法, 它们各有优缺点. Node.js的处理方式不同, 它并没有为每个新请求开一个新进程, 所有的请求都使用单线程处理, 这几乎就是它做的所有事情: 处理请求–请求中所有(I/O)操作(例如文件系统访问,数据库读写)都送到worker线程,也就是背后的libuv(上面有提到). 换句话说, 请求中所有的I/O操作都是异步处理, 并不在主线程中处理.这种方法使得主线程永远不会被阻塞, 因为繁重的操作都转移到了其他的地方. 你(还有你的程序代码)只需要在主线程中工作. 所有libuv的线程池里的worker线程对你都是透明的. 你永远也不需要直接操作它们(也不需要担心). Node.js会帮你照顾它们. 这个结构使得I/O操作变得非常高效. 然而,这也不是没有缺点的. 操作不止包含I/O-bound,而且还有CPU-bound, memory-bound等等. Node.js只给你提供了I/O任务的异步方法, 当热也有办法来解决CPU密集型操作. 然而这不在本文讨论范围内.</p>
+<p><strong>Event-Driven(事件驱动的)</strong>: 一般的, 几乎所有的现代系统中, 在主程序开始以后, 进程通过传入的请求来初始化. 然而就是从这里开始产生区别, 有时候不同技术的区别是巨大的. 通常的实现是按程序处理请求: 为一个请求开一个线程; 操作一个接一个的完成; 如果哪个操作慢了, 它之后的操作都会在那个操作被暂停; 当所有的操作都完成, 再返回响应. 然而,在Node.js中, 所有的操作都作为事件注册到Node.js中, 等待被触发, 它们可能被主程序或者请求触发.</p>
+<p><strong>Runtime(System)</strong>: Node.js运行环境是整个代码库(上面提到的组件), 包括低级和高级, 同时为Node.js程序的执行提供支持.</p>
+<h2 id="PUTTING-EVERYTHING-TOGETHER-整合"><a href="#PUTTING-EVERYTHING-TOGETHER-整合" class="headerlink" title="PUTTING EVERYTHING TOGETHER(整合)"></a>PUTTING EVERYTHING TOGETHER(整合)</h2><p>现在我们对Node.js的组件有了大致概念, 接下来看它的工作流程, 之后你将对它的结构和不同组件间如何交互有更好的了解.</p>
+<p>当Node.js程序开始运行的时候, V8引擎会运行你写的陈旭代码. 你程序中的对象会保持一系列<code>observers</code>(观察者)(注册到events的方法). 当它们预期的事件发出之后,这些observers将会得到通知.</p>
+<p>当一个事件发出, 它的回调函数将会排入event queue(事件队列). 只要队列中还有事件,event loop(事件循环)就会将队列中的事件出列并添加到call stack(调用堆栈), 需要注意的是, 只有之间的事件被处理完(调用堆栈清空后), event loop才会将下一个事件放到call stack.</p>
+<p>在call stack中, 当遇到I/O操作, 它将会被交给libuv去处理. 默认的, libuv保持4个worker线程的线程池, 这个默认值可以被修改. worker线程会根据I/O操作的类型, 和Node.js的低层次库交互,来决定执行的具体操作如数据库读写, 文件系统访问,网络等待. 当处理完毕之后, libuv会将这个事件enqueue(出列)并放回到event queue(事件队列)中, 等待主线程处理. 这时, libuv异步处理了I/O操作, 主线程并没有等待操作的结果而是继续进行. 被libuv返回的事件在event loop(事件循环)再次将它放到call stack(调用堆栈)的时候被主线程处理. 这样就完成了一个Node.js程序事件的生命周期.</p>
+<p><a href="http://stackoverflow.com/users/370756/mbq" target="_blank" rel="external">mbq</a>曾经以餐馆对Node.js作了绝妙的比喻. 我将借用它的范例并稍作修改来让Node.js周期更容易理解. 把Node.js程序看做星巴克. 一个高效,训练有素的服务员(唯一的主线程)来下订单. 当大量客户同时进入咖啡厅, 他们将会等待服务员的服务(事件队列的入队). 当服务员接待一个客户之后, 他会把客户的订单交给一个管理员(libuv), 管理员会给每个订单交给一个咖啡师(worker thread). 咖啡师会根据顾客的要求用不同的配料和机器(底层的C/C++组件)来制作不同种的饮料.一般情况下会有4个咖啡师值班(thread pool). 然而,在高峰期, 可以让更多的咖啡师来工作(然而这应该在一天刚开始的时候来做, 而不是午休期间). 当服务员将订单提交给管理员之后, 他并没有等咖啡做好之后再服务下一位顾客, 而是叫下一位顾客(event loop将下一个事件出列,并放到call stack). 你可以把call stack中的事件看做是正在柜台被服务的顾客. 当咖啡做好之后, 咖啡将会被送到顾客队列的末尾. 当咖啡移动到柜台的时候, 服务员会叫顾客的名字,然后顾客拿到咖啡.(这在现实生活中可能有点怪, 然而你从程序的进程的角度来想的话就合理了)</p>
+<hr>
+<p>这样就完成了Node.js的内部代码库和它的事件生命周期的高度概览. 然而这是很概括性的,并没有包括很多问题和细节, 例如CPU-bound操作处理, Node.js设计模式等.</p>
+<hr>
+<h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a><a href="https://medium.com/yet-another-node-js-blog/architecture-of-node-js-internal-codebase-57cd8376b71f#.sl5sna17t" target="_blank" rel="external">原文</a></h2>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[跨域请求之JSONP与CORS]]></title>
+      <url>https://beim.github.io/2016/08/05/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E4%B9%8BJSONP%E4%B8%8ECORS/</url>
+      <content type="html"><![CDATA[<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>在使用wikipedia的API的时候，直接发送ajax请求得到以下信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">XMLHttpRequest cannot load https://en.wikipedia.org/w/api.php?action=query&amp;format=json&amp;list=search&amp;srsearch=1. Response to preflight request doesn’t pass access control check: No ‘Access-Control-Allow-Origin’ header is present on the requested resource. Origin ‘http://s.codepen.io’ is therefore not allowed access.</div></pre></td></tr></table></figure>
+<p>这是由于XMLHttpRequest对象受限于<a href="https://en.wikipedia.org/wiki/Same-origin_policy" target="_blank" rel="external">同源策略(same origin-policy)</a>。这个策略使得页面只能从同一个源(origin)获取数据。源是由协议(protocol)，主机(host)，端口号(port number)决定的。例如<code>https://www.sitepoint.com/jsonp-examples/</code> 的源就是<code>https, www.sitepoint.com</code>, <code>80</code>。</p>
+<p>同源策略是一个安全机制。它避免了脚本从你的域读取数据并发送到别的服务器上。</p>
+<a id="more"></a>
+<p>下面介绍两种解决方法：</p>
+<h2 id="JSONP-JSON-with-Padding"><a href="#JSONP-JSON-with-Padding" class="headerlink" title="JSONP(JSON with Padding)"></a>JSONP(JSON with Padding)</h2><p>script标签可以从另一个域中载入数据，<script src="xxx"></script>。因此我们可以新建一个script标签，设置src属性，然后插入到页面中</p>
+<p>JSONP就建立在这种技术之上，它给我们提供了一种处理返回数据的方法。它将服务器返回的JSON数据包裹在一个回调函数中(即padding)。这个回调函数必须在处理JSONP返回数据的页面中。</p>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var JSON_CALLBACK = function(res)&#123;</div><div class="line">    console.log(res)</div><div class="line">&#125;</div><div class="line">let url = &apos;https://en.wikipedia.org/w/api.php?action=query&amp;format=json&amp;list=search&amp;srsearch=&apos; + this.state.svalue + &apos;&amp;callback=JSON_CALLBACK&apos;</div><div class="line">//JSON_CALLBACK即回调函数名称</div><div class="line">let scriptTag = document.createElement(&apos;script&apos;)</div><div class="line">scriptTag.setAttribute(&apos;src&apos;, url)</div><div class="line">document.body.appendChild(scriptTag)</div></pre></td></tr></table></figure>
+<p>这种方法只在跨域 GET请求有用。</p>
+<h2 id="CORS-Cross-Origin-Resource-Sharing跨域资源共享"><a href="#CORS-Cross-Origin-Resource-Sharing跨域资源共享" class="headerlink" title="CORS(Cross-Origin Resource Sharing跨域资源共享)"></a>CORS(Cross-Origin Resource Sharing跨域资源共享)</h2><p><a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing" target="_blank" rel="external">CORS</a>是允许请求跨域资源的机制。</p>
+<p>对于AJAX和HTTP请求，浏览器会先对请求预检(preflight)，向目标服务器发送HTTP OPTIONS 请求头， 然后从服务器获得许可(approval)，再发送实际的HTTP请求。</p>
+<blockquote>
+<p>以下情况将会发送预请求</p>
+<ul>
+<li>请求以 GET, HEAD 或者 POST 以外的方法发起请求。或者，使用 POST，但请求数据为 application/x-www-form-urlencoded, multipart/form-data 或者 text/plain 以外的数据类型。比如说，用 POST 发送数据类型为 application/xml 或者 text/xml 的 XML 数据的请求。</li>
+<li>使用自定义请求头（比如添加诸如 X-PINGOTHER）</li>
+</ul>
+</blockquote>
+<p>举个栗子：</p>
+<ul>
+<li>浏览器发送OPTIONS请求，带有Origin HTTP头。 这个请求头的值即当前页面的域。当<a href="http://www.foo.com的页面尝试获取" target="_blank" rel="external">http://www.foo.com的页面尝试获取</a> bar.com的数据时，会给bar.com 发送下列请求头：<code>Origin: http://www.foo.com</code></li>
+<li>服务器可能会返回</li>
+</ul>
+<blockquote>
+<ul>
+<li>Access-Control-Allow-Origin: <a href="http://www.foo.com。（ACAO)响应头表明允许的源站点。" target="_blank" rel="external">http://www.foo.com。（ACAO)响应头表明允许的源站点。</a></li>
+<li>如果服务器不支持跨域请求，将会返回错误。</li>
+<li>Access-Control-Allow-Origin: *。(ACAO)响应头表明允许所有域。</li>
+</ul>
+</blockquote>
+<h2 id="JSONP-vs-CORS"><a href="#JSONP-vs-CORS" class="headerlink" title="JSONP vs CORS"></a>JSONP vs CORS</h2><p>两种方法都需要服务器支持。</p>
+<p>JSONP只支持GET请求方法。JSONP可能造成XSS问题。</p>
+<p>CORS可以看做现代的JSONP替代方案。CORS还能支持GET以外的HTTP请求，对错误处理和安全支持也更好。</p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://stackoverflow.com/questions/33297190/response-for-preflight-has-invalid-http-status-code-404-angular-js" target="_blank" rel="external">stackoverflow</a></p>
+<p><a href="http://stackoverflow.com/questions/11001817/allow-cors-rest-request-to-a-express-node-js-application-on-heroku" target="_blank" rel="external">stackoverflow</a><br>解决了项目中POST 请求的问题，<br>由于在发送真正的POST 请求之前会发送一个OPTIONS 请求，将这个请求的status 置为200，则下一步发送真正的POST 请求。</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" target="_blank" rel="external">MDN</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[js中的类Class]]></title>
+      <url>https://beim.github.io/2016/08/05/js%E4%B8%AD%E7%9A%84%E7%B1%BBClass/</url>
+      <content type="html"><![CDATA[<h2 id="构造函数法"><a href="#构造函数法" class="headerlink" title="构造函数法"></a>构造函数法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">function Cat(like) &#123;</div><div class="line">    var nickName = &apos;myNickName&apos;</div><div class="line">    this.callNickName = function() &#123;</div><div class="line">        return nickName;</div><div class="line">    &#125;</div><div class="line">    this.name = &apos;myName&apos;</div><div class="line">    this.like = like</div><div class="line">&#125;</div><div class="line">var cat1 = new Cat(&apos;dog&apos;)</div><div class="line">console.log(cat1.name) // myName</div><div class="line">console.log(cat1.nickName) // undefined</div><div class="line">console.log(cat1.callNickName()) // myNickName</div><div class="line">console.log(cat1.like) // dog</div><div class="line">// 属性和方法也可以定义在function对象的prototype对象上</div><div class="line">Cat.prototype.makeSound = function() &#123;</div><div class="line">    console.log(&apos;miao&apos;)</div><div class="line">&#125;</div><div class="line">cat1.makeSound() // miao</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="Object-create"><a href="#Object-create" class="headerlink" title="Object.create()"></a>Object.create()</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var Cat = &#123;</div><div class="line">    name: &apos;myName&apos;,</div><div class="line">    makeSound: function() &#123;</div><div class="line">        console.log(&apos;miao&apos;)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var cat1 = Object.create(Cat)  </div><div class="line">console.log(cat1.name) // myName </div><div class="line">cat1.makeSound() // miao</div></pre></td></tr></table></figure>
+<h2 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">class Point &#123;</div><div class="line">    constructor(x, y) &#123;</div><div class="line">        this.x = x</div><div class="line">        this.y = y</div><div class="line">    &#125;</div><div class="line">    toString() &#123;</div><div class="line">        return &apos;(&apos; + this.x + &apos;, &apos; + this.y + &apos;)&apos;</div><div class="line">    &#125;</div><div class="line">    say() &#123;</div><div class="line">        console.log(&apos;say something&apos;)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log(typeof Point) // function</div><div class="line">console.log(Point === Point.prototype.constructor) // true</div><div class="line">console.log(Point.toString()) // class Point &#123; ... &#125;</div><div class="line">var point = new Point(1, 2)</div><div class="line">console.log(point.toString()) // (1, 2)</div><div class="line">point.say() // say something</div><div class="line">Point.say() // Error!</div></pre></td></tr></table></figure>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li><a href="http://www.ruanyifeng.com/blog/2012/07/three_ways_to_define_a_javascript_class.html" target="_blank" rel="external">前两种方法</a></li>
+<li><a href="http://es6.ruanyifeng.com/#docs/class" target="_blank" rel="external">第三种方法</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[测试框架AVA]]></title>
+      <url>https://beim.github.io/2016/08/05/%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6AVA/</url>
+      <content type="html"><![CDATA[<p><img src="/images/ceshiheader.png" alt="ava"></p>
+<blockquote>
+<p>面向未来的测试运行器</p>
+</blockquote>
+<a id="more"></a>
+<ul>
+<li><a href="https://cnodejs.org/topic/57464cd8da0dea851e308101" target="_blank" rel="external">关于AVA的介绍</a></li>
+<li><a href="https://github.com/avajs/ava" target="_blank" rel="external">github</a></li>
+</ul>
+<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><h3 id="全局安装AVA，在项目中用-–init-参数运行命令，会将AVA添加到package-json"><a href="#全局安装AVA，在项目中用-–init-参数运行命令，会将AVA添加到package-json" class="headerlink" title="全局安装AVA，在项目中用 –init 参数运行命令，会将AVA添加到package.json"></a>全局安装AVA，在项目中用 –init 参数运行命令，会将AVA添加到package.json</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$ npm install --global ava</div><div class="line">$ ava --init</div><div class="line">#package.json</div><div class="line">&#123;</div><div class="line">    &quot;name&quot;: &quot;awesome-package&quot;,</div><div class="line">    &quot;scripts&quot;: &#123;</div><div class="line">        &quot;test&quot;: &quot;ava&quot;</div><div class="line">    &#125;,</div><div class="line">    &quot;devDependencies&quot;: &#123;</div><div class="line">        &quot;ava&quot;: &quot;^0.11.0&quot;</div><div class="line">    &#125;</div><div class="line">&#125;![ava](/images/ceshiheader)</div></pre></td></tr></table></figure>
+<h3 id="手动安装"><a href="#手动安装" class="headerlink" title="手动安装"></a>手动安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">nstall --save-dev ava</div><div class="line"></div><div class="line">#再对 ``package.json`` 配置 ``test`` 脚本 （如上）</div></pre></td></tr></table></figure>
+<h2 id="测试一下"><a href="#测试一下" class="headerlink" title="测试一下"></a>测试一下</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">#main.js</div><div class="line">let a = (x) =&gt; &#123;</div><div class="line">    if (x &gt; 0)</div><div class="line">    return x * x</div><div class="line">    return x</div><div class="line">&#125;</div><div class="line">module.exports = a</div><div class="line">#test.js</div><div class="line">const test = require(&apos;ava&apos;)</div><div class="line">const a = require(&apos;./main.js&apos;)</div><div class="line">test(&apos;give 3 should return 9&apos;, t =&gt; &#123;</div><div class="line">    t.is(a(3), 9)</div><div class="line">&#125;)</div><div class="line">test(&apos;git -3 should return -3&apos;, t =&gt; &#123;</div><div class="line">    t.is(a(-3), -3)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">beim@Idea:~/temp/ava$ ava -v</div><div class="line">  ✔ give 3 should return 9</div><div class="line">  ✔ git -3 should return -3</div><div class="line">  2 tests passed [10:19:26 GMT+0800 (CST)]</div></pre></td></tr></table></figure>
+<h2 id="测试覆盖率"><a href="#测试覆盖率" class="headerlink" title="测试覆盖率"></a>测试覆盖率</h2><p>官方推荐使用<a href="https://github.com/istanbuljs/nyc" target="_blank" rel="external">nyc</a></p>
+<h3 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ npm install nyc --save-dev</div><div class="line">#或全局安装</div><div class="line">$ npm install nyc -g</div><div class="line">#修改package.json 的test 脚本</div><div class="line">&#123;</div><div class="line">  &quot;script&quot;: &#123;</div><div class="line">    &quot;test&quot;: &quot;nyc ava ./test/*.js&quot;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="测试一下-1"><a href="#测试一下-1" class="headerlink" title="测试一下"></a>测试一下</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#修改之前的package.json</div><div class="line">&#123;</div><div class="line">  &quot;scripts&quot;: &#123;</div><div class="line">    &quot;test&quot;: &quot;nyc ava -v&quot;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">beim@Idea:~/temp/ava$ npm test</div><div class="line">&gt; @ test /home/beim/temp/ava</div><div class="line">&gt; nyc ava -v</div><div class="line">  ✔ give 3 should return 9</div><div class="line">  ✔ git -3 should return -3</div><div class="line">  2 tests passed [10:23:53 GMT+0800 (CST)]</div><div class="line">----------|----------|----------|----------|----------|----------------|</div><div class="line">File      |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |</div><div class="line">----------|----------|----------|----------|----------|----------------|</div><div class="line">All files |      100 |      100 |      100 |      100 |                |</div><div class="line"> main.js  |      100 |      100 |      100 |      100 |                |</div><div class="line">----------|----------|----------|----------|----------|----------------|</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>https://beim.github.io/2016/08/05/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    </entry>
+    
+  
+  
+</search>

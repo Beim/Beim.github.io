@@ -1,0 +1,810 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="node," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="首先, 关于JavaScript的一些话……
+Jeff Atwood, Stack Overflow的联合创始人之一, 曾经在它的博客Coding Horror中写道:
+any application that can be written in JavaScript, will eventually be written in JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.js的内部结构">
+<meta property="og:url" content="https://beim.github.io/2016/08/05/Node-js的内部结构/index.html">
+<meta property="og:site_name" content="北冥有鱼">
+<meta property="og:description" content="首先, 关于JavaScript的一些话……
+Jeff Atwood, Stack Overflow的联合创始人之一, 曾经在它的博客Coding Horror中写道:
+any application that can be written in JavaScript, will eventually be written in JavaScript">
+<meta property="og:image" content="https://beim.github.io/images/nodejsstructure.png">
+<meta property="og:updated_time" content="2016-08-05T02:11:49.586Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Node.js的内部结构">
+<meta name="twitter:description" content="首先, 关于JavaScript的一些话……
+Jeff Atwood, Stack Overflow的联合创始人之一, 曾经在它的博客Coding Horror中写道:
+any application that can be written in JavaScript, will eventually be written in JavaScript">
+<meta name="twitter:image" content="https://beim.github.io/images/nodejsstructure.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://beim.github.io/2016/08/05/Node-js的内部结构/"/>
+
+  <title> Node.js的内部结构 | 北冥有鱼 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">北冥有鱼</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Node.js的内部结构
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-05T10:01:34+08:00" content="2016-08-05">
+              2016-08-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/05/Node-js的内部结构/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/05/Node-js的内部结构/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>首先, 关于JavaScript的一些话……</p>
+<p>Jeff Atwood, Stack Overflow的联合创始人之一, 曾经在它的博客Coding Horror中写道:</p>
+<p>any application that can be written in JavaScript, will eventually be written in JavaScript</p>
+<a id="more"></a>
+<p>JavaScript影响范围在过去几年中有相当大的增长, 以至于它现在已经成为最受欢迎的编程语言之一. 实际上, 在2016 SO Deverloper Survey中, JavaScript在Most Popular Technology和 Top Tech on Stack Overflow上都排名第一, 并且在其他几个调查结果的排名都不错.</p>
+<p>Node.js是一个服务端JavaScript运行环境, 它奠定了服务端重要功能的基础,如二进制数据操作, 文件系统I/O操作, 数据库访问, 计算机网络等等. 它独特的特性让它在现有的久经考验的框架中突显出来,(如Django(Python), Laravel(PHP), RoR(Ruby)等).也正是这些特性让科技公司如PayPal, Tinder, Medium, LinkedIn 和 Netflix 接受了它, 有些甚至在Node.js达到1.0版本之前就开始使用.</p>
+<p>我最近回答了一个<a href="http://stackoverflow.com/questions/36766696/which-is-correct-node-js-architecture/37512766#37512766" target="_blank" rel="external">关于Node.js内部结构的问题</a>,正是这个问题激励我写下这篇文章.</p>
+<hr>
+<p>官方文档对于理解Node.js究竟是什么并没有什么帮助:</p>
+<blockquote>
+<p>a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model ……</p>
+</blockquote>
+<p>为了理解这则声明,和它有多强大, 让我们将Node.js的组件分解, 解释其中关键的术语, 然后解释这些组件是怎样互相影响并让Node.js如此强大.</p>
+<p><img src="/images/nodejsstructure.png" alt="nodejsstructure"></p>
+<h2 id="COMPONENTS-DEPENDENCIES-组件-依赖"><a href="#COMPONENTS-DEPENDENCIES-组件-依赖" class="headerlink" title="COMPONENTS/DEPENDENCIES(组件/依赖)"></a>COMPONENTS/DEPENDENCIES(组件/依赖)</h2><p><strong>V8</strong>: Google开源,以C++实现的高性能JavaScript引擎. 这和你的Chrome浏览器的引擎是一样的. V8会处理你的JavaScript代码, 并将它编译成机器码(因此它飞一样快), 并执行. V8到底有多快? 查看这个<a href="http://stackoverflow.com/a/41932/4603550" target="_blank" rel="external">SO答案</a></p>
+<p><strong>libuv</strong>: 提供异步特性的C library. 它用来支持event loop(事件循环), a thread pool(线程池), file system events(文件系统事件), 和 child processes(子进程), 还有其他关键功能.</p>
+<p><strong>Other C/C++ Components/Dependencies</strong>: 例如 c-ares, crypto(OpenSSL), http-parser, 和zlib. 这些依赖提供了与服务器的较低层次的交互, 建立一些重要的功能如networking(网络),compressing(压缩),encrypting(加密)等等.</p>
+<p><strong>Application/Modules</strong>这是所有的JavaScript 代码存在的地方: 你的程序代码, Node.js核心模块, 你从npm下载的模块, 和你自己写的模块. 你大部分的工作都在这个部分.</p>
+<p><strong>Bindings</strong>: 你可能已经注意到, Node.js是用JavaScript和C/C++写成的. 用这么多C/C++代码或者libraries的原因很简单:他们很快啊! 然后你写的JavaScript代码是怎么平滑地转换成C/C++代码的呢? 难道他们不是两种不同的语言吗? 对确实是. 并且通常来说用不同语言写代码不能互相通信. 但是有bindings(绑定)就不一样了. Bindings(绑定), 正像它名字一样, 是将一种语言和另一种语言”绑定”起来的胶水代码, 这样的话他们就能够进行交互了. 在这种情况下(Node.js), bindings只将C/C++写的Node.js核心内部库(c-ares, zlib, OpenSSL, http-parser, 等等)暴露给JavaScript. 写bindings的动机之一是代码复用: 如果想要的功能已经实现了,为什么要再重新写一遍呢?只是因为它们是不同的语言吗?只是连接他们不就好了? 另一个动机是性能: 像C/C++这样的系统编程语言的性能通常比其他高级语言更好(如 Python, JavaScript, Ruby等). 因此对于像CPU密集型这样的操作让C/C++写的代码去做就好了.</p>
+<p><strong>C/C++ Addons</strong>: bindings只提供Node.js的核心内部库的胶水代码(如 zlib, OpenSSL, c-ares, http-parser等等). 如果你想要在你的程序中加入第三方或者你自己的C/C++库, 你自己要为你的库写胶水代码. 你写的这些胶水代码被叫做addons(插件). 你可以把bindings和addons看做你的JavaScript代码和Node.js的C/C++代码沟通的桥梁.</p>
+<h2 id="TERMINOLOGIES-术语"><a href="#TERMINOLOGIES-术语" class="headerlink" title="TERMINOLOGIES(术语)"></a>TERMINOLOGIES(术语)</h2><p><strong>I/O</strong>: Input/Output的缩写. 它基本代表了系统的I/O子系统的所有操作. I/O-bound(I/O密集型)操作通常涉及与硬盘/驱动器的交互. 例如数据库访问和文件系统操作. 其他相关的概念有CPU-bound, memory-bound等等. 检测一个操作是否属于I/O-bound, CPU-bound,或者其他类型, 需要增加特定操作所用的资源, 看哪个会获得更好的性能. 例如,如果CPU计算能力增强, 该操作会明显变快, 那么它属于CPU-bound.</p>
+<p><strong>Non-blocking/Asynchronous(非阻塞/异步)</strong>: 通常来说, 当一个请求进来时, 程序会处理这个请求并在这个请求处理完成之前停止其他所有操作. 这立刻暴露出一个问题: 当大量请求同时到来时, 每个请求都得等之前的请求处理完. 换句话说, 先前的操作会阻塞它之后的操作. 情况还可能更糟, 如果先前的操作响应时间很长(例如,计算前1000个质数,或者从数据库中读取3GB的数据),其他所有的请求都会被终止/阻塞很长事件. 为了解决这个问题, 你可以采取多进程 和/或 多线程的解决方法, 它们各有优缺点. Node.js的处理方式不同, 它并没有为每个新请求开一个新进程, 所有的请求都使用单线程处理, 这几乎就是它做的所有事情: 处理请求–请求中所有(I/O)操作(例如文件系统访问,数据库读写)都送到worker线程,也就是背后的libuv(上面有提到). 换句话说, 请求中所有的I/O操作都是异步处理, 并不在主线程中处理.这种方法使得主线程永远不会被阻塞, 因为繁重的操作都转移到了其他的地方. 你(还有你的程序代码)只需要在主线程中工作. 所有libuv的线程池里的worker线程对你都是透明的. 你永远也不需要直接操作它们(也不需要担心). Node.js会帮你照顾它们. 这个结构使得I/O操作变得非常高效. 然而,这也不是没有缺点的. 操作不止包含I/O-bound,而且还有CPU-bound, memory-bound等等. Node.js只给你提供了I/O任务的异步方法, 当热也有办法来解决CPU密集型操作. 然而这不在本文讨论范围内.</p>
+<p><strong>Event-Driven(事件驱动的)</strong>: 一般的, 几乎所有的现代系统中, 在主程序开始以后, 进程通过传入的请求来初始化. 然而就是从这里开始产生区别, 有时候不同技术的区别是巨大的. 通常的实现是按程序处理请求: 为一个请求开一个线程; 操作一个接一个的完成; 如果哪个操作慢了, 它之后的操作都会在那个操作被暂停; 当所有的操作都完成, 再返回响应. 然而,在Node.js中, 所有的操作都作为事件注册到Node.js中, 等待被触发, 它们可能被主程序或者请求触发.</p>
+<p><strong>Runtime(System)</strong>: Node.js运行环境是整个代码库(上面提到的组件), 包括低级和高级, 同时为Node.js程序的执行提供支持.</p>
+<h2 id="PUTTING-EVERYTHING-TOGETHER-整合"><a href="#PUTTING-EVERYTHING-TOGETHER-整合" class="headerlink" title="PUTTING EVERYTHING TOGETHER(整合)"></a>PUTTING EVERYTHING TOGETHER(整合)</h2><p>现在我们对Node.js的组件有了大致概念, 接下来看它的工作流程, 之后你将对它的结构和不同组件间如何交互有更好的了解.</p>
+<p>当Node.js程序开始运行的时候, V8引擎会运行你写的陈旭代码. 你程序中的对象会保持一系列<code>observers</code>(观察者)(注册到events的方法). 当它们预期的事件发出之后,这些observers将会得到通知.</p>
+<p>当一个事件发出, 它的回调函数将会排入event queue(事件队列). 只要队列中还有事件,event loop(事件循环)就会将队列中的事件出列并添加到call stack(调用堆栈), 需要注意的是, 只有之间的事件被处理完(调用堆栈清空后), event loop才会将下一个事件放到call stack.</p>
+<p>在call stack中, 当遇到I/O操作, 它将会被交给libuv去处理. 默认的, libuv保持4个worker线程的线程池, 这个默认值可以被修改. worker线程会根据I/O操作的类型, 和Node.js的低层次库交互,来决定执行的具体操作如数据库读写, 文件系统访问,网络等待. 当处理完毕之后, libuv会将这个事件enqueue(出列)并放回到event queue(事件队列)中, 等待主线程处理. 这时, libuv异步处理了I/O操作, 主线程并没有等待操作的结果而是继续进行. 被libuv返回的事件在event loop(事件循环)再次将它放到call stack(调用堆栈)的时候被主线程处理. 这样就完成了一个Node.js程序事件的生命周期.</p>
+<p><a href="http://stackoverflow.com/users/370756/mbq" target="_blank" rel="external">mbq</a>曾经以餐馆对Node.js作了绝妙的比喻. 我将借用它的范例并稍作修改来让Node.js周期更容易理解. 把Node.js程序看做星巴克. 一个高效,训练有素的服务员(唯一的主线程)来下订单. 当大量客户同时进入咖啡厅, 他们将会等待服务员的服务(事件队列的入队). 当服务员接待一个客户之后, 他会把客户的订单交给一个管理员(libuv), 管理员会给每个订单交给一个咖啡师(worker thread). 咖啡师会根据顾客的要求用不同的配料和机器(底层的C/C++组件)来制作不同种的饮料.一般情况下会有4个咖啡师值班(thread pool). 然而,在高峰期, 可以让更多的咖啡师来工作(然而这应该在一天刚开始的时候来做, 而不是午休期间). 当服务员将订单提交给管理员之后, 他并没有等咖啡做好之后再服务下一位顾客, 而是叫下一位顾客(event loop将下一个事件出列,并放到call stack). 你可以把call stack中的事件看做是正在柜台被服务的顾客. 当咖啡做好之后, 咖啡将会被送到顾客队列的末尾. 当咖啡移动到柜台的时候, 服务员会叫顾客的名字,然后顾客拿到咖啡.(这在现实生活中可能有点怪, 然而你从程序的进程的角度来想的话就合理了)</p>
+<hr>
+<p>这样就完成了Node.js的内部代码库和它的事件生命周期的高度概览. 然而这是很概括性的,并没有包括很多问题和细节, 例如CPU-bound操作处理, Node.js设计模式等.</p>
+<hr>
+<h2 id="原文"><a href="#原文" class="headerlink" title="原文"></a><a href="https://medium.com/yet-another-node-js-blog/architecture-of-node-js-internal-codebase-57cd8376b71f#.sl5sna17t" target="_blank" rel="external">原文</a></h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://ob4a6y748.bkt.clouddn.com/shoukuanweixin.jpg" alt="Beim WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://ob4a6y748.bkt.clouddn.com/shoukuan.jpg" alt="Beim Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/node/" rel="tag">#node</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/05/跨域请求之JSONP与CORS/" rel="next" title="跨域请求之JSONP与CORS">
+                <i class="fa fa-chevron-left"></i> 跨域请求之JSONP与CORS
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/05/git命令之-git-tag/" rel="prev" title="git命令之 git tag">
+                git命令之 git tag <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/05/Node-js的内部结构/"
+           data-title="Node.js的内部结构" data-url="https://beim.github.io/2016/08/05/Node-js的内部结构/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/hand_zheng.jpg"
+               alt="Beim" />
+          <p class="site-author-name" itemprop="name">Beim</p>
+          <p class="site-description motion-element" itemprop="description">平常心，平常心。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#COMPONENTS-DEPENDENCIES-组件-依赖"><span class="nav-number">1.</span> <span class="nav-text">COMPONENTS/DEPENDENCIES(组件/依赖)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TERMINOLOGIES-术语"><span class="nav-number">2.</span> <span class="nav-text">TERMINOLOGIES(术语)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PUTTING-EVERYTHING-TOGETHER-整合"><span class="nav-number">3.</span> <span class="nav-text">PUTTING EVERYTHING TOGETHER(整合)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原文"><span class="nav-number">4.</span> <span class="nav-text">原文</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Beim</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"beim"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
