@@ -261,6 +261,119 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/08/React-Native-Startup/" itemprop="url">
+                  React-Native Startup
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-08T21:27:58+08:00" content="2016-08-08">
+              2016-08-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/08/React-Native-Startup/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/08/React-Native-Startup/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><h3 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h3><p>先<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">下载</a>JDK<br>解压到/usr/lib/jvm 下</p>
+<p>修改环境变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$ vi ~/.bashrc</div><div class="line"></div><div class="line"># 在末尾增加以下内容</div><div class="line">export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_101</div><div class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</div><div class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib</div><div class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</div><div class="line"></div><div class="line"># 使环境变量生效</div><div class="line">$ source ~/.bashrc</div></pre></td></tr></table></figure></p>
+<h3 id="Android-Studio-https-developer-android-com-studio-install-html"><a href="#Android-Studio-https-developer-android-com-studio-install-html" class="headerlink" title="Android Studio(https://developer.android.com/studio/install.html)"></a>Android Studio(<a href="https://developer.android.com/studio/install.html" target="_blank" rel="external">https://developer.android.com/studio/install.html</a>)</h3><p>先<a href="https://developer.android.com/studio/index.html" target="_blank" rel="external">下载</a>Android Studio<br>解压到/usr/local/src 下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"># 设置软链接</div><div class="line">$ sudo ln -s /usr/local/src/android-studio/bin/studio.sh /usr/local/bin/studio</div><div class="line"></div><div class="line"># 64位的ubuntu需要安装以下库</div><div class="line">$ sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6</div><div class="line"></div><div class="line"># 执行安装引导</div><div class="line">$ studio</div><div class="line"># Sdk安装到了~/Android/Sdk</div><div class="line"></div><div class="line">$ vi ~/.bashrc</div><div class="line"># 在文件末尾添加</div><div class="line"># ANDROID_HOME环境变量</div><div class="line">export ANDROID_HOME=/home/beim/Android/Sdk</div><div class="line"># Android SDK 的Tools 目录添加到PATH 变量中</div><div class="line">PATH=&quot;~/Android/Sdk/tools:~/Android/Sdk/platform-tools:$&#123;PATH&#125;&quot;</div><div class="line">export PATH</div><div class="line"></div><div class="line"># 使环境变量生效</div><div class="line">source ~/.bashrc</div></pre></td></tr></table></figure>
+<h3 id="SDK"><a href="#SDK" class="headerlink" title="SDK"></a>SDK</h3><p><code>$ studio</code> 进入Android Studio<br>在<code>SDK Platform</code> 窗口中，选择<code>Show Package Details</code>, 然后在<code>Android 6.0 (Marshmallow)</code>中勾选<code>Google APIs</code>、<code>Intel x86 Atom System Image</code>、<code>Intel x86 Atom_64 System Image</code>以及<code>Google APIs Intel x86 Atom_64 System Image</code>。<br>在<code>SDK Tools</code>窗口中，选择<code>Show Package Details</code>，然后在<code>Android SDK Build Tools</code>中勾选<code>Android SDK Build-Tools 23.0.1</code>。（必须是这个版本）<br>然后点击<code>apply</code>,等待下载和应用变更。</p>
+<h3 id="adb"><a href="#adb" class="headerlink" title="adb"></a>adb</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 系统adb的版本要和android sdk platform-tools 的版本相同</div><div class="line">$ adb version 检查版本</div><div class="line"></div><div class="line"># 设置软链接</div><div class="line">$ sudo ln -s ~/Android/Sdk/platform-tools/adb /usr/local/bin/adb</div></pre></td></tr></table></figure>
+<h3 id="React-Native"><a href="#React-Native" class="headerlink" title="React Native"></a>React Native</h3><p><code>sudo npm install -g react-native-cli</code></p>
+<h3 id="genymotion"><a href="#genymotion" class="headerlink" title="genymotion"></a>genymotion</h3><p>安卓模拟器（如果用真机可以不安装）<br><a href="https://www.genymotion.com/download/?utm_source=website&amp;utm_medium=slider&amp;utm_term=Get%20it%20now&amp;utm_campaign=Genymotion-2-7-2-release#" target="_blank" rel="external">下载</a><br>将下载下来的bin文件放置到用户目录下（/home/beim)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 更改权限</div><div class="line">$ chmod 777 /home/beim/genymotion-2.7.2-linux_x64.bin</div><div class="line"># 安装</div><div class="line">$ ./genymotion-2.7.2-linux_x64.bin</div></pre></td></tr></table></figure>
+<p>…<br>安装完成之后打开genymotion<br>选择<code>settings</code>-<code>ADB</code>-<code>Use custom Android SDK tools</code><br>填入之前安装Sdk的路径（/home/beim/Android/Sdk)</p>
+<p>选择<code>Add</code><br>寻找合适（API23）的虚拟机下载并测试打开。</p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"># 进入放置项目文件的目录</div><div class="line">$ react-native init AwesomeProject</div><div class="line"># 耗费一定时间，需要科学上网。也可到github 上找别人打包好的文件</div><div class="line">$ cd AwesomeProject</div><div class="line">$ react-native start # 或者 npm start</div><div class="line"></div><div class="line"># 确保真机或者虚拟机设备已经连接</div><div class="line">$ adb devices</div><div class="line"></div><div class="line"># 另开一个终端</div><div class="line">$ react-native run-android</div><div class="line"></div><div class="line"># 这时候可以看到真机/虚拟机打开了应用</div><div class="line"># 如果出现红屏提示无法连接到服务器</div><div class="line"># `按menu 键`或者 `摇一摇` 或者 `adb shell input keyevent 82` 打开开发者菜单</div><div class="line"># 点击进入 ` Dev Settings`</div><div class="line"># 点击`Debug server host for device`</div><div class="line"># 如果是真机，输入你电脑的ip地址和端口号（如192.168.1.101:8081); 如果在虚拟机，输入`0.0.0.0:8081`</div><div class="line"># 返回`开发者菜单`，选择`Reload JS`</div></pre></td></tr></table></figure>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://reactnative.cn/docs/0.31/getting-started.html#content" target="_blank" rel="external">React-Native中文网-搭建开发环境</a><br><a href="http://reactnative.cn/docs/0.31/running-on-device-android.html" target="_blank" rel="external">React-Native中文网-在设备上运行</a><br><a href="https://facebook.github.io/react-native/docs/getting-started.html#content" target="_blank" rel="external">React-Native官网</a><br><a href="http://stackoverflow.com/questions/38512025/react-native-run-android-mismatch-version-adb-server-version" target="_blank" rel="external">Stack Overflow adb server version (32) doesn’t match this client (36); killing …</a><br><a href="http://www.cnblogs.com/suxun/p/5220564.html" target="_blank" rel="external">史上最全Windows版本安装React Native环境配置</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/05/ubuntu-启动初始化/" itemprop="url">
                   ubuntu 启动初始化
                 </a>
@@ -1018,7 +1131,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -1028,7 +1141,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
