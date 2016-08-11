@@ -7,7 +7,7 @@
       <title><![CDATA[2016_日常]]></title>
       <url>https://beim.github.io/2016/08/11/2016-%E6%97%A5%E5%B8%B8/</url>
       <content type="html"><![CDATA[<p><img src="/images/house.jpg" alt="header"><br><a id="more"></a></p>
-<h2 id="Aug"><a href="#Aug" class="headerlink" title="Aug"></a>Aug</h2><hr>
+<h1 id="Aug"><a href="#Aug" class="headerlink" title="Aug"></a>Aug</h1><hr>
 <p>白日梦：<br>兔子和我说了好多话，第四条里她访问了一个网址，<br>然后不知怎的我的笔记本接到了请求，genymotion 模拟器启动，8081端口反向代理，adb连接，编译，安装。<br>模拟器里的人影若隐若现，<br><code>Thu Aug 11 22:13</code></p>
 <hr>
 ]]></content>
