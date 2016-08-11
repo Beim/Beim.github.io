@@ -4,6 +4,14 @@
   
     
     <entry>
+      <title><![CDATA[2016_日常]]></title>
+      <url>https://beim.github.io/2016/08/11/2016-%E6%97%A5%E5%B8%B8/</url>
+      <content type="html"><![CDATA[<h2 id="Aug"><a href="#Aug" class="headerlink" title="Aug"></a>Aug</h2><hr>
+<p>test</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[React-Native Startup]]></title>
       <url>https://beim.github.io/2016/08/08/React-Native-Startup/</url>
       <content type="html"><![CDATA[<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><h3 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h3><p>先<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">下载</a>JDK<br>解压到/usr/lib/jvm 下</p>
