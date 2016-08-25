@@ -4,6 +4,15 @@
   
     
     <entry>
+      <title><![CDATA[2011-午夜巴黎]]></title>
+      <url>https://beim.github.io/2016/08/25/2011-%E5%8D%88%E5%A4%9C%E5%B7%B4%E9%BB%8E/</url>
+      <content type="html"><![CDATA[<p><img src="http://img21.mtime.cn/pi/2011/08/20/115135.22160183_1000X1000.jpg" alt="midnight in paris"></p>
+<p>《午夜巴黎》（英语：Midnight in Paris）是2011年由伍迪·艾伦编剧并执导的一部以法国巴黎为背景的浪漫喜剧和奇幻电影。影片表现的主题是怀旧情绪、现代主义和存在主义。伍迪·艾伦凭本片获得了第84届奥斯卡金像奖的最佳原创剧本奖。</p>
+<a id="more"></a>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[React-Native Startup]]></title>
       <url>https://beim.github.io/2016/08/08/React-Native-Startup/</url>
       <content type="html"><![CDATA[<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><h3 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h3><p>先<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">下载</a>JDK<br>解压到/usr/lib/jvm 下</p>
