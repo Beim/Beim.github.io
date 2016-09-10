@@ -4,11 +4,37 @@
   
     
     <entry>
+      <title><![CDATA[计算机网络5E-笔记]]></title>
+      <url>https://beim.github.io/2016/09/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C5E-%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h2 id="OSI参考模型"><a href="#OSI参考模型" class="headerlink" title="OSI参考模型"></a>OSI参考模型</h2><ul>
+<li><p><strong>物理层(physical layer)</strong> 关注在一条通信信道上传输原始比特。</p>
+</li>
+<li><p><strong>数据链路层(data link layer)</strong> 的主要任务是将一个原始的传输设施转变成一条没有漏检传输错误的线路。将真实的错误掩盖，使网络层看不到。为此，发送方将输入的数据拆分成<strong>数据帧(data frame)</strong>，则接受方必须确认正确收到每一帧，即给发送方返回一个<strong>确认帧(acknowledgement frame)</strong>。</p>
+</li>
+<li><p><strong>网络层(network layer)</strong> 的主要功能是控制子网的运行。关键问题是将数据包从源端路由到接受方。处理拥塞也是网络层的责任，一般还要和高层协议结合起来处理拥塞才有效。</p>
+</li>
+<li><p><strong>传输层(transport layer)</strong> 的基本功能是接受来自上一层的数据，在必要的时候把这些数据分隔成较小的单元，然后把这些数据单元传递给网络层，并且确保这些数据单元正确地到达另一端。</p>
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li><p><strong>会话层(session layer)</strong> 允许不同机器上的用户建立会话。会话通常提供各种服务，包括<strong>对话控制(dialog control)</strong>(记录该由谁来传递数据)、<strong>令牌管理(token management)</strong>(禁止双方同时执行同一个关键操作)，以及<strong>同步功能(synchronization)</strong>(在一个长传输过程中设置一些断点，以便在系统崩溃之后还能回复到崩溃前的状态继续运行)。</p>
+</li>
+<li><p><strong>表示层(presentation layer)</strong> 表示层以下的各层关注如何传递数据位，而表示层关注的是所传递信息的语法和语义。不同的计算机可能有不同的内部数据表示法，为了让这些计算机能够进行通信，它们所交换的数据结构必须以一种抽象的方式来定义，同时还应定义一种“线上”使用的标准编码方法。表示层管理这些抽象的数据结构，并允许定义和交换更高层的数据结构（比如银行账户记录）。</p>
+</li>
+<li><p><strong>应用层(application layer)</strong> 包含了用户通常需要的各种各样的协议。一个得到广泛使用的应用协议是<strong>超文本传输协议(HTTP, HyperText Transfer Protocol)</strong>，它是<strong>万维网</strong>的基础。其他一些应用协议可用于文件传输、电子邮件以及网络新闻等。</p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[py-笔记]]></title>
       <url>https://beim.github.io/2016/09/10/py-%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<h1 id="pip"><a href="#pip" class="headerlink" title="pip"></a>pip</h1><hr>
 <p>pip3 install beautifulsoup4<br>pip3 install beautifulsoup4 -U<br>pip3 show beautifulsoup4</p>
 <p>Location: ~/.local/lib/python3.5/site-packages<br>sudo Location: /usr/local/lib/python3.5/dist-packages</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># 创建虚拟环境</div><div class="line">sudo -H pip3 install virtualenv</div><div class="line">virtualenv myEnv</div><div class="line">cd myEnv/</div><div class="line"># 激活环境，之后安装的任何库和执行的任何程序都是在这个环境下运行。</div><div class="line">source bin/activate</div><div class="line"># 释放，退出环境。</div><div class="line">deactivate</div></pre></td></tr></table></figure>
 <hr>
 ]]></content>
     </entry>
