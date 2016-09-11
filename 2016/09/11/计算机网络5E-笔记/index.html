@@ -84,25 +84,55 @@
 
 
 
-<meta name="description" content="OSI参考模型
-物理层(physical layer) 关注在一条通信信道上传输原始比特。
+<meta name="description" content="关键字
+IP (Internet Protocol) 因特网协议
 
-数据链路层(data link layer) 的主要任务是将一个原始的传输设施转变成一条没有漏检传输错误的线路。将真实的错误掩盖，使网络层看不到。为此，发送方将输入的数据拆分成数据帧(data frame)，则接受方必须确认正确收到每一帧，即给发送方返回一个确认帧(acknowledgement fram">
+ICMP (Internet Control Message Protocol) 因特网控制报文协议
+
+TCP (Transport Control Protocol) 传输控制协议
+
+UDP (User Datagram Protocol) 用户数据报协议
+
+Internet 因特网
+
+internet 互联网
+
+NAP (Ne">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机网络5E-笔记">
 <meta property="og:url" content="https://beim.github.io/2016/09/11/计算机网络5E-笔记/index.html">
 <meta property="og:site_name" content="北冥有鱼">
-<meta property="og:description" content="OSI参考模型
-物理层(physical layer) 关注在一条通信信道上传输原始比特。
+<meta property="og:description" content="关键字
+IP (Internet Protocol) 因特网协议
 
-数据链路层(data link layer) 的主要任务是将一个原始的传输设施转变成一条没有漏检传输错误的线路。将真实的错误掩盖，使网络层看不到。为此，发送方将输入的数据拆分成数据帧(data frame)，则接受方必须确认正确收到每一帧，即给发送方返回一个确认帧(acknowledgement fram">
-<meta property="og:updated_time" content="2016-09-10T16:59:26.015Z">
+ICMP (Internet Control Message Protocol) 因特网控制报文协议
+
+TCP (Transport Control Protocol) 传输控制协议
+
+UDP (User Datagram Protocol) 用户数据报协议
+
+Internet 因特网
+
+internet 互联网
+
+NAP (Ne">
+<meta property="og:updated_time" content="2016-09-11T15:54:06.846Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络5E-笔记">
-<meta name="twitter:description" content="OSI参考模型
-物理层(physical layer) 关注在一条通信信道上传输原始比特。
+<meta name="twitter:description" content="关键字
+IP (Internet Protocol) 因特网协议
 
-数据链路层(data link layer) 的主要任务是将一个原始的传输设施转变成一条没有漏检传输错误的线路。将真实的错误掩盖，使网络层看不到。为此，发送方将输入的数据拆分成数据帧(data frame)，则接受方必须确认正确收到每一帧，即给发送方返回一个确认帧(acknowledgement fram">
+ICMP (Internet Control Message Protocol) 因特网控制报文协议
+
+TCP (Transport Control Protocol) 传输控制协议
+
+UDP (User Datagram Protocol) 用户数据报协议
+
+Internet 因特网
+
+internet 互联网
+
+NAP (Ne">
 
 
 
@@ -315,7 +345,26 @@
       
 
       
-        <h2 id="OSI参考模型"><a href="#OSI参考模型" class="headerlink" title="OSI参考模型"></a>OSI参考模型</h2><ul>
+        <h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><ul>
+<li><p><strong>IP</strong> (Internet Protocol) 因特网协议</p>
+</li>
+<li><p><strong>ICMP</strong> (Internet Control Message Protocol) 因特网控制报文协议</p>
+</li>
+<li><p><strong>TCP</strong> (Transport Control Protocol) 传输控制协议</p>
+</li>
+<li><p><strong>UDP</strong> (User Datagram Protocol) 用户数据报协议</p>
+</li>
+<li><p><strong>Internet</strong> 因特网</p>
+</li>
+<li><p><strong>internet</strong> 互联网</p>
+</li>
+<li><p><strong>NAP</strong> (Network Access Point) 网络接入点</p>
+</li>
+<li><p><strong>DSL</strong> (Digital Subscriber Line) 数字用户线</p>
+</li>
+</ul>
+<hr>
+<h2 id="OSI参考模型"><a href="#OSI参考模型" class="headerlink" title="OSI参考模型"></a>OSI参考模型</h2><ul>
 <li><p><strong>物理层(physical layer)</strong> 关注在一条通信信道上传输原始比特。</p>
 </li>
 <li><p><strong>数据链路层(data link layer)</strong> 的主要任务是将一个原始的传输设施转变成一条没有漏检传输错误的线路。将真实的错误掩盖，使网络层看不到。为此，发送方将输入的数据拆分成<strong>数据帧(data frame)</strong>，则接受方必须确认正确收到每一帧，即给发送方返回一个<strong>确认帧(acknowledgement frame)</strong>。</p>
@@ -334,6 +383,32 @@
 <li><p><strong>应用层(application layer)</strong> 包含了用户通常需要的各种各样的协议。一个得到广泛使用的应用协议是<strong>超文本传输协议(HTTP, HyperText Transfer Protocol)</strong>，它是<strong>万维网</strong>的基础。其他一些应用协议可用于文件传输、电子邮件以及网络新闻等。</p>
 </li>
 </ul>
+<hr>
+<h2 id="TCP-IP-参考模型"><a href="#TCP-IP-参考模型" class="headerlink" title="TCP/IP 参考模型"></a>TCP/IP 参考模型</h2><h3 id="设计目标"><a href="#设计目标" class="headerlink" title="设计目标"></a>设计目标</h3><ul>
+<li>以无缝的方式将多个网络链接起来。</li>
+<li>即使在损失子网硬件的情况下网络还能够继续工作，原有的会话不能被打断。</li>
+</ul>
+<h3 id="模型结构"><a href="#模型结构" class="headerlink" title="模型结构"></a>模型结构</h3><ul>
+<li><p><strong>链路层(link layer)</strong> 该层描述了链路必须王城什么功能才能满足无连接的互连网络层的需求，比如串行线和经典以太网链路。在分层协议的上下文中，链路层并不是通常意义上的一层。它是一个接口（位于网络层和数据链路层之间）。</p>
+</li>
+<li><p><strong>互联网层(internet layer)</strong> 是将整个网络体系结构贯穿在一起的关键层。它大致对应OSI 的网络层。互联网层的任务是将IP 分组投递到它们该去的地方。数据包的路由是这里最主要的问题，同时该层还要考虑拥塞控制问题。</p>
+</li>
+<li><p><strong>传输层(transport layer)</strong> 的设计目标是允许源主机和目标主机上的对等实体进行对话，犹如OSI 的传输层一样。这里定义了两个端到端的协议TCP 和UDP。</p>
+</li>
+<li><p><strong>应用层(application layer)</strong> 包含了所有的高层协议。如虚拟终端协议（TELNET）、文件传输协议（FTP）、电子邮件协议（SMTP）、DNS（Domain Name System）、HTTP以及用于传送实时媒体的RTP 等。</p>
+</li>
+</ul>
+<h3 id="TCP-IP-模型及协议"><a href="#TCP-IP-模型及协议" class="headerlink" title="TCP/IP 模型及协议"></a>TCP/IP 模型及协议</h3><ul>
+<li><p><strong>应用层</strong>  HTTP  SMTP  RTP  DNS</p>
+</li>
+<li><p><strong>传输层</strong>  TCP  UDP</p>
+</li>
+<li><p><strong>互联网层</strong> IP ICMP</p>
+</li>
+<li><p><strong>链路层</strong>  DSL  SONET  802.11  Ethernet</p>
+</li>
+</ul>
+<hr>
 
       
     </div>
@@ -482,7 +557,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#OSI参考模型"><span class="nav-number">1.</span> <span class="nav-text">OSI参考模型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-number">1.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OSI参考模型"><span class="nav-number">2.</span> <span class="nav-text">OSI参考模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-IP-参考模型"><span class="nav-number">3.</span> <span class="nav-text">TCP/IP 参考模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设计目标"><span class="nav-number">3.1.</span> <span class="nav-text">设计目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型结构"><span class="nav-number">3.2.</span> <span class="nav-text">模型结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP-模型及协议"><span class="nav-number">3.3.</span> <span class="nav-text">TCP/IP 模型及协议</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
