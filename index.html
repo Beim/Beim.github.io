@@ -329,127 +329,11 @@
 <li><p><strong>DSL</strong> (Digital Subscriber Line) 数字用户线</p>
 </li>
 </ul>
-<hr>
-<h2 id="OSI参考模型"><a href="#OSI参考模型" class="headerlink" title="OSI参考模型"></a>OSI参考模型</h2><ul>
-<li><p><strong>物理层(physical layer)</strong> 关注在一条通信信道上传输原始比特。</p>
-</li>
-<li><p><strong>数据链路层(data link layer)</strong> 的主要任务是将一个原始的传输设施转变成一条没有漏检传输错误的线路。将真实的错误掩盖，使网络层看不到。为此，发送方将输入的数据拆分成<strong>数据帧(data frame)</strong>，则接受方必须确认正确收到每一帧，即给发送方返回一个<strong>确认帧(acknowledgement frame)</strong>。</p>
-</li>
-<li><p><strong>网络层(network layer)</strong> 的主要功能是控制子网的运行。关键问题是将数据包从源端路由到接受方。处理拥塞也是网络层的责任，一般还要和高层协议结合起来处理拥塞才有效。</p>
-</li>
-<li><p><strong>传输层(transport layer)</strong> 的基本功能是接受来自上一层的数据，在必要的时候把这些数据分隔成较小的单元，然后把这些数据单元传递给网络层，并且确保这些数据单元正确地到达另一端。</p>
-</li>
-</ul>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/09/11/计算机网络5E-笔记/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/10/py-笔记/" itemprop="url">
-                  py-笔记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-09-10T09:30:51+08:00" content="2016-09-10">
-              2016-09-10
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/10/py-笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/10/py-笔记/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="pip"><a href="#pip" class="headerlink" title="pip"></a>pip</h1><hr>
-<p>pip3 install beautifulsoup4<br>pip3 install beautifulsoup4 -U<br>pip3 show beautifulsoup4</p>
-<p>Location: ~/.local/lib/python3.5/site-packages<br>sudo Location: /usr/local/lib/python3.5/dist-packages</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># 创建虚拟环境</div><div class="line">sudo -H pip3 install virtualenv</div><div class="line">virtualenv myEnv</div><div class="line">cd myEnv/</div><div class="line"># 激活环境，之后安装的任何库和执行的任何程序都是在这个环境下运行。</div><div class="line">source bin/activate</div><div class="line"># 释放，退出环境。</div><div class="line">deactivate</div></pre></td></tr></table></figure>
-<hr>
-
-          
         
       
     </div>
@@ -1306,6 +1190,112 @@
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/05/测试框架AVA/" itemprop="url">
+                  测试框架AVA
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-05T09:06:00+08:00" content="2016-08-05">
+              2016-08-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/05/测试框架AVA/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/05/测试框架AVA/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="/images/ceshiheader.png" alt="ava"></p>
+<blockquote>
+<p>面向未来的测试运行器</p>
+</blockquote>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/05/测试框架AVA/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -1351,7 +1341,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
