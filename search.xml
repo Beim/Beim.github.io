@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title><![CDATA[计算机网络5E-笔记]]></title>
+      <title><![CDATA[计算机网络-笔记]]></title>
       <url>https://beim.github.io/2016/09/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C5E-%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><ul>
+      <content type="html"><![CDATA[<h1 id="计算机网络5E"><a href="#计算机网络5E" class="headerlink" title="计算机网络5E"></a>计算机网络5E</h1><h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><ul>
 <li><p><strong>IP</strong> (Internet Protocol) 因特网协议</p>
 </li>
 <li><p><strong>ICMP</strong> (Internet Control Message Protocol) 因特网控制报文协议</p>
@@ -82,6 +82,21 @@
 </li>
 </ul>
 <hr>
+<h1 id="计算机网络课程"><a href="#计算机网络课程" class="headerlink" title="计算机网络课程"></a>计算机网络课程</h1><h2 id="第二周-1-4计算机网络性能"><a href="#第二周-1-4计算机网络性能" class="headerlink" title="第二周-1.4计算机网络性能"></a>第二周-1.4计算机网络性能</h2><p><strong>速率</strong>即数据率(data rate) 或称数据传输率或比特率(bit rate)<br>单位 b/s(或bps), kb/s, Mb/s, Gb/s<br>k = 10^3, M = 10^ 6, G = 10^9<br>速率往往是指<strong>额定速率</strong>或<strong>标称速率</strong></p>
+<p><strong>带宽</strong>(bandwidth) 是指信号具有的频带宽度，即最高频率与最低频率之差，单位是赫兹(Hz)<br>网络中的<strong>带宽</strong>是数字型号所能传送的<strong>最高数据率</strong>, 单位 b/s(bps)<br>常用的带宽单位:<br>kb/s(10^3 b/s), Mb/s, Gb/s, Tb/s</p>
+<p>Q: 分组交换为什么会发生丢包和时延?<br>A: 分组在路由器缓存中排队</p>
+<h3 id="四种分组延迟"><a href="#四种分组延迟" class="headerlink" title="四种分组延迟"></a>四种分组延迟</h3><ul>
+<li><p>结点处理延迟(nodal processing delay)</p>
+</li>
+<li><p>排队延迟(queueing delay)</p>
+</li>
+<li><p>传输延迟(transmission delay)<br>L: 分组长度(bits)<br>R: 链路带宽(bps)<br>d = L / R</p>
+</li>
+<li><p>传播延迟(propagation delay)<br>d: 物理链路长度<br>s: 信号传播速度(~2 * 10^8 m/sec)<br>dprop = d / s</p>
+</li>
+<li><p>排队延迟<br>R: 链路带宽(bps)<br>L: 分组长度(bits)<br>a: 平均分组到达速率<br>流量强度: La / R (接近1: 平均排队延迟大, 约等于0: 平均排队延迟很小, 大于1: 超出服务能力,平均排队延迟无限大)</p>
+</li>
+</ul>
 ]]></content>
     </entry>
     
