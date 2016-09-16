@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="notes," />
 
 
 
@@ -84,15 +84,19 @@
 
 
 
-<meta name="description" content="平常心，平常心。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="北冥有鱼">
-<meta property="og:url" content="https://beim.github.io/tags/Movie/index.html">
+<meta name="description" content="练习第三章词法分析3.1.1
+1234&amp;lt;float&amp;gt; &amp;lt;id, limitedSquaare&amp;gt; &amp;lt;(&amp;gt; &amp;lt;id, x&amp;gt; &amp;lt;)&amp;gt; &amp;lt;&amp;#123;&amp;gt;  &amp;lt;float&amp;gt; &amp;lt;id, x&amp;gt;  &amp;lt;return&amp;gt; &amp;lt;(&amp;gt; &amp;lt;id, x&amp;gt; &amp;lt;op,&amp;quot;&amp;lt;=&amp;qu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编译原理2E-笔记">
+<meta property="og:url" content="https://beim.github.io/2016/09/14/编译原理2E-笔记/index.html">
 <meta property="og:site_name" content="北冥有鱼">
-<meta property="og:description" content="平常心，平常心。">
+<meta property="og:description" content="练习第三章词法分析3.1.1
+1234&amp;lt;float&amp;gt; &amp;lt;id, limitedSquaare&amp;gt; &amp;lt;(&amp;gt; &amp;lt;id, x&amp;gt; &amp;lt;)&amp;gt; &amp;lt;&amp;#123;&amp;gt;  &amp;lt;float&amp;gt; &amp;lt;id, x&amp;gt;  &amp;lt;return&amp;gt; &amp;lt;(&amp;gt; &amp;lt;id, x&amp;gt; &amp;lt;op,&amp;quot;&amp;lt;=&amp;qu">
+<meta property="og:updated_time" content="2016-09-15T09:20:49.311Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="北冥有鱼">
-<meta name="twitter:description" content="平常心，平常心。">
+<meta name="twitter:title" content="编译原理2E-笔记">
+<meta name="twitter:description" content="练习第三章词法分析3.1.1
+1234&amp;lt;float&amp;gt; &amp;lt;id, limitedSquaare&amp;gt; &amp;lt;(&amp;gt; &amp;lt;id, x&amp;gt; &amp;lt;)&amp;gt; &amp;lt;&amp;#123;&amp;gt;  &amp;lt;float&amp;gt; &amp;lt;id, x&amp;gt;  &amp;lt;return&amp;gt; &amp;lt;(&amp;gt; &amp;lt;id, x&amp;gt; &amp;lt;op,&amp;quot;&amp;lt;=&amp;qu">
 
 
 
@@ -113,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="https://beim.github.io/tags/Movie/"/>
+  <link rel="canonical" href="https://beim.github.io/2016/09/14/编译原理2E-笔记/"/>
 
-  <title> Tag: Movie | 北冥有鱼 </title>
+  <title> 编译原理2E-笔记 | 北冥有鱼 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -136,7 +140,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,46 +241,145 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        Movie
-        <small>Tag</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                编译原理2E-笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-14T22:20:59+08:00" content="2016-09-14">
+              2016-09-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/14/编译原理2E-笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/14/编译原理2E-笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <a id="more"></a>
+<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><h2 id="第三章词法分析"><a href="#第三章词法分析" class="headerlink" title="第三章词法分析"></a>第三章词法分析</h2><p><strong>3.1.1</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;float&gt; &lt;id, limitedSquaare&gt; &lt;(&gt; &lt;id, x&gt; &lt;)&gt; &lt;&#123;&gt;</div><div class="line">  &lt;float&gt; &lt;id, x&gt;</div><div class="line">  &lt;return&gt; &lt;(&gt; &lt;id, x&gt; &lt;op,&quot;&lt;=&quot;&gt; &lt;num, -10.0&gt; &lt;op, &quot;||&quot;&gt; &lt;id, x&gt; &lt;op, &quot;&gt;=&quot;&gt; &lt;num, 10.0&gt; &lt;)&gt; &lt;op, &quot;?&quot;&gt; &lt;num, 100&gt; &lt;op, &quot;:&quot;&gt; &lt;id, x&gt; &lt;op, &quot;*&quot;&gt; &lt;id, x&gt;</div><div class="line">&lt;&#125;&gt;</div></pre></td></tr></table></figure>
+<p><strong>3.1.2</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;text, &quot;Here is a photo of&quot;&gt; &lt;nodeStart, b&gt; &lt;text, &quot;my house&quot;&gt; &lt;nodeEnd, b&gt;</div><div class="line">&lt;nodeStart, p&gt; &lt;selfEndNodeStart, IMG&gt; &lt;SRC, &quot;house.gif&quot;&gt; &lt;selfEndNodeEnd, IMG&gt; &lt;selfEndNode, BR&gt;</div><div class="line">&lt;text, &quot;See&quot;&gt; &lt;nodeStart, A&gt; &lt;HREF, &quot;morePix.html&quot;&gt; &lt;selfEndNodeEnd, A&gt; &lt;text, &quot;More Pictures&quot;&gt; &lt;nodeEnd, A&gt; &lt;text, &quot;if you liked that one.&quot;&gt;</div><div class="line">&lt;nodeEnd, p&gt;</div></pre></td></tr></table></figure>
+<p><strong>3.3.2</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1) a开头a结尾,中间是大于等于0个a或b组成的字符串 如 abababaaba</div><div class="line">2) 任意a与b组成的字符串</div><div class="line">3) 以a 连接 a或b 连接 a或b 结尾的任意a与b组成的字串</div><div class="line">4) 3个b和任意个a组成的字串</div><div class="line">5) 偶数个a和b组成的字串</div></pre></td></tr></table></figure>
+<p><strong>3.3.3</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1) n + 1</div><div class="line">2) n + 1</div><div class="line">3) n</div><div class="line">4) (1 + n) / 2 * n + 1</div><div class="line">5) 2^n</div></pre></td></tr></table></figure>
+<p><strong>3.3.4</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/select/i</div><div class="line">select -&gt; [Ss][Ee][Ll][Ee][Cc][Tt]</div></pre></td></tr></table></figure>
+<p><strong>3.3.5</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1) want -&gt; other* a (other|a)* e (other|e)* i (other|i)* o (other|o)* u (other|u)*</div><div class="line">    other -&gt; [bcdfghjklmnpqrstvwxyz]</div><div class="line">2) a*b*...z*</div><div class="line">9) b*a*b?a*</div></pre></td></tr></table></figure>
+<p><strong>3.3.6</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1) [a-jA-J]</div><div class="line">2) [bcdfghjklmnpqrstvwxzy]</div><div class="line">3) [0-9a-f]</div><div class="line">4) [.?!]</div></pre></td></tr></table></figure>
+<p><strong>3.3.7</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">\&quot;\\</div></pre></td></tr></table></figure>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/08/25/2011-午夜巴黎/" itemprop="url">
-              
-                <span itemprop="name">2011-午夜巴黎</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-25T20:06:11+08:00"
-              content="2016-08-25" >
-          08-25
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/notes/" rel="tag">#notes</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/11/计算机网络5E-笔记/" rel="next" title="计算机网络-笔记">
+                <i class="fa fa-chevron-left"></i> 计算机网络-笔记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -284,6 +387,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/14/编译原理2E-笔记/"
+           data-title="编译原理2E-笔记" data-url="https://beim.github.io/2016/09/14/编译原理2E-笔记/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -303,8 +414,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/hand_zheng.jpg"
@@ -347,6 +467,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#练习"><span class="nav-number">1.</span> <span class="nav-text">练习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章词法分析"><span class="nav-number">1.1.</span> <span class="nav-text">第三章词法分析</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -450,6 +581,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
