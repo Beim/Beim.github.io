@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript," />
+  <meta name="keywords" content="C++," />
 
 
 
@@ -84,16 +84,22 @@
 
 
 
-<meta name="description" content="12345678910const num1 = 1234567890123456const num2 = 12345678901234567const str1 = &amp;apos;1234567890123456&amp;apos;const str2 = `12345678901234567`console.log(num1 === str1) // falseconsole.log(`$&amp;#123;nu">
+<meta name="description" content="template下面的代码在vc6可以通过, 在g++不能通过.因为std中定义了max函数
+12error: call of overloaded ‘max(int&amp;amp;, int&amp;amp;)’ is ambiguous     a = max(a, b);
+12345678910111213141516171819#include &amp;lt;algorithm&amp;gt;#include &amp;lt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS 超长数字的坑">
-<meta property="og:url" content="https://beim.github.io/2016/09/06/JS-超长数字的坑/index.html">
+<meta property="og:title" content="C++ 一些坑">
+<meta property="og:url" content="https://beim.github.io/2016/09/17/C-一些坑/index.html">
 <meta property="og:site_name" content="北冥有鱼">
-<meta property="og:description" content="12345678910const num1 = 1234567890123456const num2 = 12345678901234567const str1 = &amp;apos;1234567890123456&amp;apos;const str2 = `12345678901234567`console.log(num1 === str1) // falseconsole.log(`$&amp;#123;nu">
-<meta property="og:updated_time" content="2016-09-06T09:32:28.129Z">
+<meta property="og:description" content="template下面的代码在vc6可以通过, 在g++不能通过.因为std中定义了max函数
+12error: call of overloaded ‘max(int&amp;amp;, int&amp;amp;)’ is ambiguous     a = max(a, b);
+12345678910111213141516171819#include &amp;lt;algorithm&amp;gt;#include &amp;lt">
+<meta property="og:updated_time" content="2016-09-17T05:11:08.793Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS 超长数字的坑">
-<meta name="twitter:description" content="12345678910const num1 = 1234567890123456const num2 = 12345678901234567const str1 = &amp;apos;1234567890123456&amp;apos;const str2 = `12345678901234567`console.log(num1 === str1) // falseconsole.log(`$&amp;#123;nu">
+<meta name="twitter:title" content="C++ 一些坑">
+<meta name="twitter:description" content="template下面的代码在vc6可以通过, 在g++不能通过.因为std中定义了max函数
+12error: call of overloaded ‘max(int&amp;amp;, int&amp;amp;)’ is ambiguous     a = max(a, b);
+12345678910111213141516171819#include &amp;lt;algorithm&amp;gt;#include &amp;lt">
 
 
 
@@ -114,9 +120,9 @@
 
 
 
-  <link rel="canonical" href="https://beim.github.io/2016/09/06/JS-超长数字的坑/"/>
+  <link rel="canonical" href="https://beim.github.io/2016/09/17/C-一些坑/"/>
 
-  <title> JS 超长数字的坑 | 北冥有鱼 </title>
+  <title> C++ 一些坑 | 北冥有鱼 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -259,7 +265,7 @@
             
             
               
-                JS 超长数字的坑
+                C++ 一些坑
               
             
           </h1>
@@ -271,8 +277,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-09-06T17:31:17+08:00" content="2016-09-06">
-              2016-09-06
+            <time itemprop="dateCreated" datetime="2016-09-17T13:06:24+08:00" content="2016-09-17">
+              2016-09-17
             </time>
           </span>
 
@@ -282,8 +288,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/06/JS-超长数字的坑/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/06/JS-超长数字的坑/" itemprop="commentsCount"></span>
+                <a href="/2016/09/17/C-一些坑/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/17/C-一些坑/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -306,7 +312,9 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">const num1 = 1234567890123456</div><div class="line">const num2 = 12345678901234567</div><div class="line">const str1 = &apos;1234567890123456&apos;</div><div class="line">const str2 = `12345678901234567`</div><div class="line"></div><div class="line">console.log(num1 === str1) // false</div><div class="line">console.log(`$&#123;num1&#125;` === str1) // true</div><div class="line"></div><div class="line">console.log(num2 === str2) // false</div><div class="line">console.log(`$&#123;num2&#125;` === str2) // false</div></pre></td></tr></table></figure>
+        <h2 id="template"><a href="#template" class="headerlink" title="template"></a>template</h2><p>下面的代码在vc6可以通过, 在g++不能通过.<br>因为std中定义了max函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">error: call of overloaded ‘max(int&amp;, int&amp;)’ is ambiguous</div><div class="line">     a = max(a, b);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">#include &lt;algorithm&gt;</div><div class="line">#include &lt;string&gt;</div><div class="line">#include &lt;iostream&gt;</div><div class="line"></div><div class="line">using namespace std;</div><div class="line">// using std::cout;</div><div class="line">// using std::endl;</div><div class="line"></div><div class="line">template &lt;typename Type&gt; inline Type max (Type t1, Type t2) &#123;</div><div class="line">    return t1 &gt; t2 ? t1 : t2;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int main() &#123;</div><div class="line">    int a = 1;</div><div class="line">    int b = 2;</div><div class="line">    a = max(a, b);</div><div class="line">    cout &lt;&lt; a &lt;&lt; endl;</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -329,7 +337,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag">#javascript</a>
+            <a href="/tags/C/" rel="tag">#C++</a>
           
         </div>
       
@@ -338,17 +346,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/25/2011-午夜巴黎/" rel="next" title="2011-午夜巴黎">
-                <i class="fa fa-chevron-left"></i> 2011-午夜巴黎
+              <a href="/2016/09/14/编译原理2E-笔记/" rel="next" title="编译原理2E-笔记">
+                <i class="fa fa-chevron-left"></i> 编译原理2E-笔记
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/11/计算机网络5E-笔记/" rel="prev" title="计算机网络-笔记">
-                计算机网络-笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -374,8 +378,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/09/06/JS-超长数字的坑/"
-           data-title="JS 超长数字的坑" data-url="https://beim.github.io/2016/09/06/JS-超长数字的坑/">
+      <div class="ds-thread" data-thread-key="2016/09/17/C-一些坑/"
+           data-title="C++ 一些坑" data-url="https://beim.github.io/2016/09/17/C-一些坑/">
       </div>
     
   </div>
@@ -459,7 +463,7 @@
               
             
             
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#template"><span class="nav-number">1.</span> <span class="nav-text">template</span></a></li></ol></div>
             
           </div>
         </section>
