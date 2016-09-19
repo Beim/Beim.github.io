@@ -311,12 +311,12 @@
 
       
         
-          
-            <h2 id="template"><a href="#template" class="headerlink" title="template"></a>template</h2><p>下面的代码在vc6可以通过, 在g++不能通过.<br>因为std中定义了max函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">error: call of overloaded ‘max(int&amp;, int&amp;)’ is ambiguous</div><div class="line">     a = max(a, b);</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">#include &lt;algorithm&gt;</div><div class="line">#include &lt;string&gt;</div><div class="line">#include &lt;iostream&gt;</div><div class="line"></div><div class="line">using namespace std;</div><div class="line">// using std::cout;</div><div class="line">// using std::endl;</div><div class="line"></div><div class="line">template &lt;typename Type&gt; inline Type max (Type t1, Type t2) &#123;</div><div class="line">    return t1 &gt; t2 ? t1 : t2;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int main() &#123;</div><div class="line">    int a = 1;</div><div class="line">    int b = 2;</div><div class="line">    a = max(a, b);</div><div class="line">    cout &lt;&lt; a &lt;&lt; endl;</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-          
+          <h2 id="template"><a href="#template" class="headerlink" title="template"></a>template</h2>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/17/C-一些坑/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -414,34 +414,12 @@
 
       
         
-          
-            <a id="more"></a>
-<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><h2 id="第三章词法分析"><a href="#第三章词法分析" class="headerlink" title="第三章词法分析"></a>第三章词法分析</h2><p><strong>3.1.1</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;float&gt; &lt;id, limitedSquaare&gt; &lt;(&gt; &lt;id, x&gt; &lt;)&gt; &lt;&#123;&gt;</div><div class="line">  &lt;float&gt; &lt;id, x&gt;</div><div class="line">  &lt;return&gt; &lt;(&gt; &lt;id, x&gt; &lt;op,&quot;&lt;=&quot;&gt; &lt;num, -10.0&gt; &lt;op, &quot;||&quot;&gt; &lt;id, x&gt; &lt;op, &quot;&gt;=&quot;&gt; &lt;num, 10.0&gt; &lt;)&gt; &lt;op, &quot;?&quot;&gt; &lt;num, 100&gt; &lt;op, &quot;:&quot;&gt; &lt;id, x&gt; &lt;op, &quot;*&quot;&gt; &lt;id, x&gt;</div><div class="line">&lt;&#125;&gt;</div></pre></td></tr></table></figure>
-<p><strong>3.1.2</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;text, &quot;Here is a photo of&quot;&gt; &lt;nodeStart, b&gt; &lt;text, &quot;my house&quot;&gt; &lt;nodeEnd, b&gt;</div><div class="line">&lt;nodeStart, p&gt; &lt;selfEndNodeStart, IMG&gt; &lt;SRC, &quot;house.gif&quot;&gt; &lt;selfEndNodeEnd, IMG&gt; &lt;selfEndNode, BR&gt;</div><div class="line">&lt;text, &quot;See&quot;&gt; &lt;nodeStart, A&gt; &lt;HREF, &quot;morePix.html&quot;&gt; &lt;selfEndNodeEnd, A&gt; &lt;text, &quot;More Pictures&quot;&gt; &lt;nodeEnd, A&gt; &lt;text, &quot;if you liked that one.&quot;&gt;</div><div class="line">&lt;nodeEnd, p&gt;</div></pre></td></tr></table></figure>
-<p><strong>3.3.2</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1) a开头a结尾,中间是大于等于0个a或b组成的字符串 如 abababaaba</div><div class="line">2) 任意a与b组成的字符串</div><div class="line">3) 以a 连接 a或b 连接 a或b 结尾的任意a与b组成的字串</div><div class="line">4) 3个b和任意个a组成的字串</div><div class="line">5) 偶数个a和b组成的字串</div></pre></td></tr></table></figure>
-<p><strong>3.3.3</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1) n + 1</div><div class="line">2) n + 1</div><div class="line">3) n</div><div class="line">4) (1 + n) / 2 * n + 1</div><div class="line">5) 2^n</div></pre></td></tr></table></figure>
-<p><strong>3.3.4</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/select/i</div><div class="line">select -&gt; [Ss][Ee][Ll][Ee][Cc][Tt]</div></pre></td></tr></table></figure>
-<p><strong>3.3.5</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1) want -&gt; other* a (other|a)* e (other|e)* i (other|i)* o (other|o)* u (other|u)*</div><div class="line">    other -&gt; [bcdfghjklmnpqrstvwxyz]</div><div class="line">2) a*b*...z*</div><div class="line">9) b*a*b?a*</div></pre></td></tr></table></figure>
-<p><strong>3.3.6</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1) [a-jA-J]</div><div class="line">2) [bcdfghjklmnpqrstvwxzy]</div><div class="line">3) [0-9a-f]</div><div class="line">4) [.?!]</div></pre></td></tr></table></figure>
-<p><strong>3.5.2</strong></p>
-<blockquote>
-<p>deemo.lex</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">%&#123;</div><div class="line">#include &lt;fstream&gt;</div><div class="line">using std::ofstream;</div><div class="line">ofstream out(&quot;out.txt&quot;);</div><div class="line">%&#125;</div><div class="line"></div><div class="line">delim   [ \t\n]</div><div class="line">ws  &#123;delim&#125;+</div><div class="line"></div><div class="line">%%</div><div class="line">&#123;ws&#125;  out &lt;&lt; &quot; &quot;;</div><div class="line">.  out &lt;&lt; yytext;</div><div class="line">%%</div><div class="line"></div><div class="line">int yywrap (void) &#123;</div><div class="line">    return 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">main(int argc, char* argv[]) &#123;</div><div class="line">    yylex();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>3.5.3</strong></p>
-<blockquote>
-<p>deemo.lex</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">%&#123;</div><div class="line">#include &lt;fstream&gt;</div><div class="line">using std::ofstream;</div><div class="line">ofstream out(&quot;out.txt&quot;);</div><div class="line">%&#125;</div><div class="line"></div><div class="line">delim   [ \t\n]</div><div class="line">ws  &#123;delim&#125;+</div><div class="line"></div><div class="line">%%</div><div class="line">&#123;ws&#125; &#123;out &lt;&lt; yytext;&#125;</div><div class="line">float  &#123;out &lt;&lt; &quot;double&quot;;&#125;</div><div class="line">.  &#123;out &lt;&lt; yytext;&#125;</div><div class="line">%%</div><div class="line"></div><div class="line">int yywrap (void) &#123;</div><div class="line">    return 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">main(int argc, char* argv[]) &#123;</div><div class="line">    yylex();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-          
+          <h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/14/编译原理2E-笔记/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
