@@ -6,8 +6,9 @@
     <entry>
       <title><![CDATA[C++ 一些坑]]></title>
       <url>https://beim.github.io/2016/09/17/C-%E4%B8%80%E4%BA%9B%E5%9D%91/</url>
-      <content type="html"><![CDATA[<h2 id="template"><a href="#template" class="headerlink" title="template"></a>template</h2><a id="more"></a>
-<blockquote>
+      <content type="html"><![CDATA[<p><img src="http://ob4a6y748.bkt.clouddn.com/C-PNG-Clipart.png" alt="C++"></p>
+<a id="more"></a>
+<h2 id="template"><a href="#template" class="headerlink" title="template"></a>template</h2><blockquote>
 <p>下面的代码在vc6可以通过, 在g++不能通过.<br>因为std中定义了max函数</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">error: call of overloaded ‘max(int&amp;, int&amp;)’ is ambiguous</div><div class="line">     a = max(a, b);</div></pre></td></tr></table></figure>
@@ -22,8 +23,8 @@
     <entry>
       <title><![CDATA[编译原理2E-笔记]]></title>
       <url>https://beim.github.io/2016/09/14/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%862E-%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><a id="more"></a>
-<h2 id="第三章词法分析"><a href="#第三章词法分析" class="headerlink" title="第三章词法分析"></a>第三章词法分析</h2><p><strong>3.1.1</strong></p>
+      <content type="html"><![CDATA[<p><img src="http://ob4a6y748.bkt.clouddn.com/compilers.jpg" alt="compiler"><br><a id="more"></a></p>
+<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><h2 id="第三章词法分析"><a href="#第三章词法分析" class="headerlink" title="第三章词法分析"></a>第三章词法分析</h2><p><strong>3.1.1</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;float&gt; &lt;id, limitedSquaare&gt; &lt;(&gt; &lt;id, x&gt; &lt;)&gt; &lt;&#123;&gt;</div><div class="line">  &lt;float&gt; &lt;id, x&gt;</div><div class="line">  &lt;return&gt; &lt;(&gt; &lt;id, x&gt; &lt;op,&quot;&lt;=&quot;&gt; &lt;num, -10.0&gt; &lt;op, &quot;||&quot;&gt; &lt;id, x&gt; &lt;op, &quot;&gt;=&quot;&gt; &lt;num, 10.0&gt; &lt;)&gt; &lt;op, &quot;?&quot;&gt; &lt;num, 100&gt; &lt;op, &quot;:&quot;&gt; &lt;id, x&gt; &lt;op, &quot;*&quot;&gt; &lt;id, x&gt;</div><div class="line">&lt;&#125;&gt;</div></pre></td></tr></table></figure>
 <p><strong>3.1.2</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;text, &quot;Here is a photo of&quot;&gt; &lt;nodeStart, b&gt; &lt;text, &quot;my house&quot;&gt; &lt;nodeEnd, b&gt;</div><div class="line">&lt;nodeStart, p&gt; &lt;selfEndNodeStart, IMG&gt; &lt;SRC, &quot;house.gif&quot;&gt; &lt;selfEndNodeEnd, IMG&gt; &lt;selfEndNode, BR&gt;</div><div class="line">&lt;text, &quot;See&quot;&gt; &lt;nodeStart, A&gt; &lt;HREF, &quot;morePix.html&quot;&gt; &lt;selfEndNodeEnd, A&gt; &lt;text, &quot;More Pictures&quot;&gt; &lt;nodeEnd, A&gt; &lt;text, &quot;if you liked that one.&quot;&gt;</div><div class="line">&lt;nodeEnd, p&gt;</div></pre></td></tr></table></figure>
