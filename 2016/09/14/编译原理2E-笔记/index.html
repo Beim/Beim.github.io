@@ -89,7 +89,7 @@
 <meta property="og:url" content="https://beim.github.io/2016/09/14/编译原理2E-笔记/index.html">
 <meta property="og:site_name" content="北冥有鱼">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/compilers.jpg">
-<meta property="og:updated_time" content="2016-09-19T06:20:25.858Z">
+<meta property="og:updated_time" content="2016-09-20T13:47:12.998Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编译原理2E-笔记">
 <meta name="twitter:image" content="http://ob4a6y748.bkt.clouddn.com/compilers.jpg">
@@ -340,6 +340,19 @@
 <p>deemo.lex</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line">%&#123;</div><div class="line">#include &lt;fstream&gt;</div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;vector&gt;</div><div class="line">using std::ofstream;</div><div class="line">using std::cout;</div><div class="line">using std::vector;</div><div class="line">using std::endl;</div><div class="line">ofstream out(&quot;out.txt&quot;);</div><div class="line">void display (vector&lt;char&gt; &amp;cvec, ofstream &amp;os) &#123;</div><div class="line">    for (int i = 0; i &lt; cvec.size(); i++) &#123;</div><div class="line">        os &lt;&lt; cvec[i];</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">%&#125;</div><div class="line"></div><div class="line">delim   [ \t\n]</div><div class="line">ws  &#123;delim&#125;+</div><div class="line">letter  [A-Za-z]</div><div class="line">digit  [0-9]</div><div class="line">id &#123;letter&#125;(&#123;letter&#125;|&#123;digit&#125;)*</div><div class="line">number  &#123;digit&#125;+(\.&#123;digit&#125;+)?(E[+-]?&#123;digit&#125;+)?</div><div class="line"></div><div class="line">%%</div><div class="line">&#123;ws&#125; &#123;</div><div class="line">    out &lt;&lt; yytext;</div><div class="line">&#125;</div><div class="line">[Ss][Ee][Ll][Ee][Cc][Tt]  &#123;</div><div class="line">    out &lt;&lt; &quot;select&quot;;</div><div class="line">&#125;</div><div class="line">[Ff][Rr][Oo][Mm]  &#123;</div><div class="line">    out &lt;&lt; &quot;from&quot;;</div><div class="line">&#125;</div><div class="line">[Ww][Hh][Ee][Rr][Ee]  &#123;</div><div class="line">    out &lt;&lt; &quot;where&quot;;</div><div class="line">&#125;</div><div class="line">&#123;id&#125;  &#123;</div><div class="line">    out &lt;&lt; yytext;</div><div class="line">&#125;</div><div class="line">.  &#123;</div><div class="line">    out &lt;&lt; yytext;</div><div class="line">&#125;</div><div class="line">%%</div><div class="line"></div><div class="line"></div><div class="line">int yywrap (void) &#123;</div><div class="line">    return 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">main(int argc, char* argv[]) &#123;</div><div class="line">    yylex();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="第四章语法分析"><a href="#第四章语法分析" class="headerlink" title="第四章语法分析"></a>第四章语法分析</h2><p><strong>4.2.1</strong></p>
+<ol>
+<li><p>最左推倒</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">S -&gt; SS*</div><div class="line">  -&gt; SS+S*</div><div class="line">  -&gt; aS+S*</div><div class="line">  -&gt; aa+S*</div><div class="line">  -&gt; aa+a*</div></pre></td></tr></table></figure>
+</li>
+<li><p>最右推倒</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">S -&gt; SS*</div><div class="line">  -&gt; Sa*</div><div class="line">  -&gt; SS+a*</div><div class="line">  -&gt; Sa+a*</div><div class="line">  -&gt; aa+a*</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>4.2.3</strong></p>
+<ol>
+<li>S -&gt; 0T1S | 1S | null<br>T -&gt; 1T | 0T | 0</li>
+</ol>
 
       
     </div>
@@ -378,6 +391,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/21/JS-正则表达式/" rel="prev" title="JS-正则表达式">
+                JS-正则表达式 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -449,7 +466,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -488,7 +505,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#练习"><span class="nav-number">1.</span> <span class="nav-text">练习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章词法分析"><span class="nav-number">1.1.</span> <span class="nav-text">第三章词法分析</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#练习"><span class="nav-number">1.</span> <span class="nav-text">练习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章词法分析"><span class="nav-number">1.1.</span> <span class="nav-text">第三章词法分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章语法分析"><span class="nav-number">1.2.</span> <span class="nav-text">第四章语法分析</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

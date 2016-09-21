@@ -4,6 +4,30 @@
   
     
     <entry>
+      <title><![CDATA[JS-正则表达式]]></title>
+      <url>https://beim.github.io/2016/09/21/JS-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+      <content type="html"><![CDATA[<h2 id="RegExp-方法"><a href="#RegExp-方法" class="headerlink" title="RegExp 方法"></a>RegExp 方法</h2><ul>
+<li><p>RegExp.prototype.exec()</p>
+</li>
+<li><p>RegExp.prototype.test()</p>
+</li>
+<li><p>RegExp.prototype.toSource()</p>
+</li>
+<li><p>RegExp.prototype.toString()</p>
+</li>
+</ul>
+<h2 id="String-方法"><a href="#String-方法" class="headerlink" title="String 方法"></a>String 方法</h2><ul>
+<li><p>String.prototype.match()</p>
+</li>
+<li><p>String.prototype.replace()</p>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">let patt = /a/</div><div class="line">let str = &apos;abcabc&apos;</div><div class="line"></div><div class="line">patt.exec(str) </div><div class="line">// [ &apos;a&apos;, index: 0, input: &apos;abcabc&apos; ]</div><div class="line">patt.test(str) </div><div class="line">// true </div><div class="line">str.match(patt) </div><div class="line">// [ &apos;a&apos;, index: 0, input: &apos;abcabc&apos; ]</div><div class="line"></div><div class="line">let patt1 = /a/g</div><div class="line">patt1.exec(str)</div><div class="line">// [ &apos;a&apos;, index: 0, input: &apos;abcabc&apos; ]</div><div class="line">patt1.test(str)</div><div class="line">// true</div><div class="line">str.match(patt1)</div><div class="line">// [ &apos;a&apos;, &apos;a&apos; ]</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[编译原理2E-笔记]]></title>
       <url>https://beim.github.io/2016/09/14/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%862E-%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<p><img src="http://ob4a6y748.bkt.clouddn.com/compilers.jpg" alt="compiler"><br><a id="more"></a></p>
@@ -41,6 +65,19 @@
 <p>deemo.lex</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line">%&#123;</div><div class="line">#include &lt;fstream&gt;</div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;vector&gt;</div><div class="line">using std::ofstream;</div><div class="line">using std::cout;</div><div class="line">using std::vector;</div><div class="line">using std::endl;</div><div class="line">ofstream out(&quot;out.txt&quot;);</div><div class="line">void display (vector&lt;char&gt; &amp;cvec, ofstream &amp;os) &#123;</div><div class="line">    for (int i = 0; i &lt; cvec.size(); i++) &#123;</div><div class="line">        os &lt;&lt; cvec[i];</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">%&#125;</div><div class="line"></div><div class="line">delim   [ \t\n]</div><div class="line">ws  &#123;delim&#125;+</div><div class="line">letter  [A-Za-z]</div><div class="line">digit  [0-9]</div><div class="line">id &#123;letter&#125;(&#123;letter&#125;|&#123;digit&#125;)*</div><div class="line">number  &#123;digit&#125;+(\.&#123;digit&#125;+)?(E[+-]?&#123;digit&#125;+)?</div><div class="line"></div><div class="line">%%</div><div class="line">&#123;ws&#125; &#123;</div><div class="line">    out &lt;&lt; yytext;</div><div class="line">&#125;</div><div class="line">[Ss][Ee][Ll][Ee][Cc][Tt]  &#123;</div><div class="line">    out &lt;&lt; &quot;select&quot;;</div><div class="line">&#125;</div><div class="line">[Ff][Rr][Oo][Mm]  &#123;</div><div class="line">    out &lt;&lt; &quot;from&quot;;</div><div class="line">&#125;</div><div class="line">[Ww][Hh][Ee][Rr][Ee]  &#123;</div><div class="line">    out &lt;&lt; &quot;where&quot;;</div><div class="line">&#125;</div><div class="line">&#123;id&#125;  &#123;</div><div class="line">    out &lt;&lt; yytext;</div><div class="line">&#125;</div><div class="line">.  &#123;</div><div class="line">    out &lt;&lt; yytext;</div><div class="line">&#125;</div><div class="line">%%</div><div class="line"></div><div class="line"></div><div class="line">int yywrap (void) &#123;</div><div class="line">    return 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">main(int argc, char* argv[]) &#123;</div><div class="line">    yylex();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="第四章语法分析"><a href="#第四章语法分析" class="headerlink" title="第四章语法分析"></a>第四章语法分析</h2><p><strong>4.2.1</strong></p>
+<ol>
+<li><p>最左推倒</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">S -&gt; SS*</div><div class="line">  -&gt; SS+S*</div><div class="line">  -&gt; aS+S*</div><div class="line">  -&gt; aa+S*</div><div class="line">  -&gt; aa+a*</div></pre></td></tr></table></figure>
+</li>
+<li><p>最右推倒</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">S -&gt; SS*</div><div class="line">  -&gt; Sa*</div><div class="line">  -&gt; SS+a*</div><div class="line">  -&gt; Sa+a*</div><div class="line">  -&gt; aa+a*</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>4.2.3</strong></p>
+<ol>
+<li>S -&gt; 0T1S | 1S | null<br>T -&gt; 1T | 0T | 0</li>
+</ol>
 ]]></content>
     </entry>
     
