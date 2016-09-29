@@ -13,6 +13,7 @@
 </blockquote>
 <p>参数:<br>num1, …, numN<br>    一组序列数字,表示Unicode 值.</p>
 <p><code>String.fromCharCode(65, 66, 67) // &quot;ABC&quot;</code></p>
+<a id="more"></a>
 <hr>
 <h2 id="String-fromCodePoint"><a href="#String-fromCodePoint" class="headerlink" title="String.fromCodePoint()"></a>String.fromCodePoint()</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint" target="_blank" rel="external">MDN</a></p>
 <p>与fromCharCode 功能类似, 但是支持的Unicode 字符更全.<br>由于fromCodePoint() 是String 的一个静态方法, 所以只能通过String.fromCodePoint() 这样的方式来使用, 不能在String 对象的实例上直接调用.</p>
