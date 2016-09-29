@@ -84,55 +84,25 @@
 
 
 
-<meta name="description" content="RegExp 方法
-RegExp.prototype.exec()
+<meta name="description" content="String.fromCharCode()MDN
+String.fromCharCode() 静态方法根据制定的Unicode 编码中的序号值来返回一个字符串由于fromCharCode 是String 的静态方法, 所以应该这样使用: String.fromCharCode(), 而不是作为你创建的String 对象的方法.
 
-RegExp.prototype.test()
-
-RegExp.prototype.toSource()
-
-RegExp.prototype.toString()
-
-
-String 方法
-String.prototype.match()
-
-String.prototype.replace()">
+String.fromCharCode(num1, …, numN)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS-正则表达式">
-<meta property="og:url" content="https://beim.github.io/2016/09/21/JS-正则表达式/index.html">
+<meta property="og:title" content="JS-char-code">
+<meta property="og:url" content="https://beim.github.io/2016/09/29/JS-char-code/index.html">
 <meta property="og:site_name" content="北冥有鱼">
-<meta property="og:description" content="RegExp 方法
-RegExp.prototype.exec()
+<meta property="og:description" content="String.fromCharCode()MDN
+String.fromCharCode() 静态方法根据制定的Unicode 编码中的序号值来返回一个字符串由于fromCharCode 是String 的静态方法, 所以应该这样使用: String.fromCharCode(), 而不是作为你创建的String 对象的方法.
 
-RegExp.prototype.test()
-
-RegExp.prototype.toSource()
-
-RegExp.prototype.toString()
-
-
-String 方法
-String.prototype.match()
-
-String.prototype.replace()">
-<meta property="og:updated_time" content="2016-09-21T10:05:45.164Z">
+String.fromCharCode(num1, …, numN)">
+<meta property="og:updated_time" content="2016-09-29T06:18:07.621Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS-正则表达式">
-<meta name="twitter:description" content="RegExp 方法
-RegExp.prototype.exec()
+<meta name="twitter:title" content="JS-char-code">
+<meta name="twitter:description" content="String.fromCharCode()MDN
+String.fromCharCode() 静态方法根据制定的Unicode 编码中的序号值来返回一个字符串由于fromCharCode 是String 的静态方法, 所以应该这样使用: String.fromCharCode(), 而不是作为你创建的String 对象的方法.
 
-RegExp.prototype.test()
-
-RegExp.prototype.toSource()
-
-RegExp.prototype.toString()
-
-
-String 方法
-String.prototype.match()
-
-String.prototype.replace()">
+String.fromCharCode(num1, …, numN)">
 
 
 
@@ -153,9 +123,9 @@ String.prototype.replace()">
 
 
 
-  <link rel="canonical" href="https://beim.github.io/2016/09/21/JS-正则表达式/"/>
+  <link rel="canonical" href="https://beim.github.io/2016/09/29/JS-char-code/"/>
 
-  <title> JS-正则表达式 | 北冥有鱼 </title>
+  <title> JS-char-code | 北冥有鱼 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -298,7 +268,7 @@ String.prototype.replace()">
             
             
               
-                JS-正则表达式
+                JS-char-code
               
             
           </h1>
@@ -310,8 +280,8 @@ String.prototype.replace()">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-09-21T17:56:13+08:00" content="2016-09-21">
-              2016-09-21
+            <time itemprop="dateCreated" datetime="2016-09-29T13:56:24+08:00" content="2016-09-29">
+              2016-09-29
             </time>
           </span>
 
@@ -321,8 +291,8 @@ String.prototype.replace()">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/21/JS-正则表达式/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/21/JS-正则表达式/" itemprop="commentsCount"></span>
+                <a href="/2016/09/29/JS-char-code/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/29/JS-char-code/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -345,24 +315,42 @@ String.prototype.replace()">
       
 
       
-        <h2 id="RegExp-方法"><a href="#RegExp-方法" class="headerlink" title="RegExp 方法"></a>RegExp 方法</h2><ul>
-<li><p>RegExp.prototype.exec()</p>
-</li>
-<li><p>RegExp.prototype.test()</p>
-</li>
-<li><p>RegExp.prototype.toSource()</p>
-</li>
-<li><p>RegExp.prototype.toString()</p>
-</li>
-</ul>
-<h2 id="String-方法"><a href="#String-方法" class="headerlink" title="String 方法"></a>String 方法</h2><ul>
-<li><p>String.prototype.match()</p>
-</li>
-<li><p>String.prototype.replace()</p>
-</li>
-</ul>
-<a id="more"></a>
-<h2 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">let patt = /a/</div><div class="line">let str = &apos;abcabc&apos;</div><div class="line"></div><div class="line">patt.exec(str) </div><div class="line">// [ &apos;a&apos;, index: 0, input: &apos;abcabc&apos; ]</div><div class="line">patt.test(str) </div><div class="line">// true </div><div class="line">str.match(patt) </div><div class="line">// [ &apos;a&apos;, index: 0, input: &apos;abcabc&apos; ]</div><div class="line"></div><div class="line">let patt1 = /a/g</div><div class="line">patt1.exec(str)</div><div class="line">// [ &apos;a&apos;, index: 0, input: &apos;abcabc&apos; ]</div><div class="line">patt1.test(str)</div><div class="line">// true</div><div class="line">str.match(patt1)</div><div class="line">// [ &apos;a&apos;, &apos;a&apos; ]</div></pre></td></tr></table></figure>
+        <h2 id="String-fromCharCode"><a href="#String-fromCharCode" class="headerlink" title="String.fromCharCode()"></a>String.fromCharCode()</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode" target="_blank" rel="external">MDN</a></p>
+<p>String.fromCharCode() 静态方法根据制定的Unicode 编码中的序号值来返回一个字符串<br>由于fromCharCode 是String 的静态方法, 所以应该这样使用: String.fromCharCode(), 而不是作为你创建的String 对象的方法.</p>
+<blockquote>
+<p>String.fromCharCode(num1, …, numN)</p>
+</blockquote>
+<p>参数:<br>num1, …, numN<br>    一组序列数字,表示Unicode 值.</p>
+<p><code>String.fromCharCode(65, 66, 67) // &quot;ABC&quot;</code></p>
+<hr>
+<h2 id="String-fromCodePoint"><a href="#String-fromCodePoint" class="headerlink" title="String.fromCodePoint()"></a>String.fromCodePoint()</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint" target="_blank" rel="external">MDN</a></p>
+<p>与fromCharCode 功能类似, 但是支持的Unicode 字符更全.<br>由于fromCodePoint() 是String 的一个静态方法, 所以只能通过String.fromCodePoint() 这样的方式来使用, 不能在String 对象的实例上直接调用.</p>
+<hr>
+<h2 id="String-prototype-charAt"><a href="#String-prototype-charAt" class="headerlink" title="String.prototype.charAt()"></a>String.prototype.charAt()</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/charAt" target="_blank" rel="external">MDN</a></p>
+<p>charAt() 方法返回字符串中指定位置的字符</p>
+<blockquote>
+<p>str.charAt(index)</p>
+</blockquote>
+<p>参数:<br>index<br>    0 到 字符串长度-1 的一个整数</p>
+<p><code>&#39;abc&#39;.charAt(1) // &#39;b&#39;</code></p>
+<hr>
+<h2 id="String-prototype-charCodeAt"><a href="#String-prototype-charCodeAt" class="headerlink" title="String.prototype.charCodeAt()"></a>String.prototype.charCodeAt()</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt" target="_blank" rel="external">MDN</a></p>
+<p>charCodeAt() 方法返回0到65535 之间的整数, 代表索引处字符的UTF-16编码单元, 如果你希望得到整点编码值, 使用codePointAt()</p>
+<blockquote>
+<p>str.charCodeAt(index)</p>
+</blockquote>
+<p>参数:<br>index<br>    一个大于等于0, 小于字符串长度的整数. 如果不是一个数值, 则默认为0</p>
+<p>如果index 小于0 或不小于字符串的长度, 则返回NaN</p>
+<p><code>&quot;ABC&quot;.charCodeAt(0) // 65</code></p>
+<hr>
+<h2 id="String-prototype-codePointAt"><a href="#String-prototype-codePointAt" class="headerlink" title="String.prototype.codePointAt()"></a>String.prototype.codePointAt()</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt" target="_blank" rel="external">MDN</a></p>
+<p>codePointAt() 方法返回一个代表unicode 编码的非负整数</p>
+<blockquote>
+<p>str.codePointAt(pos)</p>
+</blockquote>
+<p>参数:<br>pos<br>    指向字符串中需要返回编码的元素的位置</p>
+<p>如果pos 指向的位置没有元素, 将返回undefined</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;ABC&apos;.codePointAt(1) // 66</div><div class="line">&apos;\uD800\uDC00&apos;.codePointAt(0) // 65536</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -394,17 +382,13 @@ String.prototype.replace()">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/14/编译原理2E-笔记/" rel="next" title="编译原理2E-笔记">
-                <i class="fa fa-chevron-left"></i> 编译原理2E-笔记
+              <a href="/2016/09/21/JS-正则表达式/" rel="next" title="JS-正则表达式">
+                <i class="fa fa-chevron-left"></i> JS-正则表达式
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/29/JS-char-code/" rel="prev" title="JS-char-code">
-                JS-char-code <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -430,8 +414,8 @@ String.prototype.replace()">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/09/21/JS-正则表达式/"
-           data-title="JS-正则表达式" data-url="https://beim.github.io/2016/09/21/JS-正则表达式/">
+      <div class="ds-thread" data-thread-key="2016/09/29/JS-char-code/"
+           data-title="JS-char-code" data-url="https://beim.github.io/2016/09/29/JS-char-code/">
       </div>
     
   </div>
@@ -515,7 +499,7 @@ String.prototype.replace()">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#RegExp-方法"><span class="nav-number">1.</span> <span class="nav-text">RegExp 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String-方法"><span class="nav-number">2.</span> <span class="nav-text">String 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栗子"><span class="nav-number">3.</span> <span class="nav-text">栗子</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#String-fromCharCode"><span class="nav-number">1.</span> <span class="nav-text">String.fromCharCode()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String-fromCodePoint"><span class="nav-number">2.</span> <span class="nav-text">String.fromCodePoint()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String-prototype-charAt"><span class="nav-number">3.</span> <span class="nav-text">String.prototype.charAt()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String-prototype-charCodeAt"><span class="nav-number">4.</span> <span class="nav-text">String.prototype.charCodeAt()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String-prototype-codePointAt"><span class="nav-number">5.</span> <span class="nav-text">String.prototype.codePointAt()</span></a></li></ol></div>
             
           </div>
         </section>
