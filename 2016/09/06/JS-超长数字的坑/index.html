@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="12345678910const num1 = 1234567890123456const num2 = 12345678901234567const str1 = &amp;apos;1234567890123456&amp;apos;const str2 = `12345678901234567`console.log(num1 === str1) // falseconsole.log(`$&amp;#123;nu">
+<meta name="description" content="12345678910const num1 = 1234567890123456const num2 = 12345678901234567const str1 = &apos;1234567890123456&apos;const str2 = `12345678901234567`console.log(num1 === str1) // falseconsole.log(`$&amp;#123;num1&amp;#125;`">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS 超长数字的坑">
 <meta property="og:url" content="https://beim.github.io/2016/09/06/JS-超长数字的坑/index.html">
 <meta property="og:site_name" content="北冥有鱼">
-<meta property="og:description" content="12345678910const num1 = 1234567890123456const num2 = 12345678901234567const str1 = &amp;apos;1234567890123456&amp;apos;const str2 = `12345678901234567`console.log(num1 === str1) // falseconsole.log(`$&amp;#123;nu">
+<meta property="og:description" content="12345678910const num1 = 1234567890123456const num2 = 12345678901234567const str1 = &apos;1234567890123456&apos;const str2 = `12345678901234567`console.log(num1 === str1) // falseconsole.log(`$&amp;#123;num1&amp;#125;`">
 <meta property="og:updated_time" content="2016-09-29T05:56:42.220Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS 超长数字的坑">
-<meta name="twitter:description" content="12345678910const num1 = 1234567890123456const num2 = 12345678901234567const str1 = &amp;apos;1234567890123456&amp;apos;const str2 = `12345678901234567`console.log(num1 === str1) // falseconsole.log(`$&amp;#123;nu">
+<meta name="twitter:description" content="12345678910const num1 = 1234567890123456const num2 = 12345678901234567const str1 = &apos;1234567890123456&apos;const str2 = `12345678901234567`console.log(num1 === str1) // falseconsole.log(`$&amp;#123;num1&amp;#125;`">
 
 
 
@@ -306,7 +306,7 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">const num1 = 1234567890123456</div><div class="line">const num2 = 12345678901234567</div><div class="line">const str1 = &apos;1234567890123456&apos;</div><div class="line">const str2 = `12345678901234567`</div><div class="line"></div><div class="line">console.log(num1 === str1) // false</div><div class="line">console.log(`$&#123;num1&#125;` === str1) // true</div><div class="line"></div><div class="line">console.log(num2 === str2) // false</div><div class="line">console.log(`$&#123;num2&#125;` === str2) // false</div></pre></td></tr></table></figure>
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> num1 = <span class="number">1234567890123456</span></div><div class="line"><span class="keyword">const</span> num2 = <span class="number">12345678901234567</span></div><div class="line"><span class="keyword">const</span> str1 = <span class="string">'1234567890123456'</span></div><div class="line"><span class="keyword">const</span> str2 = <span class="string">`12345678901234567`</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(num1 === str1) <span class="comment">// false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;num1&#125;</span>`</span> === str1) <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(num2 === str2) <span class="comment">// false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;num2&#125;</span>`</span> === str2) <span class="comment">// false</span></div></pre></td></tr></table></figure>
 
       
     </div>

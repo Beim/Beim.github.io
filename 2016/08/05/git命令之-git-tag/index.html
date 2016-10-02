@@ -85,18 +85,18 @@
 
 
 <meta name="description" content="列出标签1git tag
-打标签12345#创建轻量标签git tag v0.1.2#创建附注标签git tag -a v0.1.2 -m &amp;apos;0.1.2版本&amp;apos;">
+打标签12345#创建轻量标签git tag v0.1.2#创建附注标签git tag -a v0.1.2 -m &apos;0.1.2版本&apos;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git命令之 git tag">
 <meta property="og:url" content="https://beim.github.io/2016/08/05/git命令之-git-tag/index.html">
 <meta property="og:site_name" content="北冥有鱼">
 <meta property="og:description" content="列出标签1git tag
-打标签12345#创建轻量标签git tag v0.1.2#创建附注标签git tag -a v0.1.2 -m &amp;apos;0.1.2版本&amp;apos;">
+打标签12345#创建轻量标签git tag v0.1.2#创建附注标签git tag -a v0.1.2 -m &apos;0.1.2版本&apos;">
 <meta property="og:updated_time" content="2016-08-16T13:46:31.750Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git命令之 git tag">
 <meta name="twitter:description" content="列出标签1git tag
-打标签12345#创建轻量标签git tag v0.1.2#创建附注标签git tag -a v0.1.2 -m &amp;apos;0.1.2版本&amp;apos;">
+打标签12345#创建轻量标签git tag v0.1.2#创建附注标签git tag -a v0.1.2 -m &apos;0.1.2版本&apos;">
 
 
 
@@ -309,15 +309,15 @@
       
 
       
-        <h2 id="列出标签"><a href="#列出标签" class="headerlink" title="列出标签"></a>列出标签</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag</div></pre></td></tr></table></figure>
-<h2 id="打标签"><a href="#打标签" class="headerlink" title="打标签"></a>打标签</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#创建轻量标签</div><div class="line">git tag v0.1.2</div><div class="line"></div><div class="line">#创建附注标签</div><div class="line">git tag -a v0.1.2 -m &apos;0.1.2版本&apos;</div></pre></td></tr></table></figure>
+        <h2 id="列出标签"><a href="#列出标签" class="headerlink" title="列出标签"></a>列出标签</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">tag</span></div></pre></td></tr></table></figure>
+<h2 id="打标签"><a href="#打标签" class="headerlink" title="打标签"></a>打标签</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#创建轻量标签</span></div><div class="line">git <span class="keyword">tag</span> <span class="title">v0</span>.<span class="number">1.2</span></div><div class="line"></div><div class="line"><span class="comment">#创建附注标签</span></div><div class="line">git <span class="keyword">tag</span> <span class="title">-a</span> v0.<span class="number">1.2</span> -m '<span class="number">0.1</span>.<span class="number">2</span>版本'</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<h2 id="切换到标签"><a href="#切换到标签" class="headerlink" title="切换到标签"></a>切换到标签</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout tagname</div></pre></td></tr></table></figure>
-<h2 id="查看标签信息"><a href="#查看标签信息" class="headerlink" title="查看标签信息"></a>查看标签信息</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git show v0.1</div></pre></td></tr></table></figure>
-<h2 id="删除标签"><a href="#删除标签" class="headerlink" title="删除标签"></a>删除标签</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag -d v0.1.2</div></pre></td></tr></table></figure>
-<h2 id="给指定的commit打标签"><a href="#给指定的commit打标签" class="headerlink" title="给指定的commit打标签"></a>给指定的commit打标签</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag -a v0.1.1 0fbc3d0</div></pre></td></tr></table></figure>
-<h2 id="标签发布到git服务器"><a href="#标签发布到git服务器" class="headerlink" title="标签发布到git服务器"></a>标签发布到git服务器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git push origin v0.1.2</div><div class="line"></div><div class="line">#一次性提交所有标签到origin</div><div class="line">git push origin --tags</div></pre></td></tr></table></figure>
-<h2 id="删除远程tag"><a href="#删除远程tag" class="headerlink" title="删除远程tag"></a>删除远程tag</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git push origin :refs/tags/tag-name</div><div class="line">#其实分支也是这样</div><div class="line">git push origin :branch-name</div></pre></td></tr></table></figure>
+<h2 id="切换到标签"><a href="#切换到标签" class="headerlink" title="切换到标签"></a>切换到标签</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git</span> checkout tagname</div></pre></td></tr></table></figure>
+<h2 id="查看标签信息"><a href="#查看标签信息" class="headerlink" title="查看标签信息"></a>查看标签信息</h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">show </span><span class="built_in">v0</span>.<span class="number">1</span></div></pre></td></tr></table></figure>
+<h2 id="删除标签"><a href="#删除标签" class="headerlink" title="删除标签"></a>删除标签</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">tag</span> <span class="title">-d</span> v0.<span class="number">1.2</span></div></pre></td></tr></table></figure>
+<h2 id="给指定的commit打标签"><a href="#给指定的commit打标签" class="headerlink" title="给指定的commit打标签"></a>给指定的commit打标签</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">tag</span> <span class="title">-a</span> v0.<span class="number">1.1</span> <span class="number">0</span>fbc3d0</div></pre></td></tr></table></figure>
+<h2 id="标签发布到git服务器"><a href="#标签发布到git服务器" class="headerlink" title="标签发布到git服务器"></a>标签发布到git服务器</h2><figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> v0.1.2</div><div class="line"></div><div class="line">#一次性提交所有标签到<span class="built_in">origin</span></div><div class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> --tags</div></pre></td></tr></table></figure>
+<h2 id="删除远程tag"><a href="#删除远程tag" class="headerlink" title="删除远程tag"></a>删除远程tag</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git push origin <span class="symbol">:refs/tags/tag-name</span></div><div class="line"><span class="comment">#其实分支也是这样</span></div><div class="line">git push origin <span class="symbol">:branch-name</span></div></pre></td></tr></table></figure>
 
       
     </div>
