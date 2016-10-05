@@ -4,6 +4,208 @@
   
     
     <entry>
+      <title><![CDATA[vim-奇技淫巧]]></title>
+      <url>https://beim.github.io/2016/10/05/vim-%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/</url>
+      <content type="html"><![CDATA[<p><img src="http://ob4a6y748.bkt.clouddn.com/Vimlogo.svg" alt="vim"></p>
+<a id="more"></a>
+<h1 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h1><table>
+<thead>
+<tr>
+<th>输入</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>w</td>
+<td>移动到下一个单词开头</td>
+</tr>
+<tr>
+<td>e</td>
+<td>移动到下一个单词结尾</td>
+</tr>
+<tr>
+<td>b</td>
+<td>倒退到上一个单词开头</td>
+</tr>
+<tr>
+<td>0</td>
+<td>移动到行首</td>
+</tr>
+<tr>
+<td>$</td>
+<td>移动到行末</td>
+</tr>
+<tr>
+<td>+</td>
+<td>移动到上一行开头</td>
+</tr>
+<tr>
+<td>-</td>
+<td>移动到下一行开头</td>
+</tr>
+<tr>
+<td>^</td>
+<td>移动到当前行第一个非空格处</td>
+</tr>
+<tr>
+<td></td>
+<td>滚动</td>
+</tr>
+<tr>
+<td>ctrl+f</td>
+<td>向前滚屏 (front)</td>
+</tr>
+<tr>
+<td>ctrl+b</td>
+<td>向后滚屏 (back)</td>
+</tr>
+<tr>
+<td>ctrl+d</td>
+<td>向前滚半屏 (down)</td>
+</tr>
+<tr>
+<td>ctrl+u</td>
+<td>向后滚半屏 (up)</td>
+</tr>
+<tr>
+<td>ctrl+e</td>
+<td>向后滚一行</td>
+</tr>
+<tr>
+<td>ctrl+y</td>
+<td>向前滚一行</td>
+</tr>
+<tr>
+<td></td>
+<td>z调整滚动</td>
+</tr>
+<tr>
+<td>z<enter></enter></td>
+<td>将光标所在行移动到屏幕顶端</td>
+</tr>
+<tr>
+<td>zz</td>
+<td>将光标所在行移动到屏幕中间</td>
+</tr>
+<tr>
+<td>z-</td>
+<td>将光标所在行移动到屏幕底端</td>
+</tr>
+<tr>
+<td>980zz</td>
+<td>将第980行移动到屏幕中间</td>
+</tr>
+<tr>
+<td></td>
+<td>在屏幕中移动</td>
+</tr>
+<tr>
+<td>H</td>
+<td>移动到屏幕顶端的行 (high)</td>
+</tr>
+<tr>
+<td>M</td>
+<td>移动到屏幕中央的行 (middle)</td>
+</tr>
+<tr>
+<td>L</td>
+<td>移动到屏幕底端的行 (low)</td>
+</tr>
+<tr>
+<td>nH</td>
+<td>移动到屏幕顶端往下第n行</td>
+</tr>
+<tr>
+<td>nL</td>
+<td>移动到屏幕顶端往上的第n行</td>
+</tr>
+<tr>
+<td></td>
+<td>最强移动</td>
+</tr>
+<tr>
+<td>nG</td>
+<td>转至第n行</td>
+</tr>
+<tr>
+<td>G</td>
+<td>转至文本末尾</td>
+</tr>
+<tr>
+<td>gg</td>
+<td>转至文本开头</td>
+</tr>
+</tbody>
+</table>
+<h1 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h1><table>
+<thead>
+<tr>
+<th>输入</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>i</td>
+<td>光标位置插入</td>
+</tr>
+<tr>
+<td>a</td>
+<td>光标位置后插入 (append)</td>
+</tr>
+<tr>
+<td>I</td>
+<td>行首插入</td>
+</tr>
+<tr>
+<td>A</td>
+<td>行末插入</td>
+</tr>
+<tr>
+<td>o</td>
+<td>下一行插入</td>
+</tr>
+<tr>
+<td>O</td>
+<td>上一行插入</td>
+</tr>
+<tr>
+<td>cc</td>
+<td>当前行根据缩进插入</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[cpp-顺序性容器]]></title>
+      <url>https://beim.github.io/2016/10/05/cpp-%E9%A1%BA%E5%BA%8F%E6%80%A7%E5%AE%B9%E5%99%A8/</url>
+      <content type="html"><![CDATA[<p>要使用顺序性容器,首先必须包含相关的头文件,也就是以下三者之一:<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;list&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;deque&gt;</span></span></div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>定义顺序性容器对象的方式有五种</p>
+<ol>
+<li><p>产生空的容器</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">list</span>&lt;<span class="built_in">string</span>&gt; slist;</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; ivec;</div></pre></td></tr></table></figure>
+</li>
+<li><p>产生特定大小的容器.每个元素都以其默认值作为初值.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">list</span>&lt;<span class="keyword">int</span>&gt; ilist(<span class="number">1024</span>);</div><div class="line"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; svec(<span class="number">32</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>产生特定大小的容器,并为每个元素赋制定初值</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; ivec(<span class="number">10</span>, <span class="number">-1</span>);</div><div class="line"><span class="built_in">list</span>&lt;<span class="built_in">string</span>&gt; slist(<span class="number">16</span>, <span class="string">"unassigned"</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>通过一对iterator 产生容器. 这对iterator 用来标示一整组作为初值的元素的范围;</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int ia[<span class="number">8</span>] = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">13</span>, <span class="number">21</span>];</div><div class="line"><span class="type">vector</span>&lt;int&gt; fib(ia, ia + <span class="number">8</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>根据某个容器产生出新容器. 复制原容器内的元素, 作为新容器的初值.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">list</span>&lt;<span class="built_in">string</span>&gt; slist; <span class="comment">// 空容器</span></div><div class="line"><span class="comment">// 填充list...</span></div><div class="line"><span class="built_in">list</span>&lt;<span class="built_in">string</span>&gt; slist2(slist); <span class="comment">// 将slist 复制给slist2</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[JS-char-code]]></title>
       <url>https://beim.github.io/2016/09/29/JS-char-code/</url>
       <content type="html"><![CDATA[<h2 id="String-fromCharCode"><a href="#String-fromCharCode" class="headerlink" title="String.fromCharCode()"></a>String.fromCharCode()</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode" target="_blank" rel="external">MDN</a></p>
