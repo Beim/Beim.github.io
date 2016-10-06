@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git," />
+  <meta name="keywords" content="cpp," />
 
 
 
@@ -84,19 +84,19 @@
 
 
 
-<meta name="description" content="列出标签1git tag
-打标签12345#创建轻量标签git tag v0.1.2#创建附注标签git tag -a v0.1.2 -m &apos;0.1.2版本&apos;">
+<meta name="description" content="所有的泛型算法(generic algorithm), 除了极少数外, 前两个参数皆为一组iterator, 用来标示欲遍历的容器(container) 元素的范围. 范围系为[iterator1, iterator2)
+123456const int array_size = 7;int iarray[array_size] = &amp;#123;1, 10, 8, 4, 3, 14, 8&amp;#125;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git命令之 git tag">
-<meta property="og:url" content="https://beim.github.io/2016/08/05/git命令之-git-tag/index.html">
+<meta property="og:title" content="cpp-泛型算法参考">
+<meta property="og:url" content="https://beim.github.io/2016/10/06/cpp-泛型算法参考/index.html">
 <meta property="og:site_name" content="北冥945">
-<meta property="og:description" content="列出标签1git tag
-打标签12345#创建轻量标签git tag v0.1.2#创建附注标签git tag -a v0.1.2 -m &apos;0.1.2版本&apos;">
-<meta property="og:updated_time" content="2016-08-16T13:46:31.750Z">
+<meta property="og:description" content="所有的泛型算法(generic algorithm), 除了极少数外, 前两个参数皆为一组iterator, 用来标示欲遍历的容器(container) 元素的范围. 范围系为[iterator1, iterator2)
+123456const int array_size = 7;int iarray[array_size] = &amp;#123;1, 10, 8, 4, 3, 14, 8&amp;#125;">
+<meta property="og:updated_time" content="2016-10-06T13:57:03.098Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git命令之 git tag">
-<meta name="twitter:description" content="列出标签1git tag
-打标签12345#创建轻量标签git tag v0.1.2#创建附注标签git tag -a v0.1.2 -m &apos;0.1.2版本&apos;">
+<meta name="twitter:title" content="cpp-泛型算法参考">
+<meta name="twitter:description" content="所有的泛型算法(generic algorithm), 除了极少数外, 前两个参数皆为一组iterator, 用来标示欲遍历的容器(container) 元素的范围. 范围系为[iterator1, iterator2)
+123456const int array_size = 7;int iarray[array_size] = &amp;#123;1, 10, 8, 4, 3, 14, 8&amp;#125;">
 
 
 
@@ -117,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="https://beim.github.io/2016/08/05/git命令之-git-tag/"/>
+  <link rel="canonical" href="https://beim.github.io/2016/10/06/cpp-泛型算法参考/"/>
 
-  <title> git命令之 git tag | 北冥945 </title>
+  <title> cpp-泛型算法参考 | 北冥945 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -262,7 +262,7 @@
             
             
               
-                git命令之 git tag
+                cpp-泛型算法参考
               
             
           </h1>
@@ -274,8 +274,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-08-05T10:13:10+08:00" content="2016-08-05">
-              2016-08-05
+            <time itemprop="dateCreated" datetime="2016-10-06T20:35:37+08:00" content="2016-10-06">
+              2016-10-06
             </time>
           </span>
 
@@ -285,8 +285,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/05/git命令之-git-tag/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/05/git命令之-git-tag/" itemprop="commentsCount"></span>
+                <a href="/2016/10/06/cpp-泛型算法参考/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/06/cpp-泛型算法参考/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -309,15 +309,24 @@
       
 
       
-        <h2 id="列出标签"><a href="#列出标签" class="headerlink" title="列出标签"></a>列出标签</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">tag</span></div></pre></td></tr></table></figure>
-<h2 id="打标签"><a href="#打标签" class="headerlink" title="打标签"></a>打标签</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#创建轻量标签</span></div><div class="line">git <span class="keyword">tag</span> <span class="title">v0</span>.<span class="number">1.2</span></div><div class="line"></div><div class="line"><span class="comment">#创建附注标签</span></div><div class="line">git <span class="keyword">tag</span> <span class="title">-a</span> v0.<span class="number">1.2</span> -m '<span class="number">0.1</span>.<span class="number">2</span>版本'</div></pre></td></tr></table></figure>
+        <p>所有的泛型算法(generic algorithm), 除了极少数外, 前两个参数皆为一组iterator, 用来标示欲遍历的容器(container) 元素的范围. 范围系为[iterator1, iterator2)</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> array_size = <span class="number">7</span>;</div><div class="line"><span class="keyword">int</span> iarray[array_size] = &#123;<span class="number">1</span>, <span class="number">10</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">14</span>, <span class="number">8</span>&#125;;</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vec(iarray, iarray + array_size);</div><div class="line"></div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it = find(vec.begin(), vec.end(), value);</div><div class="line"><span class="keyword">int</span> *pi = find(iarray, iarray + array_size, value);</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<h2 id="切换到标签"><a href="#切换到标签" class="headerlink" title="切换到标签"></a>切换到标签</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git</span> checkout tagname</div></pre></td></tr></table></figure>
-<h2 id="查看标签信息"><a href="#查看标签信息" class="headerlink" title="查看标签信息"></a>查看标签信息</h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">show </span><span class="built_in">v0</span>.<span class="number">1</span></div></pre></td></tr></table></figure>
-<h2 id="删除标签"><a href="#删除标签" class="headerlink" title="删除标签"></a>删除标签</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">tag</span> <span class="title">-d</span> v0.<span class="number">1.2</span></div></pre></td></tr></table></figure>
-<h2 id="给指定的commit打标签"><a href="#给指定的commit打标签" class="headerlink" title="给指定的commit打标签"></a>给指定的commit打标签</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">tag</span> <span class="title">-a</span> v0.<span class="number">1.1</span> <span class="number">0</span>fbc3d0</div></pre></td></tr></table></figure>
-<h2 id="标签发布到git服务器"><a href="#标签发布到git服务器" class="headerlink" title="标签发布到git服务器"></a>标签发布到git服务器</h2><figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> v0.1.2</div><div class="line"></div><div class="line">#一次性提交所有标签到<span class="built_in">origin</span></div><div class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> --tags</div></pre></td></tr></table></figure>
-<h2 id="删除远程tag"><a href="#删除远程tag" class="headerlink" title="删除远程tag"></a>删除远程tag</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git push origin <span class="symbol">:refs/tags/tag-name</span></div><div class="line"><span class="comment">#其实分支也是这样</span></div><div class="line">git push origin <span class="symbol">:branch-name</span></div></pre></td></tr></table></figure>
+<p>算法通常有重载的两个版本: 版本一使用底层元素所属类型的内置运算符, 包括equality 运算符和less-than 运算符. 版本二接受function object 或function pointer 的传入, 借此提供和内置运算符不同的行为.<br>例如, 默认情形下, sort() 会使用less-than 来排序. 如果要改变这一行为, 我们可以传入预先定义好的greater function object:</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sort(<span class="name">vec</span>.begin(), vec.end())<span class="comment">;</span></div><div class="line">sort(<span class="name">vec</span>.begin(), vec.end(), greater&lt;int&gt; ())<span class="comment">;</span></div></pre></td></tr></table></figure>
+<p>不过, 另有一些算法以不同的名称区分不同版本,形成两个函数; 以_if 为名称后缀的, 使用的是”可指定特定行为”的那个版本.<br>许多<code>会更改目标容器之内容</code>的算法, 都提供两种版本: 一种称为in-place (就地) 版本, 会改变容器的内容. 另一种称为copy 版本, 不改变传入容器的内容, 而是先为它制作一份副本, 再改变副本的内容, 然后返回该副本.</p>
+<ul>
+<li>如下array, vector, list 被用来作为下文所列泛型算法的函数参数:</li>
+</ul>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">int ia[<span class="number">8</span>] = &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">10</span>, <span class="number">15</span>, <span class="number">21</span>, <span class="number">28</span>, <span class="number">36</span>&#125;;</div><div class="line"><span class="type">vector</span>&lt;int&gt; ivec(ia, ia + <span class="number">8</span>);</div><div class="line"><span class="type">list</span>&lt;int&gt; ilist(ia, ia + <span class="number">8</span>);</div><div class="line"></div><div class="line"><span class="type">string</span> sa[<span class="number">10</span>] = &#123;<span class="string">"The"</span>, <span class="string">"light"</span>, <span class="string">"untonsured"</span>, <span class="string">"hair"</span>, <span class="string">"grained"</span>, <span class="string">"and"</span>, <span class="string">"hued"</span>, <span class="string">"like"</span>, <span class="string">"pale"</span>, <span class="string">"oak"</span>&#125;;</div><div class="line"><span class="type">vector</span>&lt;<span class="type">string</span>&gt; svec(sa, sa + <span class="number">10</span>);</div><div class="line"><span class="type">list</span>&lt;<span class="type">string</span>&gt; slist(sa, sa + <span class="number">10</span>);</div></pre></td></tr></table></figure>
+<h2 id="accumulate-元素累加"><a href="#accumulate-元素累加" class="headerlink" title="accumulate() 元素累加"></a>accumulate() 元素累加</h2><p>默认情形下, 它会将容器内的所有元素相加, 再加上第三个参数所指定的初值. 也可以借由传入一个二元运算, 取代默认的”相加”操作.</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;numeric&gt;</span></span></div><div class="line"></div><div class="line">iresult = accumulate(ia, ia + <span class="number">8</span>, <span class="number">0</span>);</div><div class="line">iresult = accumulate(ilist.<span class="built_in">begin</span>, ilist.<span class="built_in">end</span>(), <span class="number">0</span>, plus&lt;<span class="keyword">int</span>&gt; ());</div></pre></td></tr></table></figure>
+<h2 id="adjacent-difference-相邻元素的差额"><a href="#adjacent-difference-相邻元素的差额" class="headerlink" title="adjacent_difference() 相邻元素的差额"></a>adjacent_difference() 相邻元素的差额</h2><p>默认情形下, 它会产生一个新数列. 此数列中除了第一个元素, 每个元素都是原数列的<code>相同位置</code>及<code>前一位置</code>两元素的差额. 假设原数列为{0, 1, 2, 3, 5, 8}, 那么产生出来的新数列就是{0, 1, 0, 1, 1, 2, 3}. 它可以借由一个二元运算, 取代默认的<code>相减</code>操作. 第三个参数是个iterator, 指向一个容器, 用来放置执行结果.</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#include &lt;numeric&gt;</div><div class="line"></div><div class="line">adjacent_difference(<span class="name">ilist</span>.begin(), ilist.end(), iresult.begin())<span class="comment">;</span></div><div class="line">adjacent_difference(<span class="name">ilist</span>.begin(), ilist.end(), iresult.begin(), multiplies&lt;int&gt; ())<span class="comment">;</span></div></pre></td></tr></table></figure>
+<h2 id="adjacent-find-搜寻相邻的重复元素"><a href="#adjacent-find-搜寻相邻的重复元素" class="headerlink" title="adjacent_find()  搜寻相邻的重复元素"></a>adjacent_find()  搜寻相邻的重复元素</h2><p>默认情况下, 它会搜索第一组<code>相邻且其值重复</code>的元素. 可用某个二元运算符取代内置的equality 运算符. 本函数会返回一个iterator, 指向两个重复元素中的第一个.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">class</span> TwiceOver &#123;</div><div class="line">    <span class="keyword">public</span>:</div><div class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span> <span class="params">(<span class="keyword">int</span> val1, <span class="keyword">int</span> val2)</span> </span>&#123;</div><div class="line">            <span class="keyword">return</span> val1 == val2 / <span class="number">2</span> ? <span class="literal">true</span> : <span class="literal">false</span>;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">piter = adjacent_find(ia, ia + <span class="number">8</span>);</div><div class="line">iter = adjacent_find(vec.begin(), vec.end(), TwiceOver());</div></pre></td></tr></table></figure>
+<h2 id="binary-search-二元搜索"><a href="#binary-search-二元搜索" class="headerlink" title="binary_search()  二元搜索"></a>binary_search()  二元搜索</h2><p>binary_search() 假设其处理对象已经以less-than 运算符加以排序. 如果该容器以其他方式完成排序, 那么调用binary_search() 时就得传入该二元运算符. 此算法会返回true 或false.</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"></div><div class="line">found_it =  binary_search(ilist.<span class="built_in">begin</span>(), ilist.<span class="built_in">end</span>(), value);</div><div class="line">found_it = binary_search(vec.<span class="built_in">begin</span>, vec.<span class="built_in">end</span>(), value, greater&lt;<span class="keyword">int</span>&gt; ());</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -340,7 +349,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag">#git</a>
+            <a href="/tags/cpp/" rel="tag">#cpp</a>
           
         </div>
       
@@ -349,17 +358,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/05/Node-js的内部结构/" rel="next" title="Node.js的内部结构">
-                <i class="fa fa-chevron-left"></i> Node.js的内部结构
+              <a href="/2016/10/05/vim-奇技淫巧/" rel="next" title="vim-奇技淫巧">
+                <i class="fa fa-chevron-left"></i> vim-奇技淫巧
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/05/ubuntu-启动初始化/" rel="prev" title="ubuntu 启动初始化">
-                ubuntu 启动初始化 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -385,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/08/05/git命令之-git-tag/"
-           data-title="git命令之 git tag" data-url="https://beim.github.io/2016/08/05/git命令之-git-tag/">
+      <div class="ds-thread" data-thread-key="2016/10/06/cpp-泛型算法参考/"
+           data-title="cpp-泛型算法参考" data-url="https://beim.github.io/2016/10/06/cpp-泛型算法参考/">
       </div>
     
   </div>
@@ -470,7 +475,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#列出标签"><span class="nav-number">1.</span> <span class="nav-text">列出标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打标签"><span class="nav-number">2.</span> <span class="nav-text">打标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切换到标签"><span class="nav-number">3.</span> <span class="nav-text">切换到标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看标签信息"><span class="nav-number">4.</span> <span class="nav-text">查看标签信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除标签"><span class="nav-number">5.</span> <span class="nav-text">删除标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给指定的commit打标签"><span class="nav-number">6.</span> <span class="nav-text">给指定的commit打标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签发布到git服务器"><span class="nav-number">7.</span> <span class="nav-text">标签发布到git服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除远程tag"><span class="nav-number">8.</span> <span class="nav-text">删除远程tag</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#accumulate-元素累加"><span class="nav-number">1.</span> <span class="nav-text">accumulate() 元素累加</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#adjacent-difference-相邻元素的差额"><span class="nav-number">2.</span> <span class="nav-text">adjacent_difference() 相邻元素的差额</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#adjacent-find-搜寻相邻的重复元素"><span class="nav-number">3.</span> <span class="nav-text">adjacent_find()  搜寻相邻的重复元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#binary-search-二元搜索"><span class="nav-number">4.</span> <span class="nav-text">binary_search()  二元搜索</span></a></li></ol></div>
             
           </div>
         </section>
