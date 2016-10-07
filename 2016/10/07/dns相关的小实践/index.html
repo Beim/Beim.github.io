@@ -1,0 +1,753 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="dig 命令可以跟踪dns 查询的路径.如dig www.baidu.com +trace
+ubuntu 系统下/etc/resolv.conf 配置文件, 用来设置DNS 服务器的IP 地址及DNS 域名, 还包含了主机的域名搜索顺序.
+实验1文件/etc/resolve.conf 内容如下:1234# Dynamic resolv.conf(5) file for glibc resolver">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dns相关的小实践">
+<meta property="og:url" content="https://beim.github.io/2016/10/07/dns相关的小实践/index.html">
+<meta property="og:site_name" content="北冥945">
+<meta property="og:description" content="dig 命令可以跟踪dns 查询的路径.如dig www.baidu.com +trace
+ubuntu 系统下/etc/resolv.conf 配置文件, 用来设置DNS 服务器的IP 地址及DNS 域名, 还包含了主机的域名搜索顺序.
+实验1文件/etc/resolve.conf 内容如下:1234# Dynamic resolv.conf(5) file for glibc resolver">
+<meta property="og:updated_time" content="2016-10-07T12:20:53.330Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="dns相关的小实践">
+<meta name="twitter:description" content="dig 命令可以跟踪dns 查询的路径.如dig www.baidu.com +trace
+ubuntu 系统下/etc/resolv.conf 配置文件, 用来设置DNS 服务器的IP 地址及DNS 域名, 还包含了主机的域名搜索顺序.
+实验1文件/etc/resolve.conf 内容如下:1234# Dynamic resolv.conf(5) file for glibc resolver">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://beim.github.io/2016/10/07/dns相关的小实践/"/>
+
+  <title> dns相关的小实践 | 北冥945 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">北冥945</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                dns相关的小实践
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-07T20:13:44+08:00" content="2016-10-07">
+              2016-10-07
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/07/dns相关的小实践/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/07/dns相关的小实践/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>dig 命令可以跟踪dns 查询的路径.<br>如<code>dig www.baidu.com +trace</code></p>
+<p>ubuntu 系统下<code>/etc/resolv.conf</code> 配置文件, 用来设置DNS 服务器的IP 地址及DNS 域名, 还包含了主机的域名搜索顺序.</p>
+<h2 id="实验1"><a href="#实验1" class="headerlink" title="实验1"></a>实验1</h2><p>文件<code>/etc/resolve.conf</code> 内容如下:<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Dynamic resolv.<span class="keyword">conf</span>(5) <span class="keyword">file</span> <span class="keyword">for</span> glibc resolver(3) generated <span class="keyword">by</span> resolvconf(8)</div><div class="line">#     <span class="keyword">DO</span> NOT <span class="keyword">EDIT</span> THIS <span class="keyword">FILE</span> <span class="keyword">BY</span> HAND -- YOUR CHANGES WILL BE OVERWRITTEN</div><div class="line">nameserver 127.0.0.1</div><div class="line"><span class="keyword">search</span> lan</div></pre></td></tr></table></figure></p>
+<p>执行命令<code>dig kicker.com.cn + trace</code></p>
+<p>输出结果:<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment">; &lt;&lt;&gt;&gt; DiG 9.10.3-P4-Ubuntu &lt;&lt;&gt;&gt; kicker.com.cn +trace</span></div><div class="line"><span class="comment">;; global options: +cmd</span></div><div class="line">.			<span class="number">483453</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	f.root-servers.net.</div><div class="line">.			<span class="number">483453</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	j.root-servers.net.</div><div class="line">.			<span class="number">483453</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	h.root-servers.net.</div><div class="line">.			<span class="number">483453</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	d.root-servers.net.</div><div class="line">.			<span class="number">483453</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	m.root-servers.net.</div><div class="line">.			<span class="number">483453</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	g.root-servers.net.</div><div class="line">.			<span class="number">483453</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	k.root-servers.net.</div><div class="line">.			<span class="number">483453</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	l.root-servers.net.</div><div class="line">.			<span class="number">483453</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	b.root-servers.net.</div><div class="line">.			<span class="number">483453</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	e.root-servers.net.</div><div class="line">.			<span class="number">483453</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	c.root-servers.net.</div><div class="line">.			<span class="number">483453</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	a.root-servers.net.</div><div class="line">.			<span class="number">483453</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	i.root-servers.net.</div><div class="line"><span class="comment">;; Received 239 bytes from 127.0.0.1#53(127.0.0.1) in 2 ms</span></div><div class="line"></div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	a.dns.cn.</div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	e.dns.cn.</div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	d.dns.cn.</div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	ns.cernet.net.</div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	b.dns.cn.</div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	c.dns.cn.</div><div class="line">cn.			<span class="number">86400</span>	<span class="keyword">IN</span>	<span class="keyword">DS</span>	<span class="number">41470 8 2</span> <span class="number">3623</span>FB6E3B1F69C6855DA1E48D3A38236DD2EDF0380FB018FF538650 EAC2C4DD</div><div class="line">cn.			<span class="number">86400</span>	<span class="keyword">IN</span>	<span class="keyword">RRSIG</span>	<span class="keyword">DS</span> <span class="number">8 1 86400</span> <span class="number">20161020020000</span> <span class="number">20161007010000</span> <span class="number">39291</span> . A2tSyIt/guVEItqdJgKF7h765ACBXXhA6zQGVNfYYbpeupuDju37nXm5 Z44h9TlVa2RIkM9Jq8x0SMuH5cm1G4opXU1zHZgUvhC+<span class="number">1</span>feGfEnZ26Py fXZ3hTBT+uNwU/gnRZgvEvfORwU4BNfjKyrHmk/tXKYcARXOMK9Nb3PA BBJ2vshXDn6quUtElmP3CktvXDzpC/<span class="number">7</span>pT6HMgaBOYxWYxao9W0UsEDZQ cxWpXBu7Psj7a/<span class="number">11</span>kMQGZNONU65P13e3QK8zlF6BMDZDMJH9tIBJF8v6 udnjKVx8bnkqJza//<span class="number">19</span>PxtiSDf3KHvFKE7cH5sv0G1Zr3yMLNfG5/aTs qBlX+<span class="keyword">A</span>==</div><div class="line"><span class="comment">;; Received 640 bytes from 202.12.27.33#53(m.root-servers.net) in 38 ms</span></div><div class="line"></div><div class="line">kicker.com.cn.		<span class="number">86400</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	ns.nagor.com.cn.</div><div class="line">kicker.com.cn.		<span class="number">86400</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	ns.nagor.cn.</div><div class="line">GICE14DNTMDN31G43AUGVRKTKALVB8QC.com.cn. <span class="number">21600</span> <span class="keyword">IN</span> <span class="keyword">NSEC</span><span class="number">3	1 1 10</span> AEF123AB MI2OUBFA49Q47917BR600DOL1QGRP79T <span class="keyword">NS</span> <span class="keyword">SOA</span> <span class="keyword">RRSIG</span> <span class="keyword">DNSKEY</span> <span class="keyword">NSEC3PARAM</span></div><div class="line">GICE14DNTMDN31G43AUGVRKTKALVB8QC.com.cn. <span class="number">21600</span> <span class="keyword">IN</span> <span class="keyword">RRSIG</span>	<span class="keyword">NSEC3</span> <span class="number">8 3 21600</span> <span class="number">20161020002013</span> <span class="number">20160920000126</span> <span class="number">15399</span> com.cn. jDuJAUMvAwNM3kPNu3bVyk1VMZInBfUKiD6/lutPeAjrudbIj7qFkTxM F164SK96QaYMWZMg7sHThlA9S5DoDE3rEh9vF01qcsg1pxA7+m9lDFSn Q0dQ8hU078oCPnH4JPzgB5obiSc2OmcgFml5vaIMiWT+Rpe9V3ZCkX7W z7Q=</div><div class="line">MI2OUBFA49Q47917BR600DOL1QGRP79T.com.cn. <span class="number">21600</span> <span class="keyword">IN</span> <span class="keyword">NSEC</span><span class="number">3	1 1 10</span> AEF123AB UQROTQK62NOIM5U43DMF7AMC8JJFRM7T <span class="keyword">TXT</span> <span class="keyword">RRSIG</span></div><div class="line">MI2OUBFA49Q47917BR600DOL1QGRP79T.com.cn. <span class="number">21600</span> <span class="keyword">IN</span> <span class="keyword">RRSIG</span>	<span class="keyword">NSEC3</span> <span class="number">8 3 21600</span> <span class="number">20161019013404</span> <span class="number">20160919011226</span> <span class="number">15399</span> com.cn. Rw7vfPaOa+UB9TpAHniy3XOk8UcZFHo1w7Qlq0gjX/gBBQY1vUR10BeI x0kodMsNRkHkvjvWkHfxAu/A8rR0X4xOuJkYZGBnR0YYVnP/N3YGHoz3 C6QOM47dyogMIOg/zVpnYjubpaILGpNY5ddZaJLF2sKz9SvJ0NXCQIyg lGQ=</div><div class="line"><span class="comment">;; Received 587 bytes from 203.119.29.1#53(e.dns.cn) in 159 ms</span></div><div class="line"></div><div class="line">kicker.com.cn.		<span class="number">7200</span>	<span class="keyword">IN</span>	<span class="keyword">SOA</span>	ns1.dnsnw.com. dnsadmin.dnsnw.com. <span class="number">1446890703</span> <span class="number">28800 3600</span> <span class="number">604800</span> <span class="number">86400</span></div><div class="line"><span class="comment">;; Received 98 bytes from 121.12.104.105#53(ns.nagor.cn) in 57 ms</span></div></pre></td></tr></table></figure></p>
+<h2 id="实验2"><a href="#实验2" class="headerlink" title="实验2"></a>实验2</h2><p>文件<code>/etc/resolv.conf</code> 内容如下:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">options attempts=<span class="number">2</span> timeout=<span class="number">2</span> rotate</div><div class="line">nameserver <span class="number">223.5</span><span class="number">.5</span><span class="number">.5</span></div><div class="line">nameserver <span class="number">223.6</span><span class="number">.6</span><span class="number">.6</span></div><div class="line">nameserver <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></div><div class="line">search lan</div></pre></td></tr></table></figure></p>
+<p>执行命令<code>dig kicker.com.cn +trace</code></p>
+<p>输出结果:<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment">; &lt;&lt;&gt;&gt; DiG 9.10.3-P4-Ubuntu &lt;&lt;&gt;&gt; kicker.com.cn +trace</span></div><div class="line"><span class="comment">;; global options: +cmd</span></div><div class="line">.			<span class="number">210007</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	i.root-servers.net.</div><div class="line">.			<span class="number">210007</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	k.root-servers.net.</div><div class="line">.			<span class="number">210007</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	m.root-servers.net.</div><div class="line">.			<span class="number">210007</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	c.root-servers.net.</div><div class="line">.			<span class="number">210007</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	j.root-servers.net.</div><div class="line">.			<span class="number">210007</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	b.root-servers.net.</div><div class="line">.			<span class="number">210007</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	e.root-servers.net.</div><div class="line">.			<span class="number">210007</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	l.root-servers.net.</div><div class="line">.			<span class="number">210007</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	a.root-servers.net.</div><div class="line">.			<span class="number">210007</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	d.root-servers.net.</div><div class="line">.			<span class="number">210007</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	g.root-servers.net.</div><div class="line">.			<span class="number">210007</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	f.root-servers.net.</div><div class="line">.			<span class="number">210007</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	h.root-servers.net.</div><div class="line"><span class="comment">;; Received 228 bytes from 223.5.5.5#53(223.5.5.5) in 32 ms</span></div><div class="line"></div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	c.dns.cn.</div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	ns.cernet.net.</div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	b.dns.cn.</div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	a.dns.cn.</div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	e.dns.cn.</div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	d.dns.cn.</div><div class="line">cn.			<span class="number">86400</span>	<span class="keyword">IN</span>	<span class="keyword">DS</span>	<span class="number">41470 8 2</span> <span class="number">3623</span>FB6E3B1F69C6855DA1E48D3A38236DD2EDF0380FB018FF538650 EAC2C4DD</div><div class="line">cn.			<span class="number">86400</span>	<span class="keyword">IN</span>	<span class="keyword">RRSIG</span>	<span class="keyword">DS</span> <span class="number">8 1 86400</span> <span class="number">20161020020000</span> <span class="number">20161007010000</span> <span class="number">39291</span> . A2tSyIt/guVEItqdJgKF7h765ACBXXhA6zQGVNfYYbpeupuDju37nXm5 Z44h9TlVa2RIkM9Jq8x0SMuH5cm1G4opXU1zHZgUvhC+<span class="number">1</span>feGfEnZ26Py fXZ3hTBT+uNwU/gnRZgvEvfORwU4BNfjKyrHmk/tXKYcARXOMK9Nb3PA BBJ2vshXDn6quUtElmP3CktvXDzpC/<span class="number">7</span>pT6HMgaBOYxWYxao9W0UsEDZQ cxWpXBu7Psj7a/<span class="number">11</span>kMQGZNONU65P13e3QK8zlF6BMDZDMJH9tIBJF8v6 udnjKVx8bnkqJza//<span class="number">19</span>PxtiSDf3KHvFKE7cH5sv0G1Zr3yMLNfG5/aTs qBlX+<span class="keyword">A</span>==</div><div class="line"><span class="comment">;; Received 640 bytes from 193.0.14.129#53(k.root-servers.net) in 72 ms</span></div><div class="line"></div><div class="line">kicker.com.cn.		<span class="number">86400</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	ns.nagor.com.cn.</div><div class="line">kicker.com.cn.		<span class="number">86400</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	ns.nagor.cn.</div><div class="line">GICE14DNTMDN31G43AUGVRKTKALVB8QC.com.cn. <span class="number">21600</span> <span class="keyword">IN</span> <span class="keyword">NSEC</span><span class="number">3	1 1 10</span> AEF123AB MI2OUBFA49Q47917BR600DOL1QGRP79T <span class="keyword">NS</span> <span class="keyword">SOA</span> <span class="keyword">RRSIG</span> <span class="keyword">DNSKEY</span> <span class="keyword">NSEC3PARAM</span></div><div class="line">GICE14DNTMDN31G43AUGVRKTKALVB8QC.com.cn. <span class="number">21600</span> <span class="keyword">IN</span> <span class="keyword">RRSIG</span>	<span class="keyword">NSEC3</span> <span class="number">8 3 21600</span> <span class="number">20161020002013</span> <span class="number">20160920000126</span> <span class="number">15399</span> com.cn. jDuJAUMvAwNM3kPNu3bVyk1VMZInBfUKiD6/lutPeAjrudbIj7qFkTxM F164SK96QaYMWZMg7sHThlA9S5DoDE3rEh9vF01qcsg1pxA7+m9lDFSn Q0dQ8hU078oCPnH4JPzgB5obiSc2OmcgFml5vaIMiWT+Rpe9V3ZCkX7W z7Q=</div><div class="line">MI2OUBFA49Q47917BR600DOL1QGRP79T.com.cn. <span class="number">21600</span> <span class="keyword">IN</span> <span class="keyword">NSEC</span><span class="number">3	1 1 10</span> AEF123AB UQROTQK62NOIM5U43DMF7AMC8JJFRM7T <span class="keyword">TXT</span> <span class="keyword">RRSIG</span></div><div class="line">MI2OUBFA49Q47917BR600DOL1QGRP79T.com.cn. <span class="number">21600</span> <span class="keyword">IN</span> <span class="keyword">RRSIG</span>	<span class="keyword">NSEC3</span> <span class="number">8 3 21600</span> <span class="number">20161019013404</span> <span class="number">20160919011226</span> <span class="number">15399</span> com.cn. Rw7vfPaOa+UB9TpAHniy3XOk8UcZFHo1w7Qlq0gjX/gBBQY1vUR10BeI x0kodMsNRkHkvjvWkHfxAu/A8rR0X4xOuJkYZGBnR0YYVnP/N3YGHoz3 C6QOM47dyogMIOg/zVpnYjubpaILGpNY5ddZaJLF2sKz9SvJ0NXCQIyg lGQ=</div><div class="line"><span class="comment">;; Received 587 bytes from 202.112.0.44#53(ns.cernet.net) in 25 ms</span></div><div class="line"></div><div class="line">kicker.com.cn.		<span class="number">7200</span>	<span class="keyword">IN</span>	<span class="keyword">SOA</span>	ns1.dnsnw.com. dnsadmin.dnsnw.com. <span class="number">1446890703</span> <span class="number">28800 3600</span> <span class="number">604800</span> <span class="number">86400</span></div><div class="line"><span class="comment">;; Received 98 bytes from 218.66.171.169#53(ns.nagor.cn) in 106 ms</span></div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/06/cpp-泛型算法参考/" rel="next" title="cpp-泛型算法参考">
+                <i class="fa fa-chevron-left"></i> cpp-泛型算法参考
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/07/dns相关的小实践/"
+           data-title="dns相关的小实践" data-url="https://beim.github.io/2016/10/07/dns相关的小实践/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/hand_zheng.jpg"
+               alt="Beim" />
+          <p class="site-author-name" itemprop="name">Beim</p>
+          <p class="site-description motion-element" itemprop="description">平常心，平常心。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实验1"><span class="nav-number">1.</span> <span class="nav-text">实验1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验2"><span class="nav-number">2.</span> <span class="nav-text">实验2</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Beim</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"beim"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
