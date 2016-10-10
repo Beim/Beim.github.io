@@ -90,10 +90,20 @@
 <meta property="og:url" content="https://beim.github.io/2016/10/09/设计模式笔记/index.html">
 <meta property="og:site_name" content="北冥945">
 <meta property="og:description" content="设计模式">
-<meta property="og:updated_time" content="2016-10-09T14:40:06.352Z">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-12-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-13-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-13-28%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-14-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-14-22%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-14-40%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-15-02%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-15-22%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-15-46%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta property="og:updated_time" content="2016-10-10T12:21:48.223Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式笔记">
 <meta name="twitter:description" content="设计模式">
+<meta name="twitter:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-12-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
 
 
 
@@ -309,11 +319,14 @@
         <p>设计模式</p>
 <a id="more"></a>
 <h1 id="Factory-Method-Insurance"><a href="#Factory-Method-Insurance" class="headerlink" title="Factory Method - Insurance"></a>Factory Method - Insurance</h1><p>工厂方法模式</p>
+<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-12-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="factory"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">AutoInsurance</span> </span>&#123;</div><div class="line">   <span class="function"><span class="keyword">abstract</span> String <span class="title">getInfo</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BodyInjur</span> <span class="keyword">implements</span> <span class="title">AutoInsurance</span> </span>&#123;</div><div class="line">   <span class="keyword">private</span> String description;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> String <span class="title">getInfo</span><span class="params">()</span> </span>&#123;</div><div class="line">	   description = <span class="string">" Body Injur Liability: \n\nBodily injury coverage pays for medical bills"</span> +</div><div class="line">	                 <span class="string">" lost wages, rehabilitation, treatment and/or"</span> +</div><div class="line">	                 <span class="string">" funeral costs for anyone injured or killed "</span> +</div><div class="line">	                 <span class="string">" by your car. Such coverage will also pay for"</span> +</div><div class="line">	                 <span class="string">" pain and suffering damages when a third "</span> +</div><div class="line">	                 <span class="string">" party successfully sues. "</span>;</div><div class="line">	   <span class="keyword">return</span> description;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h1 id="AbstractFactory-House"><a href="#AbstractFactory-House" class="headerlink" title="AbstractFactory - House"></a>AbstractFactory - House</h1><p>抽象工厂模式</p>
+<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-13-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="absfactory"></p>
 <figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">BuildingFactory(<span class="keyword">abstract</span>)</div><div class="line"></div><div class="line">MediumBuildingFactor    SuperBuildingFactor</div><div class="line"></div><div class="line">MediumHouse MediumCondo    SuperHouse SuperCondo</div><div class="line"></div><div class="line">House&lt;<span class="keyword">interface</span>&gt; Condo&lt;<span class="keyword">interface</span>&gt;</div></pre></td></tr></table></figure>
 <h1 id="Adapter-CustomerInfo-check"><a href="#Adapter-CustomerInfo-check" class="headerlink" title="Adapter-CustomerInfo-check"></a>Adapter-CustomerInfo-check</h1><p>适配器模式</p>
 <p>为了解决接口不一致的问题, 两个软件模块之间往往需要通过一个适配器类Adapter 进行适配, 这样的模式叫做适配器设计模式.</p>
+<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-13-28%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="adapter"></p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">CusInfoValidator&lt;<span class="class"><span class="keyword">interface</span>&gt;    <span class="title">InfoValidation</span></span></div><div class="line"></div><div class="line"><span class="title">InformationAdapter</span> <span class="keyword">extends</span> ... <span class="keyword">implements</span> ...</div></pre></td></tr></table></figure>
 <ul>
 <li><p>类适配器模式</p>
@@ -323,23 +336,29 @@
 </ul>
 <h1 id="Bridge-AgentInfo"><a href="#Bridge-AgentInfo" class="headerlink" title="Bridge-AgentInfo"></a>Bridge-AgentInfo</h1><p>桥接模式</p>
 <p>桥接模式是指将抽象部分与它的实现部分分离, 使它们可以独立地变化.</p>
+<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-14-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="bridge"></p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">AgentInfo(<span class="keyword">abstract</span>)</div><div class="line"></div><div class="line">EncryptedInfo1  EncryptedInfo2</div><div class="line"></div><div class="line">MessageWriter&lt;<span class="class"><span class="keyword">interface</span>&gt;</span></div><div class="line"></div><div class="line">FileWriter  DBWriter</div></pre></td></tr></table></figure>
 <h1 id="Facade-usrInfoValidation"><a href="#Facade-usrInfoValidation" class="headerlink" title="Facade-usrInfoValidation"></a>Facade-usrInfoValidation</h1><p>外观模式</p>
 <p>用来隐藏一个软件系统的内部细节 ,只提供给客户类一个外观类, 或者叫做接口类. 客户类直接调用该外观类的方法即可.</p>
+<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-14-22%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="facade"></p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="section">CustomerFacade</span> &#123;</div><div class="line">    <span class="attribute">Account</span> accountObj;</div><div class="line">    <span class="attribute">CreditCard</span> creditCardObj;</div><div class="line">    <span class="attribute">Address</span> addressObj;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="attribute">Account</span> CreditCard Address</div></pre></td></tr></table></figure>
 <h1 id="Strategy-Sorting"><a href="#Strategy-Sorting" class="headerlink" title="Strategy-Sorting"></a>Strategy-Sorting</h1><p>策略模式</p>
 <p>下面定义了一系列的算法, 将每一个算法封装起来, 并且使它们之间可以相互替换. 策略模式让算法的变化不会影响到使用算法的客户.</p>
+<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-14-40%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="strategy"></p>
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Context</span></div><div class="line"></div><div class="line">SortAlgorithm&lt;interface&gt;</div><div class="line"></div><div class="line"><span class="keyword">InsertionSort </span> QuickSort  <span class="keyword">BubbleSort </span> HeapSort</div></pre></td></tr></table></figure>
 <h1 id="State-BankAccount-typical-2"><a href="#State-BankAccount-typical-2" class="headerlink" title="State-BankAccount-typical-2"></a>State-BankAccount-typical-2</h1><p>状态模式</p>
 <p>在面向对象设计中, 在依赖于状态的对象中, 对象的行为依赖于状态.</p>
 <p>状态模式将不同状态下的行为封装在不同的类中, 每个类代表一个状态.</p>
+<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-15-02%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="state"></p>
 <figure class="highlight coq"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">BankContext  &lt;-&gt;  State(<span class="built_in">abstract</span>)</div><div class="line"></div><div class="line">NoTransactionFeeState  TransactionFeeState  OverDrawnState</div></pre></td></tr></table></figure>
 <h1 id="Visitor-ComputerParts"><a href="#Visitor-ComputerParts" class="headerlink" title="Visitor-ComputerParts"></a>Visitor-ComputerParts</h1><p>访问者模式</p>
 <p>访问者模式在处理数据结构较稳定, 但是作用于其上的操作需要经常变化的问题是非常有效的.</p>
 <p>访问者模式是指作用于一个对象结构体上的元素的操作. 访问者可以使用户在不改变该结构体的类的基础上定义一个新的操作.</p>
+<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-15-22%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="visitor"></p>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">CompositeStructure</div><div class="line"></div><div class="line">ComputerParts</div><div class="line"></div><div class="line">Memory  VideoCard  <span class="literal">Monitor</span></div><div class="line"></div><div class="line">Visitor</div><div class="line"></div><div class="line">PriceVisitor  Parts<span class="literal">Inf</span>oVisitor</div></pre></td></tr></table></figure>
 <h1 id="Mediator-Tour-Hotel-Flight"><a href="#Mediator-Tour-Hotel-Flight" class="headerlink" title="Mediator-Tour-Hotel-Flight"></a>Mediator-Tour-Hotel-Flight</h1><p>中介者模式</p>
 <p>中介者模式将所有对象之间的交互细节抽象到一个独立的类中,对象之间的交互经由这个独立的类完成.</p>
+<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-15-46%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="mediator"></p>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">BusinessMediator</span></div><div class="line"></div><div class="line"><span class="symbol">AirlineGUI</span>  HotelGUI  TourGUI</div></pre></td></tr></table></figure>
 
       

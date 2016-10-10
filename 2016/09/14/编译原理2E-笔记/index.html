@@ -89,7 +89,7 @@
 <meta property="og:url" content="https://beim.github.io/2016/09/14/编译原理2E-笔记/index.html">
 <meta property="og:site_name" content="北冥945">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/compilers.jpg">
-<meta property="og:updated_time" content="2016-09-20T13:47:12.998Z">
+<meta property="og:updated_time" content="2016-10-10T11:30:49.918Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编译原理2E-笔记">
 <meta name="twitter:image" content="http://ob4a6y748.bkt.clouddn.com/compilers.jpg">
@@ -353,6 +353,10 @@
 <ol>
 <li>S -&gt; 0T1S | 1S | null<br>T -&gt; 1T | 0T | 0</li>
 </ol>
+<h1 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h1><h2 id="LR语法分析算法-算法4-44-p159"><a href="#LR语法分析算法-算法4-44-p159" class="headerlink" title="LR语法分析算法(算法4.44 p159)"></a>LR语法分析算法(算法4.44 p159)</h2><p>输入: 一个输入串w 和一个LR 语法分析表, 这个标描述了文法G 的ACTION 函数和GOTO 函数.</p>
+<p>输出: 如果w 在L(G) 中, 则输出w 的自底向上语法分析过程中的归约步骤; 否则给出一个错误指示.</p>
+<p>文法:<br><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="number">1</span>) E -&gt; E + <span class="literal">T</span>      (<span class="number">4</span>) <span class="literal">T</span> -&gt; <span class="literal">F</span></div><div class="line">(<span class="number">2</span>) E -&gt; <span class="literal">T</span>          (<span class="number">5</span>) <span class="literal">F</span> -&gt; (E)</div><div class="line">(<span class="number">3</span>) <span class="literal">T</span> -&gt; <span class="literal">T</span> * <span class="literal">F</span>      (<span class="number">6</span>) <span class="literal">F</span> -&gt; id</div></pre></td></tr></table></figure></p>
+<p>LR 语法分析程序<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">令a 为w$ 的第一个符号</div><div class="line"><span class="keyword">while</span><span class="comment">(1)</span> &#123;</div><div class="line">    s = 栈顶的状态</div><div class="line">    <span class="keyword">if</span> <span class="comment">(ACTION[s, a] == 移入t)</span> &#123;</div><div class="line">        将t 压入栈中;</div><div class="line">        令a 为下一个输入符号</div><div class="line">    &#125; else <span class="keyword">if</span> <span class="comment">(ACTION[s, a] == 归约 A -&gt; β)</span> &#123;</div><div class="line">        从栈中弹出|β| 个符号;</div><div class="line">        t = 栈顶的状态</div><div class="line">        将<span class="keyword">GOTO</span>[t, A] 压入栈中</div><div class="line">        输出产生式A -&gt; β</div><div class="line">    &#125; else <span class="keyword">if</span> <span class="comment">(ACTION[s, a] = 接受)</span> &#123;</div><div class="line">        break; <span class="comment">/* 语法分析完成 */</span></div><div class="line">    &#125; else &#123;</div><div class="line">        调用错误恢复例程</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -505,7 +509,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#练习"><span class="nav-number">1.</span> <span class="nav-text">练习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章词法分析"><span class="nav-number">1.1.</span> <span class="nav-text">第三章词法分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章语法分析"><span class="nav-number">1.2.</span> <span class="nav-text">第四章语法分析</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#练习"><span class="nav-number">1.</span> <span class="nav-text">练习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章词法分析"><span class="nav-number">1.1.</span> <span class="nav-text">第三章词法分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章语法分析"><span class="nav-number">1.2.</span> <span class="nav-text">第四章语法分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#记录"><span class="nav-number">2.</span> <span class="nav-text">记录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#LR语法分析算法-算法4-44-p159"><span class="nav-number">2.1.</span> <span class="nav-text">LR语法分析算法(算法4.44 p159)</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
