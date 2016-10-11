@@ -9,45 +9,113 @@
       <content type="html"><![CDATA[<p>设计模式</p>
 <a id="more"></a>
 <h1 id="Factory-Method-Insurance"><a href="#Factory-Method-Insurance" class="headerlink" title="Factory Method - Insurance"></a>Factory Method - Insurance</h1><p>工厂方法模式</p>
+<p><strong>优点</strong>:</p>
+<ul>
+<li>工厂方法模式将创建对象的逻辑与任务交给了工厂类</li>
+<li>工厂方法模式支持开闭原则</li>
+</ul>
+<p><strong>适用情况</strong></p>
+<ul>
+<li>创建某些类的对象的逻辑比较复杂,并且有很多条件分支, 而且还可能增加新的条件.</li>
+<li>一个类不能预先准确的知道它必须创建一个层次类中的哪一个子类的对象</li>
+<li>一个类适用它的子类决定所要创建的对象</li>
+<li>需要封装创建类的对象的逻辑, 使得这些逻辑局部化.</li>
+</ul>
+<p>简单工厂方法模式与工厂方法模式的区别: <strong>p15</strong></p>
 <p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-12-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="factory"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">AutoInsurance</span> </span>&#123;</div><div class="line">   <span class="function"><span class="keyword">abstract</span> String <span class="title">getInfo</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BodyInjur</span> <span class="keyword">implements</span> <span class="title">AutoInsurance</span> </span>&#123;</div><div class="line">   <span class="keyword">private</span> String description;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> String <span class="title">getInfo</span><span class="params">()</span> </span>&#123;</div><div class="line">	   description = <span class="string">" Body Injur Liability: \n\nBodily injury coverage pays for medical bills"</span> +</div><div class="line">	                 <span class="string">" lost wages, rehabilitation, treatment and/or"</span> +</div><div class="line">	                 <span class="string">" funeral costs for anyone injured or killed "</span> +</div><div class="line">	                 <span class="string">" by your car. Such coverage will also pay for"</span> +</div><div class="line">	                 <span class="string">" pain and suffering damages when a third "</span> +</div><div class="line">	                 <span class="string">" party successfully sues. "</span>;</div><div class="line">	   <span class="keyword">return</span> description;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
 <h1 id="AbstractFactory-House"><a href="#AbstractFactory-House" class="headerlink" title="AbstractFactory - House"></a>AbstractFactory - House</h1><p>抽象工厂模式</p>
+<p>符合开闭原则 和不符合开闭原则的情况: <strong>p22</strong></p>
 <p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-13-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="absfactory"></p>
 <figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">BuildingFactory(<span class="keyword">abstract</span>)</div><div class="line"></div><div class="line">MediumBuildingFactor    SuperBuildingFactor</div><div class="line"></div><div class="line">MediumHouse MediumCondo    SuperHouse SuperCondo</div><div class="line"></div><div class="line">House&lt;<span class="keyword">interface</span>&gt; Condo&lt;<span class="keyword">interface</span>&gt;</div></pre></td></tr></table></figure>
+<hr>
 <h1 id="Adapter-CustomerInfo-check"><a href="#Adapter-CustomerInfo-check" class="headerlink" title="Adapter-CustomerInfo-check"></a>Adapter-CustomerInfo-check</h1><p>适配器模式</p>
 <p>为了解决接口不一致的问题, 两个软件模块之间往往需要通过一个适配器类Adapter 进行适配, 这样的模式叫做适配器设计模式.</p>
+<p><strong>适用情况</strong></p>
+<ul>
+<li>当系统想要使用现有的类, 但是现有类的接口不符合系统需要时.</li>
+<li>当需要通过创建一个可复用的类, 使得本来接口不相容并且无关的类结合在一起工作时.</li>
+<li>在设计中需要改变多个子类接口, 在作用相同但名称不同的类或方法之间进行适配时.</li>
+</ul>
+<p><strong>两种模式</strong></p>
+<ul>
+<li>类适配器模式</li>
+<li>对象适配器模式 <code>和类适配器模式相同思路, 但是在Adapter 类中, 调用adaptee 的方法, 而不是继承adaptee</code></li>
+</ul>
 <p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-13-28%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="adapter"></p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">CusInfoValidator&lt;<span class="class"><span class="keyword">interface</span>&gt;    <span class="title">InfoValidation</span></span></div><div class="line"></div><div class="line"><span class="title">InformationAdapter</span> <span class="keyword">extends</span> ... <span class="keyword">implements</span> ...</div></pre></td></tr></table></figure>
-<ul>
-<li><p>类适配器模式</p>
-</li>
-<li><p>对象适配器模式 <code>和类适配器模式相同思路, 但是在Adapter 类中, 调用adaptee 的方法, 而不是继承adaptee</code></p>
-</li>
-</ul>
+<hr>
 <h1 id="Bridge-AgentInfo"><a href="#Bridge-AgentInfo" class="headerlink" title="Bridge-AgentInfo"></a>Bridge-AgentInfo</h1><p>桥接模式</p>
-<p>桥接模式是指将抽象部分与它的实现部分分离, 使它们可以独立地变化.</p>
+<p>桥接模式是指将抽象部分与它的实现部分分离, 使它们可以独立地变化.<br>桥接模式强调对象有两个以上的维度变化, 简化多级集成关系, 但同时增加了聚合对象的内部方法, 因为它不得不多写方法以便包含它的类调用.</p>
+<p><strong>优点</strong></p>
+<ul>
+<li>分离接口和实现部分. 一个实现不必固定的绑定一个接口. 一个抽象类的实现可以在系统运行时进行配置, 一个对象甚至可以在运行时改变它的实现.</li>
+<li>提高了可扩展性. 可以独立的对Abstraction 和Implementor 层次结构进行扩展</li>
+<li>实现细节对客户的透明. 可以对客户隐藏实现细节.</li>
+</ul>
 <p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-14-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="bridge"></p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">AgentInfo(<span class="keyword">abstract</span>)</div><div class="line"></div><div class="line">EncryptedInfo1  EncryptedInfo2</div><div class="line"></div><div class="line">MessageWriter&lt;<span class="class"><span class="keyword">interface</span>&gt;</span></div><div class="line"></div><div class="line">FileWriter  DBWriter</div></pre></td></tr></table></figure>
+<hr>
 <h1 id="Facade-usrInfoValidation"><a href="#Facade-usrInfoValidation" class="headerlink" title="Facade-usrInfoValidation"></a>Facade-usrInfoValidation</h1><p>外观模式</p>
-<p>用来隐藏一个软件系统的内部细节 ,只提供给客户类一个外观类, 或者叫做接口类. 客户类直接调用该外观类的方法即可.</p>
+<p>用来隐藏一个软件系统的内部细节, 为一系列复杂的接口提供一个统一的接口, 使该系统更容易使用.</p>
+<p><strong>优点</strong><br>利用外观模式可以去掉子系统与客户程序之间的直接绑定, 从而提高子系统的独立性, 也降低 了客户程序与子程序的直接耦合度. 此外, 利用外观模式可以使系统层次化.</p>
+<p><strong>缺点</strong><br>对于那些不需要定制的用户来说, 例如一个熟练的程序员要写一些复杂的功能, 而外观类中没有这样的功能, 因此外观模式可能对它们没有帮助. 在这种情况下, 用户程序可以直接绕过外观模式, 而直接调用子系统类库.</p>
+<p><code>适配器模式</code>与<code>外观模式</code>的区别</p>
+<ul>
+<li>适配器模式转换接口的目的是将一个不适合使用的接口转换为可以被使用的接口, 或者将一些接口不同而功能相同或者相近的接口加以转换, 以便可以被统一使用.</li>
+<li>外观模式简化接口是为了更好地使用某个类库, 为一系列复杂的接口提供一个统一的接口</li>
+</ul>
 <p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-14-22%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="facade"></p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="section">CustomerFacade</span> &#123;</div><div class="line">    <span class="attribute">Account</span> accountObj;</div><div class="line">    <span class="attribute">CreditCard</span> creditCardObj;</div><div class="line">    <span class="attribute">Address</span> addressObj;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="attribute">Account</span> CreditCard Address</div></pre></td></tr></table></figure>
+<hr>
 <h1 id="Strategy-Sorting"><a href="#Strategy-Sorting" class="headerlink" title="Strategy-Sorting"></a>Strategy-Sorting</h1><p>策略模式</p>
 <p>下面定义了一系列的算法, 将每一个算法封装起来, 并且使它们之间可以相互替换. 策略模式让算法的变化不会影响到使用算法的客户.</p>
+<p><strong>优点</strong></p>
+<ul>
+<li>得到一系列可以复用的算法, 这些算法集成一个共同的抽象类, 因此共有的功能可以放到超类中.</li>
+<li>将不同算法封装在不同的策略子类中, 使逻辑更加清晰, 各个算法可以独立地变化.</li>
+<li>使功能改变或者扩展更容易.</li>
+</ul>
+<p><strong>缺点</strong><br>客户程序必须知道不同策略接口的各个子类的行为, 必须理解每个子类有哪些不同.</p>
 <p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-14-40%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="strategy"></p>
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Context</span></div><div class="line"></div><div class="line">SortAlgorithm&lt;interface&gt;</div><div class="line"></div><div class="line"><span class="keyword">InsertionSort </span> QuickSort  <span class="keyword">BubbleSort </span> HeapSort</div></pre></td></tr></table></figure>
+<hr>
 <h1 id="State-BankAccount-typical-2"><a href="#State-BankAccount-typical-2" class="headerlink" title="State-BankAccount-typical-2"></a>State-BankAccount-typical-2</h1><p>状态模式</p>
 <p>在面向对象设计中, 在依赖于状态的对象中, 对象的行为依赖于状态.</p>
 <p>状态模式将不同状态下的行为封装在不同的类中, 每个类代表一个状态.</p>
+<p><strong>优点</strong></p>
+<ul>
+<li>因为状态相关的代码都被封装在各个状态子类中, 所以容易添加新的状态, 只需要定义并添加新的状态子类和新的状态变化关系即可. 有时其他的类也需要较少的修改.</li>
+<li>将不同的状态封装成不同的类使得状态迁移很明确, 并且可以防止Context 类将状态弄混乱了</li>
+</ul>
+<p><strong>适用</strong></p>
+<ul>
+<li>当对象的行为依赖于状态, 对象要在运行时改变状态时使用状态模式</li>
+<li>当操作带有大量依赖于状态的条件语句时使用该模式. 通常许多操作都含有相同的条件结构, 状态模式将条件结构的每个分支包装成独立分支的类, 使得在不同状态下的行为可以独立变化.</li>
+</ul>
 <p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-15-02%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="state"></p>
 <figure class="highlight coq"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">BankContext  &lt;-&gt;  State(<span class="built_in">abstract</span>)</div><div class="line"></div><div class="line">NoTransactionFeeState  TransactionFeeState  OverDrawnState</div></pre></td></tr></table></figure>
+<hr>
 <h1 id="Visitor-ComputerParts"><a href="#Visitor-ComputerParts" class="headerlink" title="Visitor-ComputerParts"></a>Visitor-ComputerParts</h1><p>访问者模式</p>
 <p>访问者模式在处理数据结构较稳定, 但是作用于其上的操作需要经常变化的问题是非常有效的.</p>
 <p>访问者模式是指作用于一个对象结构体上的元素的操作. 访问者可以使用户在不改变该结构体的类的基础上定义一个新的操作.</p>
+<p><strong>优点</strong></p>
+<ul>
+<li>使得在访问者类中针对复杂类结构中的某个类添加新方法较为容易, 即只需要简单的添加一个新的访问者方法即可. </li>
+<li>访问者将相关的方法集中在一个具体的访问者类中, 而将其他相关的方法集中在另外一个具体的访问者类中. 也就是说, 访问者子类是按照方法的类型来分类的.</li>
+</ul>
+<p><strong>缺点</strong><br>增加一个具体的新ConcreteElement 类比较困难. 因为此时需要在每个ConcreteVisitor 类中添加该ConcreteElement 类的访问方法.(所以其适合数据结构稳定的情况)</p>
 <p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-15-22%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="visitor"></p>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">CompositeStructure</div><div class="line"></div><div class="line">ComputerParts</div><div class="line"></div><div class="line">Memory  VideoCard  <span class="literal">Monitor</span></div><div class="line"></div><div class="line">Visitor</div><div class="line"></div><div class="line">PriceVisitor  Parts<span class="literal">Inf</span>oVisitor</div></pre></td></tr></table></figure>
+<hr>
 <h1 id="Mediator-Tour-Hotel-Flight"><a href="#Mediator-Tour-Hotel-Flight" class="headerlink" title="Mediator-Tour-Hotel-Flight"></a>Mediator-Tour-Hotel-Flight</h1><p>中介者模式</p>
 <p>中介者模式将所有对象之间的交互细节抽象到一个独立的类中,对象之间的交互经由这个独立的类完成.</p>
+<p><strong>优点</strong></p>
+<ul>
+<li>所有对象的交互行为都被转入到一个独立的中介者对象中, 使得用户更容易通过中介者修改对象之间的相互关系行为. 当修改一个交互行为的时候, 可以通过修改或者更换其中一个具体的中介者子类来完成. 另外, 将对象的交互转移到一个专门的类中也提高了对象的可重用性.</li>
+<li>因为对象之间不直接有交互, 使对象的单元测试更容易.</li>
+<li>低耦合使得一个类的修改不会影响到其他的类.</li>
+</ul>
 <p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-15-46%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="mediator"></p>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">BusinessMediator</span></div><div class="line"></div><div class="line"><span class="symbol">AirlineGUI</span>  HotelGUI  TourGUI</div></pre></td></tr></table></figure>
 ]]></content>
