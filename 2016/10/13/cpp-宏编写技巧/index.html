@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="vim," />
+  <meta name="keywords" content="cpp," />
 
 
 
@@ -84,15 +84,25 @@
 
 
 
+<meta name="description" content="如果宏里有多过一个语句(statement), 就需要用do {/…/} while(0) 包裹成单个语句, 否则会有如下问题
+1234567891011#define M() a(); b()if (cond)    M();else    c();/* 预处理后 */if (cond)    a(); b()else /* else 缺乏对应if */    c();
+只用{} 也不行:
+12">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim-奇技淫巧">
-<meta property="og:url" content="https://beim.github.io/2016/10/05/vim-奇技淫巧/index.html">
+<meta property="og:title" content="cpp-宏编写技巧">
+<meta property="og:url" content="https://beim.github.io/2016/10/13/cpp-宏编写技巧/index.html">
 <meta property="og:site_name" content="北冥945">
-<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/Vimlogo.svg">
-<meta property="og:updated_time" content="2016-10-05T16:04:03.132Z">
+<meta property="og:description" content="如果宏里有多过一个语句(statement), 就需要用do {/…/} while(0) 包裹成单个语句, 否则会有如下问题
+1234567891011#define M() a(); b()if (cond)    M();else    c();/* 预处理后 */if (cond)    a(); b()else /* else 缺乏对应if */    c();
+只用{} 也不行:
+12">
+<meta property="og:updated_time" content="2016-10-13T15:37:38.335Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vim-奇技淫巧">
-<meta name="twitter:image" content="http://ob4a6y748.bkt.clouddn.com/Vimlogo.svg">
+<meta name="twitter:title" content="cpp-宏编写技巧">
+<meta name="twitter:description" content="如果宏里有多过一个语句(statement), 就需要用do {/…/} while(0) 包裹成单个语句, 否则会有如下问题
+1234567891011#define M() a(); b()if (cond)    M();else    c();/* 预处理后 */if (cond)    a(); b()else /* else 缺乏对应if */    c();
+只用{} 也不行:
+12">
 
 
 
@@ -113,9 +123,9 @@
 
 
 
-  <link rel="canonical" href="https://beim.github.io/2016/10/05/vim-奇技淫巧/"/>
+  <link rel="canonical" href="https://beim.github.io/2016/10/13/cpp-宏编写技巧/"/>
 
-  <title> vim-奇技淫巧 | 北冥945 </title>
+  <title> cpp-宏编写技巧 | 北冥945 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -258,7 +268,7 @@
             
             
               
-                vim-奇技淫巧
+                cpp-宏编写技巧
               
             
           </h1>
@@ -270,8 +280,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-10-05T23:47:14+08:00" content="2016-10-05">
-              2016-10-05
+            <time itemprop="dateCreated" datetime="2016-10-13T23:31:24+08:00" content="2016-10-13">
+              2016-10-13
             </time>
           </span>
 
@@ -281,8 +291,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/05/vim-奇技淫巧/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/05/vim-奇技淫巧/" itemprop="commentsCount"></span>
+                <a href="/2016/10/13/cpp-宏编写技巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/13/cpp-宏编写技巧/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -305,176 +315,12 @@
       
 
       
-        <p><img src="http://ob4a6y748.bkt.clouddn.com/Vimlogo.svg" alt="vim"></p>
-<a id="more"></a>
-<h1 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h1><table>
-<thead>
-<tr>
-<th>输入</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>w</td>
-<td>移动到下一个单词开头</td>
-</tr>
-<tr>
-<td>e</td>
-<td>移动到下一个单词结尾</td>
-</tr>
-<tr>
-<td>b</td>
-<td>倒退到上一个单词开头</td>
-</tr>
-<tr>
-<td>0</td>
-<td>移动到行首</td>
-</tr>
-<tr>
-<td>$</td>
-<td>移动到行末</td>
-</tr>
-<tr>
-<td>+</td>
-<td>移动到上一行开头</td>
-</tr>
-<tr>
-<td>-</td>
-<td>移动到下一行开头</td>
-</tr>
-<tr>
-<td>^</td>
-<td>移动到当前行第一个非空格处</td>
-</tr>
-<tr>
-<td></td>
-<td>滚动</td>
-</tr>
-<tr>
-<td>ctrl+f</td>
-<td>向前滚屏 (front)</td>
-</tr>
-<tr>
-<td>ctrl+b</td>
-<td>向后滚屏 (back)</td>
-</tr>
-<tr>
-<td>ctrl+d</td>
-<td>向前滚半屏 (down)</td>
-</tr>
-<tr>
-<td>ctrl+u</td>
-<td>向后滚半屏 (up)</td>
-</tr>
-<tr>
-<td>ctrl+e</td>
-<td>向后滚一行</td>
-</tr>
-<tr>
-<td>ctrl+y</td>
-<td>向前滚一行</td>
-</tr>
-<tr>
-<td></td>
-<td>z调整滚动</td>
-</tr>
-<tr>
-<td>z<enter></enter></td>
-<td>将光标所在行移动到屏幕顶端</td>
-</tr>
-<tr>
-<td>zz</td>
-<td>将光标所在行移动到屏幕中间</td>
-</tr>
-<tr>
-<td>z-</td>
-<td>将光标所在行移动到屏幕底端</td>
-</tr>
-<tr>
-<td>980zz</td>
-<td>将第980行移动到屏幕中间</td>
-</tr>
-<tr>
-<td></td>
-<td>在屏幕中移动</td>
-</tr>
-<tr>
-<td>H</td>
-<td>移动到屏幕顶端的行 (high)</td>
-</tr>
-<tr>
-<td>M</td>
-<td>移动到屏幕中央的行 (middle)</td>
-</tr>
-<tr>
-<td>L</td>
-<td>移动到屏幕底端的行 (low)</td>
-</tr>
-<tr>
-<td>nH</td>
-<td>移动到屏幕顶端往下第n行</td>
-</tr>
-<tr>
-<td>nL</td>
-<td>移动到屏幕顶端往上的第n行</td>
-</tr>
-<tr>
-<td></td>
-<td>最强移动</td>
-</tr>
-<tr>
-<td>nG</td>
-<td>转至第n行</td>
-</tr>
-<tr>
-<td>G</td>
-<td>转至文本末尾</td>
-</tr>
-<tr>
-<td>gg</td>
-<td>转至文本开头</td>
-</tr>
-</tbody>
-</table>
-<h1 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h1><table>
-<thead>
-<tr>
-<th>输入</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>i</td>
-<td>光标位置插入</td>
-</tr>
-<tr>
-<td>a</td>
-<td>光标位置后插入 (append)</td>
-</tr>
-<tr>
-<td>I</td>
-<td>行首插入</td>
-</tr>
-<tr>
-<td>A</td>
-<td>行末插入</td>
-</tr>
-<tr>
-<td>o</td>
-<td>下一行插入</td>
-</tr>
-<tr>
-<td>O</td>
-<td>上一行插入</td>
-</tr>
-<tr>
-<td>cc</td>
-<td>当前行根据缩进插入</td>
-</tr>
-</tbody>
-</table>
+        <p>如果宏里有多过一个语句(statement), 就需要用do {/<em>…</em>/} while(0) 包裹成单个语句, 否则会有如下问题</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M() a(); b()</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    M();</div><div class="line"><span class="keyword">else</span></div><div class="line">    c();</div><div class="line"></div><div class="line"><span class="comment">/* 预处理后 */</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    a(); b()</div><div class="line"><span class="keyword">else</span> <span class="comment">/* else 缺乏对应if */</span></div><div class="line">    c();</div></pre></td></tr></table></figure>
+<p>只用{} 也不行:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M() &#123; a(); b();&#125;</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    M();</div><div class="line"><span class="keyword">else</span></div><div class="line">    c();</div><div class="line"></div><div class="line"><span class="comment">/* 预处理后 */</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    &#123; a(); b(); &#125;; <span class="comment">/* 最后的分号代表if 语句结束 */</span></div><div class="line"><span class="keyword">else</span>   <span class="comment">/* else 缺乏对应if */</span></div><div class="line">    c();</div></pre></td></tr></table></figure>
+<p>用 do while 就可以了</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M() do &#123; a(); b(); &#125; while(0)</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    M();</div><div class="line"><span class="keyword">else</span></div><div class="line">    c();</div><div class="line"></div><div class="line"><span class="comment">/* 预处理后 */</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    <span class="keyword">do</span> &#123; a(); b(); &#125; <span class="keyword">while</span>(<span class="number">0</span>);</div><div class="line"><span class="keyword">else</span></div><div class="line">    c();</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -497,7 +343,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/vim/" rel="tag">#vim</a>
+            <a href="/tags/cpp/" rel="tag">#cpp</a>
           
         </div>
       
@@ -506,16 +352,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/05/cpp-顺序性容器/" rel="next" title="cpp-顺序性容器">
-                <i class="fa fa-chevron-left"></i> cpp-顺序性容器
+              <a href="/2016/10/09/设计模式笔记/" rel="next" title="设计模式笔记">
+                <i class="fa fa-chevron-left"></i> 设计模式笔记
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/10/06/cpp-泛型算法参考/" rel="prev" title="cpp-泛型算法参考">
-                cpp-泛型算法参考 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/10/15/2016-收藏/" rel="prev" title="2016-收藏">
+                2016-收藏 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -542,8 +388,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/05/vim-奇技淫巧/"
-           data-title="vim-奇技淫巧" data-url="https://beim.github.io/2016/10/05/vim-奇技淫巧/">
+      <div class="ds-thread" data-thread-key="2016/10/13/cpp-宏编写技巧/"
+           data-title="cpp-宏编写技巧" data-url="https://beim.github.io/2016/10/13/cpp-宏编写技巧/">
       </div>
     
   </div>
@@ -627,7 +473,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#移动"><span class="nav-number">1.</span> <span class="nav-text">移动</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入"><span class="nav-number">2.</span> <span class="nav-text">插入</span></a></li></ol></div>
+              <p class="post-toc-empty">This post does not have a Table of Contents</p>
             
           </div>
         </section>

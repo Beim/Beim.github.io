@@ -116,7 +116,7 @@ String 方法
 String.prototype.match()
 
 String.prototype.replace()">
-<meta property="og:updated_time" content="2016-09-21T10:05:45.164Z">
+<meta property="og:updated_time" content="2016-10-16T11:25:45.457Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS-正则表达式">
 <meta name="twitter:description" content="RegExp 方法
@@ -363,6 +363,7 @@ String.prototype.replace()">
 </ul>
 <a id="more"></a>
 <h2 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h2><figure class="highlight rust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> patt = /a/</div><div class="line"><span class="keyword">let</span> <span class="keyword">str</span> = <span class="symbol">'abcabc</span>'</div><div class="line"></div><div class="line">patt.exec(<span class="keyword">str</span>) </div><div class="line"><span class="comment">// [ 'a', index: 0, input: 'abcabc' ]</span></div><div class="line">patt.test(<span class="keyword">str</span>) </div><div class="line"><span class="comment">// true </span></div><div class="line"><span class="keyword">str</span>.<span class="keyword">match</span>(patt) </div><div class="line"><span class="comment">// [ 'a', index: 0, input: 'abcabc' ]</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> patt1 = /a/g</div><div class="line">patt1.exec(<span class="keyword">str</span>)</div><div class="line"><span class="comment">// [ 'a', index: 0, input: 'abcabc' ]</span></div><div class="line">patt1.test(<span class="keyword">str</span>)</div><div class="line"><span class="comment">// true</span></div><div class="line"><span class="keyword">str</span>.<span class="keyword">match</span>(patt1)</div><div class="line"><span class="comment">// [ 'a', 'a' ]</span></div></pre></td></tr></table></figure>
+<h2 id="更多栗子"><a href="#更多栗子" class="headerlink" title="更多栗子"></a>更多栗子</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> patt = /(GET) (HTTP)/</div><div class="line"><span class="keyword">let</span> str = <span class="string">'test GET HTTP'</span></div><div class="line"></div><div class="line">patt.exec(str)</div><div class="line">// [ <span class="string">'GET HTTP'</span>, <span class="string">'GET'</span>, <span class="string">'HTTP'</span>, <span class="built_in">index</span>: <span class="number">5</span>, inpu<span class="variable">t:</span> <span class="string">'test GET HTTP'</span> ]</div><div class="line"></div><div class="line">patt.test(str)</div><div class="line">// true</div><div class="line"></div><div class="line">str.<span class="keyword">match</span>(patt)</div><div class="line">// [ <span class="string">'GET HTTP'</span>, <span class="string">'GET'</span>, <span class="string">'HTTP'</span>, <span class="built_in">index</span>: <span class="number">5</span>, inpu<span class="variable">t:</span> <span class="string">'test GET HTTP'</span> ]</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">let</span> patt = /(GET) (HTTP)/g</div><div class="line"><span class="keyword">let</span> str = <span class="string">'test GET HTTP'</span></div><div class="line"></div><div class="line">patt.exec(str)</div><div class="line">// [ <span class="string">'GET HTTP'</span>, <span class="string">'GET'</span>, <span class="string">'HTTP'</span>, <span class="built_in">index</span>: <span class="number">5</span>, inpu<span class="variable">t:</span> <span class="string">'test GET HTTP'</span> ]</div><div class="line"></div><div class="line">patt.test(str)</div><div class="line">// true</div><div class="line"></div><div class="line">patt.<span class="keyword">match</span>(str)</div><div class="line">// [<span class="string">'GET HTTP'</span>]</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -476,7 +477,7 @@ String.prototype.replace()">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -515,7 +516,7 @@ String.prototype.replace()">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#RegExp-方法"><span class="nav-number">1.</span> <span class="nav-text">RegExp 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String-方法"><span class="nav-number">2.</span> <span class="nav-text">String 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栗子"><span class="nav-number">3.</span> <span class="nav-text">栗子</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#RegExp-方法"><span class="nav-number">1.</span> <span class="nav-text">RegExp 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String-方法"><span class="nav-number">2.</span> <span class="nav-text">String 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栗子"><span class="nav-number">3.</span> <span class="nav-text">栗子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更多栗子"><span class="nav-number">4.</span> <span class="nav-text">更多栗子</span></a></li></ol></div>
             
           </div>
         </section>

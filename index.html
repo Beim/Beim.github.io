@@ -261,6 +261,213 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/15/2016-收藏/" itemprop="url">
+                  2016-收藏
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-15T10:08:47+08:00" content="2016-10-15">
+              2016-10-15
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/15/2016-收藏/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/15/2016-收藏/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://blog.risingstack.com/nodejs-at-scale-npm-best-practices/" target="_blank" rel="external">Node.js at Scale - npm Best Practices</a><br><strong>npm 最佳实践</strong></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/13/cpp-宏编写技巧/" itemprop="url">
+                  cpp-宏编写技巧
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-13T23:31:24+08:00" content="2016-10-13">
+              2016-10-13
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/13/cpp-宏编写技巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/13/cpp-宏编写技巧/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>如果宏里有多过一个语句(statement), 就需要用do {/<em>…</em>/} while(0) 包裹成单个语句, 否则会有如下问题</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M() a(); b()</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    M();</div><div class="line"><span class="keyword">else</span></div><div class="line">    c();</div><div class="line"></div><div class="line"><span class="comment">/* 预处理后 */</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    a(); b()</div><div class="line"><span class="keyword">else</span> <span class="comment">/* else 缺乏对应if */</span></div><div class="line">    c();</div></pre></td></tr></table></figure>
+<p>只用{} 也不行:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M() &#123; a(); b();&#125;</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    M();</div><div class="line"><span class="keyword">else</span></div><div class="line">    c();</div><div class="line"></div><div class="line"><span class="comment">/* 预处理后 */</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    &#123; a(); b(); &#125;; <span class="comment">/* 最后的分号代表if 语句结束 */</span></div><div class="line"><span class="keyword">else</span>   <span class="comment">/* else 缺乏对应if */</span></div><div class="line">    c();</div></pre></td></tr></table></figure>
+<p>用 do while 就可以了</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M() do &#123; a(); b(); &#125; while(0)</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    M();</div><div class="line"><span class="keyword">else</span></div><div class="line">    c();</div><div class="line"></div><div class="line"><span class="comment">/* 预处理后 */</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    <span class="keyword">do</span> &#123; a(); b(); &#125; <span class="keyword">while</span>(<span class="number">0</span>);</div><div class="line"><span class="keyword">else</span></div><div class="line">    c();</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/09/设计模式笔记/" itemprop="url">
                   设计模式笔记
                 </a>
@@ -1101,232 +1308,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/11/计算机网络5E-笔记/" itemprop="url">
-                  计算机网络-笔记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-09-11T00:35:25+08:00" content="2016-09-11">
-              2016-09-11
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/11/计算机网络5E-笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/11/计算机网络5E-笔记/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="计算机网络5E"><a href="#计算机网络5E" class="headerlink" title="计算机网络5E"></a>计算机网络5E</h1><h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><ul>
-<li><p><strong>IP</strong> (Internet Protocol) 因特网协议</p>
-</li>
-<li><p><strong>ICMP</strong> (Internet Control Message Protocol) 因特网控制报文协议</p>
-</li>
-<li><p><strong>TCP</strong> (Transport Control Protocol) 传输控制协议</p>
-</li>
-<li><p><strong>UDP</strong> (User Datagram Protocol) 用户数据报协议</p>
-</li>
-<li><p><strong>Internet</strong> 因特网</p>
-</li>
-<li><p><strong>internet</strong> 互联网</p>
-</li>
-<li><p><strong>NAP</strong> (Network Access Point) 网络接入点</p>
-</li>
-<li><p><strong>DSL</strong> (Digital Subscriber Line) 数字用户线</p>
-</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/11/计算机网络5E-笔记/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/06/JS-超长数字的坑/" itemprop="url">
-                  JS 超长数字的坑
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-09-06T17:31:17+08:00" content="2016-09-06">
-              2016-09-06
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/06/JS-超长数字的坑/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/06/JS-超长数字的坑/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> num1 = <span class="number">1234567890123456</span></div><div class="line"><span class="keyword">const</span> num2 = <span class="number">12345678901234567</span></div><div class="line"><span class="keyword">const</span> str1 = <span class="string">'1234567890123456'</span></div><div class="line"><span class="keyword">const</span> str2 = <span class="string">`12345678901234567`</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(num1 === str1) <span class="comment">// false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;num1&#125;</span>`</span> === str1) <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(num2 === str2) <span class="comment">// false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;num2&#125;</span>`</span> === str2) <span class="comment">// false</span></div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1367,7 +1353,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
