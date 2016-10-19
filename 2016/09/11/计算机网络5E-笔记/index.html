@@ -112,7 +112,7 @@ UDP (User Datagram Protocol) 用户数据报协议
 Internet 因特网
 
 internet 互联网">
-<meta property="og:updated_time" content="2016-10-19T11:30:07.070Z">
+<meta property="og:updated_time" content="2016-10-19T11:52:46.740Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络-笔记">
 <meta name="twitter:description" content="计算机网络5E关键字
@@ -452,7 +452,16 @@ internet 互联网">
 <p><strong>栗子</strong><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">两个整数</div><div class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span></div><div class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span></div><div class="line"></div><div class="line">求和得到</div><div class="line"><span class="number">1</span>(进位) <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span></div><div class="line"></div><div class="line">将进位的<span class="number">1</span> 加到末位得到</div><div class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> </div><div class="line"></div><div class="line">按位取反得到checksum</div><div class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span></div></pre></td></tr></table></figure></p>
 <p><strong>可靠数据传输</strong><br>不错\不丢\不乱</p>
 <h2 id="第6周-传输层-下"><a href="#第6周-传输层-下" class="headerlink" title="第6周 传输层(下)"></a>第6周 传输层(下)</h2><p><a href="https://blog.json.tw/introduction-to-computer-network-gbn-sr-tcp-compare" target="_blank" rel="external">GBN, SR, TCP 重传机制的比较</a></p>
-
+<p>TCP - Tahoe : </p>
+<pre><code>1. slow-start, 每收到一个ACK, 拥塞窗口cwnd值加一, 因此每过一个RTT, cwnd翻倍
+2. 当cwnd超过慢启动阙值(slow start threshold)ssthresh时, cwnd停止slow-start, 开始线性增长.
+3. 当发生超时或者快速重传(收到三次重复确认)时, ssthresh = cwnd / 2, cwnd = 1; 重新开始slow-start 过程
+</code></pre><p>TCP - Reno</p>
+<pre><code>1. slow-start
+2. 当cwnd超过ssthresh时, cwnd停止slow-start, 开始线性增长
+3. 当发生快速重传时, 进入快速恢复(fast recovery), ssthresh = cwnd / 2; cwnd = ssthresh; 
+4. 当发生超时, ssthresh = cwnd / 2; cwnd = 1; 重新开始slow-start 过程
+</code></pre>
       
     </div>
 
