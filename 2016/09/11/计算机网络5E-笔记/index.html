@@ -112,7 +112,7 @@ UDP (User Datagram Protocol) 用户数据报协议
 Internet 因特网
 
 internet 互联网">
-<meta property="og:updated_time" content="2016-10-20T00:59:03.573Z">
+<meta property="og:updated_time" content="2016-10-20T02:51:36.706Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络-笔记">
 <meta name="twitter:description" content="计算机网络5E关键字
@@ -462,7 +462,94 @@ internet 互联网">
 2. 当cwnd超过ssthresh时, cwnd停止slow-start, 开始线性增长
 3. 当发生快速重传时, 进入快速恢复(fast recovery), ssthresh = cwnd / 2; cwnd = ssthresh; 
 4. 当发生超时, ssthresh = cwnd / 2; cwnd = 1; 重新开始slow-start 过程
-</code></pre>
+</code></pre><h2 id="第7周-网络层-上"><a href="#第7周-网络层-上" class="headerlink" title="第7周 网络层(上)"></a>第7周 网络层(上)</h2><p><strong>IP分组格式</strong></p>
+<p>标志位 占3位, [保留, DF, MF]<br>DF(Don’t Fragment) {1: 禁止分片, 0: 允许分片}<br>MF(More Fragment) {1: 非最后一片, 0: 最后一片(或未分片)}</p>
+<p>片偏移 字段占13位: 一个IP分组分片封装原IP 分组数据的相对偏移量<br>片偏移字段以<code>8 字节为单位</code></p>
+<p>假设原IP 分组总长度L, 待转发链路的MTU(最大传输单元)为M<br>若L&gt;M, 且DF = 0, 则可以/需要分片<br>分片时每个分片的标识复制原IP 分组的标识<br>通常分片时, 除了最后一个分片, 其他分片均为MTU 允许的最大分片<br>一个最大分片可封装的数据应该是8 的倍数, 因此, 一个最大分片可以封装的数据为<br><code>d = [(M - 20) / 8] * 8    // 向下取整</code><br>需要的总片数为<br><code>n = [(L - 20) / d]   // 向上取整</code><br>每片的片偏移量字段的取值为<br><code>Fi = d / 8 * (i - 1) , 1 &lt;= i &lt;= n</code><br>每片总长度字段为<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Li = &#123;</div><div class="line">    d + <span class="number">20</span> , <span class="number">1</span> &lt;= <span class="selector-tag">i</span> &lt; n</div><div class="line">    L - (n - <span class="number">1</span>)d , <span class="selector-tag">i</span> = n</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>特殊IP地址</strong> (ipv4)</p>
+<table>
+<thead>
+<tr>
+<th>NetID</th>
+<th>HostID</th>
+<th>作为IP 分组源地址</th>
+<th>作为IP 分组目的地址</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全0</td>
+<td>全0</td>
+<td>可以</td>
+<td>不可以</td>
+<td>在本网范围内表示本机, 在路由表中用于表示默认路由(相当于表示整个Internet网络)</td>
+</tr>
+<tr>
+<td>全0</td>
+<td>特定值</td>
+<td>不可以</td>
+<td>可以</td>
+<td>表示本网内某个特定主机</td>
+</tr>
+<tr>
+<td>全1</td>
+<td>全1</td>
+<td>不可以</td>
+<td>可以</td>
+<td>本网广播地址(路由器不转发)</td>
+</tr>
+<tr>
+<td>特定值</td>
+<td>全0</td>
+<td>不可以</td>
+<td>不可以</td>
+<td>网络地址, 表示一个网络</td>
+</tr>
+<tr>
+<td>特定值</td>
+<td>全1</td>
+<td>不可以</td>
+<td>可以</td>
+<td>直接广播地址, 对特定网络上所有主机进行广播</td>
+</tr>
+<tr>
+<td>127</td>
+<td>非全0 或非全1 的任何数</td>
+<td>可以</td>
+<td>可以</td>
+<td>用于本地软件环回测试, 称为环回测试</td>
+</tr>
+</tbody>
+</table>
+<p><strong>私有IP地址</strong> (ipv4)</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>NetIDs</th>
+<th>Blocks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>10</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B</td>
+<td>172.16 to 172.31</td>
+<td>16</td>
+</tr>
+<tr>
+<td>C</td>
+<td>192.168.0 to 192.168.255</td>
+<td>256</td>
+</tr>
+</tbody>
+</table>
+
       
     </div>
 
@@ -614,7 +701,7 @@ internet 互联网">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络5E"><span class="nav-number">1.</span> <span class="nav-text">计算机网络5E</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-number">1.1.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OSI参考模型"><span class="nav-number">1.2.</span> <span class="nav-text">OSI参考模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-IP-参考模型"><span class="nav-number">1.3.</span> <span class="nav-text">TCP/IP 参考模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设计目标"><span class="nav-number">1.3.1.</span> <span class="nav-text">设计目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型结构"><span class="nav-number">1.3.2.</span> <span class="nav-text">模型结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP-模型及协议"><span class="nav-number">1.3.3.</span> <span class="nav-text">TCP/IP 模型及协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#套接字编程实例-Internet-文件服务器"><span class="nav-number">1.4.</span> <span class="nav-text">套接字编程实例: Internet 文件服务器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络课程"><span class="nav-number">2.</span> <span class="nav-text">计算机网络课程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第二周-1-4计算机网络性能"><span class="nav-number">2.1.</span> <span class="nav-text">第二周-1.4计算机网络性能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#四种分组延迟"><span class="nav-number">2.1.1.</span> <span class="nav-text">四种分组延迟</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第5周-传输层-上"><span class="nav-number">2.2.</span> <span class="nav-text">第5周 传输层(上)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UDP-校验和-checksum"><span class="nav-number">2.2.1.</span> <span class="nav-text">UDP 校验和(checksum)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第6周-传输层-下"><span class="nav-number">2.3.</span> <span class="nav-text">第6周 传输层(下)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络5E"><span class="nav-number">1.</span> <span class="nav-text">计算机网络5E</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-number">1.1.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OSI参考模型"><span class="nav-number">1.2.</span> <span class="nav-text">OSI参考模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-IP-参考模型"><span class="nav-number">1.3.</span> <span class="nav-text">TCP/IP 参考模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设计目标"><span class="nav-number">1.3.1.</span> <span class="nav-text">设计目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型结构"><span class="nav-number">1.3.2.</span> <span class="nav-text">模型结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP-模型及协议"><span class="nav-number">1.3.3.</span> <span class="nav-text">TCP/IP 模型及协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#套接字编程实例-Internet-文件服务器"><span class="nav-number">1.4.</span> <span class="nav-text">套接字编程实例: Internet 文件服务器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络课程"><span class="nav-number">2.</span> <span class="nav-text">计算机网络课程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第二周-1-4计算机网络性能"><span class="nav-number">2.1.</span> <span class="nav-text">第二周-1.4计算机网络性能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#四种分组延迟"><span class="nav-number">2.1.1.</span> <span class="nav-text">四种分组延迟</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第5周-传输层-上"><span class="nav-number">2.2.</span> <span class="nav-text">第5周 传输层(上)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UDP-校验和-checksum"><span class="nav-number">2.2.1.</span> <span class="nav-text">UDP 校验和(checksum)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第6周-传输层-下"><span class="nav-number">2.3.</span> <span class="nav-text">第6周 传输层(下)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第7周-网络层-上"><span class="nav-number">2.4.</span> <span class="nav-text">第7周 网络层(上)</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
