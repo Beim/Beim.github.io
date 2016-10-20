@@ -112,7 +112,7 @@ UDP (User Datagram Protocol) 用户数据报协议
 Internet 因特网
 
 internet 互联网">
-<meta property="og:updated_time" content="2016-10-20T02:51:36.706Z">
+<meta property="og:updated_time" content="2016-10-20T03:36:44.410Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络-笔记">
 <meta name="twitter:description" content="计算机网络5E关键字
@@ -549,6 +549,9 @@ internet 互联网">
 </tr>
 </tbody>
 </table>
+<p><strong>子网掩码的应用</strong></p>
+<p>将IP分组的目的IP地址与子网掩码按位与运算, 提取子网地址<br>例如:目的地址: 172.32.1.112, 子网掩码: 255.255.254.0<br>172.32.1.112 =   10101100 00100000 00000001 01110000<br>255.255.254.0 =  11111111 11111111 11111110 00000000<br>与运算 = 10101100 00100000 00000000 00000000 = 172.32.0.0</p>
+<p>所以:<br>子网地址: 172.32.0.0 (子网掩码: 255.255.254.0)<br>地址范围: 172.32.0.0 ~ 172.32.1.255<br>可分配地址范围: 172.32.0.1 ~ 172.32.1.254<br>广播地址: 172.32.1.255</p>
 
       
     </div>
@@ -662,7 +665,7 @@ internet 互联网">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

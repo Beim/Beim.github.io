@@ -261,6 +261,150 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/20/note-Beej-Network-Programming/" itemprop="url">
+                  note-Beej-Network-Programming
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-20T14:17:08+08:00" content="2016-10-20">
+              2016-10-20
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/20/note-Beej-Network-Programming/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/20/note-Beej-Network-Programming/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><hr>
+<h1 id="What-is-a-socket"><a href="#What-is-a-socket" class="headerlink" title="What is a socket?"></a>What is a socket?</h1><p>“Stream Sockets” and “Datagram Sockets” , which may be referred to as <code>SOCK_STRAM</code> and <code>SOCK_DGRAM</code><br>Datagram sockets are sometimes called “connectionless sockets”. (Though they can be <code>connect()</code>‘d if you really want)</p>
+<hr>
+<h1 id="IP-Addresses-structs-and-Data-Munging-转换"><a href="#IP-Addresses-structs-and-Data-Munging-转换" class="headerlink" title="IP Addresses, structs, and Data Munging(转换)"></a>IP Addresses, structs, and Data Munging(转换)</h1><h2 id="ipv6"><a href="#ipv6" class="headerlink" title="ipv6"></a>ipv6</h2><p>ipv6, 128 bits,  Lots of times with lots of zeros in it, and can be compressed between two colons.<br>For instance:<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">2001</span>:<span class="number">0</span><span class="attribute">db8</span>:<span class="attribute">c9d2</span>:<span class="number">0012</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0051</span></div><div class="line"><span class="number">2001</span>:<span class="attribute">db8</span>:<span class="attribute">c9d2</span>:<span class="number">12</span>::<span class="number">51</span></div><div class="line"></div><div class="line"><span class="number">2001</span>:<span class="number">0</span><span class="attribute">db8</span>:<span class="attribute">ab00</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span></div><div class="line"><span class="number">2001</span>:<span class="attribute">db8</span>:<span class="attribute">ab00</span>::</div><div class="line"></div><div class="line"># It<span class="string">'s loopback address, It always means "this machine I'</span>m running on now"</div><div class="line"><span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0001</span></div><div class="line">::<span class="number">1</span></div><div class="line"></div><div class="line"># there's an ipv4-compatibility mode for ipv6 <span class="attribute">addresses</span></div><div class="line">::<span class="attribute">ffff</span>:<span class="number">192.0</span>.<span class="number">2.33</span></div></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="subnets"><a href="#subnets" class="headerlink" title="subnets"></a>subnets</h2><figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="number">192.0</span>.<span class="number">2.12</span> <span class="built_in">AND</span> <span class="number">255.255</span>.<span class="number">255.0</span></div><div class="line">=&gt;</div><div class="line"><span class="number">192.0</span>.<span class="number">2.0</span> (<span class="number">255.255</span>.<span class="number">255.0</span>)</div><div class="line"></div><div class="line"># <span class="built_in">or</span></div><div class="line"><span class="number">192.0</span>.<span class="number">2.12</span>/<span class="number">24</span></div><div class="line"></div><div class="line"># for ipv6</div><div class="line"><span class="symbol">2001:db8</span><span class="symbol">:</span><span class="symbol">:</span>/<span class="number">32</span></div><div class="line"><span class="built_in">or</span></div><div class="line"><span class="symbol">2001:db8</span><span class="symbol">:5413</span><span class="symbol">:4028</span><span class="symbol">:</span><span class="symbol">:9</span>db9/<span class="number">64</span></div></pre></td></tr></table></figure>
+<hr>
+<h2 id="Byte-Order"><a href="#Byte-Order" class="headerlink" title="Byte Order"></a>Byte Order</h2><p>Two byte orderings: Big-Endian, Little-Endian<br>If you want to represent thw two-byte hex number, say <code>b34f</code>, you’ll store it:<br>Big-Endian : b34f<br>Little-Endian: 4fb3<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">`Network Byte Order`</span> </div><div class="line">        =&gt; <span class="string">`Big-Endian Order`</span></div><div class="line"><span class="string">`Host Byte Order`</span></div><div class="line">        =&gt; <span class="string">`Little-Endian Order`</span> (Intel or Intel-compatible processor)</div><div class="line">        =&gt; <span class="string">`Big-Endian`</span></div></pre></td></tr></table></figure></p>
+<p>These function will do the magic conversion between <code>Network Byte Order</code> and <code>Host Byte Order</code></p>
+<ul>
+<li>htons()   host to network short (two bytes)</li>
+<li>htonl()   host to network long (four bytes)</li>
+<li>ntohs()   network to host short </li>
+<li>ntohl()   network to host long</li>
+</ul>
+<hr>
+<h2 id="struct"><a href="#struct" class="headerlink" title="struct"></a>struct</h2><p>socket descriptor =&gt; <strong>int</strong></p>
+<p><strong>struct addrinfo</strong> . It’s used to prep the socket address structures for subsequent use. It’s also used in host name lookups, and service name lookups.<br><figure class="highlight rust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">addrinfo</span></span> &#123;</div><div class="line">    <span class="keyword">int</span>              ai_flags;     <span class="comment">// AI_PASSIVE, AI_CANONNAME, etc.</span></div><div class="line">    <span class="keyword">int</span>              ai_family;    <span class="comment">// AF_INET, AF_INET6, AF_UNSPEC</span></div><div class="line">    <span class="keyword">int</span>              ai_socktype;  <span class="comment">// SOCK_STREAM, SOCK_DGRAM</span></div><div class="line">    <span class="keyword">int</span>              ai_protocol;  <span class="comment">// use 0 for "any"</span></div><div class="line">    size_t           ai_addrlen;   <span class="comment">// size of ai_addr in bytes</span></div><div class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">sockaddr</span></span> *ai_addr;      <span class="comment">// struct sockaddr_in or _in6</span></div><div class="line">    <span class="keyword">char</span>            *ai_canonname; <span class="comment">// full canonical hostname</span></div><div class="line"></div><div class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">addrinfo</span></span> *ai_next;      <span class="comment">// linked list, next node</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>You’ll load this struct up a bit, and then call getaddrinfo(). It’ll return a pointer to a new linked list of these structures filled out with all the goodies you need;</p>
+<p><strong>struct sockaddr</strong><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> sockaddr &#123;</div><div class="line">    <span class="keyword">unsigned</span> <span class="keyword">short</span>    sa_family;    <span class="comment">// address family, AF_xxx</span></div><div class="line">    <span class="keyword">char</span>              sa_data[<span class="number">14</span>];  <span class="comment">// 14 bytes of protocol address</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p><code>sa_family</code> can be a variety of things, but it’ll be <code>AF_INET</code>(ipv4) or <code>AF_INET6</code>(ipv6) in this document.<br><code>sa_data</code> contains a destination address and port number for the socket.<br>This is rather unwieldy since you don’t want to tediously pack the address in the <code>sa_data</code> by hand.<br>To deal with this, programmers created a parallel structure: <code>struct sockaddr_in</code>(‘in’ for ‘internet’) to be used with <code>ipv4</code></p>
+<blockquote>
+<p>And this is the <strong>important</strong> bit: a pointer to a <code>struct sockaddr_in</code> can be cast to a pointer to a <code>struct sockaddr</code> and vice-versa. So even though <code>connect()</code> wants a <code>struct sockaddr*</code>, you can still use a <code>struct sockaddr_in</code> and cast it at the last minute</p>
+</blockquote>
+<p><strong>struct sockaddr_in</strong><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// (IPv4 only--see struct sockaddr_in6 for IPv6)</span></div><div class="line"></div><div class="line"><span class="keyword">struct</span> sockaddr_in &#123;</div><div class="line">    <span class="keyword">short</span> <span class="keyword">int</span>          sin_family;  <span class="comment">// Address family, AF_INET</span></div><div class="line">    <span class="keyword">unsigned</span> <span class="keyword">short</span> <span class="keyword">int</span> sin_port;    <span class="comment">// Port number</span></div><div class="line">    <span class="keyword">struct</span> in_addr     sin_addr;    <span class="comment">// Internet address</span></div><div class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span>      sin_zero[<span class="number">8</span>]; <span class="comment">// Same size as struct sockaddr, It's included to pad the structure to the length of `struct sockaddr`</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p><code>sin_zero</code> shouled be set to all zeros with the function <strong>memset()</strong><br><code>sin_family</code> corresponds to <code>sa_family</code> in a <code>struct sockaddr</code> and should be set to <code>AF_INET</code><br><code>sin_port</code> must be in <em>Network Byte Order</em> (by using <strong>htons()</strong>)</p>
+<p><code>sin_addr</code> is a <code>struct in_addr</code><br><figure class="highlight thrift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// (IPv4 only--see struct in6_addr for IPv6)</span></div><div class="line"></div><div class="line"><span class="comment">// Internet address (a structure for historical reasons)</span></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">in_addr</span> </span>&#123;</div><div class="line">    uint32_t s_addr; <span class="comment">// that's a 32-bit int (4 bytes)</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>So if you have declared <code>ina</code> to be of type <code>struct sockaddr_in</code> then <code>ina.sin_addr.s_addr</code> references the 4-byte IP address(in Network Byte Order).</p>
+<p>What about ipv6, see <strong>sockaddr_in6</strong><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// (IPv6 only--see struct sockaddr_in and struct in_addr for IPv4)</span></div><div class="line"></div><div class="line"><span class="keyword">struct</span> sockaddr_in6 &#123;</div><div class="line">    <span class="keyword">u_int16_t</span>       sin6_family;   <span class="comment">// address family, AF_INET6</span></div><div class="line">    <span class="keyword">u_int16_t</span>       sin6_port;     <span class="comment">// port number, Network Byte Order</span></div><div class="line">    <span class="keyword">u_int32_t</span>       sin6_flowinfo; <span class="comment">// IPv6 flow information</span></div><div class="line">    <span class="keyword">struct</span> in6_addr sin6_addr;     <span class="comment">// IPv6 address</span></div><div class="line">    <span class="keyword">u_int32_t</span>       sin6_scope_id; <span class="comment">// Scope ID</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> in6_addr &#123;</div><div class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span>   s6_addr[<span class="number">16</span>];   <span class="comment">// IPv6 address</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p><strong>struct sockaddr_storage</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> sockaddr_storage &#123;</div><div class="line">    <span class="keyword">sa_family_t</span>  ss_family;     <span class="comment">// address family</span></div><div class="line"></div><div class="line">    <span class="comment">// all this is padding, implementation specific, ignore it:</span></div><div class="line">    <span class="keyword">char</span>      <span class="number">__</span>ss_pad1[<span class="number">_</span>SS_PAD1SIZE];</div><div class="line">    <span class="keyword">int64_t</span>   <span class="number">__</span>ss_align;</div><div class="line">    <span class="keyword">char</span>      <span class="number">__</span>ss_pad2[<span class="number">_</span>SS_PAD2SIZE];</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><code>struct sockaddr_storage</code> is designed to be large enough to hold both ipv4 and ipv6 structures. So you can pass this parallel structure to some calls and then cast it to the type you need;</p>
+<p>You can see the addrees family <code>ss_family</code> field - check this to see if it’s <code>AF_INET</code> or <code>AF_INET6</code>, Then you can cast it to a <code>struct sockaddr_in</code> or <code>struct sockaddr_in6</code> if you wanna.</p>
+<hr>
+<h2 id="IP-Addresses"><a href="#IP-Addresses" class="headerlink" title="IP Addresses"></a>IP Addresses</h2><p>if you want to convert 10.12.110.57 to sa.sin_addr<br>use <strong>inet_pton()</strong>, which converts IP address in numbers-and-dots notation into either a <code>struct in_addr</code> or <code>struct in6_addr</code> depending on whether you specify <code>AF_INET</code> or <code>AF_INET6</code>  (<code>pton</code> stands for presentation to network - you can call it printable to network.)<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> sockaddr_in sa; <span class="comment">// IPv4</span></div><div class="line"><span class="keyword">struct</span> sockaddr_in6 sa6; <span class="comment">// IPv6</span></div><div class="line"></div><div class="line">inet_pton(AF_INET, <span class="string">"10.12.110.57"</span>, &amp;(sa.sin_addr)); <span class="comment">// IPv4</span></div><div class="line">inet_pton(AF_INET6, <span class="string">"2001:db8:63b3:1::3490"</span>, &amp;(sa6.sin6_addr)); <span class="comment">// IPv6</span></div></pre></td></tr></table></figure></p>
+<p>(the old way of doing things used a function called <strong>inet_addr()</strong> or another function called <strong>inet_aton()</strong> these are now absolete and don’t work with ipv6)</p>
+<p>if you want to convert sa.sin_addr to 10.12.110.57<br>use <strong>init_ntop()</strong>(means network to presentation, or network to printable) , like this:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// IPv4:</span></div><div class="line"></div><div class="line"><span class="keyword">char</span> ip4[INET_ADDRSTRLEN];  <span class="comment">// space to hold the IPv4 string</span></div><div class="line"><span class="keyword">struct</span> sockaddr_in sa;      <span class="comment">// pretend this is loaded with something</span></div><div class="line"></div><div class="line">inet_ntop(AF_INET, &amp;(sa.sin_addr), ip4, INET_ADDRSTRLEN);</div><div class="line"></div><div class="line"><span class="built_in">printf</span>(<span class="string">"The IPv4 address is: %s\n"</span>, ip4);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// IPv6:</span></div><div class="line"></div><div class="line"><span class="keyword">char</span> ip6[INET6_ADDRSTRLEN]; <span class="comment">// space to hold the IPv6 string</span></div><div class="line"><span class="keyword">struct</span> sockaddr_in6 sa6;    <span class="comment">// pretend this is loaded with something</span></div><div class="line"></div><div class="line">inet_ntop(AF_INET6, &amp;(sa6.sin6_addr), ip6, INET6_ADDRSTRLEN);</div><div class="line"></div><div class="line"><span class="built_in">printf</span>(<span class="string">"The address is: %s\n"</span>, ip6);</div></pre></td></tr></table></figure></p>
+<p>When you call it, you will pass the address type (ipv4 or ipv6), the address, a pointer to a string to hold the result, and the maximum length of that string. (Two macros conveniently hold the size of the string : <code>INET_ADDRSTRLEN</code> and <code>INET6_ADDRSTRLEN</code>)</p>
+<p>(the old way of doing things: called <strong>inet_ntoa()</strong>, it’s also absolete and won’t work with ipv6)</p>
+<blockquote>
+<p>NOTE: These functions only work with numeric IP addresses - they won’t do any nameserver DNS lookup on a hostname, like ‘www.example.com’. You will use <strong>getaddrinfo()</strong> to do that.</p>
+</blockquote>
+<hr>
+<h2 id="Private-Or-Disconnected-Networks"><a href="#Private-Or-Disconnected-Networks" class="headerlink" title="Private (Or Disconnected ) Networks"></a>Private (Or Disconnected ) Networks</h2><p>ipv4: 10.x.x.x 192.168.x.x 172.y.x.x   x is 0-255  y is 16-31<br>ipv6: fsxx: (or maybe in the future fcXX:), as per <a href="http://tools.ietf.org/html/rfc4193" target="_blank" rel="external">RFC 4193</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/18/cpp-makefile体验/" itemprop="url">
                   cpp-makefile体验
                 </a>
@@ -1226,124 +1370,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/21/JS-正则表达式/" itemprop="url">
-                  JS-正则表达式
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-09-21T17:56:13+08:00" content="2016-09-21">
-              2016-09-21
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/21/JS-正则表达式/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/21/JS-正则表达式/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="RegExp-方法"><a href="#RegExp-方法" class="headerlink" title="RegExp 方法"></a>RegExp 方法</h2><ul>
-<li><p>RegExp.prototype.exec()</p>
-</li>
-<li><p>RegExp.prototype.test()</p>
-</li>
-<li><p>RegExp.prototype.toSource()</p>
-</li>
-<li><p>RegExp.prototype.toString()</p>
-</li>
-</ul>
-<h2 id="String-方法"><a href="#String-方法" class="headerlink" title="String 方法"></a>String 方法</h2><ul>
-<li><p>String.prototype.match()</p>
-</li>
-<li><p>String.prototype.replace()</p>
-</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/21/JS-正则表达式/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1389,7 +1415,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

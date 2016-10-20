@@ -1,0 +1,792 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="notes," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Intro
+What is a socket?“Stream Sockets” and “Datagram Sockets” , which may be referred to as SOCK_STRAM and SOCK_DGRAMDatagram sockets are sometimes called “connectionless sockets”. (Though they can b">
+<meta property="og:type" content="article">
+<meta property="og:title" content="note-Beej-Network-Programming">
+<meta property="og:url" content="https://beim.github.io/2016/10/20/note-Beej-Network-Programming/index.html">
+<meta property="og:site_name" content="北冥945">
+<meta property="og:description" content="Intro
+What is a socket?“Stream Sockets” and “Datagram Sockets” , which may be referred to as SOCK_STRAM and SOCK_DGRAMDatagram sockets are sometimes called “connectionless sockets”. (Though they can b">
+<meta property="og:updated_time" content="2016-10-20T09:24:35.355Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="note-Beej-Network-Programming">
+<meta name="twitter:description" content="Intro
+What is a socket?“Stream Sockets” and “Datagram Sockets” , which may be referred to as SOCK_STRAM and SOCK_DGRAMDatagram sockets are sometimes called “connectionless sockets”. (Though they can b">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://beim.github.io/2016/10/20/note-Beej-Network-Programming/"/>
+
+  <title> note-Beej-Network-Programming | 北冥945 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">北冥945</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                note-Beej-Network-Programming
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-20T14:17:08+08:00" content="2016-10-20">
+              2016-10-20
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/20/note-Beej-Network-Programming/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/20/note-Beej-Network-Programming/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><hr>
+<h1 id="What-is-a-socket"><a href="#What-is-a-socket" class="headerlink" title="What is a socket?"></a>What is a socket?</h1><p>“Stream Sockets” and “Datagram Sockets” , which may be referred to as <code>SOCK_STRAM</code> and <code>SOCK_DGRAM</code><br>Datagram sockets are sometimes called “connectionless sockets”. (Though they can be <code>connect()</code>‘d if you really want)</p>
+<hr>
+<h1 id="IP-Addresses-structs-and-Data-Munging-转换"><a href="#IP-Addresses-structs-and-Data-Munging-转换" class="headerlink" title="IP Addresses, structs, and Data Munging(转换)"></a>IP Addresses, structs, and Data Munging(转换)</h1><h2 id="ipv6"><a href="#ipv6" class="headerlink" title="ipv6"></a>ipv6</h2><p>ipv6, 128 bits,  Lots of times with lots of zeros in it, and can be compressed between two colons.<br>For instance:<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">2001</span>:<span class="number">0</span><span class="attribute">db8</span>:<span class="attribute">c9d2</span>:<span class="number">0012</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0051</span></div><div class="line"><span class="number">2001</span>:<span class="attribute">db8</span>:<span class="attribute">c9d2</span>:<span class="number">12</span>::<span class="number">51</span></div><div class="line"></div><div class="line"><span class="number">2001</span>:<span class="number">0</span><span class="attribute">db8</span>:<span class="attribute">ab00</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span></div><div class="line"><span class="number">2001</span>:<span class="attribute">db8</span>:<span class="attribute">ab00</span>::</div><div class="line"></div><div class="line"># It<span class="string">'s loopback address, It always means "this machine I'</span>m running on now"</div><div class="line"><span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0001</span></div><div class="line">::<span class="number">1</span></div><div class="line"></div><div class="line"># there's an ipv4-compatibility mode for ipv6 <span class="attribute">addresses</span></div><div class="line">::<span class="attribute">ffff</span>:<span class="number">192.0</span>.<span class="number">2.33</span></div></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="subnets"><a href="#subnets" class="headerlink" title="subnets"></a>subnets</h2><figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="number">192.0</span>.<span class="number">2.12</span> <span class="built_in">AND</span> <span class="number">255.255</span>.<span class="number">255.0</span></div><div class="line">=&gt;</div><div class="line"><span class="number">192.0</span>.<span class="number">2.0</span> (<span class="number">255.255</span>.<span class="number">255.0</span>)</div><div class="line"></div><div class="line"># <span class="built_in">or</span></div><div class="line"><span class="number">192.0</span>.<span class="number">2.12</span>/<span class="number">24</span></div><div class="line"></div><div class="line"># for ipv6</div><div class="line"><span class="symbol">2001:db8</span><span class="symbol">:</span><span class="symbol">:</span>/<span class="number">32</span></div><div class="line"><span class="built_in">or</span></div><div class="line"><span class="symbol">2001:db8</span><span class="symbol">:5413</span><span class="symbol">:4028</span><span class="symbol">:</span><span class="symbol">:9</span>db9/<span class="number">64</span></div></pre></td></tr></table></figure>
+<hr>
+<h2 id="Byte-Order"><a href="#Byte-Order" class="headerlink" title="Byte Order"></a>Byte Order</h2><p>Two byte orderings: Big-Endian, Little-Endian<br>If you want to represent thw two-byte hex number, say <code>b34f</code>, you’ll store it:<br>Big-Endian : b34f<br>Little-Endian: 4fb3<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">`Network Byte Order`</span> </div><div class="line">        =&gt; <span class="string">`Big-Endian Order`</span></div><div class="line"><span class="string">`Host Byte Order`</span></div><div class="line">        =&gt; <span class="string">`Little-Endian Order`</span> (Intel or Intel-compatible processor)</div><div class="line">        =&gt; <span class="string">`Big-Endian`</span></div></pre></td></tr></table></figure></p>
+<p>These function will do the magic conversion between <code>Network Byte Order</code> and <code>Host Byte Order</code></p>
+<ul>
+<li>htons()   host to network short (two bytes)</li>
+<li>htonl()   host to network long (four bytes)</li>
+<li>ntohs()   network to host short </li>
+<li>ntohl()   network to host long</li>
+</ul>
+<hr>
+<h2 id="struct"><a href="#struct" class="headerlink" title="struct"></a>struct</h2><p>socket descriptor =&gt; <strong>int</strong></p>
+<p><strong>struct addrinfo</strong> . It’s used to prep the socket address structures for subsequent use. It’s also used in host name lookups, and service name lookups.<br><figure class="highlight rust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">addrinfo</span></span> &#123;</div><div class="line">    <span class="keyword">int</span>              ai_flags;     <span class="comment">// AI_PASSIVE, AI_CANONNAME, etc.</span></div><div class="line">    <span class="keyword">int</span>              ai_family;    <span class="comment">// AF_INET, AF_INET6, AF_UNSPEC</span></div><div class="line">    <span class="keyword">int</span>              ai_socktype;  <span class="comment">// SOCK_STREAM, SOCK_DGRAM</span></div><div class="line">    <span class="keyword">int</span>              ai_protocol;  <span class="comment">// use 0 for "any"</span></div><div class="line">    size_t           ai_addrlen;   <span class="comment">// size of ai_addr in bytes</span></div><div class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">sockaddr</span></span> *ai_addr;      <span class="comment">// struct sockaddr_in or _in6</span></div><div class="line">    <span class="keyword">char</span>            *ai_canonname; <span class="comment">// full canonical hostname</span></div><div class="line"></div><div class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">addrinfo</span></span> *ai_next;      <span class="comment">// linked list, next node</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>You’ll load this struct up a bit, and then call getaddrinfo(). It’ll return a pointer to a new linked list of these structures filled out with all the goodies you need;</p>
+<p><strong>struct sockaddr</strong><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> sockaddr &#123;</div><div class="line">    <span class="keyword">unsigned</span> <span class="keyword">short</span>    sa_family;    <span class="comment">// address family, AF_xxx</span></div><div class="line">    <span class="keyword">char</span>              sa_data[<span class="number">14</span>];  <span class="comment">// 14 bytes of protocol address</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p><code>sa_family</code> can be a variety of things, but it’ll be <code>AF_INET</code>(ipv4) or <code>AF_INET6</code>(ipv6) in this document.<br><code>sa_data</code> contains a destination address and port number for the socket.<br>This is rather unwieldy since you don’t want to tediously pack the address in the <code>sa_data</code> by hand.<br>To deal with this, programmers created a parallel structure: <code>struct sockaddr_in</code>(‘in’ for ‘internet’) to be used with <code>ipv4</code></p>
+<blockquote>
+<p>And this is the <strong>important</strong> bit: a pointer to a <code>struct sockaddr_in</code> can be cast to a pointer to a <code>struct sockaddr</code> and vice-versa. So even though <code>connect()</code> wants a <code>struct sockaddr*</code>, you can still use a <code>struct sockaddr_in</code> and cast it at the last minute</p>
+</blockquote>
+<p><strong>struct sockaddr_in</strong><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// (IPv4 only--see struct sockaddr_in6 for IPv6)</span></div><div class="line"></div><div class="line"><span class="keyword">struct</span> sockaddr_in &#123;</div><div class="line">    <span class="keyword">short</span> <span class="keyword">int</span>          sin_family;  <span class="comment">// Address family, AF_INET</span></div><div class="line">    <span class="keyword">unsigned</span> <span class="keyword">short</span> <span class="keyword">int</span> sin_port;    <span class="comment">// Port number</span></div><div class="line">    <span class="keyword">struct</span> in_addr     sin_addr;    <span class="comment">// Internet address</span></div><div class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span>      sin_zero[<span class="number">8</span>]; <span class="comment">// Same size as struct sockaddr, It's included to pad the structure to the length of `struct sockaddr`</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p><code>sin_zero</code> shouled be set to all zeros with the function <strong>memset()</strong><br><code>sin_family</code> corresponds to <code>sa_family</code> in a <code>struct sockaddr</code> and should be set to <code>AF_INET</code><br><code>sin_port</code> must be in <em>Network Byte Order</em> (by using <strong>htons()</strong>)</p>
+<p><code>sin_addr</code> is a <code>struct in_addr</code><br><figure class="highlight thrift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// (IPv4 only--see struct in6_addr for IPv6)</span></div><div class="line"></div><div class="line"><span class="comment">// Internet address (a structure for historical reasons)</span></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">in_addr</span> </span>&#123;</div><div class="line">    uint32_t s_addr; <span class="comment">// that's a 32-bit int (4 bytes)</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>So if you have declared <code>ina</code> to be of type <code>struct sockaddr_in</code> then <code>ina.sin_addr.s_addr</code> references the 4-byte IP address(in Network Byte Order).</p>
+<p>What about ipv6, see <strong>sockaddr_in6</strong><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// (IPv6 only--see struct sockaddr_in and struct in_addr for IPv4)</span></div><div class="line"></div><div class="line"><span class="keyword">struct</span> sockaddr_in6 &#123;</div><div class="line">    <span class="keyword">u_int16_t</span>       sin6_family;   <span class="comment">// address family, AF_INET6</span></div><div class="line">    <span class="keyword">u_int16_t</span>       sin6_port;     <span class="comment">// port number, Network Byte Order</span></div><div class="line">    <span class="keyword">u_int32_t</span>       sin6_flowinfo; <span class="comment">// IPv6 flow information</span></div><div class="line">    <span class="keyword">struct</span> in6_addr sin6_addr;     <span class="comment">// IPv6 address</span></div><div class="line">    <span class="keyword">u_int32_t</span>       sin6_scope_id; <span class="comment">// Scope ID</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> in6_addr &#123;</div><div class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span>   s6_addr[<span class="number">16</span>];   <span class="comment">// IPv6 address</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p><strong>struct sockaddr_storage</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> sockaddr_storage &#123;</div><div class="line">    <span class="keyword">sa_family_t</span>  ss_family;     <span class="comment">// address family</span></div><div class="line"></div><div class="line">    <span class="comment">// all this is padding, implementation specific, ignore it:</span></div><div class="line">    <span class="keyword">char</span>      <span class="number">__</span>ss_pad1[<span class="number">_</span>SS_PAD1SIZE];</div><div class="line">    <span class="keyword">int64_t</span>   <span class="number">__</span>ss_align;</div><div class="line">    <span class="keyword">char</span>      <span class="number">__</span>ss_pad2[<span class="number">_</span>SS_PAD2SIZE];</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><code>struct sockaddr_storage</code> is designed to be large enough to hold both ipv4 and ipv6 structures. So you can pass this parallel structure to some calls and then cast it to the type you need;</p>
+<p>You can see the addrees family <code>ss_family</code> field - check this to see if it’s <code>AF_INET</code> or <code>AF_INET6</code>, Then you can cast it to a <code>struct sockaddr_in</code> or <code>struct sockaddr_in6</code> if you wanna.</p>
+<hr>
+<h2 id="IP-Addresses"><a href="#IP-Addresses" class="headerlink" title="IP Addresses"></a>IP Addresses</h2><p>if you want to convert 10.12.110.57 to sa.sin_addr<br>use <strong>inet_pton()</strong>, which converts IP address in numbers-and-dots notation into either a <code>struct in_addr</code> or <code>struct in6_addr</code> depending on whether you specify <code>AF_INET</code> or <code>AF_INET6</code>  (<code>pton</code> stands for presentation to network - you can call it printable to network.)<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> sockaddr_in sa; <span class="comment">// IPv4</span></div><div class="line"><span class="keyword">struct</span> sockaddr_in6 sa6; <span class="comment">// IPv6</span></div><div class="line"></div><div class="line">inet_pton(AF_INET, <span class="string">"10.12.110.57"</span>, &amp;(sa.sin_addr)); <span class="comment">// IPv4</span></div><div class="line">inet_pton(AF_INET6, <span class="string">"2001:db8:63b3:1::3490"</span>, &amp;(sa6.sin6_addr)); <span class="comment">// IPv6</span></div></pre></td></tr></table></figure></p>
+<p>(the old way of doing things used a function called <strong>inet_addr()</strong> or another function called <strong>inet_aton()</strong> these are now absolete and don’t work with ipv6)</p>
+<p>if you want to convert sa.sin_addr to 10.12.110.57<br>use <strong>init_ntop()</strong>(means network to presentation, or network to printable) , like this:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// IPv4:</span></div><div class="line"></div><div class="line"><span class="keyword">char</span> ip4[INET_ADDRSTRLEN];  <span class="comment">// space to hold the IPv4 string</span></div><div class="line"><span class="keyword">struct</span> sockaddr_in sa;      <span class="comment">// pretend this is loaded with something</span></div><div class="line"></div><div class="line">inet_ntop(AF_INET, &amp;(sa.sin_addr), ip4, INET_ADDRSTRLEN);</div><div class="line"></div><div class="line"><span class="built_in">printf</span>(<span class="string">"The IPv4 address is: %s\n"</span>, ip4);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// IPv6:</span></div><div class="line"></div><div class="line"><span class="keyword">char</span> ip6[INET6_ADDRSTRLEN]; <span class="comment">// space to hold the IPv6 string</span></div><div class="line"><span class="keyword">struct</span> sockaddr_in6 sa6;    <span class="comment">// pretend this is loaded with something</span></div><div class="line"></div><div class="line">inet_ntop(AF_INET6, &amp;(sa6.sin6_addr), ip6, INET6_ADDRSTRLEN);</div><div class="line"></div><div class="line"><span class="built_in">printf</span>(<span class="string">"The address is: %s\n"</span>, ip6);</div></pre></td></tr></table></figure></p>
+<p>When you call it, you will pass the address type (ipv4 or ipv6), the address, a pointer to a string to hold the result, and the maximum length of that string. (Two macros conveniently hold the size of the string : <code>INET_ADDRSTRLEN</code> and <code>INET6_ADDRSTRLEN</code>)</p>
+<p>(the old way of doing things: called <strong>inet_ntoa()</strong>, it’s also absolete and won’t work with ipv6)</p>
+<blockquote>
+<p>NOTE: These functions only work with numeric IP addresses - they won’t do any nameserver DNS lookup on a hostname, like ‘www.example.com’. You will use <strong>getaddrinfo()</strong> to do that.</p>
+</blockquote>
+<hr>
+<h2 id="Private-Or-Disconnected-Networks"><a href="#Private-Or-Disconnected-Networks" class="headerlink" title="Private (Or Disconnected ) Networks"></a>Private (Or Disconnected ) Networks</h2><p>ipv4: 10.x.x.x 192.168.x.x 172.y.x.x   x is 0-255  y is 16-31<br>ipv6: fsxx: (or maybe in the future fcXX:), as per <a href="http://tools.ietf.org/html/rfc4193" target="_blank" rel="external">RFC 4193</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/notes/" rel="tag">#notes</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/18/cpp-makefile体验/" rel="next" title="cpp-makefile体验">
+                <i class="fa fa-chevron-left"></i> cpp-makefile体验
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/20/note-Beej-Network-Programming/"
+           data-title="note-Beej-Network-Programming" data-url="https://beim.github.io/2016/10/20/note-Beej-Network-Programming/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/hand_zheng.jpg"
+               alt="Beim" />
+          <p class="site-author-name" itemprop="name">Beim</p>
+          <p class="site-description motion-element" itemprop="description">平常心，平常心。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Intro"><span class="nav-number">1.</span> <span class="nav-text">Intro</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#What-is-a-socket"><span class="nav-number">2.</span> <span class="nav-text">What is a socket?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IP-Addresses-structs-and-Data-Munging-转换"><span class="nav-number">3.</span> <span class="nav-text">IP Addresses, structs, and Data Munging(转换)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ipv6"><span class="nav-number">3.1.</span> <span class="nav-text">ipv6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#subnets"><span class="nav-number">3.2.</span> <span class="nav-text">subnets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Byte-Order"><span class="nav-number">3.3.</span> <span class="nav-text">Byte Order</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#struct"><span class="nav-number">3.4.</span> <span class="nav-text">struct</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IP-Addresses"><span class="nav-number">3.5.</span> <span class="nav-text">IP Addresses</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Private-Or-Disconnected-Networks"><span class="nav-number">3.6.</span> <span class="nav-text">Private (Or Disconnected ) Networks</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Beim</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"beim"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
