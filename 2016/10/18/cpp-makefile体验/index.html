@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -84,26 +84,23 @@
 
 
 
-<meta name="description" content="参考CSDN
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960~/usr/temp/test-makefile$ ldir1/  makefile  o/  test.cpp  test.hpp~/usr/temp/test-">
+<meta name="description" content="来自csdn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cpp-makefile体验">
 <meta property="og:url" content="https://beim.github.io/2016/10/18/cpp-makefile体验/index.html">
 <meta property="og:site_name" content="北冥945">
-<meta property="og:description" content="参考CSDN
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960~/usr/temp/test-makefile$ ldir1/  makefile  o/  test.cpp  test.hpp~/usr/temp/test-">
-<meta property="og:updated_time" content="2016-10-18T01:47:09.971Z">
+<meta property="og:description" content="来自csdn">
+<meta property="og:updated_time" content="2016-11-01T12:51:45.859Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cpp-makefile体验">
-<meta name="twitter:description" content="参考CSDN
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960~/usr/temp/test-makefile$ ldir1/  makefile  o/  test.cpp  test.hpp~/usr/temp/test-">
+<meta name="twitter:description" content="来自csdn">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -309,8 +306,10 @@
       
 
       
-        <p><a href="http://blog.csdn.net/hongkangwl/article/details/21328327" target="_blank" rel="external">参考CSDN</a></p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span></div><div class="line">dir1/  makefile  o/  <span class="keyword">test</span>.cpp  <span class="keyword">test</span>.hpp</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> <span class="keyword">test</span>.cpp</div><div class="line">#<span class="keyword">include</span> <span class="string">"test.hpp"</span></div><div class="line"></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">int main() &#123;</div><div class="line">    int x(3);</div><div class="line">    int <span class="built_in">y</span>(5);</div><div class="line">    int c;</div><div class="line">    c = calculate(x, y);</div><div class="line">    cout &lt;&lt; c &lt;&lt; endl;</div><div class="line">&#125;</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> <span class="keyword">test</span>.hpp</div><div class="line">#<span class="keyword">include</span> &lt;iostream&gt;</div><div class="line">#<span class="keyword">include</span> <span class="string">"./dir1/test1.hpp"</span></div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span> dir1</div><div class="line">test1.cpp  test1.hpp</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> dir1/test1.cpp</div><div class="line">#<span class="keyword">include</span> <span class="string">"test1.hpp"</span></div><div class="line"></div><div class="line">int calculate(int <span class="keyword">const</span>&amp; a, int <span class="keyword">const</span>&amp; b) &#123;</div><div class="line">    int c;</div><div class="line">    c = a + b;</div><div class="line">    <span class="keyword">return</span> c;</div><div class="line">&#125;</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> dir1/test1.hpp </div><div class="line">#<span class="keyword">include</span> &lt;iostream&gt;</div><div class="line"></div><div class="line">int calculate(int <span class="keyword">const</span>&amp; a, int <span class="keyword">const</span>&amp; b);</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span> o/</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> makefile</div><div class="line">mycplusplus: <span class="keyword">test</span>.o test1.o</div><div class="line">	<span class="keyword">g</span>++ o/test1.o o/<span class="keyword">test</span>.o -o mycplusplus</div><div class="line">test1.o : dir1/test1.cpp</div><div class="line">	<span class="keyword">g</span>++ -c dir1/test1.cpp -o o/test1.o</div><div class="line"><span class="keyword">test</span>.o : <span class="keyword">test</span>.cpp</div><div class="line">	<span class="keyword">g</span>++ -c <span class="keyword">test</span>.cpp -o o/<span class="keyword">test</span>.o</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ make</div><div class="line"><span class="keyword">g</span>++ -c <span class="keyword">test</span>.cpp -o o/<span class="keyword">test</span>.o</div><div class="line"><span class="keyword">g</span>++ -c dir1/test1.cpp -o o/test1.o</div><div class="line"><span class="keyword">g</span>++ o/test1.o o/<span class="keyword">test</span>.o -o mycplusplus</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span></div><div class="line">dir1/  makefile  mycplusplus*  o/  <span class="keyword">test</span>.cpp  <span class="keyword">test</span>.hpp</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ ./mycplusplus </div><div class="line">8</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span> o/</div><div class="line">test1.o  <span class="keyword">test</span>.o</div></pre></td></tr></table></figure>
+        <p>来自csdn</p>
+<a id="more"></a>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span></div><div class="line">dir1/  makefile  o/  <span class="keyword">test</span>.cpp  <span class="keyword">test</span>.hpp</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> <span class="keyword">test</span>.cpp</div><div class="line">#<span class="keyword">include</span> <span class="string">"test.hpp"</span></div><div class="line"></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">int main() &#123;</div><div class="line">    int x(3);</div><div class="line">    int <span class="built_in">y</span>(5);</div><div class="line">    int c;</div><div class="line">    c = calculate(x, y);</div><div class="line">    cout &lt;&lt; c &lt;&lt; endl;</div><div class="line">&#125;</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> <span class="keyword">test</span>.hpp</div><div class="line">#<span class="keyword">include</span> &lt;iostream&gt;</div><div class="line">#<span class="keyword">include</span> <span class="string">"./dir1/test1.hpp"</span></div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span> dir1</div><div class="line">test1.cpp  test1.hpp</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> dir1/test1.cpp</div><div class="line">#<span class="keyword">include</span> <span class="string">"test1.hpp"</span></div><div class="line"></div><div class="line">int calculate(int <span class="keyword">const</span>&amp; a, int <span class="keyword">const</span>&amp; b) &#123;</div><div class="line">    int c;</div><div class="line">    c = a + b;</div><div class="line">    <span class="keyword">return</span> c;</div><div class="line">&#125;</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> dir1/test1.hpp </div><div class="line">#<span class="keyword">include</span> &lt;iostream&gt;</div><div class="line"></div><div class="line">int calculate(int <span class="keyword">const</span>&amp; a, int <span class="keyword">const</span>&amp; b);</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span> o/</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> makefile</div><div class="line">mycplusplus: <span class="keyword">test</span>.o test1.o</div><div class="line">	<span class="keyword">g</span>++ o/test1.o o/<span class="keyword">test</span>.o -o mycplusplus</div><div class="line">test1.o : dir1/test1.cpp</div><div class="line">	<span class="keyword">g</span>++ -c dir1/test1.cpp -o o/test1.o</div><div class="line"><span class="keyword">test</span>.o : <span class="keyword">test</span>.cpp</div><div class="line">	<span class="keyword">g</span>++ -c <span class="keyword">test</span>.cpp -o o/<span class="keyword">test</span>.o</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ make</div><div class="line"><span class="keyword">g</span>++ -c <span class="keyword">test</span>.cpp -o o/<span class="keyword">test</span>.o</div><div class="line"><span class="keyword">g</span>++ -c dir1/test1.cpp -o o/test1.o</div><div class="line"><span class="keyword">g</span>++ o/test1.o o/<span class="keyword">test</span>.o -o mycplusplus</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span></div><div class="line">dir1/  makefile  mycplusplus*  o/  <span class="keyword">test</span>.cpp  <span class="keyword">test</span>.hpp</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ ./mycplusplus </div><div class="line">8</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span> o/</div><div class="line">test1.o  <span class="keyword">test</span>.o</div></pre></td></tr></table></figure>
+<p><a href="http://blog.csdn.net/hongkangwl/article/details/21328327" target="_blank" rel="external">参考CSDN</a></p>
 
       
     </div>
@@ -496,7 +495,7 @@
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
@@ -561,6 +560,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
