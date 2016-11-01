@@ -1414,13 +1414,1631 @@ ubuntu 系统下/etc/resolv.conf 配置文件, 用来设置DNS 服务器的IP �
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/29/JS-char-code/" itemprop="url">
+                  JS-char-code
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-29T13:56:24+08:00" content="2016-09-29">
+              2016-09-29
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/29/JS-char-code/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/29/JS-char-code/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/29/JS-char-code/" class="leancloud_visitors" data-flag-title="JS-char-code">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="String-fromCharCode"><a href="#String-fromCharCode" class="headerlink" title="String.fromCharCode()"></a>String.fromCharCode()</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode">MDN</a></p>
+<p>String.fromCharCode() 静态方法根据制定的Unicode 编码中的序号值来返回一个字符串<br>由于fromCharCode 是String 的静态方法, 所以应该这样使用: String.fromCharCode(), 而不是作为你创建的String 对象的方法.</p>
+<blockquote>
+<p>String.fromCharCode(num1, …, numN)</p>
+</blockquote>
+<p>参数:<br>num1, …, numN<br>    一组序列数字,表示Unicode 值.</p>
+<p><code>String.fromCharCode(65, 66, 67) // &quot;ABC&quot;</code></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/29/JS-char-code/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/21/JS-正则表达式/" itemprop="url">
+                  JS-正则表达式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-21T17:56:13+08:00" content="2016-09-21">
+              2016-09-21
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/21/JS-正则表达式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/21/JS-正则表达式/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/21/JS-正则表达式/" class="leancloud_visitors" data-flag-title="JS-正则表达式">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="RegExp-方法"><a href="#RegExp-方法" class="headerlink" title="RegExp 方法"></a>RegExp 方法</h2><ul>
+<li><p>RegExp.prototype.exec()</p>
+</li>
+<li><p>RegExp.prototype.test()</p>
+</li>
+<li><p>RegExp.prototype.toSource()</p>
+</li>
+<li><p>RegExp.prototype.toString()</p>
+</li>
+</ul>
+<h2 id="String-方法"><a href="#String-方法" class="headerlink" title="String 方法"></a>String 方法</h2><ul>
+<li><p>String.prototype.match()</p>
+</li>
+<li><p>String.prototype.replace()</p>
+</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/21/JS-正则表达式/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/14/编译原理2E-笔记/" itemprop="url">
+                  编译原理2E-笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-14T22:20:59+08:00" content="2016-09-14">
+              2016-09-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/14/编译原理2E-笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/14/编译原理2E-笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/14/编译原理2E-笔记/" class="leancloud_visitors" data-flag-title="编译原理2E-笔记">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="http://ob4a6y748.bkt.clouddn.com/compilers.jpg" alt="compiler"><br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/14/编译原理2E-笔记/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/11/计算机网络5E-笔记/" itemprop="url">
+                  计算机网络-笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-11T00:35:25+08:00" content="2016-09-11">
+              2016-09-11
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/11/计算机网络5E-笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/11/计算机网络5E-笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/11/计算机网络5E-笔记/" class="leancloud_visitors" data-flag-title="计算机网络-笔记">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1><p><strong>tcp报文中的 Timestamp option</strong><br><a href="http://stackoverflow.com/questions/2524511/what-is-the-meaning-of-the-tsv-and-tser-fields-in-an-ethereal-dump">Timestamp value 和 Timestamp echo 作用</a></p>
+<hr>
+<h1 id="计算机网络5E"><a href="#计算机网络5E" class="headerlink" title="计算机网络5E"></a>计算机网络5E</h1><h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><ul>
+<li><p><strong>IP</strong> (Internet Protocol) 因特网协议</p>
+</li>
+<li><p><strong>ICMP</strong> (Internet Control Message Protocol) 因特网控制报文协议</p>
+</li>
+<li><p><strong>TCP</strong> (Transport Control Protocol) 传输控制协议</p>
+</li>
+<li><p><strong>UDP</strong> (User Datagram Protocol) 用户数据报协议</p>
+</li>
+<li><p><strong>Internet</strong> 因特网</p>
+</li>
+<li><p><strong>internet</strong> 互联网</p>
+</li>
+<li><p><strong>NAP</strong> (Network Access Point) 网络接入点</p>
+</li>
+<li><p><strong>DSL</strong> (Digital Subscriber Line) 数字用户线</p>
+</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/11/计算机网络5E-笔记/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/06/JS-超长数字的坑/" itemprop="url">
+                  JS 超长数字的坑
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-06T17:31:17+08:00" content="2016-09-06">
+              2016-09-06
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/06/JS-超长数字的坑/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/06/JS-超长数字的坑/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/06/JS-超长数字的坑/" class="leancloud_visitors" data-flag-title="JS 超长数字的坑">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          12345678910const num1 = 1234567890123456const num2 = 12345678901234567const str1 = '1234567890123456'const str2 = `12345678901234567`console.log(num1 === str1) // falseconsole.log(`$&#123;num1&#125;` === str1) // trueconsole.log(num2 === str2) // falseconsole.log(`$&#123;num2&#125;` === str2) // fal
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/06/JS-超长数字的坑/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/25/2011-午夜巴黎/" itemprop="url">
+                  2011-午夜巴黎
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-25T20:06:11+08:00" content="2016-08-25">
+              2016-08-25
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/25/2011-午夜巴黎/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/25/2011-午夜巴黎/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/25/2011-午夜巴黎/" class="leancloud_visitors" data-flag-title="2011-午夜巴黎">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="http://img21.mtime.cn/pi/2011/04/04/161411.40182295_1000X1000.jpg" alt="1"></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/25/2011-午夜巴黎/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/08/React-Native-Startup/" itemprop="url">
+                  React-Native Startup
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-08T21:27:58+08:00" content="2016-08-08">
+              2016-08-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/08/React-Native-Startup/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/08/React-Native-Startup/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/08/React-Native-Startup/" class="leancloud_visitors" data-flag-title="React-Native Startup">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><h3 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h3><p>先<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">下载</a>JDK<br>解压到/usr/lib/jvm 下</p>
+<p>修改环境变量<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$ vi ~<span class="regexp">/.bashrc</div><div class="line"></div><div class="line"># 在末尾增加以下内容</div><div class="line">export JAVA_HOME=/usr</span><span class="regexp">/lib/jvm</span><span class="regexp">/jdk1.8.0_101</div><div class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</span></div><div class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/<span class="class"><span class="keyword">lib</span>:$&#123;<span class="title">JRE_HOME</span>&#125;/<span class="title">lib</span></span></div><div class="line">export PATH=$&#123;JAVA_HOME&#125;/<span class="symbol">bin:</span>$PATH</div><div class="line"></div><div class="line"><span class="comment"># 使环境变量生效</span></div><div class="line">$ source ~<span class="regexp">/.bashrc</span></div></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/08/React-Native-Startup/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/05/ubuntu-启动初始化/" itemprop="url">
+                  ubuntu 启动初始化
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-05T10:28:29+08:00" content="2016-08-05">
+              2016-08-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/05/ubuntu-启动初始化/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/05/ubuntu-启动初始化/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/05/ubuntu-启动初始化/" class="leancloud_visitors" data-flag-title="ubuntu 启动初始化">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="首先看这几个目录："><a href="#首先看这几个目录：" class="headerlink" title="首先看这几个目录："></a>首先看这几个目录：</h2><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># sysvinit 的文件</span></div><div class="line">/etc/init.d <span class="comment"># sysvinit 启动服务的脚本</span></div><div class="line">/etc/rc$&#123;runlevel&#125;.d <span class="comment"># 指向sysvinit 目录下脚本的软链接，系统通过区分不同目录来加载对应运行级别的程序。</span></div><div class="line"></div><div class="line"><span class="comment"># upstart 的文件</span></div><div class="line">/etc/init <span class="comment"># upstart 的启动配置文件。</span></div><div class="line"></div><div class="line"><span class="comment"># systemd 的文件</span></div><div class="line">/etc/systemd/system <span class="comment"># 指向/lib/systemd/system 的软链接，可以通过增删软链接来启用或者禁用启动服务。</span></div><div class="line">/<span class="class"><span class="keyword">lib</span>/<span class="title">systemd</span>/<span class="title">system</span> <span class="comment"># systemd 的启动配置文件。</span></span></div></pre></td></tr></table></figure>
+<p>ubuntu 16采用的是systemd 初始化系统<br>ubuntu 14采用的是upstart 初始化系统<br>sysvinit 则是更早版本的启动服务<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/05/ubuntu-启动初始化/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/05/git命令之-git-tag/" itemprop="url">
+                  git命令之 git tag
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-05T10:13:10+08:00" content="2016-08-05">
+              2016-08-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/05/git命令之-git-tag/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/05/git命令之-git-tag/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/05/git命令之-git-tag/" class="leancloud_visitors" data-flag-title="git命令之 git tag">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="列出标签"><a href="#列出标签" class="headerlink" title="列出标签"></a>列出标签</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">tag</span></div></pre></td></tr></table></figure>
+<h2 id="打标签"><a href="#打标签" class="headerlink" title="打标签"></a>打标签</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#创建轻量标签</span></div><div class="line">git <span class="keyword">tag</span> <span class="title">v0</span>.<span class="number">1.2</span></div><div class="line"></div><div class="line"><span class="comment">#创建附注标签</span></div><div class="line">git <span class="keyword">tag</span> <span class="title">-a</span> v0.<span class="number">1.2</span> -m '<span class="number">0.1</span>.<span class="number">2</span>版本'</div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/05/git命令之-git-tag/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/05/Node-js的内部结构/" itemprop="url">
+                  Node.js的内部结构
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-05T10:01:34+08:00" content="2016-08-05">
+              2016-08-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/05/Node-js的内部结构/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/05/Node-js的内部结构/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/05/Node-js的内部结构/" class="leancloud_visitors" data-flag-title="Node.js的内部结构">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>首先, 关于JavaScript的一些话……</p>
+<p>Jeff Atwood, Stack Overflow的联合创始人之一, 曾经在它的博客Coding Horror中写道:</p>
+<p>any application that can be written in JavaScript, will eventually be written in JavaScript</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/05/Node-js的内部结构/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/05/跨域请求之JSONP与CORS/" itemprop="url">
+                  跨域请求之JSONP与CORS
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-05T09:41:37+08:00" content="2016-08-05">
+              2016-08-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/05/跨域请求之JSONP与CORS/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/05/跨域请求之JSONP与CORS/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/05/跨域请求之JSONP与CORS/" class="leancloud_visitors" data-flag-title="跨域请求之JSONP与CORS">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>在使用wikipedia的API的时候，直接发送ajax请求得到以下信息：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">XMLHttpRequest cannot <span class="keyword">load</span> https://en.wikipedia.org/w/api.php?<span class="keyword">action</span>=<span class="keyword">query</span>&amp;<span class="keyword">format</span>=<span class="keyword">json</span>&amp;<span class="keyword">list</span>=<span class="keyword">search</span>&amp;srsearch=<span class="number">1.</span> Response <span class="keyword">to</span> preflight request doesn’t pass <span class="keyword">access</span> control <span class="keyword">check</span>: <span class="keyword">No</span> ‘<span class="keyword">Access</span>-Control-<span class="keyword">Allow</span>-Origin’ header <span class="keyword">is</span> <span class="keyword">present</span> <span class="keyword">on</span> the requested resource. Origin ‘<span class="keyword">http</span>://s.codepen.io’ <span class="keyword">is</span> therefore <span class="keyword">not</span> allowed access.</div></pre></td></tr></table></figure>
+<p>这是由于XMLHttpRequest对象受限于<a href="https://en.wikipedia.org/wiki/Same-origin_policy">同源策略(same origin-policy)</a>。这个策略使得页面只能从同一个源(origin)获取数据。源是由协议(protocol)，主机(host)，端口号(port number)决定的。例如<code>https://www.sitepoint.com/jsonp-examples/</code> 的源就是<code>https, www.sitepoint.com</code>, <code>80</code>。</p>
+<p>同源策略是一个安全机制。它避免了脚本从你的域读取数据并发送到别的服务器上。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/05/跨域请求之JSONP与CORS/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/05/js中的类Class/" itemprop="url">
+                  js中的类Class
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-05T09:33:11+08:00" content="2016-08-05">
+              2016-08-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/05/js中的类Class/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/05/js中的类Class/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/05/js中的类Class/" class="leancloud_visitors" data-flag-title="js中的类Class">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="构造函数法"><a href="#构造函数法" class="headerlink" title="构造函数法"></a>构造函数法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cat</span>(<span class="params">like</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> nickName = <span class="string">'myNickName'</span></div><div class="line">    <span class="keyword">this</span>.callNickName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> nickName;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">this</span>.name = <span class="string">'myName'</span></div><div class="line">    <span class="keyword">this</span>.like = like</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> cat1 = <span class="keyword">new</span> Cat(<span class="string">'dog'</span>)</div><div class="line"><span class="built_in">console</span>.log(cat1.name) <span class="comment">// myName</span></div><div class="line"><span class="built_in">console</span>.log(cat1.nickName) <span class="comment">// undefined</span></div><div class="line"><span class="built_in">console</span>.log(cat1.callNickName()) <span class="comment">// myNickName</span></div><div class="line"><span class="built_in">console</span>.log(cat1.like) <span class="comment">// dog</span></div><div class="line"><span class="comment">// 属性和方法也可以定义在function对象的prototype对象上</span></div><div class="line">Cat.prototype.makeSound = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'miao'</span>)</div><div class="line">&#125;</div><div class="line">cat1.makeSound() <span class="comment">// miao</span></div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/05/js中的类Class/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/05/测试框架AVA/" itemprop="url">
+                  测试框架AVA
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-05T09:06:00+08:00" content="2016-08-05">
+              2016-08-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/05/测试框架AVA/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/05/测试框架AVA/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/05/测试框架AVA/" class="leancloud_visitors" data-flag-title="测试框架AVA">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="/images/ceshiheader.png" alt="ava"></p>
+<blockquote>
+<p>面向未来的测试运行器</p>
+</blockquote>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/05/测试框架AVA/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/01/2016-日常/" itemprop="url">
+                  2016_日常
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-01T20:46:08+08:00" content="2016-08-01">
+              2016-08-01
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/01/2016-日常/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/01/2016-日常/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/01/2016-日常/" class="leancloud_visitors" data-flag-title="2016_日常">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="/images/house.jpg" alt="header"><br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/01/2016-日常/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
 
 
           </div>
