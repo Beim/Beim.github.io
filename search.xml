@@ -4,6 +4,14 @@
   
     
     <entry>
+      <title><![CDATA[修改next主题]]></title>
+      <url>https://beim.github.io/2016/11/02/%E4%BF%AE%E6%94%B9next%E4%B8%BB%E9%A2%98/</url>
+      <content type="html"><![CDATA[<h1 id="自定义css"><a href="#自定义css" class="headerlink" title="自定义css"></a>自定义css</h1><p>下面目录是为自定义css 文件准备<br>    themes/next/source/css/_custom/</p>
+<h1 id="自定义js"><a href="#自定义js" class="headerlink" title="自定义js"></a>自定义js</h1><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">$ <span class="keyword">cd</span> themes/<span class="keyword">next</span>/layout/_scripts</div><div class="line"></div><div class="line">$ <span class="built_in">mkdir</span> myscript</div><div class="line"></div><div class="line">$ touch myscript/myscript.swig</div><div class="line"></div><div class="line">$ <span class="keyword">vi</span> myscript/myscript.swig</div><div class="line">添加  &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"/js/src/beim/test.js"</span>&gt;&lt;/script&gt;</div><div class="line"></div><div class="line">$ <span class="keyword">vi</span> themes/<span class="keyword">next</span>/layout/_layout.swig</div><div class="line">添加 &#123;% include <span class="string">'_scripts/myscript/myscript.swig'</span> %&#125;</div><div class="line"></div><div class="line">$ <span class="keyword">cd</span> themes/<span class="keyword">next</span>/<span class="keyword">source</span>/js/src</div><div class="line"></div><div class="line">$ makir beim</div><div class="line"></div><div class="line">$ touch beim/test.js</div><div class="line"></div><div class="line">$ <span class="keyword">vi</span> beim/test.js</div><div class="line">添加 console.<span class="built_in">log</span>(<span class="string">'HELO'</span>)</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[服务学概论-笔记]]></title>
       <url>https://beim.github.io/2016/11/02/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E6%A6%82%E8%AE%BA-%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>什么是现代服务业</p>
