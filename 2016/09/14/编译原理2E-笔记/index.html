@@ -89,7 +89,7 @@
 <meta property="og:url" content="https://beim.github.io/2016/09/14/编译原理2E-笔记/index.html">
 <meta property="og:site_name" content="北冥945">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/compilers.jpg">
-<meta property="og:updated_time" content="2016-10-10T11:30:49.918Z">
+<meta property="og:updated_time" content="2016-11-02T04:02:34.712Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编译原理2E-笔记">
 <meta name="twitter:image" content="http://ob4a6y748.bkt.clouddn.com/compilers.jpg">
@@ -366,6 +366,15 @@
 <p>输出: 如果w 在L(G) 中, 则输出w 的自底向上语法分析过程中的归约步骤; 否则给出一个错误指示.</p>
 <p>文法:<br><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="number">1</span>) E -&gt; E + <span class="literal">T</span>      (<span class="number">4</span>) <span class="literal">T</span> -&gt; <span class="literal">F</span></div><div class="line">(<span class="number">2</span>) E -&gt; <span class="literal">T</span>          (<span class="number">5</span>) <span class="literal">F</span> -&gt; (E)</div><div class="line">(<span class="number">3</span>) <span class="literal">T</span> -&gt; <span class="literal">T</span> * <span class="literal">F</span>      (<span class="number">6</span>) <span class="literal">F</span> -&gt; id</div></pre></td></tr></table></figure></p>
 <p>LR 语法分析程序<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">令a 为w$ 的第一个符号</div><div class="line"><span class="keyword">while</span><span class="comment">(1)</span> &#123;</div><div class="line">    s = 栈顶的状态</div><div class="line">    <span class="keyword">if</span> <span class="comment">(ACTION[s, a] == 移入t)</span> &#123;</div><div class="line">        将t 压入栈中;</div><div class="line">        令a 为下一个输入符号</div><div class="line">    &#125; else <span class="keyword">if</span> <span class="comment">(ACTION[s, a] == 归约 A -&gt; β)</span> &#123;</div><div class="line">        从栈中弹出|β| 个符号;</div><div class="line">        t = 栈顶的状态</div><div class="line">        将<span class="keyword">GOTO</span>[t, A] 压入栈中</div><div class="line">        输出产生式A -&gt; β</div><div class="line">    &#125; else <span class="keyword">if</span> <span class="comment">(ACTION[s, a] = 接受)</span> &#123;</div><div class="line">        break; <span class="comment">/* 语法分析完成 */</span></div><div class="line">    &#125; else &#123;</div><div class="line">        调用错误恢复例程</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h2><p>声明语句的翻译</p>
+<p>赋值语句的翻译</p>
+<p>控制语句的翻译</p>
+<p>回填</p>
+<p>switch 语句的翻译</p>
+<p>过程调用语句的翻译</p>
+<h2 id="存储分配"><a href="#存储分配" class="headerlink" title="存储分配"></a>存储分配</h2><h3 id="静态存储分配-顺序分配法-层次分配法"><a href="#静态存储分配-顺序分配法-层次分配法" class="headerlink" title="静态存储分配(顺序分配法)(层次分配法)"></a>静态存储分配(顺序分配法)(层次分配法)</h3><h3 id="栈式存储分配"><a href="#栈式存储分配" class="headerlink" title="栈式存储分配"></a>栈式存储分配</h3><p>活动树<br>设计活动记录</p>
+<p>调用序列<br>返回序列</p>
+<p>变长数据</p>
 
       
     </div>
@@ -479,7 +488,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -518,7 +527,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#练习"><span class="nav-number">1.</span> <span class="nav-text">练习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章词法分析"><span class="nav-number">1.1.</span> <span class="nav-text">第三章词法分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章语法分析"><span class="nav-number">1.2.</span> <span class="nav-text">第四章语法分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#记录"><span class="nav-number">2.</span> <span class="nav-text">记录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#LR语法分析算法-算法4-44-p159"><span class="nav-number">2.1.</span> <span class="nav-text">LR语法分析算法(算法4.44 p159)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#练习"><span class="nav-number">1.</span> <span class="nav-text">练习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章词法分析"><span class="nav-number">1.1.</span> <span class="nav-text">第三章词法分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章语法分析"><span class="nav-number">1.2.</span> <span class="nav-text">第四章语法分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#记录"><span class="nav-number">2.</span> <span class="nav-text">记录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#LR语法分析算法-算法4-44-p159"><span class="nav-number">2.1.</span> <span class="nav-text">LR语法分析算法(算法4.44 p159)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#翻译"><span class="nav-number">2.2.</span> <span class="nav-text">翻译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储分配"><span class="nav-number">2.3.</span> <span class="nav-text">存储分配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态存储分配-顺序分配法-层次分配法"><span class="nav-number">2.3.1.</span> <span class="nav-text">静态存储分配(顺序分配法)(层次分配法)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈式存储分配"><span class="nav-number">2.3.2.</span> <span class="nav-text">栈式存储分配</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>

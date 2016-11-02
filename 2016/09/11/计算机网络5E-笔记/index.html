@@ -108,7 +108,7 @@ ICMP (Internet Control Message Protocol) 因特网控制报文协议
 TCP (Transport Control Protocol) 传输控制协议
 
 UDP">
-<meta property="og:updated_time" content="2016-11-01T14:34:09.148Z">
+<meta property="og:updated_time" content="2016-11-02T01:45:21.796Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络-笔记">
 <meta name="twitter:description" content="0tcp报文中的 Timestamp optionTimestamp value 和 Timestamp echo 作用
@@ -582,6 +582,25 @@ UDP">
 <li>网络探寻</li>
 </ul>
 <p><strong>链路状态路由算法</strong></p>
+<h2 id="链路层"><a href="#链路层" class="headerlink" title="链路层"></a>链路层</h2><h3 id="Multiple-access-links-protocols"><a href="#Multiple-access-links-protocols" class="headerlink" title="Multiple access links , protocols"></a>Multiple access links , protocols</h3><p>two types of links</p>
+<ul>
+<li>point-to-point</li>
+<li>broadcast(shared wire or medium)</li>
+</ul>
+<p>multiple access protocol</p>
+<ul>
+<li>distributed algorithm that determines how nodes share channel.</li>
+</ul>
+<p><strong>MAC protocols: taxonomy</strong></p>
+<ul>
+<li><p><strong>channel partitioning</strong><br>TDMA: time division multiple access<br>FDMA: frequency division multiple access</p>
+</li>
+<li><p><strong>random access</strong><br><strong>Slotted ALOHA</strong> (只能在某个时期开始时发, 如果两个节点冲突, 则下次两个节点都以概率p发送, 必须满足时钟同步, 节点必须能够检测到冲突, 效率0.36)<br><strong>Pure(unslotted) ALOHA</strong> (不分时期, 能直接发送, 效率比slotted Aloha更低, 0.18)<br><strong>CSMA</strong>(carrier sense multiple access)(listen before transmit, 也可能冲突)<br><strong>CSMA/CD</strong>(collision detection)(发送数据过程中检测冲突)(Ethernet CSMA/CD algorithm)<br>Lmin / R = 2 <em> S / V<br>800bit / 1Gbps = 2 </em> 80m / 200000Kmps</p>
+</li>
+<li><p><strong>taking turns</strong><br><strong>polling</strong> (master node invites slave nodes to transmit in turn)<br><strong>token passing</strong> (control token passed from one node to next sequentially)</p>
+</li>
+</ul>
+<h3 id="Lan"><a href="#Lan" class="headerlink" title="Lan"></a>Lan</h3><p><strong>MAC address and ARP</strong></p>
 
       
     </div>
@@ -695,7 +714,7 @@ UDP">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -734,7 +753,7 @@ UDP">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0"><span class="nav-number">1.</span> <span class="nav-text">0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络5E"><span class="nav-number">2.</span> <span class="nav-text">计算机网络5E</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-number">2.1.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报文格式"><span class="nav-number">2.2.</span> <span class="nav-text">报文格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OSI参考模型"><span class="nav-number">2.3.</span> <span class="nav-text">OSI参考模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-IP-参考模型"><span class="nav-number">2.4.</span> <span class="nav-text">TCP/IP 参考模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设计目标"><span class="nav-number">2.4.1.</span> <span class="nav-text">设计目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型结构"><span class="nav-number">2.4.2.</span> <span class="nav-text">模型结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP-模型及协议"><span class="nav-number">2.4.3.</span> <span class="nav-text">TCP/IP 模型及协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#套接字编程实例-Internet-文件服务器"><span class="nav-number">2.5.</span> <span class="nav-text">套接字编程实例: Internet 文件服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路由算法"><span class="nav-number">2.6.</span> <span class="nav-text">路由算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络课程"><span class="nav-number">3.</span> <span class="nav-text">计算机网络课程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第二周-1-4计算机网络性能"><span class="nav-number">3.1.</span> <span class="nav-text">第二周-1.4计算机网络性能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#四种分组延迟"><span class="nav-number">3.1.1.</span> <span class="nav-text">四种分组延迟</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第5周-传输层-上"><span class="nav-number">3.2.</span> <span class="nav-text">第5周 传输层(上)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UDP-校验和-checksum"><span class="nav-number">3.2.1.</span> <span class="nav-text">UDP 校验和(checksum)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第6周-传输层-下"><span class="nav-number">3.3.</span> <span class="nav-text">第6周 传输层(下)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第7周-网络层-上"><span class="nav-number">3.4.</span> <span class="nav-text">第7周 网络层(上)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第8周-网络层-下"><span class="nav-number">3.5.</span> <span class="nav-text">第8周 网络层(下)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0"><span class="nav-number">1.</span> <span class="nav-text">0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络5E"><span class="nav-number">2.</span> <span class="nav-text">计算机网络5E</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-number">2.1.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报文格式"><span class="nav-number">2.2.</span> <span class="nav-text">报文格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OSI参考模型"><span class="nav-number">2.3.</span> <span class="nav-text">OSI参考模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-IP-参考模型"><span class="nav-number">2.4.</span> <span class="nav-text">TCP/IP 参考模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设计目标"><span class="nav-number">2.4.1.</span> <span class="nav-text">设计目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型结构"><span class="nav-number">2.4.2.</span> <span class="nav-text">模型结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP-模型及协议"><span class="nav-number">2.4.3.</span> <span class="nav-text">TCP/IP 模型及协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#套接字编程实例-Internet-文件服务器"><span class="nav-number">2.5.</span> <span class="nav-text">套接字编程实例: Internet 文件服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路由算法"><span class="nav-number">2.6.</span> <span class="nav-text">路由算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络课程"><span class="nav-number">3.</span> <span class="nav-text">计算机网络课程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第二周-1-4计算机网络性能"><span class="nav-number">3.1.</span> <span class="nav-text">第二周-1.4计算机网络性能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#四种分组延迟"><span class="nav-number">3.1.1.</span> <span class="nav-text">四种分组延迟</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第5周-传输层-上"><span class="nav-number">3.2.</span> <span class="nav-text">第5周 传输层(上)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UDP-校验和-checksum"><span class="nav-number">3.2.1.</span> <span class="nav-text">UDP 校验和(checksum)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第6周-传输层-下"><span class="nav-number">3.3.</span> <span class="nav-text">第6周 传输层(下)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第7周-网络层-上"><span class="nav-number">3.4.</span> <span class="nav-text">第7周 网络层(上)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第8周-网络层-下"><span class="nav-number">3.5.</span> <span class="nav-text">第8周 网络层(下)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链路层"><span class="nav-number">3.6.</span> <span class="nav-text">链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Multiple-access-links-protocols"><span class="nav-number">3.6.1.</span> <span class="nav-text">Multiple access links , protocols</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lan"><span class="nav-number">3.6.2.</span> <span class="nav-text">Lan</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>

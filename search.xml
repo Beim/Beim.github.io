@@ -4,6 +4,65 @@
   
     
     <entry>
+      <title><![CDATA[服务学概论-笔记]]></title>
+      <url>https://beim.github.io/2016/11/02/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E6%A6%82%E8%AE%BA-%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>什么是现代服务业</p>
+<ul>
+<li>基础服务 (通信服务和信息服务)</li>
+<li>生产服务 (制造服务, 产品服务, 物流, 金融等)</li>
+<li>生活服务 (医疗\保健, 教育, 旅游, 住宿)</li>
+<li>公共服务 (政府的公共管理服务, 基础教育, 公共卫生)</li>
+</ul>
+<hr>
+<h2 id="现代服务业的发展趋势"><a href="#现代服务业的发展趋势" class="headerlink" title="现代服务业的发展趋势"></a>现代服务业的发展趋势</h2><ul>
+<li><p>服务外包 (将非核心的业务外包出去)</p>
+</li>
+<li><p>服务聚合 (将分散的,相互独立的服务整合在一起, 形成新的服务, 创造新的服务价值.)(例如: 百度地图, 优酷, 淘宝, 百度)<br><strong>BIRIS 模式</strong>(Bilateral Resource Integrated Service)<br>一种基于第三方的双边顾客资源整合的服务聚合创新模式</p>
+</li>
+<li><p>服务虚拟化, 万物皆服务(EaaS)(将实体服务变为虚拟服务, 例如: 云计算)</p>
+<blockquote>
+<p>遗存系统(legacy system)<br>适配器(接口)<br>Human as a Service</p>
+</blockquote>
+</li>
+<li><p>社会化, 位置化移动化(<strong>SOLOMO</strong>, Social, Local, Mobile, 社交 + 位置化/本地化 + 移动)(例如: 微信, 支付宝, 微博)<br>SoLoMo + 娱乐 =&gt; 改写社交<br>SoLoMo + O2O =&gt; 改写零售</p>
+</li>
+</ul>
+<hr>
+<h2 id="服务案例"><a href="#服务案例" class="headerlink" title="服务案例"></a>服务案例</h2><p><strong>案例: 物流服务</strong><br>第一方物流/第二方物流(产商, 客户)<br>第三方物流(顺丰, 申通)<br>第四方物流(菜鸟物流)</p>
+<p><strong>案例: 航空售票服务</strong><br>机票直销<br>机票代售点<br>第三方代理商(携程: 客户-航空公司)<br>第四方代理商(去哪儿: 客户-第三方/代售点)</p>
+<blockquote>
+<p>中航信</p>
+</blockquote>
+<p><strong>案例: 呼叫中心服务</strong><br>专家:有高技能的人守在电话旁(1970)<br>工具: 接线员无需高技能, 使用FAQ手册(1980)<br>市场: 低成本外包(在印度建立呼叫中心)(2000)<br>Automate(2010)</p>
+<p><strong>案例: 商品零售服务</strong><br>小卖店<br>百货商店<br>连锁店<br>大型连锁超市</p>
+<p><strong>案例: 在线信息共享服务</strong><br>论坛<br>BBS<br>博客<br>微博<br>微信</p>
+<p><strong>服务外包企业案例: 印度Bangalore 的服务外包</strong><br>基础操作的外包服务<br>中断技能型的外包服务(人力资源, 财务外包)<br>高端智力型外包服务(研发设计, 数据挖掘)</p>
+<p><strong>企业服务案例: IBM的IT服务管理</strong><br>从销售大型服务器, 硬件设备, 软件产品的IT厂商<br>转变为<br>全球最大的IT服务提供商</p>
+<p><strong>服务聚合企业案例: 携程网</strong><br>机票<br>车票<br>酒店<br>门票</p>
+<p><strong>服务聚合企业案例: COSCO(中国远洋物流有限公司)</strong> (中国最大的第三方物流企业)</p>
+<blockquote>
+<p>海运物流</p>
+</blockquote>
+<p><strong>EaaS企业案例: 亚马逊</strong><br>从用户书评中挖掘信息<br>开放API, 允许处理用户,收藏列表和购物车, 允许对亚马逊产品目录主要产品的访问, 其他公司或者个人的应用系统可以直接调用Amazon API<br>云基础设施服务, Amazon EC2, S3, SQS</p>
+<p><strong>EaaS企业案例: Rolls-Royce的 TotalCare</strong><br>卖产品-&gt; 卖服务</p>
+<p><strong>EaaS企业案例: 健康医疗保健服务</strong><br>监控 - 评估 - 规划 - 治疗</p>
+<p><strong>SoLoMo企业案例: SNS社交网络服务</strong><br>人人网<br>微信<br>知乎</p>
+<p><strong>SoLoMo企业案例: 基于位置的服务LBS</strong><br><a href="http://baike.baidu.com/item/LBS/1742" target="_blank" rel="external">LBS</a><br>Foursquare 街旁 在哪等待</p>
+<p><strong>SoLoMo企业案例: 情境感知的服务</strong><br>通过传感器采集服务对象的情境信息<br>根据情境信息判断对象的状态, 提供响应的服务</p>
+<p><strong>SoLoMo企业案例: 面向云服务交付的移动应用</strong><br>典型代表: 云手机(阿里, 华为), 用友移动mERP</p>
+<p><strong>SoLoMo企业案例: LBS+购物信息推送</strong><br>美团, 大众点评</p>
+<p><strong>SoLoMo企业案例: 地铁虚拟货架</strong></p>
+<p><strong>SoLoMo企业案例: SNS+电子商务服务</strong><br>微商</p>
+<h2 id="服务的概念-特征与分类"><a href="#服务的概念-特征与分类" class="headerlink" title="服务的概念, 特征与分类"></a>服务的概念, 特征与分类</h2><h3 id="服务概念"><a href="#服务概念" class="headerlink" title="服务概念"></a>服务概念</h3><p>Philip Kotler: 服务是一方向另一方提供的任意活动或好处. 它是不可触知的, 不形成所有权问题, 其生产可能与物质产品有关, 也可能无关.</p>
+<p>ISO 9004-2: 服务是为满足客户需要, 供方与顾客接触的活动和供方内部活动所产生的结果</p>
+<p>其他: 服务是供应商与客户协同工作以转换某对象(如商品, 信息)的<strong>状态</strong>, 这些客户具有某种隶属关系.</p>
+<p>其他: 服务是一种客户直接参与其中作为合作生产者的时间<strong>易逝性</strong>的无形体验.<br>(水杯是产品, 水杯可供人喝水是服务)</p>
+<p>服务: 一种促进顾客发生”改变” 的过程, 这种”改变” 包括物理的和无形的占有物的状态改善</p>
+<p>“IT使能业务服务” 常用服务运作模型和计费模式来刻画.</p>
+<h3 id="服务的分类模式"><a href="#服务的分类模式" class="headerlink" title="服务的分类模式"></a>服务的分类模式</h3><h3 id="服务与产品的区别"><a href="#服务与产品的区别" class="headerlink" title="服务与产品的区别"></a>服务与产品的区别</h3><h3 id="软件服务-software-services"><a href="#软件服务-software-services" class="headerlink" title="软件服务(software services)"></a>软件服务(software services)</h3>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[红城堡-渡边淳一]]></title>
       <url>https://beim.github.io/2016/11/01/%E7%BA%A2%E5%9F%8E%E5%A0%A1-%E6%B8%A1%E8%BE%B9%E6%B7%B3%E4%B8%80/</url>
       <content type="html"><![CDATA[<p><img src="https://img3.doubanio.com/lpic/s28069096.jpg" alt="hcb"></p>
@@ -744,6 +803,15 @@
 <p>输出: 如果w 在L(G) 中, 则输出w 的自底向上语法分析过程中的归约步骤; 否则给出一个错误指示.</p>
 <p>文法:<br><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="number">1</span>) E -&gt; E + <span class="literal">T</span>      (<span class="number">4</span>) <span class="literal">T</span> -&gt; <span class="literal">F</span></div><div class="line">(<span class="number">2</span>) E -&gt; <span class="literal">T</span>          (<span class="number">5</span>) <span class="literal">F</span> -&gt; (E)</div><div class="line">(<span class="number">3</span>) <span class="literal">T</span> -&gt; <span class="literal">T</span> * <span class="literal">F</span>      (<span class="number">6</span>) <span class="literal">F</span> -&gt; id</div></pre></td></tr></table></figure></p>
 <p>LR 语法分析程序<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">令a 为w$ 的第一个符号</div><div class="line"><span class="keyword">while</span><span class="comment">(1)</span> &#123;</div><div class="line">    s = 栈顶的状态</div><div class="line">    <span class="keyword">if</span> <span class="comment">(ACTION[s, a] == 移入t)</span> &#123;</div><div class="line">        将t 压入栈中;</div><div class="line">        令a 为下一个输入符号</div><div class="line">    &#125; else <span class="keyword">if</span> <span class="comment">(ACTION[s, a] == 归约 A -&gt; β)</span> &#123;</div><div class="line">        从栈中弹出|β| 个符号;</div><div class="line">        t = 栈顶的状态</div><div class="line">        将<span class="keyword">GOTO</span>[t, A] 压入栈中</div><div class="line">        输出产生式A -&gt; β</div><div class="line">    &#125; else <span class="keyword">if</span> <span class="comment">(ACTION[s, a] = 接受)</span> &#123;</div><div class="line">        break; <span class="comment">/* 语法分析完成 */</span></div><div class="line">    &#125; else &#123;</div><div class="line">        调用错误恢复例程</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h2><p>声明语句的翻译</p>
+<p>赋值语句的翻译</p>
+<p>控制语句的翻译</p>
+<p>回填</p>
+<p>switch 语句的翻译</p>
+<p>过程调用语句的翻译</p>
+<h2 id="存储分配"><a href="#存储分配" class="headerlink" title="存储分配"></a>存储分配</h2><h3 id="静态存储分配-顺序分配法-层次分配法"><a href="#静态存储分配-顺序分配法-层次分配法" class="headerlink" title="静态存储分配(顺序分配法)(层次分配法)"></a>静态存储分配(顺序分配法)(层次分配法)</h3><h3 id="栈式存储分配"><a href="#栈式存储分配" class="headerlink" title="栈式存储分配"></a>栈式存储分配</h3><p>活动树<br>设计活动记录</p>
+<p>调用序列<br>返回序列</p>
+<p>变长数据</p>
 ]]></content>
     </entry>
     
@@ -990,6 +1058,25 @@
 <li>网络探寻</li>
 </ul>
 <p><strong>链路状态路由算法</strong></p>
+<h2 id="链路层"><a href="#链路层" class="headerlink" title="链路层"></a>链路层</h2><h3 id="Multiple-access-links-protocols"><a href="#Multiple-access-links-protocols" class="headerlink" title="Multiple access links , protocols"></a>Multiple access links , protocols</h3><p>two types of links</p>
+<ul>
+<li>point-to-point</li>
+<li>broadcast(shared wire or medium)</li>
+</ul>
+<p>multiple access protocol</p>
+<ul>
+<li>distributed algorithm that determines how nodes share channel.</li>
+</ul>
+<p><strong>MAC protocols: taxonomy</strong></p>
+<ul>
+<li><p><strong>channel partitioning</strong><br>TDMA: time division multiple access<br>FDMA: frequency division multiple access</p>
+</li>
+<li><p><strong>random access</strong><br><strong>Slotted ALOHA</strong> (只能在某个时期开始时发, 如果两个节点冲突, 则下次两个节点都以概率p发送, 必须满足时钟同步, 节点必须能够检测到冲突, 效率0.36)<br><strong>Pure(unslotted) ALOHA</strong> (不分时期, 能直接发送, 效率比slotted Aloha更低, 0.18)<br><strong>CSMA</strong>(carrier sense multiple access)(listen before transmit, 也可能冲突)<br><strong>CSMA/CD</strong>(collision detection)(发送数据过程中检测冲突)(Ethernet CSMA/CD algorithm)<br>Lmin / R = 2 <em> S / V<br>800bit / 1Gbps = 2 </em> 80m / 200000Kmps</p>
+</li>
+<li><p><strong>taking turns</strong><br><strong>polling</strong> (master node invites slave nodes to transmit in turn)<br><strong>token passing</strong> (control token passed from one node to next sequentially)</p>
+</li>
+</ul>
+<h3 id="Lan"><a href="#Lan" class="headerlink" title="Lan"></a>Lan</h3><p><strong>MAC address and ARP</strong></p>
 ]]></content>
     </entry>
     
