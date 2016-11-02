@@ -817,7 +817,7 @@
     
     <entry>
       <title><![CDATA[计算机网络-笔记]]></title>
-      <url>https://beim.github.io/2016/09/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C5E-%E7%AC%94%E8%AE%B0/</url>
+      <url>https://beim.github.io/2016/09/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1><p><strong>tcp报文中的 Timestamp option</strong><br><a href="http://stackoverflow.com/questions/2524511/what-is-the-meaning-of-the-tsv-and-tser-fields-in-an-ethereal-dump" target="_blank" rel="external">Timestamp value 和 Timestamp echo 作用</a></p>
 <hr>
 <h1 id="计算机网络5E"><a href="#计算机网络5E" class="headerlink" title="计算机网络5E"></a>计算机网络5E</h1><h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><ul>
@@ -910,7 +910,10 @@
 <h2 id="路由算法"><a href="#路由算法" class="headerlink" title="路由算法"></a>路由算法</h2><p><strong>最短路径算法</strong></p>
 <p><strong>泛洪算法</strong><br>对多数情况是不适用的, 但是还有某些重要用途.<br>如广播和无线网络.</p>
 <p><strong>距离矢量算法</strong><br>无穷计算问题</p>
-<p><strong>链路状态路由</strong></p>
+<p><strong>链路状态路由</strong><br>被广泛应用与实际网络中</p>
+<p><strong>层次路由</strong></p>
+<p><strong>广播路由</strong><br>逆向路径转发</p>
+<p><strong>组播路由</strong></p>
 <hr>
 <h1 id="计算机网络课程"><a href="#计算机网络课程" class="headerlink" title="计算机网络课程"></a>计算机网络课程</h1><h2 id="第二周-1-4计算机网络性能"><a href="#第二周-1-4计算机网络性能" class="headerlink" title="第二周-1.4计算机网络性能"></a>第二周-1.4计算机网络性能</h2><p><strong>速率</strong>即数据率(data rate) 或称数据传输率或比特率(bit rate)<br>单位 b/s(或bps), kb/s, Mb/s, Gb/s<br>k = 10^3, M = 10^ 6, G = 10^9<br>速率往往是指<strong>额定速率</strong>或<strong>标称速率</strong></p>
 <p><strong>带宽</strong>(bandwidth) 是指信号具有的频带宽度，即最高频率与最低频率之差，单位是赫兹(Hz)<br>网络中的<strong>带宽</strong>是数字型号所能传送的<strong>最高数据率</strong>, 单位 b/s(bps)<br>常用的带宽单位:<br>kb/s(10^3 b/s), Mb/s, Gb/s, Tb/s</p>
