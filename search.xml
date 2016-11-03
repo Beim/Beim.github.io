@@ -864,6 +864,8 @@
 <hr>
 <h2 id="报文格式"><a href="#报文格式" class="headerlink" title="报文格式"></a>报文格式</h2><p><strong>ICMP</strong></p>
 <p>Type(1) Code(1) Checksum(2)<br>(这4 个字节取决于ICMP 报文的类型)<br>(ICMP 的数据部分, (长度取决于类型))</p>
+<p><strong>Ethernet frame</strong></p>
+<p>preamble(8) des-address(6) source-address(6) type(2) data(payload)(46-1500) CRC(4)</p>
 <hr>
 <h2 id="OSI参考模型"><a href="#OSI参考模型" class="headerlink" title="OSI参考模型"></a>OSI参考模型</h2><ul>
 <li><p><strong>物理层(physical layer)</strong> 关注在一条通信信道上传输原始比特。</p>
@@ -1082,13 +1084,79 @@
 <ul>
 <li><p><strong>channel partitioning</strong><br>TDMA: time division multiple access<br>FDMA: frequency division multiple access</p>
 </li>
-<li><p><strong>random access</strong><br><strong>Slotted ALOHA</strong> (只能在某个时期开始时发, 如果两个节点冲突, 则下次两个节点都以概率p发送, 必须满足时钟同步, 节点必须能够检测到冲突, 效率0.36)<br><strong>Pure(unslotted) ALOHA</strong> (不分时期, 能直接发送, 效率比slotted Aloha更低, 0.18)<br><strong>CSMA</strong>(carrier sense multiple access)(listen before transmit, 也可能冲突)<br><strong>CSMA/CD</strong>(collision detection)(发送数据过程中检测冲突)(Ethernet CSMA/CD algorithm)<br>Lmin / R = 2 <em> S / V<br>800bit / 1Gbps = 2 </em> 80m / 200000Kmps</p>
+<li><p><strong>random access</strong><br><strong>Slotted ALOHA</strong> (只能在某个时期开始时发, 如果两个节点冲突, 则下次两个节点都以概率p发送, 必须满足时钟同步, 节点必须能够检测到冲突, 效率0.37)<br><strong>Pure(unslotted) ALOHA</strong> (不分时期, 能直接发送, 效率比slotted Aloha更低, 0.18)<br><strong>CSMA</strong>(carrier sense multiple access)(listen before transmit, 也可能冲突)<br><strong>CSMA/CD</strong>(collision detection)(发送数据过程中检测冲突)(Ethernet CSMA/CD algorithm)<br>Lmin / R = 2 <em> S / V<br>800bit / 1Gbps = 2 </em> 80m / 200000Kmps</p>
 </li>
 <li><p><strong>taking turns</strong><br><strong>polling</strong> (master node invites slave nodes to transmit in turn)<br><strong>token passing</strong> (control token passed from one node to next sequentially)</p>
 </li>
 </ul>
 <h3 id="Lan"><a href="#Lan" class="headerlink" title="Lan"></a>Lan</h3><p><strong>MAC address and ARP</strong></p>
-]]></content>
+<h4 id="Ethernet"><a href="#Ethernet" class="headerlink" title="Ethernet"></a>Ethernet</h4><p><strong>bus</strong> (all nodes in same collision domain)</p>
+<p><strong>star</strong> (each ‘spoke’ runs a Ethernet protocol (nodes do not collid with each other))</p>
+<p><strong>Ethernet fram structure</strong></p>
+<h4 id="switches-交换机"><a href="#switches-交换机" class="headerlink" title="switches(交换机)"></a>switches(交换机)</h4><p>存储, 转发以太网帧</p>
+<p>识别帧中的MAC 地址, 选择性地转发</p>
+<p>Ethernet protocol used on each incoming link, but no collisions; full duplex (each link is its own collision domain)</p>
+<p><strong>switch table</strong> (each entry: MAC address of host, interface to reach host, time stamp)</p>
+<p><strong>switch: self-learning</strong> </p>
+<p>网络层路由器设备隔离广播域, 广播的范围为一个IP子网</p>
+<p><strong>交换机 vs 路由器</strong><br>都有存储转发<br>路由器: 网络层, routing algorithms, IP addresses<br>交换机: 数据链路层 , learn forwarding table using flooding, learning, MAC addresses</p>
+<p><strong>summary comparison</strong></p>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>hubs</th>
+<th>switches</th>
+<th>bridges</th>
+<th>routers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>layer</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>traffic isolation</td>
+<td>no</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes </td>
+</tr>
+<tr>
+<td>storm isolation</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>plug and play</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>optimal routing</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>cut through</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="VLAN"><a href="#VLAN" class="headerlink" title="VLAN"></a>VLAN</h4>]]></content>
     </entry>
     
     <entry>
