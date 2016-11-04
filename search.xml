@@ -7,7 +7,9 @@
       <title><![CDATA[JS-for-in遍历和prototype]]></title>
       <url>https://beim.github.io/2016/11/04/JS-for-in%E9%81%8D%E5%8E%86%E5%92%8Cprototype/</url>
       <content type="html"><![CDATA[<pre><code>for (let i in arr) 
-</code></pre><p>会将原型链上面的属性也一一遍历<br>所以在这时候修改 <code>Array.prototype</code><br>如<br>    Array.prototype.top = () =&gt; {…}<br>则i会遍历到top属性</p>
+</code></pre><p>会将原型链上面的属性也一一遍历<br>所以在这时候修改 <code>Array.prototype</code><br>如</p>
+<pre><code>Array.prototype.top = () =&gt; {...}
+</code></pre><p>则i会遍历到top属性</p>
 <p>= = 被这个略坑了一把</p>
 <p>以后要注意不要扩展内置类型的原型, 或者for in 遍历时使用hasOwnProperty 进行筛选</p>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties" target="_blank" rel="external">MDN-属性的可枚举性和所有权</a></p>
@@ -19,19 +21,15 @@
       <url>https://beim.github.io/2016/11/04/%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2-%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<p>考勤 30%<br>实习作业 70%</p>
 <h1 id="文献类型"><a href="#文献类型" class="headerlink" title="文献类型"></a>文献类型</h1><ul>
-<li><p>科技图书</p>
-</li>
-<li><p>科技期刊</p>
-</li>
-<li><p>会议文献</p>
-</li>
-<li><p>科技报告</p>
-</li>
-<li><p>学位论文</p>
-</li>
+<li>科技图书</li>
+<li>科技期刊</li>
+<li>会议文献</li>
+<li>科技报告</li>
+<li>学位论文</li>
 </ul>
 <h1 id="信息检索技术"><a href="#信息检索技术" class="headerlink" title="信息检索技术"></a>信息检索技术</h1><p>分类检索语言</p>
 <p>布尔逻辑检索 (AND OR NOT)<br>截词检索<br>位置检索 (W, nW, N, nN, S, F)<br>字段限定检索 (后缀方式, 前缀方式)</p>
+<p>信息检索的常用方法与步骤</p>
 ]]></content>
     </entry>
     
