@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Movie," />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -88,18 +88,28 @@
 
 
 
+<meta name="description" content="for (let i in arr) 
+会将原型链上面的属性也一一遍历所以在这时候修改 Array.prototype如    Array.prototype.top = () =&amp;gt; {…}则i会遍历到top属性
+= = 被这个略坑了一把
+以后要注意不要扩展内置类型的原型, 或者for in 遍历时使用hasOwnProperty 进行筛选
+MDN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2011-午夜巴黎">
-<meta property="og:url" content="https://beim.github.io/2016/08/25/2011-午夜巴黎/index.html">
+<meta property="og:title" content="JS-for-in遍历和prototype">
+<meta property="og:url" content="https://beim.github.io/2016/11/04/JS-for-in遍历和prototype/index.html">
 <meta property="og:site_name" content="北冥945">
-<meta property="og:image" content="http://img21.mtime.cn/pi/2011/04/04/161411.40182295_1000X1000.jpg">
-<meta property="og:image" content="http://img21.mtime.cn/pi/2011/06/03/141830.39636076_1000X1000.jpg">
-<meta property="og:image" content="http://img21.mtime.cn/pi/2011/04/04/161416.77653536_1000X1000.jpg">
-<meta property="og:image" content="http://img21.mtime.cn/pi/2011/04/04/161416.35864935_1000X1000.jpg">
-<meta property="og:updated_time" content="2016-08-25T13:02:22.662Z">
+<meta property="og:description" content="for (let i in arr) 
+会将原型链上面的属性也一一遍历所以在这时候修改 Array.prototype如    Array.prototype.top = () =&amp;gt; {…}则i会遍历到top属性
+= = 被这个略坑了一把
+以后要注意不要扩展内置类型的原型, 或者for in 遍历时使用hasOwnProperty 进行筛选
+MDN">
+<meta property="og:updated_time" content="2016-11-04T06:47:45.667Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2011-午夜巴黎">
-<meta name="twitter:image" content="http://img21.mtime.cn/pi/2011/04/04/161411.40182295_1000X1000.jpg">
+<meta name="twitter:title" content="JS-for-in遍历和prototype">
+<meta name="twitter:description" content="for (let i in arr) 
+会将原型链上面的属性也一一遍历所以在这时候修改 Array.prototype如    Array.prototype.top = () =&amp;gt; {…}则i会遍历到top属性
+= = 被这个略坑了一把
+以后要注意不要扩展内置类型的原型, 或者for in 遍历时使用hasOwnProperty 进行筛选
+MDN">
 
 
 
@@ -120,11 +130,11 @@
 
 
 
-  <link rel="canonical" href="https://beim.github.io/2016/08/25/2011-午夜巴黎/"/>
+  <link rel="canonical" href="https://beim.github.io/2016/11/04/JS-for-in遍历和prototype/"/>
 
   <script type="text/javascript" src="/js/src/beim/test.js"></script>
 
-  <title> 2011-午夜巴黎 | 北冥945 </title>
+  <title> JS-for-in遍历和prototype | 北冥945 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -267,7 +277,7 @@
             
             
               
-                2011-午夜巴黎
+                JS-for-in遍历和prototype
               
             
           </h1>
@@ -279,8 +289,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-08-25T20:06:11+08:00" content="2016-08-25">
-              2016-08-25
+            <time itemprop="dateCreated" datetime="2016-11-04T14:27:57+08:00" content="2016-11-04">
+              2016-11-04
             </time>
           </span>
 
@@ -290,8 +300,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/25/2011-午夜巴黎/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/25/2011-午夜巴黎/" itemprop="commentsCount"></span>
+                <a href="/2016/11/04/JS-for-in遍历和prototype/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/04/JS-for-in遍历和prototype/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -301,7 +311,7 @@
 
           
           
-             <span id="/2016/08/25/2011-午夜巴黎/" class="leancloud_visitors" data-flag-title="2011-午夜巴黎">
+             <span id="/2016/11/04/JS-for-in遍历和prototype/" class="leancloud_visitors" data-flag-title="JS-for-in遍历和prototype">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -323,11 +333,11 @@
       
 
       
-        <p><img src="http://img21.mtime.cn/pi/2011/04/04/161411.40182295_1000X1000.jpg" alt="1"></p>
-<a id="more"></a>
-<p><img src="http://img21.mtime.cn/pi/2011/06/03/141830.39636076_1000X1000.jpg" alt="1"></p>
-<p><img src="http://img21.mtime.cn/pi/2011/04/04/161416.77653536_1000X1000.jpg" alt="1"></p>
-<p><img src="http://img21.mtime.cn/pi/2011/04/04/161416.35864935_1000X1000.jpg" alt="1"></p>
+        <pre><code>for (let i in arr) 
+</code></pre><p>会将原型链上面的属性也一一遍历<br>所以在这时候修改 <code>Array.prototype</code><br>如<br>    Array.prototype.top = () =&gt; {…}<br>则i会遍历到top属性</p>
+<p>= = 被这个略坑了一把</p>
+<p>以后要注意不要扩展内置类型的原型, 或者for in 遍历时使用hasOwnProperty 进行筛选</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties" target="_blank" rel="external">MDN</a></p>
 
       
     </div>
@@ -350,7 +360,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Movie/" rel="tag">#Movie</a>
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
           
         </div>
       
@@ -359,17 +369,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/08/React-Native-Startup/" rel="next" title="React-Native Startup">
-                <i class="fa fa-chevron-left"></i> React-Native Startup
+              <a href="/2016/11/04/文献检索-笔记/" rel="next" title="文献检索-笔记">
+                <i class="fa fa-chevron-left"></i> 文献检索-笔记
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/06/JS-超长数字的坑/" rel="prev" title="JS 超长数字的坑">
-                JS 超长数字的坑 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -395,8 +401,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/08/25/2011-午夜巴黎/"
-           data-title="2011-午夜巴黎" data-url="https://beim.github.io/2016/08/25/2011-午夜巴黎/">
+      <div class="ds-thread" data-thread-key="2016/11/04/JS-for-in遍历和prototype/"
+           data-title="JS-for-in遍历和prototype" data-url="https://beim.github.io/2016/11/04/JS-for-in遍历和prototype/">
       </div>
     
   </div>

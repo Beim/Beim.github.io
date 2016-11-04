@@ -4,6 +4,30 @@
   
     
     <entry>
+      <title><![CDATA[JS-for-in遍历和prototype]]></title>
+      <url>https://beim.github.io/2016/11/04/JS-for-in%E9%81%8D%E5%8E%86%E5%92%8Cprototype/</url>
+      <content type="html"><![CDATA[<pre><code>for (let i in arr) 
+</code></pre><p>会将原型链上面的属性也一一遍历<br>所以在这时候修改 <code>Array.prototype</code><br>如<br>    Array.prototype.top = () =&gt; {…}<br>则i会遍历到top属性</p>
+<p>= = 被这个略坑了一把</p>
+<p>以后要注意不要扩展内置类型的原型, 或者for in 遍历时使用hasOwnProperty 进行筛选</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties" target="_blank" rel="external">MDN</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[文献检索-笔记]]></title>
+      <url>https://beim.github.io/2016/11/04/%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2-%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p>考勤 30%<br>实习作业 70%</p>
+<h1 id="文献类型"><a href="#文献类型" class="headerlink" title="文献类型"></a>文献类型</h1><ul>
+<li><p>科技图书</p>
+</li>
+<li><p>科技期刊</p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[修改next主题]]></title>
       <url>https://beim.github.io/2016/11/02/%E4%BF%AE%E6%94%B9next%E4%B8%BB%E9%A2%98/</url>
       <content type="html"><![CDATA[<h1 id="自定义css"><a href="#自定义css" class="headerlink" title="自定义css"></a>自定义css</h1><p>下面目录是为自定义css 文件准备<br>    themes/next/source/css/_custom/</p>
