@@ -30,6 +30,33 @@
 <h1 id="信息检索技术"><a href="#信息检索技术" class="headerlink" title="信息检索技术"></a>信息检索技术</h1><p>分类检索语言</p>
 <p>布尔逻辑检索 (AND OR NOT)<br>截词检索<br>位置检索 (W, nW, N, nN, S, F)<br>字段限定检索 (后缀方式, 前缀方式)</p>
 <p>信息检索的常用方法与步骤</p>
+<h1 id="EI数据库的检索-Engineering-Index"><a href="#EI数据库的检索-Engineering-Index" class="headerlink" title="EI数据库的检索(Engineering Index)"></a>EI数据库的检索(Engineering Index)</h1><p><strong>常用的评价资源: 著名三大检索系统</strong></p>
+<ul>
+<li>工程索引(EI)</li>
+<li>科学引文索引(SCI)</li>
+<li>科技会议录索引(ISTP)</li>
+</ul>
+<p>检索字段说明(Search Fields)<br>Author affiliation<br>Publisher<br>Source title<br>Title<br>EI controlled term<br>EI main heading</p>
+<p>文献类型限定<br>文献处理类型限定<br>检索时间限定</p>
+<p>自动取词根<br>检索结果排序</p>
+<p>检索规则</p>
+<ul>
+<li>逻辑算符</li>
+<li>截词符</li>
+<li>词组检索</li>
+<li>位置算符</li>
+<li>平台不区分大小写</li>
+<li>在无检索符链接的情况下, 默认与关系</li>
+</ul>
+<p>作者检索</p>
+<ul>
+<li>(姓在前, 接着逗号, 然后名字, 逗号可省略, 如 huang, wenhu 或 huang wenhu)</li>
+<li>(huang, w.h)</li>
+<li>(huang, wen-hu)</li>
+<li>(wenhu, huang)</li>
+<li>作者名字后可以使用截词符截断</li>
+</ul>
+<p>快速检索</p>
 ]]></content>
     </entry>
     
