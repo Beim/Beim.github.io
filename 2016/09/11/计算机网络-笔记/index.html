@@ -112,7 +112,7 @@ ICMP (Internet Control Message Protocol) 因特网控制报文协议
 TCP (Transport Control Protocol) 传输控制协议
 
 UDP">
-<meta property="og:updated_time" content="2016-11-07T01:51:32.547Z">
+<meta property="og:updated_time" content="2016-11-08T15:47:34.760Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络-笔记">
 <meta name="twitter:description" content="0tcp报文中的 Timestamp optionTimestamp value 和 Timestamp echo 作用
@@ -391,6 +391,7 @@ UDP">
 <p><strong>PPP Data Frame</strong></p>
 <p>flag(1) address(1) control(1) protocol(1 or 2) info(variable) check(2 or 4) flag(1)</p>
 <p>flag: delimiter<br>Address: does nothing<br>Control: does nothing, in the future possible multiple control fields<br>Protocol: upper layer protocol<br>info: upper layer data being carried<br>check: cyclic redundancy check for error detection</p>
+<p><strong>ARP</strong><br>Hardware type: Ethernet<br>protocol type: IPv4<br>Hardware size: 6<br>Protocol size: 4<br>Opcode: request<br>Sender MAC address: d4:ee:07:0e:b7:ec<br>Sender IP address: 192.168.10.122<br>Target MAC address: 00:00:00:00:00:00<br>Target IP address: 192.168.10.10</p>
 <hr>
 <h2 id="OSI参考模型"><a href="#OSI参考模型" class="headerlink" title="OSI参考模型"></a>OSI参考模型</h2><ul>
 <li><p><strong>物理层(physical layer)</strong> 关注在一条通信信道上传输原始比特。</p>
@@ -615,17 +616,20 @@ UDP">
 </li>
 </ul>
 <h3 id="Lan"><a href="#Lan" class="headerlink" title="Lan"></a>Lan</h3><p><strong>MAC address and ARP</strong></p>
-<h4 id="Ethernet"><a href="#Ethernet" class="headerlink" title="Ethernet"></a>Ethernet</h4><p><strong>bus</strong> (all nodes in same collision domain)</p>
-<p><strong>star</strong> (each ‘spoke’ runs a Ethernet protocol (nodes do not collid with each other))</p>
-<p><strong>Ethernet fram structure</strong></p>
+<p>ARP表: LAN 中每个IP节点(主机, 路由器)维护一个表(存储某些LAN节点的IP/MAC地址映射关系)</p>
+<p>A想要给<code>同一局域网</code>内的B发送数据包(B的MAC地址不在A的ARP表中)<br>则A<code>广播</code>ARP查询分组, 其中包含B的IP地址(广播的MAC地址=FF-FF-FF-FF-FF-FF)</p>
+<h4 id="Ethernet"><a href="#Ethernet" class="headerlink" title="Ethernet"></a>Ethernet</h4><p><strong>bus(总线)</strong> (all nodes in same collision domain)</p>
+<p><strong>star(星型)</strong> (each ‘spoke’ runs a Ethernet protocol (nodes do not collid with each other))</p>
+<p>以太网: 无连接(没有握手), 不可靠(没有确认)</p>
+<p><strong>Ethernet fram structure</strong>(见上 以太网帧结构)<br>preamble(8) des-add(6) sour-add(6) type(2) data(46-1500) CRC(4)<br>Lmin = 64B , data(min) = 64 - 6 - 6 - 2 - 4 = 46B</p>
 <h4 id="switches-交换机"><a href="#switches-交换机" class="headerlink" title="switches(交换机)"></a>switches(交换机)</h4><p>存储, 转发以太网帧</p>
 <p>识别帧中的MAC 地址, 选择性地转发</p>
 <p>Ethernet protocol used on each incoming link, but no collisions; full duplex (each link is its own collision domain)</p>
-<p><strong>switch table</strong> (each entry: MAC address of host, interface to reach host, time stamp)</p>
-<p><strong>switch: self-learning</strong> </p>
-<p>网络层路由器设备隔离广播域, 广播的范围为一个IP子网</p>
-<p><strong>交换机 vs 路由器</strong><br>都有存储转发<br>路由器: 网络层, routing algorithms, IP addresses<br>交换机: 数据链路层 , learn forwarding table using flooding, learning, MAC addresses</p>
-<p><strong>summary comparison</strong></p>
+<p><code>switch table</code> (each entry: MAC address of host, interface to reach host, time stamp)</p>
+<p><code>switch: self-learning</code> </p>
+<p>网络层路由器设备隔离广播域, 广播的范围为一个IP子网<br><code>注意区分冲突域 和广播域</code></p>
+<p><code>交换机 vs 路由器</code><br>都有存储转发<br>路由器: 网络层, routing algorithms, IP addresses<br>交换机: 数据链路层 , learn forwarding table using flooding, learning, MAC addresses</p>
+<p><code>summary comparison</code></p>
 <table>
 <thead>
 <tr>
@@ -681,7 +685,9 @@ UDP">
 </tr>
 </tbody>
 </table>
-<h4 id="VLAN"><a href="#VLAN" class="headerlink" title="VLAN"></a>VLAN</h4><h3 id="PPP"><a href="#PPP" class="headerlink" title="PPP"></a>PPP</h3><p>one Sender and one Receiver, one link,<br>no Media Access Control,<br>no need for MAC address</p>
+<h4 id="VLAN"><a href="#VLAN" class="headerlink" title="VLAN"></a>VLAN</h4><p>基于端口的VLAN<br><code>流量隔离</code> (come/from 端口1-8的帧只到达端口1-8)<br><code>动态成员</code> (端口可以动态分配给不同的成员)<br><code>在VLAN间转发</code>(通过路由, 就像在独立的交换机之间)(实践中, 厂商会将交换机和路由器集成在一起,因此不需要另外接路由器)</p>
+<p><code>跨越多交换机的VLAN</code><br>多线缆连接(每个线缆连接一个VLAN)<br>中继端口(在跨越多个物理交换机定义的VLAN承载帧)(为多个VLAN转发802.1帧容易产生歧义(必须携带VLAN ID信息))(802.1q协议为经过中继端口转发的帧增加/去除 额外的首部域)</p>
+<h3 id="PPP"><a href="#PPP" class="headerlink" title="PPP"></a>PPP</h3><p>one Sender and one Receiver, one link,<br>no Media Access Control,<br>no need for MAC address</p>
 <p><strong>packet framing</strong><br><strong>bit transparency</strong><br><strong>error detection</strong><br><strong>connection liveness</strong><br><strong>network layer address negotiation</strong></p>
 <p>no error correction/cecovery<br>no flow control<br>out of order delivery OK<br>no need to support multiple links</p>
 <p><strong>Byte Stuffing</strong></p>
@@ -804,7 +810,7 @@ UDP">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
