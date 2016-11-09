@@ -1008,6 +1008,24 @@
 <h2 id="存储分配"><a href="#存储分配" class="headerlink" title="存储分配"></a>存储分配</h2><h3 id="静态存储分配-顺序分配法-层次分配法"><a href="#静态存储分配-顺序分配法-层次分配法" class="headerlink" title="静态存储分配(顺序分配法)(层次分配法)"></a>静态存储分配(顺序分配法)(层次分配法)</h3><h3 id="栈式存储分配"><a href="#栈式存储分配" class="headerlink" title="栈式存储分配"></a>栈式存储分配</h3><p>活动树<br>设计活动记录</p>
 <p>调用序列<br>返回序列</p>
 <p>变长数据</p>
+<h2 id="第八章-代码优化"><a href="#第八章-代码优化" class="headerlink" title="第八章 代码优化"></a>第八章 代码优化</h2><p><strong>基本块</strong>(基本块划分算法)<br>根据<code>首指令</code>划分基本块</p>
+<p><strong>流图</strong> (表示中间代码的方法)(流图的<code>节点</code>是一些<code>基本块</code>)(流图的<code>边</code> 即基本块到基本块的跳转)</p>
+<h3 id="优化方法的分类"><a href="#优化方法的分类" class="headerlink" title="优化方法的分类"></a>优化方法的分类</h3><ul>
+<li><p><code>删除公共子表达式</code>(局部)(全局)(也可以消除能消除的临时变量)(只有没有改变的才能替换)</p>
+</li>
+<li><p><code>删除无用代码</code>(复制传播: 在复制语句x=y之后尽可能的用y代替x,这样能给删除无用代码带来机会)(无用代码: )</p>
+</li>
+<li><p>常量合并`(编译时刻推导出一个表达式是常量, 则之后可用该常量代替该表达式)(复制传播的一个特例)</p>
+</li>
+</ul>
+<p>-<code>代码移动</code>(<em>循环不变计算</em>: 将循环中计算结果相同的表达式)(循环不变计算的相对性)</p>
+<p>-<code>强度削弱</code>(用较快的操作来替代较慢的操作, 如用加代替乘)<br><code>循环中的强度削弱</code>(<em>归纳变量</em>: 对某个常数c, 变量x每次循环都增加常数c, 则x是归纳变量)(对归纳变量进行强度削弱)</p>
+<p>-<code>删除归纳变量</code>(循环运行时,如果有<em>一组归纳变量</em>的值变化保持<em>步调一致</em>,常常可以将这组变量删除为只剩一个)</p>
+<h3 id="基本块的优化-局部的优化"><a href="#基本块的优化-局部的优化" class="headerlink" title="基本块的优化(局部的优化)"></a>基本块的优化(局部的优化)</h3><p><code>基本块的DAG表示</code></p>
+<p><code>基于基本块的DAG 检测局部公共子表达式</code></p>
+<p><code>基于基本块的DAG</code> 删除无用代码`(删除没有附加<em>活跃变量</em>的<em>根节点</em>)(活跃变量: 值可能在以后被使用)(根节点: 没有父节点的节点)(重复这个过程, 可以消除对应无用代码的节点)</p>
+<p><code>数组下标指令的表示</code>(防止构造DAG时将a[i]误判为公共子表达式)(a=x[i], op:’=[]’, arg1:x, arg2:i, result: a)(被杀死的节点<em>不能再获得任何定值变量</em>, 也就不能成为一个公共子表达式)</p>
+<p><code>基本块DAG的构造</code></p>
 ]]></content>
     </entry>
     
@@ -1015,6 +1033,8 @@
       <title><![CDATA[计算机网络-笔记]]></title>
       <url>https://beim.github.io/2016/09/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1><p><strong>tcp报文中的 Timestamp option</strong><br><a href="http://stackoverflow.com/questions/2524511/what-is-the-meaning-of-the-tsv-and-tser-fields-in-an-ethereal-dump" target="_blank" rel="external">Timestamp value 和 Timestamp echo 作用</a></p>
+<p><code>网络协议的三要素</code>(语法,语义,同步)</p>
+<p><code>网络工程中常用的线缆标准为568A</code>(直通线568A-568A)(交叉线568A-568B)</p>
 <hr>
 <h1 id="计算机网络5E"><a href="#计算机网络5E" class="headerlink" title="计算机网络5E"></a>计算机网络5E</h1><h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><ul>
 <li><p><strong>IP</strong> (Internet Protocol) 因特网协议</p>
@@ -1363,7 +1383,33 @@
 <p><strong>Shannon Capacity Formulation</strong><br><strong>C=Blog2 (1 + S / N)</strong><br>S/N - signal-to-noise ratio信噪比</p>
 <p>S/N is often reported in descibels (<strong>dB</strong>)<br>(S/N)db = 10log10 (S / N)</p>
 <p><code>Data Rate(Bit rate-R)</code>(Rate of data transmission in bits per second)<br><code>Modulation rate(Baud rate-B)</code>(Rate at width the signal level changes)<br><code>R = Blog2 M</code>(M-Number of states of code element)</p>
-]]></content>
+<p><code>Pulse Code Modulation(PCM)</code>(脉冲编码调制)</p>
+<p><code>Spread Spectrum</code> (扩频)</p>
+<p><code>异步/同步 传输</code>(异步: start bits, stop bits)(同步: 单独的时钟线, 或者将时钟信号嵌入到数据中)</p>
+<p><code>Media</code></p>
+<p><code>Interfacing</code></p>
+<hr>
+<h2 id="无线与移动网络"><a href="#无线与移动网络" class="headerlink" title="无线与移动网络"></a>无线与移动网络</h2><h3 id="wireless"><a href="#wireless" class="headerlink" title="wireless"></a>wireless</h3><p><code>wireless link</code>(无线链路)<br>(信号随距离衰减)(容易受干扰)()</p>
+<p>信噪比低, 误码率高(SNR versus BER tradeoffs)</p>
+<p>multiple access 可能遇到的问题<br><code>Hidden terminal problem</code>(障碍物导致的隐藏终端问题)<br><code>Signal attenuation</code>(信号衰减导致的问题)</p>
+<p><code>CDMA</code>(码分多址)(每个用户分配不同的码片序列)</p>
+<h4 id="802-11"><a href="#802-11" class="headerlink" title="802.11"></a>802.11</h4><p><strong>IEEE 802.11 Wireless LAN</strong>(WiFi)</p>
+<ul>
+<li>802.11b</li>
+<li>802.11a</li>
+<li>802.11g</li>
+<li>802.11n (multiple antennae)(2.4-2.5 GHz range)(up to 600Mbs)</li>
+</ul>
+<blockquote>
+<p>MIMO (多输入多输出)</p>
+<p>OFDM (正交频分多路)</p>
+</blockquote>
+<p>base station = access point (ap)</p>
+<p><code>BSS</code>(basic service set)(基站子系统)</p>
+<p><code>SSID</code></p>
+<p>host: must <em>associate</em> with an AP</p>
+<p><strong>multiple access</strong>(可能产生的冲突问题)<br>CSMA - sense before transmitting<br>no collision dection(not CSMA/CD), use CSMA/CA(collision avoidance)(不能完全避免冲突, 能避免数据帧冲突)<br>发送端: 监听信道, 如果信道空闲, 且空闲了<strong>DIFS(分布式帧间间隙, 根据优先级有不同的时间间隙)</strong>时间, 则发送数据; 如果信道忙, 则启动随机的backoff time, 等信道空闲则启动倒计时, 倒计时结束后信道空闲则发送数据.<br>接收端: 如果接收到数据完成, 等待<strong>SIFS</strong>时间后返回ACK<br>避免冲突: 发送方先给BS发送一个<strong>RTS</strong>(request-to-send)包(使用CSMA), BS广播一个<strong>CTS</strong>作为RTS的回应; CTS被所有的节点监听到, 这样其他的节点就不会发送数据</p>
+<h3 id="mobility"><a href="#mobility" class="headerlink" title="mobility"></a>mobility</h3>]]></content>
     </entry>
     
     <entry>

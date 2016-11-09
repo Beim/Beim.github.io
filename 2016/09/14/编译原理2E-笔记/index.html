@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://beim.github.io/2016/09/14/编译原理2E-笔记/index.html">
 <meta property="og:site_name" content="北冥945">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/compilers.jpg">
-<meta property="og:updated_time" content="2016-11-02T04:02:34.712Z">
+<meta property="og:updated_time" content="2016-11-09T03:48:00.687Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编译原理2E-笔记">
 <meta name="twitter:image" content="http://ob4a6y748.bkt.clouddn.com/compilers.jpg">
@@ -381,6 +381,24 @@
 <h2 id="存储分配"><a href="#存储分配" class="headerlink" title="存储分配"></a>存储分配</h2><h3 id="静态存储分配-顺序分配法-层次分配法"><a href="#静态存储分配-顺序分配法-层次分配法" class="headerlink" title="静态存储分配(顺序分配法)(层次分配法)"></a>静态存储分配(顺序分配法)(层次分配法)</h3><h3 id="栈式存储分配"><a href="#栈式存储分配" class="headerlink" title="栈式存储分配"></a>栈式存储分配</h3><p>活动树<br>设计活动记录</p>
 <p>调用序列<br>返回序列</p>
 <p>变长数据</p>
+<h2 id="第八章-代码优化"><a href="#第八章-代码优化" class="headerlink" title="第八章 代码优化"></a>第八章 代码优化</h2><p><strong>基本块</strong>(基本块划分算法)<br>根据<code>首指令</code>划分基本块</p>
+<p><strong>流图</strong> (表示中间代码的方法)(流图的<code>节点</code>是一些<code>基本块</code>)(流图的<code>边</code> 即基本块到基本块的跳转)</p>
+<h3 id="优化方法的分类"><a href="#优化方法的分类" class="headerlink" title="优化方法的分类"></a>优化方法的分类</h3><ul>
+<li><p><code>删除公共子表达式</code>(局部)(全局)(也可以消除能消除的临时变量)(只有没有改变的才能替换)</p>
+</li>
+<li><p><code>删除无用代码</code>(复制传播: 在复制语句x=y之后尽可能的用y代替x,这样能给删除无用代码带来机会)(无用代码: )</p>
+</li>
+<li><p>常量合并`(编译时刻推导出一个表达式是常量, 则之后可用该常量代替该表达式)(复制传播的一个特例)</p>
+</li>
+</ul>
+<p>-<code>代码移动</code>(<em>循环不变计算</em>: 将循环中计算结果相同的表达式)(循环不变计算的相对性)</p>
+<p>-<code>强度削弱</code>(用较快的操作来替代较慢的操作, 如用加代替乘)<br><code>循环中的强度削弱</code>(<em>归纳变量</em>: 对某个常数c, 变量x每次循环都增加常数c, 则x是归纳变量)(对归纳变量进行强度削弱)</p>
+<p>-<code>删除归纳变量</code>(循环运行时,如果有<em>一组归纳变量</em>的值变化保持<em>步调一致</em>,常常可以将这组变量删除为只剩一个)</p>
+<h3 id="基本块的优化-局部的优化"><a href="#基本块的优化-局部的优化" class="headerlink" title="基本块的优化(局部的优化)"></a>基本块的优化(局部的优化)</h3><p><code>基本块的DAG表示</code></p>
+<p><code>基于基本块的DAG 检测局部公共子表达式</code></p>
+<p><code>基于基本块的DAG</code> 删除无用代码`(删除没有附加<em>活跃变量</em>的<em>根节点</em>)(活跃变量: 值可能在以后被使用)(根节点: 没有父节点的节点)(重复这个过程, 可以消除对应无用代码的节点)</p>
+<p><code>数组下标指令的表示</code>(防止构造DAG时将a[i]误判为公共子表达式)(a=x[i], op:’=[]’, arg1:x, arg2:i, result: a)(被杀死的节点<em>不能再获得任何定值变量</em>, 也就不能成为一个公共子表达式)</p>
+<p><code>基本块DAG的构造</code></p>
 
       
     </div>
@@ -533,7 +551,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#练习"><span class="nav-number">1.</span> <span class="nav-text">练习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章词法分析"><span class="nav-number">1.1.</span> <span class="nav-text">第三章词法分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章语法分析"><span class="nav-number">1.2.</span> <span class="nav-text">第四章语法分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#记录"><span class="nav-number">2.</span> <span class="nav-text">记录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#LR语法分析算法-算法4-44-p159"><span class="nav-number">2.1.</span> <span class="nav-text">LR语法分析算法(算法4.44 p159)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#翻译"><span class="nav-number">2.2.</span> <span class="nav-text">翻译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储分配"><span class="nav-number">2.3.</span> <span class="nav-text">存储分配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态存储分配-顺序分配法-层次分配法"><span class="nav-number">2.3.1.</span> <span class="nav-text">静态存储分配(顺序分配法)(层次分配法)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈式存储分配"><span class="nav-number">2.3.2.</span> <span class="nav-text">栈式存储分配</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#练习"><span class="nav-number">1.</span> <span class="nav-text">练习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章词法分析"><span class="nav-number">1.1.</span> <span class="nav-text">第三章词法分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章语法分析"><span class="nav-number">1.2.</span> <span class="nav-text">第四章语法分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#记录"><span class="nav-number">2.</span> <span class="nav-text">记录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#LR语法分析算法-算法4-44-p159"><span class="nav-number">2.1.</span> <span class="nav-text">LR语法分析算法(算法4.44 p159)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#翻译"><span class="nav-number">2.2.</span> <span class="nav-text">翻译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储分配"><span class="nav-number">2.3.</span> <span class="nav-text">存储分配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态存储分配-顺序分配法-层次分配法"><span class="nav-number">2.3.1.</span> <span class="nav-text">静态存储分配(顺序分配法)(层次分配法)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈式存储分配"><span class="nav-number">2.3.2.</span> <span class="nav-text">栈式存储分配</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第八章-代码优化"><span class="nav-number">2.4.</span> <span class="nav-text">第八章 代码优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优化方法的分类"><span class="nav-number">2.4.1.</span> <span class="nav-text">优化方法的分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本块的优化-局部的优化"><span class="nav-number">2.4.2.</span> <span class="nav-text">基本块的优化(局部的优化)</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>

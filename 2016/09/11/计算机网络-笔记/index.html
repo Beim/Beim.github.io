@@ -89,42 +89,36 @@
 
 
 <meta name="description" content="0tcp报文中的 Timestamp optionTimestamp value 和 Timestamp echo 作用
+网络协议的三要素(语法,语义,同步)
+网络工程中常用的线缆标准为568A(直通线568A-568A)(交叉线568A-568B)
 
 计算机网络5E关键字
 IP (Internet Protocol) 因特网协议
 
-ICMP (Internet Control Message Protocol) 因特网控制报文协议
-
-TCP (Transport Control Protocol) 传输控制协议
-
-UDP">
+ICMP (Internet Control Message P">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机网络-笔记">
 <meta property="og:url" content="https://beim.github.io/2016/09/11/计算机网络-笔记/index.html">
 <meta property="og:site_name" content="北冥945">
 <meta property="og:description" content="0tcp报文中的 Timestamp optionTimestamp value 和 Timestamp echo 作用
+网络协议的三要素(语法,语义,同步)
+网络工程中常用的线缆标准为568A(直通线568A-568A)(交叉线568A-568B)
 
 计算机网络5E关键字
 IP (Internet Protocol) 因特网协议
 
-ICMP (Internet Control Message Protocol) 因特网控制报文协议
-
-TCP (Transport Control Protocol) 传输控制协议
-
-UDP">
-<meta property="og:updated_time" content="2016-11-08T15:47:34.760Z">
+ICMP (Internet Control Message P">
+<meta property="og:updated_time" content="2016-11-09T02:05:28.164Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络-笔记">
 <meta name="twitter:description" content="0tcp报文中的 Timestamp optionTimestamp value 和 Timestamp echo 作用
+网络协议的三要素(语法,语义,同步)
+网络工程中常用的线缆标准为568A(直通线568A-568A)(交叉线568A-568B)
 
 计算机网络5E关键字
 IP (Internet Protocol) 因特网协议
 
-ICMP (Internet Control Message Protocol) 因特网控制报文协议
-
-TCP (Transport Control Protocol) 传输控制协议
-
-UDP">
+ICMP (Internet Control Message P">
 
 
 
@@ -349,6 +343,8 @@ UDP">
 
       
         <h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1><p><strong>tcp报文中的 Timestamp option</strong><br><a href="http://stackoverflow.com/questions/2524511/what-is-the-meaning-of-the-tsv-and-tser-fields-in-an-ethereal-dump" target="_blank" rel="external">Timestamp value 和 Timestamp echo 作用</a></p>
+<p><code>网络协议的三要素</code>(语法,语义,同步)</p>
+<p><code>网络工程中常用的线缆标准为568A</code>(直通线568A-568A)(交叉线568A-568B)</p>
 <hr>
 <h1 id="计算机网络5E"><a href="#计算机网络5E" class="headerlink" title="计算机网络5E"></a>计算机网络5E</h1><h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><ul>
 <li><p><strong>IP</strong> (Internet Protocol) 因特网协议</p>
@@ -697,7 +693,33 @@ UDP">
 <p><strong>Shannon Capacity Formulation</strong><br><strong>C=Blog2 (1 + S / N)</strong><br>S/N - signal-to-noise ratio信噪比</p>
 <p>S/N is often reported in descibels (<strong>dB</strong>)<br>(S/N)db = 10log10 (S / N)</p>
 <p><code>Data Rate(Bit rate-R)</code>(Rate of data transmission in bits per second)<br><code>Modulation rate(Baud rate-B)</code>(Rate at width the signal level changes)<br><code>R = Blog2 M</code>(M-Number of states of code element)</p>
-
+<p><code>Pulse Code Modulation(PCM)</code>(脉冲编码调制)</p>
+<p><code>Spread Spectrum</code> (扩频)</p>
+<p><code>异步/同步 传输</code>(异步: start bits, stop bits)(同步: 单独的时钟线, 或者将时钟信号嵌入到数据中)</p>
+<p><code>Media</code></p>
+<p><code>Interfacing</code></p>
+<hr>
+<h2 id="无线与移动网络"><a href="#无线与移动网络" class="headerlink" title="无线与移动网络"></a>无线与移动网络</h2><h3 id="wireless"><a href="#wireless" class="headerlink" title="wireless"></a>wireless</h3><p><code>wireless link</code>(无线链路)<br>(信号随距离衰减)(容易受干扰)()</p>
+<p>信噪比低, 误码率高(SNR versus BER tradeoffs)</p>
+<p>multiple access 可能遇到的问题<br><code>Hidden terminal problem</code>(障碍物导致的隐藏终端问题)<br><code>Signal attenuation</code>(信号衰减导致的问题)</p>
+<p><code>CDMA</code>(码分多址)(每个用户分配不同的码片序列)</p>
+<h4 id="802-11"><a href="#802-11" class="headerlink" title="802.11"></a>802.11</h4><p><strong>IEEE 802.11 Wireless LAN</strong>(WiFi)</p>
+<ul>
+<li>802.11b</li>
+<li>802.11a</li>
+<li>802.11g</li>
+<li>802.11n (multiple antennae)(2.4-2.5 GHz range)(up to 600Mbs)</li>
+</ul>
+<blockquote>
+<p>MIMO (多输入多输出)</p>
+<p>OFDM (正交频分多路)</p>
+</blockquote>
+<p>base station = access point (ap)</p>
+<p><code>BSS</code>(basic service set)(基站子系统)</p>
+<p><code>SSID</code></p>
+<p>host: must <em>associate</em> with an AP</p>
+<p><strong>multiple access</strong>(可能产生的冲突问题)<br>CSMA - sense before transmitting<br>no collision dection(not CSMA/CD), use CSMA/CA(collision avoidance)(不能完全避免冲突, 能避免数据帧冲突)<br>发送端: 监听信道, 如果信道空闲, 且空闲了<strong>DIFS(分布式帧间间隙, 根据优先级有不同的时间间隙)</strong>时间, 则发送数据; 如果信道忙, 则启动随机的backoff time, 等信道空闲则启动倒计时, 倒计时结束后信道空闲则发送数据.<br>接收端: 如果接收到数据完成, 等待<strong>SIFS</strong>时间后返回ACK<br>避免冲突: 发送方先给BS发送一个<strong>RTS</strong>(request-to-send)包(使用CSMA), BS广播一个<strong>CTS</strong>作为RTS的回应; CTS被所有的节点监听到, 这样其他的节点就不会发送数据</p>
+<h3 id="mobility"><a href="#mobility" class="headerlink" title="mobility"></a>mobility</h3>
       
     </div>
 
@@ -849,7 +871,7 @@ UDP">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0"><span class="nav-number">1.</span> <span class="nav-text">0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络5E"><span class="nav-number">2.</span> <span class="nav-text">计算机网络5E</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-number">2.1.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报文格式"><span class="nav-number">2.2.</span> <span class="nav-text">报文格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OSI参考模型"><span class="nav-number">2.3.</span> <span class="nav-text">OSI参考模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-IP-参考模型"><span class="nav-number">2.4.</span> <span class="nav-text">TCP/IP 参考模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设计目标"><span class="nav-number">2.4.1.</span> <span class="nav-text">设计目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型结构"><span class="nav-number">2.4.2.</span> <span class="nav-text">模型结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP-模型及协议"><span class="nav-number">2.4.3.</span> <span class="nav-text">TCP/IP 模型及协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#套接字编程实例-Internet-文件服务器"><span class="nav-number">2.5.</span> <span class="nav-text">套接字编程实例: Internet 文件服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路由算法"><span class="nav-number">2.6.</span> <span class="nav-text">路由算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络课程"><span class="nav-number">3.</span> <span class="nav-text">计算机网络课程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第二周-1-4计算机网络性能"><span class="nav-number">3.1.</span> <span class="nav-text">第二周-1.4计算机网络性能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#四种分组延迟"><span class="nav-number">3.1.1.</span> <span class="nav-text">四种分组延迟</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第5周-传输层-上"><span class="nav-number">3.2.</span> <span class="nav-text">第5周 传输层(上)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UDP-校验和-checksum"><span class="nav-number">3.2.1.</span> <span class="nav-text">UDP 校验和(checksum)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第6周-传输层-下"><span class="nav-number">3.3.</span> <span class="nav-text">第6周 传输层(下)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第7周-网络层-上"><span class="nav-number">3.4.</span> <span class="nav-text">第7周 网络层(上)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第8周-网络层-下"><span class="nav-number">3.5.</span> <span class="nav-text">第8周 网络层(下)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链路层"><span class="nav-number">3.6.</span> <span class="nav-text">链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Multiple-access-links-protocols"><span class="nav-number">3.6.1.</span> <span class="nav-text">Multiple access links , protocols</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lan"><span class="nav-number">3.6.2.</span> <span class="nav-text">Lan</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Ethernet"><span class="nav-number">3.6.2.1.</span> <span class="nav-text">Ethernet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#switches-交换机"><span class="nav-number">3.6.2.2.</span> <span class="nav-text">switches(交换机)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VLAN"><span class="nav-number">3.6.2.3.</span> <span class="nav-text">VLAN</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PPP"><span class="nav-number">3.6.3.</span> <span class="nav-text">PPP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#link-virtualization-MPLS"><span class="nav-number">3.6.4.</span> <span class="nav-text">link virtualization: MPLS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#物理层"><span class="nav-number">3.7.</span> <span class="nav-text">物理层</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0"><span class="nav-number">1.</span> <span class="nav-text">0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络5E"><span class="nav-number">2.</span> <span class="nav-text">计算机网络5E</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-number">2.1.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报文格式"><span class="nav-number">2.2.</span> <span class="nav-text">报文格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OSI参考模型"><span class="nav-number">2.3.</span> <span class="nav-text">OSI参考模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-IP-参考模型"><span class="nav-number">2.4.</span> <span class="nav-text">TCP/IP 参考模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设计目标"><span class="nav-number">2.4.1.</span> <span class="nav-text">设计目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型结构"><span class="nav-number">2.4.2.</span> <span class="nav-text">模型结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP-模型及协议"><span class="nav-number">2.4.3.</span> <span class="nav-text">TCP/IP 模型及协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#套接字编程实例-Internet-文件服务器"><span class="nav-number">2.5.</span> <span class="nav-text">套接字编程实例: Internet 文件服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路由算法"><span class="nav-number">2.6.</span> <span class="nav-text">路由算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络课程"><span class="nav-number">3.</span> <span class="nav-text">计算机网络课程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第二周-1-4计算机网络性能"><span class="nav-number">3.1.</span> <span class="nav-text">第二周-1.4计算机网络性能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#四种分组延迟"><span class="nav-number">3.1.1.</span> <span class="nav-text">四种分组延迟</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第5周-传输层-上"><span class="nav-number">3.2.</span> <span class="nav-text">第5周 传输层(上)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UDP-校验和-checksum"><span class="nav-number">3.2.1.</span> <span class="nav-text">UDP 校验和(checksum)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第6周-传输层-下"><span class="nav-number">3.3.</span> <span class="nav-text">第6周 传输层(下)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第7周-网络层-上"><span class="nav-number">3.4.</span> <span class="nav-text">第7周 网络层(上)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第8周-网络层-下"><span class="nav-number">3.5.</span> <span class="nav-text">第8周 网络层(下)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链路层"><span class="nav-number">3.6.</span> <span class="nav-text">链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Multiple-access-links-protocols"><span class="nav-number">3.6.1.</span> <span class="nav-text">Multiple access links , protocols</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lan"><span class="nav-number">3.6.2.</span> <span class="nav-text">Lan</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Ethernet"><span class="nav-number">3.6.2.1.</span> <span class="nav-text">Ethernet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#switches-交换机"><span class="nav-number">3.6.2.2.</span> <span class="nav-text">switches(交换机)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VLAN"><span class="nav-number">3.6.2.3.</span> <span class="nav-text">VLAN</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PPP"><span class="nav-number">3.6.3.</span> <span class="nav-text">PPP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#link-virtualization-MPLS"><span class="nav-number">3.6.4.</span> <span class="nav-text">link virtualization: MPLS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#物理层"><span class="nav-number">3.7.</span> <span class="nav-text">物理层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无线与移动网络"><span class="nav-number">3.8.</span> <span class="nav-text">无线与移动网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#wireless"><span class="nav-number">3.8.1.</span> <span class="nav-text">wireless</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#802-11"><span class="nav-number">3.8.1.1.</span> <span class="nav-text">802.11</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mobility"><span class="nav-number">3.8.2.</span> <span class="nav-text">mobility</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
