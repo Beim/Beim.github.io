@@ -26,6 +26,7 @@
       <title><![CDATA[算法设计与分析-笔记]]></title>
       <url>https://beim.github.io/2016/11/08/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<p>作业30%<br>考试70%</p>
+<p>阶<br>logn &lt; n^x &lt; x^n &lt; n!<br>log2n = log3n<br>2^n &lt; 3^n</p>
 ]]></content>
     </entry>
     
@@ -1450,7 +1451,11 @@
 <p><code>SSID</code></p>
 <p>host: must <em>associate</em> with an AP</p>
 <p><strong>multiple access</strong>(可能产生的冲突问题)<br>CSMA - sense before transmitting<br>no collision dection(not CSMA/CD), use CSMA/CA(collision avoidance)(不能完全避免冲突, 能避免数据帧冲突)<br>发送端: 监听信道, 如果信道空闲, 且空闲了<strong>DIFS(分布式帧间间隙, 根据优先级有不同的时间间隙)</strong>时间, 则发送数据; 如果信道忙, 则启动随机的backoff time, 等信道空闲则启动倒计时, 倒计时结束后信道空闲则发送数据.<br>接收端: 如果接收到数据完成, 等待<strong>SIFS</strong>时间后返回ACK<br>避免冲突: 发送方先给BS发送一个<strong>RTS</strong>(request-to-send)包(使用CSMA), BS广播一个<strong>CTS</strong>作为RTS的回应; CTS被所有的节点监听到, 这样其他的节点就不会发送数据</p>
-<h3 id="mobility"><a href="#mobility" class="headerlink" title="mobility"></a>mobility</h3>]]></content>
+<p><code>AP不需要IP地址, 其为链路层设备</code></p>
+<p>802.11 frame MTU 2312</p>
+<h4 id="Cellular-Internet-access"><a href="#Cellular-Internet-access" class="headerlink" title="Cellular Internet access"></a>Cellular Internet access</h4><h3 id="mobility"><a href="#mobility" class="headerlink" title="mobility"></a>mobility</h3><p>mobile IP<br><code>home network</code> <code>home agent</code> <code>permanent address</code><br><code>visited network</code> <code>foreign agent</code> <code>care-of-address</code></p>
+<p>GSM<br><code>home network</code> <code>home location register (HLR)</code> <code>visited network</code> <code>visitor location register(VLR)</code></p>
+]]></content>
     </entry>
     
     <entry>
