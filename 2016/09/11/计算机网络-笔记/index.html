@@ -100,7 +100,7 @@ IEEE 802.3 CMSA/CD, IEEE 802.4 Token Bus, IEEE 802.5 Token Ring多路访问协�
 网络协议的三要素(语法,语义,同步)
 网络工程中常用的线缆标准为568A(直通线568A-568A)(交叉线568A-568B)
 IEEE 802.3 CMSA/CD, IEEE 802.4 Token Bus, IEEE 802.5 Token Ring多路访问协议(mult">
-<meta property="og:updated_time" content="2016-11-11T10:29:31.064Z">
+<meta property="og:updated_time" content="2016-11-11T10:32:52.538Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络-笔记">
 <meta name="twitter:description" content="0tcp报文中的 Timestamp optionTimestamp value 和 Timestamp echo 作用
@@ -636,8 +636,8 @@ IEEE 802.3 CMSA/CD, IEEE 802.4 Token Bus, IEEE 802.5 Token Ring多路访问协�
 <h4 id="internet校验和-checksum"><a href="#internet校验和-checksum" class="headerlink" title="internet校验和(checksum)"></a>internet校验和(checksum)</h4><p>详见传输层-UDP校验和<br>一般放入(UDP, TCP, IP)的校验和字段</p>
 <h4 id="循环冗余校验码-CRC"><a href="#循环冗余校验码-CRC" class="headerlink" title="循环冗余校验码(CRC)"></a>循环冗余校验码(CRC)</h4><p>广泛应用于数据链路层,检错能力强大<br><a href="http://fdcwqmst.blog.163.com/blog/static/16406145520109712150424/" target="_blank" rel="external">模2运算</a></p>
 <p><code>D</code>: 数据比特<br><code>G</code>: <code>r+1</code>位的比特模式(生成比特模式)<br><code>R</code>: <code>r</code>位的CRC比特</p>
-<p>发送方和接收方使用相同的<code>G</code>, 可以检测出所有长度小于r+1的差错<br>发送方: 根据D和G计算出R, 将D和R拼接成<code>&lt; D,R&gt;</code>, 即编码结果<br>接收方: 将<code>&lt; D,R&gt;</code> 除以G(模2), 余式为0则无错, 否则出错.</p>
-<p><code>R</code>的计算方法:<br>首先看<code>编码结果</code>: D左移r位再与R异或(D <em> 2^r XOR R)<br>这个编码结果可以被G整除, 即: D </em> 2^r XOR R = nG<br>由于R与D的关系, 上式相当于 D <em> 2^r = nG XOR R<br>则 R = [D </em> 2^r / G]的余数</p>
+<p>发送方和接收方使用相同的<code>G</code>, 可以检测出所有长度小于r+1的差错<br><code>发送方</code>: 根据D和G计算出R, 将D和R拼接成<code>&lt; D,R&gt;</code>, 即编码结果<br><code>接收方</code>: 将<code>&lt; D,R&gt;</code> 除以G(模2), 余式为0则无错, 否则出错.</p>
+<p><code>R</code>的计算方法:<br>首先看<code>编码结果</code>: D左移r位再与R异或(D * 2^r XOR R)<br>这个编码结果可以被G整除, 即: D <em> 2^r XOR R = nG<br>由于R与D的关系, 上式相当于 D </em> 2^r = nG XOR R<br>则 R = [D * 2^r / G]的余数</p>
 <p>举例:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">被校验的数据M(x)=<span class="number">1000</span>，</div><div class="line">其选择生成多项式为G(x)=x^<span class="number">3</span>+x+<span class="number">1</span>,</div><div class="line">该数据的循环冗余校验和应为多少？</div><div class="line"></div><div class="line">G(x)=x^<span class="number">3</span>+x+<span class="number">1</span>对应的二进制数为<span class="number">1011</span>，</div><div class="line">且G(x)中含<span class="number">3</span>个项式，</div><div class="line">生成多项式为<span class="number">4</span>位二进制，</div><div class="line">由CRC规则应该取(<span class="number">4</span><span class="number">-1</span>)=<span class="number">3</span>位(校验和)，</div><div class="line">所以可以预加上<span class="number">3</span>位得到<span class="number">1000</span>B*<span class="number">2</span>^<span class="number">3</span>=<span class="number">1000</span> <span class="number">000</span>B;</div><div class="line"></div><div class="line"><span class="number">1000</span> <span class="number">000</span>B（被除数）对<span class="number">1011</span>（除数）做模<span class="number">2</span>除法，</div><div class="line">得到的余数便是<span class="number">101</span>B(即CRC校验和)，</div><div class="line">所以该数据的循环冗余校验后的数据应为<span class="number">1000</span> <span class="number">000</span>B+<span class="number">101</span>B=<span class="number">1000101</span>B。</div></pre></td></tr></table></figure></p>
 <h3 id="Multiple-access-links-protocols"><a href="#Multiple-access-links-protocols" class="headerlink" title="Multiple access links , protocols"></a>Multiple access links , protocols</h3><p>two types of links</p>
 <ul>
