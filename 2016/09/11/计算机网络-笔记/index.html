@@ -100,7 +100,7 @@ IEEE 802.3 CMSA/CD, IEEE 802.4 Token Bus, IEEE 802.5 Token Ring多路访问协�
 网络协议的三要素(语法,语义,同步)
 网络工程中常用的线缆标准为568A(直通线568A-568A)(交叉线568A-568B)
 IEEE 802.3 CMSA/CD, IEEE 802.4 Token Bus, IEEE 802.5 Token Ring多路访问协议(mult">
-<meta property="og:updated_time" content="2016-11-12T10:04:32.464Z">
+<meta property="og:updated_time" content="2016-11-13T16:22:07.747Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络-笔记">
 <meta name="twitter:description" content="0tcp报文中的 Timestamp optionTimestamp value 和 Timestamp echo 作用
@@ -357,6 +357,36 @@ IEEE 802.3 CMSA/CD, IEEE 802.4 Token Bus, IEEE 802.5 Token Ring多路访问协�
 <p><a href="https://en.wikipedia.org/wiki/Exponential_backoff#Binary_exponential_backoff_.2F_truncated_exponential_backoff" target="_blank" rel="external">CSMA/CD采用的二进制指数退避算法</a><br><a href="http://baike.baidu.com/item/%E6%88%AA%E6%96%AD%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%8C%87%E6%95%B0%E9%80%80%E9%81%BF%E7%AE%97%E6%B3%95" target="_blank" rel="external">截断二进制指数退避算法</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Synchronous_Data_Link_Control" target="_blank" rel="external">SDLC: Synchronous Data Link Control – layer 2, 现在已经逐渐被IP协议取代</a></p>
 <p><a href="http://www.cnblogs.com/aixin0813/p/3310040.html" target="_blank" rel="external">以太网帧最小帧长与最大帧长</a><br>以太网的帧开销是18字节，是“目的MAC（6）＋源MAC（6）＋Type（2）＋CRC（4）”。以太网最小帧长为64字节，那么IP报文最小为46字节，而局域网规定IP最大传输单元1500字节，实际上加上以太网帧的18字节，就是1518字节。<br>IEEE定义了这个标准，一个碰撞域内，最远的两台机器之间的round-trip time 要小于512bit time。(来回时间小于512位时，所谓位时就是传输一个比特需要的时间）。这也是我们常说的一个碰撞域的直径。</p>
+<p><strong>ICMP差错报文</strong></p>
+<ul>
+<li>对于携带ICMP差错报文的数据包, 不再产生ICMP差错报文</li>
+<li>对于分段的数据报文, 如果不是第一个分段则不产生ICMP差错报文</li>
+<li>对于多播地址的数据报文, 不产生ICMP差错报文</li>
+<li>具有特殊地址的数据报文, 如127.0.0.0或0.0.0.0, 不产生ICMP差错报文</li>
+</ul>
+<p><strong>唯一标识一个UDP套接字的是</strong>目的端口号和目的IP地址.</p>
+<p><strong>NAT</strong>服务的路由器转发一个源IP地址为10.0.0.1的IP数据分组时,可能重写的IP分组首部字段是</p>
+<ul>
+<li>总长度</li>
+<li>源IP地址</li>
+<li>源端口</li>
+<li>checksum</li>
+<li>TTL<br>不会改变的是</li>
+<li>ID</li>
+<li>目的IP地址</li>
+<li>协议</li>
+</ul>
+<p><strong>用于实现可靠数据传输的机制有</strong></p>
+<ul>
+<li>确认</li>
+<li>差错检测</li>
+<li>重传</li>
+<li>计时器</li>
+<li>序列号</li>
+</ul>
+<p>直通交换方式是指以太网交换机可以在各端口间交换数据。它在输入端口检测到一个数据包时，检查该包的包头，获取包的目的地址，启动内部的动态查找表转换成相应的输出端口，在输入与输出交叉处接通，把数据包直通到相应的端口，实现交换功能。通常情况下，直通交换方式只检查数据包的包头即前14个字节，由于不需要考虑前导码，只需要检测目的地址的6B，所以最短的传输延迟是0.48μs。</p>
+<p>由于快速以太网的最短帧长为64字节，去除首部18字节，即数据部分最短46字节。从表1中可以看出，第3号和第5号分组的总长度为40（28H）字节，小于46字节，其他分组总长度均大于46字节，所以3号和5号分组在通过快速以太网传输时需要填充。</p>
+<p><a href="http://m.kaoyanbashi.com/zhuanyeke/jsj/5374.html" target="_blank" rel="external">考研题</a></p>
 <h2 id="答案暂存"><a href="#答案暂存" class="headerlink" title="答案暂存"></a>答案暂存</h2><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span><span class="number">-5</span> B A A A C</div><div class="line"><span class="number">6</span><span class="number">-10</span> C D C C B</div><div class="line"><span class="number">11</span><span class="number">-15</span> D B A A B</div><div class="line"><span class="number">16</span><span class="number">-20</span> D A C D C </div><div class="line"></div><div class="line"><span class="number">36</span>页开始</div><div class="line"></div><div class="line">一,填空题</div><div class="line"><span class="number">1.</span> 自治系统内路由, 自治系统外路由. 自适应性, 鲁棒性, </div><div class="line"><span class="number">2.</span> 报文, 建立.</div><div class="line"><span class="number">3.</span> 语法, 语义, 时序</div><div class="line"><span class="number">4.</span> 物理层, 链路层, 网络层</div><div class="line"><span class="number">5.</span> 总线, 交换机, 网桥, 路由器</div><div class="line">二, 选择题</div><div class="line"><span class="number">1</span><span class="number">-5</span> A D B B C</div><div class="line"><span class="number">6</span><span class="number">-10</span> C A B</div><div class="line">三, 简答题</div><div class="line"><span class="number">1.</span> <span class="number">1</span>, <span class="number">0</span>-L, L, 传输失败</div><div class="line"><span class="number">2.</span> <span class="number">5</span>微秒, <span class="number">10</span>微秒</div><div class="line">四, 计算题</div><div class="line"><span class="number">1.</span> <span class="number">2400</span> * <span class="number">30</span> = <span class="number">7.2</span> * <span class="number">10</span>^<span class="number">4</span>, 每个汉字<span class="number">16</span>bit, <span class="number">4.5</span>*<span class="number">10</span>^<span class="number">3</span></div><div class="line"><span class="number">2.</span> <span class="number">194.47</span><span class="number">.21</span><span class="number">.136</span>  C类 <span class="number">254</span>台</div></pre></td></tr></table></figure>
 <hr>
 <h1 id="计算机网络5E"><a href="#计算机网络5E" class="headerlink" title="计算机网络5E"></a>计算机网络5E</h1><h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><ul>
