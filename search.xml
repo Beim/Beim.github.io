@@ -4,6 +4,20 @@
   
     
     <entry>
+      <title><![CDATA[ubuntu下安装chromium]]></title>
+      <url>https://beim.github.io/2016/11/14/ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85chromium/</url>
+      <content type="html"><![CDATA[<h1 id="chromium"><a href="#chromium" class="headerlink" title="chromium"></a>chromium</h1><h2 id="下载chromium"><a href="#下载chromium" class="headerlink" title="下载chromium"></a>下载chromium</h2><p>从<a href="https://github.com/scheib/chromium-latest-linux" target="_blank" rel="external">github</a>上下载这几个脚本<br>放置在<code>/usr/local/src/</code>目录下</p>
+<p>运行<code>./update.sh</code><br>此时将最新版本的chromium下载到了<code>/usr/local/src/chromium-latest-linux/latest</code>目录下</p>
+<h2 id="设置别名"><a href="#设置别名" class="headerlink" title="设置别名"></a>设置别名</h2><p><code>vi ~/.bashrc</code><br>在最后添加<br><code>alias chromium=&#39;/usr/local/src/chromium-latest-linux/run.sh&#39;</code></p>
+<p>这时在终端中输入<code>chromium</code>即可打开chromium浏览器</p>
+<hr>
+<h1 id="flash"><a href="#flash" class="headerlink" title="flash"></a>flash</h1><h2 id="下载adobe-flash"><a href="#下载adobe-flash" class="headerlink" title="下载adobe flash"></a>下载adobe flash</h2><p>从<a href="https://get.adobe.com/cn/flashplayer/?no_redirect" target="_blank" rel="external">flash 官网</a>下载合适版本的flash<br>解压到<code>/usr/local/src/chromium-latest-linux/flash</code>目录下<br>将其中的<code>libpepflashplayer.so</code>复制到<code>/usr/local/src/chromium-latest-linux/latest</code>目录下</p>
+<h2 id="启用flash"><a href="#启用flash" class="headerlink" title="启用flash"></a>启用flash</h2><p>修改<code>run.sh</code>, <code>vi ./run.sh</code><br>将其中的<code>$BASEDIR/latest/chrome --user-data-dir=&quot;$BASEDIR/user-data-dir&quot; $* &amp;&gt; /dev/null &amp;</code><br>改为<code>$BASEDIR/latest/chrome --ppapi-flash-path=&quot;$BASEDIR/latest/libpepflashplayer.so&quot; --user-data-dir=&quot;$BASEDIR/user-data-dir&quot; $* &amp;&gt; /dev/null &amp;</code></p>
+<p>打开chromium, 进入<code>chrome://plugins</code>, 找到<code>Adobe Flash Player</code>, 点击<code>允许始终运行</code></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[计网实验准备]]></title>
       <url>https://beim.github.io/2016/11/08/%E8%AE%A1%E7%BD%91%E5%AE%9E%E9%AA%8C%E5%87%86%E5%A4%87/</url>
       <content type="html"><![CDATA[<h1 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a><strong>实验目的</strong></h1><p>(1)按照图 4-1 所示,将网络设备用适当的线路连接好,注意 console 控制线和双绞<br>线不要混淆。<br>(2)通过“超级终端”软件连接到路由器或交换机的控制口,进入 IOS 系统。初步了<br>解 IOS 系统特性,为路由器或交换机配置名称、密码等,启用 telnet 服务,使以后的配置可<br>以通过 telnet 方式进行。<br>(3)通过 telnet 方式进入 IOS 的 CLI 配置界面,分别对三台网络设置进行适当的配置,<br>使局域网的四台计算机可以互相 ping 通。</p>
@@ -283,10 +297,10 @@
 </ul>
 <p><code>服务系统的要素</code></p>
 <ul>
-<li>服务参与者(包括顾客,服务提供者等)(服务参与者具有特定的<em>价值需求</em>, 掌握特定的<em>服务资源</em>, 可发出<em>服务行为</em>, 通过<em>信息共享</em>完成服务)(参与者可分为: 顾客,提供者,使能者)</li>
-<li>服务资源</li>
-<li>服务信息</li>
-<li>服务交互行为</li>
+<li><strong>服务参与者</strong>(包括顾客,服务提供者等)(服务参与者具有特定的<em>价值需求</em>, 掌握特定的<em>服务资源</em>, 可发出<em>服务行为</em>, 通过<em>信息共享</em>完成服务)(参与者可分为: 顾客,提供者,使能者)</li>
+<li><strong>服务资源</strong>(软件,硬件或设备, 资源的能力, 服务环境)(是被动参与服务的各类支持性资源(Enabling Resources)，具备特定的能力(Capability)，在服务主体的控制下可向外提供特定的行为(Behavior)。)(产品型资源, 独占型资源, 共享型资源, 可复用资源, 消耗型资源)</li>
+<li><strong>服务信息</strong>(刻画了服务交互行为过程中被创造或采集的各类信息(Shared Information)，并在服务参与者之间、资源与参与者之间相互传递和使用。)(分为<em>资源类信息</em>(如航线信息, 报价信息)和 <em>指令类信息</em>(如海运物流中的订单))</li>
+<li><strong>服务交互行为</strong>(交互过程, 活动与动作)</li>
 </ul>
 <p><code>服务价值网</code>(service value network)(描述服务参与者之间价值交换关系的有向网络结构)</p>
 <ul>
@@ -295,6 +309,27 @@
 <li>边的内容(被交换的价值(产品, 知识, 金钱, 经验, 市场影响等))</li>
 </ul>
 <p><code>服务价值网中的价值交换模式</code>(直达顾客模式DCP)(外包链模式OCP)(聚合/聚集模式MAP)</p>
+<blockquote>
+<p>BlockChain(区块链)</p>
+</blockquote>
+<p><strong>软件系统的声明周期</strong><br>用户提出需求- 需求分析- 系统设计- 系统开发- 测试- 软件实施- 软件运行- 软件维护- 软件报废</p>
+<p><strong>服务系统的狭义生命周期</strong><br>从系统运行的角度:服务价值的生命周期</p>
+<ul>
+<li>双方找寻</li>
+<li>双方协商</li>
+<li>单方准备</li>
+<li>协同生产</li>
+<li>传递</li>
+<li>使用</li>
+<li>支付</li>
+</ul>
+<h2 id="服务工程与方法论"><a href="#服务工程与方法论" class="headerlink" title="服务工程与方法论"></a>服务工程与方法论</h2><h3 id="系统工程与服务工程"><a href="#系统工程与服务工程" class="headerlink" title="系统工程与服务工程"></a>系统工程与服务工程</h3><p>软件工程–系统工程的具体化<br>在’软件工程’基础上的服务工程</p>
+<p>服务工程核心–服务方法论</p>
+<h3 id="服务工程方法论"><a href="#服务工程方法论" class="headerlink" title="服务工程方法论"></a>服务工程方法论</h3><ul>
+<li>服务模型</li>
+<li>服务建模方法</li>
+<li>服务系统构建方法<br>end ppt-62</li>
+</ul>
 ]]></content>
     </entry>
     
