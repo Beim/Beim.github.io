@@ -10,6 +10,7 @@
 <p>运行<code>./update.sh</code><br>此时将最新版本的chromium下载到了<code>/usr/local/src/chromium-latest-linux/latest</code>目录下</p>
 <h2 id="设置别名"><a href="#设置别名" class="headerlink" title="设置别名"></a>设置别名</h2><p><code>vi ~/.bashrc</code><br>在最后添加<br><code>alias chromium=&#39;/usr/local/src/chromium-latest-linux/run.sh&#39;</code></p>
 <p>这时在终端中输入<code>chromium</code>即可打开chromium浏览器</p>
+<h2 id="更新chromium"><a href="#更新chromium" class="headerlink" title="更新chromium"></a>更新chromium</h2><p>只需要再运行<code>chromium-latest-linux</code>目录下的<code>update.sh</code>脚本就可以了</p>
 <hr>
 <h1 id="flash"><a href="#flash" class="headerlink" title="flash"></a>flash</h1><h2 id="下载adobe-flash"><a href="#下载adobe-flash" class="headerlink" title="下载adobe flash"></a>下载adobe flash</h2><p>从<a href="https://get.adobe.com/cn/flashplayer/?no_redirect" target="_blank" rel="external">flash 官网</a>下载合适版本的flash<br>解压到<code>/usr/local/src/chromium-latest-linux/flash</code>目录下<br>将其中的<code>libpepflashplayer.so</code>复制到<code>/usr/local/src/chromium-latest-linux/latest</code>目录下</p>
 <h2 id="启用flash"><a href="#启用flash" class="headerlink" title="启用flash"></a>启用flash</h2><p>修改<code>run.sh</code>, <code>vi ./run.sh</code><br>将其中的<code>$BASEDIR/latest/chrome --user-data-dir=&quot;$BASEDIR/user-data-dir&quot; $* &amp;&gt; /dev/null &amp;</code><br>改为<code>$BASEDIR/latest/chrome --ppapi-flash-path=&quot;$BASEDIR/latest/libpepflashplayer.so&quot; --user-data-dir=&quot;$BASEDIR/user-data-dir&quot; $* &amp;&gt; /dev/null &amp;</code></p>
