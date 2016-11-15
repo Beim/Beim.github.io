@@ -100,7 +100,7 @@ IEEE 802.3 CMSA/CD, IEEE 802.4 Token Bus, IEEE 802.5 Token Ring多路访问协�
 网络协议的三要素(语法,语义,同步)
 网络工程中常用的线缆标准为568A(直通线568A-568A)(交叉线568A-568B)
 IEEE 802.3 CMSA/CD, IEEE 802.4 Token Bus, IEEE 802.5 Token Ring多路访问协议(mult">
-<meta property="og:updated_time" content="2016-11-13T16:22:07.747Z">
+<meta property="og:updated_time" content="2016-11-15T14:21:56.188Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络-笔记">
 <meta name="twitter:description" content="0tcp报文中的 Timestamp optionTimestamp value 和 Timestamp echo 作用
@@ -386,6 +386,13 @@ IEEE 802.3 CMSA/CD, IEEE 802.4 Token Bus, IEEE 802.5 Token Ring多路访问协�
 </ul>
 <p>直通交换方式是指以太网交换机可以在各端口间交换数据。它在输入端口检测到一个数据包时，检查该包的包头，获取包的目的地址，启动内部的动态查找表转换成相应的输出端口，在输入与输出交叉处接通，把数据包直通到相应的端口，实现交换功能。通常情况下，直通交换方式只检查数据包的包头即前14个字节，由于不需要考虑前导码，只需要检测目的地址的6B，所以最短的传输延迟是0.48μs。</p>
 <p>由于快速以太网的最短帧长为64字节，去除首部18字节，即数据部分最短46字节。从表1中可以看出，第3号和第5号分组的总长度为40（28H）字节，小于46字节，其他分组总长度均大于46字节，所以3号和5号分组在通过快速以太网传输时需要填充。</p>
+<p><code>DNS资源记录类型</code>(Resource Records)<br>(name, value, type, ttl)</p>
+<ul>
+<li><code>Type=A</code>; Name: 主机域名; Value: IP地址; (<code>jwts.hit.edu.cn.   28800   IN  A   219.217.228.102</code>)</li>
+<li><code>Type=NS</code>; Name: 域(edu.cn); Value: 该域权威域名解析服务器的主机域名(edu.cn.          172800  IN  NS  dns.edu.cn.)</li>
+<li><code>Type=CNAME</code>; Name: 某一真实域名的别名; Value: 真实域名 (beim.github.io.      3600    IN  CNAME   github.map.fastly.net.)</li>
+<li><code>Type=MX</code>; Value是与name相对应的邮件服务器</li>
+</ul>
 <p><a href="http://m.kaoyanbashi.com/zhuanyeke/jsj/5374.html" target="_blank" rel="external">考研题</a></p>
 <h2 id="答案暂存"><a href="#答案暂存" class="headerlink" title="答案暂存"></a>答案暂存</h2><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span><span class="number">-5</span> B A A A C</div><div class="line"><span class="number">6</span><span class="number">-10</span> C D C C B</div><div class="line"><span class="number">11</span><span class="number">-15</span> D B A A B</div><div class="line"><span class="number">16</span><span class="number">-20</span> D A C D C </div><div class="line"></div><div class="line"><span class="number">36</span>页开始</div><div class="line"></div><div class="line">一,填空题</div><div class="line"><span class="number">1.</span> 自治系统内路由, 自治系统外路由. 自适应性, 鲁棒性, </div><div class="line"><span class="number">2.</span> 报文, 建立.</div><div class="line"><span class="number">3.</span> 语法, 语义, 时序</div><div class="line"><span class="number">4.</span> 物理层, 链路层, 网络层</div><div class="line"><span class="number">5.</span> 总线, 交换机, 网桥, 路由器</div><div class="line">二, 选择题</div><div class="line"><span class="number">1</span><span class="number">-5</span> A D B B C</div><div class="line"><span class="number">6</span><span class="number">-10</span> C A B</div><div class="line">三, 简答题</div><div class="line"><span class="number">1.</span> <span class="number">1</span>, <span class="number">0</span>-L, L, 传输失败</div><div class="line"><span class="number">2.</span> <span class="number">5</span>微秒, <span class="number">10</span>微秒</div><div class="line">四, 计算题</div><div class="line"><span class="number">1.</span> <span class="number">2400</span> * <span class="number">30</span> = <span class="number">7.2</span> * <span class="number">10</span>^<span class="number">4</span>, 每个汉字<span class="number">16</span>bit, <span class="number">4.5</span>*<span class="number">10</span>^<span class="number">3</span></div><div class="line"><span class="number">2.</span> <span class="number">194.47</span><span class="number">.21</span><span class="number">.136</span>  C类 <span class="number">254</span>台</div></pre></td></tr></table></figure>
 <hr>
@@ -423,12 +430,12 @@ IEEE 802.3 CMSA/CD, IEEE 802.4 Token Bus, IEEE 802.5 Token Ring多路访问协�
 </li>
 </ul>
 <hr>
-<h2 id="报文格式"><a href="#报文格式" class="headerlink" title="报文格式"></a>报文格式</h2><p><strong>ICMP</strong></p>
-<p>Type(1) Code(1) Checksum(2)<br>(这4 个字节取决于ICMP 报文的类型)<br>(ICMP 的数据部分, (长度取决于类型))</p>
-<p><strong>Ethernet frame</strong></p>
-<p>preamble(8) des-address(6) source-address(6) type(2) data(payload)(46-1500) CRC(4)</p>
-<p><strong>PPP Data Frame</strong></p>
-<p>flag(1) address(1) control(1) protocol(1 or 2) info(variable) check(2 or 4) flag(1)</p>
+<h2 id="报文格式"><a href="#报文格式" class="headerlink" title="报文格式"></a>报文格式</h2><p><strong>TCP</strong><br>// 单位bit<br>source port(16) dest port(16)<br>sequence number(32)<br>ack number(32)<br>headlen(4) reserved(3) Nonce(1) CWR ECN-Echo Urgent ACK PUSH RST SYN FIN (16) Receive-window-size(16)<br>checksum(16) urgent-pointer(16)<br>Options(variable length)</p>
+<p>// seq num和ack num通过bytes of data来计算<br>// 标识位中SYN值为2, ACK值为16, FIN值为1; <code>因此SYN为02H, SYN,ACK为12H, ACK为10H, 可以通过这个来判断三次握手是否完成</code><br>// <code>常用</code> seq-num, ack-num, SYN, ACK</p>
+<p><strong>IP</strong><br>// 单位bit<br>版本号(4) 首部长度(4) 服务类型(TOS)(8) 总长度(16)<br>标识ID(16) 标识位(3) 片偏移(15)<br>生存时间TTL(8) 协议(8) 首部校验和(16)<br>源IP地址(32)<br>目的IP地址(32)<br>可变: 选项字段 填充<br>数据<br>// 最大IP分组总长度65535B, 最小IP分组首部20B, IP分组可以封装的最大数据65535-20=65515B<br>// 分片不改变标识(ID)<br>// 标识位占3位, (保留)(DF)(MF)<br>// 片偏移量占13位, 以8字节为单位<br>// 协议, 06为TCP, 17为UDP<br>// 首部校验和计算时该字段全置0, 采用反码算数运算求和, 和的反码作为首部校验和字段, 逐跳计算, 逐跳校验<br>// <code>常用</code>, 总长度, TTL, 上层协议, 源和目的IP地址</p>
+<p><strong>ICMP</strong><br>Type(1) Code(1) Checksum(2)<br>(这4 个字节取决于ICMP 报文的类型)<br>(ICMP 的数据部分, (长度取决于类型))</p>
+<p><strong>Ethernet frame</strong><br>// 单位Byte<br>preamble(8) des-address(6) source-address(6) type(2) data(payload)(46-1500) CRC(4)</p>
+<p><strong>PPP Data Frame</strong><br>flag(1) address(1) control(1) protocol(1 or 2) info(variable) check(2 or 4) flag(1)</p>
 <p>flag: delimiter<br>Address: does nothing<br>Control: does nothing, in the future possible multiple control fields<br>Protocol: upper layer protocol<br>info: upper layer data being carried<br>check: cyclic redundancy check for error detection</p>
 <p><strong>ARP</strong><br>Hardware type: Ethernet<br>protocol type: IPv4<br>Hardware size: 6<br>Protocol size: 4<br>Opcode: request<br>Sender MAC address: d4:ee:07:0e:b7:ec<br>Sender IP address: 192.168.10.122<br>Target MAC address: 00:00:00:00:00:00<br>Target IP address: 192.168.10.10</p>
 <hr>
@@ -905,7 +912,7 @@ IEEE 802.3 CMSA/CD, IEEE 802.4 Token Bus, IEEE 802.5 Token Ring多路访问协�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">34</span>
+              <span class="site-state-item-count">35</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
