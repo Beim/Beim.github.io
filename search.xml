@@ -1304,6 +1304,7 @@
 </ul>
 <p>直通交换方式是指以太网交换机可以在各端口间交换数据。它在输入端口检测到一个数据包时，检查该包的包头，获取包的目的地址，启动内部的动态查找表转换成相应的输出端口，在输入与输出交叉处接通，把数据包直通到相应的端口，实现交换功能。通常情况下，直通交换方式只检查数据包的包头即前14个字节，由于不需要考虑前导码，只需要检测目的地址的6B，所以最短的传输延迟是0.48μs。</p>
 <p>由于快速以太网的最短帧长为64字节，去除首部18字节，即数据部分最短46字节。从表1中可以看出，第3号和第5号分组的总长度为40（28H）字节，小于46字节，其他分组总长度均大于46字节，所以3号和5号分组在通过快速以太网传输时需要填充。</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">快速以太网最短帧长为<span class="number">64</span>字节, 首部<span class="number">18</span>字节, 因此数据部分最短<span class="number">46</span>字节.</div><div class="line"><span class="number">64</span>*<span class="number">8</span> = <span class="number">512</span>, <span class="number">10</span>Mbps以太网中按照二进制指数退避算法的退避时间单元为<span class="number">512</span>b / <span class="number">10</span>Mbps = <span class="number">51.2</span>us</div></pre></td></tr></table></figure>
 <p><code>DNS资源记录类型</code>(Resource Records)<br>(name, value, type, ttl)</p>
 <ul>
 <li><code>Type=A</code>; Name: 主机域名; Value: IP地址; (<code>jwts.hit.edu.cn.   28800   IN  A   219.217.228.102</code>)</li>
