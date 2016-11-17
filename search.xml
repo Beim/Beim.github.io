@@ -4,6 +4,77 @@
   
     
     <entry>
+      <title><![CDATA[服务学论文-Big-Data-Sensing-and-Services]]></title>
+      <url>https://beim.github.io/2016/11/17/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E8%AE%BA%E6%96%87-Big-Data-Sensing-and-Services/</url>
+      <content type="html"><![CDATA[<h2 id="词"><a href="#词" class="headerlink" title="词"></a>词</h2><ul>
+<li><p><a href="https://zh.wikipedia.org/wiki/%E6%A9%9F%E5%99%A8%E5%B0%8D%E6%A9%9F%E5%99%A" target="_blank" rel="external">M2M(机器对机器)- wiki</a></p>
+</li>
+<li><p><a href="https://www.baidu.com/s?ie=utf-8&amp;f=8&amp;rsv_bp=0&amp;rsv_idx=1&amp;tn=baidu&amp;wd=big%20data%20sensing&amp;rsv_pq=b7c3065c00010c8b&amp;rsv_t=470d4YSKnjqSjoG0qupL5GS0%2F1omt1CeIW0RsrjFsrF3GrySKTgEarKypBA&amp;rqlang=cn&amp;rsv_enter=1&amp;rsv_sug3=15&amp;rsv_sug1=9&amp;rsv_sug7=100&amp;rsv_sug2=0&amp;inputT=1675&amp;rsv_sug4=1675" target="_blank" rel="external">big data sensing</a></p>
+</li>
+<li><p><a href="https://zh.wikipedia.org/wiki/%E7%84%A1%E7%B7%9A%E6%84%9F%E6%B8%AC%E7%B6%B2%E8%B7%AF" target="_blank" rel="external">WSN(无线感测网络)- wiki</a></p>
+</li>
+</ul>
+<hr>
+<h2 id="摘"><a href="#摘" class="headerlink" title="摘"></a>摘</h2><h3 id="Section1"><a href="#Section1" class="headerlink" title="Section1"></a>Section1</h3><p>阐述的问题</p>
+<ul>
+<li>What is big data sensing?</li>
+<li>Why is it important to us?</li>
+<li>What kinds of big data sensing services and application?</li>
+<li>What are big data sensing infrastructures, platforms, and services?</li>
+<li>What are the current advances and state-of-the-art research work in big data sensing and services?</li>
+<li>What are the underlying challenges, issues, and needs?</li>
+</ul>
+<p>结构</p>
+<ul>
+<li>Section2 : big data sensing and services 的基本概念, 主要目标, 动机, 研究领域, 利益, classified big data sensing services</li>
+<li>Section3 : 讨论不同类型的big data sensing services 和它们的根据现有研究工作的分类</li>
+<li>Section4 : 关注big data sensing的基础设施和架构, 提出一个big data sensing services的参考基础设施</li>
+<li>Section5 : 提出未来面临的挑战和问题</li>
+</ul>
+<hr>
+<h3 id="Section2"><a href="#Section2" class="headerlink" title="Section2"></a>Section2</h3><p>Big Data Sensing(DBS) ;</p>
+<ul>
+<li>big data computing &amp; services</li>
+<li>sensor cloud computing &amp; services</li>
+<li>Sensos and Sensor Networking</li>
+</ul>
+<p>DBS provide on-demand, scalable and tenant based big data analytics services for diverse domain applications.</p>
+<p>Big Data Sensing and Service Rack (bottom up)</p>
+<ul>
+<li><strong>Resource Pool</strong> (includes <code>sensors</code>, <code>sensor networks</code>, <code>computing and storage servers</code>, <code>internet and mobile networks</code>)</li>
+<li><strong>Network infrastructure</strong> (includes <code>wireless networks</code> and <code>Internet</code>.)</li>
+<li><strong>Business service models</strong></li>
+<li><strong>Deployment Models</strong> (include four different deployment models: <code>private big data sensing</code>, <code>public big data sensing</code>, <code>community big data sensing</code>, <code>hybrid big data sensing</code>)</li>
+</ul>
+<p>features in big data sensing</p>
+<ul>
+<li><strong>Big data sensing clouds</strong></li>
+<li><strong>Auto data sensing prevision</strong></li>
+<li><strong>Big data sensing security</strong>  </li>
+<li><strong>On-demand data sensing services</strong></li>
+<li><strong>Elastic data sensing scalability</strong></li>
+<li><strong>Monitor &amp; measurement and billing</strong></li>
+<li><strong>Multi-tenanted access and services</strong></li>
+<li><strong>Big sensing data collection and management</strong></li>
+<li>virtualization for big data sensing</li>
+</ul>
+<p>why big data sensing and services</p>
+<ul>
+<li>reasons to study an develop big data sensing and services</li>
+<li>benefits to sensor services vendors and stakeholders</li>
+<li>benefits to big data sensing users and application vendors</li>
+</ul>
+<p>The research scope of Big Data Sensing</p>
+<ul>
+<li><strong>Big sensing resource tier</strong> (<code>sensors and sensor networks</code>, <code>internet and mobile networks</code>, <code>computing  servers</code>, <code>big data storage servers</code>)</li>
+<li><strong>Big sensing infrastructure tier</strong> (this provide users a visualized sensor infrastructure; includes <code>sensors</code>, <code>sensor networks</code>, <code>computing and storage servers</code>, and <code>internet and mobile networks</code>)</li>
+<li><strong>Big sensing service tier</strong> (includes three types of services: <code>Big sensing data services</code>, <code>big sensing data platform services</code>, <code>Big sensing data analytics services</code>)</li>
+<li><strong>Big sensing application service tier</strong> (this refers to various types of sensor-oriented data application programs)</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[现代服务业案例之菜鸟网络]]></title>
       <url>https://beim.github.io/2016/11/16/%E7%8E%B0%E4%BB%A3%E6%9C%8D%E5%8A%A1%E4%B8%9A%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%8F%9C%E9%B8%9F%E7%BD%91%E7%BB%9C/</url>
       <content type="html"><![CDATA[<h1 id="菜鸟网络"><a href="#菜鸟网络" class="headerlink" title="菜鸟网络"></a>菜鸟网络</h1><p>2013年5月28日，阿里巴巴集团、银泰集团联合复星集团、富春控股、顺丰集团、三通一达（申通、圆通、中通、韵达）宅急送、汇通，以及相关金融机构共同宣布，“中国智能物流骨干网”(简称CSN)项目正式启动，合作各方共同组建的“菜鸟网络科技有限公司”正式成立。马云任董事长，张勇任首席执行官。[1] </p>
