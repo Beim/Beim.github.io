@@ -13,6 +13,8 @@
 </li>
 <li><p><a href="https://zh.wikipedia.org/wiki/%E7%84%A1%E7%B7%9A%E6%84%9F%E6%B8%AC%E7%B6%B2%E8%B7%AF" target="_blank" rel="external">WSN(无线感测网络)- wiki</a></p>
 </li>
+<li><p>SLA(service-level aggrement)服务水平协议</p>
+</li>
 </ul>
 <hr>
 <h2 id="摘"><a href="#摘" class="headerlink" title="摘"></a>摘</h2><h3 id="Section1"><a href="#Section1" class="headerlink" title="Section1"></a>Section1</h3><p>阐述的问题</p>
@@ -71,6 +73,19 @@
 <li><strong>Big sensing service tier</strong> (includes three types of services: <code>Big sensing data services</code>, <code>big sensing data platform services</code>, <code>Big sensing data analytics services</code>)</li>
 <li><strong>Big sensing application service tier</strong> (this refers to various types of sensor-oriented data application programs)</li>
 </ul>
+<h3 id="Big-Data-Sensing-Services"><a href="#Big-Data-Sensing-Services" class="headerlink" title="Big Data Sensing Services"></a>Big Data Sensing Services</h3><p>One of big data sensing services is to provide a virtualized sensing infrastructure based on a sensor cloud infrastructure</p>
+<p>essential features of a sensor cloud:</p>
+<ul>
+<li><strong>Automatic prevision and management</strong></li>
+<li><strong>Sensor/sensor network virtualization</strong></li>
+<li><strong>On-demand sensor service</strong></li>
+<li><strong>Elastic scalability</strong></li>
+<li><strong>Monitor and Measurement</strong></li>
+<li><strong>Secured sensor data collection and transmission</strong></li>
+<li><strong>SLA-based billing</strong></li>
+</ul>
+<p><strong>SIaaS</strong> (sensor cloud infrastructure-as-a-service) (Its major objective is to increase the sharing and usage of sensors by reducing the costs)</p>
+<p><strong>SDaaS</strong> (Sensing Data Service as a Service) </p>
 ]]></content>
     </entry>
     
@@ -125,7 +140,11 @@
 </ul>
 </li>
 </ul>
-]]></content>
+<h2 id="IT-Project-Management"><a href="#IT-Project-Management" class="headerlink" title="IT Project Management"></a>IT Project Management</h2><p><strong>stakeholders</strong><br><strong>9 Project Management Knowledge Areas</strong>(core functions)(facilitating knowledge)</p>
+<blockquote>
+<p>Microsoft Project 2010+</p>
+</blockquote>
+<h2 id="Project-integration"><a href="#Project-integration" class="headerlink" title="Project integration"></a>Project integration</h2>]]></content>
     </entry>
     
     <entry>
@@ -1302,7 +1321,7 @@
 <p><code>基本块DAG的构造</code><br>从DAG中获得的信息:(确定哪些标识符在基本块中被<em>引用</em>过)(确定哪些语句计算的值可以在基本块外被引用)</p>
 <h3 id="数据流分析"><a href="#数据流分析" class="headerlink" title="数据流分析"></a>数据流分析</h3><p><em>语句</em>的数据流模式 (IN[s] 语句s之前的数据流值)(OUT[s] 语句s之后的数据流值)<br><em>fs</em>: 语句s的传递函数(一个赋值语句s之前和之后的数据流值的关系)(前向传播: OUT[s] = fs(IN[s]))(逆向传播 IN[s] = fs(OUT[s]))</p>
 <p><em>基本块</em>上的数据流模式(IN[B]: 紧随基本块B之前的数据流值)(OUT[B]: 紧随基本块B之后的数据流值)<br><em>fB</em>: 基本块B的传递函数(前向数据流问题: OUT[B] = fB(IN[B]) , fB = fsn<em>…</em>fs2<em>fs1)(逆向数据流问题: IN[B] = fB(OUT[B]) , `fB = fs1</em>fs2<em>…</em>fsn`)</p>
-<h4 id="到达定值分析"><a href="#到达定值分析" class="headerlink" title="到达定值分析"></a><strong>到达定值分析</strong></h4><p><code>定值</code><br><code>到达定值</code><br>用途: (循环不变计算的检测)(常数合并)(判定变量x在p点上是否<em>未经定值</em>就被<em>引用</em>)</p>
+<h4 id="到达定值分析"><a href="#到达定值分析" class="headerlink" title="到达定值分析"></a>到达定值分析</h4><p><code>定值</code><br><code>到达定值</code><br>用途: (循环不变计算的检测)(常数合并)(判定变量x在p点上是否<em>未经定值</em>就被<em>引用</em>)</p>
 <p><em>生成</em>与<em>杀死</em></p>
 <p><code>到达定值的传递函数</code><br>(fd: 定值d: u = v + w的传递函数)(fd(x) = gend U (x - killd))(gend: 由语句d生成的定值的集合)(killd: 由语句杀死的定值的集合)(x d之前生成的定值的集合)<br>(fB: 基本块B的传递函数)(fB(x) = genB U (x - killB))(killB = kill1 U kill2 U … U killn 被基本块B中各个语句杀死的定值的集合)(genB = genn U (genn-1 - killn) U … U (gen1 - kill1 - … - killn) 基本块中没有被块中各个语句杀死的定值的集合)</p>
 <p><code>到达定值的数据流方程</code></p>
@@ -1313,7 +1332,8 @@
 <h3 id="流图中的循环"><a href="#流图中的循环" class="headerlink" title="流图中的循环"></a>流图中的循环</h3><p><strong>支配节点</strong></p>
 <p><strong>回边</strong></p>
 <p><strong>自然循环</strong></p>
-<h3 id="全局优化"><a href="#全局优化" class="headerlink" title="全局优化"></a>全局优化</h3>]]></content>
+<h3 id="全局优化"><a href="#全局优化" class="headerlink" title="全局优化"></a>全局优化</h3><p><strong>删除全局公共子表达式</strong><br><strong>删除复制语句</strong><br><strong>代码移动</strong></p>
+]]></content>
     </entry>
     
     <entry>
@@ -2051,6 +2071,8 @@
 <p><strong>白日梦</strong><br><a href="http://music.163.com/#/song?id=29043460" target="_blank" rel="external">プラスティックとレイン</a><br>很想回去<br><code>Sat Nov 12 19:04</code></p>
 <hr>
 <p><strong>大清早</strong><br>和00聊了会儿<br>好久不见她<br>貌似发生了什么事情<br>希望她好起来吧<br><code>Wed Nov 16 08:17</code></p>
+<hr>
+<p><strong>白日梦</strong><br>下午和清河阿尔法小溪跑车了<br>兔子.好想你<br><code>Fri Nov 18 20:15</code></p>
 <hr>
 ]]></content>
     </entry>

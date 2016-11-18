@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://beim.github.io/2016/09/14/编译原理2E-笔记/index.html">
 <meta property="og:site_name" content="北冥945">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/compilers.jpg">
-<meta property="og:updated_time" content="2016-11-16T04:12:17.836Z">
+<meta property="og:updated_time" content="2016-11-18T02:45:57.263Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编译原理2E-笔记">
 <meta name="twitter:image" content="http://ob4a6y748.bkt.clouddn.com/compilers.jpg">
@@ -401,7 +401,7 @@
 <p><code>基本块DAG的构造</code><br>从DAG中获得的信息:(确定哪些标识符在基本块中被<em>引用</em>过)(确定哪些语句计算的值可以在基本块外被引用)</p>
 <h3 id="数据流分析"><a href="#数据流分析" class="headerlink" title="数据流分析"></a>数据流分析</h3><p><em>语句</em>的数据流模式 (IN[s] 语句s之前的数据流值)(OUT[s] 语句s之后的数据流值)<br><em>fs</em>: 语句s的传递函数(一个赋值语句s之前和之后的数据流值的关系)(前向传播: OUT[s] = fs(IN[s]))(逆向传播 IN[s] = fs(OUT[s]))</p>
 <p><em>基本块</em>上的数据流模式(IN[B]: 紧随基本块B之前的数据流值)(OUT[B]: 紧随基本块B之后的数据流值)<br><em>fB</em>: 基本块B的传递函数(前向数据流问题: OUT[B] = fB(IN[B]) , fB = fsn<em>…</em>fs2<em>fs1)(逆向数据流问题: IN[B] = fB(OUT[B]) , `fB = fs1</em>fs2<em>…</em>fsn`)</p>
-<h4 id="到达定值分析"><a href="#到达定值分析" class="headerlink" title="到达定值分析"></a><strong>到达定值分析</strong></h4><p><code>定值</code><br><code>到达定值</code><br>用途: (循环不变计算的检测)(常数合并)(判定变量x在p点上是否<em>未经定值</em>就被<em>引用</em>)</p>
+<h4 id="到达定值分析"><a href="#到达定值分析" class="headerlink" title="到达定值分析"></a>到达定值分析</h4><p><code>定值</code><br><code>到达定值</code><br>用途: (循环不变计算的检测)(常数合并)(判定变量x在p点上是否<em>未经定值</em>就被<em>引用</em>)</p>
 <p><em>生成</em>与<em>杀死</em></p>
 <p><code>到达定值的传递函数</code><br>(fd: 定值d: u = v + w的传递函数)(fd(x) = gend U (x - killd))(gend: 由语句d生成的定值的集合)(killd: 由语句杀死的定值的集合)(x d之前生成的定值的集合)<br>(fB: 基本块B的传递函数)(fB(x) = genB U (x - killB))(killB = kill1 U kill2 U … U killn 被基本块B中各个语句杀死的定值的集合)(genB = genn U (genn-1 - killn) U … U (gen1 - kill1 - … - killn) 基本块中没有被块中各个语句杀死的定值的集合)</p>
 <p><code>到达定值的数据流方程</code></p>
@@ -412,7 +412,8 @@
 <h3 id="流图中的循环"><a href="#流图中的循环" class="headerlink" title="流图中的循环"></a>流图中的循环</h3><p><strong>支配节点</strong></p>
 <p><strong>回边</strong></p>
 <p><strong>自然循环</strong></p>
-<h3 id="全局优化"><a href="#全局优化" class="headerlink" title="全局优化"></a>全局优化</h3>
+<h3 id="全局优化"><a href="#全局优化" class="headerlink" title="全局优化"></a>全局优化</h3><p><strong>删除全局公共子表达式</strong><br><strong>删除复制语句</strong><br><strong>代码移动</strong></p>
+
       
     </div>
 
