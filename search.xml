@@ -1339,7 +1339,21 @@
     <entry>
       <title><![CDATA[计算机网络-笔记]]></title>
       <url>https://beim.github.io/2016/09/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1><p><strong>tcp报文中的 Timestamp option</strong><br><a href="http://stackoverflow.com/questions/2524511/what-is-the-meaning-of-the-tsv-and-tser-fields-in-an-ethereal-dump" target="_blank" rel="external">Timestamp value 和 Timestamp echo 作用</a></p>
+      <content type="html"><![CDATA[<h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1><p>分组交换网络传输分组的基本工作方式是<code>存储-转发</code></p>
+<p>网络应用体系结构主要包括<code>client/server</code>, <code>P2P</code>, <code>端口号</code></p>
+<p>流量控制关注的是<code>接收端的数据接收和缓存能力</code>, 拥塞控制关注的是<code>网络传输能力</code> </p>
+<p>Web应用中引入的Cookies技术可以支持<code>身份鉴别</code>, <code>购物车</code>, <code>推荐服务</code>, 和<code>用户会话状态信息维护</code>等</p>
+<p>FTP传输命令通过<code>控制</code>连接, 服务器默认端口号为<code>21</code>; 传输文件通过<code>数据连接</code>, 服务器端默认的端口号为<code>20</code></p>
+<p>SMTP协议基于的传输层协议是<code>TCP</code>, 服务器默认端口号是<code>25</code>, 传输的邮件内容必须是<code>7比特的ASCII码</code></p>
+<p>典型的邮件接收协议有<code>POP</code>, <code>IMAP</code>, <code>HTTP</code>等</p>
+<p>DNS协议运行在UDP协议之上，使用端口号53。</p>
+<p>UDP头包括<code>源端口号</code>, <code>目的端口号</code>, <code>长度</code>, <code>校验和</code>四个字段</p>
+<p>UDP计算校验和时包括<code>伪头</code>, <code>UDP段头</code>, 和<code>应用层数据</code> 3部分内容</p>
+<p>实现可靠传输的主要机制包括<code>差错编码</code>, <code>重传</code>, <code>计时器</code>, <code>确认</code>和 <code>序列号</code></p>
+<p>滑动窗口协议的发送窗口大小为Ws, 接收窗口大小为Wr, 数据分组序列号域的比特长度为L, 则<code>Ws + Wr &lt; L</code></p>
+<p>TCP和UDP校验和都要加上<code>伪头部</code>, 和<code>应用层数据</code><br>IP校验和只计算<code>首部</code></p>
+<p>若不包含前导码,则以太网数据帧的最大帧长为( 1518 )字节,最小帧长为( 64 )字节,数据域最少为( 46 )字节、最大为( 1500 )字节,以太网的 MTU 为( 1500 )字节。</p>
+<p><strong>tcp报文中的 Timestamp option</strong><br><a href="http://stackoverflow.com/questions/2524511/what-is-the-meaning-of-the-tsv-and-tser-fields-in-an-ethereal-dump" target="_blank" rel="external">Timestamp value 和 Timestamp echo 作用</a></p>
 <p><code>网络协议的三要素</code>(语法,语义,同步)</p>
 <p><code>网络工程中常用的线缆标准为568A</code>(直通线568A-568A)(交叉线568A-568B)</p>
 <p><code>IEEE 802.3 CMSA/CD, IEEE 802.4 Token Bus, IEEE 802.5 Token Ring</code><br>多路访问协议(multi-access protocol)</p>
@@ -2073,6 +2087,8 @@
 <p><strong>大清早</strong><br>和00聊了会儿<br>好久不见她<br>貌似发生了什么事情<br>希望她好起来吧<br><code>Wed Nov 16 08:17</code></p>
 <hr>
 <p><strong>白日梦</strong><br>下午和清河阿尔法小溪跑车了<br>兔子.好想你<br><code>Fri Nov 18 20:15</code></p>
+<hr>
+<p><strong>雪</strong><br><img src="http://ob4a6y748.bkt.clouddn.com/xx11768779376.jpg" alt="x"><br><img src="http://ob4a6y748.bkt.clouddn.com/xx2-1829678333.jpg" alt="x"><br><img src="http://ob4a6y748.bkt.clouddn.com/xx3-1207002342.jpg" alt="x"><br><img src="http://ob4a6y748.bkt.clouddn.com/xx4-2091906432.jpg" alt="x"><br><code>Sat Nov 19 17:44</code></p>
 <hr>
 ]]></content>
     </entry>
