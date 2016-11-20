@@ -1349,7 +1349,21 @@
     <entry>
       <title><![CDATA[计算机网络-笔记]]></title>
       <url>https://beim.github.io/2016/09/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1><p>分组交换网络传输分组的基本工作方式是<code>存储-转发</code></p>
+      <content type="html"><![CDATA[<h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1><p>路由器的体系结构包括四个部分, 分别是<code>处理器/cpu</code>, <code>输入端口</code>, <code>输出端口</code>, 和<code>交换接口</code></p>
+<p>在Internet中可以将一个自治系统分为多个区的自治系统内路由协议为<code>OSPF</code></p>
+<p>10BaseT以太网采用的比特编码机制是<code>曼彻斯特编码</code></p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">下列物理介质中, 易受电磁干扰的导向介质是<span class="keyword">A</span></div><div class="line"><span class="keyword">A</span>.双绞线, B 红外线 C 光纤 D 微波</div></pre></td></tr></table></figure>
+<p>帧同步的方法有: <code>字节计数法</code>, <code>字符填充的首尾定界符法</code>, <code>比特填充的首尾标识法</code>, <code>违法编码法</code></p>
+<p>解决无穷计数问题的方法有: <code>抑制规则(定义最大有效度量值)</code>, <code>毒性逆转的水平分割</code>, <code>触发更新</code>, <code>阻碍时钟</code>等</p>
+<p>OSPF使用IP, RIP使用UDP, BGP使用TCP</p>
+<p>以太网10BaseT和100BaseT使用的物理介质是<code>双绞线</code></p>
+<p>计算机网络常用的有限物理介质有<code>双绞线</code>, <code>光纤</code>, <code>同轴电缆</code></p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">NRZL, 曼彻斯特, 差分曼彻斯特编码</div><div class="line"><span class="symbol">NRZL:</span> 高电平为<span class="number">1</span>, 低电平为<span class="number">0</span></div><div class="line">曼彻斯特: 低到高为<span class="number">1</span>, 高到低为<span class="number">0</span></div><div class="line">差分曼彻斯特: 在信号开始时改变信号极性表示逻辑<span class="number">0</span>, 否则表示逻辑<span class="number">1</span></div></pre></td></tr></table></figure>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Internet中域名, <span class="built_in">IP</span>地址和MAC地址关系如何? 它们之间如何进行映射</div><div class="line">域名, <span class="built_in">IP</span>地址和MAC地址都可以用于标识Internet中通信节点(或接口)</div><div class="line">域名主要用于应用层, <span class="built_in">IP</span>地址主要在网络层, MAC地址主要在数据链路层</div><div class="line">域名通过DNS解析获得<span class="built_in">IP</span>地址</div><div class="line"><span class="built_in">IP</span>地址通过ARP协议获得MAC地址</div><div class="line">DNS to <span class="built_in">IP</span>: DNS resolve</div></pre></td></tr></table></figure>
+<p>两种典型的分组交换网络是<code>数据报网络</code>, <code>虚电路网络</code></p>
+<p>802.11无线局域网的两种典型的网络模式是<code>基础设施模式</code>和<code>特定网模式/Ad hoc模式</code></p>
+<p><a href="http://baike.baidu.com/view/672386.htm" target="_blank" rel="external">网络接入</a></p>
+<p>分组交换网络传输分组的基本工作方式是<code>存储-转发</code></p>
 <p>网络应用体系结构主要包括<code>client/server</code>, <code>P2P</code>, <code>端口号</code></p>
 <p>流量控制关注的是<code>接收端的数据接收和缓存能力</code>, 拥塞控制关注的是<code>网络传输能力</code> </p>
 <p>Web应用中引入的Cookies技术可以支持<code>身份鉴别</code>, <code>购物车</code>, <code>推荐服务</code>, 和<code>用户会话状态信息维护</code>等</p>
