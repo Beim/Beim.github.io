@@ -73,6 +73,7 @@
 <li><strong>Big sensing service tier</strong> (includes three types of services: <code>Big sensing data services</code>, <code>big sensing data platform services</code>, <code>Big sensing data analytics services</code>)</li>
 <li><strong>Big sensing application service tier</strong> (this refers to various types of sensor-oriented data application programs)</li>
 </ul>
+<hr>
 <h3 id="Big-Data-Sensing-Services"><a href="#Big-Data-Sensing-Services" class="headerlink" title="Big Data Sensing Services"></a>Big Data Sensing Services</h3><p>One of big data sensing services is to provide a virtualized sensing infrastructure based on a sensor cloud infrastructure</p>
 <p>essential features of a sensor cloud:</p>
 <ul>
@@ -85,7 +86,16 @@
 <li><strong>SLA-based billing</strong></li>
 </ul>
 <p><strong>SIaaS</strong> (sensor cloud infrastructure-as-a-service) (Its major objective is to increase the sharing and usage of sensors by reducing the costs)</p>
-<p><strong>SDaaS</strong> (Sensing Data Service as a Service) (<code>Stakeholders and users</code>, <code>Data sensing services</code>, <code>Service Model</code>, <code>Data storage services</code>)</p>
+<p><strong>SDaaS</strong> (Sensing Data Service as a Service) (<code>Stakeholders and users</code>, <code>Data sensing services</code>, <code>Service Model</code>, <code>Data storage services</code>, <code>Service Charging and Billing</code>)</p>
+<p><strong>DSPaaS</strong> (Data Sensing Platform as a service)</p>
+<hr>
+<h3 id="Challenges-issues-and-needs"><a href="#Challenges-issues-and-needs" class="headerlink" title="Challenges, issues, and needs"></a>Challenges, issues, and needs</h3><ul>
+<li>Engagement and connectivity to diverse sonsor networks</li>
+<li>Lack of standardization</li>
+<li>Lack of cost-effective security and privacy solutions in big data sensing</li>
+<li>Multi-tenant on-demand big data sensing services (Tenanted based sensor resource virualization; Tenanted based data collection and storage requirements)</li>
+<li>QoS big data sensing and analytics services</li>
+</ul>
 ]]></content>
     </entry>
     
