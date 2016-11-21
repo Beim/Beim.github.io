@@ -555,7 +555,95 @@
 <blockquote>
 <p>Dubbox(alibaba taoba的服务框架)</p>
 </blockquote>
-<p>end 121</p>
+<p><strong>基于模式的服务创新</strong></p>
+<blockquote>
+<p>京东白条</p>
+</blockquote>
+<p>服务创新的基本四要素：管理学视角</p>
+<ul>
+<li>目标市场(客户是谁)</li>
+<li>服务概念(提供什么独特价值)</li>
+<li>运作策略(如何实现价值)</li>
+<li>服务传递系统(如何将价值交付给客户)</li>
+</ul>
+<p>服务创新的四维度模型</p>
+<ul>
+<li>新服务概念 (服务创新首先是一个市场驱动的“服务概念化创新”)</li>
+<li>新顾客界面 (顾客界面设计：在服务提供给顾客的方式以及与顾客间交流、合作方式等方面进行创新。)</li>
+<li>新服务传递系统 (服务传递系统：主要指生产和传递新服务产品的组织。侧重与服务企业内部组织安排, 通过合理安排, 确保员工有效完成工作)</li>
+<li>技术选择 (服务创新的一个可选维度; 通过使用某些新技术使服务更为高效)</li>
+</ul>
+<h3 id="服务模型与建模方法"><a href="#服务模型与建模方法" class="headerlink" title="服务模型与建模方法"></a>服务模型与建模方法</h3><p><strong>模型</strong>是对系统中某些理论和现象的图解性描述, 并通过一组变量以及作用在这组变量之上的逻辑或数量关系来描绘其已知的或推测性质的特性，也用于深入研究它们的特点。</p>
+<p>服务模型的核心内容：从各个不同的侧面来描述服务系统要素（人、资源、信息、组织、环境等）、服务过程中顾客与服务提供者之间的协同交互过程(co-production process)。</p>
+<h4 id="从建模体系角度看服务模型的分类"><a href="#从建模体系角度看服务模型的分类" class="headerlink" title="从建模体系角度看服务模型的分类"></a>从建模体系角度看服务模型的分类</h4><ul>
+<li><p>按照服务模型所描述服务的不同侧面(视图)进行分类：<br>过程模型、组织模型、资源模型、信息模型、价值模型、知识模型等。<br>不同的服务视图分别从某一视角关注服务，模型形态相对简单和清晰，通过视图之间的语义关联将它们形成整体。</p>
+</li>
+<li><p>按照服务模型所起到作用进行分类：<br>指导服务创新与设计的模型、描述服务需求的模型、指导服务系统设计与开发的模型、指导服务部署与实施的模型等。<br>战略层模型、战术层模型、操作性模型、技术层模型等。</p>
+</li>
+<li><p>按照服务模型的形态进行分类：<br>图形化模型，用于帮助服务设计人员之间的沟通和理解；<br>形式化模型，用于软件工具支持下的服务分析与验证，例如一致性、完备性、正确性、性能等。</p>
+</li>
+</ul>
+<h4 id="服务模型应具有的描述能力"><a href="#服务模型应具有的描述能力" class="headerlink" title="服务模型应具有的描述能力"></a>服务模型应具有的描述能力</h4><ul>
+<li>提供者与顾客之间的交互</li>
+<li>私有与开放</li>
+<li>实体化与虚拟化</li>
+<li>耦合与解耦</li>
+<li>组合与协同 (组合: 描述复杂服务内部的执行步骤以及这些步骤间的关系；)(协同: 描述多个组织或服务之间通过交互完成复杂服务的过程。)</li>
+<li>价值目标与约束</li>
+<li>质量与性能</li>
+</ul>
+<blockquote>
+<p>原子服务(ATOM Service)</p>
+</blockquote>
+<h4 id="服务模型规范"><a href="#服务模型规范" class="headerlink" title="服务模型规范"></a>服务模型规范</h4><ul>
+<li>服务蓝图(Service Blueprint) </li>
+<li>结构化服务模型(SADT Model) </li>
+<li>Web服务描述语言(WSDL) </li>
+<li>面向服务的本体Web语言(OWL-S) </li>
+<li>业务流程执行语言(BPEL)</li>
+<li>Web服务编舞语言(WS-CDL)</li>
+<li>业务过程建模标注(BPMN) </li>
+<li>Web服务建模本体(WSMO) </li>
+</ul>
+<h4 id="服务蓝图-Blueprint"><a href="#服务蓝图-Blueprint" class="headerlink" title="服务蓝图(Blueprint)"></a>服务蓝图(Blueprint)</h4><p><strong>组成</strong> (服务蓝图用3条线分为4个部分，分别是：顾客行为、前台接触员工行为、后台接触员工行为以及支持过程。)</p>
+<p><strong>服务蓝图的5个区域</strong></p>
+<ul>
+<li>顾客行为</li>
+<li>前台员工行为</li>
+<li>后台员工行为</li>
+<li>支持过程</li>
+<li>服务有形展示</li>
+</ul>
+<p><strong>服务蓝图的三条分界线</strong></p>
+<ul>
+<li>交互线 (表示顾客与组织间直接的互动。一条穿过交互分界线的垂直线表明顾客与组织间直接发生接触或一个服务接触产生。 )</li>
+<li>可见线 (把顾客能看到的服务行为与看不到的分开，把服务人员在前台与后台所做的工作分开。)</li>
+<li>内部互动线 (用以区分服务人员的工作和其他支持服务的工作和工作人员，穿过内部互动线的垂直线表示发生的内部服务接触。 )</li>
+</ul>
+<p><strong>服务蓝图的要素</strong></p>
+<ul>
+<li>结构要素 (定义了服务传递系统的整体规划)</li>
+<li>管理要素 (明确服务接触的标准和要求, 规定了合理的服务水平、绩效评估指标、服务品质要素等。)</li>
+</ul>
+<p><strong>服务蓝图</strong></p>
+<ul>
+<li>借助于流程图，通过分解服务组织系统和架构，鉴别用户与服务人员以及服务体系内部的服务接触点；</li>
+<li>在服务流程分析基础上描述服务传递的各方面，将服务提供过程、员工和顾客的角色和服务的有形证据直观地展示出来；</li>
+<li>经过服务蓝图的描述，服务被合理地分解成服务提供的步骤、任务和方法，使服务提供过程中所涉及的人都能客观地理解和处理它。</li>
+</ul>
+<p><strong>服务蓝图的建模过程</strong></p>
+<ol>
+<li>识别需要制定蓝图的服务过程 </li>
+<li>识别顾客(细分顾客)对服务的经历 </li>
+<li>从顾客角度描绘服务过程 </li>
+<li>描绘前台与后台服务雇员的行为 </li>
+<li>把顾客行为、服务人员行为与支持功能相连 </li>
+<li>在每个顾客行为步骤加上有形展示</li>
+</ol>
+<blockquote>
+<p>考试- 建模题</p>
+</blockquote>
+<p>end 168</p>
 ]]></content>
     </entry>
     
@@ -1349,7 +1437,12 @@
     <entry>
       <title><![CDATA[计算机网络-笔记]]></title>
       <url>https://beim.github.io/2016/09/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> (<span class="number">09</span> 年考研 <span class="number">34</span> 题)在无噪声情况下,若某通信链路的带宽为 <span class="number">3</span>kHz,采</div><div class="line">用 <span class="number">4</span> 个相位,每个相位具有 <span class="number">4</span> 种振幅的 QAM 调制技术,则该通信链路的最大数</div><div class="line">据传输速率是</div><div class="line">A. <span class="number">12</span> kbps</div><div class="line">B. <span class="number">24</span> kbps</div><div class="line"><span class="keyword">C</span>. <span class="number">48</span> kbps</div><div class="line"><span class="keyword">D</span>. <span class="number">96</span> kbps</div><div class="line">【解答】选 B。由奈氏准则公式:<span class="keyword">C</span>=<span class="number">2</span>Wlog <span class="number">2</span> <span class="keyword">N</span>=<span class="number">2</span> * <span class="number">3</span><span class="keyword">K</span> * log <span class="number">2</span> (<span class="number">4</span>*<span class="number">4</span>)=<span class="number">24</span>Kbps,</div><div class="line">即该信道的最大数据传输速率是 <span class="number">24</span>Kbps。</div><div class="line">【考查知识点】奈氏准则。理想低通信道的最高码元传输速率=<span class="number">2</span>W <span class="keyword">Band</span>。W</div><div class="line">是低通信道的带宽,单位为 Hz,<span class="keyword">Band</span> 是波特,是码元传输速率的单位。一个码</div><div class="line">元携带 <span class="keyword">N</span> bit 信息量,波形速率为 M <span class="keyword">Band</span>,则最高速率为 M*<span class="keyword">N</span> bit/s.</div><div class="line">香农定理指出:在有随机热噪声的信道上传输数据信号时,数据传输速率 <span class="keyword">C</span></div><div class="line">与信道带宽 W、信噪比 S/<span class="keyword">N</span> 的关系为:<span class="keyword">C</span>=W*log <span class="number">2</span> (<span class="number">1</span>+S/<span class="keyword">N</span>))。式中,<span class="keyword">C</span> 单位为</div><div class="line">bps,带宽 W 单位为 Hz,信噪比 S/<span class="keyword">N</span> 通常以 dB(分贝)数表示。</div><div class="line"></div><div class="line"><span class="number">2.</span> (<span class="number">11</span> 年考研 <span class="number">34</span> 题)若某通信链路的数据传输速率为 <span class="number">2400</span>bps,采用 <span class="number">4</span></div><div class="line">相位调制,则该链路的波特率是</div><div class="line">A. <span class="number">600</span> 波特</div><div class="line">B. <span class="number">1200</span> 波特</div><div class="line"><span class="keyword">C</span>. <span class="number">4800</span> 波特</div><div class="line"><span class="keyword">D</span>. <span class="number">9600</span> 波特</div><div class="line">【解答】选 B。有 <span class="number">4</span> 种相位,则一个码元需要由 log <span class="number">2</span> <span class="number">4</span>=<span class="number">2</span> 个 bit 表示,则波</div><div class="line">特率=比特率/<span class="number">2</span>=<span class="number">1200</span> 波特。</div><div class="line">【考查知识点】考察波特与比特率的关系;比特率和波特率之间的换算关系</div><div class="line">如下:比特率 = 波特率 * log <span class="number">2</span> n 。比特率是数字信号的传输速率——单位时间</div><div class="line">内所传输的二进制代码的有效位数。单位——比特/秒(bps)或千比特/秒(kbps)。</div><div class="line">波特率是调制速率(又称波形速率)——线路中每秒传送的波形的个数。单位—</div><div class="line">—波特(band)。</div></pre></td></tr></table></figure>
+      <content type="html"><![CDATA[<h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1><figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">RIP协议可能产生震荡现象 <span class="comment">(X)</span></div></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="number">41</span>判断(<span class="number">2</span>分)</div><div class="line">OSPF协议只在分区内计算路由，不能在整个AS范围内计算路由。 (X)</div><div class="line">得分/总分</div><div class="line"></div><div class="line">A.</div><div class="line"></div><div class="line">B<span class="number">.0</span><span class="number">.00</span>/<span class="number">2.00</span></div><div class="line">正确答案：A你错选为B</div></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="number">31</span>多选(<span class="number">3</span>分)</div><div class="line">下列关于CSMA/CD协议的叙述中，正确的是</div><div class="line">得分/总分</div><div class="line"></div><div class="line">A.</div><div class="line">适用于各种广播链路，以实现链路共享</div><div class="line">该题无法得分/<span class="number">3.00</span></div><div class="line"></div><div class="line">B.</div><div class="line">需要根据网络跨距和数据传输速率限定最小帧</div><div class="line">该题无法得分/<span class="number">3.00</span></div><div class="line"></div><div class="line">C.</div><div class="line">边发送数据帧，边检测是否发生冲突</div><div class="line">该题无法得分/<span class="number">3.00</span></div><div class="line"></div><div class="line">D.</div><div class="line">基于冲突检测机制，确保帧可靠传输</div><div class="line">正确答案：B、C你错选为A、B、C</div></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="number">32</span>多选(<span class="number">3</span>分)</div><div class="line">下列关于交换机的叙述中，错误的是</div><div class="line">得分/总分</div><div class="line"></div><div class="line">A.</div><div class="line">交换机每个端口所连网络构成一个独立的广播域</div><div class="line"><span class="number">1.00</span>/<span class="number">3.00</span></div><div class="line"></div><div class="line">B.</div><div class="line">以太网交换机可实现采用不同网络层协议的网络互联</div><div class="line"></div><div class="line">C.</div><div class="line">以太网交换机本质上是一种多端口网桥</div><div class="line"></div><div class="line">D.</div><div class="line">通过交换机互连的一组工作站构成一个冲突域</div><div class="line"><span class="number">1.00</span>/<span class="number">3.00</span></div><div class="line">正确答案：A、B、D你错选为A、D</div></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="number">33</span>多选(<span class="number">3</span>分)</div><div class="line">下列关于交换机的叙述中，错误的是</div><div class="line">得分/总分</div><div class="line"></div><div class="line">A.</div><div class="line">以太网交换机是一种存储-转发设备</div><div class="line"></div><div class="line">B.</div><div class="line">以太网交换机可实现采用不同网络层协议的网络互联</div><div class="line"></div><div class="line">C.</div><div class="line">交换机每个端口所连网络构成一个独立的广播域</div><div class="line"><span class="number">1.00</span>/<span class="number">3.00</span></div><div class="line"></div><div class="line">D.</div><div class="line">通过交换机互连的一组工作站构成一个冲突域</div><div class="line"><span class="number">1.00</span>/<span class="number">3.00</span></div><div class="line">正确答案：B、C、D你错选为C、D</div></pre></td></tr></table></figure>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> (<span class="number">09</span> 年考研 <span class="number">34</span> 题)在无噪声情况下,若某通信链路的带宽为 <span class="number">3</span>kHz,采</div><div class="line">用 <span class="number">4</span> 个相位,每个相位具有 <span class="number">4</span> 种振幅的 QAM 调制技术,则该通信链路的最大数</div><div class="line">据传输速率是</div><div class="line">A. <span class="number">12</span> kbps</div><div class="line">B. <span class="number">24</span> kbps</div><div class="line"><span class="keyword">C</span>. <span class="number">48</span> kbps</div><div class="line"><span class="keyword">D</span>. <span class="number">96</span> kbps</div><div class="line">【解答】选 B。由奈氏准则公式:<span class="keyword">C</span>=<span class="number">2</span>Wlog <span class="number">2</span> <span class="keyword">N</span>=<span class="number">2</span> * <span class="number">3</span><span class="keyword">K</span> * log <span class="number">2</span> (<span class="number">4</span>*<span class="number">4</span>)=<span class="number">24</span>Kbps,</div><div class="line">即该信道的最大数据传输速率是 <span class="number">24</span>Kbps。</div><div class="line">【考查知识点】奈氏准则。理想低通信道的最高码元传输速率=<span class="number">2</span>W <span class="keyword">Band</span>。W</div><div class="line">是低通信道的带宽,单位为 Hz,<span class="keyword">Band</span> 是波特,是码元传输速率的单位。一个码</div><div class="line">元携带 <span class="keyword">N</span> bit 信息量,波形速率为 M <span class="keyword">Band</span>,则最高速率为 M*<span class="keyword">N</span> bit/s.</div><div class="line">香农定理指出:在有随机热噪声的信道上传输数据信号时,数据传输速率 <span class="keyword">C</span></div><div class="line">与信道带宽 W、信噪比 S/<span class="keyword">N</span> 的关系为:<span class="keyword">C</span>=W*log <span class="number">2</span> (<span class="number">1</span>+S/<span class="keyword">N</span>))。式中,<span class="keyword">C</span> 单位为</div><div class="line">bps,带宽 W 单位为 Hz,信噪比 S/<span class="keyword">N</span> 通常以 dB(分贝)数表示。</div><div class="line"></div><div class="line"><span class="number">2.</span> (<span class="number">11</span> 年考研 <span class="number">34</span> 题)若某通信链路的数据传输速率为 <span class="number">2400</span>bps,采用 <span class="number">4</span></div><div class="line">相位调制,则该链路的波特率是</div><div class="line">A. <span class="number">600</span> 波特</div><div class="line">B. <span class="number">1200</span> 波特</div><div class="line"><span class="keyword">C</span>. <span class="number">4800</span> 波特</div><div class="line"><span class="keyword">D</span>. <span class="number">9600</span> 波特</div><div class="line">【解答】选 B。有 <span class="number">4</span> 种相位,则一个码元需要由 log <span class="number">2</span> <span class="number">4</span>=<span class="number">2</span> 个 bit 表示,则波</div><div class="line">特率=比特率/<span class="number">2</span>=<span class="number">1200</span> 波特。</div><div class="line">【考查知识点】考察波特与比特率的关系;比特率和波特率之间的换算关系</div><div class="line">如下:比特率 = 波特率 * log <span class="number">2</span> n 。比特率是数字信号的传输速率——单位时间</div><div class="line">内所传输的二进制代码的有效位数。单位——比特/秒(bps)或千比特/秒(kbps)。</div><div class="line">波特率是调制速率(又称波形速率)——线路中每秒传送的波形的个数。单位—</div><div class="line">—波特(band)。</div></pre></td></tr></table></figure>
 <p>路由器的体系结构包括四个部分, 分别是<code>处理器/cpu</code>, <code>输入端口</code>, <code>输出端口</code>, 和<code>交换接口</code></p>
 <p>在Internet中可以将一个自治系统分为多个区的自治系统内路由协议为<code>OSPF</code></p>
 <p>10BaseT以太网采用的比特编码机制是<code>曼彻斯特编码</code></p>
