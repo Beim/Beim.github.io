@@ -653,6 +653,53 @@
 <p>考试- 建模题</p>
 </blockquote>
 <p>end 168</p>
+<h4 id="基于SOA的软件服务建模方法"><a href="#基于SOA的软件服务建模方法" class="headerlink" title="基于SOA的软件服务建模方法"></a>基于SOA的软件服务建模方法</h4><p>基本服务：WSDL(Web Service Description Language) - Web服务描述语言</p>
+<blockquote>
+<p>XML</p>
+</blockquote>
+<p>WSDL元素：基于XML语法描述了与服务进行交互的基本元素</p>
+<p>WSDL： Web服务描述文档结构</p>
+<p>OWL-S(Ontology Web Language for Services)： Web服务的本体语言<br>三个组件：</p>
+<ul>
+<li>ServiceProfile：描述服务的功能，即这个服务是做什么的。服务搜寻代理通过ServiceProfile实现服务匹配，寻找到满足服务请求者需求的Web Service；</li>
+<li>ServiceModel：描述服务是怎么做的，即服务的具体实现细节；</li>
+<li>ServiceGrounding：描述怎样访问服务。</li>
+</ul>
+<h4 id="服务组合（Orchestration"><a href="#服务组合（Orchestration" class="headerlink" title="服务组合（Orchestration)"></a>服务组合（Orchestration)</h4><p>服务编排（Orchestration）(Composition = Orchestration)：将多个小粒度的Web服务按照特定的业务逻辑规则构造为一个可执行的业务过程；同时又可看作是一个大粒度的复合Web服务。</p>
+<ul>
+<li>使用已有的服务来构造新的服务；</li>
+<li>服务由某个组织所拥有，并具有中心控制调度功能。</li>
+</ul>
+<p>用于服务编排的建模方法：BPEL(4WS)</p>
+<ul>
+<li>BPEL（Business Process Execution Language）：业务流程执行语言，是一种使用XML编写的用于自动化业务流程的编程语言。</li>
+<li>BPEL4WS（BPEL for Web Services）：面向Web服务的过程建模语言。</li>
+</ul>
+<p>服务编排的运行模式</p>
+<ol>
+<li>集中式执行引擎</li>
+<li>基于Hub的分布式引擎</li>
+<li>无Hub的分布式引擎</li>
+</ol>
+<h4 id="服务协同（Choreography）"><a href="#服务协同（Choreography）" class="headerlink" title="服务协同（Choreography）"></a>服务协同（Choreography）</h4><p><code>服务协同</code>(Choreography)(Collaboration ≈ Choreography)：将多个零散的、分别由多方提供的服务/业务流程按照彼此之间的协同关系组织起来，支持多方的交互行为。</p>
+<ul>
+<li>侧重于不同服务之间的消息传递的次序与规则，以保证期望的协同行为。</li>
+<li>无需完全由一个组织所拥有；也无需中心控制；</li>
+</ul>
+<p><code>服务协同模式的分类</code></p>
+<ul>
+<li>链式协同模式</li>
+<li>嵌套协同模式</li>
+<li>同步协同模式</li>
+</ul>
+<h4 id="BPMN-业务流程建模标注-建模方法"><a href="#BPMN-业务流程建模标注-建模方法" class="headerlink" title="BPMN(业务流程建模标注)建模方法"></a>BPMN(业务流程建模标注)建模方法</h4><p>业务流程建模标注法（BPMN, Business Process Modeling Notation）：是对象管理组织OMG/业务流程管理倡议组织BPMI开发的关于业务流程建模的行业性标准。它创建在与UML活动图相似的流程图法基础上，为特定业务流程提供了一套图形化标注法。</p>
+<p>BPMN四种要素：</p>
+<ul>
+<li>流对象(事件(Events)、活动(Activities)、网关(Getways))</li>
+<li>连接对象(顺序流(Sequence Flow)、消息流(Message Flow)、关联(Association))</li>
+<li>泳道(池(Pool)、道(Lane))</li>
+<li>描述对象/器物(数据对象(Data Object)、组(Group)、注释(Annotation))</li>
+</ul>
 ]]></content>
     </entry>
     
