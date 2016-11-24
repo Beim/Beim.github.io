@@ -4,6 +4,21 @@
   
     
     <entry>
+      <title><![CDATA[ubuntu下mongodb安装使用]]></title>
+      <url>https://beim.github.io/2016/11/24/ubuntu%E4%B8%8Bmongodb%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</url>
+      <content type="html"><![CDATA[<p><a href="https://docs.mongodb.com/master/tutorial/install-mongodb-on-ubuntu/?_ga=1.183956006.1858520870.1479944396" target="_blank" rel="external">官网链接</a></p>
+<blockquote>
+<p>Ubuntu16的systemd启动服务在<code>/lib/systemd/system/mongod.service</code><br>MongoDB数据存储在 <code>/var/lib/mongodb</code><br>日志文件在 <code>/var/log/mongodb</code><br>配置文件在 <code>/etc/mongod.conf</code></p>
+</blockquote>
+<h1 id="security"><a href="#security" class="headerlink" title="security"></a>security</h1><p><a href="https://docs.mongodb.com/manual/tutorial/enable-authentication/" target="_blank" rel="external">开启认证</a><br>在<code>/etc/mongod.conf</code>中增加<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">security:</span></div><div class="line"><span class="symbol">  authorization:</span> enabled</div></pre></td></tr></table></figure></p>
+<p><a href="https://docs.mongodb.com/manual/reference/command/createUser/#required-access" target="_blank" rel="external">添加，更改，删除用户</a></p>
+<blockquote>
+<p>提示: shell下登陆后切换到对应的db进行auth, 在哪个db创建的用户就在哪个db进行auth<br>show users<br>db.auth<br>db.createUser<br>db.dropUser</p>
+</blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[seafile-搭建私人网盘]]></title>
       <url>https://beim.github.io/2016/11/23/seafile-%E6%90%AD%E5%BB%BA%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98/</url>
       <content type="html"><![CDATA[<p><img src="http://ob4a6y748.bkt.clouddn.com/seafile-2016-11-23%2010-04-44%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="效果图"></p>
