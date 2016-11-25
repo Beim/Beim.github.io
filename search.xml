@@ -4,6 +4,17 @@
   
     
     <entry>
+      <title><![CDATA[命令行传输文件]]></title>
+      <url>https://beim.github.io/2016/11/25/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6/</url>
+      <content type="html"><![CDATA[<h1 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h1><p>在linux下一般用scp这个命令来通过ssh传输文件。</p>
+<p>1、从服务器上下载文件<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp username<span class="variable">@servername:</span>/path/filename /var/www/local_dir（本地目录）</div><div class="line"></div><div class="line"> 例如scp root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span>:/var/www/test.txt  把<span class="number">192.168</span>.<span class="number">0.101</span>上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）</div></pre></td></tr></table></figure></p>
+<p>2、上传本地文件到服务器<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp /path/filename username<span class="variable">@servername</span><span class="symbol">:/path</span>   </div><div class="line"></div><div class="line">例如scp /var/www/test.php  root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span><span class="symbol">:/var/www/</span>  把本机/var/www/目录下的test.php文件上传到<span class="number">192.168</span>.<span class="number">0</span>.<span class="number">101</span>这台服务器上的/var/www/目录中</div></pre></td></tr></table></figure></p>
+<p>3、从服务器下载整个目录<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp -r username<span class="variable">@servername:</span>/var/www/remote_dir/（远程目录） /var/www/local_dir（本地目录）</div><div class="line"></div><div class="line">例如:scp -r root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span>:/var/www/test  /var/www/</div></pre></td></tr></table></figure></p>
+<p>4、上传目录到服务器<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp  -r local_dir username<span class="variable">@servername:</span>remote_dir</div><div class="line"></div><div class="line">例如：scp -r test  root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span>:/var/www/   把当前目录下的test目录上传到服务器的/var/www/ 目录</div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[ubuntu下mongodb安装使用]]></title>
       <url>https://beim.github.io/2016/11/24/ubuntu%E4%B8%8Bmongodb%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</url>
       <content type="html"><![CDATA[<p><a href="https://docs.mongodb.com/master/tutorial/install-mongodb-on-ubuntu/?_ga=1.183956006.1858520870.1479944396" target="_blank" rel="external">官网链接</a></p>
