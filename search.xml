@@ -809,15 +809,60 @@
 <li>泳道(池(Pool)、道(Lane))</li>
 <li>描述对象/器物(数据对象(Data Object)、组(Group)、注释(Annotation))</li>
 </ul>
-<h3 id="Nov-30"><a href="#Nov-30" class="headerlink" title="Nov 30"></a>Nov 30</h3><h4 id="REST"><a href="#REST" class="headerlink" title="REST"></a>REST</h4><h4 id="SCA"><a href="#SCA" class="headerlink" title="SCA"></a>SCA</h4><h4 id="SDO-Service-Data-Object"><a href="#SDO-Service-Data-Object" class="headerlink" title="SDO(Service Data Object)"></a>SDO(Service Data Object)</h4><p>服务数据对象； 用于简化和统一应用程序处理数据方式。</p>
+<hr>
+<h1 id="服务组合与服务构件"><a href="#服务组合与服务构件" class="headerlink" title="服务组合与服务构件"></a>服务组合与服务构件</h1><h2 id="服务构件"><a href="#服务构件" class="headerlink" title="服务构件"></a>服务构件</h2><p>两类服务要素：可IT化，不可IT化</p>
+<ul>
+<li>可被IT化的服务要素（通过web提供相应的服务行为）（具有WSDL接口描述的web services）（SCA构件）（数据库）（遗留系统legacy system）</li>
+<li>不可或很难被IT化为软件的服务要素（人员）（硬件）（环境：会议室，呼叫中心）（行为：面对面培训，货物运输）</li>
+</ul>
+<p><em>非软件服务要素的虚拟化</em> (需要虚拟化的非软件服务要素: 人力资源及其能力, 环境, 硬件支撑设施, 软件职称设备, 人工完成的服务行为与交互过程)</p>
+<h3 id="服务构件-Service-Component-将服务要素统一封装为服务构件"><a href="#服务构件-Service-Component-将服务要素统一封装为服务构件" class="headerlink" title="服务构件(Service Component) 将服务要素统一封装为服务构件"></a>服务构件(Service Component) 将服务要素统一封装为服务构件</h3><ul>
+<li>可被重复使用的,用来构造服务系统的基本单元.</li>
+<li>具有一系列特定的接口和描述</li>
+</ul>
+<p>常见的服务构件类型:</p>
+<ul>
+<li>软件服务 Web Services</li>
+<li>人工服务 WS-HumanTask</li>
+<li>表述性状态转移 REST (REpresentational State Transfer)</li>
+<li>服务构建 SCA (Service Component Architecture)</li>
+<li>数据对象 SDO (Service Data Object)</li>
+<li>服务资源 WS-Resource</li>
+</ul>
+<p><strong>SDO(Service Data Object)</strong></p>
+<p>服务数据对象； 用于简化和统一应用程序处理数据方式。</p>
 <ul>
 <li>数据对象(Data Object)</li>
 <li>数据图(Data Graph)</li>
 <li>元数据(Meta Data)</li>
 <li>数据中介服务(Data Mediator Service)</li>
 </ul>
-<h4 id="Web服务资源WS-Resource"><a href="#Web服务资源WS-Resource" class="headerlink" title="Web服务资源WS-Resource"></a>Web服务资源WS-Resource</h4><p>Web Service 无状态<br>Web服务资源(WS-Resource)： 对于一个有状态资源（数据库，物理资源等）和它与之交互的Web服务的组合</p>
-<h4 id="服务发现"><a href="#服务发现" class="headerlink" title="服务发现"></a>服务发现</h4><h4 id="服务选择"><a href="#服务选择" class="headerlink" title="服务选择"></a>服务选择</h4><p>58</p>
+<p><strong>Web服务资源WS-Resource</strong><br>Web Service 无状态<br>Web服务资源(WS-Resource)： 对于一个有状态资源（数据库，物理资源等）和它与之交互的Web服务的组合</p>
+<hr>
+<h2 id="服务组合方法"><a href="#服务组合方法" class="headerlink" title="服务组合方法"></a>服务组合方法</h2><h3 id="服务发现"><a href="#服务发现" class="headerlink" title="服务发现"></a>服务发现</h3><ol>
+<li>根据服务请求进行服务发现的描述</li>
+<li>一句服务匹配算法进行服务查找和服务匹配</li>
+<li>进行服务选择与排序</li>
+<li>确定最佳服务</li>
+</ol>
+<p><strong>服务发现的方法</strong></p>
+<ul>
+<li>语法级发现</li>
+<li>语义级发现</li>
+</ul>
+<h3 id="服务选择"><a href="#服务选择" class="headerlink" title="服务选择"></a>服务选择</h3><ul>
+<li>广义的服务选择: 通常被看做与’服务发现’等价</li>
+<li>狭义的服务选择: 在满足需求的多个候选服务中, 选择出满足度最高的服务</li>
+</ul>
+<h3 id="服务组合"><a href="#服务组合" class="headerlink" title="服务组合"></a>服务组合</h3><p>将已有的服务组合为一个新服务的过程, 以增加服务的可复用性, 功能和性能.</p>
+<p>服务组合的价值在于服务重用, 以解决更复杂的问题, 使服务得到增值.</p>
+<p>服务组合三个阶段:</p>
+<ul>
+<li>规划阶段: 发现候选服务, 检测其服务组合的可行性与一致性, 并提供多个候选服务的组合规划</li>
+<li>定义阶段: 在候选服务组合规划中选择并生成实际的服务组合结构, 并提供一个服务组合的语义规范</li>
+<li>实施阶段: 根据服务组合规范来绑定组合的服务, 使这些服务能够协同工作以满足相应的任务或功能.</li>
+</ul>
+<p>end 58</p>
 ]]></content>
     </entry>
     
