@@ -873,7 +873,15 @@
 <li>定义阶段: 在候选服务组合规划中选择并生成实际的服务组合结构, 并提供一个服务组合的语义规范</li>
 <li>实施阶段: 根据服务组合规范来绑定组合的服务, 使这些服务能够协同工作以满足相应的任务或功能.</li>
 </ul>
-<p>end 58</p>
+<p><strong>静态组合</strong>vs<strong>动态组合</strong></p>
+<blockquote>
+<p>ERP<br>CRM</p>
+</blockquote>
+<h1 id="服务系统体系结构及开发方法"><a href="#服务系统体系结构及开发方法" class="headerlink" title="服务系统体系结构及开发方法"></a>服务系统体系结构及开发方法</h1><p>服务体系结构设计核心问题: <code>如何将多个小粒度构件连接在一起,彼此高效交换信息和控制</code></p>
+<p><strong>面向服务的体系结构SOA</strong></p>
+<p>发布-订阅<br>适配器<br>远程调用<br>服务集成器<br>企业服务总线</p>
+<p><strong>ESB(Enterprise Service Bus)企业服务总线</strong></p>
+<p>内容分发网络(CDN)</p>
 ]]></content>
     </entry>
     
@@ -2477,6 +2485,10 @@
 <p><strong>白日梦</strong><br>春困秋乏夏无力冬日正好眠<br><code>Thu Dec 1 08:37</code></p>
 <hr>
 <p><strong>白日梦</strong><br>还是忍不住把机票买了ohhhh<br>房间也在airbnb选好了<br><code>Sun Dec 4 11:01</code></p>
+<hr>
+<p><strong>不能说的秘密</strong><br>从琴房到教室的距离<br>一共一百零八步<br><code>Sun Dec 4 22:07</code></p>
+<hr>
+<p><strong>白日梦</strong><br>这两天都是一睡一下午<br>梦里面设计了一个游戏<br>然后一直在和室友聊盈利模式<br>奇怪的梦<br><code>Mon Dec 5 16:27</code></p>
 <hr>
 ]]></content>
     </entry>
