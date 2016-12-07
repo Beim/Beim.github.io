@@ -116,7 +116,7 @@
 服务外包 (将非核心的业务外包出去)
 
 服务聚合 (将分散的,相互独立的服务整合在一起, 形成新的服务, 创造新的服务价值.)(例如: 百">
-<meta property="og:updated_time" content="2016-12-05T04:30:08.447Z">
+<meta property="og:updated_time" content="2016-12-07T07:28:29.744Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务学概论-笔记">
 <meta name="twitter:description" content="现代服务产业与服务学什么是现代服务业
@@ -833,9 +833,67 @@
 </blockquote>
 <h1 id="服务系统体系结构及开发方法"><a href="#服务系统体系结构及开发方法" class="headerlink" title="服务系统体系结构及开发方法"></a>服务系统体系结构及开发方法</h1><p>服务体系结构设计核心问题: <code>如何将多个小粒度构件连接在一起,彼此高效交换信息和控制</code></p>
 <p><strong>面向服务的体系结构SOA</strong></p>
-<p>发布-订阅<br>适配器<br>远程调用<br>服务集成器<br>企业服务总线</p>
+<ul>
+<li>发布-访问机制（发布，发现，绑定和调用）</li>
+<li>适配器</li>
+<li>远程服务策略（可与段绑定服务接口；客户端通过‘service registry’访问服务； 客户端通过‘service broker’动态决定访问哪个服务</li>
+<li>服务集成器</li>
+<li>企业服务总线（整合应用和服务的基础架构，支持服务，服务组合和服务协同）</li>
+</ul>
 <p><strong>ESB(Enterprise Service Bus)企业服务总线</strong></p>
+<p><code>SOA Layers</code></p>
+<ol>
+<li>遗存系统</li>
+<li>企业功能构建层</li>
+<li>服务层</li>
+<li>业务过程层（服务组合与协同层）</li>
+<li>访问层（表现层）</li>
+<li>集成（ESB）</li>
+<li>服务质量（QoS）</li>
+</ol>
 <p>内容分发网络(CDN)</p>
+<p><strong>CAP</strong>理论</p>
+<ul>
+<li>Consistency 一致性(任何一个读操作总是能读取到之前完成的写操作结果，也就是在分布式环境中，多点的数据是一致的；)</li>
+<li>Availability 可用性(每一个操作总是能够在确定的时间内返回，也就是系统随时都是可用的；)</li>
+<li>Tolerance of Network Partition 分区容忍性(在出现网络分区的情况下，分离的系统也能正常运行；)</li>
+</ul>
+<p>对于分布式存储系统而言，分区容错性(P)是基本需求，只有CP和AP两种模式的选择。<br><code>CP模式</code><br><code>AP模式</code></p>
+<p><strong>服务交付渠道</strong></p>
+<ul>
+<li>前端界面简化： 固化为产品型态“客户端微件Widget”，强调可用性（Usability）；</li>
+<li>后台流程标准化： 强调效率和交付质量</li>
+</ul>
+<p><strong>服务质量评价</strong></p>
+<p><code>产品质量</code>； <code>服务质量</code></p>
+<p>服务质量的两个方面</p>
+<ul>
+<li>过程质量</li>
+<li>产出质量</li>
+</ul>
+<p>服务质量的维度</p>
+<ul>
+<li>可靠性(可靠地、准确地履行服务承诺的能力。)</li>
+<li>快速相应性(帮助顾客并迅速提供服务愿望。)</li>
+<li>保证性(服务人员的友好态度、所需的技能和知识，以增强顾客对企业服务质量的信心感。)</li>
+<li>移情性(设身处地为顾客着想，把每一位顾客当作独特、重要的个人，给予个性化的服务。)</li>
+<li>有形性(有形的设施、设备、人员的外表。)</li>
+<li>可访问性</li>
+<li>礼貌，沟通</li>
+<li>可信性</li>
+<li>安全性</li>
+<li>理解性(正确理解用户的个性化需求。)</li>
+</ul>
+<p>服务质量差距 (top-down)</p>
+<ul>
+<li>预期的质量</li>
+<li>感受的质量</li>
+<li>实现的质量</li>
+<li>表现的质量</li>
+<li>定义的质量</li>
+<li>理解的质量</li>
+</ul>
+<p><strong>SERVQUAL</strong></p>
 
       
     </div>
