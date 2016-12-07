@@ -1664,7 +1664,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fdf;
+  background: #c71d8c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2635,9 +2635,11 @@ body {
     text-align: justify;
   }
 }
-body {
-  background-image: url("https://drscdn.500px.org/photo/180587175/q%3D80_m%3D2000/07bd805110cd7cefde6eb7d5eea72d11");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  opacity: 0.93;
+@media (min-width: 900px) {
+  body {
+    background-image: url("https://drscdn.500px.org/photo/180587175/q%3D80_m%3D2000/07bd805110cd7cefde6eb7d5eea72d11");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.93;
+  }
 }
