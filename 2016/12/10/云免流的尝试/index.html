@@ -1,0 +1,966 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="https://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="linux," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="原理修改HTTP头运营商有免费流量的套餐，比如咪咕音乐，在使用咪咕音乐软件的时候用的流量是不收费的。为什么？运营商在检测手机流量的时候检查HTTP头，如URL，HOST，还有X-Request-with这个运营商自己的参数，如果符合免流量费用的条件（比如访问的是移动自己的页面），则对相关的流量不收费。知道了这个，我们就可以在HTTP上面做点修改，达到免流的目的了 ohhh （具体修改的内容在下面介">
+<meta property="og:type" content="article">
+<meta property="og:title" content="云免流的尝试">
+<meta property="og:url" content="https://beim.github.io/2016/12/10/云免流的尝试/index.html">
+<meta property="og:site_name" content="北冥945">
+<meta property="og:description" content="原理修改HTTP头运营商有免费流量的套餐，比如咪咕音乐，在使用咪咕音乐软件的时候用的流量是不收费的。为什么？运营商在检测手机流量的时候检查HTTP头，如URL，HOST，还有X-Request-with这个运营商自己的参数，如果符合免流量费用的条件（比如访问的是移动自己的页面），则对相关的流量不收费。知道了这个，我们就可以在HTTP上面做点修改，达到免流的目的了 ohhh （具体修改的内容在下面介">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/ml1-IMG_3921.PNG">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/ml2-IMG_3922.PNG">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/ml-IMG_3920.PNG">
+<meta property="og:updated_time" content="2016-12-09T17:50:28.273Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="云免流的尝试">
+<meta name="twitter:description" content="原理修改HTTP头运营商有免费流量的套餐，比如咪咕音乐，在使用咪咕音乐软件的时候用的流量是不收费的。为什么？运营商在检测手机流量的时候检查HTTP头，如URL，HOST，还有X-Request-with这个运营商自己的参数，如果符合免流量费用的条件（比如访问的是移动自己的页面），则对相关的流量不收费。知道了这个，我们就可以在HTTP上面做点修改，达到免流的目的了 ohhh （具体修改的内容在下面介">
+<meta name="twitter:image" content="http://ob4a6y748.bkt.clouddn.com/ml1-IMG_3921.PNG">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://beim.github.io/2016/12/10/云免流的尝试/"/>
+
+  <script type="text/javascript" src="/js/src/beim/test.js"></script>
+
+  <title> 云免流的尝试 | 北冥945 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">北冥945</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                云免流的尝试
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-12-10T00:26:17+08:00" content="2016-12-10">
+              2016-12-10
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/10/云免流的尝试/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/10/云免流的尝试/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/10/云免流的尝试/" class="leancloud_visitors" data-flag-title="云免流的尝试">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><h2 id="修改HTTP头"><a href="#修改HTTP头" class="headerlink" title="修改HTTP头"></a>修改HTTP头</h2><p>运营商有免费流量的套餐，比如咪咕音乐，在使用咪咕音乐软件的时候用的流量是不收费的。<br>为什么？<br>运营商在检测手机流量的时候检查HTTP头，如URL，HOST，还有X-Request-with这个运营商自己的参数，如果符合免流量费用的条件（比如访问的是移动自己的页面），则对相关的流量不收费。<br>知道了这个，我们就可以在HTTP上面做点修改，达到免流的目的了 ohhh （具体修改的内容在下面介绍）</p>
+<h2 id="修改端口"><a href="#修改端口" class="headerlink" title="修改端口"></a>修改端口</h2><p>运营商还有一种判断免费流量的方法，即访问的端口，如137/138/139等端口，如果流量是指向这些端口的，运营商就不对这些流量计费。<br>那么我们也可以让我们网络请求的端口都设置成这些特定的端口，以达到免流效果。</p>
+<hr>
+<h1 id="实验1"><a href="#实验1" class="headerlink" title="实验1"></a>实验1</h1><p><strong>OpenVPN + Squid 搭建HTTP代理，修改头信息</strong></p>
+<h2 id="系统环境-：ubuntu14-04"><a href="#系统环境-：ubuntu14-04" class="headerlink" title="系统环境 ：ubuntu14.04"></a>系统环境 ：ubuntu14.04</h2><p>首先<a href="https://linux.cn/article-3706-2.html" target="_blank" rel="external">搭建OpenVPN</a><br>然后安装<code>squid</code>, 直接apt-get即可安装<br>相关目录：</p>
+<ul>
+<li><code>/etc/squid3</code> // squid的配置文件</li>
+<li><code>/var/log/squid3/</code> // squid的日志文件</li>
+</ul>
+<h2 id="给出一份squid的配置文件"><a href="#给出一份squid的配置文件" class="headerlink" title="给出一份squid的配置文件"></a>给出一份squid的配置文件</h2><figure class="highlight pf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># squid.conf</span></div><div class="line"></div><div class="line">acl SSL_ports <span class="keyword">port</span> <span class="number">443</span></div><div class="line">acl Safe_ports <span class="keyword">port</span> <span class="number">138</span></div><div class="line">acl Safe_ports <span class="keyword">port</span> <span class="number">80</span></div><div class="line">acl Safe_ports <span class="keyword">port</span> <span class="number">21</span></div><div class="line">acl Safe_ports <span class="keyword">port</span> <span class="number">443</span></div><div class="line">acl Safe_ports <span class="keyword">port</span> <span class="number">70</span></div><div class="line">acl Safe_ports <span class="keyword">port</span> <span class="number">210</span></div><div class="line">acl Safe_ports <span class="keyword">port</span> <span class="number">1025</span>-<span class="number">65535</span></div><div class="line">acl Safe_ports <span class="keyword">port</span> <span class="number">280</span></div><div class="line">acl Safe_ports <span class="keyword">port</span> <span class="number">488</span></div><div class="line">acl Safe_ports <span class="keyword">port</span> <span class="number">591</span></div><div class="line">acl Safe_ports <span class="keyword">port</span> <span class="number">777</span></div><div class="line">acl CONNECT method CONNECT</div><div class="line"><span class="comment"># acl CONNECT method GET</span></div><div class="line"><span class="comment"># acl CONNECT method POST</span></div><div class="line"><span class="comment"># acl CONNECT method PUT</span></div><div class="line"><span class="comment"># acl CONNECT method DELETE</span></div><div class="line"><span class="comment"># acl CONNECT method HEAD</span></div><div class="line"></div><div class="line">via <span class="keyword">on</span></div><div class="line">request_header_access X-Forwarded-For deny <span class="literal">all</span></div><div class="line">request_header_access user-agent  deny <span class="literal">all</span></div><div class="line">reply_header_access X-Forwarded-For deny <span class="literal">all</span></div><div class="line">reply_header_access user-agent  deny <span class="literal">all</span></div><div class="line">http_port <span class="number">2333</span></div><div class="line">http_access allow  <span class="literal">all</span></div><div class="line">access_log /var/<span class="keyword">log</span>/squid/access.<span class="keyword">log</span></div><div class="line">visible_hostname TD-LTE/FDD-LTE</div><div class="line">cache_mgr Welcome_to_use_OpenVPN</div></pre></td></tr></table></figure>
+<p>开启和关闭squid服务的方法<br><code>service squid3 start/stop/restart/status</code></p>
+<h2 id="给出一份openvpn客户端的配置文件"><a href="#给出一份openvpn客户端的配置文件" class="headerlink" title="给出一份openvpn客户端的配置文件"></a>给出一份openvpn<strong>客户端</strong>的配置文件</h2><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># client.ovpn</span></div><div class="line"><span class="meta"># 最下面3个标签里把你自己的证书文件内容复制进去替代TODO</span></div><div class="line"><span class="meta"># 免流代码即修改的HTTP头信息</span></div><div class="line">client</div><div class="line">dev tun</div><div class="line">proto tcp</div><div class="line">remote beim.site <span class="number">1194</span></div><div class="line">;remote my-server<span class="number">-2</span> <span class="number">1194</span></div><div class="line">resolv-retry infinite</div><div class="line">nobind</div><div class="line">persist-key</div><div class="line">persist-tun</div><div class="line">ns-cert-type server</div><div class="line">comp-lzo</div><div class="line">verb <span class="number">3</span></div><div class="line"></div><div class="line"><span class="meta">########免流代码########</span></div><div class="line">remote wap<span class="number">.10086</span>.cn <span class="number">80</span> tcp</div><div class="line">http-proxy-option EXT1 POST http:<span class="comment">//wap.10086.cn</span></div><div class="line">http-proxy-option EXT1 VPN <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">443</span></div><div class="line">http-proxy-option EXT1 POST http:<span class="comment">//wap.10086.cn</span></div><div class="line"><span class="meta"># http-proxy 10.0.0.172 80</span></div><div class="line">http-proxy beim.site <span class="number">138</span></div><div class="line"><span class="meta">########免流代码########</span></div><div class="line"></div><div class="line"><span class="meta"># &lt;http-proxy-user-pass&gt;</span></div><div class="line"><span class="meta"># lpss</span></div><div class="line"><span class="meta"># lpss</span></div><div class="line"><span class="meta"># &lt;/http-proxy-user-pass&gt;</span></div><div class="line"></div><div class="line"><span class="meta"># ca keys/ca.crt</span></div><div class="line">&lt;ca&gt;</div><div class="line"><span class="comment">// TODO</span></div><div class="line">&lt;/ca&gt;</div><div class="line"><span class="meta"># cert keys/laptop.crt</span></div><div class="line">&lt;cert&gt;</div><div class="line"><span class="comment">// TODO</span></div><div class="line">&lt;/cert&gt;</div><div class="line"><span class="meta"># key keys/laptop.key</span></div><div class="line">&lt;key&gt;</div><div class="line"><span class="comment">// TODO</span></div><div class="line">&lt;/key&gt;</div></pre></td></tr></table></figure>
+<h2 id="再给出一份openvpn服务器的配置文件-大体上是没有什么问题的"><a href="#再给出一份openvpn服务器的配置文件-大体上是没有什么问题的" class="headerlink" title="再给出一份openvpn服务器的配置文件(大体上是没有什么问题的)"></a>再给出一份openvpn<strong>服务器</strong>的配置文件(大体上是没有什么问题的)</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">port <span class="number">1194</span></div><div class="line">proto tcp</div><div class="line">dev tun</div><div class="line">ca ./keys/ca<span class="selector-class">.crt</span></div><div class="line">cert ./keys/server<span class="selector-class">.crt</span></div><div class="line">key ./keys/server<span class="selector-class">.key</span></div><div class="line">dh ./keys/dh2048<span class="selector-class">.pem</span></div><div class="line">server <span class="number">10.8</span>.<span class="number">0.0</span> <span class="number">255.255</span>.<span class="number">255.0</span></div><div class="line">ifconfig-pool-persist ipp<span class="selector-class">.txt</span></div><div class="line">push <span class="string">"redirect-gateway def1 bypass-dhcp"</span></div><div class="line">push <span class="string">"dhcp-option DNS 8.8.8.8"</span></div><div class="line">duplicate-cn</div><div class="line">keepalive <span class="number">10</span> <span class="number">120</span></div><div class="line">comp-lzo</div><div class="line">max-clients <span class="number">10</span></div><div class="line">persist-key</div><div class="line">persist-tun</div><div class="line">status openvpn-status<span class="selector-class">.log</span></div><div class="line">log         openvpn<span class="selector-class">.log</span></div><div class="line">log-append  openvpn<span class="selector-class">.log</span></div><div class="line">verb <span class="number">3</span></div></pre></td></tr></table></figure>
+<h2 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h2><p>配置文件都准备好以后，将openvpn和squid的服务都开启<br>将客户端的配置文件导入到客户端（如ios 的app ：openVPN (需要国外的apple id 才能下载)）<br>客户端连接代理，可以看到ip转换</p>
+<h2 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h2><p>但是。。<br>不幸的是。。<br>实验失败 。。<br>虽然IP确实改变了，squid和openvpn的代理确实有效，但是流量依旧扣除了，说明免流的代码无效。<br>但是我在TB上买的免流代码是有效的，它的remote没有设置成自己的而是10086，HTTP-PROXY还是设置成自己的服务器。<br>把它的客户端配置文件贴出来</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># &lt;ca&gt;部分太长，我把它省略掉了，重点在免流代码</span></div><div class="line">client</div><div class="line">dev tun</div><div class="line">proto tcp</div><div class="line">keepalive <span class="number">10</span> <span class="number">120</span></div><div class="line">ns-cert-type server</div><div class="line">resolv-retry infinite</div><div class="line">nobind</div><div class="line">persist-key</div><div class="line">persist-tun</div><div class="line"><span class="comment">########免流代码########</span></div><div class="line">remote wap<span class="number">.10086</span>.cn <span class="number">80</span> tcp</div><div class="line"><span class="keyword">http</span>-proxy-option EXT1 POST <span class="keyword">http</span>://wap<span class="number">.10086</span>.cn</div><div class="line"><span class="keyword">http</span>-proxy-option EXT1 VPN <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">443</span></div><div class="line"><span class="keyword">http</span>-proxy-option EXT1 POST <span class="keyword">http</span>://wap<span class="number">.10086</span>.cn</div><div class="line"><span class="keyword">http</span>-proxy <span class="number">3.</span>love9999.top <span class="number">138</span></div><div class="line"><span class="comment">########免流代码########</span></div><div class="line"></div><div class="line">&lt;<span class="keyword">http</span>-proxy-user-pass&gt;</div><div class="line">lpss</div><div class="line">lpss</div><div class="line">&lt;/<span class="keyword">http</span>-proxy-user-pass&gt;</div><div class="line"></div><div class="line">&lt;ca&gt;<span class="comment"></span></div><div class="line">// TODO </div><div class="line">&lt;/ca&gt;</div><div class="line">auth-user-pass</div><div class="line">comp-lzo</div><div class="line">verb <span class="number">3</span></div></pre></td></tr></table></figure>
+<p>我把remote和http-proxy分别设置成：</p>
+<table>
+<thead>
+<tr>
+<th>remote</th>
+<th>http-proxy</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>myserver:1194(openvpn默认端口)</td>
+<td>myserver:3128(squid默认端口)</td>
+<td>连接成功，ip更改，流量照扣</td>
+</tr>
+<tr>
+<td>myserver:1194</td>
+<td>10.0.0.172:80</td>
+<td>连接成功，ip更改，流量照扣</td>
+</tr>
+<tr>
+<td>wap.10086.cn:80</td>
+<td>myserver:3128</td>
+<td>连接失败</td>
+</tr>
+<tr>
+<td>wap.10086.cn:80</td>
+<td>10.0.0.172:80</td>
+<td>连接失败</td>
+</tr>
+</tbody>
+</table>
+<p>于是我尝试将http代理绑定到138端口，尝试了<code>squid</code>和<code>polipo</code>，均失败，而绑定到其他非常用端口如<code>2333</code>是可以的<br>下面是polipo的日志：</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Couldn<span class="symbol">'t</span> bind: Permission denied</div><div class="line">Couldn<span class="symbol">'t</span> establish listening socket: Permission denied</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="实验2"><a href="#实验2" class="headerlink" title="实验2"></a>实验2</h1><p>于是我想起了我的老朋友 shadowsocks （socks5代理软件，有服务端和客户端，翻墙一直用它，稳定高速）<br><a href="https://github.com/shadowsocks/shadowsocks/blob/master/README.md" target="_blank" rel="external">shadowsocks usage</a></p>
+<h2 id="操作方法-1"><a href="#操作方法-1" class="headerlink" title="操作方法"></a>操作方法</h2><p>在服务器上执行命令,开启<code>shadowsocks 服务器</code><br><code>sudo ssserver -p 138 -k password -m aes-256-cfb -d start</code></p>
+<p>在客户端进行连接（ios 上有surge（￥328）和<code>shadowrocket</code> ，安卓上有shadowsocks ）</p>
+<p>然后。。就。。成功。。了。。吧。。</p>
+<hr>
+<h2 id="实验结果-1"><a href="#实验结果-1" class="headerlink" title="实验结果"></a>实验结果</h2><p>日期：<code>2016-12-10</code><br>地区：<code>哈尔滨</code><br>连接shadowsocks一个多小时，<br>测试：网页，QQ，微信，bilibili直播，bilibili视频（这个比较慢原因未知），斗鱼直播，微云下载。<br>除了b站视频以外，其他的体验都和正常4g相同。</p>
+<p>经过代理的流量<strong>125.19M</strong><br>实际扣除的流量为<strong>0.09M</strong>(可能是某些shadowsocks 所不能处理的协议)</p>
+<p>如图<br><img src="http://ob4a6y748.bkt.clouddn.com/ml1-IMG_3921.PNG" alt="图片"><br><img src="http://ob4a6y748.bkt.clouddn.com/ml2-IMG_3922.PNG" alt="图片"><br><img src="http://ob4a6y748.bkt.clouddn.com/ml-IMG_3920.PNG" alt="图片"></p>
+<hr>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>好奇为主，免流为次<br>且用且珍惜</p>
+<hr>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://www.wooyun.org/bugs/wooyun-2010-0176249" target="_blank" rel="external">乌云提交云免流漏洞</a><br><a href="http://blog.lanyus.com/archives/248.html" target="_blank" rel="external">深入分析免流(非小白教程)</a><br><a href="https://github.com/shadowsocks/shadowsocks/blob/master/README.md" target="_blank" rel="external">shadowsocks wiki - github</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>0\.0</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://ob4a6y748.bkt.clouddn.com/wxzf.jpg" alt="Beim WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://ob4a6y748.bkt.clouddn.com/shoukuan.jpg" alt="Beim Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag">#linux</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/08/服务学概论第二次作业/" rel="next" title="服务学概论第二次作业">
+                <i class="fa fa-chevron-left"></i> 服务学概论第二次作业
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/12/10/云免流的尝试/"
+           data-title="云免流的尝试" data-url="https://beim.github.io/2016/12/10/云免流的尝试/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/hand_zheng.jpg"
+               alt="Beim" />
+          <p class="site-author-name" itemprop="name">Beim</p>
+          <p class="site-description motion-element" itemprop="description">平常心，平常心。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">48</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Beim" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#原理"><span class="nav-number">1.</span> <span class="nav-text">原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改HTTP头"><span class="nav-number">1.1.</span> <span class="nav-text">修改HTTP头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改端口"><span class="nav-number">1.2.</span> <span class="nav-text">修改端口</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实验1"><span class="nav-number">2.</span> <span class="nav-text">实验1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#系统环境-：ubuntu14-04"><span class="nav-number">2.1.</span> <span class="nav-text">系统环境 ：ubuntu14.04</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给出一份squid的配置文件"><span class="nav-number">2.2.</span> <span class="nav-text">给出一份squid的配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给出一份openvpn客户端的配置文件"><span class="nav-number">2.3.</span> <span class="nav-text">给出一份openvpn客户端的配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#再给出一份openvpn服务器的配置文件-大体上是没有什么问题的"><span class="nav-number">2.4.</span> <span class="nav-text">再给出一份openvpn服务器的配置文件(大体上是没有什么问题的)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作方法"><span class="nav-number">2.5.</span> <span class="nav-text">操作方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验结果"><span class="nav-number">2.6.</span> <span class="nav-text">实验结果</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实验2"><span class="nav-number">3.</span> <span class="nav-text">实验2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#操作方法-1"><span class="nav-number">3.1.</span> <span class="nav-text">操作方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验结果-1"><span class="nav-number">3.2.</span> <span class="nav-text">实验结果</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后"><span class="nav-number">4.</span> <span class="nav-text">最后</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">5.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Beim</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="https://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="https://cdn.bootcss.com/velocity/1.2.1/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="https://cdn.bootcss.com/velocity/1.2.1/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"beim"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="https://cdn.bootcss.com/UAParser.js/0.7.9/ua-parser.min.js"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("QpR0wBRCIFVoU9r2x7ydx4hF-gzGzoHsz", "BRWqoRltsGqh4f0nUiW0EIPA");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
