@@ -16,6 +16,7 @@
 <p>执行命令<code>ssserver -c shadowsocks.conf</code> 即可开启服务(<code>-d</code> 选项可以后台运行)<br>或者<a href="https://github.com/shadowsocks/shadowsocks/wiki/%E7%94%A8-Supervisor-%E8%BF%90%E8%A1%8C-Shadowsocks" target="_blank" rel="external">用 Supervisor 运行 Shadowsocks</a></p>
 <p>查看日志 <code>sudo less /var/log/shadowsocks.log</code></p>
 <p><a href="https://github.com/shadowsocks/shadowsocks/wiki/Optimizing-Shadowsocks" target="_blank" rel="external">shadowsocks 优化</a></p>
+<p><a href="https://blog.bingxuecandong.com/?p=199" target="_blank" rel="external">shadowsocks 监控流量</a></p>
 ]]></content>
     </entry>
     
@@ -85,6 +86,10 @@
 <h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>好奇为主，免流为次<br>且用且珍惜</p>
 <hr>
 <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://www.wooyun.org/bugs/wooyun-2010-0176249" target="_blank" rel="external">乌云提交云免流漏洞</a><br><a href="http://blog.lanyus.com/archives/248.html" target="_blank" rel="external">深入分析免流(非小白教程)</a><br><a href="https://github.com/shadowsocks/shadowsocks/blob/master/README.md" target="_blank" rel="external">shadowsocks wiki - github</a></p>
+<hr>
+<h1 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h1><p>手机上<code>shadowrocket</code> 连了一整天没断<br>在手机亮屏的时候, 流量是完全不会扣的<br>黑屏的时候会扣少量流量, 可能是系统推送服务的, 一小时也不到0.1M, 可以忽略</p>
+<p>手机用<code>shadowrocket</code> 连接, 开热点, 电脑连接热点,<br>可以连接成功, 但是电脑不能上网, 原因未知.</p>
+<p>手机不连接代理, 开热点, 电脑用<code>shadowsocks</code> 连接代理服务器, 并连接手机热点,<br>手机电脑都可以上网<br>手机走的流量会正常扣除<br>电脑上通过代理的流量免费, 没通过代理的流量正常扣除</p>
 ]]></content>
     </entry>
     
