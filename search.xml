@@ -1851,6 +1851,28 @@
       <title><![CDATA[编译原理2E-笔记]]></title>
       <url>https://beim.github.io/2016/09/14/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%862E-%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<p><img src="http://ob4a6y748.bkt.clouddn.com/compilers.jpg" alt="compiler"><br><a id="more"></a></p>
+<h1 id="考试准备"><a href="#考试准备" class="headerlink" title="考试准备"></a>考试准备</h1><ul>
+<li><p><a href="http://baike.baidu.com/link?url=RPwvbYr4BJGR9Og9jmN-QngyQYRLmfF9BKXayp36S-2ZHzBu7HLBk0iS8mQQM1hbDp0fdxqXM_VEUx4z-kmkl4FgCDLffmpZmp1MlC87MjTku77hkT-PVSQ1E3mdImG0wXH8NErG6n_6K_y46_zgya" target="_blank" rel="external">面向机器语言</a></p>
+</li>
+<li><p>一般程序设计语言的定义都涉及<code>语法</code>, <code>语义</code>, <code>语用</code> 三个方面; <a href="https://zhidao.baidu.com/question/288438451.html" target="_blank" rel="external">关于这三个-百度知道</a></p>
+</li>
+<li><p>编译程序的工作过程可以划分为: <code>词法分析</code>, <code>语法分析</code>, <code>语义分析</code>, <code>中间代码生成</code>, <code>代码优化[可选]</code>, <code>为特定目标机生成代码(后端)</code>, 同时还会伴有<code>表格处理</code> 和<code>出错处理</code></p>
+</li>
+<li><p>编译方式与解释方式的根本区别在于<code>是否生成目标代码</code>.</p>
+</li>
+<li><p>如果编译程序生成的目标程序是<code>机器代码程序</code>, 则源程序的执行分为: <code>编译阶段</code>和<code>运行阶段</code>, 如果生成的是<code>汇编语言程序</code>, 则源程序的执行分为<code>编译阶段</code>, <code>汇编阶段</code>, <code>运行阶段</code></p>
+</li>
+<li><p><code>翻译程序</code>: 把某种语言转换成另一种语言程序的程序; <code>解释程序</code>: 以该语言的源程序作为输入, 但不产生目标程序, 而是边解释边执行源程序本身; <code>编译程序</code>: 将高级语言转换为诸如汇编语言或机器语言之类的’低级语言’的翻译程序;<br><code>翻译程序</code>是一种系统程序，它将计算机编程语言编写的程序翻译成另外一种计算机语言的一般来说等价的程序，主要包括<code>编译程序</code>和<code>解释程序</code>，<code>汇编程序</code>也被认为是<code>翻译程序</code>。</p>
+</li>
+<li><p>p6-编译器中记录<code>变量的名字</code>, 和名字的属性(存储分配, 类型, 作用域); <code>过程名字</code>, 和属性(参数数量, 类型, 每个参数的传递方法) ; <code>符号表</code>为每个变量名字创建一个记录条目</p>
+</li>
+<li><p><a href="http://www.voidcn.com/blog/SHENNONGZHAIZHU/article/p-6188958.html" target="_blank" rel="external">四种文法类型 - 博客</a>; 0-3分别为: 短语文法, 上下文有关文法,  上下文无关文法, 正则文法</p>
+</li>
+<li><p><code>短语</code>: 设G[z]是一文法, w=xuy是一句型, 如果有<code>Z=*&gt;xUy</code> 且<code>U=+&gt;u</code>. 那么称u是一个相对于非终结符号U的句型w的短语<br><code>简单短语</code>: 若有<code>Z=*&gt;xUy</code>, 且<code>U=&gt;u</code>, 那么, 称u是一个相对于非终结符号U的句型w的简单短语</p>
+</li>
+<li><code>句柄</code>: 任一句型的最左简单短语称为该句型的句柄</li>
+</ul>
+<hr>
 <h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><h2 id="第三章词法分析"><a href="#第三章词法分析" class="headerlink" title="第三章词法分析"></a>第三章词法分析</h2><p><strong>3.1.1</strong></p>
 <figure class="highlight bnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">&lt;float&gt;</span> <span class="attribute">&lt;id, limitedSquaare&gt;</span> <span class="attribute">&lt;(&gt;</span> <span class="attribute">&lt;id, x&gt;</span> <span class="attribute">&lt;)&gt;</span> <span class="attribute">&lt;&#123;&gt;</span></div><div class="line">  <span class="attribute">&lt;float&gt;</span> <span class="attribute">&lt;id, x&gt;</span></div><div class="line">  <span class="attribute">&lt;return&gt;</span> <span class="attribute">&lt;(&gt;</span> <span class="attribute">&lt;id, x&gt;</span> <span class="attribute">&lt;op,"&lt;="&gt;</span> <span class="attribute">&lt;num, -10.0&gt;</span> <span class="attribute">&lt;op, "||"&gt;</span> <span class="attribute">&lt;id, x&gt;</span> <span class="attribute">&lt;op, "&gt;</span>="&gt; <span class="attribute">&lt;num, 10.0&gt;</span> <span class="attribute">&lt;)&gt;</span> <span class="attribute">&lt;op, "?"&gt;</span> <span class="attribute">&lt;num, 100&gt;</span> <span class="attribute">&lt;op, ":"&gt;</span> <span class="attribute">&lt;id, x&gt;</span> <span class="attribute">&lt;op, "*"&gt;</span> <span class="attribute">&lt;id, x&gt;</span></div><div class="line"><span class="attribute">&lt;&#125;&gt;</span></div></pre></td></tr></table></figure>
 <p><strong>3.1.2</strong></p>
@@ -2766,6 +2788,10 @@
 <p>“人总是要分的，而且还会越分越远，见不着面，摸不着人，想得你抓心饶肝的，可是咱也在长啊，个越来越高，能耐越来越大，到时候想见谁就见谁，总有一天你会发现，从天南到海北就是一抬腿的距离。”</p>
 </blockquote>
 <p><code>Wen Dec 7 05:55</code></p>
+<hr>
+<p><strong>云免流</strong></p>
+<p>通过服务器代理，把所有的请求都发到服务器137或者138端口，使运营商对这些流量不计费。<br>这么简单就能有无限免费流量的方法，能用多久呢？<br><em>脑补吾王偏头</em><br>已经不想再用wifi 了(〃’▽’〃) </p>
+<p><code>Sun Dec 12 14:48</code></p>
 <hr>
 ]]></content>
     </entry>
