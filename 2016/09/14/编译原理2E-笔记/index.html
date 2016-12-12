@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://beim.github.io/2016/09/14/编译原理2E-笔记/index.html">
 <meta property="og:site_name" content="北冥945">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/compilers.jpg">
-<meta property="og:updated_time" content="2016-12-11T14:42:38.124Z">
+<meta property="og:updated_time" content="2016-12-12T13:53:09.432Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编译原理2E-笔记">
 <meta name="twitter:image" content="http://ob4a6y748.bkt.clouddn.com/compilers.jpg">
@@ -328,7 +328,7 @@
 </li>
 <li><p>编译程序的工作过程可以划分为: <code>词法分析</code>, <code>语法分析</code>, <code>语义分析</code>, <code>中间代码生成</code>, <code>代码优化[可选]</code>, <code>为特定目标机生成代码(后端)</code>, 同时还会伴有<code>表格处理</code> 和<code>出错处理</code></p>
 </li>
-<li><p>编译方式与解释方式的根本区别在于<code>是否生成目标代码</code>.</p>
+<li><p>编译方式与解释方式的根本区别在于<code>是否生成目标代码</code>. <a href="http://blog.csdn.net/zhu_xun/article/details/16921413" target="_blank" rel="external">解释型语言和编译型语言的区别 - csdn</a></p>
 </li>
 <li><p>如果编译程序生成的目标程序是<code>机器代码程序</code>, 则源程序的执行分为: <code>编译阶段</code>和<code>运行阶段</code>, 如果生成的是<code>汇编语言程序</code>, 则源程序的执行分为<code>编译阶段</code>, <code>汇编阶段</code>, <code>运行阶段</code></p>
 </li>
@@ -338,9 +338,30 @@
 </li>
 <li><p><a href="http://www.voidcn.com/blog/SHENNONGZHAIZHU/article/p-6188958.html" target="_blank" rel="external">四种文法类型 - 博客</a>; 0-3分别为: 短语文法, 上下文有关文法,  上下文无关文法, 正则文法</p>
 </li>
-<li><p><code>短语</code>: 设G[z]是一文法, w=xuy是一句型, 如果有<code>Z=*&gt;xUy</code> 且<code>U=+&gt;u</code>. 那么称u是一个相对于非终结符号U的句型w的短语<br><code>简单短语</code>: 若有<code>Z=*&gt;xUy</code>, 且<code>U=&gt;u</code>, 那么, 称u是一个相对于非终结符号U的句型w的简单短语</p>
+<li><p><code>短语</code>: 设G[Z]是一文法, w=xuy是一句型, 如果有<code>Z =*&gt; xUy</code> 且<code>U =+&gt; u</code>. 那么称u是一个相对于非终结符号U的句型w的短语<br><code>简单短语</code>: 若有<code>Z =*&gt; xUy</code>, 且<code>U =&gt; u</code>, 那么, 称u是一个相对于非终结符号U的句型w的简单短语<br><code>句柄</code>: 任一句型的最左简单短语称为该句型的句柄<br><code>素短语</code>: 是短语, 至少含有一个终结符, 除自身意外不在含有更小的带有终结符的短语</p>
 </li>
-<li><code>句柄</code>: 任一句型的最左简单短语称为该句型的句柄</li>
+<li><p><code>短语</code>: 树或者子树的叶子形成的符号串<br><code>简单短语</code>: 简单子树(只有叶子的子树)的叶子形成的符号串<br><code>句柄</code>: 最左简单子树的叶子形成的符号串<br><code>素短语</code>: 子树, 有终结符, 无更小子树<br><a href="http://www.apkbus.com/blog-117985-44288.html" target="_blank" rel="external">图示 - 博客</a></p>
+</li>
+<li><p><a href="https://zhidao.baidu.com/question/129871540.html" target="_blank" rel="external">数组的内情向量</a>; 信息包括: 数组的类型, 维数, 各维的上下界, 数组的首地址</p>
+</li>
+<li><p>典型的编译型语言: <code>C/C++、Pascal/Object Pascal（Delphi）</code>; 解释型语言: <code>JavaScript、VBScript、Perl、Python、Ruby、MATLAB</code></p>
+</li>
+<li><p><a href="https://www.zhihu.com/question/19608553" target="_blank" rel="external">JAVA是编译型语言还是解释型语言 - 知乎</a>; 个人偏向解释型, 毕竟编译之后的class文件还是要通过jvm来解释执行的</p>
+</li>
+<li><p>正规式M1 和M2 等价是指: M1 和M2 所识别的语言集相等</p>
+</li>
+<li><p>如果文法G 是无二义的, 则它的任何句子a: 最左推导和最右推导必定相同X; 最左推导和最右推导的语法树必定相同√</p>
+</li>
+<li><p><a href="http://metc.gdut.edu.cn/compile/nandian/n-11.htm" target="_blank" rel="external">常用代码优化技术</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/shiwei0124/article/details/4877546" target="_blank" rel="external">静态存储分配(FORTRAN), 动态存储分配(PASCAL, C)</a></p>
+</li>
+<li><p><strong>局部优化</strong> : 消除局部公共子表达式, 消除死代码, 利用代数恒等式(局部强度消减, 常量合并)</p>
+</li>
+<li><p><strong>全局优化</strong>: 消除全局公共子表达式, 复制传播, 常量折叠(如果推导出一个表达式是常量, 则用常量代替此表达式), 消除死代码, 删除归纳变量, 强度削弱</p>
+</li>
+<li><p>编译程序绝大多数时间花在<code>表格管理</code>上.</p>
+</li>
 </ul>
 <hr>
 <h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><h2 id="第三章词法分析"><a href="#第三章词法分析" class="headerlink" title="第三章词法分析"></a>第三章词法分析</h2><p><strong>3.1.1</strong></p>
