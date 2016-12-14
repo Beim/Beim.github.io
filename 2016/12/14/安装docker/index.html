@@ -84,22 +84,19 @@
 
 
 
-<meta name="description" content="chromium下载chromium从github上下载这几个脚本放置在/usr/local/src/目录下
-运行./update.sh此时将最新版本的chromium下载到了/usr/local/src/chromium-latest-linux/latest目录下
-设置别名vi ~/.bashrc在最后添加alias chromium=&amp;#39;/usr/local/src/chromium-">
+<meta name="description" content="ubuntu 安装指南 - 官网
+在添加GPG 这一步报错， 无法获取12345678910beim@userver:/etc/apt$ sudo apt-key adv \&amp;gt;                --keyserver hkp://ha.pool.sks-keyservers.net:80 \&amp;gt;                --recv-keys 58118E89F3A9">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ubuntu下安装chromium">
-<meta property="og:url" content="https://beim.github.io/2016/11/14/ubuntu下安装chromium/index.html">
+<meta property="og:title" content="安装docker">
+<meta property="og:url" content="https://beim.github.io/2016/12/14/安装docker/index.html">
 <meta property="og:site_name" content="北冥945">
-<meta property="og:description" content="chromium下载chromium从github上下载这几个脚本放置在/usr/local/src/目录下
-运行./update.sh此时将最新版本的chromium下载到了/usr/local/src/chromium-latest-linux/latest目录下
-设置别名vi ~/.bashrc在最后添加alias chromium=&amp;#39;/usr/local/src/chromium-">
-<meta property="og:updated_time" content="2016-11-14T06:11:10.350Z">
+<meta property="og:description" content="ubuntu 安装指南 - 官网
+在添加GPG 这一步报错， 无法获取12345678910beim@userver:/etc/apt$ sudo apt-key adv \&amp;gt;                --keyserver hkp://ha.pool.sks-keyservers.net:80 \&amp;gt;                --recv-keys 58118E89F3A9">
+<meta property="og:updated_time" content="2016-12-14T11:56:11.784Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ubuntu下安装chromium">
-<meta name="twitter:description" content="chromium下载chromium从github上下载这几个脚本放置在/usr/local/src/目录下
-运行./update.sh此时将最新版本的chromium下载到了/usr/local/src/chromium-latest-linux/latest目录下
-设置别名vi ~/.bashrc在最后添加alias chromium=&amp;#39;/usr/local/src/chromium-">
+<meta name="twitter:title" content="安装docker">
+<meta name="twitter:description" content="ubuntu 安装指南 - 官网
+在添加GPG 这一步报错， 无法获取12345678910beim@userver:/etc/apt$ sudo apt-key adv \&amp;gt;                --keyserver hkp://ha.pool.sks-keyservers.net:80 \&amp;gt;                --recv-keys 58118E89F3A9">
 
 
 
@@ -120,11 +117,11 @@
 
 
 
-  <link rel="canonical" href="https://beim.github.io/2016/11/14/ubuntu下安装chromium/"/>
+  <link rel="canonical" href="https://beim.github.io/2016/12/14/安装docker/"/>
 
   <script type="text/javascript" src="/js/src/beim/test.js"></script>
 
-  <title> ubuntu下安装chromium | 北冥945 </title>
+  <title> 安装docker | 北冥945 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -267,7 +264,7 @@
             
             
               
-                ubuntu下安装chromium
+                安装docker
               
             
           </h1>
@@ -279,8 +276,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-14T13:10:13+08:00" content="2016-11-14">
-              2016-11-14
+            <time itemprop="dateCreated" datetime="2016-12-14T19:17:37+08:00" content="2016-12-14">
+              2016-12-14
             </time>
           </span>
 
@@ -290,8 +287,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/11/14/ubuntu下安装chromium/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/14/ubuntu下安装chromium/" itemprop="commentsCount"></span>
+                <a href="/2016/12/14/安装docker/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/14/安装docker/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -301,7 +298,7 @@
 
           
           
-             <span id="/2016/11/14/ubuntu下安装chromium/" class="leancloud_visitors" data-flag-title="ubuntu下安装chromium">
+             <span id="/2016/12/14/安装docker/" class="leancloud_visitors" data-flag-title="安装docker">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -323,16 +320,21 @@
       
 
       
-        <h1 id="chromium"><a href="#chromium" class="headerlink" title="chromium"></a>chromium</h1><h2 id="下载chromium"><a href="#下载chromium" class="headerlink" title="下载chromium"></a>下载chromium</h2><p>从<a href="https://github.com/scheib/chromium-latest-linux" target="_blank" rel="external">github</a>上下载这几个脚本<br>放置在<code>/usr/local/src/</code>目录下</p>
-<p>运行<code>./update.sh</code><br>此时将最新版本的chromium下载到了<code>/usr/local/src/chromium-latest-linux/latest</code>目录下</p>
-<h2 id="设置别名"><a href="#设置别名" class="headerlink" title="设置别名"></a>设置别名</h2><p><code>vi ~/.bashrc</code><br>在最后添加<br><code>alias chromium=&#39;/usr/local/src/chromium-latest-linux/run.sh&#39;</code></p>
-<p>这时在终端中输入<code>chromium</code>即可打开chromium浏览器</p>
-<h2 id="更新chromium"><a href="#更新chromium" class="headerlink" title="更新chromium"></a>更新chromium</h2><p>只需要再运行<code>chromium-latest-linux</code>目录下的<code>update.sh</code>脚本就可以了</p>
-<h2 id="更改desktop下的chromium"><a href="#更改desktop下的chromium" class="headerlink" title="更改desktop下的chromium"></a>更改desktop下的chromium</h2><p><code>~/.local/share/applications</code>下找<code>chromium-browser.desktop</code>文件, 看其中的参数是否和安装的<code>run.sh</code>中的参数相同</p>
-<hr>
-<h1 id="flash"><a href="#flash" class="headerlink" title="flash"></a>flash</h1><h2 id="下载adobe-flash"><a href="#下载adobe-flash" class="headerlink" title="下载adobe flash"></a>下载adobe flash</h2><p>从<a href="https://get.adobe.com/cn/flashplayer/?no_redirect" target="_blank" rel="external">flash 官网</a>下载合适版本的flash<br>解压到<code>/usr/local/src/chromium-latest-linux/flash</code>目录下<br>将其中的<code>libpepflashplayer.so</code>复制到<code>/usr/local/src/chromium-latest-linux/latest</code>目录下</p>
-<h2 id="启用flash"><a href="#启用flash" class="headerlink" title="启用flash"></a>启用flash</h2><p>修改<code>run.sh</code>, <code>vi ./run.sh</code><br>将其中的<code>$BASEDIR/latest/chrome --user-data-dir=&quot;$BASEDIR/user-data-dir&quot; $* &amp;&gt; /dev/null &amp;</code><br>改为<code>$BASEDIR/latest/chrome --ppapi-flash-path=&quot;$BASEDIR/latest/libpepflashplayer.so&quot; --user-data-dir=&quot;$BASEDIR/user-data-dir&quot; $* &amp;&gt; /dev/null &amp;</code></p>
-<p>打开chromium, 进入<code>chrome://plugins</code>, 找到<code>Adobe Flash Player</code>, 点击<code>允许始终运行</code></p>
+        <p><a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/" target="_blank" rel="external">ubuntu 安装指南 - 官网</a></p>
+<p>在添加GPG 这一步报错， 无法获取<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">beim<span class="variable">@userver:</span>/etc/apt$ sudo apt-key adv \</div><div class="line">&gt;                --keyserver <span class="attribute">hkp</span>:<span class="comment">//ha.pool.sks-keyservers.net:80 \</span></div><div class="line">&gt;                --recv-keys <span class="number">58118</span>E89F3A912897C070ADBF76221572C52609D</div><div class="line"><span class="attribute">Executing</span>: /tmp/tmp.N2eCGO93Kl/gpg.<span class="number">1</span>.sh --keyserver</div><div class="line"><span class="attribute">hkp</span>:<span class="comment">//ha.pool.sks-keyservers.net:80</span></div><div class="line">--recv-keys</div><div class="line"><span class="number">58118</span>E89F3A912897C070ADBF76221572C52609D</div><div class="line"><span class="attribute">gpg</span>: requesting key <span class="number">2</span>C52609D from hkp server ha.pool.sks-keyservers.net</div><div class="line"><span class="attribute">gpg</span>: keyserver timed out</div><div class="line"><span class="attribute">gpg</span>: keyserver receive <span class="attribute">failed</span>: keyserver error</div></pre></td></tr></table></figure></p>
+<p>于是参考<a href="https://yeasy.gitbooks.io/docker_practice/content/install/ubuntu.html" target="_blank" rel="external">简书</a></p>
+<p>使用阿里云的安装脚本<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -sSL http://acs-public-mirror.oss-<span class="keyword">cn</span>-hangzhou.aliyuncs.<span class="keyword">com</span>/docker-engine/internet | <span class="keyword">sh</span> -</div></pre></td></tr></table></figure></p>
+<p>安装完成<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">+ sudo -E sh -c docker version</div><div class="line">Client:</div><div class="line"> Version:      1.12.4</div><div class="line"> API version:  1.24</div><div class="line"> Go version:   go1.6.4</div><div class="line"> Git <span class="keyword">commit</span>:   <span class="number">1564</span>f02</div><div class="line"> Built:        Tue <span class="built_in">Dec</span> <span class="number">13</span> <span class="number">00</span>:<span class="number">08</span>:<span class="number">34</span> <span class="number">2016</span></div><div class="line"> OS/Arch:      linux/amd64</div><div class="line"></div><div class="line"><span class="keyword">Server</span>:</div><div class="line"> <span class="keyword">Version</span>:      <span class="number">1.12</span><span class="number">.4</span></div><div class="line"> API <span class="keyword">version</span>:  <span class="number">1.24</span></div><div class="line"> <span class="keyword">Go</span> <span class="keyword">version</span>:   go1<span class="number">.6</span><span class="number">.4</span></div><div class="line"> Git <span class="keyword">commit</span>:   <span class="number">1564</span>f02</div><div class="line"> Built:        Tue <span class="built_in">Dec</span> <span class="number">13</span> <span class="number">00</span>:<span class="number">08</span>:<span class="number">34</span> <span class="number">2016</span></div><div class="line"> OS/Arch:      linux/amd64</div><div class="line"></div><div class="line"><span class="keyword">If</span> you would <span class="keyword">like</span> <span class="keyword">to</span> <span class="keyword">use</span> Docker <span class="keyword">as</span> a non-root <span class="keyword">user</span>, you should <span class="keyword">now</span> <span class="keyword">consider</span></div><div class="line">adding your <span class="keyword">user</span> <span class="keyword">to</span> the <span class="string">"docker"</span> <span class="keyword">group</span> <span class="keyword">with</span> something <span class="keyword">like</span>:</div><div class="line"></div><div class="line">  sudo usermod -aG docker beim</div><div class="line"></div><div class="line">Remember that you will have <span class="keyword">to</span> <span class="keyword">log</span> <span class="keyword">out</span> <span class="keyword">and</span> back <span class="keyword">in</span> <span class="keyword">for</span> this <span class="keyword">to</span> take effect!</div></pre></td></tr></table></figure></p>
+<p>根据上面的提示， 使用<code>sudo usermod -aG docker beim</code></p>
+<p>现在可以运行hello-world了<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker <span class="built_in">run</span> hello-world</div></pre></td></tr></table></figure></p>
+<p>成功<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">beim@userver:~$ docker run hello-world</div><div class="line"></div><div class="line">Hello <span class="built_in">from</span> Docker!</div><div class="line">This message shows that your installation appears <span class="built_in">to</span> be working correctly.</div><div class="line"></div><div class="line">To generate this message, Docker took <span class="keyword">the</span> following steps:</div><div class="line"> <span class="number">1.</span> The Docker client contacted <span class="keyword">the</span> Docker daemon.</div><div class="line"> <span class="number">2.</span> The Docker daemon pulled <span class="keyword">the</span> <span class="string">"hello-world"</span> image <span class="built_in">from</span> <span class="keyword">the</span> Docker Hub.</div><div class="line"> <span class="number">3.</span> The Docker daemon created <span class="keyword">a</span> <span class="built_in">new</span> container <span class="built_in">from</span> that image which runs <span class="keyword">the</span></div><div class="line">    executable that produces <span class="keyword">the</span> output you are currently reading.</div><div class="line"> <span class="number">4.</span> The Docker daemon streamed that output <span class="built_in">to</span> <span class="keyword">the</span> Docker client, which sent <span class="keyword">it</span></div><div class="line">    <span class="built_in">to</span> your terminal.</div><div class="line"></div><div class="line">To <span class="keyword">try</span> something more ambitious, you can run <span class="keyword">an</span> Ubuntu container <span class="keyword">with</span>:</div><div class="line"> $ docker run -<span class="keyword">it</span> ubuntu bash</div><div class="line"></div><div class="line">Share images, automate workflows, <span class="keyword">and</span> more <span class="keyword">with</span> <span class="keyword">a</span> free Docker Hub account:</div><div class="line"> <span class="keyword">https</span>://hub.docker.com</div><div class="line"></div><div class="line">For more examples <span class="keyword">and</span> ideas, visit:</div><div class="line"> <span class="keyword">https</span>://docs.docker.com/engine/userguide/</div></pre></td></tr></table></figure></p>
+<p>尝试pull 下ubuntu16.04<br><code>docker pull ubuntu:16.04</code><br>发现速度非常慢， 因为默认是Docker Hub 的仓库</p>
+<p>于是参考<a href="https://yeasy.gitbooks.io/docker_practice/content/install/mirror.html" target="_blank" rel="external">镜像加速器 - gitbook</a><br>到<a href="https://cr.console.aliyun.com/#/accelerator" target="_blank" rel="external">阿里云， 配置加速器</a><br>执行<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">sudo mkdir -<span class="selector-tag">p</span> /etc/systemd/system/docker<span class="selector-class">.service</span><span class="selector-class">.d</span></div><div class="line">sudo tee /etc/systemd/system/docker<span class="selector-class">.service</span><span class="selector-class">.d</span>/mirror<span class="selector-class">.conf</span> &lt;&lt;-<span class="string">'EOF'</span></div><div class="line">[Service]</div><div class="line">ExecStart=</div><div class="line">ExecStart=/usr/bin/docker daemon -H fd:<span class="comment">// --registry-mirror=https://oysy0l7g.mirror.aliyuncs.com</span></div><div class="line">EOF</div><div class="line">sudo systemctl daemon-reload</div><div class="line">sudo systemctl restart docker</div></pre></td></tr></table></figure></p>
+<p>再次尝试pull ubuntu16.04, 这次就很快了<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">beim<span class="variable">@userver:</span>~$ docker pull <span class="attribute">ubuntu</span>:<span class="number">16.04</span></div><div class="line"><span class="number">16.04</span>: Pulling from library/ubuntu</div><div class="line"><span class="attribute">af49a5ceb2a5</span>: Pull complete </div><div class="line"><span class="number">8</span><span class="attribute">f9757b472e7</span>: Pull complete </div><div class="line"><span class="attribute">e931b117db38</span>: Pull complete </div><div class="line"><span class="number">47</span><span class="attribute">b5e16c0811</span>: Pull complete </div><div class="line"><span class="number">9332</span><span class="attribute">eaf1a55b</span>: Pull complete </div><div class="line"><span class="attribute">Digest</span>: <span class="attribute">sha256</span>:<span class="number">3</span>b64c309deae7ab0f7dbdd42b6b326261ccd6261da5d88396439353162703fb5</div><div class="line"><span class="attribute">Status</span>: Downloaded newer image for <span class="attribute">ubuntu</span>:<span class="number">16.04</span></div></pre></td></tr></table></figure></p>
+<p>查看镜像<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">beim<span class="variable">@userver:</span>~$ docker images</div><div class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</div><div class="line">ubuntu              <span class="number">16.04</span>               <span class="number">4</span>ca3a192ff2a        <span class="number">2</span> weeks ago         <span class="number">128.2</span> MB</div><div class="line">hello-world         latest              c54a2cc56cbb        <span class="number">5</span> months ago        <span class="number">1.848</span> kB</div></pre></td></tr></table></figure></p>
+<p>现在运行ubuntu16.04<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">beim<span class="variable">@userver:</span>~$ docker run -it <span class="attribute">ubuntu</span>:<span class="number">16.04</span> </div><div class="line">root<span class="variable">@41f0f5b8ff95</span>:/# uname -r</div><div class="line"><span class="number">4.4</span>.<span class="number">0</span>-<span class="number">31</span>-generic</div><div class="line">root<span class="variable">@41f0f5b8ff95</span>:/# exit</div><div class="line">exit</div></pre></td></tr></table></figure></p>
+<p>看来是成功了～～～撒花<br>继续准备编译考试了QAQ</p>
+<h1 id="参考连接"><a href="#参考连接" class="headerlink" title="参考连接"></a>参考连接</h1><p><a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/" target="_blank" rel="external">Install Docker on Ubuntu - 官网</a><br><a href="https://yq.aliyun.com/articles/66488" target="_blank" rel="external">Ubuntu 12.04上享用新版本Linux的功能 - 云栖社区</a><br><a href="https://yeasy.gitbooks.io/docker_practice/content/" target="_blank" rel="external">Docker 从入门到实践 - gitbook</a></p>
 
       
     </div>
@@ -385,17 +387,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/08/计网实验准备/" rel="next" title="计网实验准备">
-                <i class="fa fa-chevron-left"></i> 计网实验准备
+              <a href="/2016/12/13/云栖社区-云计算入门笔记/" rel="next" title="云栖社区-云计算入门笔记">
+                <i class="fa fa-chevron-left"></i> 云栖社区-云计算入门笔记
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/15/软件开发过程与项目管理/" rel="prev" title="软件开发过程与项目管理">
-                软件开发过程与项目管理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -421,8 +419,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/11/14/ubuntu下安装chromium/"
-           data-title="ubuntu下安装chromium" data-url="https://beim.github.io/2016/11/14/ubuntu下安装chromium/">
+      <div class="ds-thread" data-thread-key="2016/12/14/安装docker/"
+           data-title="安装docker" data-url="https://beim.github.io/2016/12/14/安装docker/">
       </div>
     
   </div>
@@ -517,7 +515,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#chromium"><span class="nav-number">1.</span> <span class="nav-text">chromium</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载chromium"><span class="nav-number">1.1.</span> <span class="nav-text">下载chromium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置别名"><span class="nav-number">1.2.</span> <span class="nav-text">设置别名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新chromium"><span class="nav-number">1.3.</span> <span class="nav-text">更新chromium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改desktop下的chromium"><span class="nav-number">1.4.</span> <span class="nav-text">更改desktop下的chromium</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flash"><span class="nav-number">2.</span> <span class="nav-text">flash</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载adobe-flash"><span class="nav-number">2.1.</span> <span class="nav-text">下载adobe flash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启用flash"><span class="nav-number">2.2.</span> <span class="nav-text">启用flash</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#参考连接"><span class="nav-number">1.</span> <span class="nav-text">参考连接</span></a></li></ol></div>
             
           </div>
         </section>
