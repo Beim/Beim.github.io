@@ -18,6 +18,13 @@
 <li>Mesos(宣传力度小,使用不普遍)(任务和资源调度分开)(问题: scheduler 与Mesos master 之间不能描述精确的资源需求)(一次资源分配需要两次通信交互, 调度效率低)(不支持资源抢占)</li>
 <li>Aliyun-Fuxi(并发运行10000台)</li>
 </ul>
+<p>海量数据如何并行处理?<br>分布式任务调度所要解决的问题<br><strong>MapReduce</strong></p>
+<p>任务调度系统的技术要点</p>
+<ul>
+<li>数据Locality (本地性)</li>
+<li>数据Shuffle (数据的传递)</li>
+<li>Instance 重试和Backup Instance (容错, 硬件错误, 软件错误)</li>
+</ul>
 ]]></content>
     </entry>
     
