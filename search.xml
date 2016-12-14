@@ -4,6 +4,24 @@
   
     
     <entry>
+      <title><![CDATA[云栖社区-云计算入门笔记]]></title>
+      <url>https://beim.github.io/2016/12/13/%E4%BA%91%E6%A0%96%E7%A4%BE%E5%8C%BA-%E4%BA%91%E8%AE%A1%E7%AE%97%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p>分布式调度两大任务</p>
+<ul>
+<li>任务调度</li>
+<li>资源调度</li>
+</ul>
+<p>分布式调度系统的比较</p>
+<ul>
+<li>Hadoop MR (主从架构)(任务和资源调度不分开)(问题:单点问题的规模扩展性存在瓶颈, 最大4000台)(问题: 容错性差)(不利于功能扩展, 不同任务采用不同的调度策略)</li>
+<li>YARN(将资源的调度和任务的调度进行区分)(能支撑其更大的计算规模)(问题:resourceManager 仅支持memory 的资源调度, 而不支持cpu, 磁盘, 网络等维度的调度)(调度是一个背包问题, 仅考虑内存时, 调度是一维线性规划, 增加资源维度时, 调度是高维背包问题, 所以YARN仅支持内存维度的调度)(问题: 资源交互性能)</li>
+<li>Mesos(宣传力度小,使用不普遍)(任务和资源调度分开)(问题: scheduler 与Mesos master 之间不能描述精确的资源需求)(一次资源分配需要两次通信交互, 调度效率低)(不支持资源抢占)</li>
+<li>Aliyun-Fuxi(并发运行10000台)</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[beim_url_shortern 服务]]></title>
       <url>https://beim.github.io/2016/12/13/beim-url-shortern-%E6%9C%8D%E5%8A%A1/</url>
       <content type="html"><![CDATA[<p><strong>Introduction</strong><br>A service to simplify your links.<br>例如, <em><a href="https://www.zhihu.com/question/28964478" target="_blank" rel="external">https://www.zhihu.com/question/28964478</a></em> 可以简化为 <em>知乎</em>.</p>
@@ -1387,6 +1405,8 @@
 </li>
 </ul>
 <h2 id="other"><a href="#other" class="headerlink" title="other"></a>other</h2><ul>
+<li><p><a href="http://www.cnblogs.com/yymn/p/4581897.html" target="_blank" rel="external">Ubuntu 14.04 启用休眠</a></p>
+</li>
 <li><p><a href="https://m.aliyun.com/yunqi/articles/66136" target="_blank" rel="external">云栖社区 - Github - MySQL Hadoop MongoDB 大数据 机器学习 资料大全</a></p>
 </li>
 <li><p><a href="http://rednaxelafx.iteye.com/blog/492667" target="_blank" rel="external">虚拟机随谈（一）：解释器，树遍历解释器，基于栈与基于寄存器，大杂烩</a></p>
