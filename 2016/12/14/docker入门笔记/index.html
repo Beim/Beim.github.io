@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="notes," />
+  <meta name="keywords" content="docker," />
 
 
 
@@ -84,26 +84,19 @@
 
 
 
-<meta name="description" content="设计模式">
+<meta name="description" content="概念镜像Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。分层存储: 镜像并非是像一个 ISO 那样的打包文件，镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由一组文件系统组成，或者说，由多层文件系统联合组成。
+容器镜像">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设计模式笔记">
-<meta property="og:url" content="https://beim.github.io/2016/10/09/设计模式笔记/index.html">
+<meta property="og:title" content="docker入门笔记">
+<meta property="og:url" content="https://beim.github.io/2016/12/14/docker入门笔记/index.html">
 <meta property="og:site_name" content="北冥945">
-<meta property="og:description" content="设计模式">
-<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-12-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
-<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-13-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
-<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-13-28%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
-<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-14-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
-<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-14-22%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
-<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-14-40%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
-<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-15-02%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
-<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-15-22%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
-<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-15-46%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
-<meta property="og:updated_time" content="2016-10-11T04:27:19.705Z">
+<meta property="og:description" content="概念镜像Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。分层存储: 镜像并非是像一个 ISO 那样的打包文件，镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由一组文件系统组成，或者说，由多层文件系统联合组成。
+容器镜像">
+<meta property="og:updated_time" content="2016-12-14T16:12:59.741Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="设计模式笔记">
-<meta name="twitter:description" content="设计模式">
-<meta name="twitter:image" content="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-12-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
+<meta name="twitter:title" content="docker入门笔记">
+<meta name="twitter:description" content="概念镜像Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。分层存储: 镜像并非是像一个 ISO 那样的打包文件，镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由一组文件系统组成，或者说，由多层文件系统联合组成。
+容器镜像">
 
 
 
@@ -124,11 +117,11 @@
 
 
 
-  <link rel="canonical" href="https://beim.github.io/2016/10/09/设计模式笔记/"/>
+  <link rel="canonical" href="https://beim.github.io/2016/12/14/docker入门笔记/"/>
 
   <script type="text/javascript" src="/js/src/beim/test.js"></script>
 
-  <title> 设计模式笔记 | 北冥945 </title>
+  <title> docker入门笔记 | 北冥945 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -271,7 +264,7 @@
             
             
               
-                设计模式笔记
+                docker入门笔记
               
             
           </h1>
@@ -283,8 +276,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-10-09T15:45:33+08:00" content="2016-10-09">
-              2016-10-09
+            <time itemprop="dateCreated" datetime="2016-12-14T23:21:56+08:00" content="2016-12-14">
+              2016-12-14
             </time>
           </span>
 
@@ -294,8 +287,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/09/设计模式笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/09/设计模式笔记/" itemprop="commentsCount"></span>
+                <a href="/2016/12/14/docker入门笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/14/docker入门笔记/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -305,7 +298,7 @@
 
           
           
-             <span id="/2016/10/09/设计模式笔记/" class="leancloud_visitors" data-flag-title="设计模式笔记">
+             <span id="/2016/12/14/docker入门笔记/" class="leancloud_visitors" data-flag-title="docker入门笔记">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -327,118 +320,31 @@
       
 
       
-        <p>设计模式</p>
-<a id="more"></a>
-<h1 id="Factory-Method-Insurance"><a href="#Factory-Method-Insurance" class="headerlink" title="Factory Method - Insurance"></a>Factory Method - Insurance</h1><p>工厂方法模式</p>
-<p><strong>优点</strong>:</p>
-<ul>
-<li>工厂方法模式将创建对象的逻辑与任务交给了工厂类</li>
-<li>工厂方法模式支持开闭原则</li>
-</ul>
-<p><strong>适用情况</strong></p>
-<ul>
-<li>创建某些类的对象的逻辑比较复杂,并且有很多条件分支, 而且还可能增加新的条件.</li>
-<li>一个类不能预先准确的知道它必须创建一个层次类中的哪一个子类的对象</li>
-<li>一个类适用它的子类决定所要创建的对象</li>
-<li>需要封装创建类的对象的逻辑, 使得这些逻辑局部化.</li>
-</ul>
-<p>简单工厂方法模式与工厂方法模式的区别: <strong>p15</strong></p>
-<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-12-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="factory"></p>
+        <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p><strong>镜像</strong><br>Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。<br><em>分层存储</em>: 镜像并非是像一个 ISO 那样的打包文件，镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由一组文件系统组成，或者说，由多层文件系统联合组成。</p>
+<p><strong>容器</strong><br>镜像和容器, 就像类和实例一样. 镜像是静态的定义, 容器是镜像运行时的实体.<br>镜像是分层存储, 容器也是, 每一个容器运行时，是以镜像为基础层，在其上创建一个当前容器的存储层，我们可以称这个为容器运行时读写而准备的存储层为容器存储层。<br>容器存储层的生存周期和容器一样，容器消亡时，容器存储层也随之消亡。因此，任何保存于容器存储层的信息都会随容器删除而丢失。<br>按照 Docker 最佳实践的要求，容器不应该向其存储层内写入任何数据，容器存储层要保持无状态化。所有的文件写入操作，都应该使用 数据卷（Volume）、或者绑定宿主目录，在这些位置的读写会跳过容器存储层，直接对宿主(或网络存储)发生读写，其性能和稳定性更高。<br>数据卷的生存周期独立于容器，容器消亡，数据卷不会消亡。因此，使用数据卷后，容器可以随意删除、重新 run，数据却不会丢失。</p>
+<p><strong>仓库</strong><br>仓库是集中,分发镜像的服务, 一个 Docker Registry 中可以包含多个仓库（Repository）；每个仓库可以包含多个标签（Tag）；每个标签对应一个镜像。</p>
+<p><strong>虚悬镜像 dangling image</strong><br><code>docker images</code> 显示有仓库名和标签都为none 的镜像<br>该镜像原来有仓库名和标签, 但是随着官方镜像维护, 原来的名字被转移到新的镜像身上, 旧的镜像的名字则被取消.<br><code>docker pull</code> 和<code>docker build</code> 都可能导致这种现象<br>使用命令专门显示这类镜像: <code>docker images -f dangling=true</code><br>删除这类镜像<code>docker rmi $(docker images -q -f dangling=true)</code></p>
+<p><strong>中间层镜像</strong><br>为了加速镜像构建、重复利用资源，Docker 会利用 中间层镜像。所以在使用一段时间后，可能会看到一些依赖的中间层镜像<br>显示包括中间层镜像的所有镜像<code>docker images -a</code></p>
 <hr>
-<h1 id="AbstractFactory-House"><a href="#AbstractFactory-House" class="headerlink" title="AbstractFactory - House"></a>AbstractFactory - House</h1><p>抽象工厂模式</p>
-<p>符合开闭原则 和不符合开闭原则的情况: <strong>p22</strong></p>
-<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-13-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="absfactory"></p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">BuildingFactory(<span class="keyword">abstract</span>)</div><div class="line"></div><div class="line">MediumBuildingFactor    SuperBuildingFactor</div><div class="line"></div><div class="line">MediumHouse MediumCondo    SuperHouse SuperCondo</div><div class="line"></div><div class="line">House&lt;<span class="keyword">interface</span>&gt; Condo&lt;<span class="keyword">interface</span>&gt;</div></pre></td></tr></table></figure>
-<hr>
-<h1 id="Adapter-CustomerInfo-check"><a href="#Adapter-CustomerInfo-check" class="headerlink" title="Adapter-CustomerInfo-check"></a>Adapter-CustomerInfo-check</h1><p>适配器模式</p>
-<p>为了解决接口不一致的问题, 两个软件模块之间往往需要通过一个适配器类Adapter 进行适配, 这样的模式叫做适配器设计模式.</p>
-<p><strong>适用情况</strong></p>
+<h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><h2 id="pull-获取镜像"><a href="#pull-获取镜像" class="headerlink" title="pull 获取镜像"></a>pull 获取镜像</h2><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker pull <span class="string">[选项]</span> <span class="string">[Docker Registry地址]</span>&lt;仓库名&gt;:&lt;标签&gt;</div></pre></td></tr></table></figure>
 <ul>
-<li>当系统想要使用现有的类, 但是现有类的接口不符合系统需要时.</li>
-<li>当需要通过创建一个可复用的类, 使得本来接口不相容并且无关的类结合在一起工作时.</li>
-<li>在设计中需要改变多个子类接口, 在作用相同但名称不同的类或方法之间进行适配时.</li>
+<li>Docker Registry地址：地址的格式一般是 &lt;域名/IP&gt;[:端口号]。默认地址是 Docker Hub。</li>
+<li>仓库名：如之前所说，这里的仓库名是两段式名称，既 &lt;用户名&gt;/&lt;软件名&gt;。对于 Docker Hub，如果不给出用户名，则默认为 library，也就是官方镜像。</li>
 </ul>
-<p><strong>两种模式</strong></p>
+<h2 id="run-运行"><a href="#run-运行" class="headerlink" title="run 运行"></a>run 运行</h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">docker <span class="built_in">run</span> -<span class="keyword">it</span> <span class="comment">--rm ubuntu:14.04 bash</span></div><div class="line"></div><div class="line"><span class="comment"># 服务名为web2, 映射到81 端口, 访问http://localhost:81 可以看到结果</span></div><div class="line">docker <span class="built_in">run</span> <span class="comment">--name web2 -d -p 81:80 nginx:v2</span></div></pre></td></tr></table></figure>
 <ul>
-<li>类适配器模式</li>
-<li>对象适配器模式 <code>和类适配器模式相同思路, 但是在Adapter 类中, 调用adaptee 的方法, 而不是继承adaptee</code></li>
+<li>-it, -i 是交互式操作, -t 是终端, </li>
+<li>–rm, 容器退出后将其删除, 默认情况退出的容器不会立即删除, 除非手动<code>docker rm</code></li>
+<li>ubuntu:14.04, 使用<code>ubuntu:14.04</code> 镜像作为基础来启动容器</li>
+<li>bash, 放在镜像名后面的是<em>命令</em></li>
 </ul>
-<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-13-28%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="adapter"></p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">CusInfoValidator&lt;<span class="class"><span class="keyword">interface</span>&gt;    <span class="title">InfoValidation</span></span></div><div class="line"></div><div class="line"><span class="title">InformationAdapter</span> <span class="keyword">extends</span> ... <span class="keyword">implements</span> ...</div></pre></td></tr></table></figure>
-<hr>
-<h1 id="Bridge-AgentInfo"><a href="#Bridge-AgentInfo" class="headerlink" title="Bridge-AgentInfo"></a>Bridge-AgentInfo</h1><p>桥接模式</p>
-<p>桥接模式是指将抽象部分与它的实现部分分离, 使它们可以独立地变化.<br>桥接模式强调对象有两个以上的维度变化, 简化多级集成关系, 但同时增加了聚合对象的内部方法, 因为它不得不多写方法以便包含它的类调用.</p>
-<p><strong>优点</strong></p>
-<ul>
-<li>分离接口和实现部分. 一个实现不必固定的绑定一个接口. 一个抽象类的实现可以在系统运行时进行配置, 一个对象甚至可以在运行时改变它的实现.</li>
-<li>提高了可扩展性. 可以独立的对Abstraction 和Implementor 层次结构进行扩展</li>
-<li>实现细节对客户的透明. 可以对客户隐藏实现细节.</li>
-</ul>
-<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-14-04%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="bridge"></p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">AgentInfo(<span class="keyword">abstract</span>)</div><div class="line"></div><div class="line">EncryptedInfo1  EncryptedInfo2</div><div class="line"></div><div class="line">MessageWriter&lt;<span class="class"><span class="keyword">interface</span>&gt;</span></div><div class="line"></div><div class="line">FileWriter  DBWriter</div></pre></td></tr></table></figure>
-<hr>
-<h1 id="Facade-usrInfoValidation"><a href="#Facade-usrInfoValidation" class="headerlink" title="Facade-usrInfoValidation"></a>Facade-usrInfoValidation</h1><p>外观模式</p>
-<p>用来隐藏一个软件系统的内部细节, 为一系列复杂的接口提供一个统一的接口, 使该系统更容易使用.</p>
-<p><strong>优点</strong><br>利用外观模式可以去掉子系统与客户程序之间的直接绑定, 从而提高子系统的独立性, 也降低 了客户程序与子程序的直接耦合度. 此外, 利用外观模式可以使系统层次化.</p>
-<p><strong>缺点</strong><br>对于那些不需要定制的用户来说, 例如一个熟练的程序员要写一些复杂的功能, 而外观类中没有这样的功能, 因此外观模式可能对它们没有帮助. 在这种情况下, 用户程序可以直接绕过外观模式, 而直接调用子系统类库.</p>
-<p><code>适配器模式</code>与<code>外观模式</code>的区别</p>
-<ul>
-<li>适配器模式转换接口的目的是将一个不适合使用的接口转换为可以被使用的接口, 或者将一些接口不同而功能相同或者相近的接口加以转换, 以便可以被统一使用.</li>
-<li>外观模式简化接口是为了更好地使用某个类库, 为一系列复杂的接口提供一个统一的接口</li>
-</ul>
-<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-14-22%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="facade"></p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="section">CustomerFacade</span> &#123;</div><div class="line">    <span class="attribute">Account</span> accountObj;</div><div class="line">    <span class="attribute">CreditCard</span> creditCardObj;</div><div class="line">    <span class="attribute">Address</span> addressObj;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="attribute">Account</span> CreditCard Address</div></pre></td></tr></table></figure>
-<hr>
-<h1 id="Strategy-Sorting"><a href="#Strategy-Sorting" class="headerlink" title="Strategy-Sorting"></a>Strategy-Sorting</h1><p>策略模式</p>
-<p>下面定义了一系列的算法, 将每一个算法封装起来, 并且使它们之间可以相互替换. 策略模式让算法的变化不会影响到使用算法的客户.</p>
-<p><strong>优点</strong></p>
-<ul>
-<li>得到一系列可以复用的算法, 这些算法集成一个共同的抽象类, 因此共有的功能可以放到超类中.</li>
-<li>将不同算法封装在不同的策略子类中, 使逻辑更加清晰, 各个算法可以独立地变化.</li>
-<li>使功能改变或者扩展更容易.</li>
-</ul>
-<p><strong>缺点</strong><br>客户程序必须知道不同策略接口的各个子类的行为, 必须理解每个子类有哪些不同.</p>
-<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-14-40%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="strategy"></p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Context</span></div><div class="line"></div><div class="line">SortAlgorithm&lt;interface&gt;</div><div class="line"></div><div class="line"><span class="keyword">InsertionSort </span> QuickSort  <span class="keyword">BubbleSort </span> HeapSort</div></pre></td></tr></table></figure>
-<hr>
-<h1 id="State-BankAccount-typical-2"><a href="#State-BankAccount-typical-2" class="headerlink" title="State-BankAccount-typical-2"></a>State-BankAccount-typical-2</h1><p>状态模式</p>
-<p>在面向对象设计中, 在依赖于状态的对象中, 对象的行为依赖于状态.</p>
-<p>状态模式将不同状态下的行为封装在不同的类中, 每个类代表一个状态.</p>
-<p><strong>优点</strong></p>
-<ul>
-<li>因为状态相关的代码都被封装在各个状态子类中, 所以容易添加新的状态, 只需要定义并添加新的状态子类和新的状态变化关系即可. 有时其他的类也需要较少的修改.</li>
-<li>将不同的状态封装成不同的类使得状态迁移很明确, 并且可以防止Context 类将状态弄混乱了</li>
-</ul>
-<p><strong>适用</strong></p>
-<ul>
-<li>当对象的行为依赖于状态, 对象要在运行时改变状态时使用状态模式</li>
-<li>当操作带有大量依赖于状态的条件语句时使用该模式. 通常许多操作都含有相同的条件结构, 状态模式将条件结构的每个分支包装成独立分支的类, 使得在不同状态下的行为可以独立变化.</li>
-</ul>
-<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-15-02%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="state"></p>
-<figure class="highlight coq"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">BankContext  &lt;-&gt;  State(<span class="built_in">abstract</span>)</div><div class="line"></div><div class="line">NoTransactionFeeState  TransactionFeeState  OverDrawnState</div></pre></td></tr></table></figure>
-<hr>
-<h1 id="Visitor-ComputerParts"><a href="#Visitor-ComputerParts" class="headerlink" title="Visitor-ComputerParts"></a>Visitor-ComputerParts</h1><p>访问者模式</p>
-<p>访问者模式在处理数据结构较稳定, 但是作用于其上的操作需要经常变化的问题是非常有效的.</p>
-<p>访问者模式是指作用于一个对象结构体上的元素的操作. 访问者可以使用户在不改变该结构体的类的基础上定义一个新的操作.</p>
-<p><strong>优点</strong></p>
-<ul>
-<li>使得在访问者类中针对复杂类结构中的某个类添加新方法较为容易, 即只需要简单的添加一个新的访问者方法即可. </li>
-<li>访问者将相关的方法集中在一个具体的访问者类中, 而将其他相关的方法集中在另外一个具体的访问者类中. 也就是说, 访问者子类是按照方法的类型来分类的.</li>
-</ul>
-<p><strong>缺点</strong><br>增加一个具体的新ConcreteElement 类比较困难. 因为此时需要在每个ConcreteVisitor 类中添加该ConcreteElement 类的访问方法.(所以其适合数据结构稳定的情况)</p>
-<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-15-22%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="visitor"></p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">CompositeStructure</div><div class="line"></div><div class="line">ComputerParts</div><div class="line"></div><div class="line">Memory  VideoCard  <span class="literal">Monitor</span></div><div class="line"></div><div class="line">Visitor</div><div class="line"></div><div class="line">PriceVisitor  Parts<span class="literal">Inf</span>oVisitor</div></pre></td></tr></table></figure>
-<hr>
-<h1 id="Mediator-Tour-Hotel-Flight"><a href="#Mediator-Tour-Hotel-Flight" class="headerlink" title="Mediator-Tour-Hotel-Flight"></a>Mediator-Tour-Hotel-Flight</h1><p>中介者模式</p>
-<p>中介者模式将所有对象之间的交互细节抽象到一个独立的类中,对象之间的交互经由这个独立的类完成.</p>
-<p><strong>优点</strong></p>
-<ul>
-<li>所有对象的交互行为都被转入到一个独立的中介者对象中, 使得用户更容易通过中介者修改对象之间的相互关系行为. 当修改一个交互行为的时候, 可以通过修改或者更换其中一个具体的中介者子类来完成. 另外, 将对象的交互转移到一个专门的类中也提高了对象的可重用性.</li>
-<li>因为对象之间不直接有交互, 使对象的单元测试更容易.</li>
-<li>低耦合使得一个类的修改不会影响到其他的类.</li>
-</ul>
-<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-15-46%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="mediator"></p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">BusinessMediator</span></div><div class="line"></div><div class="line"><span class="symbol">AirlineGUI</span>  HotelGUI  TourGUI</div></pre></td></tr></table></figure>
+<h2 id="images-列出镜像"><a href="#images-列出镜像" class="headerlink" title="images 列出镜像"></a>images 列出镜像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">docker images</div><div class="line"></div><div class="line"><span class="comment"># 显示虚悬镜像</span></div><div class="line">docker images <span class="_">-f</span> dangling=<span class="literal">true</span></div><div class="line"></div><div class="line"><span class="comment"># 显示包括中间层的所有镜像</span></div><div class="line">docker images <span class="_">-a</span></div><div class="line"></div><div class="line"><span class="comment"># 列出部分镜像</span></div><div class="line">docker images ubuntu <span class="comment"># 根据仓库名</span></div><div class="line">docker images ubuntu:16.04 <span class="comment"># 根据仓库名和标签</span></div><div class="line">docker images <span class="_">-f</span> since=mongo:3.2 <span class="comment"># 在mongo3.2 之后建立的镜像, -f 为`--filter`, 之前-&gt;before, 之后-&gt;since</span></div><div class="line">docker images -q <span class="comment"># 只显示虚悬镜像的ID</span></div><div class="line">docker images --format <span class="string">"&#123;&#123;.ID&#125;&#125;: &#123;&#123;.Repository&#125;&#125;"</span> <span class="comment"># 设置格式, 只列出镜像ID 和仓库名</span></div></pre></td></tr></table></figure>
+<p>镜像 ID 则是镜像的唯一标识，一个镜像可以对应多个标签。</p>
+<h2 id="ps-列出容器"><a href="#ps-列出容器" class="headerlink" title="ps 列出容器"></a>ps 列出容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker ps <span class="_">-a</span> <span class="comment"># 列出所有容器</span></div></pre></td></tr></table></figure>
+<h2 id="exec"><a href="#exec" class="headerlink" title="exec"></a>exec</h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker exec -<span class="keyword">it</span> webserver bash</div></pre></td></tr></table></figure>
+<h2 id="commit-保存"><a href="#commit-保存" class="headerlink" title="commit 保存"></a>commit 保存</h2><p>容器的存储层保存下来成为镜像, 也就是在原有镜像的基础上, 再叠加上容器的存储层, 构成新的镜像. 以后运行这个新镜像的时候, 就会拥有原有容器最后的文件变化<br><code>docker commit [选项] &lt;容器ID或容器名&gt; [&lt;仓库名&gt;[:&lt;标签&gt;]]</code><br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ docker commit <span class="string">\</span></div><div class="line">    --author <span class="string">"Tao Wang &lt;twang2218@gmail.com&gt;"</span> <span class="string">\</span></div><div class="line">    --message <span class="string">"修改了默认网页"</span> <span class="string">\</span></div><div class="line">    webserver <span class="string">\</span></div><div class="line">    nginx:v2</div><div class="line">sha256:<span class="number">07e</span>33465974800ce65751acc279adc6ed2dc5ed4e0838f8b86f0c87aa1795214</div><div class="line"></div><div class="line"><span class="comment"># 可以看到新定值的镜像, 仓库: nginx, tag: v2</span></div><div class="line">docker images nginx</div></pre></td></tr></table></figure></p>
+<h2 id="diff-查看改动"><a href="#diff-查看改动" class="headerlink" title="diff 查看改动"></a>diff 查看改动</h2><p>查看对容器存储层的改动<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker <span class="built_in">diff</span> webserver</div></pre></td></tr></table></figure></p>
+<h2 id="history-查看镜像内的历史记录"><a href="#history-查看镜像内的历史记录" class="headerlink" title="history 查看镜像内的历史记录"></a>history 查看镜像内的历史记录</h2><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">beim@userver:~$ docker history nginx:v2</div><div class="line">IMAGE               CREATED              CREATED <span class="keyword">BY</span>                                      SIZE                COMMENT</div><div class="line">18ac1bcb1bf3        <span class="keyword">About</span> a minute ago   nginx -<span class="keyword">g</span> daemon off;                            243 B               修改默认网页</div><div class="line">abf312888d13        2 weeks ago          /bin/<span class="keyword">sh</span> -c #(nop)  CMD [<span class="string">"nginx"</span> <span class="string">"-g"</span> "daemon    0 B                 </div><div class="line">&lt;missing&gt;           2 weeks ago          /bin/<span class="keyword">sh</span> -c #(nop)  EXPOSE 443/tcp 80/tcp        0 B                 </div><div class="line">&lt;missing&gt;           2 weeks ago          /bin/<span class="keyword">sh</span> -c ln -sf /dev/stdout /<span class="keyword">var</span>/<span class="keyword">log</span>/nginx/   22 B                </div><div class="line">&lt;missing&gt;           2 weeks ago          /bin/<span class="keyword">sh</span> -c apt-key adv --keyserver hkp:<span class="comment">//pgp.   58.48 MB            </span></div><div class="line">&lt;missing&gt;           2 weeks ago          /bin/<span class="keyword">sh</span> -c #(nop)  ENV NGINX_VERSION=1.11.6-1   0 B                 </div><div class="line">&lt;missing&gt;           5 weeks ago          /bin/<span class="keyword">sh</span> -c #(nop)  MAINTAINER NGINX Docker <span class="keyword">Ma</span>   0 B                 </div><div class="line">&lt;missing&gt;           5 weeks ago          /bin/<span class="keyword">sh</span> -c #(nop)  CMD [<span class="string">"/bin/bash"</span>]            0 B                 </div><div class="line">&lt;missing&gt;           5 weeks ago          /bin/<span class="keyword">sh</span> -c #(nop) ADD <span class="keyword">file</span>:41ea5187c50116884c   123 MB</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -482,7 +388,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/notes/" rel="tag">#notes</a>
+            <a href="/tags/docker/" rel="tag">#docker</a>
           
         </div>
       
@@ -491,17 +397,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/07/dns相关的小实践/" rel="next" title="dns相关的小实践">
-                <i class="fa fa-chevron-left"></i> dns相关的小实践
+              <a href="/2016/12/14/安装docker/" rel="next" title="安装docker">
+                <i class="fa fa-chevron-left"></i> 安装docker
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/13/cpp-宏编写技巧/" rel="prev" title="cpp-宏编写技巧">
-                cpp-宏编写技巧 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -527,8 +429,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/09/设计模式笔记/"
-           data-title="设计模式笔记" data-url="https://beim.github.io/2016/10/09/设计模式笔记/">
+      <div class="ds-thread" data-thread-key="2016/12/14/docker入门笔记/"
+           data-title="docker入门笔记" data-url="https://beim.github.io/2016/12/14/docker入门笔记/">
       </div>
     
   </div>
@@ -623,7 +525,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Factory-Method-Insurance"><span class="nav-number">1.</span> <span class="nav-text">Factory Method - Insurance</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AbstractFactory-House"><span class="nav-number">2.</span> <span class="nav-text">AbstractFactory - House</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Adapter-CustomerInfo-check"><span class="nav-number">3.</span> <span class="nav-text">Adapter-CustomerInfo-check</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bridge-AgentInfo"><span class="nav-number">4.</span> <span class="nav-text">Bridge-AgentInfo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Facade-usrInfoValidation"><span class="nav-number">5.</span> <span class="nav-text">Facade-usrInfoValidation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Strategy-Sorting"><span class="nav-number">6.</span> <span class="nav-text">Strategy-Sorting</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#State-BankAccount-typical-2"><span class="nav-number">7.</span> <span class="nav-text">State-BankAccount-typical-2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Visitor-ComputerParts"><span class="nav-number">8.</span> <span class="nav-text">Visitor-ComputerParts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Mediator-Tour-Hotel-Flight"><span class="nav-number">9.</span> <span class="nav-text">Mediator-Tour-Hotel-Flight</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#命令"><span class="nav-number">2.</span> <span class="nav-text">命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#pull-获取镜像"><span class="nav-number">2.1.</span> <span class="nav-text">pull 获取镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#run-运行"><span class="nav-number">2.2.</span> <span class="nav-text">run 运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#images-列出镜像"><span class="nav-number">2.3.</span> <span class="nav-text">images 列出镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ps-列出容器"><span class="nav-number">2.4.</span> <span class="nav-text">ps 列出容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#exec"><span class="nav-number">2.5.</span> <span class="nav-text">exec</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#commit-保存"><span class="nav-number">2.6.</span> <span class="nav-text">commit 保存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#diff-查看改动"><span class="nav-number">2.7.</span> <span class="nav-text">diff 查看改动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#history-查看镜像内的历史记录"><span class="nav-number">2.8.</span> <span class="nav-text">history 查看镜像内的历史记录</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
