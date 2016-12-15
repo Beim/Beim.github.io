@@ -44,6 +44,7 @@
 <h2 id="save-amp-amp-loda"><a href="#save-amp-amp-loda" class="headerlink" title="save &amp;&amp; loda"></a>save &amp;&amp; loda</h2><p>save将镜像保存为tar 文件<br>可以传输到另一个位置, 再加载进来<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">docker save alpine | gzip &gt; alpine-latest.tar.gz</div><div class="line"></div><div class="line">docker <span class="built_in">load</span> -i alpine-latest.tar.gz</div><div class="line"></div><div class="line"><span class="comment"># 利用ssh 和pv, 将镜像从一个机器迁移到另一个机器</span></div><div class="line">docker save <span class="variable">&lt;镜像名&gt;</span> | bzip2 | pv | ssh <span class="variable">&lt;用户名&gt;</span>@<span class="variable">&lt;主机名&gt;</span> 'cat | docker <span class="built_in">load</span>'</div></pre></td></tr></table></figure></p>
 <h2 id="rmi-删除镜像"><a href="#rmi-删除镜像" class="headerlink" title="rmi 删除镜像"></a>rmi 删除镜像</h2><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">docker rmi [选项] &lt;镜像<span class="number">1</span>&gt; [&lt;镜像<span class="number">2</span>&gt; ...]</div><div class="line"></div><div class="line"><span class="meta"># docker images 命令来配合</span></div><div class="line"><span class="meta"># 删除虚悬镜像</span></div><div class="line">docker rmi $(docker images -q -f dangling=<span class="literal">true</span>)</div><div class="line"><span class="meta"># 删除所有仓库名为redis 的镜像</span></div><div class="line">docker rmi $(docker images -q redis)</div><div class="line"><span class="meta"># 删除所有在mongo:3.2 之前的镜像</span></div><div class="line">docker rmi $(docker images -q -f before=mongo:<span class="number">3.2</span>)</div></pre></td></tr></table></figure>
 <h2 id="logs-查看应用信息"><a href="#logs-查看应用信息" class="headerlink" title="logs 查看应用信息"></a>logs 查看应用信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker logs <span class="_">-f</span> webserver</div></pre></td></tr></table></figure>
+<h2 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">docker cp &lt;containerId&gt;<span class="symbol">:/file/path</span> /host/file/path</div><div class="line"></div><div class="line">docker cp /host/file/path &lt;containerId&gt;<span class="symbol">:/file/path</span></div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -71,7 +72,7 @@
     <entry>
       <title><![CDATA[云栖社区-云计算入门笔记]]></title>
       <url>https://beim.github.io/2016/12/13/%E4%BA%91%E6%A0%96%E7%A4%BE%E5%8C%BA-%E4%BA%91%E8%AE%A1%E7%AE%97%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<p>分布式调度两大任务</p>
+      <content type="html"><![CDATA[<h1 id="分布式调度"><a href="#分布式调度" class="headerlink" title="分布式调度"></a>分布式调度</h1><p>分布式调度两大任务</p>
 <ul>
 <li>任务调度</li>
 <li>资源调度</li>
@@ -89,6 +90,18 @@
 <li>数据Locality (本地性)</li>
 <li>数据Shuffle (数据的传递)</li>
 <li>Instance 重试和Backup Instance (容错, 硬件错误, 软件错误)</li>
+</ul>
+<p>资源调度的要点</p>
+<ul>
+<li>最大化集群资源利用率</li>
+<li>最小化任务的等待时间</li>
+<li>能支持资源配额</li>
+<li>能支持任务抢占</li>
+</ul>
+<p>容错机制和规模挑战</p>
+<ul>
+<li>容错技术<br>做故障恢复应该考虑(正在运行的任务不该被中断)(对用户是透明的)(自动故障恢复)(系统恢复时保持可用性)</li>
+<li>规模挑战<br>分布式系统设计的目标之一就是横向扩展<br>多线程异步<br>增量资源调度</li>
 </ul>
 ]]></content>
     </entry>
@@ -2965,6 +2978,10 @@
 <p><strong>云免流</strong></p>
 <p>通过服务器代理，把所有的请求都发到服务器137或者138端口，使运营商对这些流量不计费。<br>这么简单就能有无限免费流量的方法，能用多久呢？<br><em>脑补吾王偏头</em><br>已经不想再用wifi 了(〃’▽’〃) </p>
 <p><code>Sun Dec 12 14:48</code></p>
+<hr>
+<p><strong>白日梦</strong></p>
+<p>学习docker<br>简直是打开了新世界的大门~</p>
+<p><code>Thu Dec 15 09:41</code></p>
 <hr>
 ]]></content>
     </entry>
