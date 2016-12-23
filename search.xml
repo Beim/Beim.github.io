@@ -4,9 +4,172 @@
   
     
     <entry>
+      <title><![CDATA[apue-note]]></title>
+      <url>https://beim.github.io/2016/12/23/apue-note/</url>
+      <content type="html"><![CDATA[<h1 id="杂七杂八"><a href="#杂七杂八" class="headerlink" title="杂七杂八"></a>杂七杂八</h1><p><code>&lt;sys/types.h&gt;</code> 中定义了某些与实现有关的数据类型，它们被称为<code>基本系统数据类型</code>。</p>
+<p><code>&lt;fcntl.h&gt;</code> 定义了文件操作等所用到的相关宏</p>
+<p><code>&lt;unistd.h&gt;</code> Unix Standard 的缩写，包含许多UNIX 系统服务的函数原型， 如read 函数，write 函数和lseek 函数</p>
+<hr>
+<h1 id="第三章-文件I-O"><a href="#第三章-文件I-O" class="headerlink" title="第三章-文件I/O"></a>第三章-文件I/O</h1><p><code>open, read, write, lseek, close</code></p>
+<h2 id="调用open-或openat-函数可以打开或创建一个文件"><a href="#调用open-或openat-函数可以打开或创建一个文件" class="headerlink" title="调用open 或openat 函数可以打开或创建一个文件"></a>调用open 或openat 函数可以打开或创建一个文件</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="comment">// 返回新的文件描述符，错误返回-1</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">open</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">int</span> oflag, ... <span class="comment">/* mode_t mode */</span>)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">openat</span><span class="params">(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">int</span> oflag, ... <span class="comment">/* mode_t mode */</span>)</span></span>;</div></pre></td></tr></table></figure>
+<h2 id="调用create-函数创建一个新文件"><a href="#调用create-函数创建一个新文件" class="headerlink" title="调用create 函数创建一个新文件"></a>调用create 函数创建一个新文件</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">create</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">mode_t</span> mode)</span></span>;</div><div class="line"><span class="comment">// 返回为只写的文件描述符， 错误返回-1</span></div><div class="line"><span class="comment">// 此函数等效于</span></div><div class="line">open(path, O_WRONLY | O_CREATE | O_TRUNC, mode);</div><div class="line"><span class="comment">// create 函数是为了弥补早期open 函数第二个参数只能为0，1, 2而无法打开一个尚未存在的文件的缺陷。</span></div><div class="line"><span class="comment">// 现在open 函数提供了选项O_CREATE 和O_TRUNC，于是也就不再需要单独的create 函数</span></div></pre></td></tr></table></figure>
+<h2 id="调用close-函数关闭一个打开文件"><a href="#调用close-函数关闭一个打开文件" class="headerlink" title="调用close 函数关闭一个打开文件"></a>调用close 函数关闭一个打开文件</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">close</span> <span class="params">(<span class="keyword">int</span> fd)</span></span>;</div><div class="line"><span class="comment">// 成功返回0， 错误返回-1</span></div></pre></td></tr></table></figure>
+<h2 id="lseek-显式地为一个打开文件设置偏移量"><a href="#lseek-显式地为一个打开文件设置偏移量" class="headerlink" title="lseek 显式地为一个打开文件设置偏移量"></a>lseek 显式地为一个打开文件设置偏移量</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">off_t</span> lseek (<span class="keyword">int</span> fd, <span class="keyword">off_t</span> offset, <span class="keyword">int</span> whence);</div><div class="line"><span class="comment">// 成功返回新的文件偏移量， 错误返回-1</span></div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[服务学概论第四次作业]]></title>
       <url>https://beim.github.io/2016/12/22/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E6%A6%82%E8%AE%BA%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%BD%9C%E4%B8%9A/</url>
       <content type="html"><![CDATA[<p>作业要求:<br>阐述面向服务的体系结构SOA的含义及技术内容</p>
+<h1 id="1-SOA-定义与介绍"><a href="#1-SOA-定义与介绍" class="headerlink" title="1. SOA 定义与介绍"></a>1. SOA 定义与介绍</h1><p>面向服务的体系结构SOA 是一种<em>IT 体系结构风格</em>, 支持将商务业务转换为一组相互链接的服务或可重复业务任务, 并在需要时通过网络访问这些服务和业务任务.<br>SOA 是异类分布式系统的体系结构, 是实现由构建组成系统的模型. 它将应用程序的不同功能单元(称为服务)通过服务之间定义好的接口和规范按<em>松散耦合</em>方式联系起来, 通过网络整合成一个新的系统.<br>接口是采用<em>中立</em>的方式进行定义的, 独立于实现服务的硬件平台, 才做系统和编程语言. 这使得构建在各种系统中的服务可以以统一和通用的方式进行交互.</p>
+<h1 id="2-SOA-应用目标"><a href="#2-SOA-应用目标" class="headerlink" title="2. SOA 应用目标:"></a>2. SOA 应用目标:</h1><table>
+<thead>
+<tr>
+<th>层次</th>
+<th>服务层次名称</th>
+<th>内容描述 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>实现单独的Web 服务</td>
+<td>由新的或现有的应用程序中所包含的任务来创建服务</td>
+</tr>
+<tr>
+<td>2</td>
+<td>面向服务的业务功能集成</td>
+<td>通过跨企业内外的多个应用程序集成服务来实现业务目标</td>
+</tr>
+<tr>
+<td>3</td>
+<td>整个企业范围的IT 映射/转换</td>
+<td>支持跨整个企业业务功能集成的体系结构实现</td>
+</tr>
+<tr>
+<td>4</td>
+<td>随需应变的业务转换</td>
+<td>现有业务模型的广泛转换或者新业务模型的部署</td>
+</tr>
+</tbody>
+</table>
+<h1 id="3-创建SOA-的六种方法"><a href="#3-创建SOA-的六种方法" class="headerlink" title="3. 创建SOA 的六种方法"></a>3. 创建SOA 的六种方法</h1><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+<th>限制条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>业务流程驱动</td>
+<td>业务流程需要接进资源, 每个活动都需要调用IT 功能; 希望该功能能够以一种灵活的, 可替代的方式使用</td>
+<td>自顶向下</td>
+</tr>
+<tr>
+<td>基于工具的MDA</td>
+<td>希望定义一个业务模型, 然后由工具生成细节</td>
+<td>自顶向下</td>
+</tr>
+<tr>
+<td>包装遗留</td>
+<td>拥有已经进行了大规模投资的现有系统, 但是它们不具有可伸缩性.</td>
+<td>自底向上</td>
+</tr>
+<tr>
+<td>组件化遗留</td>
+<td>使用基于变一起的工具将整个庞大的遗留系统分解成模块</td>
+<td>自底向上</td>
+</tr>
+<tr>
+<td>数据驱动</td>
+<td>使用服务来提供对信息的访问, 而不必在提供者端公开Schema 或者实现决策</td>
+<td>专注于数据</td>
+</tr>
+<tr>
+<td>消息驱动</td>
+<td>仅仅希望这些系统通过标准的, 非专有的协议进行集成, 通信</td>
+<td>应用程序和系统的面向服务的集成</td>
+</tr>
+</tbody>
+</table>
+<h1 id="4-SOA-的基本构件是服务"><a href="#4-SOA-的基本构件是服务" class="headerlink" title="4. SOA 的基本构件是服务"></a>4. SOA 的基本构件是服务</h1><ul>
+<li>从外特性上看, 一个服务被定义为显式的, 独立于服务具体实现的技术细节的接口.</li>
+<li>从内特性上看, 服务封装了可复用的业务功能 它们通常是大粒度业务, 如业务过程, 业务活动等.</li>
+<li>服务实现可采用任何技术平台, 如J2EE, .Net等.</li>
+</ul>
+<h1 id="5-基本体系结构模式"><a href="#5-基本体系结构模式" class="headerlink" title="5. 基本体系结构模式:"></a>5. 基本体系结构模式:</h1><ul>
+<li>发布-访问机制</li>
+<li>适配器模式</li>
+<li>远程服务策略</li>
+<li>服务集成器</li>
+<li>企业服务总线</li>
+</ul>
+<p><strong>5.1. 发布-访问机制</strong></p>
+<ul>
+<li>发布: 为了使服务可访问, 需要发布服务描述以使服务使用者可以发现它.</li>
+<li>发现: 服务请求者定位服务; 通过查询服务注册中心来找到满足其标准的服务.</li>
+<li>绑定和调用: 在检测到服务描述之后, 服务使用者将根据服务描述中的信息来调用服务.</li>
+</ul>
+<p>Web Service 基本实现机制</p>
+<ul>
+<li>WSDL: Web 服务描述语言, 用于服务接口的描述</li>
+<li>UDDI: 统一描述, 发现和集成协议, 服务使用者通过UDDI 发现相应的服务并据此将服务集成在自身的系统中</li>
+<li>SOAP: 简单对象访问协议, 用户在服务客户端与服务提供者之间传递信息; 通过HTTP 或JMS 等各类基于文本的消息传递协议来运输.</li>
+</ul>
+<p><strong>5.2. 适配器模式</strong></p>
+<p>针对问题:</p>
+<ul>
+<li>企业中存在若干遗存系统;</li>
+<li>遗存系统采用较传统的技术开发, 无法提供清晰的WS 接口;</li>
+<li>其他系统仍需访问这些遗留系统的功能;</li>
+</ul>
+<p>解决途径:</p>
+<ul>
+<li>通过构造适配器, 将遗存系统中的功能进行二次封装, 并开放出接口供其他系统使用; 从而使非面向服务的系统也能够参与到面向服务的体系结构之中.</li>
+</ul>
+<p>典型技术:</p>
+<ul>
+<li>Java 2 Connector</li>
+<li>IBM WebSphere Business Integration Adaptor</li>
+</ul>
+<p><strong>5.3. 远程服务策略</strong></p>
+<ul>
+<li>客户端直接绑定服务接口(WSDL/URI)</li>
+<li>客户端通过”Service Registry” 来访问服务; 当希望访问其他服务时, 只要手工修改该Registry 即可– 相当于一个配置文件</li>
+<li>客户端通过”Service Broker” 来动态决定需访问哪个服务; – 难以实现完全动态的服务选择, 需要用到服务语义的相关技术.</li>
+</ul>
+<p>存在的问题:</p>
+<ul>
+<li>如果客户端需要同时或连续调用多个服务的功能, 它必须在自己的系统中分别写出多个调用; 对多个服务的调用次序也容易发生变化, 需要频繁的修改.</li>
+</ul>
+<p>解决方法:</p>
+<ul>
+<li>将Remote Service Strategy 的思想进一步发挥, 客户端不去逐一调用服务, 而是首先将这些被调用的服务按逻辑关系集成起来, 形成一个集成的, 大粒度的服务;</li>
+<li>客户端只需调用这一个服务即可;</li>
+<li>当该服务执行时, 集成器依靠配置信息来分别调用一个个小粒度的服务;</li>
+<li>对这些配置信息进行修改, 即可方便地做到变更.</li>
+</ul>
+<p><strong>5.4. 服务集成器</strong></p>
+<p>处于服务提供者的生态系统，其中的现有功能通常是脆弱的和特别开发的：连接常常是“一次性的”。集成是专有的和特别的；没有单一访问点来合成服务。当前的系统没有提供具有合适粒度级别的接口。因此可以将一个特定的集成层引入服务集成的体系结构中，并通过服务集成器来管理这一层。服务集成器向其他的冗余服务提供单一访问点。</p>
+<p><strong>5.5. 企业服务总线</strong></p>
+<p>企业服务总线是一个整合应用和服务的灵活的连接基础架构，支持服务、服务组合和服务协同。随着组织越来越多地采用跨应用程序、遗留系统、通道技术等等的面向服务的体系结构，支持服务所需要的中间件以及用于支持它们的服务和技术的管理就成为复杂的问题。管理这种复杂性的解决方案的一个重要部分就是提供一个用于服务通信、协调、转换和集成的基础设施。这个基础设施同样也可以作为控制点，将服务管理、安全、监视和规范应用于面向服务的体系结构。这种公共的基础设施是由企业服务总线描述的。</p>
+<p>ESB 的标准功能：</p>
+<ul>
+<li>通信： 路由、寻址、协议、消息传递等；</li>
+<li>服务交互：服务接口定义、服务目录、服务发现等；</li>
+<li>集成：服务适配、服务聚合、服务映射、数据库集成、协议转换等；</li>
+<li>服务质量QoS、安全性、服务级别、消息处理、管理自治、建模、基础架构智能等功能。</li>
+</ul>
+<p>ESB 在请求者和服务之间实现了：</p>
+<ul>
+<li>路由服务间的消息；</li>
+<li>转化请求者和服务之间的传输协议</li>
+<li>转换请求者和服务之间的消息格式；</li>
+<li>处理分离资源间的业务事件。</li>
+</ul>
 ]]></content>
     </entry>
     
@@ -1619,7 +1782,10 @@
 <li><p><a href="http://gold.xitu.io/post/57fe3db0816dfa0056d7d713" target="_blank" rel="external">JavaScript 闯关记-掘金</a></p>
 </li>
 </ul>
-<h2 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h2><ul>
+<h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><ul>
+<li><a href="http://www.cnblogs.com/afarmer/archive/2011/05/05/2038201.html" target="_blank" rel="external">C语言typedef 的用法</a></li>
+</ul>
+<h2 id="C-1"><a href="#C-1" class="headerlink" title="C++"></a>C++</h2><ul>
 <li><p><a href="http://www.cnblogs.com/haippy/archive/2013/05/31/3111560.html" target="_blank" rel="external">C++11 lambda介绍</a></p>
 </li>
 <li><p><a href="https://zhuanlan.zhihu.com/json-tutorial" target="_blank" rel="external">JSON库教程 - 知乎专栏</a></p>

@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="cpp," />
+  <meta name="keywords" content="note," />
 
 
 
@@ -84,25 +84,28 @@
 
 
 
-<meta name="description" content="如果宏里有多过一个语句(statement), 就需要用do {/…/} while(0) 包裹成单个语句, 否则会有如下问题
-1234567891011#define M() a(); b()if (cond)    M();else    c();/* 预处理后 */if (cond)    a(); b()else /* else 缺乏对应if */    c();
-只用{} 也不行:
-12">
+<meta name="description" content="杂七杂八&amp;lt;sys/types.h&amp;gt; 中定义了某些与实现有关的数据类型，它们被称为基本系统数据类型。
+&amp;lt;fcntl.h&amp;gt; 定义了文件操作等所用到的相关宏
+&amp;lt;unistd.h&amp;gt; Unix Standard 的缩写，包含许多UNIX 系统服务的函数原型， 如read 函数，write 函数和lseek 函数
+
+第三章-文件I/Oopen, read, write, l">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cpp-宏编写技巧">
-<meta property="og:url" content="https://beim.github.io/2016/10/13/cpp-宏编写技巧/index.html">
+<meta property="og:title" content="apue-note">
+<meta property="og:url" content="https://beim.github.io/2016/12/23/apue-note/index.html">
 <meta property="og:site_name" content="北冥945">
-<meta property="og:description" content="如果宏里有多过一个语句(statement), 就需要用do {/…/} while(0) 包裹成单个语句, 否则会有如下问题
-1234567891011#define M() a(); b()if (cond)    M();else    c();/* 预处理后 */if (cond)    a(); b()else /* else 缺乏对应if */    c();
-只用{} 也不行:
-12">
-<meta property="og:updated_time" content="2016-10-13T15:37:38.335Z">
+<meta property="og:description" content="杂七杂八&amp;lt;sys/types.h&amp;gt; 中定义了某些与实现有关的数据类型，它们被称为基本系统数据类型。
+&amp;lt;fcntl.h&amp;gt; 定义了文件操作等所用到的相关宏
+&amp;lt;unistd.h&amp;gt; Unix Standard 的缩写，包含许多UNIX 系统服务的函数原型， 如read 函数，write 函数和lseek 函数
+
+第三章-文件I/Oopen, read, write, l">
+<meta property="og:updated_time" content="2016-12-23T16:07:25.292Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cpp-宏编写技巧">
-<meta name="twitter:description" content="如果宏里有多过一个语句(statement), 就需要用do {/…/} while(0) 包裹成单个语句, 否则会有如下问题
-1234567891011#define M() a(); b()if (cond)    M();else    c();/* 预处理后 */if (cond)    a(); b()else /* else 缺乏对应if */    c();
-只用{} 也不行:
-12">
+<meta name="twitter:title" content="apue-note">
+<meta name="twitter:description" content="杂七杂八&amp;lt;sys/types.h&amp;gt; 中定义了某些与实现有关的数据类型，它们被称为基本系统数据类型。
+&amp;lt;fcntl.h&amp;gt; 定义了文件操作等所用到的相关宏
+&amp;lt;unistd.h&amp;gt; Unix Standard 的缩写，包含许多UNIX 系统服务的函数原型， 如read 函数，write 函数和lseek 函数
+
+第三章-文件I/Oopen, read, write, l">
 
 
 
@@ -123,11 +126,11 @@
 
 
 
-  <link rel="canonical" href="https://beim.github.io/2016/10/13/cpp-宏编写技巧/"/>
+  <link rel="canonical" href="https://beim.github.io/2016/12/23/apue-note/"/>
 
   <script type="text/javascript" src="/js/src/beim/test.js"></script>
 
-  <title> cpp-宏编写技巧 | 北冥945 </title>
+  <title> apue-note | 北冥945 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -270,7 +273,7 @@
             
             
               
-                cpp-宏编写技巧
+                apue-note
               
             
           </h1>
@@ -282,8 +285,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-10-13T23:31:24+08:00" content="2016-10-13">
-              2016-10-13
+            <time itemprop="dateCreated" datetime="2016-12-23T20:29:44+08:00" content="2016-12-23">
+              2016-12-23
             </time>
           </span>
 
@@ -293,8 +296,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/13/cpp-宏编写技巧/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/13/cpp-宏编写技巧/" itemprop="commentsCount"></span>
+                <a href="/2016/12/23/apue-note/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/23/apue-note/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -304,7 +307,7 @@
 
           
           
-             <span id="/2016/10/13/cpp-宏编写技巧/" class="leancloud_visitors" data-flag-title="cpp-宏编写技巧">
+             <span id="/2016/12/23/apue-note/" class="leancloud_visitors" data-flag-title="apue-note">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -326,12 +329,15 @@
       
 
       
-        <p>如果宏里有多过一个语句(statement), 就需要用do {/<em>…</em>/} while(0) 包裹成单个语句, 否则会有如下问题</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M() a(); b()</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    M();</div><div class="line"><span class="keyword">else</span></div><div class="line">    c();</div><div class="line"></div><div class="line"><span class="comment">/* 预处理后 */</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    a(); b()</div><div class="line"><span class="keyword">else</span> <span class="comment">/* else 缺乏对应if */</span></div><div class="line">    c();</div></pre></td></tr></table></figure>
-<p>只用{} 也不行:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M() &#123; a(); b();&#125;</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    M();</div><div class="line"><span class="keyword">else</span></div><div class="line">    c();</div><div class="line"></div><div class="line"><span class="comment">/* 预处理后 */</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    &#123; a(); b(); &#125;; <span class="comment">/* 最后的分号代表if 语句结束 */</span></div><div class="line"><span class="keyword">else</span>   <span class="comment">/* else 缺乏对应if */</span></div><div class="line">    c();</div></pre></td></tr></table></figure>
-<p>用 do while 就可以了</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M() do &#123; a(); b(); &#125; while(0)</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    M();</div><div class="line"><span class="keyword">else</span></div><div class="line">    c();</div><div class="line"></div><div class="line"><span class="comment">/* 预处理后 */</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    <span class="keyword">do</span> &#123; a(); b(); &#125; <span class="keyword">while</span>(<span class="number">0</span>);</div><div class="line"><span class="keyword">else</span></div><div class="line">    c();</div></pre></td></tr></table></figure>
+        <h1 id="杂七杂八"><a href="#杂七杂八" class="headerlink" title="杂七杂八"></a>杂七杂八</h1><p><code>&lt;sys/types.h&gt;</code> 中定义了某些与实现有关的数据类型，它们被称为<code>基本系统数据类型</code>。</p>
+<p><code>&lt;fcntl.h&gt;</code> 定义了文件操作等所用到的相关宏</p>
+<p><code>&lt;unistd.h&gt;</code> Unix Standard 的缩写，包含许多UNIX 系统服务的函数原型， 如read 函数，write 函数和lseek 函数</p>
+<hr>
+<h1 id="第三章-文件I-O"><a href="#第三章-文件I-O" class="headerlink" title="第三章-文件I/O"></a>第三章-文件I/O</h1><p><code>open, read, write, lseek, close</code></p>
+<h2 id="调用open-或openat-函数可以打开或创建一个文件"><a href="#调用open-或openat-函数可以打开或创建一个文件" class="headerlink" title="调用open 或openat 函数可以打开或创建一个文件"></a>调用open 或openat 函数可以打开或创建一个文件</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="comment">// 返回新的文件描述符，错误返回-1</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">open</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">int</span> oflag, ... <span class="comment">/* mode_t mode */</span>)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">openat</span><span class="params">(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">int</span> oflag, ... <span class="comment">/* mode_t mode */</span>)</span></span>;</div></pre></td></tr></table></figure>
+<h2 id="调用create-函数创建一个新文件"><a href="#调用create-函数创建一个新文件" class="headerlink" title="调用create 函数创建一个新文件"></a>调用create 函数创建一个新文件</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">create</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">mode_t</span> mode)</span></span>;</div><div class="line"><span class="comment">// 返回为只写的文件描述符， 错误返回-1</span></div><div class="line"><span class="comment">// 此函数等效于</span></div><div class="line">open(path, O_WRONLY | O_CREATE | O_TRUNC, mode);</div><div class="line"><span class="comment">// create 函数是为了弥补早期open 函数第二个参数只能为0，1, 2而无法打开一个尚未存在的文件的缺陷。</span></div><div class="line"><span class="comment">// 现在open 函数提供了选项O_CREATE 和O_TRUNC，于是也就不再需要单独的create 函数</span></div></pre></td></tr></table></figure>
+<h2 id="调用close-函数关闭一个打开文件"><a href="#调用close-函数关闭一个打开文件" class="headerlink" title="调用close 函数关闭一个打开文件"></a>调用close 函数关闭一个打开文件</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">close</span> <span class="params">(<span class="keyword">int</span> fd)</span></span>;</div><div class="line"><span class="comment">// 成功返回0， 错误返回-1</span></div></pre></td></tr></table></figure>
+<h2 id="lseek-显式地为一个打开文件设置偏移量"><a href="#lseek-显式地为一个打开文件设置偏移量" class="headerlink" title="lseek 显式地为一个打开文件设置偏移量"></a>lseek 显式地为一个打开文件设置偏移量</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">off_t</span> lseek (<span class="keyword">int</span> fd, <span class="keyword">off_t</span> offset, <span class="keyword">int</span> whence);</div><div class="line"><span class="comment">// 成功返回新的文件偏移量， 错误返回-1</span></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -375,7 +381,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/cpp/" rel="tag">#cpp</a>
+            <a href="/tags/note/" rel="tag">#note</a>
           
         </div>
       
@@ -384,17 +390,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/09/设计模式笔记/" rel="next" title="设计模式笔记">
-                <i class="fa fa-chevron-left"></i> 设计模式笔记
+              <a href="/2016/12/22/服务学概论第四次作业/" rel="next" title="服务学概论第四次作业">
+                <i class="fa fa-chevron-left"></i> 服务学概论第四次作业
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/15/2016-收藏/" rel="prev" title="2016-收藏">
-                2016-收藏 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -420,8 +422,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/13/cpp-宏编写技巧/"
-           data-title="cpp-宏编写技巧" data-url="https://beim.github.io/2016/10/13/cpp-宏编写技巧/">
+      <div class="ds-thread" data-thread-key="2016/12/23/apue-note/"
+           data-title="apue-note" data-url="https://beim.github.io/2016/12/23/apue-note/">
       </div>
     
   </div>
@@ -516,7 +518,7 @@
               
             
             
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#杂七杂八"><span class="nav-number">1.</span> <span class="nav-text">杂七杂八</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三章-文件I-O"><span class="nav-number">2.</span> <span class="nav-text">第三章-文件I/O</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#调用open-或openat-函数可以打开或创建一个文件"><span class="nav-number">2.1.</span> <span class="nav-text">调用open 或openat 函数可以打开或创建一个文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调用create-函数创建一个新文件"><span class="nav-number">2.2.</span> <span class="nav-text">调用create 函数创建一个新文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调用close-函数关闭一个打开文件"><span class="nav-number">2.3.</span> <span class="nav-text">调用close 函数关闭一个打开文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lseek-显式地为一个打开文件设置偏移量"><span class="nav-number">2.4.</span> <span class="nav-text">lseek 显式地为一个打开文件设置偏移量</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
