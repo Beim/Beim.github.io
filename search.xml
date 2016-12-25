@@ -8,11 +8,10 @@
       <url>https://beim.github.io/2016/12/23/apue-note/</url>
       <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33516497&auto=0&height=66"></iframe>
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=65961&auto=0&height=66"></iframe>
-
 <blockquote>
 <p>反正神也不會管我的事，那就更加如此吧。</p>
 </blockquote>
+<a id="more"></a>
 <h1 id="杂七杂八"><a href="#杂七杂八" class="headerlink" title="杂七杂八"></a>杂七杂八</h1><p><code>&lt;sys/types.h&gt;</code> 中定义了某些与实现有关的数据类型，它们被称为<code>基本系统数据类型</code>。</p>
 <p><code>&lt;fcntl.h&gt;</code> 定义了文件操作等所用到的相关宏</p>
 <p><code>&lt;unistd.h&gt;</code> Unix Standard 的缩写，包含许多UNIX 系统服务的函数原型， 如read 函数，write 函数和lseek 函数</p>
