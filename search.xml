@@ -1790,7 +1790,7 @@
 </li>
 </ul>
 <h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><ul>
-<li><a href="http://www.cnblogs.com/afarmer/archive/2011/05/05/2038201.html" target="_blank" rel="external">C语言typedef 的用法</a></li>
+<li><a href="http://www.cnblogs.com/afarmer/archive/2011/05/05/2038201.html" target="_blank" rel="external">C语言typedef 的用法 - 博客园- Stephen Blaha对typedef用法做过一个总结：“建立一个类型别名的方法很简单，在传统的变量声明表达式里用类型名替代变量名，然后把关键字typedef加在该语句的开头</a></li>
 </ul>
 <h2 id="C-1"><a href="#C-1" class="headerlink" title="C++"></a>C++</h2><ul>
 <li><p><a href="http://www.cnblogs.com/haippy/archive/2013/05/31/3111560.html" target="_blank" rel="external">C++11 lambda介绍</a></p>
@@ -1810,6 +1810,14 @@
 <li><p><a href="https://github.com/examplecode/mproxy" target="_blank" rel="external">mproxy - c 语言实现的一个最小的http代理，支持翻墙</a></p>
 </li>
 <li><p><a href="https://github.com/inaz2/proxy2" target="_blank" rel="external">python-http/https代理</a></p>
+</li>
+<li><p><a href="http://tinyhttpd.sourceforge.net/" target="_blank" rel="external">tinyhttp</a></p>
+<ul>
+<li><p><a href="https://github.com/cbsheng/tinyhttpd" target="_blank" rel="external">tinyhttp - 带注释 - github</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/cqu20093154/article/details/41025885" target="_blank" rel="external">tinyhttp - 博客园</a></p>
+</li>
+</ul>
 </li>
 </ul>
 <h2 id="network"><a href="#network" class="headerlink" title="network"></a>network</h2><ul>
@@ -3338,7 +3346,14 @@
 <hr>
 <p><strong>白日梦</strong></p>
 <p>宜宾到萍乡的学生票居然不让取<br>白跑一趟火车站 =.=</p>
+<p>更新：<br>第二次去拿到啦2333</p>
 <p><code>Wed Dec 21 16:43</code></p>
+<hr>
+<p><strong>Christmas</strong></p>
+<p>昨晚是平安夜<br>。<br>。<br>。<br>请警长决定发言顺序~~</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=30569077&auto=1&height=66"></iframe>
+
+<p><code>Sun Dec 25 19:07</code></p>
 <hr>
 ]]></content>
     </entry>
