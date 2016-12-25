@@ -6,7 +6,14 @@
     <entry>
       <title><![CDATA[apue-note]]></title>
       <url>https://beim.github.io/2016/12/23/apue-note/</url>
-      <content type="html"><![CDATA[<h1 id="杂七杂八"><a href="#杂七杂八" class="headerlink" title="杂七杂八"></a>杂七杂八</h1><p><code>&lt;sys/types.h&gt;</code> 中定义了某些与实现有关的数据类型，它们被称为<code>基本系统数据类型</code>。</p>
+      <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33516497&auto=0&height=66"></iframe>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=65961&auto=0&height=66"></iframe>
+
+<blockquote>
+<p>反正神也不會管我的事，那就更加如此吧。</p>
+</blockquote>
+<h1 id="杂七杂八"><a href="#杂七杂八" class="headerlink" title="杂七杂八"></a>杂七杂八</h1><p><code>&lt;sys/types.h&gt;</code> 中定义了某些与实现有关的数据类型，它们被称为<code>基本系统数据类型</code>。</p>
 <p><code>&lt;fcntl.h&gt;</code> 定义了文件操作等所用到的相关宏</p>
 <p><code>&lt;unistd.h&gt;</code> Unix Standard 的缩写，包含许多UNIX 系统服务的函数原型， 如read 函数，write 函数和lseek 函数</p>
 <p><code>原子操作</code> 指的是由多步组成的一个操作。如果该操作原子地执行，则要么执行完所有的步骤，要么一步也不执行，不可能只执行所有步骤的一个子集。</p>
@@ -3227,7 +3234,7 @@
       <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=409650845&auto=0&height=66"></iframe>
 
 <blockquote>
-<p>浮生未歇</p>
+<p>不如就此相忘于尘世间</p>
 </blockquote>
 <a id="more"></a>
 <h1 id="Aug"><a href="#Aug" class="headerlink" title="Aug"></a>Aug</h1><hr>
