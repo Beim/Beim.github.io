@@ -38,7 +38,7 @@
   ScrollSpy.VERSION  = '3.3.2'
 
   ScrollSpy.DEFAULTS = {
-    offset: 10
+    offset: 1
   }
 
   ScrollSpy.prototype.getScrollHeight = function () {
