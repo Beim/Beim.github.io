@@ -4,6 +4,70 @@
   
     
     <entry>
+      <title><![CDATA[服务学考试准备]]></title>
+      <url>https://beim.github.io/2016/12/28/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E8%80%83%E8%AF%95%E5%87%86%E5%A4%87/</url>
+      <content type="html"><![CDATA[<h2 id="第一章-现代服务产业与服务学"><a href="#第一章-现代服务产业与服务学" class="headerlink" title="第一章 现代服务产业与服务学"></a>第一章 现代服务产业与服务学</h2><p>服务业四大领域：基础服务，生产服务，生活服务，公共服务</p>
+<p>现代服务业的发展趋势：服务外包，服务聚合，服务虚拟化-EaaS，SoLoMo 社会化，位置化，移动化</p>
+<p>服务的概念</p>
+<p>对IT使能服务的理解</p>
+<p>服务的六个侧面</p>
+<p>服务的分类</p>
+<p>服务的特性：不可分离性，不可贮存性，异构性，无形性</p>
+<p>需求与能力不匹配： 策略1：根据需求调整能力 策略2：根据能力引导和调整需求，使需求适应企业的产能</p>
+<p>服务科学，服务管理，服务工程</p>
+<hr>
+<h2 id="第二章-服务工程方法论及服务建模"><a href="#第二章-服务工程方法论及服务建模" class="headerlink" title="第二章 服务工程方法论及服务建模"></a>第二章 服务工程方法论及服务建模</h2><p>服务系统</p>
+<p>服务系统的九大组成要素（顾客-目标-输入-输出-过程-人力使能者-物理使能者-信息使能者-环境）</p>
+<p>IBM 认为的服务系统构成要素：三大要素：人-技术-共享信息<br>服务系统的要素：服务参与者-服务资源-服务信息-服务交互行为</p>
+<p>系统的生命周期</p>
+<p>服务工程核心：服务方法论。</p>
+<ul>
+<li>SOA 服务方法论</li>
+<li>模型驱动的服务方法论 （SDMA 的服务模型）</li>
+<li>基于领域工程的服务方法论</li>
+<li>语义驱动的服务方法论</li>
+</ul>
+<p>服务创新 (带栗子); 常见的服务创新模式；服务创新四要素</p>
+<p>典型的服务模型</p>
+<p>服务蓝图描述的业务范畴（商务服务）服务蓝图模型；服务蓝图的建模过程</p>
+<p>SOA 模型描述的业务范畴（计算服务）基于SOA 的软件服务建模方法<br>WSDL : Web 服务描述语言<br>OWL-S：Web 服务的本体语言<br>服务组合 (WS-CDL;Web 服务编舞描述语言)<br>服务编排（BPEL（4WS）面向Web 服务的过程建模语言）</p>
+<p>BPMN(业务流程建模标注) 建模方法描述的业务范畴（商务服务和计算服务之间）<br>流对象-连接对象-泳道-描述对象/器物</p>
+<hr>
+<h2 id="第三章-服务组合与服务构件"><a href="#第三章-服务组合与服务构件" class="headerlink" title="第三章 服务组合与服务构件"></a>第三章 服务组合与服务构件</h2><p>服务要素的分类</p>
+<p>服务构件；服务构件的分类；常用的服务构件类型</p>
+<ul>
+<li>Web Service</li>
+<li>WS-HumanTask(BPEL4People)</li>
+<li>REST 表述性状态转移</li>
+<li>SCA 服务构件体系结构</li>
+<li>SDO 服务数据对象</li>
+<li>Web 服务资源 Web resource </li>
+</ul>
+<p>服务构件的描述 (OWL-S: 用本体来描述Web 服务的标记语言； 基于OWL-S 的服务描述的作用)</p>
+<p>Web 服务协议等级（WSLA）</p>
+<p>服务组合方法（服务发现-服务选择-服务组合）</p>
+<hr>
+<h2 id="第四章-服务系统体系结构及质量评价"><a href="#第四章-服务系统体系结构及质量评价" class="headerlink" title="第四章 服务系统体系结构及质量评价"></a>第四章 服务系统体系结构及质量评价</h2><p>服务系统体系结构（设计一个服务系统需要关注：。。。）<br>服务系统体系结构设计核心问题（将多个小粒度构件连接在一起，做到高效的交换信息和控制）<br>传统的三个实现方式（RPC，ORB，异步消息传递）</p>
+<p>服务集成成熟度模型（SIMM）</p>
+<p>面向服务的体系结构SOA<br>SOA 的应用目标（对应4个层次）<br>基本体系结构模式（发布-访问；适配器；远程服务策略；服务集成器；企业服务总线ESB）<br>SOA 的多层架构</p>
+<p>CAP 理论（CP和AP）</p>
+<p>服务的交付渠道</p>
+<p>服务质量；服务质量的特征（过程质量，产出质量）；服务质量的维度；服务质量产生差距的原因；服务质量SERVQUAL理论: Servqual = 实际感受 - 期望</p>
+<p>服务级协议（SLA）</p>
+<p>SOA 服务系统的质量评价（几个指标）</p>
+<hr>
+<h2 id="第五章-服务学新进展"><a href="#第五章-服务学新进展" class="headerlink" title="第五章 服务学新进展"></a>第五章 服务学新进展</h2><p>服务工程研究热点</p>
+<p>软件服务工程新范型：RE2SEP</p>
+<p>SMDA：模型驱动的服务体系结构与系统构建</p>
+<p>服务语义模型</p>
+<p>服务计算及其新进展</p>
+<hr>
+<h2 id="第六章-服务学应用案例"><a href="#第六章-服务学应用案例" class="headerlink" title="第六章 服务学应用案例"></a>第六章 服务学应用案例</h2><p>携程网服务案例分析</p>
+<p>海运物流服务案例分析</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[apue-note]]></title>
       <url>https://beim.github.io/2016/12/23/apue-note/</url>
       <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33516497&auto=0&height=66"></iframe>
@@ -35,6 +99,15 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">access</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname, <span class="keyword">int</span> mode)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">faccessat</span> <span class="params">(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">char</span> *pathname, <span class="keyword">int</span> mode, <span class="keyword">int</span> flag)</span></span>;</div><div class="line"><span class="comment">// 两个函数的返回值： 成功返回0；出错返回-1</span></div><div class="line"><span class="comment">// 如果测试文件是否已经存在，mode 就为F_OK;</span></div><div class="line"><span class="comment">// 否则mode 是R_OK, W_OK, X_OK 的按位或</span></div></pre></td></tr></table></figure>
 <p>对程序4-8 的实验(r 是./a.out 的别名)<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line">$ mv a.<span class="keyword">out</span> b.<span class="keyword">out</span></div><div class="line"></div><div class="line">$ ll b.<span class="keyword">out</span> </div><div class="line">-rwsrwxr-x 1 root beim 13912 <span class="keyword">Dec</span> 26 14:41 b.<span class="keyword">out</span>*</div><div class="line"><span class="comment">// mv 保留了rws 和root</span></div><div class="line"></div><div class="line">$ cp b.<span class="keyword">out</span> a.<span class="keyword">out</span></div><div class="line"></div><div class="line">$ ll *.<span class="keyword">out</span></div><div class="line">-rwxrwxr-x 1 beim beim 13912 <span class="keyword">Dec</span> 26 14:45 a.<span class="keyword">out</span>*</div><div class="line">-rwsrwxr-x 1 root beim 13912 <span class="keyword">Dec</span> 26 14:41 b.<span class="keyword">out</span>*</div><div class="line"><span class="comment">// cp 没有保留rws 和root</span></div><div class="line"></div><div class="line">$ <span class="keyword">rm</span> b.<span class="keyword">out</span> </div><div class="line"></div><div class="line">$ r /etc/shadow</div><div class="line">access <span class="keyword">error</span> <span class="keyword">for</span> /etc/shadow: Permission denied</div><div class="line"><span class="keyword">open</span> <span class="keyword">error</span> <span class="keyword">for</span> /etc/shadow: Permission denied</div><div class="line"></div><div class="line">$ sudo chmod <span class="keyword">u</span>+s a.<span class="keyword">out</span></div><div class="line"><span class="comment">// 打开设置用户ID 位</span></div><div class="line"></div><div class="line">$ ll a.<span class="keyword">out</span></div><div class="line">-rwsrwxr-x 1 beim beim 13912 <span class="keyword">Dec</span> 26 14:45 a.<span class="keyword">out</span>*</div><div class="line"><span class="comment">// rwx 变成了rws</span></div><div class="line"></div><div class="line">$ r /etc/shadow</div><div class="line">access <span class="keyword">error</span> <span class="keyword">for</span> /etc/shadow: Permission denied</div><div class="line"><span class="keyword">open</span> <span class="keyword">error</span> <span class="keyword">for</span> /etc/shadow: Permission denied</div><div class="line"><span class="comment">// 此时用户仍然是beim</span></div><div class="line"></div><div class="line">$ sudo chown root a.<span class="keyword">out</span></div><div class="line"></div><div class="line">$ ll a.<span class="keyword">out</span></div><div class="line">-rwxrwxr-x 1 root beim 13912 <span class="keyword">Dec</span> 26 14:45 a.<span class="keyword">out</span>*</div><div class="line"></div><div class="line">$ r /etc/shadow</div><div class="line">access <span class="keyword">error</span> <span class="keyword">for</span> /etc/shadow: Permission denied</div><div class="line"><span class="keyword">open</span> <span class="keyword">error</span> <span class="keyword">for</span> /etc/shadow: Permission denied</div><div class="line"><span class="comment">// 先设置rws 再设置用户为root 之后依旧没有权限</span></div><div class="line"></div><div class="line">$ ll a.<span class="keyword">out</span> </div><div class="line">-rwxrwxr-x 1 root beim 13912 <span class="keyword">Dec</span> 26 14:45 a.<span class="keyword">out</span>*</div><div class="line"><span class="comment">// 因为rws 被还原到rwx 了</span></div><div class="line"></div><div class="line">$ sudo chmod <span class="keyword">u</span>+s a.<span class="keyword">out</span> </div><div class="line"><span class="comment">// 再把设置用户ID 位打开</span></div><div class="line"></div><div class="line">$ ll a.<span class="keyword">out</span></div><div class="line">-rwsrwxr-x 1 root beim 13912 <span class="keyword">Dec</span> 26 14:45 a.<span class="keyword">out</span>*</div><div class="line"></div><div class="line">$ r /etc/shadow</div><div class="line">access <span class="keyword">error</span> <span class="keyword">for</span> /etc/shadow: Permission denied</div><div class="line"><span class="keyword">open</span> <span class="keyword">for</span> reading OK</div><div class="line"><span class="comment">// 可以open，通过设置用户ID 程序可以确定实际用户不能正常读指定的文件</span></div></pre></td></tr></table></figure></p>
 <h2 id="函数umask"><a href="#函数umask" class="headerlink" title="函数umask"></a>函数umask</h2><p>umask 函数为进程设置文件模式创建屏蔽字，并返回之前的值<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/stat.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">mode_t</span> umask (<span class="keyword">mode_t</span> cmask);</div><div class="line"><span class="comment">// 返回值： 之前的文件模式创建屏蔽字</span></div></pre></td></tr></table></figure></p>
+<h2 id="函数chmod，fchmod，fchmodat"><a href="#函数chmod，fchmod，fchmodat" class="headerlink" title="函数chmod，fchmod，fchmodat"></a>函数chmod，fchmod，fchmodat</h2><p>这三个函数使我们可以更改现有文件的权限<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/stat.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">chmod</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname, <span class="keyword">mode_t</span> mode)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">fchmod</span> <span class="params">(<span class="keyword">int</span> fd, <span class="keyword">mode_t</span> mode)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">fchmodat</span> <span class="params">(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">char</span> *pathname, <span class="keyword">mode_t</span> mode, <span class="keyword">int</span> flag)</span></span>;</div><div class="line"><span class="comment">// 三个函数的返回值：成功返回0；出错返回-1</span></div></pre></td></tr></table></figure></p>
+<h2 id="函数chown-fchown-fchownat-lchown"><a href="#函数chown-fchown-fchownat-lchown" class="headerlink" title="函数chown, fchown, fchownat, lchown"></a>函数chown, fchown, fchownat, lchown</h2><p>下面几个chown 函数可用于更改文件的用户ID 和组ID。如果两个参数owner 或group 中的任意一个是-1，则对应的ID 不变<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">chown</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname, <span class="keyword">uid_t</span> owner, <span class="keyword">gid_t</span> group)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">fchown</span> <span class="params">(<span class="keyword">int</span> fd, <span class="keyword">uid_t</span> owner, <span class="keyword">gid_t</span> group)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">fchownat</span> <span class="params">(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">char</span> *pathname, <span class="keyword">uid_t</span> owner, <span class="keyword">gid_t</span> group, <span class="keyword">int</span> flag)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">lchown</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname, <span class="keyword">uid_t</span> owner, <span class="keyword">gid_t</span> group)</span></span>;</div><div class="line"><span class="comment">// 4个函数的返回值：成功返回0，出错返回-1</span></div></pre></td></tr></table></figure></p>
+<h2 id="函数-truncate-和-ftruncate"><a href="#函数-truncate-和-ftruncate" class="headerlink" title="函数 truncate 和 ftruncate"></a>函数 truncate 和 ftruncate</h2><p>为了截断或扩展文件可以调用truncate 和ftruncate, 打开文件时使用<code>O_TRUNC</code> 标志<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">truncate</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname, <span class="keyword">off_t</span> length)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">ftruncate</span> <span class="params">(<span class="keyword">int</span> fd, <span class="keyword">off_t</span> length)</span></span>;</div><div class="line"><span class="comment">// 两个函数的返回值：成功返回0，出错返回-1</span></div></pre></td></tr></table></figure></p>
+<h2 id="函数link-linkat-unlink-unlinkat-remove"><a href="#函数link-linkat-unlink-unlinkat-remove" class="headerlink" title="函数link, linkat, unlink, unlinkat, remove"></a>函数link, linkat, unlink, unlinkat, remove</h2><p>使用link 或者linkat 函数创建一个指向现有文件的链接<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">link</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *existingpath, <span class="keyword">const</span> <span class="keyword">char</span> *newpath)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">linkat</span> <span class="params">(<span class="keyword">int</span> efd, <span class="keyword">const</span> <span class="keyword">char</span> *existingpath, <span class="keyword">int</span> nfd, <span class="keyword">const</span> <span class="keyword">char</span> *newpath, <span class="keyword">int</span> flag)</span></span>;</div><div class="line"><span class="comment">// 两个函数的返回值：成功返回0； 出错返回-1</span></div></pre></td></tr></table></figure></p>
+<p>使用unlink 和unlinkat 函数删除一个现有的目录项<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">unlink</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">unlinkat</span> <span class="params">(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">char</span> *pathname, <span class="keyword">int</span> flag)</span></span>;</div><div class="line"><span class="comment">// 两个函数的返回值： 成功返回0；出错返回-1</span></div></pre></td></tr></table></figure></p>
+<p>用remove 函数解除对一个文件或目录的链接<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">remove</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname)</span></span>;</div><div class="line"><span class="comment">// 成功返回0；出错返回-1</span></div></pre></td></tr></table></figure></p>
+<h2 id="函数rename-和renameat"><a href="#函数rename-和renameat" class="headerlink" title="函数rename 和renameat"></a>函数rename 和renameat</h2><p>文件或者目录可以用rename ，renameat 函数进行重命名<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">rename</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *oldname, constchar *newname)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">renameat</span> <span class="params">(<span class="keyword">int</span> oldfd, <span class="keyword">const</span> <span class="keyword">char</span> *oldname, <span class="keyword">int</span> newfd, <span class="keyword">const</span> <span class="keyword">char</span> *newname)</span></span>;</div><div class="line"><span class="comment">// 两个函数的返回值：成功返回0；出错返回-1</span></div></pre></td></tr></table></figure></p>
+<h2 id="函数symlink，-symlinkat"><a href="#函数symlink，-symlinkat" class="headerlink" title="函数symlink， symlinkat"></a>函数symlink， symlinkat</h2><p>用于创建一个符号链接<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">symlink</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *actualpath, <span class="keyword">const</span> <span class="keyword">char</span> *sympath)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">symlinkat</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *actualpath, <span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">char</span> *sympath)</span></span>;</div><div class="line"><span class="comment">// 两个函数的返回值：成功返回0；出错返回-1</span></div></pre></td></tr></table></figure></p>
+<h2 id="函数readlink-readlinkat"><a href="#函数readlink-readlinkat" class="headerlink" title="函数readlink, readlinkat"></a>函数readlink, readlinkat</h2><p>因为open 函数跟随符号链接，所以需要有一种方法打开链接本身。并读该链接中的名字：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">ssize_t</span> readlink (<span class="keyword">const</span> <span class="keyword">char</span> *<span class="keyword">restrict</span> pathname, <span class="keyword">char</span> *<span class="keyword">restrict</span> buf, <span class="keyword">size_t</span> bufsize);</div><div class="line"><span class="keyword">ssize_t</span> readlinkat (<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">restrict</span> pathname, <span class="keyword">char</span> *<span class="keyword">restrict</span> buf, <span class="keyword">size_t</span> bufsize);</div><div class="line">两个函数的返回值：成功返回读取的字节数；出错返回<span class="number">-1</span></div></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
@@ -1014,7 +1087,66 @@
     <entry>
       <title><![CDATA[服务学概论-笔记]]></title>
       <url>https://beim.github.io/2016/11/02/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E6%A6%82%E8%AE%BA-%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<h1 id="现代服务产业与服务学"><a href="#现代服务产业与服务学" class="headerlink" title="现代服务产业与服务学"></a>现代服务产业与服务学</h1><p>什么是现代服务业</p>
+      <content type="html"><![CDATA[<h1 id="服务学考试准备"><a href="#服务学考试准备" class="headerlink" title="服务学考试准备"></a>服务学考试准备</h1><h2 id="第一章-现代服务产业与服务学"><a href="#第一章-现代服务产业与服务学" class="headerlink" title="第一章 现代服务产业与服务学"></a>第一章 现代服务产业与服务学</h2><p>服务业四大领域：基础服务，生产服务，生活服务，公共服务</p>
+<p>现代服务业的发展趋势：服务外包，服务聚合，服务虚拟化-EaaS，SoLoMo 社会化，位置化，移动化</p>
+<p>服务的概念</p>
+<p>对IT使能服务的理解</p>
+<p>服务的六个侧面</p>
+<p>服务的分类</p>
+<p>服务的特性：不可分离性，不可贮存性，异构性，无形性</p>
+<p>需求与能力不匹配： 策略1：根据需求调整能力 策略2：根据能力引导和调整需求，使需求适应企业的产能</p>
+<p>服务科学，服务管理，服务工程</p>
+<hr>
+<h2 id="第二章-服务工程方法论及服务建模"><a href="#第二章-服务工程方法论及服务建模" class="headerlink" title="第二章 服务工程方法论及服务建模"></a>第二章 服务工程方法论及服务建模</h2><p>服务系统</p>
+<p>服务系统的九大组成要素（顾客-目标-输入-输出-过程-人力使能者-物理使能者-信息使能者-环境）</p>
+<p>IBM 认为的服务系统构成要素：三大要素：人-技术-共享信息<br>服务系统的要素：服务参与者-服务资源-服务信息-服务交互行为</p>
+<p>系统的生命周期</p>
+<p>服务工程核心：服务方法论。</p>
+<ul>
+<li>SOA 服务方法论</li>
+<li>模型驱动的服务方法论 （SDMA 的服务模型）</li>
+<li>基于领域工程的服务方法论</li>
+<li>语义驱动的服务方法论</li>
+</ul>
+<p>服务创新 (带栗子); 常见的服务创新模式；服务创新四要素</p>
+<p>典型的服务模型</p>
+<p>服务蓝图描述的业务范畴（商务服务）服务蓝图模型；服务蓝图的建模过程</p>
+<p>SOA 模型描述的业务范畴（计算服务）基于SOA 的软件服务建模方法<br>WSDL : Web 服务描述语言<br>OWL-S：Web 服务的本体语言<br>服务组合 (WS-CDL;Web 服务编舞描述语言)<br>服务编排（BPEL（4WS）面向Web 服务的过程建模语言）</p>
+<p>BPMN(业务流程建模标注) 建模方法描述的业务范畴（商务服务和计算服务之间）<br>流对象-连接对象-泳道-描述对象/器物</p>
+<hr>
+<h2 id="第三章-服务组合与服务构件"><a href="#第三章-服务组合与服务构件" class="headerlink" title="第三章 服务组合与服务构件"></a>第三章 服务组合与服务构件</h2><p>服务要素的分类</p>
+<p>服务构件；服务构件的分类；常用的服务构件类型</p>
+<ul>
+<li>Web Service</li>
+<li>WS-HumanTask(BPEL4People)</li>
+<li>REST 表述性状态转移</li>
+<li>SCA 服务构件体系结构</li>
+<li>SDO 服务数据对象</li>
+<li>Web 服务资源 Web resource </li>
+</ul>
+<p>服务构件的描述 (OWL-S: 用本体来描述Web 服务的标记语言； 基于OWL-S 的服务描述的作用)</p>
+<p>Web 服务协议等级（WSLA）</p>
+<p>服务组合方法（服务发现-服务选择-服务组合）</p>
+<hr>
+<h2 id="第四章-服务系统体系结构及质量评价"><a href="#第四章-服务系统体系结构及质量评价" class="headerlink" title="第四章 服务系统体系结构及质量评价"></a>第四章 服务系统体系结构及质量评价</h2><p>服务系统体系结构（设计一个服务系统需要关注：。。。）<br>服务系统体系结构设计核心问题（将多个小粒度构件连接在一起，做到高效的交换信息和控制）<br>传统的三个实现方式（RPC，ORB，异步消息传递）</p>
+<p>服务集成成熟度模型（SIMM）</p>
+<p>面向服务的体系结构SOA<br>SOA 的应用目标（对应4个层次）<br>基本体系结构模式（发布-访问；适配器；远程服务策略；服务集成器；企业服务总线ESB）<br>SOA 的多层架构</p>
+<p>CAP 理论（CP和AP）</p>
+<p>服务的交付渠道</p>
+<p>服务质量；服务质量的特征（过程质量，产出质量）；服务质量的维度；服务质量产生差距的原因；服务质量SERVQUAL理论: Servqual = 实际感受 - 期望</p>
+<p>服务级协议（SLA）</p>
+<p>SOA 服务系统的质量评价（几个指标）</p>
+<hr>
+<h2 id="第五章-服务学新进展"><a href="#第五章-服务学新进展" class="headerlink" title="第五章 服务学新进展"></a>第五章 服务学新进展</h2><p>服务工程研究热点</p>
+<p>软件服务工程新范型：RE2SEP</p>
+<p>SMDA：模型驱动的服务体系结构与系统构建</p>
+<p>服务语义模型</p>
+<p>服务计算及其新进展</p>
+<hr>
+<h2 id="第六章-服务学应用案例"><a href="#第六章-服务学应用案例" class="headerlink" title="第六章 服务学应用案例"></a>第六章 服务学应用案例</h2><p>携程网服务案例分析</p>
+<p>海运物流服务案例分析</p>
+<hr>
+<h1 id="现代服务产业与服务学"><a href="#现代服务产业与服务学" class="headerlink" title="现代服务产业与服务学"></a>现代服务产业与服务学</h1><p>什么是现代服务业</p>
 <ul>
 <li>基础服务 (通信服务和信息服务)</li>
 <li>生产服务 (制造服务, 产品服务, 物流, 金融等)</li>
@@ -3382,6 +3514,18 @@
 </ul>
 <p>呐 好好复习<br>过个愉快的寒假吧～ 最后一个哟</p>
 <p><code>Mon Dec 26 00:00</code></p>
+<hr>
+<p><strong>白日梦</strong></p>
+<p>一个学妹晨练打卡不够，重修什么的会影响去台湾交换啊<br>然后帮她改了打卡次数<br>呐 祝你明年在台湾玩的开心～</p>
+<p><code>Tue Dec 27 21:14</code></p>
+<hr>
+<p><strong>白日梦</strong></p>
+<p>又是一个奇怪的梦<br>跨江大桥，没有云，没有风，一张小板凳，兔子坐在左边，我坐在右边。<br>聊了很久，然后我们从一头走到另一头。</p>
+<p><code>Wed Dec 28 09:38</code></p>
+<hr>
+<p><strong>白日梦</strong></p>
+<p>考完了服务学，编译还没出成绩。<br>这几天都不能静下心来，无论做什么事。<br>像是刚住进树洞里的人，只能抬头看鸟儿飞过，看日出日落。</p>
+<p><code>Wed Dec 28 21:19</code></p>
 <hr>
 ]]></content>
     </entry>
