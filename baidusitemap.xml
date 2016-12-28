@@ -887,7 +887,6 @@
     </url>
 
     
-    
   <url>
     <loc>https://beim.github.io/2016/08/08/React-Native-Startup/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
@@ -897,40 +896,6 @@
         <pubTime>2016-08-08T13:27:58.000Z</pubTime>
         
         <tag>React-Native</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/08/05/%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6AVA/</loc>
-    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
-    <data>
-        <display>
-        <title>测试框架AVA</title>
-        <pubTime>2016-08-05T01:06:00.000Z</pubTime>
-        
-        <tag>node</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/08/05/Node-js%E7%9A%84%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
-    <data>
-        <display>
-        <title>Node.js的内部结构</title>
-        <pubTime>2016-08-05T02:01:34.000Z</pubTime>
-        
-        <tag>node</tag>
          
          
            
@@ -957,6 +922,23 @@
 
     
   <url>
+    <loc>https://beim.github.io/2016/08/05/%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6AVA/</loc>
+    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
+    <data>
+        <display>
+        <title>测试框架AVA</title>
+        <pubTime>2016-08-05T01:06:00.000Z</pubTime>
+        
+        <tag>node</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://beim.github.io/2016/08/05/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E4%B9%8BJSONP%E4%B8%8ECORS/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
@@ -965,6 +947,24 @@
         <pubTime>2016-08-05T01:41:37.000Z</pubTime>
         
         <tag>front End</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
+    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
+    <data>
+        <display>
+        <title>ubuntu 启动初始化</title>
+        <pubTime>2016-08-05T02:28:29.000Z</pubTime>
+        
+        <tag>linux</tag>
          
          
            
@@ -991,14 +991,14 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
+    <loc>https://beim.github.io/2016/08/05/Node-js%E7%9A%84%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
         <display>
-        <title>ubuntu 启动初始化</title>
-        <pubTime>2016-08-05T02:28:29.000Z</pubTime>
+        <title>Node.js的内部结构</title>
+        <pubTime>2016-08-05T02:01:34.000Z</pubTime>
         
-        <tag>linux</tag>
+        <tag>node</tag>
          
          
            
