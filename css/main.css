@@ -1664,7 +1664,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #cbb020;
+  background: #8506ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2635,12 +2635,18 @@ body {
     text-align: justify;
   }
 }
+.powered-by {
+  display: none;
+}
+.theme-info {
+  display: none;
+}
 @media (min-width: 992px) {
   body {
     background-image: url("http://ob4a6y748.bkt.clouddn.com/wallpaper-stock-photo-190140661.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    opacity: 0.8;
+    opacity: 0.87;
   }
 }
 @media (max-width: 767px) {
