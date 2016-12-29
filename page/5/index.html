@@ -85,7 +85,7 @@
 <meta name="description" content="平常心，平常心。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="北冥945">
-<meta property="og:url" content="https://beim.github.io/page/2/index.html">
+<meta property="og:url" content="https://beim.github.io/page/5/index.html">
 <meta property="og:site_name" content="北冥945">
 <meta property="og:description" content="平常心，平常心。">
 <meta name="twitter:card" content="summary">
@@ -111,7 +111,7 @@
 
 
 
-  <link rel="canonical" href="https://beim.github.io/page/2/"/>
+  <link rel="canonical" href="https://beim.github.io/page/5/"/>
 
   <script type="text/javascript" src="/js/src/beim/test.js"></script>
 
@@ -261,8 +261,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/10/shadowsocks配置/" itemprop="url">
-                  shadowsocks配置
+                <a class="post-title-link" href="/2016/10/09/设计模式笔记/" itemprop="url">
+                  设计模式笔记
                 </a>
               
             
@@ -275,8 +275,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-12-10T15:49:39+08:00" content="2016-12-10">
-              2016-12-10
+            <time itemprop="dateCreated" datetime="2016-10-09T15:45:33+08:00" content="2016-10-09">
+              2016-10-09
             </time>
           </span>
 
@@ -286,8 +286,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/10/shadowsocks配置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/10/shadowsocks配置/" itemprop="commentsCount"></span>
+                <a href="/2016/10/09/设计模式笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/09/设计模式笔记/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -297,7 +297,119 @@
 
           
           
-             <span id="/2016/12/10/shadowsocks配置/" class="leancloud_visitors" data-flag-title="shadowsocks配置">
+             <span id="/2016/10/09/设计模式笔记/" class="leancloud_visitors" data-flag-title="设计模式笔记">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>设计模式</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/09/设计模式笔记/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/07/dns相关的小实践/" itemprop="url">
+                  dns相关的小实践
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-07T20:13:44+08:00" content="2016-10-07">
+              2016-10-07
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/07/dns相关的小实践/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/07/dns相关的小实践/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/10/07/dns相关的小实践/" class="leancloud_visitors" data-flag-title="dns相关的小实践">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -321,13 +433,13 @@
       
         
           
-          安装shadowsocks - Tutorial - Github
-客户端给出一份客户端的配置文件12345678910# shadow.json&#123;    "server": "sg03-31.ssv7.net",    "server_port": 40696,    "local": "127.0.0.1",    "local_port": 1080,    "password": "your password",    "timeout": 600,    "method": "aes-256-cfb"&#125;
-执行命令sslocal -c /home/beim/.sha
+          dig 命令可以跟踪dns 查询的路径.如dig www.baidu.com +trace
+ubuntu 系统下/etc/resolv.conf 配置文件, 用来设置DNS 服务器的IP 地址及DNS 域名, 还包含了主机的域名搜索顺序.
+文件/etc/resolve.conf 内容如下:1234# Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8)#     DO NOT EDIT THIS FILE BY HAND -- YOUR CHANGES WILL BE OVERWRITTENna
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/10/shadowsocks配置/#more" rel="contents">
+            <a class="btn" href="/2016/10/07/dns相关的小实践/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -378,8 +490,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/10/云免流的尝试/" itemprop="url">
-                  云免流的尝试
+                <a class="post-title-link" href="/2016/10/06/cpp-泛型算法参考/" itemprop="url">
+                  cpp-泛型算法参考
                 </a>
               
             
@@ -392,8 +504,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-12-10T00:26:17+08:00" content="2016-12-10">
-              2016-12-10
+            <time itemprop="dateCreated" datetime="2016-10-06T20:35:37+08:00" content="2016-10-06">
+              2016-10-06
             </time>
           </span>
 
@@ -403,8 +515,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/10/云免流的尝试/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/10/云免流的尝试/" itemprop="commentsCount"></span>
+                <a href="/2016/10/06/cpp-泛型算法参考/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/06/cpp-泛型算法参考/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -414,7 +526,701 @@
 
           
           
-             <span id="/2016/12/10/云免流的尝试/" class="leancloud_visitors" data-flag-title="云免流的尝试">
+             <span id="/2016/10/06/cpp-泛型算法参考/" class="leancloud_visitors" data-flag-title="cpp-泛型算法参考">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>所有的泛型算法(generic algorithm), 除了极少数外, 前两个参数皆为一组iterator, 用来标示欲遍历的容器(container) 元素的范围. 范围系为[iterator1, iterator2)</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> array_size = <span class="number">7</span>;</div><div class="line"><span class="keyword">int</span> iarray[array_size] = &#123;<span class="number">1</span>, <span class="number">10</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">14</span>, <span class="number">8</span>&#125;;</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vec(iarray, iarray + array_size);</div><div class="line"></div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it = find(vec.begin(), vec.end(), value);</div><div class="line"><span class="keyword">int</span> *pi = find(iarray, iarray + array_size, value);</div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/06/cpp-泛型算法参考/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/05/vim-奇技淫巧/" itemprop="url">
+                  vim-奇技淫巧
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-05T23:47:14+08:00" content="2016-10-05">
+              2016-10-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/05/vim-奇技淫巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/05/vim-奇技淫巧/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/10/05/vim-奇技淫巧/" class="leancloud_visitors" data-flag-title="vim-奇技淫巧">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="http://ob4a6y748.bkt.clouddn.com/Vimlogo.svg" alt="vim"></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/05/vim-奇技淫巧/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/05/cpp-顺序性容器/" itemprop="url">
+                  cpp-顺序性容器
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-05T23:41:04+08:00" content="2016-10-05">
+              2016-10-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/05/cpp-顺序性容器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/05/cpp-顺序性容器/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/10/05/cpp-顺序性容器/" class="leancloud_visitors" data-flag-title="cpp-顺序性容器">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>要使用顺序性容器,首先必须包含相关的头文件,也就是以下三者之一:<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;list&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;deque&gt;</span></span></div></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/05/cpp-顺序性容器/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/29/JS-char-code/" itemprop="url">
+                  JS-char-code
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-29T13:56:24+08:00" content="2016-09-29">
+              2016-09-29
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/29/JS-char-code/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/29/JS-char-code/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/29/JS-char-code/" class="leancloud_visitors" data-flag-title="JS-char-code">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="String-fromCharCode"><a href="#String-fromCharCode" class="headerlink" title="String.fromCharCode()"></a>String.fromCharCode()</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode">MDN</a></p>
+<p>String.fromCharCode() 静态方法根据制定的Unicode 编码中的序号值来返回一个字符串<br>由于fromCharCode 是String 的静态方法, 所以应该这样使用: String.fromCharCode(), 而不是作为你创建的String 对象的方法.</p>
+<blockquote>
+<p>String.fromCharCode(num1, …, numN)</p>
+</blockquote>
+<p>参数:<br>num1, …, numN<br>    一组序列数字,表示Unicode 值.</p>
+<p><code>String.fromCharCode(65, 66, 67) // &quot;ABC&quot;</code></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/29/JS-char-code/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/21/JS-正则表达式/" itemprop="url">
+                  JS-正则表达式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-21T17:56:13+08:00" content="2016-09-21">
+              2016-09-21
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/21/JS-正则表达式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/21/JS-正则表达式/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/21/JS-正则表达式/" class="leancloud_visitors" data-flag-title="JS-正则表达式">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="RegExp-方法"><a href="#RegExp-方法" class="headerlink" title="RegExp 方法"></a>RegExp 方法</h2><ul>
+<li><p>RegExp.prototype.exec()</p>
+</li>
+<li><p>RegExp.prototype.test()</p>
+</li>
+<li><p>RegExp.prototype.toSource()</p>
+</li>
+<li><p>RegExp.prototype.toString()</p>
+</li>
+</ul>
+<h2 id="String-方法"><a href="#String-方法" class="headerlink" title="String 方法"></a>String 方法</h2><ul>
+<li><p>String.prototype.match()</p>
+</li>
+<li><p>String.prototype.replace()</p>
+</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/21/JS-正则表达式/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/14/编译原理2E-笔记/" itemprop="url">
+                  编译原理2E-笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-14T22:20:59+08:00" content="2016-09-14">
+              2016-09-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/14/编译原理2E-笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/14/编译原理2E-笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/14/编译原理2E-笔记/" class="leancloud_visitors" data-flag-title="编译原理2E-笔记">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="http://ob4a6y748.bkt.clouddn.com/compilers.jpg" alt="compiler"><br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/14/编译原理2E-笔记/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/11/计算机网络-笔记/" itemprop="url">
+                  计算机网络-笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-11T00:35:25+08:00" content="2016-09-11">
+              2016-09-11
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/11/计算机网络-笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/11/计算机网络-笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/11/计算机网络-笔记/" class="leancloud_visitors" data-flag-title="计算机网络-笔记">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -438,12 +1244,14 @@
       
         
           
-          原理修改HTTP头运营商有免费流量的套餐，比如咪咕音乐，在使用咪咕音乐软件的时候用的流量是不收费的。为什么？运营商在检测手机流量的时候检查HTTP头，如URL，HOST，还有X-Request-with这个运营商自己的参数，如果符合免流量费用的条件（比如访问的是移动自己的页面），则对相关的流量不收费。知道了这个，我们就可以在HTTP上面做点修改，达到免流的目的了 ohhh （具体修改的内容在下面介绍）
-修改端口运营商还有一种判断免费流量的方法，即访问的端口，如137/138/139等端口，如果流量是指向这些端口的，运营商就不对这些流量计费。那么我们也可以让我们网络请求的端口都设置成这些特定的端
+          01RIP协议可能产生震荡现象 (X)
+1234567841判断(2分)OSPF协议只在分区内计算路由，不能在整个AS范围内计算路由。 (X)得分/总分A.B.0.00/2.00正确答案：A你错选为B
+1234567891011121314151617181931多选(3分)下列关于CSMA/CD协议的叙述中，正确的是得分/总分A.适用于各种广播链路，以实现链路共享该题无法得分/3.00B.需要根据网络跨距和数据传输速率限定最小帧该题无法得分/3.00C.边发送数据帧，边检测是否发生冲突该题无法得分/3.00D.基于冲突检测机制，确保帧可靠传输正确答案：B、C你错选为A、B、C
+1234567
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/10/云免流的尝试/#more" rel="contents">
+            <a class="btn" href="/2016/09/11/计算机网络-笔记/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -494,8 +1302,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/08/服务学概论第二次作业/" itemprop="url">
-                  服务学概论第二次作业
+                <a class="post-title-link" href="/2016/09/06/JS-超长数字的坑/" itemprop="url">
+                  JS 超长数字的坑
                 </a>
               
             
@@ -508,8 +1316,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-12-08T18:27:30+08:00" content="2016-12-08">
-              2016-12-08
+            <time itemprop="dateCreated" datetime="2016-09-06T17:31:17+08:00" content="2016-09-06">
+              2016-09-06
             </time>
           </span>
 
@@ -519,8 +1327,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/08/服务学概论第二次作业/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/08/服务学概论第二次作业/" itemprop="commentsCount"></span>
+                <a href="/2016/09/06/JS-超长数字的坑/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/06/JS-超长数字的坑/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -530,7 +1338,7 @@
 
           
           
-             <span id="/2016/12/08/服务学概论第二次作业/" class="leancloud_visitors" data-flag-title="服务学概论第二次作业">
+             <span id="/2016/09/06/JS-超长数字的坑/" class="leancloud_visitors" data-flag-title="JS 超长数字的坑">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -554,825 +1362,11 @@
       
         
           
-          论文阅读报告姓名：刘星焜, 班级：1437105, 学号：1143710515
-1. Big Data Sensing and Services: A Tutorial1.1. 文章重点内容1.1.1. big data sensing 是什么big data sensing 包含大数据计算和服务；传感器云计算和服务；传感器和传感器网络。
-big data sensing 为不同的应用程序提供了按需分配的灵活的大数据分析服务。
-
-1.1.2. big data sensing and service 架构（自底向上）
-资源池（包含传感器，传感器网络，存储和计算服务，网络）
-
-网络基础设施（无线
+          12345678910const num1 = 1234567890123456const num2 = 12345678901234567const str1 = '1234567890123456'const str2 = `12345678901234567`console.log(num1 === str1) // falseconsole.log(`$&#123;num1&#125;` === str1) // trueconsole.log(num2 === str2) // falseconsole.log(`$&#123;num2&#125;` === str2) // fal
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/08/服务学概论第二次作业/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/02/1997-安娜·卡列尼娜/" itemprop="url">
-                  1997-安娜·卡列尼娜
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-12-02T22:51:17+08:00" content="2016-12-02">
-              2016-12-02
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/02/1997-安娜·卡列尼娜/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/02/1997-安娜·卡列尼娜/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/02/1997-安娜·卡列尼娜/" class="leancloud_visitors" data-flag-title="1997-安娜·卡列尼娜">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="http://ob4a6y748.bkt.clouddn.com/anklnn-p2321150779.jpg" alt="title"></p>
-<blockquote>
-<p>死时还未懂得爱的真谛，那就比死亡本身更可怕了。</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/02/1997-安娜·卡列尼娜/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/01/说谎的女人-苏菲·玛索/" itemprop="url">
-                  说谎的女人-苏菲·玛索
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-12-01T19:21:59+08:00" content="2016-12-01">
-              2016-12-01
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/01/说谎的女人-苏菲·玛索/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/01/说谎的女人-苏菲·玛索/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/01/说谎的女人-苏菲·玛索/" class="leancloud_visitors" data-flag-title="说谎的女人-苏菲·玛索">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="http://ob4a6y748.bkt.clouddn.com/shdnr-1140806153.jpg" alt="title"></p>
-<blockquote>
-<p>我是撒谎大王。撒的谎天衣无缝。时不时的，一天几次，事先想好或者不假思索，出于本能或不顾羞耻，我瞪着又圆又亮的眼睛撒谎。</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/01/说谎的女人-苏菲·玛索/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/01/2011-萤火之森/" itemprop="url">
-                  2011-萤火之森
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-12-01T19:07:46+08:00" content="2016-12-01">
-              2016-12-01
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/01/2011-萤火之森/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/01/2011-萤火之森/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/01/2011-萤火之森/" class="leancloud_visitors" data-flag-title="2011-萤火之森">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="http://ob4a6y748.bkt.clouddn.com/yhzs-0.jpg" alt="title"></p>
-<blockquote>
-<p>我啊，已经等不及夏天的到来了。</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/01/2011-萤火之森/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/29/2010-遭遇陌生人/" itemprop="url">
-                  2010-遭遇陌生人
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-29T17:51:09+08:00" content="2016-11-29">
-              2016-11-29
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/29/2010-遭遇陌生人/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/29/2010-遭遇陌生人/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/29/2010-遭遇陌生人/" class="leancloud_visitors" data-flag-title="2010-遭遇陌生人">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="http://ob4a6y748.bkt.clouddn.com/zymsr-p864586568.jpg" alt="title"></p>
-<blockquote>
-<p>喧嚣和躁动的生活</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/29/2010-遭遇陌生人/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/26/1980-初吻/" itemprop="url">
-                  1980-初吻
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-26T15:39:28+08:00" content="2016-11-26">
-              2016-11-26
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/26/1980-初吻/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/26/1980-初吻/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/26/1980-初吻/" class="leancloud_visitors" data-flag-title="1980-初吻">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="http://ob4a6y748.bkt.clouddn.com/cw-p614899172.jpg" alt="t"></p>
-<blockquote>
-<p>苏菲玛索</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/26/1980-初吻/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/26/安德的游戏-奥森·斯科特·卡德/" itemprop="url">
-                  安德的游戏-奥森·斯科特·卡德
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-26T15:22:47+08:00" content="2016-11-26">
-              2016-11-26
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/26/安德的游戏-奥森·斯科特·卡德/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/26/安德的游戏-奥森·斯科特·卡德/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/26/安德的游戏-奥森·斯科特·卡德/" class="leancloud_visitors" data-flag-title="安德的游戏-奥森·斯科特·卡德">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="http://1.im.guokr.com/Q0a7VCCxyh8bzJtJH35Nu3g5bVvETfk8J38me8HeAuOAAgAA4AEAAEpQ.jpg" alt="title"></p>
-<blockquote>
-<p>你年轻，聪明，而且不计后果。这就是你出生的目的。</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/26/安德的游戏-奥森·斯科特·卡德/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/25/命令行传输文件/" itemprop="url">
-                  命令行传输文件
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-25T19:45:36+08:00" content="2016-11-25">
-              2016-11-25
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/25/命令行传输文件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/25/命令行传输文件/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/25/命令行传输文件/" class="leancloud_visitors" data-flag-title="命令行传输文件">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          scp在linux下一般用scp这个命令来通过ssh传输文件。
-1、从服务器上下载文件123scp username@servername:/path/filename /var/www/local_dir（本地目录） 例如scp root@192.168.0.101:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）
-2、上传本地文件到服务器123scp /path/filename username@servername:/path   例如scp /var/www/test
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/25/命令行传输文件/#more" rel="contents">
+            <a class="btn" href="/2016/09/06/JS-超长数字的坑/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1406,7 +1400,7 @@ big data sensing 为不同的应用程序提供了按需分配的灵活的大数
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
