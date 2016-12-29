@@ -1664,7 +1664,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #bbba58;
+  background: #cbb020;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2637,10 +2637,10 @@ body {
 }
 @media (min-width: 992px) {
   body {
-    background-image: url("http://ob4a6y748.bkt.clouddn.com/bj-stock-photo-186772423.jpg");
+    background-image: url("http://ob4a6y748.bkt.clouddn.com/wallpaper-stock-photo-190140661.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    opacity: 0.93;
+    opacity: 0.8;
   }
 }
 @media (max-width: 767px) {
