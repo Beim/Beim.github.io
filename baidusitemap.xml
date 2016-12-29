@@ -887,22 +887,6 @@
     </url>
 
     
-  <url>
-    <loc>https://beim.github.io/2016/08/08/React-Native-Startup/</loc>
-    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
-    <data>
-        <display>
-        <title>React-Native Startup</title>
-        <pubTime>2016-08-08T13:27:58.000Z</pubTime>
-        
-        <tag>React-Native</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://beim.github.io/2016/08/05/Node-js%E7%9A%84%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84/</loc>
@@ -913,6 +897,23 @@
         <pubTime>2016-08-05T02:01:34.000Z</pubTime>
         
         <tag>node</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/08/08/React-Native-Startup/</loc>
+    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
+    <data>
+        <display>
+        <title>React-Native Startup</title>
+        <pubTime>2016-08-08T13:27:58.000Z</pubTime>
+        
+        <tag>React-Native</tag>
          
          
            
@@ -938,16 +939,15 @@
     </url>
 
     
-    
   <url>
-    <loc>https://beim.github.io/2016/08/05/git%E5%91%BD%E4%BB%A4%E4%B9%8B-git-tag/</loc>
+    <loc>https://beim.github.io/2016/08/05/js%E4%B8%AD%E7%9A%84%E7%B1%BBClass/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
         <display>
-        <title>git命令之 git tag</title>
-        <pubTime>2016-08-05T02:13:10.000Z</pubTime>
+        <title>js中的类Class</title>
+        <pubTime>2016-08-05T01:33:11.000Z</pubTime>
         
-        <tag>git</tag>
+        <tag>javascript</tag>
          
          
            
@@ -974,14 +974,14 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/08/05/js%E4%B8%AD%E7%9A%84%E7%B1%BBClass/</loc>
+    <loc>https://beim.github.io/2016/08/05/git%E5%91%BD%E4%BB%A4%E4%B9%8B-git-tag/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
         <display>
-        <title>js中的类Class</title>
-        <pubTime>2016-08-05T01:33:11.000Z</pubTime>
+        <title>git命令之 git tag</title>
+        <pubTime>2016-08-05T02:13:10.000Z</pubTime>
         
-        <tag>javascript</tag>
+        <tag>git</tag>
          
          
            
