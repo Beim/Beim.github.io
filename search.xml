@@ -4,6 +4,16 @@
   
     
     <entry>
+      <title><![CDATA[2017-收藏]]></title>
+      <url>https://beim.github.io/2017/01/01/2017-%E6%94%B6%E8%97%8F/</url>
+      <content type="html"><![CDATA[<embed src="//music.163.com/style/swf/widget.swf?sid=35030745&type=2&auto=0&width=320&height=66" width="340" height="86" allownetworking="all">
+
+<a id="more"></a>
+<h1 id="语言相关"><a href="#语言相关" class="headerlink" title="语言相关"></a>语言相关</h1><h2 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h2><h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><h2 id="C-1"><a href="#C-1" class="headerlink" title="C++"></a>C++</h2><h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><hr>
+<h1 id="语言无关"><a href="#语言无关" class="headerlink" title="语言无关"></a>语言无关</h1><h2 id="front"><a href="#front" class="headerlink" title="front"></a>front</h2><h2 id="back"><a href="#back" class="headerlink" title="back"></a>back</h2><h2 id="network"><a href="#network" class="headerlink" title="network"></a>network</h2><h2 id="other"><a href="#other" class="headerlink" title="other"></a>other</h2>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[服务学考试准备]]></title>
       <url>https://beim.github.io/2016/12/28/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E8%80%83%E8%AF%95%E5%87%86%E5%A4%87/</url>
       <content type="html"><![CDATA[<h2 id="第一章-现代服务产业与服务学"><a href="#第一章-现代服务产业与服务学" class="headerlink" title="第一章 现代服务产业与服务学"></a>第一章 现代服务产业与服务学</h2><p>服务业四大领域：基础服务，生产服务，生活服务，公共服务</p>
@@ -3373,6 +3383,18 @@
 <h3 id="测试一下-1"><a href="#测试一下-1" class="headerlink" title="测试一下"></a>测试一下</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#修改之前的package<span class="selector-class">.json</span></div><div class="line">&#123;</div><div class="line">  <span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"test"</span>: <span class="string">"nyc ava -v"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">beim<span class="meta">@Idea:~/temp/ava$</span> npm test</div><div class="line">&gt; @ test /home/beim/temp/ava</div><div class="line">&gt; nyc ava -v</div><div class="line">  ✔ give 3 should return 9</div><div class="line">  ✔ git -3 should return -3</div><div class="line">  2 tests passed [10:23:53 GMT+0800 (CST)]</div><div class="line">----------|<span class="string">----------</span>|<span class="string">----------</span>|<span class="string">----------</span>|<span class="string">----------</span>|<span class="string">----------------</span>|</div><div class="line">File      |<span class="string">  % Stmts </span>|<span class="string"> % Branch </span>|<span class="string">  % Funcs </span>|<span class="string">  % Lines </span>|<span class="string">Uncovered Lines </span>|</div><div class="line">----------|<span class="string">----------</span>|<span class="string">----------</span>|<span class="string">----------</span>|<span class="string">----------</span>|<span class="string">----------------</span>|</div><div class="line">All files |<span class="string">      100 </span>|<span class="string">      100 </span>|<span class="string">      100 </span>|<span class="string">      100 </span>|<span class="string">                </span>|</div><div class="line"> main.js  |<span class="string">      100 </span>|<span class="string">      100 </span>|<span class="string">      100 </span>|<span class="string">      100 </span>|<span class="string">                </span>|</div><div class="line">----------|<span class="string">----------</span>|<span class="string">----------</span>|<span class="string">----------</span>|<span class="string">----------</span>|<span class="string">----------------</span>|</div></pre></td></tr></table></figure>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[2017-白日梦]]></title>
+      <url>https://beim.github.io/1970/01/02/2017-%E7%99%BD%E6%97%A5%E6%A2%A6/</url>
+      <content type="html"><![CDATA[<embed src="//music.163.com/style/swf/widget.swf?sid=28592459&type=2&auto=0&width=320&height=66" width="340" height="86" allownetworking="all">
+
+<blockquote>
+<p>only my railgun</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="Jan"><a href="#Jan" class="headerlink" title="Jan"></a>Jan</h1>]]></content>
     </entry>
     
     <entry>

@@ -261,6 +261,124 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/13/cpp-宏编写技巧/" itemprop="url">
+                  cpp-宏编写技巧
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-13T23:31:24+08:00" content="2016-10-13">
+              2016-10-13
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/13/cpp-宏编写技巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/13/cpp-宏编写技巧/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/10/13/cpp-宏编写技巧/" class="leancloud_visitors" data-flag-title="cpp-宏编写技巧">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          如果宏里有多过一个语句(statement), 就需要用do {/…/} while(0) 包裹成单个语句, 否则会有如下问题
+1234567891011#define M() a(); b()if (cond)    M();else    c();/* 预处理后 */if (cond)    a(); b()else /* else 缺乏对应if */    c();
+只用{} 也不行:
+1234567891011#define M() &#123; a(); b();&#125;if (cond)    M();else    c();/* 预处理后 */if (cond)    &#1
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/13/cpp-宏编写技巧/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/09/设计模式笔记/" itemprop="url">
                   设计模式笔记
                 </a>
@@ -1281,126 +1399,11 @@ ubuntu 系统下/etc/resolv.conf 配置文件, 用来设置DNS 服务器的IP �
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/06/JS-超长数字的坑/" itemprop="url">
-                  JS 超长数字的坑
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-09-06T17:31:17+08:00" content="2016-09-06">
-              2016-09-06
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/06/JS-超长数字的坑/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/06/JS-超长数字的坑/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/09/06/JS-超长数字的坑/" class="leancloud_visitors" data-flag-title="JS 超长数字的坑">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          12345678910const num1 = 1234567890123456const num2 = 12345678901234567const str1 = '1234567890123456'const str2 = `12345678901234567`console.log(num1 === str1) // falseconsole.log(`$&#123;num1&#125;` === str1) // trueconsole.log(num2 === str2) // falseconsole.log(`$&#123;num2&#125;` === str2) // fal
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/06/JS-超长数字的坑/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1441,7 +1444,7 @@ ubuntu 系统下/etc/resolv.conf 配置文件, 用来设置DNS 服务器的IP �
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">59</span>
+              <span class="site-state-item-count">61</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
