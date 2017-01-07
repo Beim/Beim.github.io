@@ -10,6 +10,8 @@
 
 <a id="more"></a>
 <h1 id="语言相关"><a href="#语言相关" class="headerlink" title="语言相关"></a>语言相关</h1><h2 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h2><h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><h2 id="C-1"><a href="#C-1" class="headerlink" title="C++"></a>C++</h2><h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><ul>
+<li><p><a href="https://wizardforcel.gitbooks.io/core-python-2e/content/14.html" target="_blank" rel="external">python 核心编程 - gitbook</a></p>
+</li>
 <li><p><a href="http://djangobook.py3k.cn/2.0/" target="_blank" rel="external">Djiango book - 中文翻译</a></p>
 </li>
 <li><p><a href="http://docs.python-requests.org/en/master/" target="_blank" rel="external">Requests - doc</a></p>
@@ -21,7 +23,22 @@
 </ul>
 <hr>
 <h1 id="语言无关"><a href="#语言无关" class="headerlink" title="语言无关"></a>语言无关</h1><h2 id="front"><a href="#front" class="headerlink" title="front"></a>front</h2><h2 id="back"><a href="#back" class="headerlink" title="back"></a>back</h2><h2 id="network"><a href="#network" class="headerlink" title="network"></a>network</h2><h2 id="other"><a href="#other" class="headerlink" title="other"></a>other</h2><ul>
-<li><a href="http://mooc.study.163.com/university/HIT#/c" target="_blank" rel="external">网易云课堂 - 哈工大</a></li>
+<li><p><a href="http://www.bilibili.com/video/av7322294/" target="_blank" rel="external">sss - 90-92分钟 - 跑跑</a></p>
+</li>
+<li><p><a href="http://mooc.study.163.com/university/HIT#/c" target="_blank" rel="external">网易云课堂 - 哈工大</a></p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[NSGA-相关]]></title>
+      <url>https://beim.github.io/2017/01/07/NSGA-%E7%9B%B8%E5%85%B3/</url>
+      <content type="html"><![CDATA[<ul>
+<li><p><a href="https://zh.wikipedia.org/wiki/%E5%B8%95%E7%B4%AF%E6%89%98%E6%9C%80%E4%BC%98" target="_blank" rel="external">帕雷托最优（英语：Pareto optimality）</a></p>
+</li>
+<li><p><a href="https://zh.wikipedia.org/wiki/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95" target="_blank" rel="external">遗传算法（英语：genetic algorithm (GA) ）</a></p>
+</li>
 </ul>
 ]]></content>
     </entry>
@@ -133,6 +150,7 @@
 <h2 id="函数readlink-readlinkat"><a href="#函数readlink-readlinkat" class="headerlink" title="函数readlink, readlinkat"></a>函数readlink, readlinkat</h2><p>因为open 函数跟随符号链接，所以需要有一种方法打开链接本身。并读该链接中的名字：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">ssize_t</span> readlink (<span class="keyword">const</span> <span class="keyword">char</span> *<span class="keyword">restrict</span> pathname, <span class="keyword">char</span> *<span class="keyword">restrict</span> buf, <span class="keyword">size_t</span> bufsize);</div><div class="line"><span class="keyword">ssize_t</span> readlinkat (<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">char</span>* <span class="keyword">restrict</span> pathname, <span class="keyword">char</span> *<span class="keyword">restrict</span> buf, <span class="keyword">size_t</span> bufsize);</div><div class="line">两个函数的返回值：成功返回读取的字节数；出错返回<span class="number">-1</span></div></pre></td></tr></table></figure></p>
 <h2 id="函数futimens-utimensat-utimes"><a href="#函数futimens-utimensat-utimes" class="headerlink" title="函数futimens, utimensat, utimes"></a>函数futimens, utimensat, utimes</h2><p>用以下几个函数修改文件的访问时间和修改时间<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/stat.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">futimens</span><span class="params">(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">struct</span> timespec times[<span class="number">2</span>])</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">utimensat</span><span class="params">(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">const</span> <span class="keyword">struct</span> timespec times[<span class="number">2</span>], <span class="keyword">int</span> flag)</span></span>;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/times.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">utimes</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname, <span class="keyword">const</span> <span class="keyword">struct</span> timeval times[<span class="number">2</span>])</span></span>;</div><div class="line"><span class="comment">// 上述函数返回值：成功返回0；出错返回-1</span></div></pre></td></tr></table></figure></p>
 <h2 id="函数mkdir-mkdirat-rmdir"><a href="#函数mkdir-mkdirat-rmdir" class="headerlink" title="函数mkdir, mkdirat, rmdir"></a>函数mkdir, mkdirat, rmdir</h2><p>用mkdir, mkdirat 函数创建目录，rmdir 删除目录<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/stat.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mkdir</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname, <span class="keyword">mode_t</span> mode)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mkdir</span> <span class="params">(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">char</span> *pthname, <span class="keyword">mode_t</span> mode)</span></span>;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">rmdir</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname)</span></span>;</div><div class="line"><span class="comment">// 上述函数返回值：成功返回0；出错返回-1</span></div></pre></td></tr></table></figure></p>
+<h2 id="读目录"><a href="#读目录" class="headerlink" title="读目录"></a>读目录</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;dirent.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function">DIR *<span class="title">opendir</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *pathname)</span></span>;</div><div class="line"><span class="function">DIR *<span class="title">fopendir</span><span class="params">(<span class="keyword">int</span> fd)</span></span>;</div><div class="line"><span class="comment">// 两个函数返回值：成功返回指针；出错返回NULL</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">struct</span> dirent *<span class="title">readdir</span><span class="params">(DIR *dp)</span></span>;</div><div class="line"><span class="comment">// 返回值：成功返回指针；若在目录尾或出错，返回NULL</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">rewinddir</span> <span class="params">(DIR *dp)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">closedir</span> <span class="params">(DIR *dp)</span></span>;</div><div class="line"><span class="comment">// 返回值：成功返回0；出错返回-1</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">long</span> <span class="title">telldir</span> <span class="params">(DIR *dp)</span></span>;</div><div class="line"><span class="comment">// 返回值： 与dpguanlian的目录中的单签位置</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">seekdir</span><span class="params">(DIR *dp, <span class="keyword">long</span> loc)</span></span>;</div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
@@ -3437,6 +3455,14 @@
 <p><strong>白日梦</strong></p>
 <p>在国服跑跑偶遇琉璃深灰白！<br>那时候玩韩服多亏有她呢<br>她说还记得我hhh</p>
 <p><code>Fri Jan 6 23:52</code></p>
+<hr>
+<p><strong>夏娜</strong></p>
+<p>无限的时间将跳动停止，人们消声无息的燃烧着，没有任何人注意到，世界已经脱轨，被红世之火所包围。</p>
+<p><code>Sat Jan 7 20:50</code></p>
+<hr>
+<p><strong>白日梦</strong></p>
+<p>正在教室看遗传算法论文。。<br>之前选题的论文是英文的，看的过程中google关键字偶然发现了一篇中文论文，内容几乎一样。。。再google 中文论文里的关键字，找到了英文论文的中文翻译QAQ<br>真是。。<br>嗨呀～</p>
+<p><code>Sat Jan 7 20:54</code></p>
 <hr>
 ]]></content>
     </entry>
