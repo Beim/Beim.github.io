@@ -11,7 +11,6 @@ const printable = () => {
     for (let item of [header, postHeader, postFooter, shang, comments, footer]) {
         item.className += ' go-away'
     }
-    print()
 }
 
 /*
