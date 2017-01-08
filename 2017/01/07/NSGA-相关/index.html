@@ -93,7 +93,9 @@
 
 遗传算法（英语：genetic algorithm (GA) ）">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/NSGA-II-2017-01-08%2017-01-16%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
-<meta property="og:updated_time" content="2017-01-08T10:58:58.963Z">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/%E5%85%B3%E7%B3%BB%E6%9B%B2%E7%BA%BF-c461e04cdc0b8947bad5f1a47fc322e6_b.png">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/%E9%81%97%E4%BC%A0%E7%BB%93%E6%9E%9C-c4626ac1a2fea41ceb2f7face7764afe_b.png">
+<meta property="og:updated_time" content="2017-01-08T11:02:09.060Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NSGA-相关">
 <meta name="twitter:description" content="帕雷托最优（英语：Pareto optimality）
@@ -353,7 +355,7 @@
 <h2 id="1-5-算法分析的结论"><a href="#1-5-算法分析的结论" class="headerlink" title="1.5 算法分析的结论"></a>1.5 算法分析的结论</h2><p>首先分析<strong>快速非支配排序</strong>算法，对每一个在第二或者更高非支配等级的解p 来说，支配计数np 最多为N-1(成员个数为N)，而一个被制定非支配等级的解不会被再次访问，因此每一个解p 在它的支配计数达到0时最多被访问N-1 次。由于存在这样的解最多有N-1 个，所以全部复杂度为O(N^2)。因此整体排序算法的复杂度为O(MN^2)。</p>
 <p>然后分析<strong>拥挤距离计算</strong>算法，M 为目标函数的个数，由于有M次独立的排序，每次最多有N个解，因此拥挤距离计算的算法复杂度为O(MNlogN)。</p>
 <p>对于主循环，考虑算法一次迭代的计算复杂度。主要操作以及最坏情况的复杂度为：1）非支配排序O(M(2N)^2)；2）拥挤距离计算O(M(2N)log(2N))；3）拥挤比较算子<code>&lt;n</code> 上的排序O(2Nlog2N)；因此算法整体的复杂度为O(MN^2)，其中非支配排序占据了主导地位。</p>
-<h2 id="1-6-用一个例子说明相关算法。"><a href="#1-6-用一个例子说明相关算法。" class="headerlink" title="1.6 用一个例子说明相关算法。"></a>1.6 用一个例子说明相关算法。</h2><p>下面以一个简单的栗子说明遗传算法。<br>以目标函数<code>f(x) = x + 10sin(5x) + 7cos(4x), x in [0, 9]</code>为例，使用遗传算法求解它在区间[0,9]的最大值。<br>这个函数大概长这样：<br><a href="https://pic3.zhimg.com/c461e04cdc0b8947bad5f1a47fc322e6_b.png" target="_blank" rel="external">函数</a><br>假设解的精度为小数点后4 位，可以将x 的解空间划分为<code>(9-0)*(1e+4) = 90000</code> 个等分<br><code>2^16 &lt; 90000 &lt; 2^17</code>，因此用17位 二进制数来表示这些解。<br>一开始，这些二进制串是随机生成的。<br>一个这样的二进制串代表一条染色体串，这里染色体串的长度为17。<br>对于任何一条这样的染色体chromosome，使用公式<code>x = 0 + decimal(chromosome)*(9-0)/(2^17-1)</code>将它解码到<code>[0,9]</code>这个区间的数值。（decimal()将二进制数转化为十进制数）<br>一个个体就是一条染色体，许多个体组成种群，在这里是一个一维点集(x轴上[0,9]的线段)。<br>个体的适应度函数就是f(x)，在这里函数值越大，解的质量越高。<br>接下来通过上述函数的进化，选择，交叉和变异，多次迭代后平均适应度达到收敛。如下图：<br>迭代次数与平均适应度关系曲线（横轴：迭代次数，纵轴：平均适应度）<br><a href="https://pic3.zhimg.com/c4626ac1a2fea41ceb2f7face7764afe_b.png" target="_blank" rel="external">关系曲线</a></p>
+<h2 id="1-6-用一个例子说明相关算法。"><a href="#1-6-用一个例子说明相关算法。" class="headerlink" title="1.6 用一个例子说明相关算法。"></a>1.6 用一个例子说明相关算法。</h2><p>下面以一个简单的栗子说明遗传算法。<br>以目标函数<code>f(x) = x + 10sin(5x) + 7cos(4x), x in [0, 9]</code>为例，使用遗传算法求解它在区间[0,9]的最大值。<br>这个函数大概长这样：<br><img src="http://ob4a6y748.bkt.clouddn.com/%E5%85%B3%E7%B3%BB%E6%9B%B2%E7%BA%BF-c461e04cdc0b8947bad5f1a47fc322e6_b.png" alt="函数"><br>假设解的精度为小数点后4 位，可以将x 的解空间划分为<code>(9-0)*(1e+4) = 90000</code> 个等分<br><code>2^16 &lt; 90000 &lt; 2^17</code>，因此用17位 二进制数来表示这些解。<br>一开始，这些二进制串是随机生成的。<br>一个这样的二进制串代表一条染色体串，这里染色体串的长度为17。<br>对于任何一条这样的染色体chromosome，使用公式<code>x = 0 + decimal(chromosome)*(9-0)/(2^17-1)</code>将它解码到<code>[0,9]</code>这个区间的数值。（decimal()将二进制数转化为十进制数）<br>一个个体就是一条染色体，许多个体组成种群，在这里是一个一维点集(x轴上[0,9]的线段)。<br>个体的适应度函数就是f(x)，在这里函数值越大，解的质量越高。<br>接下来通过上述函数的进化，选择，交叉和变异，多次迭代后平均适应度达到收敛。如下图：<br>迭代次数与平均适应度关系曲线（横轴：迭代次数，纵轴：平均适应度）<br><img src="http://ob4a6y748.bkt.clouddn.com/%E9%81%97%E4%BC%A0%E7%BB%93%E6%9E%9C-c4626ac1a2fea41ceb2f7face7764afe_b.png" alt="关系曲线"></p>
 <h1 id="作业二"><a href="#作业二" class="headerlink" title="作业二"></a>作业二</h1><p>相关领域的问题的分类</p>
 <p>每类问题解决方法的分类</p>
 <p>逐个简介每种方法(每种方法一小段)</p>
