@@ -66,7 +66,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript," />
+  <meta name="keywords" content="C," />
 
 
 
@@ -82,16 +82,19 @@
 
 
 
-<meta name="description" content="12345678910const num1 = 1234567890123456const num2 = 12345678901234567const str1 = &apos;1234567890123456&apos;const str2 = `12345678901234567`console.log(num1 === str1) // falseconsole.log(`$&amp;#123;num1&amp;#125;`">
+<meta name="description" content="在看C和指针时发现的一个有趣的地方：
+12345678910111213141516171819202122232425#include &amp;lt;stdarg.h&amp;gt;void var_args_func(int n_values, ...)&amp;#123;    printf(&quot;n_values is %d\n&quot;, n_values);    va_list args;    va_start(a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS 超长数字的坑">
-<meta property="og:url" content="https://beim.github.io/2016/09/06/JS-超长数字的坑/index.html">
+<meta property="og:title" content="C-可变参数">
+<meta property="og:url" content="https://beim.github.io/2017/01/11/C-可变参数/index.html">
 <meta property="og:site_name" content="北冥945">
-<meta property="og:description" content="12345678910const num1 = 1234567890123456const num2 = 12345678901234567const str1 = &apos;1234567890123456&apos;const str2 = `12345678901234567`console.log(num1 === str1) // falseconsole.log(`$&amp;#123;num1&amp;#125;`">
-<meta property="og:updated_time" content="2016-09-29T05:56:42.220Z">
+<meta property="og:description" content="在看C和指针时发现的一个有趣的地方：
+12345678910111213141516171819202122232425#include &amp;lt;stdarg.h&amp;gt;void var_args_func(int n_values, ...)&amp;#123;    printf(&quot;n_values is %d\n&quot;, n_values);    va_list args;    va_start(a">
+<meta property="og:updated_time" content="2017-01-11T09:05:06.385Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS 超长数字的坑">
-<meta name="twitter:description" content="12345678910const num1 = 1234567890123456const num2 = 12345678901234567const str1 = &apos;1234567890123456&apos;const str2 = `12345678901234567`console.log(num1 === str1) // falseconsole.log(`$&amp;#123;num1&amp;#125;`">
+<meta name="twitter:title" content="C-可变参数">
+<meta name="twitter:description" content="在看C和指针时发现的一个有趣的地方：
+12345678910111213141516171819202122232425#include &amp;lt;stdarg.h&amp;gt;void var_args_func(int n_values, ...)&amp;#123;    printf(&quot;n_values is %d\n&quot;, n_values);    va_list args;    va_start(a">
 
 
 
@@ -112,11 +115,11 @@
 
 
 
-  <link rel="canonical" href="https://beim.github.io/2016/09/06/JS-超长数字的坑/"/>
+  <link rel="canonical" href="https://beim.github.io/2017/01/11/C-可变参数/"/>
 
   <script type="text/javascript" src="/js/src/beim/test.js"></script>
 
-  <title> JS 超长数字的坑 | 北冥945 </title>
+  <title> C-可变参数 | 北冥945 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -259,7 +262,7 @@
             
             
               
-                JS 超长数字的坑
+                C-可变参数
               
             
           </h1>
@@ -271,8 +274,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-09-06T17:31:17+08:00" content="2016-09-06">
-              2016-09-06
+            <time itemprop="dateCreated" datetime="2017-01-11T16:45:31+08:00" content="2017-01-11">
+              2017-01-11
             </time>
           </span>
 
@@ -282,8 +285,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/06/JS-超长数字的坑/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/06/JS-超长数字的坑/" itemprop="commentsCount"></span>
+                <a href="/2017/01/11/C-可变参数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/11/C-可变参数/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -293,7 +296,7 @@
 
           
           
-             <span id="/2016/09/06/JS-超长数字的坑/" class="leancloud_visitors" data-flag-title="JS 超长数字的坑">
+             <span id="/2017/01/11/C-可变参数/" class="leancloud_visitors" data-flag-title="C-可变参数">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -315,7 +318,9 @@
       
 
       
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> num1 = <span class="number">1234567890123456</span></div><div class="line"><span class="keyword">const</span> num2 = <span class="number">12345678901234567</span></div><div class="line"><span class="keyword">const</span> str1 = <span class="string">'1234567890123456'</span></div><div class="line"><span class="keyword">const</span> str2 = <span class="string">`12345678901234567`</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(num1 === str1) <span class="comment">// false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;num1&#125;</span>`</span> === str1) <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(num2 === str2) <span class="comment">// false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;num2&#125;</span>`</span> === str2) <span class="comment">// false</span></div></pre></td></tr></table></figure>
+        <p>在看<code>C和指针</code>时发现的一个有趣的地方：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdarg.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">var_args_func</span><span class="params">(<span class="keyword">int</span> n_values, ...)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"n_values is %d\n"</span>, n_values);</div><div class="line">    va_list args;</div><div class="line">    va_start(args, n_values);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n_values; i++) &#123;</div><div class="line">        <span class="keyword">double</span> arg = va_arg(args, <span class="keyword">double</span>);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"arg is %lf\n"</span>, arg);</div><div class="line">        <span class="keyword">int</span> arg1 = va_arg(args, <span class="keyword">int</span>);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"arg is %d\n"</span>, arg1);</div><div class="line">    &#125;</div><div class="line">    va_end(args);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">test_var_args_func</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">float</span> f = <span class="number">6</span>;</div><div class="line">    var_args_func(<span class="number">3</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4.0</span>, <span class="number">5.0</span>, f);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    test_var_args_func();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面这段代码输出是<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">n_values <span class="keyword">is</span> <span class="number">3</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">4.000000</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">1</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">5.000000</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">2</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">6.000000</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">3</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -359,7 +364,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag">#javascript</a>
+            <a href="/tags/C/" rel="tag">#C</a>
           
         </div>
       
@@ -368,16 +373,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/25/2011-午夜巴黎/" rel="next" title="2011-午夜巴黎">
-                <i class="fa fa-chevron-left"></i> 2011-午夜巴黎
+              <a href="/2017/01/07/NSGA-相关/" rel="next" title="NSGA-相关">
+                <i class="fa fa-chevron-left"></i> NSGA-相关
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/09/11/计算机网络-笔记/" rel="prev" title="计算机网络-笔记">
-                计算机网络-笔记 <i class="fa fa-chevron-right"></i>
+              <a href="/3017/01/01/2017-收藏/" rel="prev" title="2017-收藏">
+                2017-收藏 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -404,8 +409,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/09/06/JS-超长数字的坑/"
-           data-title="JS 超长数字的坑" data-url="https://beim.github.io/2016/09/06/JS-超长数字的坑/">
+      <div class="ds-thread" data-thread-key="2017/01/11/C-可变参数/"
+           data-title="C-可变参数" data-url="https://beim.github.io/2017/01/11/C-可变参数/">
       </div>
     
   </div>

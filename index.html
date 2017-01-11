@@ -373,6 +373,122 @@
             
               
                 
+                <a class="post-title-link" href="/2017/01/11/C-可变参数/" itemprop="url">
+                  C-可变参数
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-01-11T16:45:31+08:00" content="2017-01-11">
+              2017-01-11
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/11/C-可变参数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/11/C-可变参数/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/01/11/C-可变参数/" class="leancloud_visitors" data-flag-title="C-可变参数">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          在看C和指针时发现的一个有趣的地方：
+12345678910111213141516171819202122232425#include &lt;stdarg.h&gt;void var_args_func(int n_values, ...)&#123;    printf("n_values is %d\n", n_values);    va_list args;    va_start(args, n_values);    for (int i = 0; i &lt; n_values; i++) &#123;        double arg = va_arg(args, dou
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/11/C-可变参数/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/01/07/NSGA-相关/" itemprop="url">
                   NSGA-相关
                 </a>
@@ -1279,123 +1395,6 @@ Usage
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/10/shadowsocks配置/" itemprop="url">
-                  shadowsocks配置
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-12-10T15:49:39+08:00" content="2016-12-10">
-              2016-12-10
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/10/shadowsocks配置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/10/shadowsocks配置/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/10/shadowsocks配置/" class="leancloud_visitors" data-flag-title="shadowsocks配置">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          安装shadowsocks - Tutorial - Github
-客户端给出一份客户端的配置文件12345678910# shadow.json&#123;    "server": "sg03-31.ssv7.net",    "server_port": 40696,    "local": "127.0.0.1",    "local_port": 1080,    "password": "your password",    "timeout": 600,    "method": "aes-256-cfb"&#125;
-执行命令sslocal -c /home/beim/.sha
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/10/shadowsocks配置/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1441,7 +1440,7 @@ Usage
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">56</span>
+              <span class="site-state-item-count">57</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
