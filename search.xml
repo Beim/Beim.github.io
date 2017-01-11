@@ -10,6 +10,13 @@
 
     
     <entry>
+      <title><![CDATA[项目管理考试准备]]></title>
+      <url>%2F2017%2F01%2F11%2F%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%80%83%E8%AF%95%E5%87%86%E5%A4%87%2F</url>
+      <content type="text"><![CDATA[第一章IT 项目管理介绍 项目管理历史 项目管理和其他学科的联系 介绍People,Product,Process,和Project 什么是Project 什么是Project Management p5 - PMI(美国项目管理协会Project Management Institute)]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[C-可变参数]]></title>
       <url>%2F2017%2F01%2F11%2FC-%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%2F</url>
       <content type="text"><![CDATA[在看C和指针时发现的一个有趣的地方： 12345678910111213141516171819202122232425#include &lt;stdarg.h&gt;void var_args_func(int n_values, ...)&#123; printf("n_values is %d\n", n_values); va_list args; va_start(args, n_values); for (int i = 0; i &lt; n_values; i++) &#123; double arg = va_arg(args, double); printf("arg is %lf\n", arg); int arg1 = va_arg(args, int); printf("arg is %d\n", arg1); &#125; va_end(args);&#125;void test_var_args_func()&#123; float f = 6; var_args_func(3, 1, 2, 3, 4.0, 5.0, f);&#125;void main()&#123; test_var_args_func();&#125; 上面这段代码输出是1234567n_values is 3arg is 4.000000arg is 1arg is 5.000000arg is 2arg is 6.000000arg is 3]]></content>

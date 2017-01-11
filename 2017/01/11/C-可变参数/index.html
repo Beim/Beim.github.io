@@ -82,19 +82,15 @@
 
 
 
-<meta name="description" content="在看C和指针时发现的一个有趣的地方：
-12345678910111213141516171819202122232425#include &amp;lt;stdarg.h&amp;gt;void var_args_func(int n_values, ...)&amp;#123;    printf(&quot;n_values is %d\n&quot;, n_values);    va_list args;    va_start(a">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C-可变参数">
 <meta property="og:url" content="https://beim.github.io/2017/01/11/C-可变参数/index.html">
 <meta property="og:site_name" content="北冥945">
-<meta property="og:description" content="在看C和指针时发现的一个有趣的地方：
-12345678910111213141516171819202122232425#include &amp;lt;stdarg.h&amp;gt;void var_args_func(int n_values, ...)&amp;#123;    printf(&quot;n_values is %d\n&quot;, n_values);    va_list args;    va_start(a">
-<meta property="og:updated_time" content="2017-01-11T09:05:06.385Z">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/yeqi-wallhaven-98858.jpg">
+<meta property="og:updated_time" content="2017-01-11T09:51:48.329Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C-可变参数">
-<meta name="twitter:description" content="在看C和指针时发现的一个有趣的地方：
-12345678910111213141516171819202122232425#include &amp;lt;stdarg.h&amp;gt;void var_args_func(int n_values, ...)&amp;#123;    printf(&quot;n_values is %d\n&quot;, n_values);    va_list args;    va_start(a">
+<meta name="twitter:image" content="http://ob4a6y748.bkt.clouddn.com/yeqi-wallhaven-98858.jpg">
 
 
 
@@ -318,7 +314,9 @@
       
 
       
-        <p>在看<code>C和指针</code>时发现的一个有趣的地方：</p>
+        <p><img src="http://ob4a6y748.bkt.clouddn.com/yeqi-wallhaven-98858.jpg" alt="yeqi"></p>
+<a id="more"></a>
+<p>在看<code>C和指针</code>时发现的一个有趣的地方：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdarg.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">var_args_func</span><span class="params">(<span class="keyword">int</span> n_values, ...)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"n_values is %d\n"</span>, n_values);</div><div class="line">    va_list args;</div><div class="line">    va_start(args, n_values);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n_values; i++) &#123;</div><div class="line">        <span class="keyword">double</span> arg = va_arg(args, <span class="keyword">double</span>);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"arg is %lf\n"</span>, arg);</div><div class="line">        <span class="keyword">int</span> arg1 = va_arg(args, <span class="keyword">int</span>);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"arg is %d\n"</span>, arg1);</div><div class="line">    &#125;</div><div class="line">    va_end(args);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">test_var_args_func</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">float</span> f = <span class="number">6</span>;</div><div class="line">    var_args_func(<span class="number">3</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4.0</span>, <span class="number">5.0</span>, f);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    test_var_args_func();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>上面这段代码输出是<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">n_values <span class="keyword">is</span> <span class="number">3</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">4.000000</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">1</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">5.000000</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">2</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">6.000000</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">3</span></div></pre></td></tr></table></figure></p>
 
@@ -381,8 +379,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/3017/01/01/2017-收藏/" rel="prev" title="2017-收藏">
-                2017-收藏 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/01/11/项目管理考试准备/" rel="prev" title="项目管理考试准备">
+                项目管理考试准备 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -455,7 +453,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">57</span>
+              <span class="site-state-item-count">58</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
