@@ -192,23 +192,9 @@
 
     
     <entry>
-      <title><![CDATA[算法设计与分析-笔记]]></title>
-      <url>%2F2016%2F11%2F08%2F%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90-%E7%AC%94%E8%AE%B0%2F</url>
-      <content type="text"><![CDATA[作业30%考试70% 计算复杂性函数的阶阶logn &lt; n^x &lt; x^n &lt; n!log2n = log3n2^n &lt; 3^n 和式的估计与界限 递归方程 主定理]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[JS-for-in遍历和prototype]]></title>
       <url>%2F2016%2F11%2F04%2FJS-for-in%E9%81%8D%E5%8E%86%E5%92%8Cprototype%2F</url>
       <content type="text"><![CDATA[for (let i in arr) 会将原型链上面的属性也一一遍历所以在这时候修改 Array.prototype如 Array.prototype.top = () =&gt; {...} 则i会遍历到top属性 = = 被这个略坑了一把 以后要注意不要扩展内置类型的原型, 或者for in 遍历时使用hasOwnProperty 进行筛选 MDN-属性的可枚举性和所有权]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[文献检索-笔记]]></title>
-      <url>%2F2016%2F11%2F04%2F%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2-%E7%AC%94%E8%AE%B0%2F</url>
-      <content type="text"><![CDATA[考勤 30%实习作业 70% 文献类型 科技图书 科技期刊 会议文献 科技报告 学位论文 信息检索技术分类检索语言 布尔逻辑检索 (AND OR NOT)截词检索位置检索 (W, nW, N, nN, S, F)字段限定检索 (后缀方式, 前缀方式) 信息检索的常用方法与步骤 EI数据库的检索(Engineering Index)常用的评价资源: 著名三大检索系统 工程索引(EI) 科学引文索引(SCI) 科技会议录索引(ISTP) 检索字段说明(Search Fields)Author affiliationPublisherSource titleTitleEI controlled termEI main heading 文献类型限定文献处理类型限定检索时间限定 自动取词根检索结果排序 检索规则 逻辑算符 截词符 词组检索 位置算符 平台不区分大小写 在无检索符链接的情况下, 默认与关系 作者检索 (姓在前, 接着逗号, 然后名字, 逗号可省略, 如 huang, wenhu 或 huang wenhu) (huang, w.h) (huang, wen-hu) (wenhu, huang) 作者名字后可以使用截词符截断 快速检索]]></content>
     </entry>
 
     
