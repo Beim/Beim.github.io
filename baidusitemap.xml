@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://beim.github.io/1970/01/02/2017-%E7%99%BD%E6%97%A5%E6%A2%A6/</loc>
+    <lastmod>2017-02-01T02:03:10.404Z</lastmod>
+    <data>
+        <display>
+        <title>2017-白日梦</title>
+        <pubTime>1970-01-02T02:31:41.000Z</pubTime>
+        
+        <tag>daily</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://beim.github.io/2017/02/01/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%9A%84%E9%AD%94%E5%A5%B3-%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/</loc>
     <lastmod>2017-02-01T01:53:46.336Z</lastmod>
     <data>
@@ -46,40 +63,6 @@
         <pubTime>2017-01-26T03:48:10.000Z</pubTime>
         
         <tag>daily</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/1970/01/02/2017-%E7%99%BD%E6%97%A5%E6%A2%A6/</loc>
-    <lastmod>2017-01-27T04:42:21.834Z</lastmod>
-    <data>
-        <display>
-        <title>2017-白日梦</title>
-        <pubTime>1970-01-02T02:31:41.000Z</pubTime>
-        
-        <tag>daily</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2017/01/11/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%80%83%E8%AF%95%E5%87%86%E5%A4%87/</loc>
-    <lastmod>2017-01-12T15:11:33.445Z</lastmod>
-    <data>
-        <display>
-        <title>项目管理考试准备</title>
-        <pubTime>2017-01-11T09:45:33.000Z</pubTime>
-        
-        <tag>notes</tag>
          
          
            
@@ -905,14 +888,14 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
+    <loc>https://beim.github.io/2016/08/05/%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6AVA/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
         <display>
-        <title>ubuntu 启动初始化</title>
-        <pubTime>2016-08-05T02:28:29.000Z</pubTime>
+        <title>测试框架AVA</title>
+        <pubTime>2016-08-05T01:06:00.000Z</pubTime>
         
-        <tag>linux</tag>
+        <tag>node</tag>
          
          
            
@@ -939,14 +922,31 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/08/05/%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6AVA/</loc>
+    <loc>https://beim.github.io/2016/08/08/React-Native-Startup/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
         <display>
-        <title>测试框架AVA</title>
-        <pubTime>2016-08-05T01:06:00.000Z</pubTime>
+        <title>React-Native Startup</title>
+        <pubTime>2016-08-08T13:27:58.000Z</pubTime>
         
-        <tag>node</tag>
+        <tag>React-Native</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
+    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
+    <data>
+        <display>
+        <title>ubuntu 启动初始化</title>
+        <pubTime>2016-08-05T02:28:29.000Z</pubTime>
+        
+        <tag>linux</tag>
          
          
            
@@ -998,23 +998,6 @@
         <pubTime>2016-08-05T01:33:11.000Z</pubTime>
         
         <tag>javascript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/08/08/React-Native-Startup/</loc>
-    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
-    <data>
-        <display>
-        <title>React-Native Startup</title>
-        <pubTime>2016-08-08T13:27:58.000Z</pubTime>
-        
-        <tag>React-Native</tag>
          
          
            
