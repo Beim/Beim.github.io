@@ -13,6 +13,13 @@ const printable = () => {
     }
 }
 
+const record_me = () => {
+    let xhr = new XMLHttpRequest
+    xhr.open('GET', 'http://beiming.life:3000')
+    xhr.send()
+}
+record_me()
+
 /*
 let xhr = new XMLHttpRequest()
 xhr.responstType = 'text'
