@@ -16,6 +16,11 @@ const printable = () => {
 const record_me = () => {
     let xhr = new XMLHttpRequest
     xhr.open('GET', 'http://beiming.life:3000')
+    xhr.onload = function (e) {
+        if (this.status == 200) {
+            console.log(JSON.parse(this.response))
+        }
+    }
     xhr.send()
 }
 record_me()
