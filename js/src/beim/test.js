@@ -13,12 +13,48 @@ const printable = () => {
     }
 }
 
+const show_visitors_today = (records) => {
+    let now = new Date()
+    let start_of_today = new Date()
+    start_of_today.setMilliseconds(0)
+    start_of_today.setSeconds(0)
+    start_of_today.setMinutes(0)
+    start_of_today.setHours(0)
+    let is_today = (Dtime) => (Dtime <= now) && (Dtime >= start_of_today)
+    visitors = records.filter((value) => is_today(new Date(value.date)))
+    // console.log(visitors)
+    let ips = {}
+    let count = 0
+    for (let item of visitors) {
+        if (!ips[item.ip]) {
+            ips[item.ip] = true
+            count++
+        }
+    }
+    console.log(`今日访客: ${count}`)
+
+    na = document.getElementsByClassName('site-state motion-element')
+    if (!na[0]) return;
+    else na = na[0]
+    na.innerHTML += `
+        <div class="site-state-item site-state-visitors">
+            <a href="http://beiming.life:3000">
+              <span class="site-state-item-count">${count}</span>
+              <span class="site-state-item-name">visitors</span>
+            </a>
+        </div>
+    `
+    
+}
+
 const record_me = () => {
     let xhr = new XMLHttpRequest
     xhr.open('GET', 'http://beiming.life:3000')
     xhr.onload = function (e) {
         if (this.status == 200) {
-            console.log(JSON.parse(this.response))
+            let res = JSON.parse(this.response)
+            show_visitors_today(res)
+            // console.log(res)
         }
     }
     xhr.send()
