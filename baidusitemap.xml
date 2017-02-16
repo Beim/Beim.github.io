@@ -4,6 +4,40 @@
 
     
   <url>
+    <loc>https://beim.github.io/3017/01/01/2017-%E6%94%B6%E8%97%8F/</loc>
+    <lastmod>2017-02-16T15:02:27.823Z</lastmod>
+    <data>
+        <display>
+        <title>2017-收藏</title>
+        <pubTime>3017-01-01T02:31:59.000Z</pubTime>
+        
+        <tag>mark</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/12/23/apue-note/</loc>
+    <lastmod>2017-02-16T13:44:00.952Z</lastmod>
+    <data>
+        <display>
+        <title>apue-note</title>
+        <pubTime>2016-12-23T12:29:44.000Z</pubTime>
+        
+        <tag>notes</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://beim.github.io/1970/01/02/2017-%E7%99%BD%E6%97%A5%E6%A2%A6/</loc>
     <lastmod>2017-02-16T00:13:35.397Z</lastmod>
     <data>
@@ -21,23 +55,6 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/12/23/apue-note/</loc>
-    <lastmod>2017-02-15T14:35:04.422Z</lastmod>
-    <data>
-        <display>
-        <title>apue-note</title>
-        <pubTime>2016-12-23T12:29:44.000Z</pubTime>
-        
-        <tag>notes</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://beim.github.io/2017/02/14/Quora-If-Hitler-was-so-bad-why-didnt-people-around-him-just-kill-him/</loc>
     <lastmod>2017-02-14T14:35:49.755Z</lastmod>
     <data>
@@ -46,23 +63,6 @@
         <pubTime>2017-02-14T14:25:16.000Z</pubTime>
         
         <tag>Quora</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/3017/01/01/2017-%E6%94%B6%E8%97%8F/</loc>
-    <lastmod>2017-02-12T04:39:38.368Z</lastmod>
-    <data>
-        <display>
-        <title>2017-收藏</title>
-        <pubTime>3017-01-01T02:31:59.000Z</pubTime>
-        
-        <tag>mark</tag>
          
          
            
@@ -248,23 +248,6 @@
         <display>
         <title>note-Beej-Network-Programming</title>
         <pubTime>2016-10-20T06:17:08.000Z</pubTime>
-        
-        <tag>notes</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/12/13/%E4%BA%91%E6%A0%96%E7%A4%BE%E5%8C%BA-%E4%BA%91%E8%AE%A1%E7%AE%97%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2016-12-15T15:46:58.871Z</lastmod>
-    <data>
-        <display>
-        <title>云栖社区-云计算入门笔记</title>
-        <pubTime>2016-12-13T15:44:57.000Z</pubTime>
         
         <tag>notes</tag>
          
@@ -854,31 +837,14 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/08/05/Node-js%E7%9A%84%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84/</loc>
+    <loc>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
         <display>
-        <title>Node.js的内部结构</title>
-        <pubTime>2016-08-05T02:01:34.000Z</pubTime>
+        <title>ubuntu 启动初始化</title>
+        <pubTime>2016-08-05T02:28:29.000Z</pubTime>
         
-        <tag>node</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/08/05/js%E4%B8%AD%E7%9A%84%E7%B1%BBClass/</loc>
-    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
-    <data>
-        <display>
-        <title>js中的类Class</title>
-        <pubTime>2016-08-05T01:33:11.000Z</pubTime>
-        
-        <tag>javascript</tag>
+        <tag>linux</tag>
          
          
            
@@ -896,6 +862,57 @@
         <pubTime>2016-08-05T01:06:00.000Z</pubTime>
         
         <tag>node</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/08/05/git%E5%91%BD%E4%BB%A4%E4%B9%8B-git-tag/</loc>
+    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
+    <data>
+        <display>
+        <title>git命令之 git tag</title>
+        <pubTime>2016-08-05T02:13:10.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/08/05/Node-js%E7%9A%84%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
+    <data>
+        <display>
+        <title>Node.js的内部结构</title>
+        <pubTime>2016-08-05T02:01:34.000Z</pubTime>
+        
+        <tag>node</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/08/05/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E4%B9%8BJSONP%E4%B8%8ECORS/</loc>
+    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
+    <data>
+        <display>
+        <title>跨域请求之JSONP与CORS</title>
+        <pubTime>2016-08-05T01:41:37.000Z</pubTime>
+        
+        <tag>front End</tag>
          
          
            
@@ -923,48 +940,14 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/08/05/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E4%B9%8BJSONP%E4%B8%8ECORS/</loc>
+    <loc>https://beim.github.io/2016/08/05/js%E4%B8%AD%E7%9A%84%E7%B1%BBClass/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
         <display>
-        <title>跨域请求之JSONP与CORS</title>
-        <pubTime>2016-08-05T01:41:37.000Z</pubTime>
+        <title>js中的类Class</title>
+        <pubTime>2016-08-05T01:33:11.000Z</pubTime>
         
-        <tag>front End</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
-    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
-    <data>
-        <display>
-        <title>ubuntu 启动初始化</title>
-        <pubTime>2016-08-05T02:28:29.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/08/05/git%E5%91%BD%E4%BB%A4%E4%B9%8B-git-tag/</loc>
-    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
-    <data>
-        <display>
-        <title>git命令之 git tag</title>
-        <pubTime>2016-08-05T02:13:10.000Z</pubTime>
-        
-        <tag>git</tag>
+        <tag>javascript</tag>
          
          
            
