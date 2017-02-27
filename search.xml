@@ -23,6 +23,8 @@
 </li>
 </ul>
 <h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><ul>
+<li><p><a href="https://github.com/wolkykim/qlibc" target="_blank" rel="external">C 工具库 - qlibc</a></p>
+</li>
 <li><p><a href="http://stackoverflow.com/questions/11626786/what-does-void-mean-and-how-to-use-it" target="_blank" rel="external">what does void * mean - stack overflow</a></p>
 </li>
 <li><p><a href="http://www.cnblogs.com/dolphin0520/archive/2011/04/03/2004808.html" target="_blank" rel="external">char *str 和 char str[] 的区别</a><br>  <a href="http://stackoverflow.com/questions/3862842/difference-between-char-str-string-and-char-str-string" target="_blank" rel="external">stackoverflow 上的解释</a></p>
@@ -45,6 +47,8 @@
 <li><a href="https://mozillazg.github.io/2014/06/hello-postgresql.html" target="_blank" rel="external">postgresql 常用操作</a></li>
 </ul>
 <h2 id="network"><a href="#network" class="headerlink" title="network"></a>network</h2><h2 id="other"><a href="#other" class="headerlink" title="other"></a>other</h2><ul>
+<li><p><a href="http://nyc1991.blog.51cto.com/6424159/1132023" target="_blank" rel="external">解决Ubuntu和Windows的文件乱码问题</a></p>
+</li>
 <li><p><a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA" target="_blank" rel="external">git 详解</a></p>
 </li>
 <li><p><a href="https://shadowsocks.com.hk/" target="_blank" rel="external">shadowsocks.com.hk - 2017-2-9 主页</a></p>
@@ -294,6 +298,8 @@
 </blockquote>
 <a id="more"></a>
 <h1 id="名词"><a href="#名词" class="headerlink" title="名词"></a>名词</h1><p><code>原子操作</code> 指的是由多步组成的一个操作。如果该操作原子地执行，则要么执行完所有的步骤，要么一步也不执行，不可能只执行所有步骤的一个子集。</p>
+<p><code>STDIN_FILENO</code> <code>int fd</code></p>
+<p><code>stdin</code> <code>FILE *stream</code></p>
 <hr>
 <h1 id="第一章-UNIX基础"><a href="#第一章-UNIX基础" class="headerlink" title="第一章-UNIX基础"></a>第一章-UNIX基础</h1><h2 id="strerror"><a href="#strerror" class="headerlink" title="strerror"></a>strerror</h2><p>用于打印出错信息; p12</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">char</span> *<span class="title">strerror</span> <span class="params">(<span class="keyword">int</span> errnum)</span></span>;</div><div class="line"><span class="comment">// 返回指向消息字符串的指针</span></div></pre></td></tr></table></figure>
@@ -545,6 +551,10 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;phtread.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_barrier_init</span> <span class="params">(<span class="keyword">phtread_barrier_t</span> *<span class="keyword">restrict</span> barrier,</span></span></div><div class="line">                <span class="keyword">const</span> <span class="keyword">pthread_barrierattr_t</span> *<span class="keyword">restrict</span> attr,</div><div class="line">                <span class="keyword">unsigned</span> <span class="keyword">int</span> count);</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_barrier_destroy</span> <span class="params">(<span class="keyword">pthread_barrier_t</span> *barrier)</span></span>;</div><div class="line"><span class="comment">// 成功返回0; 否则返回错误编号</span></div></pre></td></tr></table></figure>
 <h2 id="pthread-barrier-wait"><a href="#pthread-barrier-wait" class="headerlink" title="pthread_barrier_wait"></a>pthread_barrier_wait</h2><p>表明线程已完成工作, 准备等所有其他线程赶上来; p337</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_wait</span> <span class="params">(<span class="keyword">pthread_barrier_t</span> *barrier)</span></span>;</div><div class="line"><span class="comment">// 成功返回0 或者PTHREAD_BARRIER_SERIAL_THREAD; 否则返回错误编号</span></div></pre></td></tr></table></figure>
+<hr>
+<h1 id="第十四章-高级I-O-未完成"><a href="#第十四章-高级I-O-未完成" class="headerlink" title="第十四章-高级I/O (未完成)"></a>第十四章-高级I/O (未完成)</h1><h2 id="fcntl-1"><a href="#fcntl-1" class="headerlink" title="fcntl"></a>fcntl</h2><p>3.14节有介绍; 这里用作记录锁; p392</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">fcntl</span> <span class="params">(<span class="keyword">int</span> fd, <span class="keyword">int</span> cmd, ...<span class="comment">/* struct flock *flockptr */</span>)</span></span>;</div><div class="line"><span class="comment">// 返回值: 成功, 依赖于cmd, 否则返回-1</span></div></pre></td></tr></table></figure>
+<hr>
 <h1 id="第十六章-网络IPC-套接字"><a href="#第十六章-网络IPC-套接字" class="headerlink" title="第十六章-网络IPC:套接字"></a>第十六章-网络IPC:套接字</h1><h2 id="socket"><a href="#socket" class="headerlink" title="socket"></a>socket</h2><p>创建套接字;p474</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/socket.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">socket</span> <span class="params">(<span class="keyword">int</span> domain, <span class="keyword">int</span> type, <span class="keyword">int</span> protocol)</span></span>;</div><div class="line"><span class="comment">// 成功返回文件(套接字)描述符; 出错返回-1</span></div></pre></td></tr></table></figure>
 <h2 id="shutdown"><a href="#shutdown" class="headerlink" title="shutdown"></a>shutdown</h2><p>禁止一个套接字的I/O; p476</p>
@@ -2872,6 +2882,14 @@
 <p>梦见自己在成都<br>梦见自己在武功山的缆车上, 直线下落的, 好不刺激</p>
 <p>几年前 这样的冬天 带着这样的困意 起床 打开征途</p>
 <p><code>Thu Feb 16 08:13</code></p>
+<hr>
+<p><strong>白日梦</strong></p>
+<p>实习的时候总是觉得时间不够用呢<br>练字都忘了</p>
+<p><code>Wed Feb 22 20:42</code></p>
+<hr>
+<p><strong>白日梦</strong></p>
+<p>寒假最后一天<br>和偶像看了极限特工</p>
+<p><code>Wed Feb 22 20:43</code></p>
 <hr>
 ]]></content>
     </entry>
