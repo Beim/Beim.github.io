@@ -4,8 +4,25 @@
 
     
   <url>
+    <loc>https://beim.github.io/2017/03/07/cpp-%E5%B7%A6%E5%80%BC%E4%B8%8E%E5%8F%B3%E5%80%BC/</loc>
+    <lastmod>2017-03-07T15:10:55.162Z</lastmod>
+    <data>
+        <display>
+        <title>cpp-左值与右值</title>
+        <pubTime>2017-03-07T15:03:18.000Z</pubTime>
+        
+        <tag>cpp</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://beim.github.io/1970/01/02/2017-%E7%99%BD%E6%97%A5%E6%A2%A6/</loc>
-    <lastmod>2017-03-07T11:59:49.747Z</lastmod>
+    <lastmod>2017-03-07T12:55:06.054Z</lastmod>
     <data>
         <display>
         <title>2017-白日梦</title>
@@ -854,23 +871,6 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/08/05/%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6AVA/</loc>
-    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
-    <data>
-        <display>
-        <title>测试框架AVA</title>
-        <pubTime>2016-08-05T01:06:00.000Z</pubTime>
-        
-        <tag>node</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://beim.github.io/2016/08/05/Node-js%E7%9A%84%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
@@ -879,41 +879,6 @@
         <pubTime>2016-08-05T02:01:34.000Z</pubTime>
         
         <tag>node</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/08/05/git%E5%91%BD%E4%BB%A4%E4%B9%8B-git-tag/</loc>
-    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
-    <data>
-        <display>
-        <title>git命令之 git tag</title>
-        <pubTime>2016-08-05T02:13:10.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>https://beim.github.io/2016/08/05/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E4%B9%8BJSONP%E4%B8%8ECORS/</loc>
-    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
-    <data>
-        <display>
-        <title>跨域请求之JSONP与CORS</title>
-        <pubTime>2016-08-05T01:41:37.000Z</pubTime>
-        
-        <tag>front End</tag>
          
          
            
@@ -972,4 +937,56 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>https://beim.github.io/2016/08/05/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E4%B9%8BJSONP%E4%B8%8ECORS/</loc>
+    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
+    <data>
+        <display>
+        <title>跨域请求之JSONP与CORS</title>
+        <pubTime>2016-08-05T01:41:37.000Z</pubTime>
+        
+        <tag>front End</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/08/05/git%E5%91%BD%E4%BB%A4%E4%B9%8B-git-tag/</loc>
+    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
+    <data>
+        <display>
+        <title>git命令之 git tag</title>
+        <pubTime>2016-08-05T02:13:10.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/08/05/%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6AVA/</loc>
+    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
+    <data>
+        <display>
+        <title>测试框架AVA</title>
+        <pubTime>2016-08-05T01:06:00.000Z</pubTime>
+        
+        <tag>node</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
 </urlset>

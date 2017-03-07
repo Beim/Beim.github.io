@@ -66,7 +66,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="cpp," />
 
 
 
@@ -82,15 +82,16 @@
 
 
 
-<meta name="description" content="平常心，平常心。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="北冥945">
-<meta property="og:url" content="https://beim.github.io/archives/1970/index.html">
+<meta name="description" content="C++ 的表达式要不然是右值(rvalue)，要不然是左值(lvalue)。当一个对象被用作右值的时候，用的是对象的值（内容）；当对象被用作左值的时候，用的是对象的身份（在内存中的位置）。一个左值表达式的求值结果是一个对象或者一个函数，然而以常量对象为代表的某些左值实际上不能作为赋值语句的左侧运算对象。此外，虽然某些表达式的求值结果是对象，但它们是右值。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cpp-左值与右值">
+<meta property="og:url" content="https://beim.github.io/2017/03/07/cpp-左值与右值/index.html">
 <meta property="og:site_name" content="北冥945">
-<meta property="og:description" content="平常心，平常心。">
+<meta property="og:description" content="C++ 的表达式要不然是右值(rvalue)，要不然是左值(lvalue)。当一个对象被用作右值的时候，用的是对象的值（内容）；当对象被用作左值的时候，用的是对象的身份（在内存中的位置）。一个左值表达式的求值结果是一个对象或者一个函数，然而以常量对象为代表的某些左值实际上不能作为赋值语句的左侧运算对象。此外，虽然某些表达式的求值结果是对象，但它们是右值。">
+<meta property="og:updated_time" content="2017-03-07T15:10:55.162Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="北冥945">
-<meta name="twitter:description" content="平常心，平常心。">
+<meta name="twitter:title" content="cpp-左值与右值">
+<meta name="twitter:description" content="C++ 的表达式要不然是右值(rvalue)，要不然是左值(lvalue)。当一个对象被用作右值的时候，用的是对象的值（内容）；当对象被用作左值的时候，用的是对象的身份（在内存中的位置）。一个左值表达式的求值结果是一个对象或者一个函数，然而以常量对象为代表的某些左值实际上不能作为赋值语句的左侧运算对象。此外，虽然某些表达式的求值结果是对象，但它们是右值。">
 
 
 
@@ -111,11 +112,11 @@
 
 
 
-  <link rel="canonical" href="https://beim.github.io/archives/1970/"/>
+  <link rel="canonical" href="https://beim.github.io/2017/03/07/cpp-左值与右值/"/>
 
   <script type="text/javascript" src="/js/src/beim/test.js"></script>
 
-  <title> Archive | 北冥945 </title>
+  <title> cpp-左值与右值 | 北冥945 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -136,7 +137,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,102 +238,173 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-       
-        
-      Nice! 58 posts in total. Keep on posting.
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
-      
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                cpp-左值与右值
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-03-07T23:03:18+08:00" content="2017-03-07">
+              2017-03-07
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/03/07/cpp-左值与右值/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/07/cpp-左值与右值/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/03/07/cpp-左值与右值/" class="leancloud_visitors" data-flag-title="cpp-左值与右值">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
+        <p>C++ 的表达式要不然是右值(rvalue)，要不然是左值(lvalue)。<br>当一个对象被用作右值的时候，用的是对象的值（内容）；当对象被用作左值的时候，用的是对象的身份（在内存中的位置）。<br>一个左值表达式的求值结果是一个对象或者一个函数，然而以常量对象为代表的某些左值实际上不能作为赋值语句的左侧运算对象。此外，虽然某些表达式的求值结果是对象，但它们是右值。</p>
+<a id="more"></a>
+<p>不同的运算符对运算对象的要求不同，有的需要左值运算对象，有的需要右值运算对象；返回值也有差异，有的得到左值结果、有的得到右值结果。<br>一个重要的原则：在需要右值的地方可以用左值代替，但是不能把右值当成左值（也就是位置）来使用。</p>
+<p>以下常用的运算符用到左值：</p>
+<ul>
+<li>赋值运算符需要一个（非常量）左值作为左侧运算对象，得到的结果仍然是左值。</li>
+<li>取地址符作用于一个左值运算符对象，返回一个指向该运算对象的指针，这个指针是右值。</li>
+<li>内置解引用运算符、下标运算符、迭代器解引用运算符、string 和vector 的下标运算符的求值结果都是左值。</li>
+<li>内置类型的迭代器的递增递减运算符作用于左值运算对象，其前置版本所得的结果也是左值。</li>
+</ul>
+<p><strong>摘自 C++ primer 第五版 p121</strong></p>
+
+      
+    </div>
+
+    <div>
+      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-1970">1970</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div></div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://ob4a6y748.bkt.clouddn.com/wxzf.jpg" alt="Beim WeChat Pay"/>
+          <p>微信打赏</p>
         </div>
       
       
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://ob4a6y748.bkt.clouddn.com/shoukuan.jpg" alt="Beim Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
+    </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/cpp/" rel="tag">#cpp</a>
+          
+        </div>
+      
 
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/1970/01/02/2017-白日梦/" itemprop="url">
-              
-                <span itemprop="name">2017-白日梦</span>
-              
-            </a>
-        
-      </h1>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/27/C-解析命令行参数/" rel="next" title="C-解析命令行参数">
+                <i class="fa fa-chevron-left"></i> C-解析命令行参数
+              </a>
+            
+          </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="1970-01-02T10:31:41+08:00"
-              content="1970-01-02" >
-          01-02
-        </time>
-      </div>
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/3017/01/01/2017-收藏/" rel="prev" title="2017-收藏">
+                2017-收藏 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
-    </header>
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
+    <div class="post-spread">
       
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/1970/01/01/2016-白日梦/" itemprop="url">
-              
-                <span itemprop="name">2016-白日梦</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="1970-01-01T20:46:08+08:00"
-              content="1970-01-01" >
-          01-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-
+    </div>
+  </div>
 
 
           </div>
@@ -340,6 +412,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/07/cpp-左值与右值/"
+           data-title="cpp-左值与右值" data-url="https://beim.github.io/2017/03/07/cpp-左值与右值/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -359,8 +439,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/hand_zheng.jpg"
@@ -441,6 +530,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -544,7 +644,9 @@
 
 
   
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
