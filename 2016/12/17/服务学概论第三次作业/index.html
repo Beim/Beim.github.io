@@ -1,0 +1,1020 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="服务学," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="阐述服务构件概念及各服务构件类型的描述
+举例说明服务发现、选择与服务组合的关系
+
+服务构件的概念
+可被重复使用的, 用来构造服务系统的基本单元.
+具有一系列特定的接口和描述.
+
+为什么要提出服务构件?因为服务系统内部包含的服务要素种类繁多, 多服务提供者来说, 这些服务要素是可以被复用的, 以构造面向不同需求的服务系统. 例如服务系统需要有给服务人员分配班制的服务, 此时需要查询服务人员现有的班">
+<meta property="og:type" content="article">
+<meta property="og:title" content="服务学概论第三次作业">
+<meta property="og:url" content="https://beim.github.io/2016/12/17/服务学概论第三次作业/index.html">
+<meta property="og:site_name" content="北冥945">
+<meta property="og:description" content="阐述服务构件概念及各服务构件类型的描述
+举例说明服务发现、选择与服务组合的关系
+
+服务构件的概念
+可被重复使用的, 用来构造服务系统的基本单元.
+具有一系列特定的接口和描述.
+
+为什么要提出服务构件?因为服务系统内部包含的服务要素种类繁多, 多服务提供者来说, 这些服务要素是可以被复用的, 以构造面向不同需求的服务系统. 例如服务系统需要有给服务人员分配班制的服务, 此时需要查询服务人员现有的班">
+<meta property="og:updated_time" content="2017-01-09T02:20:54.618Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="服务学概论第三次作业">
+<meta name="twitter:description" content="阐述服务构件概念及各服务构件类型的描述
+举例说明服务发现、选择与服务组合的关系
+
+服务构件的概念
+可被重复使用的, 用来构造服务系统的基本单元.
+具有一系列特定的接口和描述.
+
+为什么要提出服务构件?因为服务系统内部包含的服务要素种类繁多, 多服务提供者来说, 这些服务要素是可以被复用的, 以构造面向不同需求的服务系统. 例如服务系统需要有给服务人员分配班制的服务, 此时需要查询服务人员现有的班">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://beim.github.io/2016/12/17/服务学概论第三次作业/"/>
+
+  <script type="text/javascript" src="/js/src/beim/test.js"></script>
+
+  <title> 服务学概论第三次作业 | 北冥945 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">北冥945</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                服务学概论第三次作业
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-12-17T18:24:14+08:00" content="2016-12-17">
+              2016-12-17
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/17/服务学概论第三次作业/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/17/服务学概论第三次作业/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/17/服务学概论第三次作业/" class="leancloud_visitors" data-flag-title="服务学概论第三次作业">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ul>
+<li>阐述服务构件概念及各服务构件类型的描述</li>
+<li>举例说明服务发现、选择与服务组合的关系</li>
+</ul>
+<h1 id="服务构件的概念"><a href="#服务构件的概念" class="headerlink" title="服务构件的概念"></a>服务构件的概念</h1><ul>
+<li>可被重复使用的, 用来构造服务系统的基本单元.</li>
+<li>具有一系列特定的接口和描述.</li>
+</ul>
+<p>为什么要提出服务构件?<br>因为服务系统内部包含的服务要素种类繁多, 多服务提供者来说, 这些服务要素是可以被复用的, 以构造面向不同需求的服务系统. 例如服务系统需要有给服务人员分配班制的服务, 此时需要查询服务人员现有的班制与要分配的班制是否冲突, 与其他服务人员的班制是否冲突, 提供这个服务时我们不可能将服务人员和班制这些服务要素的所有属性都拿出来一一比较, 这时候就需要将这些服务要素进行全面的描述和封装, 对外提供接口和描述, 以便于进行选取和组合.</p>
+<h1 id="常见的服务构建类型"><a href="#常见的服务构建类型" class="headerlink" title="常见的服务构建类型"></a>常见的服务构建类型</h1><ul>
+<li>软件服务 Web Services</li>
+<li>人工服务 WS-HumanTask</li>
+<li>表述性状态转移 REST (REpresentational State Transfer)</li>
+<li>服务构建 SCA (Service Component Architecture)</li>
+<li>服务数据对象 SDO (Service Data Object)</li>
+<li>Web 服务资源 WS-Resource</li>
+</ul>
+<h2 id="软件服务-Web-Services"><a href="#软件服务-Web-Services" class="headerlink" title="软件服务 Web Services"></a>软件服务 Web Services</h2><p>Web Service 是一种服务导向架构的技术, 通过标准的Web 协议提供服务, 目的是保证不同平台的应用服务可以互操作.<br>根据W3C 的定义, Web Service 应当是一个软件系统, 用以支持网络间不同机器之间的互动操作. 网络服务通常是许多应用程序接口(API)所组成的, 它们透过网络, 例如Internet 的远程服务器端, 执行客户所提交服务的请求.<br>Web Service 通常包括:</p>
+<ul>
+<li>SOAP, 一个基于XML 的可扩展消息信封格式, 需同时绑定一个网络传输协议. 这个协议通常是HTTP 或HTTPS, 但可能是SMTP 或者XMPP.</li>
+<li>WSDL, 一个XML 格式文档, 用以描述服务端口访问方式和使用协议的细节, 通常用来辅佐生成服务器和客户端代码以及配置信息.</li>
+<li>UDDI, 一个用来发布和搜索WEB 服务的协议, 应用程序可借由此协议在设计或者运行时找到目标WEB 服务.</li>
+</ul>
+<h2 id="人工服务-WS-HumanTask"><a href="#人工服务-WS-HumanTask" class="headerlink" title="人工服务 WS-HumanTask"></a>人工服务 WS-HumanTask</h2><p>在Web Service 基础上扩展, 支持异步执行的人工活动(对人工活动的虚拟化).<br>WS-HumanTask规范引入了人工活动和通知的定义，包括它们的属性，行为特性，和一系列用于操纵人工活动的操作。同时，引入了一个协调协议，用于控制互操作方式下的人工任务服务的自治和生命周期管理。<br><em>BPEL4People</em> (WS-BPEL Extension for People) 是BPEL 在人工活动方面的扩展, 同时支持Web service 和基于角色的人工活动进行编排.<br>BPEL4People规范引入了一个WS-BPEL的扩展，用于在WS-BPEL中引入人员交互。扩展定义了一种新的基本活动，允许由人工任务作为其实现，并允许指定过程局部的任务或使用过程定义外的任务。这一扩展基于WS-HumanTask规范。<br>在业务流程方面, BPEL4People 通过以额外的独立语法和语义扩展BPEL, 提供以下功能:</p>
+<ul>
+<li>支持基于角色的人员交互</li>
+<li>提供将人员活动指派个人员角色的方法</li>
+</ul>
+<h2 id="表述性状态转移-REST-REpresentational-State-Transfer"><a href="#表述性状态转移-REST-REpresentational-State-Transfer" class="headerlink" title="表述性状态转移 REST (REpresentational State Transfer)"></a>表述性状态转移 REST (REpresentational State Transfer)</h2><p>REST 是一种轻量级的Web Service 架构风格, 其实现和操作简洁, 完全通过HTTP 协议实现, 利用缓存Cache 来提高相应速度, 其性能, 效率和易用性上都优于基于SOAP 的Web Service.<br>REST 的基本机制:</p>
+<ul>
+<li>网络上的所有失误都被抽象为资源</li>
+<li>每个资源对应一个唯一资源标识符, 但具有不同具体表现形式</li>
+<li>通过通用的连接器接口对资源进行操作</li>
+<li>对资源的各种操作不会改变资源标识符</li>
+<li>所有操作都无状态的</li>
+</ul>
+<h2 id="服务构建-SCA-Service-Component-Architecture"><a href="#服务构建-SCA-Service-Component-Architecture" class="headerlink" title="服务构建 SCA (Service Component Architecture)"></a>服务构建 SCA (Service Component Architecture)</h2><p>SCA 是一种变成模型, 能够方便快速地构建服务系统和应用.<br>SCA 将构建面向服务的应用程序的步骤划分为两部分:</p>
+<ul>
+<li>实现提供服务和使用其他服务的构件</li>
+<li>组装构建, 以通过服务引用其他服务的方式来构建业务应用程序.</li>
+</ul>
+<h2 id="数据对象-SDO-Service-Data-Object"><a href="#数据对象-SDO-Service-Data-Object" class="headerlink" title="数据对象 SDO (Service Data Object)"></a>数据对象 SDO (Service Data Object)</h2><p>SDO 用于简化和统一应用程序处理数据方式. 变成人员可采用统一方式访问和操作来自异类数据源的数据, 包括关系数据库, XML 数据源, Web 服务以及企业信息系统等.</p>
+<p>SDO 的基本构成要素:</p>
+<ul>
+<li>数据对象: 保存具体的数据, 包括原始数据以及指向其他数据对象的引用. 数据对象也包含了指向元数据的引用, 这使得SDO 元数据能够被读取, 包括数据的类型, 关系和约束等.</li>
+<li>数据图: 一个概念上的数据集合. 数据图是一个有多个树根的数据对象集合, 可以记录所有对数据对象的操作.</li>
+<li>元数据: 元数据使得开发工具或运行环境能够动态的或者静态的查看数据的属性, 包括数据类型, 关系和约束等, 同时提供了一组与数据无关的元数据API.</li>
+<li>数据终结服务: 数据访问服务负责与后台数据源进行通信, 完成构造数据图, 更新数据图等操作.</li>
+</ul>
+<h2 id="Web-服务资源-WS-Resource"><a href="#Web-服务资源-WS-Resource" class="headerlink" title="Web 服务资源 WS-Resource"></a>Web 服务资源 WS-Resource</h2><p>Web Service 是无状态的, 而Web 服务资源是对一个有状态资源(数据库, 物理资源等)和它与之交互的Web 服务的组合.</p>
+<ul>
+<li>资源具有属性和状态, 表达为XML 的形式</li>
+<li>资源具有特定的生命周期, 可被创建和销毁.</li>
+<li>通过若干特定的web service 对资源进行操作, 改变其属性与状态</li>
+</ul>
+<p>Web 服务资源框架定义了使用　Web 服务来访问有状态资源的一系列规范。它包括 Web 服务资源特性（WS-ResourceProperties）、Web 服务资源生命周期（WS-ResourceLifetime）、Web 服务基本故障（WS-BaseFaults）和 Web 服务服务组（WS-ServiceGroup）规范。这些新规范的动机是，虽然 Web 服务实现在它们交互的过程中并不维护状态信息，但是它们的交互必须经常性地为状态操作考虑，也就是说，数据的值通过 Web 服务交互得以持久化，并且作为 Web 服务交互的结果而保存。例如，一个在线的航空订票系统必须维持有关飞行状态、具体顾客的订票以及系统本身状态（它当前的位置、负载和性能）等信息。Web 服务接口如果要允许请求者查询飞行的状态、进行订票、改变订票的状态以及管理订票系统，它就必须提供对状态的访问。在 Web 服务资源框架（Web Services Resource Framework）中，我们把状态作为有状态资源来建模并且通过一个隐含的资源模式使 Web 服务之间的关系条文化。</p>
+<h1 id="以Airbnb-为例说明服务发现-服务选择与服务组合的关系"><a href="#以Airbnb-为例说明服务发现-服务选择与服务组合的关系" class="headerlink" title="以Airbnb 为例说明服务发现, 服务选择与服务组合的关系"></a>以Airbnb 为例说明服务发现, 服务选择与服务组合的关系</h1><p>Airbnb 是一个让大众出租住宿民宿的网站, 让旅行者可以通过网站或手机发布, 发掘和预定世界各地的独特房源, 为近年来共享经济的代表.</p>
+<p><strong>服务发现</strong>过程:</p>
+<ol>
+<li>客户输入自己的需求, 如目的地, 城市, 地址, 入住日期, 退房日期, 房间类型, 价格方位, 房间规模大小, 房间设施等, 向服务器发起服务请求. </li>
+<li>服务器根据服务请求进行服务发现的描述, 即Airbnb 根据客户提供的需求, 查找对应的符合条件的民宿, 依据服务匹配算法进行服务查找和服务匹配, 进行服务选择与排序.</li>
+</ol>
+<p><strong>服务选择</strong>过程:<br>服务选择在满足需求的多个候选服务中, 选择出满足度最高的服务. 在Airbnb 中选择满足度高的服务会考虑以下因素: </p>
+<ul>
+<li><em>房源品质</em>, 房主发布房源的方式以及房主是否照顾好房客</li>
+<li><em>预定吸引力</em>, 如果房客经常点击到该房源页面或者试图预定该房源, 这会对该房源在搜索结果中的排名有正面影响.</li>
+<li><em>评价</em>: 过往房客的评价数量与评价质量都会影响到房源在搜索结果中的表现</li>
+<li><em>能否轻松预定</em>: 房客能否可靠, 轻松地预定房源也会影响到搜索结果.</li>
+<li><em>位置相关性</em>: 房客可以在城市级别广泛搜索, 也可以缩小到街区范围进行搜索, 因此, Airbnb 会尽可能显示与房客选择的位置偏好相关度最高的搜索结果. 可能会使用过往的预定信息来决定哪些位置与具体的搜索相关度最高.</li>
+<li><em>个性化的搜索结果</em>: Airbnb 会尽量去了解房客的偏好和旅程特点, 因此搜索结果会随具体的人或者旅程详情而发生变化.</li>
+</ul>
+<p><strong>服务组合</strong>过程:<br>服务组合 是将已有的服务组合为一个新服务的过程, 以增加服务的可复用性, 功能和性能.<br>房客在Airbnb 浏览房源时会用到房源的基本信息, 房主的基本信息, 房源的评论, 在预定房源时有支付服务, 购买保险, 与房主打招呼等服务而这些服务通过服务组合, 将服务集成并组织起来形成一个流程或更大粒度的服务.<br>服务组合的价值在于服务重用, 以解决更加复杂的问题, 使服务得到增值.</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div></div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://ob4a6y748.bkt.clouddn.com/wxzf.jpg" alt="Beim WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://ob4a6y748.bkt.clouddn.com/shoukuan.jpg" alt="Beim Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/服务学/" rel="tag">#服务学</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/14/docker入门笔记/" rel="next" title="docker入门笔记">
+                <i class="fa fa-chevron-left"></i> docker入门笔记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/19/docker-mongodb-使用/" rel="prev" title="docker-mongodb-使用">
+                docker-mongodb-使用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/12/17/服务学概论第三次作业/"
+           data-title="服务学概论第三次作业" data-url="https://beim.github.io/2016/12/17/服务学概论第三次作业/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/hand_zheng.jpg"
+               alt="Beim" />
+          <p class="site-author-name" itemprop="name">Beim</p>
+          <p class="site-description motion-element" itemprop="description">平常心，平常心。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">63</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Beim" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://ob4a6y748.bkt.clouddn.com/wechat1187003595.jpg" target="_blank" title="wechat">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  wechat
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Link exchange
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://helianthuswhite.cn/" title="小白" target="_blank">小白</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://hebly723.github.io/" title="hebly723" target="_blank">hebly723</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#服务构件的概念"><span class="nav-number">1.</span> <span class="nav-text">服务构件的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见的服务构建类型"><span class="nav-number">2.</span> <span class="nav-text">常见的服务构建类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#软件服务-Web-Services"><span class="nav-number">2.1.</span> <span class="nav-text">软件服务 Web Services</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#人工服务-WS-HumanTask"><span class="nav-number">2.2.</span> <span class="nav-text">人工服务 WS-HumanTask</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表述性状态转移-REST-REpresentational-State-Transfer"><span class="nav-number">2.3.</span> <span class="nav-text">表述性状态转移 REST (REpresentational State Transfer)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务构建-SCA-Service-Component-Architecture"><span class="nav-number">2.4.</span> <span class="nav-text">服务构建 SCA (Service Component Architecture)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据对象-SDO-Service-Data-Object"><span class="nav-number">2.5.</span> <span class="nav-text">数据对象 SDO (Service Data Object)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Web-服务资源-WS-Resource"><span class="nav-number">2.6.</span> <span class="nav-text">Web 服务资源 WS-Resource</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#以Airbnb-为例说明服务发现-服务选择与服务组合的关系"><span class="nav-number">3.</span> <span class="nav-text">以Airbnb 为例说明服务发现, 服务选择与服务组合的关系</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Beim</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"beim"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("QpR0wBRCIFVoU9r2x7ydx4hF-gzGzoHsz", "BRWqoRltsGqh4f0nUiW0EIPA");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
+</body>
+</html>
