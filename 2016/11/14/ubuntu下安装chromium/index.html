@@ -92,7 +92,7 @@
 <meta property="og:description" content="chromium下载chromium从github上下载这几个脚本放置在/usr/local/src/目录下
 运行./update.sh此时将最新版本的chromium下载到了/usr/local/src/chromium-latest-linux/latest目录下
 设置别名vi ~/.bashrc在最后添加alias chromium=&amp;#39;/usr/local/src/chromium-">
-<meta property="og:updated_time" content="2016-11-14T06:11:10.350Z">
+<meta property="og:updated_time" content="2017-03-12T09:14:10.895Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ubuntu下安装chromium">
 <meta name="twitter:description" content="chromium下载chromium从github上下载这几个脚本放置在/usr/local/src/目录下
@@ -327,6 +327,7 @@
 <p>这时在终端中输入<code>chromium</code>即可打开chromium浏览器</p>
 <h2 id="更新chromium"><a href="#更新chromium" class="headerlink" title="更新chromium"></a>更新chromium</h2><p>只需要再运行<code>chromium-latest-linux</code>目录下的<code>update.sh</code>脚本就可以了</p>
 <h2 id="更改desktop下的chromium"><a href="#更改desktop下的chromium" class="headerlink" title="更改desktop下的chromium"></a>更改desktop下的chromium</h2><p><code>~/.local/share/applications</code>下找<code>chromium-browser.desktop</code>文件, 看其中的参数是否和安装的<code>run.sh</code>中的参数相同</p>
+<a id="more"></a>
 <hr>
 <h1 id="flash"><a href="#flash" class="headerlink" title="flash"></a>flash</h1><h2 id="下载adobe-flash"><a href="#下载adobe-flash" class="headerlink" title="下载adobe flash"></a>下载adobe flash</h2><p>从<a href="https://get.adobe.com/cn/flashplayer/?no_redirect" target="_blank" rel="external">flash 官网</a>下载合适版本的flash<br>解压到<code>/usr/local/src/chromium-latest-linux/flash</code>目录下<br>将其中的<code>libpepflashplayer.so</code>复制到<code>/usr/local/src/chromium-latest-linux/latest</code>目录下</p>
 <h2 id="启用flash"><a href="#启用flash" class="headerlink" title="启用flash"></a>启用flash</h2><p>修改<code>run.sh</code>, <code>vi ./run.sh</code><br>将其中的<code>$BASEDIR/latest/chrome --user-data-dir=&quot;$BASEDIR/user-data-dir&quot; $* &amp;&gt; /dev/null &amp;</code><br>改为<code>$BASEDIR/latest/chrome --ppapi-flash-path=&quot;$BASEDIR/latest/libpepflashplayer.so&quot; --user-data-dir=&quot;$BASEDIR/user-data-dir&quot; $* &amp;&gt; /dev/null &amp;</code></p>
@@ -391,8 +392,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/11/15/软件开发过程与项目管理/" rel="prev" title="软件开发过程与项目管理">
-                软件开发过程与项目管理 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/11/23/seafile-搭建私人网盘/" rel="prev" title="seafile-搭建私人网盘">
+                seafile-搭建私人网盘 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -465,7 +466,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">63</span>
+              <span class="site-state-item-count">59</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

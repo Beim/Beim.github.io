@@ -91,7 +91,7 @@
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/ml1-IMG_3921.PNG">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/ml2-IMG_3922.PNG">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/ml-IMG_3920.PNG">
-<meta property="og:updated_time" content="2016-12-11T08:10:37.701Z">
+<meta property="og:updated_time" content="2017-03-12T09:11:31.993Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="云免流的尝试">
 <meta name="twitter:description" content="原理修改HTTP头运营商有免费流量的套餐，比如咪咕音乐，在使用咪咕音乐软件的时候用的流量是不收费的。为什么？运营商在检测手机流量的时候检查HTTP头，如URL，HOST，还有X-Request-with这个运营商自己的参数，如果符合免流量费用的条件（比如访问的是移动自己的页面），则对相关的流量不收费。知道了这个，我们就可以在HTTP上面做点修改，达到免流的目的了 ohhh （具体修改的内容在下面介">
@@ -321,6 +321,7 @@
       
         <h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><h2 id="修改HTTP头"><a href="#修改HTTP头" class="headerlink" title="修改HTTP头"></a>修改HTTP头</h2><p>运营商有免费流量的套餐，比如咪咕音乐，在使用咪咕音乐软件的时候用的流量是不收费的。<br>为什么？<br>运营商在检测手机流量的时候检查HTTP头，如URL，HOST，还有X-Request-with这个运营商自己的参数，如果符合免流量费用的条件（比如访问的是移动自己的页面），则对相关的流量不收费。<br>知道了这个，我们就可以在HTTP上面做点修改，达到免流的目的了 ohhh （具体修改的内容在下面介绍）</p>
 <h2 id="修改端口"><a href="#修改端口" class="headerlink" title="修改端口"></a>修改端口</h2><p>运营商还有一种判断免费流量的方法，即访问的端口，如137/138/139等端口，如果流量是指向这些端口的，运营商就不对这些流量计费。<br>那么我们也可以让我们网络请求的端口都设置成这些特定的端口，以达到免流效果。</p>
+<a id="more"></a>
 <hr>
 <h1 id="实验1"><a href="#实验1" class="headerlink" title="实验1"></a>实验1</h1><p><strong>OpenVPN + Squid 搭建HTTP代理，修改头信息</strong></p>
 <h2 id="系统环境-：ubuntu14-04"><a href="#系统环境-：ubuntu14-04" class="headerlink" title="系统环境 ：ubuntu14.04"></a>系统环境 ：ubuntu14.04</h2><p>首先<a href="https://linux.cn/article-3706-2.html" target="_blank" rel="external">搭建OpenVPN</a><br>然后安装<code>squid</code>, 直接apt-get即可安装<br>相关目录：</p>
@@ -520,7 +521,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">63</span>
+              <span class="site-state-item-count">59</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

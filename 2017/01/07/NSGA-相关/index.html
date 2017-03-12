@@ -82,16 +82,25 @@
 
 
 
+<meta name="description" content="一1.1 选题：A Fast and Elitist Multiobjective Genetic Algorithm: NSGA-II1.2 本文解决了什么问题本文提出了一种计算复杂度为O(MN^2) 的快速的基于非支配排序的多目标进化算法（MOEA），该算法可以用来解决多目标优化问题。该算法解决了非支配排序遗传算法（NSGA）所显现的三个问题：
+
+计算支配排序的复杂度高：NSGA 的计算支配排">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NSGA-相关">
 <meta property="og:url" content="https://beim.github.io/2017/01/07/NSGA-相关/index.html">
 <meta property="og:site_name" content="北冥945">
+<meta property="og:description" content="一1.1 选题：A Fast and Elitist Multiobjective Genetic Algorithm: NSGA-II1.2 本文解决了什么问题本文提出了一种计算复杂度为O(MN^2) 的快速的基于非支配排序的多目标进化算法（MOEA），该算法可以用来解决多目标优化问题。该算法解决了非支配排序遗传算法（NSGA）所显现的三个问题：
+
+计算支配排序的复杂度高：NSGA 的计算支配排">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/NSGA-II-2017-01-08%2017-01-16%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/%E5%85%B3%E7%B3%BB%E6%9B%B2%E7%BA%BF-c461e04cdc0b8947bad5f1a47fc322e6_b.png">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/%E9%81%97%E4%BC%A0%E7%BB%93%E6%9E%9C-c4626ac1a2fea41ceb2f7face7764afe_b.png">
-<meta property="og:updated_time" content="2017-01-09T02:18:31.536Z">
+<meta property="og:updated_time" content="2017-03-12T09:18:04.349Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NSGA-相关">
+<meta name="twitter:description" content="一1.1 选题：A Fast and Elitist Multiobjective Genetic Algorithm: NSGA-II1.2 本文解决了什么问题本文提出了一种计算复杂度为O(MN^2) 的快速的基于非支配排序的多目标进化算法（MOEA），该算法可以用来解决多目标优化问题。该算法解决了非支配排序遗传算法（NSGA）所显现的三个问题：
+
+计算支配排序的复杂度高：NSGA 的计算支配排">
 <meta name="twitter:image" content="http://ob4a6y748.bkt.clouddn.com/NSGA-II-2017-01-08%2017-01-16%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png">
 
 
@@ -316,10 +325,7 @@
       
 
       
-        <center><embed src="//music.163.com/style/swf/widget.swf?sid=32196517&type=2&auto=0&width=320&height=66" width="340" height="86" allownetworking="all"></center>
-
-<a id="more"></a>
-<h1 id="作业一"><a href="#作业一" class="headerlink" title="作业一"></a>作业一</h1><h2 id="1-1-选题：A-Fast-and-Elitist-Multiobjective-Genetic-Algorithm-NSGA-II"><a href="#1-1-选题：A-Fast-and-Elitist-Multiobjective-Genetic-Algorithm-NSGA-II" class="headerlink" title="1.1 选题：A Fast and Elitist Multiobjective Genetic Algorithm: NSGA-II"></a>1.1 选题：A Fast and Elitist Multiobjective Genetic Algorithm: NSGA-II</h2><h2 id="1-2-本文解决了什么问题"><a href="#1-2-本文解决了什么问题" class="headerlink" title="1.2 本文解决了什么问题"></a>1.2 本文解决了什么问题</h2><p>本文提出了一种计算复杂度为O(MN^2) 的快速的基于非支配排序的多目标进化算法（MOEA），该算法可以用来解决多目标优化问题。<br>该算法解决了非支配排序遗传算法（NSGA）所显现的三个问题：</p>
+        <h1 id="一"><a href="#一" class="headerlink" title="一"></a>一</h1><h2 id="1-1-选题：A-Fast-and-Elitist-Multiobjective-Genetic-Algorithm-NSGA-II"><a href="#1-1-选题：A-Fast-and-Elitist-Multiobjective-Genetic-Algorithm-NSGA-II" class="headerlink" title="1.1 选题：A Fast and Elitist Multiobjective Genetic Algorithm: NSGA-II"></a>1.1 选题：A Fast and Elitist Multiobjective Genetic Algorithm: NSGA-II</h2><h2 id="1-2-本文解决了什么问题"><a href="#1-2-本文解决了什么问题" class="headerlink" title="1.2 本文解决了什么问题"></a>1.2 本文解决了什么问题</h2><p>本文提出了一种计算复杂度为O(MN^2) 的快速的基于非支配排序的多目标进化算法（MOEA），该算法可以用来解决多目标优化问题。<br>该算法解决了非支配排序遗传算法（NSGA）所显现的三个问题：</p>
 <ol>
 <li>计算支配排序的复杂度高：NSGA 的计算支配排序复杂度为O(MN^3)（其中M 是目标函数的数量，N 是种群的数量）。若种群的数量大，则会使得NSGA 的计算代价非常大。产生这种大复杂度的原因是每一个子代中都有非支配排序的程序。而本文提出的NSGA-II 算法的计算复杂度可以优化到O(MN^2)。</li>
 <li>缺少精英机制(elitism)：精英机制可以显著提高遗传算法的性能，同时还能够防止较优解被发现后却丢失的情况。</li>
@@ -331,6 +337,7 @@
 <li>其次，采用精英机制，在每一次产生新的一代时，将当前最优解（即支配等级为1的解）原封不动的复制到新的一代中。这种机制可以防止进化过程中产生的最优解被交叉和变异所破坏，可以大幅提高运算速度，防止丢失找到的最优解。</li>
 <li>最后，用拥挤比较的方法替换了共享函数的方法，在相同支配等级的解中优先选择拥挤程度低的解，这个新方法不需要用户定义任何维持种群多样性的参数，同时，这个方法有更好的复杂度。</li>
 </ol>
+<a id="more"></a>
 <h2 id="1-4-基本算法的描述"><a href="#1-4-基本算法的描述" class="headerlink" title="1.4 基本算法的描述"></a>1.4 基本算法的描述</h2><p>有两个主要的算法和一个主循环，分别是：</p>
 <ul>
 <li>快速非支配排序方法，fast-non-dominated-sort(P)</li>
@@ -348,7 +355,7 @@
 <p>然后分析<strong>拥挤距离计算</strong>算法，M 为目标函数的个数，由于有M次独立的排序，每次最多有N个解，因此拥挤距离计算的算法复杂度为O(MNlogN)。</p>
 <p>对于主循环，考虑算法一次迭代的计算复杂度。主要操作以及最坏情况的复杂度为：1）非支配排序O(M(2N)^2)；2）拥挤距离计算O(M(2N)log(2N))；3）拥挤比较算子<code>&lt;n</code> 上的排序O(2Nlog2N)；因此算法整体的复杂度为O(MN^2)，其中非支配排序占据了主导地位。</p>
 <h2 id="1-6-用一个例子说明相关算法。"><a href="#1-6-用一个例子说明相关算法。" class="headerlink" title="1.6 用一个例子说明相关算法。"></a>1.6 用一个例子说明相关算法。</h2><p>下面以一个简单的栗子说明遗传算法。<br>以目标函数<code>f(x) = x + 10sin(5x) + 7cos(4x), x in [0, 9]</code>为例，使用遗传算法求解它在区间[0,9]的最大值。<br>这个函数大概长这样：<br><img src="http://ob4a6y748.bkt.clouddn.com/%E5%85%B3%E7%B3%BB%E6%9B%B2%E7%BA%BF-c461e04cdc0b8947bad5f1a47fc322e6_b.png" alt="函数"><br>假设解的精度为小数点后4 位，可以将x 的解空间划分为<code>(9-0)*(1e+4) = 90000</code> 个等分<br><code>2^16 &lt; 90000 &lt; 2^17</code>，因此用17位 二进制数来表示这些解。<br>一开始，这些二进制串是随机生成的。<br>一个这样的二进制串代表一条染色体串，这里染色体串的长度为17。<br>对于任何一条这样的染色体chromosome，使用公式<code>x = 0 + decimal(chromosome)*(9-0)/(2^17-1)</code>将它解码到<code>[0,9]</code>这个区间的数值。（decimal()将二进制数转化为十进制数）<br>一个个体就是一条染色体，许多个体组成种群，在这里是一个一维点集(x轴上[0,9]的线段)。<br>个体的适应度函数就是f(x)，在这里函数值越大，解的质量越高。<br>接下来通过上述函数的进化，选择，交叉和变异，多次迭代后平均适应度达到收敛。如下图：<br>迭代次数与平均适应度关系曲线（横轴：迭代次数，纵轴：平均适应度）<br><img src="http://ob4a6y748.bkt.clouddn.com/%E9%81%97%E4%BC%A0%E7%BB%93%E6%9E%9C-c4626ac1a2fea41ceb2f7face7764afe_b.png" alt="关系曲线"></p>
-<h1 id="作业二"><a href="#作业二" class="headerlink" title="作业二"></a>作业二</h1><h2 id="2-1-分类"><a href="#2-1-分类" class="headerlink" title="2.1 分类"></a>2.1 分类</h2><p>进化计算包括以下几种</p>
+<h1 id="二"><a href="#二" class="headerlink" title="二"></a>二</h1><h2 id="2-1-分类"><a href="#2-1-分类" class="headerlink" title="2.1 分类"></a>2.1 分类</h2><p>进化计算包括以下几种</p>
 <ul>
 <li>遗传算法（Genetic Algorithms）</li>
 <li>遗传规划（Genetic Programming）</li>
@@ -360,8 +367,8 @@
 <p><strong>进化策略</strong>: 进化策略(Evolutionary Strategies,ES)是由德国的I. Rechenberg和HP. Schwefel于1963年提出的。ES作为一种求解参数优化问题的方法，模仿生物进化原理，假设不论基因发生何种变化，产生的结果（性状）总遵循零均值、某一方差的高斯分布。</p>
 <p><strong>进化规划</strong>: 进化规划是一种随机优化方法,它的目标是通过进化达到行为智能化。但在最初的发展中,进化规划并未得到足够的重视。直到20世纪90年代,进化规划方法得到改善,并作为进化算法的一个分支开始得到广泛的应用。进化规划算法从一组随机产生的个体开始进行搜索,通过变异、选择等操作使个体向着搜索空间中越来越靠近全局最优值的区域进化。类似于遗传算法,进化规划算法也很容易早熟收敛。因此,避免早熟收敛,均衡算法的探索和执行能力,已成为进化规划研究的主要内容之一。</p>
 <h2 id="2-3-比较"><a href="#2-3-比较" class="headerlink" title="2.3 比较"></a>2.3 比较</h2><p>遗传算法的主要基因操作是选种、交配和突变，而在进化规则、进化策略中，进化机制源于选种和突变。就适应度的角度来说遗传算法用于选择优秀的父代(优秀的父代产生优秀的子代)，而进化规则和进化策略则用于选择子代(优秀的子代才能存在)。遗传算法与遗传规划强调的是父代对子代的遗传链，而进化规则和进化策略则着重于子代本身的行为特性，即行为链。进化规则和进化策略一般都不采用编码，省去了运作过程中的编码—解码手续更适用于连续优化问题，但因此也不能进行非数值优化。进化策略可以确定机制产生出用于繁殖的父代，而遗传算法和进化规则强调对个体适应度和概率的依赖。</p>
-<h1 id="作业三"><a href="#作业三" class="headerlink" title="作业三"></a>作业三</h1><p>NSGA-II 只能用来处理静态优化问题，而对于现实世界中大多数的优化问题，它们的目标函数，约束，和参数都是随时间不断变化的。处理诸如静态优化问题的问题需要先验地知道变化模式，并且即使那样，该过程也可能在计算上是昂贵的。<br>动态优化问题包括可随时间变化的目标函数，约束函数和问题参数。这些问题通常出现在现实世界的问题中，特别是在最佳控制问题或需要在线优化的问题中。通常有两种计算程序，在一种方法中，通过解决大量真实场景的解决方案，形成离线优化问题，以此来制定最优控制规则，这种方法对于那些使用在线优化算法的计算代价过于昂贵的问题是有效的。另一种方法是在线直接优化程序。在这种情况下，问题在一段时间内被认为是静止的，并且允许优化算法在问题保持静止的时间间隔内找到最优解。然后，基于当前问题场景构件新问题，并且对新时间段执行新的优化，其可以在少量迭代中跟踪最优解，使得所需的固定时间段该问题小并且近似误差减小。</p>
-<h1 id="作业四"><a href="#作业四" class="headerlink" title="作业四"></a>作业四</h1><p>我们可以对原始的NSGA-II 过程进行一些更改以处理动态优化问题。<br>首先，需要有一个测试来确定问题是否发生变化。为此，我们从父群体中随机选择一些解决方案，并重新评估它们。如果任何目标和约束函数发生变化，则可以确定问题有变化。在发生更改的情况下，所有父解决方案都将重新评估，然后将父和子群体合并到一起。<br>其次，每当出现问题经历目标和约束的大的变化时，我们引入新的随机解。新的群体的x% 被随机解替换。这有助于在问题发生变化时引入新的（随机）解决方案。若问题只是有小的改变，则不引入随机解，而是用现有的解的突变解（随机选择）替换种群的x%。这样，种群中引入的新解决方案与现有种群相关。</p>
+<h1 id="三"><a href="#三" class="headerlink" title="三"></a>三</h1><p>NSGA-II 只能用来处理静态优化问题，而对于现实世界中大多数的优化问题，它们的目标函数，约束，和参数都是随时间不断变化的。处理诸如静态优化问题的问题需要先验地知道变化模式，并且即使那样，该过程也可能在计算上是昂贵的。<br>动态优化问题包括可随时间变化的目标函数，约束函数和问题参数。这些问题通常出现在现实世界的问题中，特别是在最佳控制问题或需要在线优化的问题中。通常有两种计算程序，在一种方法中，通过解决大量真实场景的解决方案，形成离线优化问题，以此来制定最优控制规则，这种方法对于那些使用在线优化算法的计算代价过于昂贵的问题是有效的。另一种方法是在线直接优化程序。在这种情况下，问题在一段时间内被认为是静止的，并且允许优化算法在问题保持静止的时间间隔内找到最优解。然后，基于当前问题场景构件新问题，并且对新时间段执行新的优化，其可以在少量迭代中跟踪最优解，使得所需的固定时间段该问题小并且近似误差减小。</p>
+<h1 id="四"><a href="#四" class="headerlink" title="四"></a>四</h1><p>我们可以对原始的NSGA-II 过程进行一些更改以处理动态优化问题。<br>首先，需要有一个测试来确定问题是否发生变化。为此，我们从父群体中随机选择一些解决方案，并重新评估它们。如果任何目标和约束函数发生变化，则可以确定问题有变化。在发生更改的情况下，所有父解决方案都将重新评估，然后将父和子群体合并到一起。<br>其次，每当出现问题经历目标和约束的大的变化时，我们引入新的随机解。新的群体的x% 被随机解替换。这有助于在问题发生变化时引入新的（随机）解决方案。若问题只是有小的改变，则不引入随机解，而是用现有的解的突变解（随机选择）替换种群的x%。这样，种群中引入的新解决方案与现有种群相关。</p>
 
       
     </div>
@@ -414,8 +421,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/28/服务学考试准备/" rel="next" title="服务学考试准备">
-                <i class="fa fa-chevron-left"></i> 服务学考试准备
+              <a href="/2016/12/23/apue-note/" rel="next" title="apue-note">
+                <i class="fa fa-chevron-left"></i> apue-note
               </a>
             
           </div>
@@ -496,7 +503,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">63</span>
+              <span class="site-state-item-count">59</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -573,7 +580,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#作业一"><span class="nav-number">1.</span> <span class="nav-text">作业一</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-选题：A-Fast-and-Elitist-Multiobjective-Genetic-Algorithm-NSGA-II"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 选题：A Fast and Elitist Multiobjective Genetic Algorithm: NSGA-II</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-本文解决了什么问题"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 本文解决了什么问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-采用什么思想解决这个问题"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 采用什么思想解决这个问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-基本算法的描述"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 基本算法的描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-算法分析的结论"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 算法分析的结论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-用一个例子说明相关算法。"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 用一个例子说明相关算法。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#作业二"><span class="nav-number">2.</span> <span class="nav-text">作业二</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-分类"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-简介"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-比较"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 比较</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#作业三"><span class="nav-number">3.</span> <span class="nav-text">作业三</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#作业四"><span class="nav-number">4.</span> <span class="nav-text">作业四</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一"><span class="nav-number">1.</span> <span class="nav-text">一</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-选题：A-Fast-and-Elitist-Multiobjective-Genetic-Algorithm-NSGA-II"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 选题：A Fast and Elitist Multiobjective Genetic Algorithm: NSGA-II</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-本文解决了什么问题"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 本文解决了什么问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-采用什么思想解决这个问题"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 采用什么思想解决这个问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-基本算法的描述"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 基本算法的描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-算法分析的结论"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 算法分析的结论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-用一个例子说明相关算法。"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 用一个例子说明相关算法。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二"><span class="nav-number">2.</span> <span class="nav-text">二</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-分类"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-简介"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-比较"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 比较</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三"><span class="nav-number">3.</span> <span class="nav-text">三</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四"><span class="nav-number">4.</span> <span class="nav-text">四</span></a></li></ol></div>
             
           </div>
         </section>

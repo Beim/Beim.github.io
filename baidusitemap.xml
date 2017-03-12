@@ -4,6 +4,448 @@
 
     
   <url>
+    <loc>https://beim.github.io/2016/11/02/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E6%A6%82%E8%AE%BA-%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2017-03-12T09:23:17.017Z</lastmod>
+    <data>
+        <display>
+        <title>服务学概论-笔记</title>
+        <pubTime>2016-11-02T05:41:05.000Z</pubTime>
+        
+        <tag>服务学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/12/22/C-%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88-%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2017-03-12T09:21:58.058Z</lastmod>
+    <data>
+        <display>
+        <title>C-函数指针-简单使用</title>
+        <pubTime>2016-12-22T08:49:42.000Z</pubTime>
+        
+        <tag>cpp</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2017/01/11/C-%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0/</loc>
+    <lastmod>2017-03-12T09:21:51.742Z</lastmod>
+    <data>
+        <display>
+        <title>C-可变参数</title>
+        <pubTime>2017-01-11T08:45:31.000Z</pubTime>
+        
+        <tag>cpp</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2017/02/27/C-%E8%A7%A3%E6%9E%90%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</loc>
+    <lastmod>2017-03-12T09:21:39.242Z</lastmod>
+    <data>
+        <display>
+        <title>C-解析命令行参数</title>
+        <pubTime>2017-02-27T14:36:52.000Z</pubTime>
+        
+        <tag>cpp</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/12/23/apue-note/</loc>
+    <lastmod>2017-03-12T09:18:42.628Z</lastmod>
+    <data>
+        <display>
+        <title>apue-note</title>
+        <pubTime>2016-12-23T12:29:44.000Z</pubTime>
+        
+        <tag>notes</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2017/01/07/NSGA-%E7%9B%B8%E5%85%B3/</loc>
+    <lastmod>2017-03-12T09:18:04.349Z</lastmod>
+    <data>
+        <display>
+        <title>NSGA-相关</title>
+        <pubTime>2017-01-07T07:56:25.000Z</pubTime>
+        
+        <tag>notes</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/10/07/dns%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B0%8F%E5%AE%9E%E8%B7%B5/</loc>
+    <lastmod>2017-03-12T09:16:44.989Z</lastmod>
+    <data>
+        <display>
+        <title>dns相关的小实践</title>
+        <pubTime>2016-10-07T12:13:44.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/10/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2017-03-12T09:16:28.858Z</lastmod>
+    <data>
+        <display>
+        <title>设计模式笔记</title>
+        <pubTime>2016-10-09T07:45:33.000Z</pubTime>
+        
+        <tag>notes</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/10/13/cpp-%E5%AE%8F%E7%BC%96%E5%86%99%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2017-03-12T09:16:06.382Z</lastmod>
+    <data>
+        <display>
+        <title>cpp-宏编写技巧</title>
+        <pubTime>2016-10-13T15:31:24.000Z</pubTime>
+        
+        <tag>cpp</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/10/15/2016-%E6%94%B6%E8%97%8F/</loc>
+    <lastmod>2017-03-12T09:15:53.462Z</lastmod>
+    <data>
+        <display>
+        <title>2016-收藏</title>
+        <pubTime>2016-10-15T02:08:47.000Z</pubTime>
+        
+        <tag>mark</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/10/18/cpp-makefile%E4%BD%93%E9%AA%8C/</loc>
+    <lastmod>2017-03-12T09:15:31.022Z</lastmod>
+    <data>
+        <display>
+        <title>cpp-makefile体验</title>
+        <pubTime>2016-10-18T01:42:12.000Z</pubTime>
+        
+        <tag>cpp</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/10/20/note-Beej-Network-Programming/</loc>
+    <lastmod>2017-03-12T09:14:55.298Z</lastmod>
+    <data>
+        <display>
+        <title>note-Beej-Network-Programming</title>
+        <pubTime>2016-10-20T06:17:08.000Z</pubTime>
+        
+        <tag>notes</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/11/08/%E8%AE%A1%E7%BD%91%E5%AE%9E%E9%AA%8C%E5%87%86%E5%A4%87/</loc>
+    <lastmod>2017-03-12T09:14:33.935Z</lastmod>
+    <data>
+        <display>
+        <title>计网实验准备</title>
+        <pubTime>2016-11-08T15:47:44.000Z</pubTime>
+        
+        <tag>notes</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/11/14/ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85chromium/</loc>
+    <lastmod>2017-03-12T09:14:10.895Z</lastmod>
+    <data>
+        <display>
+        <title>ubuntu下安装chromium</title>
+        <pubTime>2016-11-14T05:10:13.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/11/23/seafile-%E6%90%AD%E5%BB%BA%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98/</loc>
+    <lastmod>2017-03-12T09:13:02.196Z</lastmod>
+    <data>
+        <display>
+        <title>seafile-搭建私人网盘</title>
+        <pubTime>2016-11-23T02:00:54.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/11/24/ubuntu%E4%B8%8Bmongodb%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2017-03-12T09:12:48.248Z</lastmod>
+    <data>
+        <display>
+        <title>ubuntu下mongodb安装使用</title>
+        <pubTime>2016-11-23T23:59:34.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/11/25/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2017-03-12T09:12:32.112Z</lastmod>
+    <data>
+        <display>
+        <title>命令行传输文件</title>
+        <pubTime>2016-11-25T11:45:36.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/12/08/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E6%A6%82%E8%AE%BA%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BD%9C%E4%B8%9A/</loc>
+    <lastmod>2017-03-12T09:12:03.428Z</lastmod>
+    <data>
+        <display>
+        <title>服务学概论第二次作业</title>
+        <pubTime>2016-12-08T10:27:30.000Z</pubTime>
+        
+        <tag>服务学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/12/10/%E4%BA%91%E5%85%8D%E6%B5%81%E7%9A%84%E5%B0%9D%E8%AF%95/</loc>
+    <lastmod>2017-03-12T09:11:31.993Z</lastmod>
+    <data>
+        <display>
+        <title>云免流的尝试</title>
+        <pubTime>2016-12-09T16:26:17.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/12/10/shadowsocks%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2017-03-12T09:11:16.741Z</lastmod>
+    <data>
+        <display>
+        <title>shadowsocks配置</title>
+        <pubTime>2016-12-10T07:49:39.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/12/14/%E5%AE%89%E8%A3%85docker/</loc>
+    <lastmod>2017-03-12T09:11:01.417Z</lastmod>
+    <data>
+        <display>
+        <title>安装docker</title>
+        <pubTime>2016-12-14T11:17:37.000Z</pubTime>
+        
+        <tag>docker</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/12/14/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2017-03-12T09:10:35.757Z</lastmod>
+    <data>
+        <display>
+        <title>docker入门笔记</title>
+        <pubTime>2016-12-14T15:21:56.000Z</pubTime>
+        
+        <tag>docker</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/12/17/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E6%A6%82%E8%AE%BA%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BD%9C%E4%B8%9A/</loc>
+    <lastmod>2017-03-12T09:10:13.701Z</lastmod>
+    <data>
+        <display>
+        <title>服务学概论第三次作业</title>
+        <pubTime>2016-12-17T10:24:14.000Z</pubTime>
+        
+        <tag>服务学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/12/19/docker-mongodb-%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2017-03-12T09:09:58.930Z</lastmod>
+    <data>
+        <display>
+        <title>docker-mongodb-使用</title>
+        <pubTime>2016-12-19T10:51:39.000Z</pubTime>
+        
+        <tag>docker</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2016/12/22/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E6%A6%82%E8%AE%BA%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%BD%9C%E4%B8%9A/</loc>
+    <lastmod>2017-03-12T09:09:18.374Z</lastmod>
+    <data>
+        <display>
+        <title>服务学概论第四次作业</title>
+        <pubTime>2016-12-22T10:19:41.000Z</pubTime>
+        
+        <tag>服务学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/2017/03/12/%E9%9D%A2%E8%AF%95/</loc>
+    <lastmod>2017-03-12T09:05:37.256Z</lastmod>
+    <data>
+        <display>
+        <title>面试</title>
+        <pubTime>2017-03-12T00:38:33.000Z</pubTime>
+        
+        <tag>daily</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://beim.github.io/1970/01/02/2017-%E7%99%BD%E6%97%A5%E6%A2%A6/</loc>
     <lastmod>2017-03-11T17:05:49.382Z</lastmod>
     <data>
@@ -68,23 +510,6 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/10/15/2016-%E6%94%B6%E8%97%8F/</loc>
-    <lastmod>2017-03-09T08:53:25.469Z</lastmod>
-    <data>
-        <display>
-        <title>2016-收藏</title>
-        <pubTime>2016-10-15T02:08:47.000Z</pubTime>
-        
-        <tag>mark</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://beim.github.io/2017/03/07/cpp-%E5%B7%A6%E5%80%BC%E4%B8%8E%E5%8F%B3%E5%80%BC/</loc>
     <lastmod>2017-03-07T15:10:55.162Z</lastmod>
     <data>
@@ -93,57 +518,6 @@
         <pubTime>2017-03-07T15:03:18.000Z</pubTime>
         
         <tag>cpp</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/12/23/apue-note/</loc>
-    <lastmod>2017-02-28T04:14:20.477Z</lastmod>
-    <data>
-        <display>
-        <title>apue-note</title>
-        <pubTime>2016-12-23T12:29:44.000Z</pubTime>
-        
-        <tag>notes</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2017/02/27/C-%E8%A7%A3%E6%9E%90%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</loc>
-    <lastmod>2017-02-27T15:17:14.621Z</lastmod>
-    <data>
-        <display>
-        <title>C-解析命令行参数</title>
-        <pubTime>2017-02-27T14:36:52.000Z</pubTime>
-        
-        <tag>C</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2017/02/14/Quora-If-Hitler-was-so-bad-why-didnt-people-around-him-just-kill-him/</loc>
-    <lastmod>2017-02-14T14:35:49.755Z</lastmod>
-    <data>
-        <display>
-        <title>Quora-If-Hitler-was-so-bad-why-didnt-people-around-him-just-kill-him</title>
-        <pubTime>2017-02-14T14:25:16.000Z</pubTime>
-        
-        <tag>Quora</tag>
          
          
            
@@ -187,244 +561,6 @@
 
     
   <url>
-    <loc>https://beim.github.io/2017/01/11/C-%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0/</loc>
-    <lastmod>2017-01-11T09:51:48.329Z</lastmod>
-    <data>
-        <display>
-        <title>C-可变参数</title>
-        <pubTime>2017-01-11T08:45:31.000Z</pubTime>
-        
-        <tag>C</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/12/19/docker-mongodb-%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2017-01-09T02:23:19.809Z</lastmod>
-    <data>
-        <display>
-        <title>docker-mongodb-使用</title>
-        <pubTime>2016-12-19T10:51:39.000Z</pubTime>
-        
-        <tag>docker</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/12/22/C-%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88-%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2017-01-09T02:22:11.674Z</lastmod>
-    <data>
-        <display>
-        <title>C-函数指针-简单使用</title>
-        <pubTime>2016-12-22T08:49:42.000Z</pubTime>
-        
-        <tag>C</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/12/28/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E8%80%83%E8%AF%95%E5%87%86%E5%A4%87/</loc>
-    <lastmod>2017-01-09T02:20:54.618Z</lastmod>
-    <data>
-        <display>
-        <title>服务学考试准备</title>
-        <pubTime>2016-12-28T02:52:31.000Z</pubTime>
-        
-        <tag>服务学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/11/02/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E6%A6%82%E8%AE%BA-%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2017-01-09T02:20:54.618Z</lastmod>
-    <data>
-        <display>
-        <title>服务学概论-笔记</title>
-        <pubTime>2016-11-02T05:41:05.000Z</pubTime>
-        
-        <tag>notes</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/11/17/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E8%AE%BA%E6%96%87-Big-Data-Sensing-and-Services/</loc>
-    <lastmod>2017-01-09T02:20:54.618Z</lastmod>
-    <data>
-        <display>
-        <title>服务学论文-Big-Data-Sensing-and-Services</title>
-        <pubTime>2016-11-17T07:35:26.000Z</pubTime>
-        
-        <tag>服务学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/12/22/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E6%A6%82%E8%AE%BA%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%BD%9C%E4%B8%9A/</loc>
-    <lastmod>2017-01-09T02:20:54.618Z</lastmod>
-    <data>
-        <display>
-        <title>服务学概论第四次作业</title>
-        <pubTime>2016-12-22T10:19:41.000Z</pubTime>
-        
-        <tag>服务学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/12/08/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E6%A6%82%E8%AE%BA%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BD%9C%E4%B8%9A/</loc>
-    <lastmod>2017-01-09T02:20:54.618Z</lastmod>
-    <data>
-        <display>
-        <title>服务学概论第二次作业</title>
-        <pubTime>2016-12-08T10:27:30.000Z</pubTime>
-        
-        <tag>服务学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/12/17/%E6%9C%8D%E5%8A%A1%E5%AD%A6%E6%A6%82%E8%AE%BA%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BD%9C%E4%B8%9A/</loc>
-    <lastmod>2017-01-09T02:20:54.618Z</lastmod>
-    <data>
-        <display>
-        <title>服务学概论第三次作业</title>
-        <pubTime>2016-12-17T10:24:14.000Z</pubTime>
-        
-        <tag>服务学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2017/01/07/NSGA-%E7%9B%B8%E5%85%B3/</loc>
-    <lastmod>2017-01-09T02:18:31.536Z</lastmod>
-    <data>
-        <display>
-        <title>NSGA-相关</title>
-        <pubTime>2017-01-07T07:56:25.000Z</pubTime>
-        
-        <tag>notes</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/11/24/ubuntu%E4%B8%8Bmongodb%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2016-12-30T07:51:24.448Z</lastmod>
-    <data>
-        <display>
-        <title>ubuntu下mongodb安装使用</title>
-        <pubTime>2016-11-23T23:59:34.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/12/14/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2016-12-30T01:16:42.569Z</lastmod>
-    <data>
-        <display>
-        <title>docker入门笔记</title>
-        <pubTime>2016-12-14T15:21:56.000Z</pubTime>
-        
-        <tag>docker</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/10/20/note-Beej-Network-Programming/</loc>
-    <lastmod>2016-12-22T09:18:29.125Z</lastmod>
-    <data>
-        <display>
-        <title>note-Beej-Network-Programming</title>
-        <pubTime>2016-10-20T06:17:08.000Z</pubTime>
-        
-        <tag>notes</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/12/14/%E5%AE%89%E8%A3%85docker/</loc>
-    <lastmod>2016-12-14T15:22:26.416Z</lastmod>
-    <data>
-        <display>
-        <title>安装docker</title>
-        <pubTime>2016-12-14T11:17:37.000Z</pubTime>
-        
-        <tag>docker</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://beim.github.io/2016/09/14/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%862E-%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2016-12-13T14:14:57.181Z</lastmod>
     <data>
@@ -433,40 +569,6 @@
         <pubTime>2016-09-14T14:20:59.000Z</pubTime>
         
         <tag>notes</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/12/10/%E4%BA%91%E5%85%8D%E6%B5%81%E7%9A%84%E5%B0%9D%E8%AF%95/</loc>
-    <lastmod>2016-12-11T08:10:37.701Z</lastmod>
-    <data>
-        <display>
-        <title>云免流的尝试</title>
-        <pubTime>2016-12-09T16:26:17.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/12/10/shadowsocks%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2016-12-10T10:44:56.961Z</lastmod>
-    <data>
-        <display>
-        <title>shadowsocks配置</title>
-        <pubTime>2016-12-10T07:49:39.000Z</pubTime>
-        
-        <tag>linux</tag>
          
          
            
@@ -578,114 +680,12 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/11/25/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6/</loc>
-    <lastmod>2016-11-25T11:47:57.078Z</lastmod>
-    <data>
-        <display>
-        <title>命令行传输文件</title>
-        <pubTime>2016-11-25T11:45:36.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/11/23/seafile-%E6%90%AD%E5%BB%BA%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98/</loc>
-    <lastmod>2016-11-23T02:06:09.082Z</lastmod>
-    <data>
-        <display>
-        <title>seafile-搭建私人网盘</title>
-        <pubTime>2016-11-23T02:00:54.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://beim.github.io/2016/09/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2016-11-21T04:00:12.915Z</lastmod>
     <data>
         <display>
         <title>计算机网络-笔记</title>
         <pubTime>2016-09-10T16:35:25.000Z</pubTime>
-        
-        <tag>notes</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/11/15/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E4%B8%8E%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</loc>
-    <lastmod>2016-11-18T02:06:44.316Z</lastmod>
-    <data>
-        <display>
-        <title>软件开发过程与项目管理</title>
-        <pubTime>2016-11-15T00:12:12.000Z</pubTime>
-        
-        <tag>notes</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/11/16/%E7%8E%B0%E4%BB%A3%E6%9C%8D%E5%8A%A1%E4%B8%9A%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%8F%9C%E9%B8%9F%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2016-11-16T13:07:54.509Z</lastmod>
-    <data>
-        <display>
-        <title>现代服务业案例之菜鸟网络</title>
-        <pubTime>2016-11-16T08:27:40.000Z</pubTime>
-        
-        <tag>服务学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/11/14/ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85chromium/</loc>
-    <lastmod>2016-11-14T06:11:10.350Z</lastmod>
-    <data>
-        <display>
-        <title>ubuntu下安装chromium</title>
-        <pubTime>2016-11-14T05:10:13.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/11/08/%E8%AE%A1%E7%BD%91%E5%AE%9E%E9%AA%8C%E5%87%86%E5%A4%87/</loc>
-    <lastmod>2016-11-08T16:34:44.042Z</lastmod>
-    <data>
-        <display>
-        <title>计网实验准备</title>
-        <pubTime>2016-11-08T15:47:44.000Z</pubTime>
         
         <tag>notes</tag>
          
@@ -782,23 +782,6 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/10/18/cpp-makefile%E4%BD%93%E9%AA%8C/</loc>
-    <lastmod>2016-11-01T12:51:45.859Z</lastmod>
-    <data>
-        <display>
-        <title>cpp-makefile体验</title>
-        <pubTime>2016-10-18T01:42:12.000Z</pubTime>
-        
-        <tag>cpp</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://beim.github.io/2016/09/21/JS-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
     <lastmod>2016-10-16T11:25:45.457Z</lastmod>
     <data>
@@ -807,23 +790,6 @@
         <pubTime>2016-09-21T09:56:13.000Z</pubTime>
         
         <tag>javascript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/10/13/cpp-%E5%AE%8F%E7%BC%96%E5%86%99%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2016-10-13T15:37:38.335Z</lastmod>
-    <data>
-        <display>
-        <title>cpp-宏编写技巧</title>
-        <pubTime>2016-10-13T15:31:24.000Z</pubTime>
-        
-        <tag>cpp</tag>
          
          
            
@@ -858,40 +824,6 @@
         <pubTime>2016-10-05T15:41:04.000Z</pubTime>
         
         <tag>cpp</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/10/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2016-10-11T04:27:19.705Z</lastmod>
-    <data>
-        <display>
-        <title>设计模式笔记</title>
-        <pubTime>2016-10-09T07:45:33.000Z</pubTime>
-        
-        <tag>notes</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/10/07/dns%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B0%8F%E5%AE%9E%E8%B7%B5/</loc>
-    <lastmod>2016-10-07T13:26:08.744Z</lastmod>
-    <data>
-        <display>
-        <title>dns相关的小实践</title>
-        <pubTime>2016-10-07T12:13:44.000Z</pubTime>
-        
-        <tag>linux</tag>
          
          
            
@@ -951,24 +883,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>https://beim.github.io/2016/08/05/Node-js%E7%9A%84%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
-    <data>
-        <display>
-        <title>Node.js的内部结构</title>
-        <pubTime>2016-08-05T02:01:34.000Z</pubTime>
-        
-        <tag>node</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
   <url>
     <loc>https://beim.github.io/2016/08/05/%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6AVA/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
@@ -987,14 +901,14 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/08/05/js%E4%B8%AD%E7%9A%84%E7%B1%BBClass/</loc>
+    <loc>https://beim.github.io/2016/08/05/Node-js%E7%9A%84%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
         <display>
-        <title>js中的类Class</title>
-        <pubTime>2016-08-05T01:33:11.000Z</pubTime>
+        <title>Node.js的内部结构</title>
+        <pubTime>2016-08-05T02:01:34.000Z</pubTime>
         
-        <tag>javascript</tag>
+        <tag>node</tag>
          
          
            
@@ -1038,14 +952,14 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
+    <loc>https://beim.github.io/2016/08/05/js%E4%B8%AD%E7%9A%84%E7%B1%BBClass/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
         <display>
-        <title>ubuntu 启动初始化</title>
-        <pubTime>2016-08-05T02:28:29.000Z</pubTime>
+        <title>js中的类Class</title>
+        <pubTime>2016-08-05T01:33:11.000Z</pubTime>
         
-        <tag>linux</tag>
+        <tag>javascript</tag>
          
          
            
@@ -1070,4 +984,22 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
+    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
+    <data>
+        <display>
+        <title>ubuntu 启动初始化</title>
+        <pubTime>2016-08-05T02:28:29.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
 </urlset>

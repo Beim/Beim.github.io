@@ -82,18 +82,22 @@
 
 
 
-<meta name="description" content="Docker is the world’s leading software containerization platform">
+<meta name="description" content="Docker is the world’s leading software containerization platform
+
+概念镜像Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。分层存储: 镜像并非是像一个 ISO 那">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker入门笔记">
 <meta property="og:url" content="https://beim.github.io/2016/12/14/docker入门笔记/index.html">
 <meta property="og:site_name" content="北冥945">
-<meta property="og:description" content="Docker is the world’s leading software containerization platform">
-<meta property="og:image" content="https://www.docker.com/sites/default/files/moby.svg">
-<meta property="og:updated_time" content="2016-12-30T01:16:42.569Z">
+<meta property="og:description" content="Docker is the world’s leading software containerization platform
+
+概念镜像Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。分层存储: 镜像并非是像一个 ISO 那">
+<meta property="og:updated_time" content="2017-03-12T09:10:35.757Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker入门笔记">
-<meta name="twitter:description" content="Docker is the world’s leading software containerization platform">
-<meta name="twitter:image" content="https://www.docker.com/sites/default/files/moby.svg">
+<meta name="twitter:description" content="Docker is the world’s leading software containerization platform
+
+概念镜像Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。分层存储: 镜像并非是像一个 ISO 那">
 
 
 
@@ -317,14 +321,13 @@
       
 
       
-        <p><img src="https://www.docker.com/sites/default/files/moby.svg" alt="docker"></p>
-<blockquote>
+        <blockquote>
 <p>Docker is the world’s leading software containerization platform</p>
 </blockquote>
-<a id="more"></a>
 <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p><strong>镜像</strong><br>Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。<br><em>分层存储</em>: 镜像并非是像一个 ISO 那样的打包文件，镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由一组文件系统组成，或者说，由多层文件系统联合组成。</p>
 <p><strong>容器</strong><br>镜像和容器, 就像类和实例一样. 镜像是静态的定义, 容器是镜像运行时的实体.<br>镜像是分层存储, 容器也是, 每一个容器运行时，是以镜像为基础层，在其上创建一个当前容器的存储层，我们可以称这个为容器运行时读写而准备的存储层为容器存储层。<br>容器存储层的生存周期和容器一样，容器消亡时，容器存储层也随之消亡。因此，任何保存于容器存储层的信息都会随容器删除而丢失。<br>按照 Docker 最佳实践的要求，容器不应该向其存储层内写入任何数据，容器存储层要保持无状态化。所有的文件写入操作，都应该使用 数据卷（Volume）、或者绑定宿主目录，在这些位置的读写会跳过容器存储层，直接对宿主(或网络存储)发生读写，其性能和稳定性更高。<br>数据卷的生存周期独立于容器，容器消亡，数据卷不会消亡。因此，使用数据卷后，容器可以随意删除、重新 run，数据却不会丢失。</p>
 <p><strong>仓库</strong><br>仓库是集中,分发镜像的服务, 一个 Docker Registry 中可以包含多个仓库（Repository）；每个仓库可以包含多个标签（Tag）；每个标签对应一个镜像。</p>
+<a id="more"></a>
 <p><strong>虚悬镜像 dangling image</strong><br><code>docker images</code> 显示有仓库名和标签都为none 的镜像<br>该镜像原来有仓库名和标签, 但是随着官方镜像维护, 原来的名字被转移到新的镜像身上, 旧的镜像的名字则被取消.<br><code>docker pull</code> 和<code>docker build</code> 都可能导致这种现象<br>使用命令专门显示这类镜像: <code>docker images -f dangling=true</code><br>删除这类镜像<code>docker rmi $(docker images -q -f dangling=true)</code></p>
 <p><strong>中间层镜像</strong><br>为了加速镜像构建、重复利用资源，Docker 会利用 中间层镜像。所以在使用一段时间后，可能会看到一些依赖的中间层镜像<br>显示包括中间层镜像的所有镜像<code>docker images -a</code></p>
 <p><strong>Dockerfile</strong><br>Dockerfile 是一个文本文件，其内包含了一条条的指令(Instruction)，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。<br>栗子:<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># FORM 制定基础镜像</span></div><div class="line">FROM nginx</div><div class="line"><span class="comment"># RUN 执行命令</span></div><div class="line"><span class="comment"># RUN 有shell 模式和 exec 模式</span></div><div class="line"><span class="comment"># shell: RUN &lt;命令&gt;</span></div><div class="line"><span class="comment"># exec: RUN ["可执行文件", "参数1", "参数2"]</span></div><div class="line">RUN echo <span class="string">'&lt;h1&gt;Hello, Docker!&lt;/h1&gt;'</span> &gt; <span class="regexp">/usr/share</span><span class="regexp">/nginx/html</span><span class="regexp">/index.html</span></div><div class="line"></div><div class="line"># 更复杂的栗子</div><div class="line">FROM debian:jessie</div><div class="line"></div><div class="line">RUN buildDeps='gcc libc6-dev make' \</div><div class="line">    &amp;&amp; apt-get update \</div><div class="line">    &amp;&amp; apt-get install -y $buildDeps \</div><div class="line">    &amp;&amp; wget -O redis.tar.gz "http:/<span class="regexp">/download.redis.io/releases</span><span class="regexp">/redis-3.2.5.tar.gz" \</span></div><div class="line">    &amp;&amp; mkdir -p /usr<span class="regexp">/src/redis</span> \</div><div class="line">    &amp;&amp; tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=<span class="number">1</span> \</div><div class="line">    &amp;&amp; make -C /usr/src/redis \</div><div class="line">    &amp;&amp; make -C /usr/src/redis install \</div><div class="line">    &amp;&amp; rm -rf /var/<span class="class"><span class="keyword">lib</span>/<span class="title">apt</span>/<span class="title">lists</span>/* \</span></div><div class="line">    &amp;&amp; rm redis.tar.gz \</div><div class="line">    &amp;&amp; rm -r /usr/src/redis \</div><div class="line">    &amp;&amp; apt-get purge -y --auto-remove $buildDeps</div></pre></td></tr></table></figure></p>
@@ -494,7 +497,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">63</span>
+              <span class="site-state-item-count">59</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

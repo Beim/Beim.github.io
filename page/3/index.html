@@ -261,121 +261,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/02/1997-安娜·卡列尼娜/" itemprop="url">
-                  1997-安娜·卡列尼娜
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-12-02T22:51:17+08:00" content="2016-12-02">
-              2016-12-02
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/02/1997-安娜·卡列尼娜/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/02/1997-安娜·卡列尼娜/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/02/1997-安娜·卡列尼娜/" class="leancloud_visitors" data-flag-title="1997-安娜·卡列尼娜">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="http://ob4a6y748.bkt.clouddn.com/anklnn-p2321150779.jpg" alt="title"></p>
-<blockquote>
-<p>死时还未懂得爱的真谛，那就比死亡本身更可怕了。</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/02/1997-安娜·卡列尼娜/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/12/01/说谎的女人-苏菲·玛索/" itemprop="url">
                   说谎的女人-苏菲·玛索
                 </a>
@@ -1010,12 +895,11 @@
 
       
         
-          
-          scp在linux下一般用scp这个命令来通过ssh传输文件。
-1、从服务器上下载文件123scp username@servername:/path/filename /var/www/local_dir（本地目录） 例如scp root@192.168.0.101:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）
-2、上传本地文件到服务器123scp /path/filename username@servername:/path   例如scp /var/www/test
-          ...
-
+          <h1 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h1><p>在linux下一般用scp这个命令来通过ssh传输文件。</p>
+<p>1、从服务器上下载文件<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp username<span class="variable">@servername:</span>/path/filename /var/www/local_dir（本地目录）</div><div class="line"></div><div class="line"> 例如scp root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span>:/var/www/test.txt  把<span class="number">192.168</span>.<span class="number">0.101</span>上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）</div></pre></td></tr></table></figure></p>
+<p>2、上传本地文件到服务器<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp /path/filename username<span class="variable">@servername</span><span class="symbol">:/path</span>   </div><div class="line"></div><div class="line">例如scp /var/www/test.php  root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span><span class="symbol">:/var/www/</span>  把本机/var/www/目录下的test.php文件上传到<span class="number">192.168</span>.<span class="number">0</span>.<span class="number">101</span>这台服务器上的/var/www/目录中</div></pre></td></tr></table></figure></p>
+<p>3、从服务器下载整个目录<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp -r username<span class="variable">@servername:</span>/var/www/remote_dir/（远程目录） /var/www/local_dir（本地目录）</div><div class="line"></div><div class="line">例如:scp -r root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span>:/var/www/test  /var/www/</div></pre></td></tr></table></figure></p>
+<p>4、上传目录到服务器<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp  -r local_dir username<span class="variable">@servername:</span>remote_dir</div><div class="line"></div><div class="line">例如：scp -r test  root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span>:/var/www/   把当前目录下的test目录上传到服务器的/var/www/ 目录</div></pre></td></tr></table></figure></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/11/25/命令行传输文件/#more" rel="contents">
               Read more &raquo;
@@ -1127,17 +1011,17 @@
 
       
         
-          
-          官网链接
-
-Ubuntu16的systemd启动服务在/lib/systemd/system/mongod.serviceMongoDB数据存储在 /var/lib/mongodb日志文件在 /var/log/mongodb配置文件在 /etc/mongod.conf
-
-security开启认证在/etc/mongod.conf中增加12security:  authorization: enabled
-增加用户
-
-提示: shell下登陆后切换到对应的db进行auth, 在哪个db创建的用户就在哪个db进行authshow usersdb.authdb.createUserdb.dropUs
-          ...
-
+          <p><a href="https://docs.mongodb.com/master/tutorial/install-mongodb-on-ubuntu/?_ga=1.183956006.1858520870.1479944396">官网链接</a></p>
+<blockquote>
+<p>Ubuntu16的systemd启动服务在<code>/lib/systemd/system/mongod.service</code><br>MongoDB数据存储在 <code>/var/lib/mongodb</code><br>日志文件在 <code>/var/log/mongodb</code><br>配置文件在 <code>/etc/mongod.conf</code></p>
+</blockquote>
+<h1 id="security"><a href="#security" class="headerlink" title="security"></a>security</h1><p><a href="https://docs.mongodb.com/manual/tutorial/enable-authentication/">开启认证</a><br>在<code>/etc/mongod.conf</code>中增加<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">security:</span></div><div class="line"><span class="symbol">  authorization:</span> enabled</div></pre></td></tr></table></figure></p>
+<p><a href="https://docs.mongodb.com/manual/reference/method/db.createUser/">增加用户</a></p>
+<blockquote>
+<p>提示: shell下登陆后切换到对应的db进行auth, 在哪个db创建的用户就在哪个db进行auth<br>show users<br>db.auth<br>db.createUser<br>db.dropUser</p>
+</blockquote>
+<p>登陆<br><code>mongo dbName -u username -p password</code></p>
+<h1 id="others"><a href="#others" class="headerlink" title="others"></a>others</h1><p><a href="http://chenzhou123520.iteye.com/blog/1634676">mongod 后台启动</a> <code>mongod --fork --syslog</code></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/11/24/ubuntu下mongodb安装使用/#more" rel="contents">
               Read more &raquo;
@@ -1249,13 +1133,9 @@ security开启认证在/etc/mongod.conf中增加12security:  authorization: enab
 
       
         
-          
-          
-官网下载
-搭建教程
-
-          
-
+          <p><img src="http://ob4a6y748.bkt.clouddn.com/seafile-2016-11-23%2010-04-44%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="效果图"></p>
+<p><a href="https://www.seafile.com/download/">官网下载</a></p>
+<p><a href="http://www.jianshu.com/p/d7635d0ecfbd">搭建教程</a></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/11/23/seafile-搭建私人网盘/#more" rel="contents">
               Read more &raquo;
@@ -1308,8 +1188,8 @@ security开启认证在/etc/mongod.conf中增加12security:  authorization: enab
             
               
                 
-                <a class="post-title-link" href="/2016/11/17/服务学论文-Big-Data-Sensing-and-Services/" itemprop="url">
-                  服务学论文-Big-Data-Sensing-and-Services
+                <a class="post-title-link" href="/2016/11/14/ubuntu下安装chromium/" itemprop="url">
+                  ubuntu下安装chromium
                 </a>
               
             
@@ -1322,8 +1202,8 @@ security开启认证在/etc/mongod.conf中增加12security:  authorization: enab
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-17T15:35:26+08:00" content="2016-11-17">
-              2016-11-17
+            <time itemprop="dateCreated" datetime="2016-11-14T13:10:13+08:00" content="2016-11-14">
+              2016-11-14
             </time>
           </span>
 
@@ -1333,8 +1213,8 @@ security开启认证在/etc/mongod.conf中增加12security:  authorization: enab
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/11/17/服务学论文-Big-Data-Sensing-and-Services/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/17/服务学论文-Big-Data-Sensing-and-Services/" itemprop="commentsCount"></span>
+                <a href="/2016/11/14/ubuntu下安装chromium/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/14/ubuntu下安装chromium/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1344,7 +1224,7 @@ security开启认证在/etc/mongod.conf中增加12security:  authorization: enab
 
           
           
-             <span id="/2016/11/17/服务学论文-Big-Data-Sensing-and-Services/" class="leancloud_visitors" data-flag-title="服务学论文-Big-Data-Sensing-and-Services">
+             <span id="/2016/11/14/ubuntu下安装chromium/" class="leancloud_visitors" data-flag-title="ubuntu下安装chromium">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1367,29 +1247,133 @@ security开启认证在/etc/mongod.conf中增加12security:  authorization: enab
 
       
         
-          
-          词
-M2M(机器对机器)- wiki
-
-big data sensing
-
-WSN(无线感测网络)- wiki
-
-SLA(service-level aggrement)服务水平协议
-
-
-
-摘Section1阐述的问题
-
-What is big data sensing?
-Why is it important to us?
-What kinds of big data sensing services and application?
-What are big data sensing infrastructures, platforms, and services?
-What are th
-          ...
-
+          <h1 id="chromium"><a href="#chromium" class="headerlink" title="chromium"></a>chromium</h1><h2 id="下载chromium"><a href="#下载chromium" class="headerlink" title="下载chromium"></a>下载chromium</h2><p>从<a href="https://github.com/scheib/chromium-latest-linux">github</a>上下载这几个脚本<br>放置在<code>/usr/local/src/</code>目录下</p>
+<p>运行<code>./update.sh</code><br>此时将最新版本的chromium下载到了<code>/usr/local/src/chromium-latest-linux/latest</code>目录下</p>
+<h2 id="设置别名"><a href="#设置别名" class="headerlink" title="设置别名"></a>设置别名</h2><p><code>vi ~/.bashrc</code><br>在最后添加<br><code>alias chromium=&#39;/usr/local/src/chromium-latest-linux/run.sh&#39;</code></p>
+<p>这时在终端中输入<code>chromium</code>即可打开chromium浏览器</p>
+<h2 id="更新chromium"><a href="#更新chromium" class="headerlink" title="更新chromium"></a>更新chromium</h2><p>只需要再运行<code>chromium-latest-linux</code>目录下的<code>update.sh</code>脚本就可以了</p>
+<h2 id="更改desktop下的chromium"><a href="#更改desktop下的chromium" class="headerlink" title="更改desktop下的chromium"></a>更改desktop下的chromium</h2><p><code>~/.local/share/applications</code>下找<code>chromium-browser.desktop</code>文件, 看其中的参数是否和安装的<code>run.sh</code>中的参数相同</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/17/服务学论文-Big-Data-Sensing-and-Services/#more" rel="contents">
+            <a class="btn" href="/2016/11/14/ubuntu下安装chromium/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/08/计网实验准备/" itemprop="url">
+                  计网实验准备
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-11-08T23:47:44+08:00" content="2016-11-08">
+              2016-11-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/08/计网实验准备/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/08/计网实验准备/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/11/08/计网实验准备/" class="leancloud_visitors" data-flag-title="计网实验准备">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a><strong>实验目的</strong></h1><p>(1)按照图 4-1 所示,将网络设备用适当的线路连接好,注意 console 控制线和双绞<br>线不要混淆。<br>(2)通过“超级终端”软件连接到路由器或交换机的控制口,进入 IOS 系统。初步了<br>解 IOS 系统特性,为路由器或交换机配置名称、密码等,启用 telnet 服务,使以后的配置可<br>以通过 telnet 方式进行。<br>(3)通过 telnet 方式进入 IOS 的 CLI 配置界面,分别对三台网络设置进行适当的配置,<br>使局域网的四台计算机可以互相 ping 通。</p>
+<h1 id="实验说明"><a href="#实验说明" class="headerlink" title="实验说明"></a><strong>实验说明</strong></h1><ul>
+<li>本次实验划分了4个子网，分别为192.168.1.0/24,  2.2.2.0/24,  1.1.1.0/24,  202.118.232.0/24</li>
+<li>PC1, PC2, PC3, PC4均处于单独的冲突域中，因为它们都通过网络设备(交换机和三层交换机)隔开了，只有共享介质的设备(通过集线器连接)才处于同一冲突域。</li>
+<li>PC1和PC2在同一广播域，因为他们通过二层交换机相连，处于同一子网。PC3和PC4分别在单独的广播域中，因为他们处于不同的子网。</li>
+</ul>
+<h1 id="直通线和交叉线的区别"><a href="#直通线和交叉线的区别" class="headerlink" title="直通线和交叉线的区别"></a><strong>直通线和交叉线的区别</strong></h1><p>直通线，两端线序一样。<br>交叉线，一端为直通线的线序，另一端为白绿，绿，白橙，蓝，白蓝，橙，白棕，棕。<br>同种类型设备之间使用交叉线连接, 不同类型设备使用直通连接. <a href="http://www.360doc.com/content/10/0910/18/3266301_52693210.shtml">http://www.360doc.com/content/10/0910/18/3266301_52693210.shtml</a></p>
+<h1 id="telnet-和超级终端"><a href="#telnet-和超级终端" class="headerlink" title="telnet 和超级终端"></a><strong>telnet 和超级终端</strong></h1><p>通过telnet设置交换机是通过网络登录交换机，也叫带内管理，要求先配置交换机能登录及你电脑能通过网络连接访问到交换机。通过超级终端配置是电脑com口连接交换机console设置，不需要通过网络连接，故叫带外管理。通常初始设置要通过超级终端设置，设置好了后就可以通过telnet设置了。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/11/08/计网实验准备/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1423,7 +1407,7 @@ What are th
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1464,7 +1448,7 @@ What are th
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">63</span>
+              <span class="site-state-item-count">59</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

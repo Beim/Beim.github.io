@@ -90,7 +90,7 @@
 <meta property="og:site_name" content="北冥945">
 <meta property="og:description" content="scp在linux下一般用scp这个命令来通过ssh传输文件。
 1、从服务器上下载文件123scp username@servername:/path/filename /var/www/local_dir（本地目录） 例如scp root@192.168.0.101:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt 的文件下载到/var/w">
-<meta property="og:updated_time" content="2016-11-25T11:47:57.078Z">
+<meta property="og:updated_time" content="2017-03-12T09:12:32.112Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="命令行传输文件">
 <meta name="twitter:description" content="scp在linux下一般用scp这个命令来通过ssh传输文件。
@@ -323,6 +323,7 @@
 <p>2、上传本地文件到服务器<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp /path/filename username<span class="variable">@servername</span><span class="symbol">:/path</span>   </div><div class="line"></div><div class="line">例如scp /var/www/test.php  root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span><span class="symbol">:/var/www/</span>  把本机/var/www/目录下的test.php文件上传到<span class="number">192.168</span>.<span class="number">0</span>.<span class="number">101</span>这台服务器上的/var/www/目录中</div></pre></td></tr></table></figure></p>
 <p>3、从服务器下载整个目录<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp -r username<span class="variable">@servername:</span>/var/www/remote_dir/（远程目录） /var/www/local_dir（本地目录）</div><div class="line"></div><div class="line">例如:scp -r root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span>:/var/www/test  /var/www/</div></pre></td></tr></table></figure></p>
 <p>4、上传目录到服务器<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp  -r local_dir username<span class="variable">@servername:</span>remote_dir</div><div class="line"></div><div class="line">例如：scp -r test  root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span>:/var/www/   把当前目录下的test目录上传到服务器的/var/www/ 目录</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 
       
     </div>
@@ -457,7 +458,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">63</span>
+              <span class="site-state-item-count">59</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
