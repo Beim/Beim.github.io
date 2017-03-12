@@ -261,128 +261,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/11/04/JS-for-in遍历和prototype/" itemprop="url">
-                  JS-for-in遍历和prototype
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-04T14:27:57+08:00" content="2016-11-04">
-              2016-11-04
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/04/JS-for-in遍历和prototype/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/04/JS-for-in遍历和prototype/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/04/JS-for-in遍历和prototype/" class="leancloud_visitors" data-flag-title="JS-for-in遍历和prototype">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          for (let i in arr) 
-会将原型链上面的属性也一一遍历所以在这时候修改 Array.prototype如
-Array.prototype.top = () =&gt; {...}
-则i会遍历到top属性
-= = 被这个略坑了一把
-以后要注意不要扩展内置类型的原型, 或者for in 遍历时使用hasOwnProperty 进行筛选
-MDN-属性的可枚举性和所有权
-
-          
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/04/JS-for-in遍历和prototype/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/11/02/修改next主题/" itemprop="url">
                   修改next主题
                 </a>
@@ -1422,6 +1300,133 @@ IBM 认为的
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/09/设计模式笔记/" itemprop="url">
+                  设计模式笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-09T15:45:33+08:00" content="2016-10-09">
+              2016-10-09
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/09/设计模式笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/09/设计模式笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/10/09/设计模式笔记/" class="leancloud_visitors" data-flag-title="设计模式笔记">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>设计模式</p>
+<h1 id="Factory-Method-Insurance"><a href="#Factory-Method-Insurance" class="headerlink" title="Factory Method - Insurance"></a>Factory Method - Insurance</h1><p>工厂方法模式</p>
+<p><strong>优点</strong>:</p>
+<ul>
+<li>工厂方法模式将创建对象的逻辑与任务交给了工厂类</li>
+<li>工厂方法模式支持开闭原则</li>
+</ul>
+<p><strong>适用情况</strong></p>
+<ul>
+<li>创建某些类的对象的逻辑比较复杂,并且有很多条件分支, 而且还可能增加新的条件.</li>
+<li>一个类不能预先准确的知道它必须创建一个层次类中的哪一个子类的对象</li>
+<li>一个类适用它的子类决定所要创建的对象</li>
+<li>需要封装创建类的对象的逻辑, 使得这些逻辑局部化.</li>
+</ul>
+<p>简单工厂方法模式与工厂方法模式的区别: <strong>p15</strong></p>
+<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-12-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="factory"></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/09/设计模式笔记/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -1467,7 +1472,7 @@ IBM 认为的
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">59</span>
+              <span class="site-state-item-count">58</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
