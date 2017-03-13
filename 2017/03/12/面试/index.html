@@ -83,84 +83,30 @@
 
 
 <meta name="description" content="记录一下面试遇到过的问题
-2017-03-11 蚂蚁金服 分布式计算
-计算机网络：
+2017-03-11 蚂蚁金服 分布式计算计算机网络：
 
-TCP 和UDP 的区别
-TCP 报文内容
-TIME_WAIT 是什么
-
-操作系统
-
-进程和线程的区别
-python 的线程和c 的线程一样吗，python 线程是不是只能占用一个核
-
-C 语言
-
-函数指针的作用
-
-算法
-
-单链表求环代码实现
-
-项目
-
-项目中遇到的问题，怎么解决">
+TCP 和UDP 的区别有序数据传输重发丢失的数据包舍弃重复的数据包无错误数据传输阻塞/流量控制面向连接（确认有创建三方交握，连接已创建才作传输。）
+TCP 报文内容源端口 目的端口序列号确认号头大小 标志位 窗口大小校验和 紧急指针选项字段数据
+TIME_WAIT 是什么主动关闭端接收到FIN后，就发送ACK包，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试">
 <meta property="og:url" content="https://beim.github.io/2017/03/12/面试/index.html">
 <meta property="og:site_name" content="北冥945">
 <meta property="og:description" content="记录一下面试遇到过的问题
-2017-03-11 蚂蚁金服 分布式计算
-计算机网络：
+2017-03-11 蚂蚁金服 分布式计算计算机网络：
 
-TCP 和UDP 的区别
-TCP 报文内容
-TIME_WAIT 是什么
-
-操作系统
-
-进程和线程的区别
-python 的线程和c 的线程一样吗，python 线程是不是只能占用一个核
-
-C 语言
-
-函数指针的作用
-
-算法
-
-单链表求环代码实现
-
-项目
-
-项目中遇到的问题，怎么解决">
-<meta property="og:updated_time" content="2017-03-12T09:05:37.256Z">
+TCP 和UDP 的区别有序数据传输重发丢失的数据包舍弃重复的数据包无错误数据传输阻塞/流量控制面向连接（确认有创建三方交握，连接已创建才作传输。）
+TCP 报文内容源端口 目的端口序列号确认号头大小 标志位 窗口大小校验和 紧急指针选项字段数据
+TIME_WAIT 是什么主动关闭端接收到FIN后，就发送ACK包，">
+<meta property="og:updated_time" content="2017-03-13T14:55:44.041Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试">
 <meta name="twitter:description" content="记录一下面试遇到过的问题
-2017-03-11 蚂蚁金服 分布式计算
-计算机网络：
+2017-03-11 蚂蚁金服 分布式计算计算机网络：
 
-TCP 和UDP 的区别
-TCP 报文内容
-TIME_WAIT 是什么
-
-操作系统
-
-进程和线程的区别
-python 的线程和c 的线程一样吗，python 线程是不是只能占用一个核
-
-C 语言
-
-函数指针的作用
-
-算法
-
-单链表求环代码实现
-
-项目
-
-项目中遇到的问题，怎么解决">
+TCP 和UDP 的区别有序数据传输重发丢失的数据包舍弃重复的数据包无错误数据传输阻塞/流量控制面向连接（确认有创建三方交握，连接已创建才作传输。）
+TCP 报文内容源端口 目的端口序列号确认号头大小 标志位 窗口大小校验和 紧急指针选项字段数据
+TIME_WAIT 是什么主动关闭端接收到FIN后，就发送ACK包，">
 
 
 
@@ -385,12 +331,12 @@ C 语言
 
       
         <p>记录一下面试遇到过的问题</p>
-<p><code>2017-03-11 蚂蚁金服 分布式计算</code></p>
-<p>计算机网络：</p>
+<h1 id="2017-03-11-蚂蚁金服-分布式计算"><a href="#2017-03-11-蚂蚁金服-分布式计算" class="headerlink" title="2017-03-11 蚂蚁金服 分布式计算"></a><code>2017-03-11 蚂蚁金服 分布式计算</code></h1><p>计算机网络：</p>
 <ul>
-<li>TCP 和UDP 的区别</li>
-<li>TCP 报文内容</li>
-<li>TIME_WAIT 是什么</li>
+<li>TCP 和UDP 的区别<br>有序数据传输<br>重发丢失的数据包<br>舍弃重复的数据包<br>无错误数据传输<br>阻塞/流量控制<br>面向连接（确认有创建三方交握，连接已创建才作传输。）</li>
+<li>TCP 报文内容<br>源端口 目的端口<br>序列号<br>确认号<br>头大小 标志位 窗口大小<br>校验和 紧急指针<br>选项字段<br>数据</li>
+<li>TIME_WAIT 是什么<br>主动关闭端接收到FIN后，就发送ACK包，等待足够时间以确保被动关闭端收到了终止请求的确认包。【按照RFC 793，一个连接可以在TIME-WAIT保证最大四分钟，即最大分段寿命（maximum segment lifetime）的2倍】</li>
+<li>TIME_WAIT 存在的理由<br><a href="http://www.cnblogs.com/li-hao/archive/2011/12/08/2280678.html" target="_blank" rel="external">博客园</a><br>可靠地实现TCP全双工连接的终止， 允许老的重复分节在网络中消逝</li>
 </ul>
 <p>操作系统</p>
 <ul>
@@ -399,17 +345,40 @@ C 语言
 </ul>
 <p>C 语言</p>
 <ul>
-<li>函数指针的作用</li>
-</ul>
+<li><p>函数指针的作用</p>
 <p>算法</p>
-<ul>
-<li>单链表求环代码实现</li>
-</ul>
+</li>
+<li><p>单链表求环代码实现(快慢指针)</p>
 <p>项目</p>
 <ul>
 <li>项目中遇到的问题，怎么解决</li>
 </ul>
 <a id="more"></a>
+</li>
+</ul>
+<h1 id="2017-03-13-阿里-研发工程师C-C"><a href="#2017-03-13-阿里-研发工程师C-C" class="headerlink" title="2017-03-13 阿里 研发工程师C/C++"></a><code>2017-03-13 阿里 研发工程师C/C++</code></h1><p>  项目</p>
+<ul>
+<li><p>项目架构</p>
+<ul>
+<li>负责的部分(权限认证，批量授权怎么解决)</li>
+</ul>
+<p>操作系统</p>
+</li>
+<li>线程的状态</li>
+<li><p>为什么需要线程同步</p>
+<p>数据结构</p>
+</li>
+<li>双向链表删除节点</li>
+<li><p>哈希碰撞<br>散列函数的输入和输出不是唯一对应关系的，如果两个散列值相同，两个输入值很可能是相同的，但也可能不同，这种情况称为“哈希碰撞”，这通常是两个不同长度的输入值，刻意计算出相同的输出值。</p>
+<p>计算机网络</p>
+</li>
+<li>TCP 三次握手过程<br>[SYN Seq=A]客户端通过向服务器端发送一个SYN来创建一个主动打开，作为三路握手的一部分。客户端把这段连接的序号设定为随机数A。<br>[SYN, ACK Seq=B, Ack=A+1]服务器端应当为一个合法的SYN回送一个SYN/ACK。ACK的确认码应为A+1，SYN/ACK包本身又有一个随机序号B。<br>[ACK Seq=A+1, Ack=B+1]最后，客户端再发送一个ACK。当服务端受到这个ACK的时候，就完成了三路握手，并进入了连接创建状态。此时包序号被设定为收到的确认号A+1，而响应则为B+1。</li>
+<li>TCP 报文内容<br><a href="https://zh.wikipedia.org/wiki/%E4%BC%A0%E8%BE%93%E6%8E%A7%E5%88%B6%E5%8D%8F%E8%AE%AE" target="_blank" rel="external">WiKI</a><br>源端口 目的端口<br>序列号<br>确认号<br>头长度 标志位 窗口大小<br>校验和 紧急指针<br>选项字段<br>数据</li>
+<li><p>HTTP 字段含义<br><a href="https://zh.wikipedia.org/zh-hans/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" target="_blank" rel="external">WIKI</a></p>
+<p>数据库</p>
+</li>
+<li>索引的方式<br><a href="http://blog.csdn.net/kennyrose/article/details/7532032" target="_blank" rel="external">唯一索引，主键索引，聚集索引</a></li>
+</ul>
 
       
     </div>
@@ -621,7 +590,7 @@ C 语言
               
             
             
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2017-03-11-蚂蚁金服-分布式计算"><span class="nav-number">1.</span> <span class="nav-text">2017-03-11 蚂蚁金服 分布式计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017-03-13-阿里-研发工程师C-C"><span class="nav-number">2.</span> <span class="nav-text">2017-03-13 阿里 研发工程师C/C++</span></a></li></ol></div>
             
           </div>
         </section>
