@@ -373,6 +373,118 @@
             
               
                 
+                <a class="post-title-link" href="/2017/03/15/JS-原型/" itemprop="url">
+                  JS-原型
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-03-15T21:51:16+08:00" content="2017-03-15">
+              2017-03-15
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/03/15/JS-原型/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/15/JS-原型/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/03/15/JS-原型/" class="leancloud_visitors" data-flag-title="JS-原型">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.name = &#123;</div><div class="line">    first: <span class="string">'liu'</span>,</div><div class="line">    second: <span class="string">'xin'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">p = <span class="keyword">new</span> Person()</div><div class="line"></div><div class="line">p.__proto__ === Person.prototype <span class="comment">// true</span></div><div class="line"><span class="built_in">Object</span>.getPrototypeOf(p) === Person.prototype <span class="comment">// true</span></div><div class="line">p.constructor === Person <span class="comment">// true</span></div><div class="line">p.constructor === Person.prototype.constructor <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Man</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.who = <span class="string">'man'</span></div><div class="line">&#125;</div><div class="line">Man.prototype = <span class="keyword">new</span> Person()</div><div class="line"></div><div class="line">m = <span class="keyword">new</span> Man()</div><div class="line">m.constructor === Man <span class="comment">// false</span></div><div class="line">m.constructor === Person <span class="comment">// true</span></div><div class="line">m.__proto__ === Person <span class="comment">// false m.__proto__ 是之前创建的new Person() 对象</span></div><div class="line">m.__proto__.__proto__ === Person.prototype <span class="comment">// true</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Shape</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.x = <span class="number">0</span>;</div><div class="line">  <span class="keyword">this</span>.y = <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line">Shape.prototype.display = () =&gt; <span class="built_in">console</span>.log(<span class="string">'x is'</span>, <span class="keyword">this</span>.x)</div><div class="line">s = <span class="keyword">new</span> Shape()</div><div class="line">s.display() <span class="comment">// x is 0</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Rect</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.name = <span class="string">'im a rect'</span></div><div class="line">&#125;</div><div class="line">r = <span class="keyword">new</span> Rect()</div><div class="line">Rect.prototype = <span class="built_in">Object</span>.create(Shape.prototype)</div><div class="line">r.display() <span class="comment">// x is undefined</span></div><div class="line"></div><div class="line">r.__proto__ === Shape.prototype <span class="comment">// true</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bottle</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>() &#123;</div><div class="line">    <span class="keyword">this</span>.name = <span class="string">'bottle'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">b = <span class="keyword">new</span> Bottle()</div><div class="line"></div><div class="line">b.constructor === Bottle</div><div class="line">b.__proto__ === Bottle.prototype</div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/03/15/JS-原型/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/03/12/面试/" itemprop="url">
                   面试
                 </a>
@@ -1297,150 +1409,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/22/服务学概论第四次作业/" itemprop="url">
-                  服务学概论第四次作业
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-12-22T18:19:41+08:00" content="2016-12-22">
-              2016-12-22
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/22/服务学概论第四次作业/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/22/服务学概论第四次作业/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/22/服务学概论第四次作业/" class="leancloud_visitors" data-flag-title="服务学概论第四次作业">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>作业要求:<br>阐述面向服务的体系结构SOA的含义及技术内容</p>
-<h1 id="1-SOA-定义与介绍"><a href="#1-SOA-定义与介绍" class="headerlink" title="1. SOA 定义与介绍"></a>1. SOA 定义与介绍</h1><p>面向服务的体系结构SOA 是一种<em>IT 体系结构风格</em>, 支持将商务业务转换为一组相互链接的服务或可重复业务任务, 并在需要时通过网络访问这些服务和业务任务.<br>SOA 是异类分布式系统的体系结构, 是实现由构建组成系统的模型. 它将应用程序的不同功能单元(称为服务)通过服务之间定义好的接口和规范按<em>松散耦合</em>方式联系起来, 通过网络整合成一个新的系统.<br>接口是采用<em>中立</em>的方式进行定义的, 独立于实现服务的硬件平台, 才做系统和编程语言. 这使得构建在各种系统中的服务可以以统一和通用的方式进行交互.</p>
-<h1 id="2-SOA-应用目标"><a href="#2-SOA-应用目标" class="headerlink" title="2. SOA 应用目标:"></a>2. SOA 应用目标:</h1><table>
-<thead>
-<tr>
-<th>层次</th>
-<th>服务层次名称</th>
-<th>内容描述 </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>实现单独的Web 服务</td>
-<td>由新的或现有的应用程序中所包含的任务来创建服务</td>
-</tr>
-<tr>
-<td>2</td>
-<td>面向服务的业务功能集成</td>
-<td>通过跨企业内外的多个应用程序集成服务来实现业务目标</td>
-</tr>
-<tr>
-<td>3</td>
-<td>整个企业范围的IT 映射/转换</td>
-<td>支持跨整个企业业务功能集成的体系结构实现</td>
-</tr>
-<tr>
-<td>4</td>
-<td>随需应变的业务转换</td>
-<td>现有业务模型的广泛转换或者新业务模型的部署</td>
-</tr>
-</tbody>
-</table>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/22/服务学概论第四次作业/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1486,7 +1454,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">58</span>
+              <span class="site-state-item-count">59</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -1496,7 +1464,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
