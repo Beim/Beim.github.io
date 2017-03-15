@@ -388,7 +388,7 @@
 
     
     <entry>
-      <title><![CDATA[js中的类Class]]></title>
+      <title><![CDATA[JS-类和对象]]></title>
       <url>%2F2016%2F08%2F05%2FJS-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%2F</url>
       <content type="text"><![CDATA[构造函数法123456789101112131415161718function Cat(like) &#123; var nickName = 'myNickName' this.callNickName = function() &#123; return nickName; &#125; this.name = 'myName' this.like = like&#125;var cat1 = new Cat('dog')console.log(cat1.name) // myNameconsole.log(cat1.nickName) // undefinedconsole.log(cat1.callNickName()) // myNickNameconsole.log(cat1.like) // dog// 属性和方法也可以定义在function对象的prototype对象上Cat.prototype.makeSound = function() &#123; console.log('miao')&#125;cat1.makeSound() // miao Object.create()123456789var Cat = &#123; name: 'myName', makeSound: function() &#123; console.log('miao') &#125;&#125;var cat1 = Object.create(Cat) console.log(cat1.name) // myName cat1.makeSound() // miao Class12345678910111213141516171819class Point &#123; constructor(x, y) &#123; this.x = x this.y = y &#125; toString() &#123; return '(' + this.x + ', ' + this.y + ')' &#125; say() &#123; console.log('say something') &#125;&#125;console.log(typeof Point) // functionconsole.log(Point === Point.prototype.constructor) // trueconsole.log(Point.toString()) // class Point &#123; ... &#125;var point = new Point(1, 2)console.log(point.toString()) // (1, 2)point.say() // say somethingPoint.say() // Error! 参考链接 前两种方法 第三种方法]]></content>
     </entry>

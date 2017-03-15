@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://beim.github.io/2016/08/05/JS-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/</loc>
+    <lastmod>2017-03-15T14:38:51.011Z</lastmod>
+    <data>
+        <display>
+        <title>JS-类和对象</title>
+        <pubTime>2016-08-05T01:33:11.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://beim.github.io/2017/03/15/JS-%E5%8E%9F%E5%9E%8B/</loc>
     <lastmod>2017-03-15T14:26:15.224Z</lastmod>
     <data>
@@ -935,23 +952,6 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
-    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
-    <data>
-        <display>
-        <title>ubuntu 启动初始化</title>
-        <pubTime>2016-08-05T02:28:29.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://beim.github.io/2016/08/08/React-Native-Startup/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
@@ -970,14 +970,14 @@
     
     
   <url>
-    <loc>https://beim.github.io/2016/08/05/JS-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/</loc>
+    <loc>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
         <display>
-        <title>js中的类Class</title>
-        <pubTime>2016-08-05T01:33:11.000Z</pubTime>
+        <title>ubuntu 启动初始化</title>
+        <pubTime>2016-08-05T02:28:29.000Z</pubTime>
         
-        <tag>javascript</tag>
+        <tag>linux</tag>
          
          
            
