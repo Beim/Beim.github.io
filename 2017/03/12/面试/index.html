@@ -83,30 +83,30 @@
 
 
 <meta name="description" content="记录一下面试遇到过的问题
-2017-03-11 蚂蚁金服 分布式计算计算机网络：
+2017-03-11 蚂蚁金服 分布式计算(30+)计算机网络：
 
 TCP 和UDP 的区别有序数据传输重发丢失的数据包舍弃重复的数据包无错误数据传输阻塞/流量控制面向连接（确认有创建三方交握，连接已创建才作传输。）
 TCP 报文内容源端口 目的端口序列号确认号头大小 标志位 窗口大小校验和 紧急指针选项字段数据
-TIME_WAIT 是什么主动关闭端接收到FIN后，就发送ACK包，">
+TIME_WAIT 是什么主动关闭端接收到FIN后，就发送">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试">
 <meta property="og:url" content="https://beim.github.io/2017/03/12/面试/index.html">
 <meta property="og:site_name" content="北冥945">
 <meta property="og:description" content="记录一下面试遇到过的问题
-2017-03-11 蚂蚁金服 分布式计算计算机网络：
+2017-03-11 蚂蚁金服 分布式计算(30+)计算机网络：
 
 TCP 和UDP 的区别有序数据传输重发丢失的数据包舍弃重复的数据包无错误数据传输阻塞/流量控制面向连接（确认有创建三方交握，连接已创建才作传输。）
 TCP 报文内容源端口 目的端口序列号确认号头大小 标志位 窗口大小校验和 紧急指针选项字段数据
-TIME_WAIT 是什么主动关闭端接收到FIN后，就发送ACK包，">
-<meta property="og:updated_time" content="2017-03-14T13:34:41.921Z">
+TIME_WAIT 是什么主动关闭端接收到FIN后，就发送">
+<meta property="og:updated_time" content="2017-03-17T12:59:57.273Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试">
 <meta name="twitter:description" content="记录一下面试遇到过的问题
-2017-03-11 蚂蚁金服 分布式计算计算机网络：
+2017-03-11 蚂蚁金服 分布式计算(30+)计算机网络：
 
 TCP 和UDP 的区别有序数据传输重发丢失的数据包舍弃重复的数据包无错误数据传输阻塞/流量控制面向连接（确认有创建三方交握，连接已创建才作传输。）
 TCP 报文内容源端口 目的端口序列号确认号头大小 标志位 窗口大小校验和 紧急指针选项字段数据
-TIME_WAIT 是什么主动关闭端接收到FIN后，就发送ACK包，">
+TIME_WAIT 是什么主动关闭端接收到FIN后，就发送">
 
 
 
@@ -331,7 +331,7 @@ TIME_WAIT 是什么主动关闭端接收到FIN后，就发送ACK包，">
 
       
         <p>记录一下面试遇到过的问题</p>
-<h1 id="2017-03-11-蚂蚁金服-分布式计算"><a href="#2017-03-11-蚂蚁金服-分布式计算" class="headerlink" title="2017-03-11 蚂蚁金服 分布式计算"></a><code>2017-03-11 蚂蚁金服 分布式计算</code></h1><p>计算机网络：</p>
+<h1 id="2017-03-11-蚂蚁金服-分布式计算-30"><a href="#2017-03-11-蚂蚁金服-分布式计算-30" class="headerlink" title="2017-03-11 蚂蚁金服 分布式计算(30+)"></a><code>2017-03-11 蚂蚁金服 分布式计算(30+)</code></h1><p>计算机网络：</p>
 <ul>
 <li>TCP 和UDP 的区别<br>有序数据传输<br>重发丢失的数据包<br>舍弃重复的数据包<br>无错误数据传输<br>阻塞/流量控制<br>面向连接（确认有创建三方交握，连接已创建才作传输。）</li>
 <li>TCP 报文内容<br>源端口 目的端口<br>序列号<br>确认号<br>头大小 标志位 窗口大小<br>校验和 紧急指针<br>选项字段<br>数据</li>
@@ -340,8 +340,10 @@ TIME_WAIT 是什么主动关闭端接收到FIN后，就发送ACK包，">
 </ul>
 <p>操作系统</p>
 <ul>
-<li>进程和线程的区别</li>
-<li>python 的线程和c 的线程一样吗，python 线程是不是只能占用一个核</li>
+<li><p>进程和线程的区别<br>一个程序至少有一个进程，一个进程至少有一个线程。线程的划分尺度小于进程，使得多线程程序的并发性高。<br>进程在执行的过程中有独立的内存单元，而多个线程共享内存，从而提高了程序的运行效率。<br>进程是具有一定独立个功能的程序关于某个数据集合上的一次运行活动，进程是系统进行资源分配和调度的独立单位。<br>线程是CPU调度的最小单位，新建线程的时候会申请thread ID, program counter, register set, stack; 与其他同一进程的线程共享code section, data section, open files and signals。<br>进程和线程的主要差别在于它们是不同的操作系统资源管理方式。进程有独立的地址空间，一个进程崩溃后，在保护模式下不会对其它进程产生影响，而线程只是一个进程中的不同执行路径。线程有自己的堆栈和局部变量，但线程之间没有单独的地址空间，一个线程死掉就等于整个进程死掉，所以多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些。但对于一些要求同时进行并且又要共享某些变量的并发操作，只能用线程，不能用进程。</p>
+</li>
+<li><p>python 的线程和c 的线程一样吗，python 线程是不是只能占用一个核</p>
+</li>
 </ul>
 <p>C 语言</p>
 <ul>
@@ -356,28 +358,46 @@ TIME_WAIT 是什么主动关闭端接收到FIN后，就发送ACK包，">
 <a id="more"></a>
 </li>
 </ul>
-<h1 id="2017-03-13-阿里-研发工程师C-C"><a href="#2017-03-13-阿里-研发工程师C-C" class="headerlink" title="2017-03-13 阿里 研发工程师C/C++"></a><code>2017-03-13 阿里 研发工程师C/C++</code></h1><p>  项目</p>
+<h1 id="2017-03-13-阿里-研发工程师C-C-50"><a href="#2017-03-13-阿里-研发工程师C-C-50" class="headerlink" title="2017-03-13 阿里 研发工程师C/C++(50+)"></a><code>2017-03-13 阿里 研发工程师C/C++(50+)</code></h1><p>项目</p>
 <ul>
-<li><p>项目架构</p>
-<ul>
+<li>项目架构</li>
 <li>负责的部分(权限认证，批量授权怎么解决)</li>
 </ul>
 <p>操作系统</p>
-</li>
-<li>线程的状态</li>
-<li><p>为什么需要线程同步</p>
+<ul>
+<li>线程的状态<br>create ready running blocking terminating</li>
+<li>为什么需要线程同步<br>线程之间可能共享一些资源，当多个线程同时读写同一份资源的时候可能会引起冲突。<br>线程同步的方法：互斥量，条件变量，屏障，信号量</li>
+</ul>
 <p>数据结构</p>
-</li>
+<ul>
 <li>双向链表删除节点</li>
-<li><p>哈希碰撞<br>散列函数的输入和输出不是唯一对应关系的，如果两个散列值相同，两个输入值很可能是相同的，但也可能不同，这种情况称为“哈希碰撞”，这通常是两个不同长度的输入值，刻意计算出相同的输出值。</p>
+<li>哈希碰撞<br>散列函数的输入和输出不是唯一对应关系的，如果两个散列值相同，两个输入值很可能是相同的，但也可能不同，这种情况称为“哈希碰撞”，这通常是两个不同长度的输入值，刻意计算出相同的输出值。</li>
+</ul>
 <p>计算机网络</p>
-</li>
+<ul>
 <li>TCP 三次握手过程<br>[SYN Seq=A]客户端通过向服务器端发送一个SYN来创建一个主动打开，作为三路握手的一部分。客户端把这段连接的序号设定为随机数A。<br>[SYN, ACK Seq=B, Ack=A+1]服务器端应当为一个合法的SYN回送一个SYN/ACK。ACK的确认码应为A+1，SYN/ACK包本身又有一个随机序号B。<br>[ACK Seq=A+1, Ack=B+1]最后，客户端再发送一个ACK。当服务端受到这个ACK的时候，就完成了三路握手，并进入了连接创建状态。此时包序号被设定为收到的确认号A+1，而响应则为B+1。</li>
 <li>TCP 报文内容<br><a href="https://zh.wikipedia.org/wiki/%E4%BC%A0%E8%BE%93%E6%8E%A7%E5%88%B6%E5%8D%8F%E8%AE%AE" target="_blank" rel="external">WiKI</a><br>源端口 目的端口<br>序列号<br>确认号<br>头长度 标志位 窗口大小<br>校验和 紧急指针<br>选项字段<br>数据</li>
-<li><p>HTTP 字段含义<br><a href="https://zh.wikipedia.org/zh-hans/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" target="_blank" rel="external">WIKI</a></p>
+<li>HTTP 字段含义<br><a href="https://zh.wikipedia.org/zh-hans/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" target="_blank" rel="external">WIKI</a><br>200 OK 204 No Content<br>301 资源移动到新位置  302 重定向 304 Not Modified<br>400 Bad Request 请求语法错误  401 Unauthorized  403 Forbidden 404 Not Found 405 Method Not Allowed<br>500 服务器错误 501 Not Implemented服务器无法识别请求的方法 504 Gateway Timeout</li>
+</ul>
 <p>数据库</p>
-</li>
+<ul>
 <li>索引的方式<br><a href="http://blog.csdn.net/kennyrose/article/details/7532032" target="_blank" rel="external">唯一索引，主键索引，聚集索引</a></li>
+</ul>
+<h1 id="2017-03-17-腾讯SNG事业部-测试开发方向-1h"><a href="#2017-03-17-腾讯SNG事业部-测试开发方向-1h" class="headerlink" title="2017-03-17 腾讯SNG事业部 测试开发方向(1h+)"></a><code>2017-03-17 腾讯SNG事业部 测试开发方向(1h+)</code></h1><p>项目：</p>
+<ul>
+<li>遇到的困难</li>
+<li>收获</li>
+<li>网站能支持的访问量</li>
+</ul>
+<p>语言：</p>
+<ul>
+<li>最熟悉的语言，语言的难点，怎么解决</li>
+<li>nodejs promise 原理</li>
+</ul>
+<p>数据结构与算法</p>
+<ul>
+<li>场景：给出根目录，根目录下有很多日志文件和文件夹，文件夹下有各自的日志文件和子文件夹；日志文件有不同级别的记录如error，info等，如何筛选出所需要的记录？<br>层序遍历</li>
+<li>继续上面场景：每个文件都非常大，一个一个文件处理会很慢，怎么进行筛选？<br>？？？</li>
 </ul>
 
       
@@ -590,7 +610,7 @@ TIME_WAIT 是什么主动关闭端接收到FIN后，就发送ACK包，">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2017-03-11-蚂蚁金服-分布式计算"><span class="nav-number">1.</span> <span class="nav-text">2017-03-11 蚂蚁金服 分布式计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017-03-13-阿里-研发工程师C-C"><span class="nav-number">2.</span> <span class="nav-text">2017-03-13 阿里 研发工程师C/C++</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2017-03-11-蚂蚁金服-分布式计算-30"><span class="nav-number">1.</span> <span class="nav-text">2017-03-11 蚂蚁金服 分布式计算(30+)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017-03-13-阿里-研发工程师C-C-50"><span class="nav-number">2.</span> <span class="nav-text">2017-03-13 阿里 研发工程师C/C++(50+)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017-03-17-腾讯SNG事业部-测试开发方向-1h"><span class="nav-number">3.</span> <span class="nav-text">2017-03-17 腾讯SNG事业部 测试开发方向(1h+)</span></a></li></ol></div>
             
           </div>
         </section>
