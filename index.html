@@ -373,6 +373,125 @@
             
               
                 
+                <a class="post-title-link" href="/2017/03/22/systemd-note/" itemprop="url">
+                  systemd-note
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-03-22T18:28:37+08:00" content="2017-03-22">
+              2017-03-22
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/03/22/systemd-note/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/22/systemd-note/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/03/22/systemd-note/" class="leancloud_visitors" data-flag-title="systemd-note">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Systemd 是 Linux 系统工具，用来启动守护进程，已成为大多数发行版的标准配置。</p>
+<p>ubuntu 从15 开始采用Systemd</p>
+<p>systemd配置文件存放在<code>/lib/systemd/system</code> 下<br>系统从<code>/etc/systemd/system/</code> 下的软链接寻找配置文件并启动服务</p>
+<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 启动一个服务</span></div><div class="line">$ <span class="string">systemctl </span><span class="string">start </span><span class="string">ssh.</span><span class="string">service</div><div class="line"></span></div><div class="line"><span class="comment"># 停止一个服务</span></div><div class="line">$ <span class="string">systemctl </span><span class="string">stop </span><span class="string">ssh.</span><span class="string">service</div><div class="line"></span></div><div class="line"><span class="comment"># 重启一个服务</span></div><div class="line">$ <span class="string">systemctl </span><span class="string">restart </span><span class="string">ssh.</span><span class="string">service</div><div class="line"></span></div><div class="line"><span class="comment"># 杀死一个服务的所有紫禁城</span></div><div class="line">$ <span class="string">systemctl </span><span class="string">kill </span><span class="string">ssh.</span><span class="string">service</div><div class="line"></span></div><div class="line"><span class="comment"># 重新加载一个服务的配置文件</span></div><div class="line">$ <span class="string">systemctl </span><span class="string">reload </span><span class="string">ssh.</span><span class="string">service</div><div class="line"></span></div><div class="line"><span class="comment"># 重新加载所有修改过的配置文件</span></div><div class="line">$ <span class="string">systemctl </span><span class="string">daemon-reload</div><div class="line"></span></div><div class="line"><span class="comment"># 显示某个Unit 的所有底层参数</span></div><div class="line">$ <span class="string">systemctl </span><span class="string">show </span><span class="string">ssh.</span><span class="string">service</div><div class="line"></span></div><div class="line"><span class="comment"># 列出所有配置文件以及状态</span></div><div class="line">$ <span class="string">systemctl </span><span class="built_in">list-unit-files</span></div><div class="line"></div><div class="line"><span class="comment"># 查看某个Unit 的运行状态</span></div><div class="line">$ <span class="string">systemctl </span><span class="string">status </span><span class="string">ssh.</span><span class="string">service </span></div><div class="line"></div><div class="line"><span class="comment"># 查看配置文件的内容</span></div><div class="line">$ <span class="string">systemctl </span><span class="string">cat </span><span class="string">ssh.</span><span class="string">service</div><div class="line"></span></div><div class="line"><span class="comment"># 启用一个服务</span></div><div class="line">$ <span class="string">systemctl </span><span class="string">enable </span><span class="string">ssh.</span><span class="string">service</div><div class="line"></span></div><div class="line"><span class="comment"># 禁用一个服务</span></div><div class="line">$ <span class="string">systemctl </span><span class="string">disable </span><span class="string">ssh.</span><span class="string">service</div><div class="line"></span></div><div class="line"><span class="comment"># 查看启动时默认的Target</span></div><div class="line">$ <span class="string">systemctl </span><span class="built_in">get-default</span></div><div class="line"></div><div class="line"><span class="comment"># 设置启动时默认的Target</span></div><div class="line">$ <span class="string">systemctl </span><span class="built_in">set-default</span> <span class="string">multi-user </span><span class="string">target</div><div class="line"></span></div><div class="line"><span class="comment"># 查看日志</span></div><div class="line">$ <span class="string">journalctl </span>-<span class="string">xe</span></div></pre></td></tr></table></figure>
+<p>修改配置文件之后要重新加载配置文件，再重新启动，否则修改不会生效。</p>
+<p>Unit 区块是配置文件的第一个区块，定义Unit 的描述和其他Unit 的关系</p>
+<p>Install 通常是最后一个区块，用来定义如何启动，是否开机启动。</p>
+<p>Service 是Service 的配置（如启动服务的命令，重启的配置），只有Service 类型的Unit 才有这个区块</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/03/22/systemd-note/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/03/15/JS-原型/" itemprop="url">
                   JS-原型
                 </a>
@@ -1292,125 +1411,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/23/apue-note/" itemprop="url">
-                  apue-note
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-12-23T20:29:44+08:00" content="2016-12-23">
-              2016-12-23
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/23/apue-note/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/23/apue-note/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/23/apue-note/" class="leancloud_visitors" data-flag-title="apue-note">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <center><embed src="//music.163.com/style/swf/widget.swf?sid=33516497&type=2&auto=0&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed></center>
-
-<blockquote>
-<p>反正神也不會管我的事，那就更加如此吧。</p>
-</blockquote>
-<h1 id="名词"><a href="#名词" class="headerlink" title="名词"></a>名词</h1><p><code>原子操作</code> 指的是由多步组成的一个操作。如果该操作原子地执行，则要么执行完所有的步骤，要么一步也不执行，不可能只执行所有步骤的一个子集。</p>
-<p><code>STDIN_FILENO</code> <code>int fd</code></p>
-<p><code>stdin</code> <code>FILE *stream</code></p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/23/apue-note/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1456,7 +1456,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">59</span>
+              <span class="site-state-item-count">60</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
