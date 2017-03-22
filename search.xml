@@ -10,6 +10,20 @@
 
     
     <entry>
+      <title><![CDATA[内存字节对齐]]></title>
+      <url>%2F2017%2F03%2F22%2F%E5%86%85%E5%AD%98%E5%AD%97%E8%8A%82%E5%AF%B9%E9%BD%90%2F</url>
+      <content type="text"><![CDATA[５分钟搞定内存字节对齐 1234567891011121314151617181920212223242526272829303132#include &lt;iostream&gt;#include &lt;cstdio&gt;// #pragma pack(8)struct st &#123; int b; // 0-3 char c; // 4 double a; // 8-15&#125;;struct st1 &#123; int b; // 0-3 double a; // 8-15 char c; // 16&#125;;struct st2 &#123; int a; // 0-3 int b; // 4-7 int c; // 8-11 st s; // 16-31&#125;;int main (void)&#123; printf("%lu %lu %lu\n", sizeof(st), sizeof(st1), sizeof(st2)); // 16 24 32 // 若#pragma pack(1) -&gt; 13 13 25 // 若#pragma pack(2) -&gt; 14 14 26 // 若#pragma pack(4) -&gt; 16 16 28 // 若#pragma pack(8) -&gt; 16 24 32&#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[UML-note]]></title>
+      <url>%2F2017%2F03%2F22%2FUML-note%2F</url>
+      <content type="text"><![CDATA[UML简介UML 是一种对软件密集型系统的制品进行下列工作的语言，这些工作包括： 可视化 visualizing 详述 specifying 构造 constructing 文档化 documenting UML 的构成 视图 views 图 diagrams 模型元素 通用机制 视图Use-Case ViewLogical ViewProcess ViewComponent ViewDeployment View 图类图 class diagram对象图 object diagram用例图 use case diagram时序图 sequence diagram协作图 conllaboration diagram状态图 statechart diagram活动图 activity diagram组件图 component diagram部署图 deployment diagram 模型元素事物 things 结构事物 structural things类接口协作用例活动类组件节点 行为事物 behavioral things交互状态机 分组事物 grouping things分组事物只有一种： 包包是一种将有组织的元素分组的机制 注释事物 annotational things UML 中的关系 relationships 关联 association 依赖 dependency 泛化 generalization 实现 realization 聚合 polymerization 通用机制 修饰 注释 规格说明 通用划分 扩展机制 UML 的扩展组件 构造型 标记值 约束]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[systemd-note]]></title>
       <url>%2F2017%2F03%2F22%2Fsystemd-note%2F</url>
       <content type="text"><![CDATA[Systemd 是 Linux 系统工具，用来启动守护进程，已成为大多数发行版的标准配置。 ubuntu 从15 开始采用Systemd systemd配置文件存放在/lib/systemd/system 下系统从/etc/systemd/system/ 下的软链接寻找配置文件并启动服务 1234567891011121314151617181920212223242526272829303132333435363738394041424344# 启动一个服务$ systemctl start ssh.service# 停止一个服务$ systemctl stop ssh.service# 重启一个服务$ systemctl restart ssh.service# 杀死一个服务的所有紫禁城$ systemctl kill ssh.service# 重新加载一个服务的配置文件$ systemctl reload ssh.service# 重新加载所有修改过的配置文件$ systemctl daemon-reload# 显示某个Unit 的所有底层参数$ systemctl show ssh.service# 列出所有配置文件以及状态$ systemctl list-unit-files# 查看某个Unit 的运行状态$ systemctl status ssh.service # 查看配置文件的内容$ systemctl cat ssh.service# 启用一个服务$ systemctl enable ssh.service# 禁用一个服务$ systemctl disable ssh.service# 查看启动时默认的Target$ systemctl get-default# 设置启动时默认的Target$ systemctl set-default multi-user target# 查看日志$ journalctl -xe 修改配置文件之后要重新加载配置文件，再重新启动，否则修改不会生效。 Unit 区块是配置文件的第一个区块，定义Unit 的描述和其他Unit 的关系 Install 通常是最后一个区块，用来定义如何启动，是否开机启动。 Service 是Service 的配置（如启动服务的命令，重启的配置），只有Service 类型的Unit 才有这个区块]]></content>
