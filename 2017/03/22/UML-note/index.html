@@ -119,7 +119,15 @@ UML 的构成
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/UML3-2-%E5%9B%BE%E7%89%871.png">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/UML3-4-%E5%9B%BE%E7%89%871.png">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/UML3-5%E5%9B%BE%E7%89%871.png">
-<meta property="og:updated_time" content="2017-03-23T08:58:27.333Z">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/UML4-1%E5%9B%BE%E7%89%871.png">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/UML4-2%E5%9B%BE%E7%89%871.png">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/UML4-3%E5%9B%BE%E7%89%871.png">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/UML4-4%E5%9B%BE%E7%89%871.png">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/UML4-5%E5%9B%BE%E7%89%871.png">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/UML4-6%E5%9B%BE%E7%89%872.png">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/uml4-7%E5%9B%BE%E7%89%872.png">
+<meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/UML4-8%E5%9B%BE%E7%89%872.png">
+<meta property="og:updated_time" content="2017-03-24T14:30:01.330Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UML-note">
 <meta name="twitter:description" content="UML简介UML 是一种对软件密集型系统的制品进行下列工作的语言，这些工作包括：
@@ -421,6 +429,20 @@ UML 的构成
 </ul>
 <p><code>事件流</code><br>事件流的描述是独立于实现方法的，描述系统“做什么”，而不是“怎么做”<br>事件流文件的组成：简要说明，前提条件，后置条件，事件流程</p>
 <p><img src="http://ob4a6y748.bkt.clouddn.com/UML3-%E5%9B%BE%E7%89%871.png" alt="uml3-0"><br><img src="http://ob4a6y748.bkt.clouddn.com/UML3-1-%E5%9B%BE%E7%89%871.png" alt="uml3-1"><br><img src="http://ob4a6y748.bkt.clouddn.com/UML3-2-%E5%9B%BE%E7%89%871.png" alt="uml3-2"><br><img src="http://ob4a6y748.bkt.clouddn.com/UML3-4-%E5%9B%BE%E7%89%871.png" alt="uml3-4"><br><img src="http://ob4a6y748.bkt.clouddn.com/UML3-5%E5%9B%BE%E7%89%871.png" alt="uml3-5"></p>
+<hr>
+<h1 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h1><p>类图的元素， 类， 接口， 类之间的关系， 分析阶段的类图， 设计阶段的类图</p>
+<p>类图是描述类，接口以及他们之间关系的图</p>
+<p>类图的元素</p>
+<ul>
+<li><code>类</code> 包括名称(name), 属性(attribute), 和操作(operation)<br>类的属性可见性：public(+) private(-) protected(#) package(~)</li>
+<li><code>接口</code></li>
+<li><code>依赖关系</code> 客户以某种形式依赖于提供者<br>依赖关系的分类： 使用依赖(usage), 抽象依赖(abstraction), 授权依赖(permission), 绑定依赖(binding)</li>
+<li><code>泛化关系</code></li>
+<li><code>关联关系</code>: 名称name，角色role，多重性multiplicity，聚合关系aggregation，组合关系composition，导航性navigation<br>名称：使用一个动词或动词短语来命名关联，关联的名称非必须; 用户—使用&gt;—计算机<br>角色：一个类对另一个类表现出来的职责; 学生–+学习者—-+教学者–学校<br>多重性：指有多少个对象可以参与关联; 学校n–+教学者—-+学习者–1..n学生<br>聚合关系：表示整体与部分关系的关联; 大学〇1—-1..n学院<br>组合关系：组合是聚合关系中一种特殊情况，是更强形式的聚合</li>
+<li><code>实现关系</code></li>
+</ul>
+<p><img src="http://ob4a6y748.bkt.clouddn.com/UML4-1%E5%9B%BE%E7%89%871.png" alt="uml4-1"><br><img src="http://ob4a6y748.bkt.clouddn.com/UML4-2%E5%9B%BE%E7%89%871.png" alt="uml4-2"><br><img src="http://ob4a6y748.bkt.clouddn.com/UML4-3%E5%9B%BE%E7%89%871.png" alt="uml4-3"></p>
+<center><strong>接口</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML4-4%E5%9B%BE%E7%89%871.png" alt="uml4-4"><br><center><strong>依赖关系</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML4-5%E5%9B%BE%E7%89%871.png" alt="uml4-5"><br><center><strong>泛化关系</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML4-6%E5%9B%BE%E7%89%872.png" alt="uml4-6"><br><center><strong>关联关系</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/uml4-7%E5%9B%BE%E7%89%872.png" alt="uml4-7"><br><center><strong>聚合关系</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML4-8%E5%9B%BE%E7%89%872.png" alt="uml4-8"><br><center><strong>组合关系</strong></center>
 
       
     </div>
@@ -635,7 +657,7 @@ UML 的构成
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UML简介"><span class="nav-number">1.</span> <span class="nav-text">UML简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UML-的构成"><span class="nav-number">2.</span> <span class="nav-text">UML 的构成</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#视图"><span class="nav-number">2.1.</span> <span class="nav-text">视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图"><span class="nav-number">2.2.</span> <span class="nav-text">图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型元素"><span class="nav-number">2.3.</span> <span class="nav-text">模型元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#事物-things"><span class="nav-number">2.3.1.</span> <span class="nav-text">事物 things</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UML-中的关系-relationships"><span class="nav-number">2.3.2.</span> <span class="nav-text">UML 中的关系 relationships</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通用机制"><span class="nav-number">2.4.</span> <span class="nav-text">通用机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UML-的扩展组件"><span class="nav-number">2.5.</span> <span class="nav-text">UML 的扩展组件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用例图"><span class="nav-number">3.</span> <span class="nav-text">用例图</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UML简介"><span class="nav-number">1.</span> <span class="nav-text">UML简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UML-的构成"><span class="nav-number">2.</span> <span class="nav-text">UML 的构成</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#视图"><span class="nav-number">2.1.</span> <span class="nav-text">视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图"><span class="nav-number">2.2.</span> <span class="nav-text">图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型元素"><span class="nav-number">2.3.</span> <span class="nav-text">模型元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#事物-things"><span class="nav-number">2.3.1.</span> <span class="nav-text">事物 things</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UML-中的关系-relationships"><span class="nav-number">2.3.2.</span> <span class="nav-text">UML 中的关系 relationships</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通用机制"><span class="nav-number">2.4.</span> <span class="nav-text">通用机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UML-的扩展组件"><span class="nav-number">2.5.</span> <span class="nav-text">UML 的扩展组件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用例图"><span class="nav-number">3.</span> <span class="nav-text">用例图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类图"><span class="nav-number">4.</span> <span class="nav-text">类图</span></a></li></ol></div>
             
           </div>
         </section>
