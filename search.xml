@@ -187,6 +187,44 @@
 </ul>
 <p><img src="http://ob4a6y748.bkt.clouddn.com/UML4-1%E5%9B%BE%E7%89%871.png" alt="uml4-1"><br><img src="http://ob4a6y748.bkt.clouddn.com/UML4-2%E5%9B%BE%E7%89%871.png" alt="uml4-2"><br><img src="http://ob4a6y748.bkt.clouddn.com/UML4-3%E5%9B%BE%E7%89%871.png" alt="uml4-3"></p>
 <center><strong>接口</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML4-4%E5%9B%BE%E7%89%871.png" alt="uml4-4"><br><center><strong>依赖关系</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML4-5%E5%9B%BE%E7%89%871.png" alt="uml4-5"><br><center><strong>泛化关系</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML4-6%E5%9B%BE%E7%89%872.png" alt="uml4-6"><br><center><strong>关联关系</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/uml4-7%E5%9B%BE%E7%89%872.png" alt="uml4-7"><br><center><strong>聚合关系</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML4-8%E5%9B%BE%E7%89%872.png" alt="uml4-8"><br><center><strong>组合关系</strong></center>
+
+<hr>
+<h1 id="交互图"><a href="#交互图" class="headerlink" title="交互图"></a>交互图</h1><p>序列图简介，序列图组成，用例图、类图、序列图之间的关系<br>BCE 模式，Frame，组合片段，协作图</p>
+<p>交互图描述系统中对象之间通过消息通信的图，交互图包括：<code>序列图</code>（时序图，顺序图），<code>协作图</code>（通信图）</p>
+<p>序列图包含4个元素：</p>
+<ul>
+<li>对象<br>(将对象至于顶部说明交互开始的时候对象就已经存在了，若不在顶部则说明对象在交互的过程中被创建)<br>对象的创建（见下图）；对象的注销（在生命线终止点放置一个‘X’号，见下图）</li>
+<li>生命线</li>
+<li>消息<br>（消息是对象之间某种形式的通信，可以是信号，也可以是调用，消息可以用于在对象间传递参数）<br>消息的类型：call send return create destroy<br>消息的编号：顺序编号（从1开始）；嵌套编号</li>
+<li>激活</li>
+</ul>
+<p><img src="http://ob4a6y748.bkt.clouddn.com/UML5-1%E5%9B%BE%E7%89%871.png" alt="UML5-1"></p>
+<center><strong>序列图的元素</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML5-2%E5%9B%BE%E7%89%871.png" alt="UML5-2"><br><img src="http://ob4a6y748.bkt.clouddn.com/UML5-3%E5%9B%BE%E7%89%871.png" alt="UML5-3"><br><center><strong>创建对象的两种表示方法（序列图）</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML5-4%E5%9B%BE%E7%89%871.png" alt="UML5-4"><br><center><strong>注销对象</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML5-5%E5%9B%BE%E7%89%871.png" alt="UML5-5"><br><center><strong>消息的类型</strong></center>
+
+<p><strong>BCE模式</strong>(Robustness 分析法，在系统分析阶段采用的分析模式)<br>B: Boundary; C: Control; E: Entity</p>
+<ul>
+<li>边界类：隔离系统内部和外部，负责接受参与者的消息</li>
+<li>控制类：控制类对应用例，用来控制用例执行期间的复杂运算或者业务逻辑; 分析阶段通常针对一个用例生成一个控制类</li>
+<li>实体类：对应于类图中领域概念中的类，封装了数据结构和数据存储有关的类</li>
+</ul>
+<p><img src="http://ob4a6y748.bkt.clouddn.com/UML5-6%E5%9B%BE%E7%89%871.png" alt="UML5-6"></p>
+<center><strong>增加书籍序列图1</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML5-7%E5%9B%BE%E7%89%871.png" alt="UML5-7"><br><center><strong>增加书籍序列图2</strong></center>
+
+<p><strong>组合片段</strong><br>表示循环和分支, 引入<code>交互片段</code>，<code>区域</code>和<code>操作符</code>的概念<br>一个<code>交互片段</code>可以包含多个<code>区域</code>，每个区域拥有一个<code>监护条件</code>和一个<code>复合语句</code><br>操作符：opt，alt, loop, break, par, critical, ref</p>
+<p><img src="http://ob4a6y748.bkt.clouddn.com/UML5-8%E5%9B%BE%E7%89%871.png" alt="UML5-8"></p>
+<center><strong>Frame</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML5-9%E5%9B%BE%E7%89%871.png" alt="UML5-9"><br><center><strong>组合片段</strong></center>
+
+<p><strong>协作图</strong><br>也成为通信图，描述系统中对象间通过消息进行的交互，强调了对象在交互行为中承担的角色</p>
+<p>协作图包含</p>
+<ul>
+<li>对象(Object)</li>
+<li>链（Link）</li>
+<li>消息（Message）</li>
+</ul>
+<p><img src="http://ob4a6y748.bkt.clouddn.com/UML5-10%E5%9B%BE%E7%89%871.png" alt="UML5-10"></p>
+<center><strong>协作图</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML5-11%E5%9B%BE%E7%89%871.png" alt="UML5-11"><br><center><strong>增加书籍协作图1</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML5-12%E5%9B%BE%E7%89%871.png" alt="UML5-12"><br><center><strong>增加书籍协作图2</strong></center>
+
+<p>序列图描述交互过程中时间顺序，协作图描述对象之间的关系；两种图的语义是等价的</p>
 ]]></content>
     </entry>
     
