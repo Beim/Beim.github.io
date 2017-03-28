@@ -139,7 +139,7 @@ UML 的构成
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/UML5-10%E5%9B%BE%E7%89%871.png">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/UML5-11%E5%9B%BE%E7%89%871.png">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/UML5-12%E5%9B%BE%E7%89%871.png">
-<meta property="og:updated_time" content="2017-03-26T13:23:32.628Z">
+<meta property="og:updated_time" content="2017-03-28T10:24:42.311Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UML-note">
 <meta name="twitter:description" content="UML简介UML 是一种对软件密集型系统的制品进行下列工作的语言，这些工作包括：
@@ -493,6 +493,39 @@ UML 的构成
 <center><strong>协作图</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML5-11%E5%9B%BE%E7%89%871.png" alt="UML5-11"><br><center><strong>增加书籍协作图1</strong></center><br><img src="http://ob4a6y748.bkt.clouddn.com/UML5-12%E5%9B%BE%E7%89%871.png" alt="UML5-12"><br><center><strong>增加书籍协作图2</strong></center>
 
 <p>序列图描述交互过程中时间顺序，协作图描述对象之间的关系；两种图的语义是等价的</p>
+<hr>
+<h1 id="状态图"><a href="#状态图" class="headerlink" title="状态图"></a>状态图</h1><p>状态图主要用来描述一个对象在生存期间的动态行为，表现为一个对象所经历的状态序列，引起状态转移的<code>事件Event</code>，以及因状态转移而伴随的<code>动作Action</code></p>
+<p>状态图元素</p>
+<ul>
+<li><code>状态State</code>(圆角矩形)指在对象的生命周期中某个条件或者状态</li>
+<li><code>初始状态Initial State</code>(实心圆点，通常带有已经过初始化的含义)</li>
+<li><code>终止状态Final State</code>（圆形内嵌圆点）</li>
+<li><code>转移Transaction</code>(带箭头的实线)两个状态间的关系，表示对象在<code>源状态</code>中执行一定的动作，并在某个特定<code>事件</code>发生而且某个特定的<code>警界条件</code>满足时进入<code>目标状态</code><br><code>触发事件</code>是转移的诱因<br><code>警戒条件</code>警戒条件满足时，事件才会引发状态转移<br><code>结果Effect</code>对象状态转移的后果<br><code>动作Actions</code>动作是可执行的原子操作,执行时间可忽略不计</li>
+<li><code>组合状态</code></li>
+<li><code>进入节点</code></li>
+<li><code>退出节点</code></li>
+<li><code>历史状态</code></li>
+</ul>
+<p><img src="" alt="UML6-1"></p>
+<center><strong>初始状态，终止状态</strong></center><br><img src="" alt="UML6-2"><br><center><strong>转移</strong></center><br><img src="" alt="UML6-3"><br><center><strong>图书-借阅者的状态图</strong></center><br><img src="" alt="UML6-4"><br><center><strong>图书的状态图</strong></center>
+
+<hr>
+<h1 id="活动图"><a href="#活动图" class="headerlink" title="活动图"></a>活动图</h1><p>活动图简介，活动图元素，图书馆活动图，活动图和状态图的区别，活动图和流动图的区别</p>
+<p>活动图描述活动的顺序，展现从一个活动到另一个活动的控制流；活动图在本质上是一种流程图，着重表现从一个活动到另一个活动的控制流</p>
+<p>活动图元素</p>
+<ul>
+<li><code>活动状态 Action State</code></li>
+<li><code>开始点</code></li>
+<li><code>结束点</code></li>
+<li><code>分支与合并</code></li>
+<li><code>分叉与会和</code> 用于将控制图分为两个或者多个并发运行的分支</li>
+<li><code>泳道</code></li>
+<li><code>对象流</code></li>
+</ul>
+<p><img src="" alt="UML6-5"></p>
+<center><strong>活动图简介</strong></center><br><img src="" alt="UML6-6"><br><center><strong>对象流</strong></center>
+
+<p>活动图表现从一个活动到另一个活动的控制流, 是内部处理驱动的过程<br>状态图描述从一个状态到另一个状态的流程，主要有外部事件的参与</p>
 
       
     </div>
@@ -707,7 +740,7 @@ UML 的构成
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UML简介"><span class="nav-number">1.</span> <span class="nav-text">UML简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UML-的构成"><span class="nav-number">2.</span> <span class="nav-text">UML 的构成</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#视图"><span class="nav-number">2.1.</span> <span class="nav-text">视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图"><span class="nav-number">2.2.</span> <span class="nav-text">图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型元素"><span class="nav-number">2.3.</span> <span class="nav-text">模型元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#事物-things"><span class="nav-number">2.3.1.</span> <span class="nav-text">事物 things</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UML-中的关系-relationships"><span class="nav-number">2.3.2.</span> <span class="nav-text">UML 中的关系 relationships</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通用机制"><span class="nav-number">2.4.</span> <span class="nav-text">通用机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UML-的扩展组件"><span class="nav-number">2.5.</span> <span class="nav-text">UML 的扩展组件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用例图"><span class="nav-number">3.</span> <span class="nav-text">用例图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类图"><span class="nav-number">4.</span> <span class="nav-text">类图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#交互图"><span class="nav-number">5.</span> <span class="nav-text">交互图</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UML简介"><span class="nav-number">1.</span> <span class="nav-text">UML简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UML-的构成"><span class="nav-number">2.</span> <span class="nav-text">UML 的构成</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#视图"><span class="nav-number">2.1.</span> <span class="nav-text">视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图"><span class="nav-number">2.2.</span> <span class="nav-text">图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型元素"><span class="nav-number">2.3.</span> <span class="nav-text">模型元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#事物-things"><span class="nav-number">2.3.1.</span> <span class="nav-text">事物 things</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UML-中的关系-relationships"><span class="nav-number">2.3.2.</span> <span class="nav-text">UML 中的关系 relationships</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通用机制"><span class="nav-number">2.4.</span> <span class="nav-text">通用机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UML-的扩展组件"><span class="nav-number">2.5.</span> <span class="nav-text">UML 的扩展组件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用例图"><span class="nav-number">3.</span> <span class="nav-text">用例图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类图"><span class="nav-number">4.</span> <span class="nav-text">类图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#交互图"><span class="nav-number">5.</span> <span class="nav-text">交互图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#状态图"><span class="nav-number">6.</span> <span class="nav-text">状态图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#活动图"><span class="nav-number">7.</span> <span class="nav-text">活动图</span></a></li></ol></div>
             
           </div>
         </section>
