@@ -261,6 +261,122 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/25/命令行传输文件/" itemprop="url">
+                  命令行传输文件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-11-25T19:45:36+08:00" content="2016-11-25">
+              2016-11-25
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/25/命令行传输文件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/11/25/命令行传输文件/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/11/25/命令行传输文件/" class="leancloud_visitors" data-flag-title="命令行传输文件">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h1><p>在linux下一般用scp这个命令来通过ssh传输文件。</p>
+<p>1、从服务器上下载文件<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp username<span class="variable">@servername:</span>/path/filename /var/www/local_dir（本地目录）</div><div class="line"></div><div class="line"> 例如scp root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span>:/var/www/test.txt  把<span class="number">192.168</span>.<span class="number">0.101</span>上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）</div></pre></td></tr></table></figure></p>
+<p>2、上传本地文件到服务器<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp /path/filename username<span class="variable">@servername</span><span class="symbol">:/path</span>   </div><div class="line"></div><div class="line">例如scp /var/www/test.php  root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span><span class="symbol">:/var/www/</span>  把本机/var/www/目录下的test.php文件上传到<span class="number">192.168</span>.<span class="number">0</span>.<span class="number">101</span>这台服务器上的/var/www/目录中</div></pre></td></tr></table></figure></p>
+<p>3、从服务器下载整个目录<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp -r username<span class="variable">@servername:</span>/var/www/remote_dir/（远程目录） /var/www/local_dir（本地目录）</div><div class="line"></div><div class="line">例如:scp -r root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span>:/var/www/test  /var/www/</div></pre></td></tr></table></figure></p>
+<p>4、上传目录到服务器<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp  -r local_dir username<span class="variable">@servername:</span>remote_dir</div><div class="line"></div><div class="line">例如：scp -r test  root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span>:/var/www/   把当前目录下的test目录上传到服务器的/var/www/ 目录</div></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/11/25/命令行传输文件/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/24/ubuntu下mongodb安装使用/" itemprop="url">
                   ubuntu下mongodb安装使用
                 </a>
@@ -1307,121 +1423,6 @@ IBM 认为的
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/01/2013-蓝色茉莉/" itemprop="url">
-                  2013-蓝色茉莉
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-01T22:44:35+08:00" content="2016-11-01">
-              2016-11-01
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/01/2013-蓝色茉莉/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/11/01/2013-蓝色茉莉/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/01/2013-蓝色茉莉/" class="leancloud_visitors" data-flag-title="2013-蓝色茉莉">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="http://img31.mtime.cn/pi/2014/01/10/162701.70021676_1000X1000.jpg" alt="lsml"></p>
-<blockquote>
-<p>看到服务员了吗, 我还想要杯斯特利*马提尼</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/01/2013-蓝色茉莉/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1467,7 +1468,7 @@ IBM 认为的
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">63</span>
+              <span class="site-state-item-count">64</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

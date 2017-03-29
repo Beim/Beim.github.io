@@ -261,6 +261,118 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/05/JS-类和对象/" itemprop="url">
+                  JS-类和对象
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-05T09:33:11+08:00" content="2016-08-05">
+              2016-08-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/05/JS-类和对象/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/05/JS-类和对象/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/05/JS-类和对象/" class="leancloud_visitors" data-flag-title="JS-类和对象">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="构造函数法"><a href="#构造函数法" class="headerlink" title="构造函数法"></a>构造函数法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cat</span>(<span class="params">like</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> nickName = <span class="string">'myNickName'</span></div><div class="line">    <span class="keyword">this</span>.callNickName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> nickName;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">this</span>.name = <span class="string">'myName'</span></div><div class="line">    <span class="keyword">this</span>.like = like</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> cat1 = <span class="keyword">new</span> Cat(<span class="string">'dog'</span>)</div><div class="line"><span class="built_in">console</span>.log(cat1.name) <span class="comment">// myName</span></div><div class="line"><span class="built_in">console</span>.log(cat1.nickName) <span class="comment">// undefined</span></div><div class="line"><span class="built_in">console</span>.log(cat1.callNickName()) <span class="comment">// myNickName</span></div><div class="line"><span class="built_in">console</span>.log(cat1.like) <span class="comment">// dog</span></div><div class="line"><span class="comment">// 属性和方法也可以定义在function对象的prototype对象上</span></div><div class="line">Cat.prototype.makeSound = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'miao'</span>)</div><div class="line">&#125;</div><div class="line">cat1.makeSound() <span class="comment">// miao</span></div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/05/JS-类和对象/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/05/测试框架AVA/" itemprop="url">
                   测试框架AVA
                 </a>
@@ -632,7 +744,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">63</span>
+              <span class="site-state-item-count">64</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

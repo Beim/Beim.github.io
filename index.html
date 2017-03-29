@@ -373,6 +373,120 @@
             
               
                 
+                <a class="post-title-link" href="/2017/03/29/C-来自张总的教诲/" itemprop="url">
+                  C-来自张总的教诲
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-03-29T19:07:21+08:00" content="2017-03-29">
+              2017-03-29
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/03/29/C-来自张总的教诲/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/29/C-来自张总的教诲/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/03/29/C-来自张总的教诲/" class="leancloud_visitors" data-flag-title="C-来自张总的教诲">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>代码<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">func1</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2)</span> </span>&#123;</div><div class="line">  num1 = num1 ^ num2;</div><div class="line">  <span class="keyword">return</span> num1;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">func2</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> num3 = num1 ^ num2;</div><div class="line">  <span class="keyword">return</span> num3;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">func3</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2)</span> </span>&#123;</div><div class="line">  <span class="keyword">return</span> num1 ^ num2;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> func4(num1, num2) (num1 ^ num2)</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1000000000</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *args[])</span> </span>&#123;</div><div class="line">  <span class="keyword">if</span> (argc &lt; <span class="number">2</span>) &#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"need arguments\n"</span>);</div><div class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">int</span> num1 = <span class="number">1</span>;</div><div class="line">  <span class="keyword">int</span> num2 = <span class="number">2</span>;</div><div class="line">  <span class="keyword">int</span> num3;</div><div class="line">  <span class="keyword">if</span> (args[<span class="number">1</span>][<span class="number">0</span>] == <span class="string">'0'</span>) &#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</div><div class="line">      num3 = func1(num1, num2);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">else</span> <span class="keyword">if</span> (args[<span class="number">1</span>][<span class="number">0</span>] == <span class="string">'1'</span>) &#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</div><div class="line">      num3 = func2(num1, num2);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">else</span> <span class="keyword">if</span> (args[<span class="number">1</span>][<span class="number">0</span>] == <span class="string">'2'</span>) &#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</div><div class="line">      num3 = func3(num1, num2);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</div><div class="line">      num3 = func4(num1, num2);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">~/user/temp</div><div class="line">$ time r <span class="number">0</span></div><div class="line"></div><div class="line">real	<span class="number">0</span>m2<span class="number">.854</span>s</div><div class="line">user	<span class="number">0</span>m2<span class="number">.852</span>s</div><div class="line">sys	<span class="number">0</span>m0<span class="number">.004</span>s</div><div class="line"></div><div class="line">~/user/temp</div><div class="line">$ time r <span class="number">1</span></div><div class="line"></div><div class="line">real	<span class="number">0</span>m2<span class="number">.854</span>s</div><div class="line">user	<span class="number">0</span>m2<span class="number">.852</span>s</div><div class="line">sys	<span class="number">0</span>m0<span class="number">.000</span>s</div><div class="line"></div><div class="line">~/user/temp</div><div class="line">$ time r <span class="number">2</span></div><div class="line"></div><div class="line">real	<span class="number">0</span>m2<span class="number">.600</span>s</div><div class="line">user	<span class="number">0</span>m2<span class="number">.596</span>s</div><div class="line">sys	<span class="number">0</span>m0<span class="number">.000</span>s</div><div class="line"></div><div class="line">~/user/temp</div><div class="line">$ time r <span class="number">3</span></div><div class="line"></div><div class="line">real	<span class="number">0</span>m1<span class="number">.920</span>s</div><div class="line">user	<span class="number">0</span>m1<span class="number">.916</span>s</div><div class="line">sys	<span class="number">0</span>m0<span class="number">.000</span>s</div><div class="line"></div><div class="line">~/user/temp</div><div class="line">$</div></pre></td></tr></table></figure></p>
+<p>分析：堆和栈，函数调用的开销</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/03/29/C-来自张总的教诲/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/03/23/huawei-yunpingtai/" itemprop="url">
                   huawei-yunpingtai
                 </a>
@@ -1304,121 +1418,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/01/拉普拉斯的魔女-东野圭吾/" itemprop="url">
-                  拉普拉斯的魔女-东野圭吾
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-02-01T09:52:24+08:00" content="2017-02-01">
-              2017-02-01
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/02/01/拉普拉斯的魔女-东野圭吾/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/02/01/拉普拉斯的魔女-东野圭吾/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2017/02/01/拉普拉斯的魔女-东野圭吾/" class="leancloud_visitors" data-flag-title="拉普拉斯的魔女-东野圭吾">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="http://ob4a6y748.bkt.clouddn.com/lapulasi-IMG_4722.JPG" alt="lapulasi"></p>
-<blockquote>
-<p>人类是原子，即使每一个个体都很平凡，无自觉地活在世上，然而一旦成为集合体，就会戏剧性地实现物理法则。</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/02/01/拉普拉斯的魔女-东野圭吾/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1464,7 +1463,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">63</span>
+              <span class="site-state-item-count">64</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
