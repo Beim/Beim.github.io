@@ -145,7 +145,7 @@ UML 的构成
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/UML6-4%E5%9B%BE%E7%89%871.png">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/UML6-5%E5%9B%BE%E7%89%871.png">
 <meta property="og:image" content="http://ob4a6y748.bkt.clouddn.com/UML6-6%E5%9B%BE%E7%89%871.png">
-<meta property="og:updated_time" content="2017-03-29T14:33:59.108Z">
+<meta property="og:updated_time" content="2017-03-30T10:14:34.099Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UML-note">
 <meta name="twitter:description" content="UML简介UML 是一种对软件密集型系统的制品进行下列工作的语言，这些工作包括：
@@ -548,6 +548,35 @@ UML 的构成
 <p><img src="" alt="UML7-3"></p>
 <p><center><strong>部署图的例子</strong></center><br><img src="" alt="UML7-4"></p>
 <p><center><strong>部署图的例子</strong></center><br>在上图中，构造型指出了浏览器和应用服务器之间的连接使用 HTTP 协议，而应用服务器与数据服务器之间的连接使用 Java 的远程方法调用（RMI）协议</p>
+<hr>
+<h1 id="面向对象设计原则"><a href="#面向对象设计原则" class="headerlink" title="面向对象设计原则"></a>面向对象设计原则</h1><p>软件的可维护性与可复用性</p>
+<p>可扩展性和可插入性：</p>
+<ul>
+<li><code>“开放-封闭”原则</code>（OCP）<br>一个软件应该对扩展开放，对修改关闭</li>
+<li><code>里氏代换原则（LSP）</code><br>任何基类可以出现的地方，子类一定可以出现<br>里氏代换原则是实现“开放，封闭”原则的必要条件</li>
+<li><code>依赖倒置原则（DIP）</code><br>要依赖于抽象，不要依赖于实现</li>
+<li><code>组合/聚合复用原则（CARP）</code><br>尽量使用组合/聚合，而不是继承关系达到复用的目的<br>组合/聚合原则是实现“开放，封闭”原则的必要条件</li>
+</ul>
+<p>灵活性：</p>
+<ul>
+<li><code>迪米特法则（LoD）</code> 又称最少知道原则<br>一个软件实体应该尽可能少的与其他实体发生相互作用, 因此功能扩展时不会将修改的压力传递给其他模块</li>
+<li><code>接口隔离原则（ISP）</code><br>应该为客户提供尽可能小的单独接口，而不要提供大的总接口</li>
+<li><code>“开放-封闭”原则（OCP）</code></li>
+</ul>
+<p><strong>接口和抽象类</strong></p>
+<p>使用接口</p>
+<ul>
+<li>保证代码的可插入性</li>
+<li>为类提供混合类型，使具有多继承特性</li>
+</ul>
+<p>抽象类：</p>
+<ul>
+<li>所有父类都应该是抽象类</li>
+<li>具体类不是用来集成的</li>
+<li>抽象类应拥有尽可能多的代码</li>
+<li>抽象类应拥有尽可能少的数据</li>
+</ul>
+<p>接口和抽象类的区别<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">接口只定义子类行为，实现同一个接口的子类可能没有任何联系</div><div class="line">接口描述其子类具有的能力</div><div class="line">子类和抽象父类之间的 <span class="keyword">is</span> a 特点更强</div><div class="line">子类和父接口之间的<span class="keyword">is</span> a特点不强，更强调子类具有的一种能力</div><div class="line">抽象类一般是名词接口一般是形容词，也可以是名词</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -762,7 +791,7 @@ UML 的构成
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UML简介"><span class="nav-number">1.</span> <span class="nav-text">UML简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UML-的构成"><span class="nav-number">2.</span> <span class="nav-text">UML 的构成</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#视图"><span class="nav-number">2.1.</span> <span class="nav-text">视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图"><span class="nav-number">2.2.</span> <span class="nav-text">图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型元素"><span class="nav-number">2.3.</span> <span class="nav-text">模型元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#事物-things"><span class="nav-number">2.3.1.</span> <span class="nav-text">事物 things</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UML-中的关系-relationships"><span class="nav-number">2.3.2.</span> <span class="nav-text">UML 中的关系 relationships</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通用机制"><span class="nav-number">2.4.</span> <span class="nav-text">通用机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UML-的扩展组件"><span class="nav-number">2.5.</span> <span class="nav-text">UML 的扩展组件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用例图"><span class="nav-number">3.</span> <span class="nav-text">用例图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类图"><span class="nav-number">4.</span> <span class="nav-text">类图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#交互图"><span class="nav-number">5.</span> <span class="nav-text">交互图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#状态图"><span class="nav-number">6.</span> <span class="nav-text">状态图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#活动图"><span class="nav-number">7.</span> <span class="nav-text">活动图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组件图"><span class="nav-number">8.</span> <span class="nav-text">组件图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署图"><span class="nav-number">9.</span> <span class="nav-text">部署图</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UML简介"><span class="nav-number">1.</span> <span class="nav-text">UML简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UML-的构成"><span class="nav-number">2.</span> <span class="nav-text">UML 的构成</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#视图"><span class="nav-number">2.1.</span> <span class="nav-text">视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图"><span class="nav-number">2.2.</span> <span class="nav-text">图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型元素"><span class="nav-number">2.3.</span> <span class="nav-text">模型元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#事物-things"><span class="nav-number">2.3.1.</span> <span class="nav-text">事物 things</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UML-中的关系-relationships"><span class="nav-number">2.3.2.</span> <span class="nav-text">UML 中的关系 relationships</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通用机制"><span class="nav-number">2.4.</span> <span class="nav-text">通用机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UML-的扩展组件"><span class="nav-number">2.5.</span> <span class="nav-text">UML 的扩展组件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用例图"><span class="nav-number">3.</span> <span class="nav-text">用例图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类图"><span class="nav-number">4.</span> <span class="nav-text">类图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#交互图"><span class="nav-number">5.</span> <span class="nav-text">交互图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#状态图"><span class="nav-number">6.</span> <span class="nav-text">状态图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#活动图"><span class="nav-number">7.</span> <span class="nav-text">活动图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组件图"><span class="nav-number">8.</span> <span class="nav-text">组件图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署图"><span class="nav-number">9.</span> <span class="nav-text">部署图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象设计原则"><span class="nav-number">10.</span> <span class="nav-text">面向对象设计原则</span></a></li></ol></div>
             
           </div>
         </section>
