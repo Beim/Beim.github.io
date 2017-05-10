@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://beim.github.io/1970/01/02/2017-%E7%99%BD%E6%97%A5%E6%A2%A6/</loc>
-    <lastmod>2017-05-06T15:27:11.872Z</lastmod>
+    <lastmod>2017-05-10T23:46:36.957Z</lastmod>
     <data>
         <display>
         <title>2017-白日梦</title>
@@ -20,30 +20,13 @@
     
   <url>
     <loc>https://beim.github.io/3017/01/01/2017-%E6%94%B6%E8%97%8F/</loc>
-    <lastmod>2017-05-04T05:50:43.916Z</lastmod>
+    <lastmod>2017-05-08T12:23:57.895Z</lastmod>
     <data>
         <display>
         <title>2017-收藏</title>
         <pubTime>3017-01-01T02:31:59.000Z</pubTime>
         
         <tag>mark</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2017/04/20/UID-%E5%A4%8D%E4%B9%A0/</loc>
-    <lastmod>2017-04-21T14:43:16.654Z</lastmod>
-    <data>
-        <display>
-        <title>UID-复习</title>
-        <pubTime>2017-04-20T01:30:26.000Z</pubTime>
-        
-        <tag>notes</tag>
          
          
            
@@ -1020,6 +1003,23 @@
 
     
   <url>
+    <loc>https://beim.github.io/2016/08/08/React-Native-Startup/</loc>
+    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
+    <data>
+        <display>
+        <title>React-Native Startup</title>
+        <pubTime>2016-08-08T13:27:58.000Z</pubTime>
+        
+        <tag>React-Native</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
@@ -1045,23 +1045,6 @@
         <pubTime>2016-08-05T02:13:10.000Z</pubTime>
         
         <tag>git</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/08/08/React-Native-Startup/</loc>
-    <lastmod>2016-08-16T13:46:31.750Z</lastmod>
-    <data>
-        <display>
-        <title>React-Native Startup</title>
-        <pubTime>2016-08-08T13:27:58.000Z</pubTime>
-        
-        <tag>React-Native</tag>
          
          
            
