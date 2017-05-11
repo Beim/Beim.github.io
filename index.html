@@ -373,6 +373,120 @@
             
               
                 
+                <a class="post-title-link" href="/2017/05/11/C-可变参数/" itemprop="url">
+                  C-可变参数和默认参数
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-05-11T13:51:31+08:00" content="2017-05-11">
+              2017-05-11
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/05/11/C-可变参数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/11/C-可变参数/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/05/11/C-可变参数/" class="leancloud_visitors" data-flag-title="C-可变参数和默认参数">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h1><p>在看<code>C和指针</code>时发现的一个有趣的地方：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdarg.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">var_args_func</span><span class="params">(<span class="keyword">int</span> n_values, ...)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"n_values is %d\n"</span>, n_values);</div><div class="line">    va_list args;</div><div class="line">    va_start(args, n_values);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n_values; i++) &#123;</div><div class="line">        <span class="keyword">double</span> arg = va_arg(args, <span class="keyword">double</span>);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"arg is %lf\n"</span>, arg);</div><div class="line">        <span class="keyword">int</span> arg1 = va_arg(args, <span class="keyword">int</span>);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"arg is %d\n"</span>, arg1);</div><div class="line">    &#125;</div><div class="line">    va_end(args);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">test_var_args_func</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">float</span> f = <span class="number">6</span>;</div><div class="line">    var_args_func(<span class="number">3</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4.0</span>, <span class="number">5.0</span>, f);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    test_var_args_func();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面这段代码输出是<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">n_values <span class="keyword">is</span> <span class="number">3</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">4.000000</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">1</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">5.000000</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">2</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">6.000000</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">3</span></div></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/05/11/C-可变参数/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/03/22/内存字节对齐/" itemprop="url">
                   内存字节对齐
                 </a>
@@ -1269,121 +1383,6 @@
 </blockquote>
           <div class="post-more-link text-center">
             <a class="btn" href="/2017/02/01/拉普拉斯的魔女-东野圭吾/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/26/西川之南/" itemprop="url">
-                  西川之南
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-01-26T11:48:10+08:00" content="2017-01-26">
-              2017-01-26
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/01/26/西川之南/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/01/26/西川之南/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2017/01/26/西川之南/" class="leancloud_visitors" data-flag-title="西川之南">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="http://ob4a6y748.bkt.clouddn.com/xc-title-IMG_4336.JPG" alt="title"></p>
-<blockquote>
-<p><strong>2017年1月23日</strong></p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/01/26/西川之南/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>

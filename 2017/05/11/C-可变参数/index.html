@@ -82,19 +82,19 @@
 
 
 
-<meta name="description" content="在看C和指针时发现的一个有趣的地方：
-12345678910111213141516171819202122232425#include &amp;lt;stdarg.h&amp;gt;void var_args_func(int n_values, ...)&amp;#123;    printf(&quot;n_values is %d\n&quot;, n_values);    va_list args;    va_start(a">
+<meta name="description" content="可变参数在看C和指针时发现的一个有趣的地方：
+12345678910111213141516171819202122232425#include &amp;lt;stdarg.h&amp;gt;void var_args_func(int n_values, ...)&amp;#123;    printf(&quot;n_values is %d\n&quot;, n_values);    va_list args;    va_sta">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C-可变参数">
-<meta property="og:url" content="https://beim.github.io/2017/01/11/C-可变参数/index.html">
+<meta property="og:title" content="C-可变参数和默认参数">
+<meta property="og:url" content="https://beim.github.io/2017/05/11/C-可变参数/index.html">
 <meta property="og:site_name" content="北冥945">
-<meta property="og:description" content="在看C和指针时发现的一个有趣的地方：
-12345678910111213141516171819202122232425#include &amp;lt;stdarg.h&amp;gt;void var_args_func(int n_values, ...)&amp;#123;    printf(&quot;n_values is %d\n&quot;, n_values);    va_list args;    va_start(a">
-<meta property="og:updated_time" content="2017-03-12T09:21:51.742Z">
+<meta property="og:description" content="可变参数在看C和指针时发现的一个有趣的地方：
+12345678910111213141516171819202122232425#include &amp;lt;stdarg.h&amp;gt;void var_args_func(int n_values, ...)&amp;#123;    printf(&quot;n_values is %d\n&quot;, n_values);    va_list args;    va_sta">
+<meta property="og:updated_time" content="2017-05-11T05:51:27.233Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C-可变参数">
-<meta name="twitter:description" content="在看C和指针时发现的一个有趣的地方：
-12345678910111213141516171819202122232425#include &amp;lt;stdarg.h&amp;gt;void var_args_func(int n_values, ...)&amp;#123;    printf(&quot;n_values is %d\n&quot;, n_values);    va_list args;    va_start(a">
+<meta name="twitter:title" content="C-可变参数和默认参数">
+<meta name="twitter:description" content="可变参数在看C和指针时发现的一个有趣的地方：
+12345678910111213141516171819202122232425#include &amp;lt;stdarg.h&amp;gt;void var_args_func(int n_values, ...)&amp;#123;    printf(&quot;n_values is %d\n&quot;, n_values);    va_list args;    va_sta">
 
 
 
@@ -115,11 +115,11 @@
 
 
 
-  <link rel="canonical" href="https://beim.github.io/2017/01/11/C-可变参数/"/>
+  <link rel="canonical" href="https://beim.github.io/2017/05/11/C-可变参数/"/>
 
   <script type="text/javascript" src="/js/src/beim/test.js"></script>
 
-  <title> C-可变参数 | 北冥945 </title>
+  <title> C-可变参数和默认参数 | 北冥945 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -262,7 +262,7 @@
             
             
               
-                C-可变参数
+                C-可变参数和默认参数
               
             
           </h1>
@@ -274,8 +274,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-01-11T16:45:31+08:00" content="2017-01-11">
-              2017-01-11
+            <time itemprop="dateCreated" datetime="2017-05-11T13:51:31+08:00" content="2017-05-11">
+              2017-05-11
             </time>
           </span>
 
@@ -285,8 +285,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/01/11/C-可变参数/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/01/11/C-可变参数/" itemprop="commentsCount"></span>
+                <a href="/2017/05/11/C-可变参数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/11/C-可变参数/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -296,7 +296,7 @@
 
           
           
-             <span id="/2017/01/11/C-可变参数/" class="leancloud_visitors" data-flag-title="C-可变参数">
+             <span id="/2017/05/11/C-可变参数/" class="leancloud_visitors" data-flag-title="C-可变参数和默认参数">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -318,10 +318,13 @@
       
 
       
-        <p>在看<code>C和指针</code>时发现的一个有趣的地方：</p>
+        <h1 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h1><p>在看<code>C和指针</code>时发现的一个有趣的地方：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdarg.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">var_args_func</span><span class="params">(<span class="keyword">int</span> n_values, ...)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"n_values is %d\n"</span>, n_values);</div><div class="line">    va_list args;</div><div class="line">    va_start(args, n_values);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n_values; i++) &#123;</div><div class="line">        <span class="keyword">double</span> arg = va_arg(args, <span class="keyword">double</span>);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"arg is %lf\n"</span>, arg);</div><div class="line">        <span class="keyword">int</span> arg1 = va_arg(args, <span class="keyword">int</span>);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"arg is %d\n"</span>, arg1);</div><div class="line">    &#125;</div><div class="line">    va_end(args);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">test_var_args_func</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">float</span> f = <span class="number">6</span>;</div><div class="line">    var_args_func(<span class="number">3</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4.0</span>, <span class="number">5.0</span>, f);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    test_var_args_func();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>上面这段代码输出是<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">n_values <span class="keyword">is</span> <span class="number">3</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">4.000000</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">1</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">5.000000</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">2</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">6.000000</span></div><div class="line">arg <span class="keyword">is</span> <span class="number">3</span></div></pre></td></tr></table></figure></p>
 <a id="more"></a>
+<hr>
+<h1 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">printString</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* msg, <span class="keyword">int</span> size, <span class="keyword">int</span> style)</span> </span>&#123;</div><div class="line">  <span class="built_in">printf</span>(<span class="string">"%s %d %d\n"</span>, msg, size, style);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> PRINT_STRING_1_ARGS(message) printString(message, 979, 945)</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> PRINT_STRING_2_ARGS(message, size) printString(message, size, 945)</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> PRINT_STRING_3_ARGS(message, size, style) printString(message, size, style)</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> GET_4TH_ARG(arg1, arg2, arg3, arg4, ...) arg4</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> PRINT_STRING_MACRO_CHOOSER(...) \</span></div><div class="line">  GET_4TH_ARG(__VA_ARGS__, PRINT_STRING_3_ARGS, \</div><div class="line">      PRINT_STRING_2_ARGS, PRINT_STRING_1_ARGS)</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> PRINT_STRING(...) PRINT_STRING_MACRO_CHOOSER(__VA_ARGS__)(__VA_ARGS__)</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">  PRINT_STRING(<span class="string">"hello"</span>);</div><div class="line">  PRINT_STRING(<span class="string">"hello"</span>, <span class="number">979</span>);</div><div class="line">  PRINT_STRING(<span class="string">"hello"</span>, <span class="number">979</span>, <span class="number">945</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>输出<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hello <span class="number">979</span> <span class="number">945</span></div><div class="line">hello <span class="number">979</span> <span class="number">945</span></div><div class="line">hello <span class="number">979</span> <span class="number">945</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -374,16 +377,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/07/NSGA-相关/" rel="next" title="NSGA-相关">
-                <i class="fa fa-chevron-left"></i> NSGA-相关
+              <a href="/2017/03/22/内存字节对齐/" rel="next" title="内存字节对齐">
+                <i class="fa fa-chevron-left"></i> 内存字节对齐
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/26/西川之南/" rel="prev" title="西川之南">
-                西川之南 <i class="fa fa-chevron-right"></i>
+              <a href="/3017/01/01/2017-收藏/" rel="prev" title="2017-收藏">
+                2017-收藏 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -536,7 +539,7 @@
               
             
             
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#可变参数"><span class="nav-number">1.</span> <span class="nav-text">可变参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#默认参数"><span class="nav-number">2.</span> <span class="nav-text">默认参数</span></a></li></ol></div>
             
           </div>
         </section>
@@ -663,9 +666,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'beim';
-      var disqus_identifier = '2017/01/11/C-可变参数/';
-      var disqus_title = "C-可变参数";
-      var disqus_url = 'https://beim.github.io/2017/01/11/C-可变参数/';
+      var disqus_identifier = '2017/05/11/C-可变参数/';
+      var disqus_title = "C-可变参数和默认参数";
+      var disqus_url = 'https://beim.github.io/2017/05/11/C-可变参数/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
