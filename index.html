@@ -373,6 +373,119 @@
             
               
                 
+                <a class="post-title-link" href="/2017/05/13/第一次mips之旅/" itemprop="url">
+                  第一次mips之旅
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-05-13T19:19:37+08:00" content="2017-05-13">
+              2017-05-13
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/05/13/第一次mips之旅/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/13/第一次mips之旅/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/05/13/第一次mips之旅/" class="leancloud_visitors" data-flag-title="第一次mips之旅">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><a href="http://courses.missouristate.edu/KenVollmar/Mars/index.htm">软件 MARS 4.5</a>,  <a href="http://logos.cs.uic.edu/366/notes/mips%20quick%20tutorial.htm#IOSystemCalls">MIPS Quick Tutorial</a></p>
+<h1 id="程序-7牛云"><a href="#程序-7牛云" class="headerlink" title="程序 7牛云"></a>程序 <a href="http://ob4a6y748.bkt.clouddn.com/huping2.asm">7牛云</a></h1><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line">	<span class="meta">.data</span></div><div class="line"><span class="symbol">str:</span>	<span class="meta">.space</span>	<span class="number">80</span>  <span class="comment"># max 80</span></div><div class="line">	<span class="meta">.text</span></div><div class="line"><span class="symbol">Main:</span>	<span class="keyword">jal	</span>Input  <span class="comment"># get Input, and return s0</span></div><div class="line">	la	$<span class="built_in">a0</span>, str  <span class="comment"># $a0 = memory address of string</span></div><div class="line">	<span class="keyword">addi	</span>$<span class="built_in">a1</span>, $<span class="built_in">s0</span>, <span class="number">0</span>  <span class="comment"># $a1 = length of the string</span></div><div class="line">	<span class="keyword">jal	</span>Solve</div><div class="line">	li	$<span class="built_in">v0</span>, <span class="number">10</span>  <span class="comment"># exit</span></div><div class="line">	<span class="keyword">syscall</div><div class="line"></span>	</div><div class="line">	</div><div class="line">	<span class="meta">.data</span></div><div class="line"><span class="symbol">notice:</span>	.asciiz	<span class="string">"please enter a string:\n"</span></div><div class="line">	<span class="meta">.text</span></div><div class="line"><span class="symbol">Input:</span>	la	$<span class="built_in">a0</span>, notice  <span class="comment"># print notice</span></div><div class="line">	li	$<span class="built_in">v0</span>, <span class="number">4</span></div><div class="line">	<span class="keyword">syscall</div><div class="line"></span>	li	$<span class="built_in">s0</span>, <span class="number">0</span>  <span class="comment"># $s0 = length of the string</span></div><div class="line">	la	$<span class="built_in">t0</span>, str  <span class="comment"># use $t0 as a pointer</span></div><div class="line">	la	$<span class="built_in">a0</span>, ($<span class="built_in">t0</span>)  <span class="comment"># $a0 = memory address of string input buffer</span></div><div class="line">	li	$<span class="built_in">a1</span>, <span class="number">2</span>  <span class="comment"># one byte at a time</span></div><div class="line">	li	$<span class="built_in">v0</span>, <span class="number">8</span></div><div class="line"><span class="symbol">read:</span>	<span class="keyword">syscall</div><div class="line"></span>	<span class="keyword">lb	</span>$<span class="built_in">t1</span>, ($<span class="built_in">t0</span>)</div><div class="line">	<span class="keyword">addi	</span>$<span class="built_in">s0</span>, $<span class="built_in">s0</span>, <span class="number">1</span>  <span class="comment"># counter++</span></div><div class="line">	<span class="keyword">addi	</span>$<span class="built_in">t0</span>, $<span class="built_in">t0</span>, <span class="number">1</span>  <span class="comment"># pointer++</span></div><div class="line">	la	$<span class="built_in">a0</span>, ($<span class="built_in">t0</span>)  <span class="comment"># update memory address</span></div><div class="line">	<span class="keyword">bne	</span>$<span class="built_in">t1</span>, <span class="string">'\n'</span>, read  <span class="comment"># end of the string</span></div><div class="line">	<span class="keyword">jr	</span>$<span class="built_in">ra</span></div><div class="line">	</div><div class="line">	</div><div class="line">	<span class="meta">.data</span></div><div class="line"><span class="symbol">suc:</span>	.asciiz	<span class="string">"\nSuccess! Location: "</span></div><div class="line"><span class="symbol">fail:</span>	.asciiz	<span class="string">"\nFail!\n"</span></div><div class="line"><span class="symbol">nl:</span>	.asciiz	<span class="string">"\n"</span></div><div class="line"><span class="symbol">char:</span>	<span class="meta">.space</span>	<span class="number">4</span>  <span class="comment"># 4 bytes</span></div><div class="line">	<span class="meta">.text</span></div><div class="line"><span class="symbol">Solve:</span>	<span class="keyword">addi	</span>$<span class="built_in">t0</span>, $<span class="built_in">a0</span>, <span class="number">0</span>  <span class="comment"># $t0 = memory address</span></div><div class="line">	<span class="keyword">addi	</span>$<span class="built_in">t1</span>, $<span class="built_in">a1</span>, <span class="number">0</span>  <span class="comment"># $t1 = length</span></div><div class="line"><span class="symbol">while1:</span>	la	$<span class="built_in">a0</span>, char  <span class="comment"># while true</span></div><div class="line">	li	$<span class="built_in">a1</span>, <span class="number">2</span>  <span class="comment"># one byte at a time</span></div><div class="line">	li	$<span class="built_in">v0</span>, <span class="number">8</span>  </div><div class="line">	<span class="keyword">syscall </span> <span class="comment"># read string</span></div><div class="line">	<span class="keyword">lb	</span>$<span class="built_in">t2</span>, ($<span class="built_in">a0</span>)  <span class="comment"># t2 = read()</span></div><div class="line">	<span class="keyword">beq	</span>$<span class="built_in">t2</span>, <span class="string">'?'</span>, done1  <span class="comment"># if (t2 == '?') break</span></div><div class="line">	li	$<span class="built_in">t3</span>, <span class="number">0</span>  <span class="comment"># t3 = position</span></div><div class="line">	li	$<span class="built_in">t5</span>, <span class="number">0</span>  <span class="comment"># t5 = ok</span></div><div class="line"><span class="symbol">while2:</span>	<span class="keyword">beq	</span>$<span class="built_in">t3</span>, $<span class="built_in">t1</span>, done2  <span class="comment"># while (t3 != t1)</span></div><div class="line">	<span class="keyword">add	</span>$<span class="built_in">t6</span>, $<span class="built_in">t0</span>, $<span class="built_in">t3</span>  <span class="comment"># t6 = &amp;str[t3]</span></div><div class="line">	<span class="keyword">lb	</span>$<span class="built_in">t4</span>, ($<span class="built_in">t6</span>)  <span class="comment"># t4 = str[t3]</span></div><div class="line">	<span class="keyword">bne	</span>$<span class="built_in">t2</span>, $<span class="built_in">t4</span>, plus  <span class="comment"># if (t2 == t4) ... else goto plus</span></div><div class="line">	la	$<span class="built_in">a0</span>, suc  <span class="comment"># print success</span></div><div class="line">	li	$<span class="built_in">v0</span>, <span class="number">4</span></div><div class="line">	<span class="keyword">syscall</div><div class="line"></span>	<span class="keyword">addi	</span>$<span class="built_in">a0</span>, $<span class="built_in">t3</span>, <span class="number">1</span>  <span class="comment"># print $t3(position)</span></div><div class="line">	li	$<span class="built_in">v0</span>, <span class="number">1</span></div><div class="line">	<span class="keyword">syscall</div><div class="line"></span>	la	$<span class="built_in">a0</span>, nl</div><div class="line">	li	$<span class="built_in">v0</span>, <span class="number">4</span></div><div class="line">	<span class="keyword">syscall</div><div class="line"></span>	li	$<span class="built_in">t5</span>, <span class="number">1</span></div><div class="line">	<span class="keyword">j </span>done2</div><div class="line"><span class="symbol">plus:</span>	<span class="keyword">addi	</span>$<span class="built_in">t3</span>, $<span class="built_in">t3</span>, <span class="number">1</span>  <span class="comment"># t3++</span></div><div class="line">	<span class="keyword">j	</span>while2</div><div class="line"><span class="symbol">done2:</span>	<span class="keyword">beq	</span>$<span class="built_in">t5</span>, <span class="number">1</span>, while1  <span class="comment"># if (t5 != 1) ... else goto while1</span></div><div class="line">	la	$<span class="built_in">a0</span>, fail</div><div class="line">	li	$<span class="built_in">v0</span>, <span class="number">4</span></div><div class="line">	<span class="keyword">syscall</div><div class="line"></span>	<span class="keyword">j	</span>while1</div><div class="line"><span class="symbol">done1:</span>	<span class="keyword">jr	</span>$<span class="built_in">ra</span></div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/05/13/第一次mips之旅/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/05/11/C-默认参数和可变参数/" itemprop="url">
                   C-默认参数和可变参数
                 </a>
@@ -1297,121 +1410,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/01/拉普拉斯的魔女-东野圭吾/" itemprop="url">
-                  拉普拉斯的魔女-东野圭吾
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-02-01T09:52:24+08:00" content="2017-02-01">
-              2017-02-01
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/02/01/拉普拉斯的魔女-东野圭吾/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/02/01/拉普拉斯的魔女-东野圭吾/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2017/02/01/拉普拉斯的魔女-东野圭吾/" class="leancloud_visitors" data-flag-title="拉普拉斯的魔女-东野圭吾">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="http://ob4a6y748.bkt.clouddn.com/lapulasi-IMG_4722.JPG" alt="lapulasi"></p>
-<blockquote>
-<p>人类是原子，即使每一个个体都很平凡，无自觉地活在世上，然而一旦成为集合体，就会戏剧性地实现物理法则。</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/02/01/拉普拉斯的魔女-东野圭吾/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1457,7 +1455,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">62</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
