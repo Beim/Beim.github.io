@@ -21,21 +21,6 @@
 
     
   <url>
-    <loc>https://beim.github.io/1970/01/02/2017-%E7%99%BD%E6%97%A5%E6%A2%A6/</loc>
-    <lastmod>2017-05-15T15:12:27.818Z</lastmod>
-    <data>
-        <display>
-        <title>2017-白日梦</title>
-        <pubTime>1970-01-02T02:31:41.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://beim.github.io/3017/01/01/2017-%E6%94%B6%E8%97%8F/</loc>
     <lastmod>2017-05-14T02:19:27.882Z</lastmod>
     <data>
@@ -852,21 +837,6 @@
 
     
   <url>
-    <loc>https://beim.github.io/1970/01/01/2016-%E7%99%BD%E6%97%A5%E6%A2%A6/</loc>
-    <lastmod>2017-03-09T08:54:00.241Z</lastmod>
-    <data>
-        <display>
-        <title>2016-白日梦</title>
-        <pubTime>1970-01-01T12:46:08.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://beim.github.io/2017/03/07/cpp-%E5%B7%A6%E5%80%BC%E4%B8%8E%E5%8F%B3%E5%80%BC/</loc>
     <lastmod>2017-03-07T15:10:55.162Z</lastmod>
     <data>
@@ -1036,7 +1006,6 @@
     </url>
 
     
-    
   <url>
     <loc>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
@@ -1070,4 +1039,5 @@
     </data>
     </url>
 
+    
 </urlset>
