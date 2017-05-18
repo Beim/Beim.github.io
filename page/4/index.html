@@ -261,600 +261,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/11/24/ubuntu下mongodb安装使用/" itemprop="url">
-                  ubuntu下mongodb安装使用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-24T07:59:34+08:00" content="2016-11-24">
-              2016-11-24
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/24/ubuntu下mongodb安装使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/11/24/ubuntu下mongodb安装使用/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/24/ubuntu下mongodb安装使用/" class="leancloud_visitors" data-flag-title="ubuntu下mongodb安装使用">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><a href="https://docs.mongodb.com/master/tutorial/install-mongodb-on-ubuntu/?_ga=1.183956006.1858520870.1479944396">官网链接</a></p>
-<blockquote>
-<p>Ubuntu16的systemd启动服务在<code>/lib/systemd/system/mongod.service</code><br>MongoDB数据存储在 <code>/var/lib/mongodb</code><br>日志文件在 <code>/var/log/mongodb</code><br>配置文件在 <code>/etc/mongod.conf</code></p>
-</blockquote>
-<h1 id="security"><a href="#security" class="headerlink" title="security"></a>security</h1><p><a href="https://docs.mongodb.com/manual/tutorial/enable-authentication/">开启认证</a><br>在<code>/etc/mongod.conf</code>中增加<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">security:</span></div><div class="line"><span class="symbol">  authorization:</span> enabled</div></pre></td></tr></table></figure></p>
-<p><a href="https://docs.mongodb.com/manual/reference/method/db.createUser/">增加用户</a></p>
-<blockquote>
-<p>提示: shell下登陆后切换到对应的db进行auth, 在哪个db创建的用户就在哪个db进行auth<br>show users<br>db.auth<br>db.createUser<br>db.dropUser</p>
-</blockquote>
-<p>登陆<br><code>mongo dbName -u username -p password</code></p>
-<h1 id="others"><a href="#others" class="headerlink" title="others"></a>others</h1><p><a href="http://chenzhou123520.iteye.com/blog/1634676">mongod 后台启动</a> <code>mongod --fork --syslog</code></p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/24/ubuntu下mongodb安装使用/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/23/seafile-搭建私人网盘/" itemprop="url">
-                  seafile-搭建私人网盘
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-23T10:00:54+08:00" content="2016-11-23">
-              2016-11-23
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/23/seafile-搭建私人网盘/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/11/23/seafile-搭建私人网盘/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/23/seafile-搭建私人网盘/" class="leancloud_visitors" data-flag-title="seafile-搭建私人网盘">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="http://ob4a6y748.bkt.clouddn.com/seafile-2016-11-23%2010-04-44%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="效果图"></p>
-<p><a href="https://www.seafile.com/download/">官网下载</a></p>
-<p><a href="http://www.jianshu.com/p/d7635d0ecfbd">搭建教程</a></p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/23/seafile-搭建私人网盘/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/14/ubuntu下安装chromium/" itemprop="url">
-                  ubuntu下安装chromium
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-14T13:10:13+08:00" content="2016-11-14">
-              2016-11-14
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/14/ubuntu下安装chromium/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/11/14/ubuntu下安装chromium/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/14/ubuntu下安装chromium/" class="leancloud_visitors" data-flag-title="ubuntu下安装chromium">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="chromium"><a href="#chromium" class="headerlink" title="chromium"></a>chromium</h1><h2 id="下载chromium"><a href="#下载chromium" class="headerlink" title="下载chromium"></a>下载chromium</h2><p>从<a href="https://github.com/scheib/chromium-latest-linux">github</a>上下载这几个脚本<br>放置在<code>/usr/local/src/</code>目录下</p>
-<p>运行<code>./update.sh</code><br>此时将最新版本的chromium下载到了<code>/usr/local/src/chromium-latest-linux/latest</code>目录下</p>
-<h2 id="设置别名"><a href="#设置别名" class="headerlink" title="设置别名"></a>设置别名</h2><p><code>vi ~/.bashrc</code><br>在最后添加<br><code>alias chromium=&#39;/usr/local/src/chromium-latest-linux/run.sh&#39;</code></p>
-<p>这时在终端中输入<code>chromium</code>即可打开chromium浏览器</p>
-<h2 id="更新chromium"><a href="#更新chromium" class="headerlink" title="更新chromium"></a>更新chromium</h2><p>只需要再运行<code>chromium-latest-linux</code>目录下的<code>update.sh</code>脚本就可以了</p>
-<h2 id="更改desktop下的chromium"><a href="#更改desktop下的chromium" class="headerlink" title="更改desktop下的chromium"></a>更改desktop下的chromium</h2><p><code>~/.local/share/applications</code>下找<code>chromium-browser.desktop</code>文件, 看其中的参数是否和安装的<code>run.sh</code>中的参数相同</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/14/ubuntu下安装chromium/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/08/计网实验准备/" itemprop="url">
-                  计网实验准备
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-08T23:47:44+08:00" content="2016-11-08">
-              2016-11-08
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/08/计网实验准备/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/11/08/计网实验准备/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/08/计网实验准备/" class="leancloud_visitors" data-flag-title="计网实验准备">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a><strong>实验目的</strong></h1><p>(1)按照图 4-1 所示,将网络设备用适当的线路连接好,注意 console 控制线和双绞<br>线不要混淆。<br>(2)通过“超级终端”软件连接到路由器或交换机的控制口,进入 IOS 系统。初步了<br>解 IOS 系统特性,为路由器或交换机配置名称、密码等,启用 telnet 服务,使以后的配置可<br>以通过 telnet 方式进行。<br>(3)通过 telnet 方式进入 IOS 的 CLI 配置界面,分别对三台网络设置进行适当的配置,<br>使局域网的四台计算机可以互相 ping 通。</p>
-<h1 id="实验说明"><a href="#实验说明" class="headerlink" title="实验说明"></a><strong>实验说明</strong></h1><ul>
-<li>本次实验划分了4个子网，分别为192.168.1.0/24,  2.2.2.0/24,  1.1.1.0/24,  202.118.232.0/24</li>
-<li>PC1, PC2, PC3, PC4均处于单独的冲突域中，因为它们都通过网络设备(交换机和三层交换机)隔开了，只有共享介质的设备(通过集线器连接)才处于同一冲突域。</li>
-<li>PC1和PC2在同一广播域，因为他们通过二层交换机相连，处于同一子网。PC3和PC4分别在单独的广播域中，因为他们处于不同的子网。</li>
-</ul>
-<h1 id="直通线和交叉线的区别"><a href="#直通线和交叉线的区别" class="headerlink" title="直通线和交叉线的区别"></a><strong>直通线和交叉线的区别</strong></h1><p>直通线，两端线序一样。<br>交叉线，一端为直通线的线序，另一端为白绿，绿，白橙，蓝，白蓝，橙，白棕，棕。<br>同种类型设备之间使用交叉线连接, 不同类型设备使用直通连接. <a href="http://www.360doc.com/content/10/0910/18/3266301_52693210.shtml">http://www.360doc.com/content/10/0910/18/3266301_52693210.shtml</a></p>
-<h1 id="telnet-和超级终端"><a href="#telnet-和超级终端" class="headerlink" title="telnet 和超级终端"></a><strong>telnet 和超级终端</strong></h1><p>通过telnet设置交换机是通过网络登录交换机，也叫带内管理，要求先配置交换机能登录及你电脑能通过网络连接访问到交换机。通过超级终端配置是电脑com口连接交换机console设置，不需要通过网络连接，故叫带外管理。通常初始设置要通过超级终端设置，设置好了后就可以通过telnet设置了。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/08/计网实验准备/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/04/JS-for-in遍历和prototype/" itemprop="url">
-                  JS-for-in遍历和prototype
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-04T14:27:57+08:00" content="2016-11-04">
-              2016-11-04
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/04/JS-for-in遍历和prototype/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/11/04/JS-for-in遍历和prototype/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/04/JS-for-in遍历和prototype/" class="leancloud_visitors" data-flag-title="JS-for-in遍历和prototype">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          for (let i in arr) 
-会将原型链上面的属性也一一遍历所以在这时候修改 Array.prototype如
-Array.prototype.top = () =&gt; {...}
-则i会遍历到top属性
-= = 被这个略坑了一把
-以后要注意不要扩展内置类型的原型, 或者for in 遍历时使用hasOwnProperty 进行筛选
-MDN-属性的可枚举性和所有权
-
-          
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/04/JS-for-in遍历和prototype/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/11/02/修改next主题/" itemprop="url">
                   修改next主题
                 </a>
@@ -1098,8 +504,8 @@ IBM 认为的
             
               
                 
-                <a class="post-title-link" href="/2016/11/01/红城堡-渡边淳一/" itemprop="url">
-                  红城堡-渡边淳一
+                <a class="post-title-link" href="/2016/10/20/note-Beej-Network-Programming/" itemprop="url">
+                  note-Beej-Network-Programming
                 </a>
               
             
@@ -1112,8 +518,8 @@ IBM 认为的
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-01T23:07:50+08:00" content="2016-11-01">
-              2016-11-01
+            <time itemprop="dateCreated" datetime="2016-10-20T14:17:08+08:00" content="2016-10-20">
+              2016-10-20
             </time>
           </span>
 
@@ -1123,8 +529,8 @@ IBM 认为的
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/11/01/红城堡-渡边淳一/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/11/01/红城堡-渡边淳一/" itemprop="commentsCount"></span>
+                <a href="/2016/10/20/note-Beej-Network-Programming/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/20/note-Beej-Network-Programming/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1134,7 +540,7 @@ IBM 认为的
 
           
           
-             <span id="/2016/11/01/红城堡-渡边淳一/" class="leancloud_visitors" data-flag-title="红城堡-渡边淳一">
+             <span id="/2016/10/20/note-Beej-Network-Programming/" class="leancloud_visitors" data-flag-title="note-Beej-Network-Programming">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1157,12 +563,12 @@ IBM 认为的
 
       
         
-          <p><img src="https://img3.doubanio.com/lpic/s28069096.jpg" alt="hcb"></p>
-<blockquote>
-<p>爱与性都没有的时候</p>
-</blockquote>
+          <h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><hr>
+<h1 id="What-is-a-socket"><a href="#What-is-a-socket" class="headerlink" title="What is a socket?"></a>What is a socket?</h1><p>“Stream Sockets” and “Datagram Sockets” , which may be referred to as <code>SOCK_STRAM</code> and <code>SOCK_DGRAM</code><br>Datagram sockets are sometimes called “connectionless sockets”. (Though they can be <code>connect()</code>‘d if you really want)</p>
+<hr>
+<h1 id="IP-Addresses-structs-and-Data-Munging-转换"><a href="#IP-Addresses-structs-and-Data-Munging-转换" class="headerlink" title="IP Addresses, structs, and Data Munging(转换)"></a>IP Addresses, structs, and Data Munging(转换)</h1><h2 id="ipv6"><a href="#ipv6" class="headerlink" title="ipv6"></a>ipv6</h2><p>ipv6, 128 bits,  Lots of times with lots of zeros in it, and can be compressed between two colons.<br>For instance:<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">2001</span>:<span class="number">0</span><span class="attribute">db8</span>:<span class="attribute">c9d2</span>:<span class="number">0012</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0051</span></div><div class="line"><span class="number">2001</span>:<span class="attribute">db8</span>:<span class="attribute">c9d2</span>:<span class="number">12</span>::<span class="number">51</span></div><div class="line"></div><div class="line"><span class="number">2001</span>:<span class="number">0</span><span class="attribute">db8</span>:<span class="attribute">ab00</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span></div><div class="line"><span class="number">2001</span>:<span class="attribute">db8</span>:<span class="attribute">ab00</span>::</div><div class="line"></div><div class="line"># It<span class="string">'s loopback address, It always means "this machine I'</span>m running on now"</div><div class="line"><span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0001</span></div><div class="line">::<span class="number">1</span></div><div class="line"></div><div class="line"># there's an ipv4-compatibility mode for ipv6 <span class="attribute">addresses</div><div class="line"></span>::<span class="attribute">ffff</span>:<span class="number">192.0</span>.<span class="number">2.33</span></div></pre></td></tr></table></figure></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/01/红城堡-渡边淳一/#more" rel="contents">
+            <a class="btn" href="/2016/10/20/note-Beej-Network-Programming/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1213,8 +619,8 @@ IBM 认为的
             
               
                 
-                <a class="post-title-link" href="/2016/11/01/富士山禁恋-松本清张/" itemprop="url">
-                  富士山禁恋-松本清张
+                <a class="post-title-link" href="/2016/10/18/cpp-makefile体验/" itemprop="url">
+                  cpp-makefile体验
                 </a>
               
             
@@ -1227,8 +633,8 @@ IBM 认为的
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-01T23:03:37+08:00" content="2016-11-01">
-              2016-11-01
+            <time itemprop="dateCreated" datetime="2016-10-18T09:42:12+08:00" content="2016-10-18">
+              2016-10-18
             </time>
           </span>
 
@@ -1238,8 +644,8 @@ IBM 认为的
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/11/01/富士山禁恋-松本清张/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/11/01/富士山禁恋-松本清张/" itemprop="commentsCount"></span>
+                <a href="/2016/10/18/cpp-makefile体验/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/18/cpp-makefile体验/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1249,7 +655,7 @@ IBM 认为的
 
           
           
-             <span id="/2016/11/01/富士山禁恋-松本清张/" class="leancloud_visitors" data-flag-title="富士山禁恋-松本清张">
+             <span id="/2016/10/18/cpp-makefile体验/" class="leancloud_visitors" data-flag-title="cpp-makefile体验">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1272,12 +678,10 @@ IBM 认为的
 
       
         
-          <p><img src="https://img3.doubanio.com/lpic/s24401753.jpg" alt="fss"></p>
-<blockquote>
-<p>面对注定绝望的爱情, 我们又能怎么办</p>
-</blockquote>
+          <figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span></div><div class="line">dir1/  makefile  o/  <span class="keyword">test</span>.cpp  <span class="keyword">test</span>.hpp</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> <span class="keyword">test</span>.cpp</div><div class="line">#<span class="keyword">include</span> <span class="string">"test.hpp"</span></div><div class="line"></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">int main() &#123;</div><div class="line">    int x(3);</div><div class="line">    int <span class="built_in">y</span>(5);</div><div class="line">    int c;</div><div class="line">    c = calculate(x, y);</div><div class="line">    cout &lt;&lt; c &lt;&lt; endl;</div><div class="line">&#125;</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> <span class="keyword">test</span>.hpp</div><div class="line">#<span class="keyword">include</span> &lt;iostream&gt;</div><div class="line">#<span class="keyword">include</span> <span class="string">"./dir1/test1.hpp"</span></div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span> dir1</div><div class="line">test1.cpp  test1.hpp</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> dir1/test1.cpp</div><div class="line">#<span class="keyword">include</span> <span class="string">"test1.hpp"</span></div><div class="line"></div><div class="line">int calculate(int <span class="keyword">const</span>&amp; a, int <span class="keyword">const</span>&amp; b) &#123;</div><div class="line">    int c;</div><div class="line">    c = a + b;</div><div class="line">    <span class="keyword">return</span> c;</div><div class="line">&#125;</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> dir1/test1.hpp </div><div class="line">#<span class="keyword">include</span> &lt;iostream&gt;</div><div class="line"></div><div class="line">int calculate(int <span class="keyword">const</span>&amp; a, int <span class="keyword">const</span>&amp; b);</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span> o/</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> makefile</div><div class="line">mycplusplus: <span class="keyword">test</span>.o test1.o</div><div class="line">	<span class="keyword">g</span>++ o/test1.o o/<span class="keyword">test</span>.o -o mycplusplus</div><div class="line">test1.o : dir1/test1.cpp</div><div class="line">	<span class="keyword">g</span>++ -c dir1/test1.cpp -o o/test1.o</div><div class="line"><span class="keyword">test</span>.o : <span class="keyword">test</span>.cpp</div><div class="line">	<span class="keyword">g</span>++ -c <span class="keyword">test</span>.cpp -o o/<span class="keyword">test</span>.o</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ make</div><div class="line"><span class="keyword">g</span>++ -c <span class="keyword">test</span>.cpp -o o/<span class="keyword">test</span>.o</div><div class="line"><span class="keyword">g</span>++ -c dir1/test1.cpp -o o/test1.o</div><div class="line"><span class="keyword">g</span>++ o/test1.o o/<span class="keyword">test</span>.o -o mycplusplus</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span></div><div class="line">dir1/  makefile  mycplusplus*  o/  <span class="keyword">test</span>.cpp  <span class="keyword">test</span>.hpp</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ ./mycplusplus </div><div class="line">8</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span> o/</div><div class="line">test1.o  <span class="keyword">test</span>.o</div></pre></td></tr></table></figure>
+<p><a href="http://blog.csdn.net/hongkangwl/article/details/21328327">参考CSDN</a></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/01/富士山禁恋-松本清张/#more" rel="contents">
+            <a class="btn" href="/2016/10/18/cpp-makefile体验/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1328,8 +732,8 @@ IBM 认为的
             
               
                 
-                <a class="post-title-link" href="/2016/11/01/2013-蓝色茉莉/" itemprop="url">
-                  2013-蓝色茉莉
+                <a class="post-title-link" href="/2016/10/15/2016-收藏/" itemprop="url">
+                  2016-收藏
                 </a>
               
             
@@ -1342,8 +746,8 @@ IBM 认为的
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-01T22:44:35+08:00" content="2016-11-01">
-              2016-11-01
+            <time itemprop="dateCreated" datetime="2016-10-15T10:08:47+08:00" content="2016-10-15">
+              2016-10-15
             </time>
           </span>
 
@@ -1353,8 +757,8 @@ IBM 认为的
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/11/01/2013-蓝色茉莉/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/11/01/2013-蓝色茉莉/" itemprop="commentsCount"></span>
+                <a href="/2016/10/15/2016-收藏/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/15/2016-收藏/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1364,7 +768,7 @@ IBM 认为的
 
           
           
-             <span id="/2016/11/01/2013-蓝色茉莉/" class="leancloud_visitors" data-flag-title="2013-蓝色茉莉">
+             <span id="/2016/10/15/2016-收藏/" class="leancloud_visitors" data-flag-title="2016-收藏">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1387,12 +791,622 @@ IBM 认为的
 
       
         
-          <p><img src="http://img31.mtime.cn/pi/2014/01/10/162701.70021676_1000X1000.jpg" alt="lsml"></p>
-<blockquote>
-<p>看到服务员了吗, 我还想要杯斯特利*马提尼</p>
-</blockquote>
+          <h1 id="语言相关"><a href="#语言相关" class="headerlink" title="语言相关"></a>语言相关</h1><h2 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h2><ul>
+<li><p><a href="https://www.npmjs.com/package/koa-router-static">koa-router-static - npm - 和koa-router 兼容的koa-static</a></p>
+</li>
+<li><p><a href="https://github.com/node-webot/co-wechat">wechat for koa - github</a></p>
+</li>
+<li><p><a href="https://blog.risingstack.com/writing-native-node-js-modules/">Writing Native Node.js Modules - Node.js at Scale</a></p>
+</li>
+<li><p><a href="https://blog.risingstack.com/async-await-node-js-7-nightly/">Experimenting With async/await in Node.js 7 Nightly</a></p>
+</li>
+<li><p><a href="https://blog.risingstack.com/nodejs-at-scale-npm-best-practices/">Node.js at Scale - npm Best Practices</a></p>
+</li>
+<li><p><a href="https://cnodejs.org/topic/5640b80d3a6aa72c5e0030b6">体验异步的终极解决方案-ES7的Async/Await</a></p>
+</li>
+<li><p><a href="http://morning.work/page/2016-05/how-to-write-a-nodejs-api-client-package.html">Nodejs 编写API 客户端</a></p>
+</li>
+</ul>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/01/2013-蓝色茉莉/#more" rel="contents">
+            <a class="btn" href="/2016/10/15/2016-收藏/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/13/cpp-宏编写技巧/" itemprop="url">
+                  cpp-宏编写技巧
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-13T23:31:24+08:00" content="2016-10-13">
+              2016-10-13
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/13/cpp-宏编写技巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/13/cpp-宏编写技巧/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/10/13/cpp-宏编写技巧/" class="leancloud_visitors" data-flag-title="cpp-宏编写技巧">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>如果宏里有多过一个语句(statement), 就需要用do {/<em>…</em>/} while(0) 包裹成单个语句, 否则会有如下问题</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M() a(); b()</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    M();</div><div class="line"><span class="keyword">else</span></div><div class="line">    c();</div><div class="line"></div><div class="line"><span class="comment">/* 预处理后 */</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    a(); b()</div><div class="line"><span class="keyword">else</span> <span class="comment">/* else 缺乏对应if */</span></div><div class="line">    c();</div></pre></td></tr></table></figure>
+<p>只用{} 也不行:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M() &#123; a(); b();&#125;</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    M();</div><div class="line"><span class="keyword">else</span></div><div class="line">    c();</div><div class="line"></div><div class="line"><span class="comment">/* 预处理后 */</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    &#123; a(); b(); &#125;; <span class="comment">/* 最后的分号代表if 语句结束 */</span></div><div class="line"><span class="keyword">else</span>   <span class="comment">/* else 缺乏对应if */</span></div><div class="line">    c();</div></pre></td></tr></table></figure>
+<p>用 do while 就可以了</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M() do &#123; a(); b(); &#125; while(0)</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    M();</div><div class="line"><span class="keyword">else</span></div><div class="line">    c();</div><div class="line"></div><div class="line"><span class="comment">/* 预处理后 */</span></div><div class="line"><span class="keyword">if</span> (cond)</div><div class="line">    <span class="keyword">do</span> &#123; a(); b(); &#125; <span class="keyword">while</span>(<span class="number">0</span>);</div><div class="line"><span class="keyword">else</span></div><div class="line">    c();</div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/13/cpp-宏编写技巧/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/09/设计模式笔记/" itemprop="url">
+                  设计模式笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-09T15:45:33+08:00" content="2016-10-09">
+              2016-10-09
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/09/设计模式笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/09/设计模式笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/10/09/设计模式笔记/" class="leancloud_visitors" data-flag-title="设计模式笔记">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>设计模式</p>
+<h1 id="Factory-Method-Insurance"><a href="#Factory-Method-Insurance" class="headerlink" title="Factory Method - Insurance"></a>Factory Method - Insurance</h1><p>工厂方法模式</p>
+<p><strong>优点</strong>:</p>
+<ul>
+<li>工厂方法模式将创建对象的逻辑与任务交给了工厂类</li>
+<li>工厂方法模式支持开闭原则</li>
+</ul>
+<p><strong>适用情况</strong></p>
+<ul>
+<li>创建某些类的对象的逻辑比较复杂,并且有很多条件分支, 而且还可能增加新的条件.</li>
+<li>一个类不能预先准确的知道它必须创建一个层次类中的哪一个子类的对象</li>
+<li>一个类适用它的子类决定所要创建的对象</li>
+<li>需要封装创建类的对象的逻辑, 使得这些逻辑局部化.</li>
+</ul>
+<p>简单工厂方法模式与工厂方法模式的区别: <strong>p15</strong></p>
+<p><img src="http://ob4a6y748.bkt.clouddn.com/2016-10-10%2020-12-36%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="factory"></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/09/设计模式笔记/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/07/dns相关的小实践/" itemprop="url">
+                  dns相关的小实践
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-07T20:13:44+08:00" content="2016-10-07">
+              2016-10-07
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/07/dns相关的小实践/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/07/dns相关的小实践/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/10/07/dns相关的小实践/" class="leancloud_visitors" data-flag-title="dns相关的小实践">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>dig 命令可以跟踪dns 查询的路径.<br>如<code>dig www.baidu.com +trace</code></p>
+<p>ubuntu 系统下<code>/etc/resolv.conf</code> 配置文件, 用来设置DNS 服务器的IP 地址及DNS 域名, 还包含了主机的域名搜索顺序.</p>
+<p>文件<code>/etc/resolve.conf</code> 内容如下:<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Dynamic resolv.<span class="keyword">conf</span>(5) <span class="keyword">file</span> <span class="keyword">for</span> glibc resolver(3) generated <span class="keyword">by</span> resolvconf(8)</div><div class="line">#     <span class="keyword">DO</span> NOT <span class="keyword">EDIT</span> THIS <span class="keyword">FILE</span> <span class="keyword">BY</span> HAND -- YOUR CHANGES WILL BE OVERWRITTEN</div><div class="line">nameserver 127.0.0.1</div><div class="line"><span class="keyword">search</span> lan</div></pre></td></tr></table></figure></p>
+<p>执行命令<code>dig www.kicker.com.cn + trace</code></p>
+<p>输出结果:<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="comment">; &lt;&lt;&gt;&gt; DiG 9.10.3-P4-Ubuntu &lt;&lt;&gt;&gt; www.kicker.com.cn +trace</span></div><div class="line"><span class="comment">;; global options: +cmd</span></div><div class="line">.			<span class="number">478606</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	b.root-servers.net.</div><div class="line">.			<span class="number">478606</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	k.root-servers.net.</div><div class="line">.			<span class="number">478606</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	e.root-servers.net.</div><div class="line">.			<span class="number">478606</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	f.root-servers.net.</div><div class="line">.			<span class="number">478606</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	c.root-servers.net.</div><div class="line">.			<span class="number">478606</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	l.root-servers.net.</div><div class="line">.			<span class="number">478606</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	m.root-servers.net.</div><div class="line">.			<span class="number">478606</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	a.root-servers.net.</div><div class="line">.			<span class="number">478606</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	g.root-servers.net.</div><div class="line">.			<span class="number">478606</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	j.root-servers.net.</div><div class="line">.			<span class="number">478606</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	d.root-servers.net.</div><div class="line">.			<span class="number">478606</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	i.root-servers.net.</div><div class="line">.			<span class="number">478606</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	h.root-servers.net.</div><div class="line"><span class="comment">;; Received 239 bytes from 127.0.0.1#53(127.0.0.1) in 2 ms</span></div><div class="line"></div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	d.dns.cn.</div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	a.dns.cn.</div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	e.dns.cn.</div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	c.dns.cn.</div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	ns.cernet.net.</div><div class="line">cn.			<span class="number">172800</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	b.dns.cn.</div><div class="line">cn.			<span class="number">86400</span>	<span class="keyword">IN</span>	<span class="keyword">DS</span>	<span class="number">41470 8 2</span> <span class="number">3623</span>FB6E3B1F69C6855DA1E48D3A38236DD2EDF0380FB018FF538650 EAC2C4DD</div><div class="line">cn.			<span class="number">86400</span>	<span class="keyword">IN</span>	<span class="keyword">RRSIG</span>	<span class="keyword">DS</span> <span class="number">8 1 86400</span> <span class="number">20161020020000</span> <span class="number">20161007010000</span> <span class="number">39291</span> . A2tSyIt/guVEItqdJgKF7h765ACBXXhA6zQGVNfYYbpeupuDju37nXm5 Z44h9TlVa2RIkM9Jq8x0SMuH5cm1G4opXU1zHZgUvhC+<span class="number">1</span>feGfEnZ26Py fXZ3hTBT+uNwU/gnRZgvEvfORwU4BNfjKyrHmk/tXKYcARXOMK9Nb3PA BBJ2vshXDn6quUtElmP3CktvXDzpC/<span class="number">7</span>pT6HMgaBOYxWYxao9W0UsEDZQ cxWpXBu7Psj7a/<span class="number">11</span>kMQGZNONU65P13e3QK8zlF6BMDZDMJH9tIBJF8v6 udnjKVx8bnkqJza//<span class="number">19</span>PxtiSDf3KHvFKE7cH5sv0G1Zr3yMLNfG5/aTs qBlX+<span class="keyword">A</span>==</div><div class="line"><span class="comment">;; Received 644 bytes from 199.7.91.13#53(d.root-servers.net) in 370 ms</span></div><div class="line"></div><div class="line">kicker.com.cn.		<span class="number">86400</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	ns.nagor.com.cn.</div><div class="line">kicker.com.cn.		<span class="number">86400</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	ns.nagor.cn.</div><div class="line">GICE14DNTMDN31G43AUGVRKTKALVB8QC.com.cn. <span class="number">21600</span> <span class="keyword">IN</span> <span class="keyword">NSEC</span><span class="number">3	1 1 10</span> AEF123AB MI2OUBFA49Q47917BR600DOL1QGRP79T <span class="keyword">NS</span> <span class="keyword">SOA</span> <span class="keyword">RRSIG</span> <span class="keyword">DNSKEY</span> <span class="keyword">NSEC3PARAM</span></div><div class="line">GICE14DNTMDN31G43AUGVRKTKALVB8QC.com.cn. <span class="number">21600</span> <span class="keyword">IN</span> <span class="keyword">RRSIG</span>	<span class="keyword">NSEC3</span> <span class="number">8 3 21600</span> <span class="number">20161020002013</span> <span class="number">20160920000126</span> <span class="number">15399</span> com.cn. jDuJAUMvAwNM3kPNu3bVyk1VMZInBfUKiD6/lutPeAjrudbIj7qFkTxM F164SK96QaYMWZMg7sHThlA9S5DoDE3rEh9vF01qcsg1pxA7+m9lDFSn Q0dQ8hU078oCPnH4JPzgB5obiSc2OmcgFml5vaIMiWT+Rpe9V3ZCkX7W z7Q=</div><div class="line">MI2OUBFA49Q47917BR600DOL1QGRP79T.com.cn. <span class="number">21600</span> <span class="keyword">IN</span> <span class="keyword">NSEC</span><span class="number">3	1 1 10</span> AEF123AB UQROTQK62NOIM5U43DMF7AMC8JJFRM7T <span class="keyword">TXT</span> <span class="keyword">RRSIG</span></div><div class="line">MI2OUBFA49Q47917BR600DOL1QGRP79T.com.cn. <span class="number">21600</span> <span class="keyword">IN</span> <span class="keyword">RRSIG</span>	<span class="keyword">NSEC3</span> <span class="number">8 3 21600</span> <span class="number">20161019013404</span> <span class="number">20160919011226</span> <span class="number">15399</span> com.cn. Rw7vfPaOa+UB9TpAHniy3XOk8UcZFHo1w7Qlq0gjX/gBBQY1vUR10BeI x0kodMsNRkHkvjvWkHfxAu/A8rR0X4xOuJkYZGBnR0YYVnP/N3YGHoz3 C6QOM47dyogMIOg/zVpnYjubpaILGpNY5ddZaJLF2sKz9SvJ0NXCQIyg lGQ=</div><div class="line"><span class="comment">;; Received 591 bytes from 203.119.25.1#53(a.dns.cn) in 22 ms</span></div><div class="line"></div><div class="line">www.kicker.com.cn.	<span class="number">600</span>	<span class="keyword">IN</span>	<span class="keyword">A</span>	<span class="number">192.161.49.88</span></div><div class="line">kicker.com.cn.		<span class="number">7200</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	ns1.dnsnw.com.</div><div class="line">kicker.com.cn.		<span class="number">7200</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	ns2.dnsnw.com.</div><div class="line">kicker.com.cn.		<span class="number">7200</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	ns.nagor.cn.</div><div class="line">kicker.com.cn.		<span class="number">7200</span>	<span class="keyword">IN</span>	<span class="keyword">NS</span>	ns.nagor.com.cn.</div><div class="line"><span class="comment">;; Received 159 bytes from 218.66.171.170#53(ns.nagor.com.cn) in 54 ms</span></div></pre></td></tr></table></figure></p>
+<p>解释一下过程</p>
+<ol>
+<li><p>访问本地域名服务器(127.0.0.1)(16行), 获得根域名服务器的记录(.)</p>
+</li>
+<li><p>访问(.)的域名服务器, 获得(cn.)的记录</p>
+</li>
+<li><p>访问(cn.)的域名服务器, 获得(kicker.com.cn.) 的记录</p>
+</li>
+<li><p>访问(kicker.com.cn.) 的域名服务器, 获得(www.kicker.com.cn)的ip地址</p>
+</li>
+</ol>
+<p><strong>A记录</strong><br>A记录（即地址记录，也称为主机记录）将一个网域关联到托管该网域服务的计算机的物理IP地址。</p>
+<p><strong>NS记录</strong><br>域名服务器(NS)记录用于确定哪些服务器为一个网域传达DNS信息。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/07/dns相关的小实践/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/06/cpp-泛型算法参考/" itemprop="url">
+                  cpp-泛型算法参考
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-06T20:35:37+08:00" content="2016-10-06">
+              2016-10-06
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/06/cpp-泛型算法参考/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/06/cpp-泛型算法参考/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/10/06/cpp-泛型算法参考/" class="leancloud_visitors" data-flag-title="cpp-泛型算法参考">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>所有的泛型算法(generic algorithm), 除了极少数外, 前两个参数皆为一组iterator, 用来标示欲遍历的容器(container) 元素的范围. 范围系为[iterator1, iterator2)</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> array_size = <span class="number">7</span>;</div><div class="line"><span class="keyword">int</span> iarray[array_size] = &#123;<span class="number">1</span>, <span class="number">10</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">14</span>, <span class="number">8</span>&#125;;</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vec(iarray, iarray + array_size);</div><div class="line"></div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it = find(vec.begin(), vec.end(), value);</div><div class="line"><span class="keyword">int</span> *pi = find(iarray, iarray + array_size, value);</div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/06/cpp-泛型算法参考/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/05/cpp-顺序性容器/" itemprop="url">
+                  cpp-顺序性容器
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-05T23:41:04+08:00" content="2016-10-05">
+              2016-10-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/05/cpp-顺序性容器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/05/cpp-顺序性容器/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/10/05/cpp-顺序性容器/" class="leancloud_visitors" data-flag-title="cpp-顺序性容器">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>要使用顺序性容器,首先必须包含相关的头文件,也就是以下三者之一:<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;list&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;deque&gt;</span></span></div></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/05/cpp-顺序性容器/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1426,7 +1440,7 @@ IBM 认为的
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1467,7 +1481,7 @@ IBM 认为的
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">61</span>
+              <span class="site-state-item-count">52</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
