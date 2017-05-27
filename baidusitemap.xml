@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://beim.github.io/2016/12/14/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2017-05-27T14:53:01.560Z</lastmod>
+    <data>
+        <display>
+        <title>docker入门笔记</title>
+        <pubTime>2016-12-14T15:21:56.000Z</pubTime>
+        
+        <tag>docker</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://beim.github.io/3017/01/01/2017-%E6%94%B6%E8%97%8F/</loc>
     <lastmod>2017-05-24T09:40:10.327Z</lastmod>
     <data>
@@ -588,23 +605,6 @@
         <display>
         <title>安装docker</title>
         <pubTime>2016-12-14T11:17:37.000Z</pubTime>
-        
-        <tag>docker</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://beim.github.io/2016/12/14/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2017-03-12T09:10:35.757Z</lastmod>
-    <data>
-        <display>
-        <title>docker入门笔记</title>
-        <pubTime>2016-12-14T15:21:56.000Z</pubTime>
         
         <tag>docker</tag>
          
