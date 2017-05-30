@@ -1,0 +1,8 @@
+package site.beim.service;
+
+import site.beim.pojo.User;  
+  
+public interface IUserService {  
+    public User getUserById(int userId);  
+}  
+
