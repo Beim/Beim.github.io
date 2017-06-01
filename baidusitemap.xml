@@ -4,8 +4,25 @@
 
     
   <url>
+    <loc>https://beim.github.io/2017/06/01/java-%E5%8A%A8%E6%80%81%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2017-06-01T06:44:15.662Z</lastmod>
+    <data>
+        <display>
+        <title>java-动态调用方法</title>
+        <pubTime>2017-06-01T03:43:59.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://beim.github.io/3017/01/01/2017-%E6%94%B6%E8%97%8F/</loc>
-    <lastmod>2017-05-30T15:02:37.644Z</lastmod>
+    <lastmod>2017-05-31T05:37:48.658Z</lastmod>
     <data>
         <display>
         <title>2017-收藏</title>
@@ -837,14 +854,14 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/08/05/git%E5%91%BD%E4%BB%A4%E4%B9%8B-git-tag/</loc>
+    <loc>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
         <display>
-        <title>git命令之 git tag</title>
-        <pubTime>2016-08-05T02:13:10.000Z</pubTime>
+        <title>ubuntu 启动初始化</title>
+        <pubTime>2016-08-05T02:28:29.000Z</pubTime>
         
-        <tag>git</tag>
+        <tag>linux</tag>
          
          
            
@@ -871,14 +888,14 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
+    <loc>https://beim.github.io/2016/08/05/git%E5%91%BD%E4%BB%A4%E4%B9%8B-git-tag/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
         <display>
-        <title>ubuntu 启动初始化</title>
-        <pubTime>2016-08-05T02:28:29.000Z</pubTime>
+        <title>git命令之 git tag</title>
+        <pubTime>2016-08-05T02:13:10.000Z</pubTime>
         
-        <tag>linux</tag>
+        <tag>git</tag>
          
          
            
