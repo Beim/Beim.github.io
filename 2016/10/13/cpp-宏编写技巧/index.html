@@ -82,25 +82,17 @@
 
 
 
-<meta name="description" content="如果宏里有多过一个语句(statement), 就需要用do {/…/} while(0) 包裹成单个语句, 否则会有如下问题
-1234567891011#define M() a(); b()if (cond)    M();else    c();/* 预处理后 */if (cond)    a(); b()else /* else 缺乏对应if */    c();
-只用{} 也不行:
-12">
+<meta name="description" content="如果宏里有多过一个语句(statement), 就需要用do {/…/} while(0) 包裹成单个语句, 否则会有如下问题 1234567891011#define M() a(); b()if (cond)    M();else    c();/* 预处理后 */if (cond)    a(); b()else /* else 缺乏对应if */    c(); 只用{} 也不行: 12">
+<meta name="keywords" content="cpp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cpp-宏编写技巧">
 <meta property="og:url" content="https://beim.github.io/2016/10/13/cpp-宏编写技巧/index.html">
 <meta property="og:site_name" content="北冥945">
-<meta property="og:description" content="如果宏里有多过一个语句(statement), 就需要用do {/…/} while(0) 包裹成单个语句, 否则会有如下问题
-1234567891011#define M() a(); b()if (cond)    M();else    c();/* 预处理后 */if (cond)    a(); b()else /* else 缺乏对应if */    c();
-只用{} 也不行:
-12">
+<meta property="og:description" content="如果宏里有多过一个语句(statement), 就需要用do {/…/} while(0) 包裹成单个语句, 否则会有如下问题 1234567891011#define M() a(); b()if (cond)    M();else    c();/* 预处理后 */if (cond)    a(); b()else /* else 缺乏对应if */    c(); 只用{} 也不行: 12">
 <meta property="og:updated_time" content="2017-03-12T09:16:06.382Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cpp-宏编写技巧">
-<meta name="twitter:description" content="如果宏里有多过一个语句(statement), 就需要用do {/…/} while(0) 包裹成单个语句, 否则会有如下问题
-1234567891011#define M() a(); b()if (cond)    M();else    c();/* 预处理后 */if (cond)    a(); b()else /* else 缺乏对应if */    c();
-只用{} 也不行:
-12">
+<meta name="twitter:description" content="如果宏里有多过一个语句(statement), 就需要用do {/…/} while(0) 包裹成单个语句, 否则会有如下问题 1234567891011#define M() a(); b()if (cond)    M();else    c();/* 预处理后 */if (cond)    a(); b()else /* else 缺乏对应if */    c(); 只用{} 也不行: 12">
 
 
 
