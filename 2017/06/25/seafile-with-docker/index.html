@@ -82,17 +82,19 @@
 
 
 
-<meta name="description" content="scp在linux下一般用scp这个命令来通过ssh传输文件。 1、从服务器上下载文件123scp username@servername:/path/filename /var/www/local_dir（本地目录） 例如scp root@192.168.0.101:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt 的文件下载到/var/w">
+<meta name="description" content="更新一下用docker 安装seafile server 的步骤seafile docker - githubseafile 官网">
 <meta name="keywords" content="linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="命令行传输文件">
-<meta property="og:url" content="https://beim.github.io/2016/11/25/命令行传输文件/index.html">
+<meta property="og:title" content="seafile-with-docker">
+<meta property="og:url" content="https://beim.github.io/2017/06/25/seafile-with-docker/index.html">
 <meta property="og:site_name" content="北冥945">
-<meta property="og:description" content="scp在linux下一般用scp这个命令来通过ssh传输文件。 1、从服务器上下载文件123scp username@servername:/path/filename /var/www/local_dir（本地目录） 例如scp root@192.168.0.101:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt 的文件下载到/var/w">
-<meta property="og:updated_time" content="2017-03-12T09:12:32.112Z">
+<meta property="og:description" content="更新一下用docker 安装seafile server 的步骤seafile docker - githubseafile 官网">
+<meta property="og:image" content="https://beim.github.io/images/seafile-with-docker/head.jpg">
+<meta property="og:updated_time" content="2017-06-25T09:10:05.749Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="命令行传输文件">
-<meta name="twitter:description" content="scp在linux下一般用scp这个命令来通过ssh传输文件。 1、从服务器上下载文件123scp username@servername:/path/filename /var/www/local_dir（本地目录） 例如scp root@192.168.0.101:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt 的文件下载到/var/w">
+<meta name="twitter:title" content="seafile-with-docker">
+<meta name="twitter:description" content="更新一下用docker 安装seafile server 的步骤seafile docker - githubseafile 官网">
+<meta name="twitter:image" content="https://beim.github.io/images/seafile-with-docker/head.jpg">
 
 
 
@@ -113,11 +115,11 @@
 
 
 
-  <link rel="canonical" href="https://beim.github.io/2016/11/25/命令行传输文件/"/>
+  <link rel="canonical" href="https://beim.github.io/2017/06/25/seafile-with-docker/"/>
 
   <script type="text/javascript" src="/js/src/beim/test.js"></script>
 
-  <title> 命令行传输文件 | 北冥945 </title>
+  <title> seafile-with-docker | 北冥945 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -260,7 +262,7 @@
             
             
               
-                命令行传输文件
+                seafile-with-docker
               
             
           </h1>
@@ -272,8 +274,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-25T19:45:36+08:00" content="2016-11-25">
-              2016-11-25
+            <time itemprop="dateCreated" datetime="2017-06-25T16:49:29+08:00" content="2017-06-25">
+              2017-06-25
             </time>
           </span>
 
@@ -283,8 +285,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/11/25/命令行传输文件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/11/25/命令行传输文件/" itemprop="commentsCount"></span>
+                <a href="/2017/06/25/seafile-with-docker/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/06/25/seafile-with-docker/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -294,7 +296,7 @@
 
           
           
-             <span id="/2016/11/25/命令行传输文件/" class="leancloud_visitors" data-flag-title="命令行传输文件">
+             <span id="/2017/06/25/seafile-with-docker/" class="leancloud_visitors" data-flag-title="seafile-with-docker">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -316,12 +318,18 @@
       
 
       
-        <h1 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h1><p>在linux下一般用scp这个命令来通过ssh传输文件。</p>
-<p>1、从服务器上下载文件<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp username<span class="variable">@servername:</span>/path/filename /var/www/local_dir（本地目录）</div><div class="line"></div><div class="line"> 例如scp root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span>:/var/www/test.txt  把<span class="number">192.168</span>.<span class="number">0.101</span>上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）</div></pre></td></tr></table></figure></p>
-<p>2、上传本地文件到服务器<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp /path/filename username<span class="variable">@servername</span><span class="symbol">:/path</span>   </div><div class="line"></div><div class="line">例如scp /var/www/test.php  root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span><span class="symbol">:/var/www/</span>  把本机/var/www/目录下的test.php文件上传到<span class="number">192.168</span>.<span class="number">0</span>.<span class="number">101</span>这台服务器上的/var/www/目录中</div></pre></td></tr></table></figure></p>
-<p>3、从服务器下载整个目录<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp -r username<span class="variable">@servername:</span>/var/www/remote_dir/（远程目录） /var/www/local_dir（本地目录）</div><div class="line"></div><div class="line">例如:scp -r root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span>:/var/www/test  /var/www/</div></pre></td></tr></table></figure></p>
-<p>4、上传目录到服务器<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">scp  -r local_dir username<span class="variable">@servername:</span>remote_dir</div><div class="line"></div><div class="line">例如：scp -r test  root<span class="variable">@192</span>.<span class="number">168.0</span>.<span class="number">101</span>:/var/www/   把当前目录下的test目录上传到服务器的/var/www/ 目录</div></pre></td></tr></table></figure></p>
+        <p><img src="/images/seafile-with-docker/head.jpg" alt="head"></p>
+<p>更新一下用docker 安装seafile server 的步骤<br><a href="https://github.com/haiwen/seafile-docker" target="_blank" rel="external">seafile docker - github</a><br><a href="https://www.seafile.com/home/" target="_blank" rel="external">seafile 官网</a></p>
 <a id="more"></a>
+<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p>一台服务器<br>ubuntu 16.04<br>安装 Docker version 17.05.0-ce, build 89658be</p>
+<h1 id="安装Seafile"><a href="#安装Seafile" class="headerlink" title="安装Seafile"></a>安装Seafile</h1><h2 id="首先ssh-登录服务器"><a href="#首先ssh-登录服务器" class="headerlink" title="首先ssh 登录服务器"></a>首先ssh 登录服务器</h2><h2 id="按照github-上Readme-的步骤来做"><a href="#按照github-上Readme-的步骤来做" class="headerlink" title="按照github 上Readme 的步骤来做"></a>按照github 上Readme 的步骤来做</h2><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">sudo git clone https:<span class="comment">//github.com/haiwen/seafile-docker.git /var/seafile/</span></div><div class="line"><span class="keyword">cd</span> /<span class="keyword">var</span>/seafile/</div><div class="line"></div><div class="line">sudo cp samples/server.<span class="keyword">conf</span> <span class="keyword">bootstrap</span>/<span class="keyword">bootstrap</span>.<span class="keyword">conf</span></div><div class="line"># <span class="keyword">Edit</span> the options according to your <span class="keyword">use</span> case</div><div class="line">sudo vim <span class="keyword">bootstrap</span>/<span class="keyword">bootstrap</span>.<span class="keyword">conf</span></div></pre></td></tr></table></figure>
+<p>下面是我的配置文件<br><figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># If you edit this file, remember to run ./launcher rebuild</span></div><div class="line">[server]</div><div class="line">server.<span class="attr">hostname</span> = beiming.life</div><div class="line">admin.<span class="attr">email</span> = lalala@admin.com</div><div class="line">admin.<span class="attr">password</span> = lalala</div><div class="line"></div><div class="line"><span class="comment"># Comment out this line and uncomment the two lines below to use letsencrypt SSL certificate</span></div><div class="line"><span class="comment"># server.port_mappings = 80:80</span></div><div class="line">server.<span class="attr">letsencrypt</span> = <span class="literal">true</span></div><div class="line">server.<span class="attr">port_mappings</span> = <span class="number">80</span>:<span class="number">80</span>,<span class="number">443</span>:<span class="number">443</span></div></pre></td></tr></table></figure></p>
+<h2 id="修改文件服务器地址"><a href="#修改文件服务器地址" class="headerlink" title="修改文件服务器地址"></a>修改文件服务器地址</h2><p>位置在<code>/var/seafile/shared/seafile/conf/seahub_settings.py</code><br>修改最后一行的<code>FILE_SERVER_ROOT</code> 的值，将其中的<code>127.0.0.1</code> 替换为你的域名（与上面hostname 相同）。<br>ps：这一步在readme 中没有提到，如果不修改，在上传文件时使用的主机名将是127.0.0.1，从而发生错误。</p>
+<h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">sudo</span> ./launcher <span class="keyword">bootstrap</span></div><div class="line"><span class="symbol">sudo</span> ./launcher start</div></pre></td></tr></table></figure>
+<h2 id="访问seafile-server"><a href="#访问seafile-server" class="headerlink" title="访问seafile server"></a>访问seafile server</h2><p>浏览器打开<code>https://beiming.life</code> // 替换为你的域名</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><p>若修改配置 <code>shared/seafile/conf</code>，需要重启docker 容器<br><code>sudo ./launcher restart</code></p>
+<h2 id="log"><a href="#log" class="headerlink" title="log"></a>log</h2><p>日志文件在 <code>shared/logs/seafile</code></p>
+<h2 id="删除-rebuild-以后产生的dangling-images"><a href="#删除-rebuild-以后产生的dangling-images" class="headerlink" title="删除 rebuild 以后产生的dangling images"></a>删除 rebuild 以后产生的dangling images</h2><p><code>docker rmi $(docker images -qa -f &quot;dangling=true&quot;)</code></p>
 
       
     </div>
@@ -374,16 +382,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/24/ubuntu下mongodb安装使用/" rel="next" title="ubuntu下mongodb安装使用">
-                <i class="fa fa-chevron-left"></i> ubuntu下mongodb安装使用
+              <a href="/2017/06/01/java-动态调用方法/" rel="next" title="java-动态调用方法">
+                <i class="fa fa-chevron-left"></i> java-动态调用方法
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/11/26/安德的游戏-奥森·斯科特·卡德/" rel="prev" title="安德的游戏-奥森·斯科特·卡德">
-                安德的游戏-奥森·斯科特·卡德 <i class="fa fa-chevron-right"></i>
+              <a href="/3017/01/01/2017-收藏/" rel="prev" title="2017-收藏">
+                2017-收藏 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -532,7 +540,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#scp"><span class="nav-number">1.</span> <span class="nav-text">scp</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#环境"><span class="nav-number">1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Seafile"><span class="nav-number">2.</span> <span class="nav-text">安装Seafile</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#首先ssh-登录服务器"><span class="nav-number">2.1.</span> <span class="nav-text">首先ssh 登录服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#按照github-上Readme-的步骤来做"><span class="nav-number">2.2.</span> <span class="nav-text">按照github 上Readme 的步骤来做</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文件服务器地址"><span class="nav-number">2.3.</span> <span class="nav-text">修改文件服务器地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动容器"><span class="nav-number">2.4.</span> <span class="nav-text">启动容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问seafile-server"><span class="nav-number">2.5.</span> <span class="nav-text">访问seafile server</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">3.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改配置"><span class="nav-number">3.1.</span> <span class="nav-text">修改配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#log"><span class="nav-number">3.2.</span> <span class="nav-text">log</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除-rebuild-以后产生的dangling-images"><span class="nav-number">3.3.</span> <span class="nav-text">删除 rebuild 以后产生的dangling images</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
@@ -659,9 +667,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'beim';
-      var disqus_identifier = '2016/11/25/命令行传输文件/';
-      var disqus_title = "命令行传输文件";
-      var disqus_url = 'https://beim.github.io/2016/11/25/命令行传输文件/';
+      var disqus_identifier = '2017/06/25/seafile-with-docker/';
+      var disqus_title = "seafile-with-docker";
+      var disqus_url = 'https://beim.github.io/2017/06/25/seafile-with-docker/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');

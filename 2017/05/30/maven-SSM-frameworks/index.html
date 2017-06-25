@@ -82,11 +82,13 @@
 
 
 
+<meta name="description" content="给出完整项目压缩包和项目结构图百度网盘下载">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="maven+SSM-frameworks">
 <meta property="og:url" content="https://beim.github.io/2017/05/30/maven-SSM-frameworks/index.html">
 <meta property="og:site_name" content="北冥945">
+<meta property="og:description" content="给出完整项目压缩包和项目结构图百度网盘下载">
 <meta property="og:image" content="https://beim.github.io/images/maven-SSM-frameworks/head.png">
 <meta property="og:image" content="https://beim.github.io/images/maven-SSM-frameworks/9.png">
 <meta property="og:image" content="https://beim.github.io/images/maven-SSM-frameworks/1.png">
@@ -98,9 +100,10 @@
 <meta property="og:image" content="https://beim.github.io/images/maven-SSM-frameworks/7.png">
 <meta property="og:image" content="https://beim.github.io/images/maven-SSM-frameworks/8.png">
 <meta property="og:image" content="https://beim.github.io/images/maven-SSM-frameworks/9.png">
-<meta property="og:updated_time" content="2017-05-30T05:51:29.159Z">
+<meta property="og:updated_time" content="2017-06-25T09:12:28.690Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="maven+SSM-frameworks">
+<meta name="twitter:description" content="给出完整项目压缩包和项目结构图百度网盘下载">
 <meta name="twitter:image" content="https://beim.github.io/images/maven-SSM-frameworks/head.png">
 
 
@@ -326,8 +329,7 @@
 
       
         <p><img src="/images/maven-SSM-frameworks/head.png" alt="head"></p>
-<a id="more"></a>
-<p>给出完整项目压缩包和项目结构图<br><a href="https://pan.baidu.com/s/1slruwFz" target="_blank" rel="external">百度网盘下载</a><br><img src="/images/maven-SSM-frameworks/9.png" alt="9"></p>
+<p>给出完整项目压缩包和项目结构图<br><a href="https://pan.baidu.com/s/1slruwFz" target="_blank" rel="external">百度网盘下载</a><br><a id="more"></a><br><img src="/images/maven-SSM-frameworks/9.png" alt="9"></p>
 <h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>eclipse<br>MySQL</p>
 <h2 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h2><p>在数据库<code>mybatis</code>下创建表<code>user_t</code><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">EXISTS</span> <span class="string">`user_t`</span>;  </div><div class="line">  </div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`user_t`</span> (  </div><div class="line">  <span class="string">`id`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,  </div><div class="line">  <span class="string">`user_name`</span> <span class="built_in">varchar</span>(<span class="number">40</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </div><div class="line">  <span class="string">`password`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </div><div class="line">  <span class="string">`age`</span> <span class="built_in">int</span>(<span class="number">4</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </div><div class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>)  </div><div class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> AUTO_INCREMENT=<span class="number">2</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;  </div><div class="line">  </div><div class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="string">`user_t`</span>(<span class="string">`id`</span>,<span class="string">`user_name`</span>,<span class="string">`password`</span>,<span class="string">`age`</span>) <span class="keyword">values</span> (<span class="number">1</span>,<span class="string">'beim'</span>,<span class="string">'sfasgfaf'</span>, <span class="number">20</span>);</div></pre></td></tr></table></figure></p>
 <h2 id="创建maven-web项目"><a href="#创建maven-web项目" class="headerlink" title="创建maven web项目"></a>创建maven web项目</h2><p>选择webapp</p>
@@ -487,7 +489,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">53</span>
+              <span class="site-state-item-count">54</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

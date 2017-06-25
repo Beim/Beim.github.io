@@ -261,6 +261,120 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/05/Node-js的内部结构/" itemprop="url">
+                  Node.js的内部结构
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-05T10:01:34+08:00" content="2016-08-05">
+              2016-08-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/05/Node-js的内部结构/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/05/Node-js的内部结构/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/05/Node-js的内部结构/" class="leancloud_visitors" data-flag-title="Node.js的内部结构">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>首先, 关于JavaScript的一些话……</p>
+<p>Jeff Atwood, Stack Overflow的联合创始人之一, 曾经在它的博客Coding Horror中写道:</p>
+<p>any application that can be written in JavaScript, will eventually be written in JavaScript</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/05/Node-js的内部结构/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/05/跨域请求之JSONP与CORS/" itemprop="url">
                   跨域请求之JSONP与CORS
                 </a>
@@ -322,7 +436,7 @@
         
           <h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>在使用wikipedia的API的时候，直接发送ajax请求得到以下信息：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">XMLHttpRequest cannot <span class="keyword">load</span> https://en.wikipedia.org/w/api.php?<span class="keyword">action</span>=<span class="keyword">query</span>&amp;<span class="keyword">format</span>=<span class="keyword">json</span>&amp;<span class="keyword">list</span>=<span class="keyword">search</span>&amp;srsearch=<span class="number">1.</span> Response <span class="keyword">to</span> preflight request doesn’t pass <span class="keyword">access</span> control <span class="keyword">check</span>: <span class="keyword">No</span> ‘<span class="keyword">Access</span>-Control-<span class="keyword">Allow</span>-Origin’ header <span class="keyword">is</span> <span class="keyword">present</span> <span class="keyword">on</span> the requested resource. Origin ‘<span class="keyword">http</span>://s.codepen.io’ <span class="keyword">is</span> therefore <span class="keyword">not</span> allowed access.</div></pre></td></tr></table></figure>
-<p>这是由于XMLHttpRequest对象受限于<a href="https://en.wikipedia.org/wiki/Same-origin_policy">同源策略(same origin-policy)</a>。这个策略使得页面只能从同一个源(origin)获取数据。源是由协议(protocol)，主机(host)，端口号(port number)决定的。例如<code>https://www.sitepoint.com/jsonp-examples/</code> 的源就是<code>https, www.sitepoint.com</code>, <code>80</code>。</p>
+<p>这是由于XMLHttpRequest对象受限于<a href="https://en.wikipedia.org/wiki/Same-origin_policy" target="_blank" rel="external">同源策略(same origin-policy)</a>。这个策略使得页面只能从同一个源(origin)获取数据。源是由协议(protocol)，主机(host)，端口号(port number)决定的。例如<code>https://www.sitepoint.com/jsonp-examples/</code> 的源就是<code>https, www.sitepoint.com</code>, <code>80</code>。</p>
 <p>同源策略是一个安全机制。它避免了脚本从你的域读取数据并发送到别的服务器上。</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/08/05/跨域请求之JSONP与CORS/#more" rel="contents">
@@ -627,7 +741,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">53</span>
+              <span class="site-state-item-count">54</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

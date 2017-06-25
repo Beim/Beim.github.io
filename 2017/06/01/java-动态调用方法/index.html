@@ -82,15 +82,18 @@
 
 
 
+<meta name="description" content="需求在写web项目的时候，有一个api: /user?id={id}&amp;amp;username={username}id 和username 是可选的，需要在指定id 的时候按id 查询，指定username 的时候按username 查询需要动态的选择调用的方法，做到类似JS 的User[‘get’+field] 调用，传入参数field 为Id 时调用User.getId">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java-动态调用方法">
 <meta property="og:url" content="https://beim.github.io/2017/06/01/java-动态调用方法/index.html">
 <meta property="og:site_name" content="北冥945">
+<meta property="og:description" content="需求在写web项目的时候，有一个api: /user?id={id}&amp;amp;username={username}id 和username 是可选的，需要在指定id 的时候按id 查询，指定username 的时候按username 查询需要动态的选择调用的方法，做到类似JS 的User[‘get’+field] 调用，传入参数field 为Id 时调用User.getId">
 <meta property="og:image" content="https://beim.github.io/images/java-动态调用方法/head.png">
-<meta property="og:updated_time" content="2017-06-01T06:44:15.662Z">
+<meta property="og:updated_time" content="2017-06-25T09:11:53.034Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java-动态调用方法">
+<meta name="twitter:description" content="需求在写web项目的时候，有一个api: /user?id={id}&amp;amp;username={username}id 和username 是可选的，需要在指定id 的时候按id 查询，指定username 的时候按username 查询需要动态的选择调用的方法，做到类似JS 的User[‘get’+field] 调用，传入参数field 为Id 时调用User.getId">
 <meta name="twitter:image" content="https://beim.github.io/images/java-动态调用方法/head.png">
 
 
@@ -316,8 +319,8 @@
 
       
         <p><img src="/images/java-动态调用方法/head.png" alt="head"></p>
-<a id="more"></a>
 <h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>在写web项目的时候，有一个api: <code>/user?id={id}&amp;username={username}</code><br>id 和username 是可选的，需要在指定id 的时候按id 查询，指定username 的时候按username 查询<br>需要动态的选择调用的方法，做到类似JS 的User[‘get’+field] 调用，传入参数field 为Id 时调用User.getId</p>
+<a id="more"></a>
 <h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><h2 id="动态调用"><a href="#动态调用" class="headerlink" title="动态调用"></a>动态调用</h2><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 根据方法名和参数类型获取方法</span></div><div class="line"><span class="function"><span class="keyword">Method</span> <span class="title">method</span> = <span class="title">obj</span>.<span class="title">getClass</span><span class="params">()</span>.<span class="title">getMethod</span><span class="params">(methodName, classArr)</span>;</span></div><div class="line"><span class="comment">// 调用方法，类似JS的call，传入obj 作为方法的this</span></div><div class="line">Object retValue = <span class="function"><span class="keyword">method</span>.<span class="title">invoke</span><span class="params">(obj, args)</span>;</span></div></pre></td></tr></table></figure>
 <h2 id="获取属性值非空的域"><a href="#获取属性值非空的域" class="headerlink" title="获取属性值非空的域"></a>获取属性值非空的域</h2><p>首先获取所有的field, 然后根据field 的name 来调用对应的get 方法，判断值是否为空，进行筛选</p>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;Field&gt; getFieldsNotNull(<span class="keyword">Object</span> obj) &#123;</div><div class="line">  List&lt;Field&gt; retFields = <span class="keyword">new</span> Vector&lt;Field&gt;();</div><div class="line">  Field[] fields = obj.getClass().getDeclaredFields();</div><div class="line">  <span class="keyword">for</span> (Field f : fields) &#123;</div><div class="line">    <span class="keyword">if</span> (getValueOf(obj, f.getName()) != <span class="keyword">null</span>) &#123;</div><div class="line">      retFields.<span class="built_in">add</span>(f);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> retFields;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">Object</span> getValueOf(<span class="keyword">Object</span> obj, <span class="keyword">String</span> <span class="built_in">key</span>) &#123;</div><div class="line">  <span class="keyword">String</span> upperKey = <span class="built_in">key</span>.substring(<span class="number">0</span>, <span class="number">1</span>).toUpperCase() + <span class="built_in">key</span>.substring(<span class="number">1</span>);</div><div class="line">  <span class="keyword">return</span> invoke(obj, <span class="string">"get"</span>+upperKey, <span class="keyword">null</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">Object</span> invoke(<span class="keyword">Object</span> obj, <span class="keyword">String</span> methodName, Class&lt;?&gt;[] classArr, <span class="keyword">Object</span> ...args) &#123;</div><div class="line">  <span class="keyword">return</span> obj.getClass().getMethod(methodName, classArr).invoke(obj, args);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -381,8 +384,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/3017/01/01/2017-收藏/" rel="prev" title="2017-收藏">
-                2017-收藏 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/06/25/seafile-with-docker/" rel="prev" title="seafile-with-docker">
+                seafile-with-docker <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -458,7 +461,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">53</span>
+              <span class="site-state-item-count">54</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

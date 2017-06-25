@@ -261,6 +261,142 @@
             
               
                 
+                <a class="post-title-link" href="/2017/03/12/实习面试/" itemprop="url">
+                  实习面试
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-03-12T08:38:33+08:00" content="2017-03-12">
+              2017-03-12
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/03/12/实习面试/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/12/实习面试/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/03/12/实习面试/" class="leancloud_visitors" data-flag-title="实习面试">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>记录一下面试遇到过的问题</p>
+<h1 id="2017-03-11-蚂蚁金服-分布式计算-30"><a href="#2017-03-11-蚂蚁金服-分布式计算-30" class="headerlink" title="2017-03-11 蚂蚁金服 分布式计算(30+)"></a>2017-03-11 蚂蚁金服 分布式计算(30+)</h1><p>计算机网络：</p>
+<ul>
+<li>TCP 和UDP 的区别<br>有序数据传输<br>重发丢失的数据包<br>舍弃重复的数据包<br>无错误数据传输<br>阻塞/流量控制<br>面向连接（确认有创建三方交握，连接已创建才作传输。）</li>
+<li>TCP 报文内容<br>源端口 目的端口<br>序列号<br>确认号<br>头大小 标志位 窗口大小<br>校验和 紧急指针<br>选项字段<br>数据</li>
+<li>TIME_WAIT 是什么<br>主动关闭端接收到FIN后，就发送ACK包，等待足够时间以确保被动关闭端收到了终止请求的确认包。【按照RFC 793，一个连接可以在TIME-WAIT保证最大四分钟，即最大分段寿命（maximum segment lifetime）的2倍】</li>
+<li>TIME_WAIT 存在的理由<br><a href="http://www.cnblogs.com/li-hao/archive/2011/12/08/2280678.html" target="_blank" rel="external">博客园</a><br>可靠地实现TCP全双工连接的终止， 允许老的重复分节在网络中消逝</li>
+</ul>
+<p>操作系统</p>
+<ul>
+<li><p>进程和线程的区别<br>一个程序至少有一个进程，一个进程至少有一个线程。线程的划分尺度小于进程，使得多线程程序的并发性高。<br>进程在执行的过程中有独立的内存单元，而多个线程共享内存，从而提高了程序的运行效率。<br>进程是具有一定独立个功能的程序关于某个数据集合上的一次运行活动，进程是系统进行资源分配和调度的独立单位。<br>线程是CPU调度的最小单位，新建线程的时候会申请thread ID, program counter, register set, stack; 与其他同一进程的线程共享code section, data section, open files and signals。<br>进程和线程的主要差别在于它们是不同的操作系统资源管理方式。进程有独立的地址空间，一个进程崩溃后，在保护模式下不会对其它进程产生影响，而线程只是一个进程中的不同执行路径。线程有自己的堆栈和局部变量，但线程之间没有单独的地址空间，一个线程死掉就等于整个进程死掉，所以多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些。但对于一些要求同时进行并且又要共享某些变量的并发操作，只能用线程，不能用进程。</p>
+</li>
+<li><p>python 的线程和c 的线程一样吗，python 线程是不是只能占用一个核</p>
+</li>
+</ul>
+<p>C 语言</p>
+<ul>
+<li><p>函数指针的作用</p>
+<p>算法</p>
+</li>
+<li><p>单链表求环代码实现(快慢指针)</p>
+<p>项目</p>
+<ul>
+<li>项目中遇到的问题，怎么解决</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/03/12/实习面试/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/03/07/cpp-左值与右值/" itemprop="url">
                   cpp-左值与右值
                 </a>
@@ -432,8 +568,8 @@
 
       
         
-          <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getopt</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> * <span class="keyword">const</span> argv[],</div><div class="line">           <span class="keyword">const</span> <span class="keyword">char</span> *optstring)</span></span>;</div><div class="line"></div><div class="line"><span class="keyword">extern</span> <span class="keyword">char</span> *optarg;</div><div class="line"><span class="keyword">extern</span> <span class="keyword">int</span> optind, opterr, optopt;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;getopt.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getopt_long</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> * <span class="keyword">const</span> argv[],</div><div class="line">           <span class="keyword">const</span> <span class="keyword">char</span> *optstring,</div><div class="line">           <span class="keyword">const</span> <span class="keyword">struct</span> option *longopts, <span class="keyword">int</span> *longindex)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getopt_long_only</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> * <span class="keyword">const</span> argv[],</div><div class="line">           <span class="keyword">const</span> <span class="keyword">char</span> *optstring,</div><div class="line">           <span class="keyword">const</span> <span class="keyword">struct</span> option *longopts, <span class="keyword">int</span> *longindex)</span></span>;</div></pre></td></tr></table></figure>
-<p><a href="https://www.ibm.com/developerworks/cn/aix/library/au-unix-getopt.html#listing1">ibm - 使用 getopt() 进行命令行处理</a></p>
+          <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getopt</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> * <span class="keyword">const</span> argv[],</span></span></div><div class="line">           <span class="keyword">const</span> <span class="keyword">char</span> *optstring);</div><div class="line"></div><div class="line"><span class="keyword">extern</span> <span class="keyword">char</span> *optarg;</div><div class="line"><span class="keyword">extern</span> <span class="keyword">int</span> optind, opterr, optopt;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;getopt.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getopt_long</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> * <span class="keyword">const</span> argv[],</span></span></div><div class="line">           <span class="keyword">const</span> <span class="keyword">char</span> *optstring,</div><div class="line">           <span class="keyword">const</span> <span class="keyword">struct</span> option *longopts, <span class="keyword">int</span> *longindex);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getopt_long_only</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> * <span class="keyword">const</span> argv[],</span></span></div><div class="line">           <span class="keyword">const</span> <span class="keyword">char</span> *optstring,</div><div class="line">           <span class="keyword">const</span> <span class="keyword">struct</span> option *longopts, <span class="keyword">int</span> *longindex);</div></pre></td></tr></table></figure>
+<p><a href="https://www.ibm.com/developerworks/cn/aix/library/au-unix-getopt.html#listing1" target="_blank" rel="external">ibm - 使用 getopt() 进行命令行处理</a></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2017/02/27/C-解析命令行参数/#more" rel="contents">
               Read more &raquo;
@@ -783,7 +919,7 @@
 
       
         
-          <center><embed src="//music.163.com/style/swf/widget.swf?sid=33516497&type=2&auto=0&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed></center>
+          <center><embed src="//music.163.com/style/swf/widget.swf?sid=33516497&type=2&auto=0&width=320&height=66" width="340" height="86" allownetworking="all"></center>
 
 <blockquote>
 <p>反正神也不會管我的事，那就更加如此吧。</p>
@@ -1047,7 +1183,7 @@
       
         
           <p>代码如下：</p>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#include &lt;stdio.h&gt;</span></div><div class="line"><span class="meta">#include &lt;stdlib.h&gt;</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">func1</span> (<span class="params"></span>) </div><div class="line"></span>&#123;</div><div class="line">    printf(<span class="string">"this is func1 call\n"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">func2</span> (<span class="params"><span class="keyword">int</span> k, <span class="keyword">char</span> c</span>) </div><div class="line"></span>&#123;</div><div class="line">    printf(<span class="string">"this is func2 call:%d %c\n"</span>, k, c);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">func3</span> (<span class="params"><span class="keyword">void</span> (*pfunc</span>) (<span class="params"><span class="keyword">int</span>, <span class="keyword">char</span></span>), <span class="keyword">int</span> a, <span class="keyword">char</span> c)</div><div class="line"></span>&#123;</div><div class="line">    printf(<span class="string">"in func3\n"</span>);</div><div class="line">    pfunc(a, c);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">void</span> (*func4 (<span class="keyword">double</span> d)) (<span class="keyword">int</span>, <span class="keyword">char</span>) </div><div class="line">&#123;</div><div class="line">    printf(<span class="string">"in func4, double: %f\n"</span>, d);</div><div class="line">    <span class="keyword">return</span> func2;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">float</span> <span class="title">add</span> (<span class="params"><span class="keyword">float</span> a, <span class="keyword">float</span> b</span>)</div><div class="line"></span>&#123;</div><div class="line">    printf(<span class="string">"in func add, %f + %f = %f\n"</span>, a, b, a + b);</div><div class="line">    <span class="keyword">return</span> a + b;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">float</span> <span class="title">minu</span> (<span class="params"><span class="keyword">float</span> a, <span class="keyword">float</span> b</span>) </div><div class="line"></span>&#123;</div><div class="line">    printf(<span class="string">"in func min, %f - %f = %f\n"</span>, a, b, a - b);</div><div class="line">    <span class="keyword">return</span> a - b;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">typedef <span class="title">float</span> (<span class="params">*pfuncType</span>) (<span class="params"><span class="keyword">float</span>, <span class="keyword">float</span></span>)</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> (<span class="params"></span>) </div><div class="line"></span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">// 第一种赋值方法</span></div><div class="line">    <span class="keyword">int</span> (*pfunc1) () = func1;</div><div class="line">    <span class="comment">// 第一种调用方法</span></div><div class="line">    pfunc1();</div><div class="line">    <span class="comment">// 第二种调用方法</span></div><div class="line">    (*pfunc1)();</div><div class="line">    printf(<span class="string">"\n"</span>);</div><div class="line"></div><div class="line">    <span class="comment">// 第二种赋值方法</span></div><div class="line">    <span class="keyword">void</span> (*pfunc2) (<span class="keyword">int</span>, <span class="keyword">char</span>) = func2;</div><div class="line">    pfunc2(<span class="number">1</span>, <span class="string">'A'</span>);</div><div class="line">    (*pfunc2)(<span class="number">1</span>, <span class="string">'A'</span>);</div><div class="line">    printf(<span class="string">"\n"</span>);</div><div class="line"></div><div class="line">    <span class="comment">// 函数指针作为参数</span></div><div class="line">    func3(func2, <span class="number">1</span>, <span class="string">'B'</span>);</div><div class="line">    printf(<span class="string">"\n"</span>);</div><div class="line"></div><div class="line">    <span class="comment">// 函数指针作为参数的函数的赋值</span></div><div class="line">    <span class="keyword">void</span> (*pfunc3) (<span class="keyword">void</span> (*pp) (<span class="keyword">int</span>, <span class="keyword">char</span>), <span class="keyword">int</span>, <span class="keyword">char</span>) = func3;</div><div class="line">    pfunc3(func2, <span class="number">1</span>, <span class="string">'C'</span>);</div><div class="line">    printf(<span class="string">"\n"</span>);</div><div class="line"></div><div class="line">    <span class="comment">// 函数指针作为返回值</span></div><div class="line">    <span class="keyword">void</span> (*pfunc5) (<span class="keyword">int</span>, <span class="keyword">char</span>) = func4(<span class="number">3.33</span>);</div><div class="line">    pfunc5(<span class="number">1</span>, <span class="string">'D'</span>);</div><div class="line">    printf(<span class="string">"\n"</span>);</div><div class="line"></div><div class="line">    <span class="comment">// 函数指针数组</span></div><div class="line">    <span class="keyword">float</span> (*pfuncArr1[<span class="number">2</span>]) (<span class="keyword">float</span>, <span class="keyword">float</span>) = &#123;&amp;add, &amp;minu&#125;;</div><div class="line">    pfuncArr1[<span class="number">0</span>](<span class="number">1.2</span>, <span class="number">1.0</span>);</div><div class="line">    pfuncArr1[<span class="number">1</span>](<span class="number">1.2</span>, <span class="number">1.0</span>);</div><div class="line">    printf(<span class="string">"\n"</span>);</div><div class="line"></div><div class="line">    <span class="comment">// typedef 简化函数指针类型</span></div><div class="line">    pfuncType pfunc6 = &amp;add;</div><div class="line">    pfunc6(<span class="number">1.2</span>, <span class="number">1.0</span>);</div><div class="line">    pfuncType pfuncArr2[<span class="number">2</span>] = &#123;&amp;add, minu&#125;;</div><div class="line">    pfuncArr1[<span class="number">1</span>](<span class="number">1.2</span>, <span class="number">1.0</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/*</div><div class="line">输出:</div><div class="line">this is func1 call</div><div class="line">this is func1 call</div><div class="line"></div><div class="line">this is func2 call:1 A</div><div class="line">this is func2 call:1 A</div><div class="line"></div><div class="line">in func3</div><div class="line">this is func2 call:1 B</div><div class="line"></div><div class="line">in func3</div><div class="line">this is func2 call:1 C</div><div class="line"></div><div class="line">in func4, double: 3.330000</div><div class="line">this is func2 call:1 D</div><div class="line"></div><div class="line">in func add, 1.200000 + 1.000000 = 2.200000</div><div class="line">in func min, 1.200000 - 1.000000 = 0.200000</div><div class="line"></div><div class="line">in func add, 1.200000 + 1.000000 = 2.200000</div><div class="line">in func min, 1.200000 - 1.000000 = 0.200000</div><div class="line">*/</span></div></pre></td></tr></table></figure>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#include &lt;stdio.h&gt;</span></div><div class="line"><span class="meta">#include &lt;stdlib.h&gt;</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">func1</span> (<span class="params"></span>) </span></div><div class="line">&#123;</div><div class="line">    printf(<span class="string">"this is func1 call\n"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">func2</span> (<span class="params"><span class="keyword">int</span> k, <span class="keyword">char</span> c</span>) </span></div><div class="line">&#123;</div><div class="line">    printf(<span class="string">"this is func2 call:%d %c\n"</span>, k, c);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">func3</span> (<span class="params"><span class="keyword">void</span> (*pfunc</span>) (<span class="params"><span class="keyword">int</span>, <span class="keyword">char</span></span>), <span class="keyword">int</span> a, <span class="keyword">char</span> c)</span></div><div class="line">&#123;</div><div class="line">    printf(<span class="string">"in func3\n"</span>);</div><div class="line">    pfunc(a, c);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">void</span> (*func4 (<span class="keyword">double</span> d)) (<span class="keyword">int</span>, <span class="keyword">char</span>) </div><div class="line">&#123;</div><div class="line">    printf(<span class="string">"in func4, double: %f\n"</span>, d);</div><div class="line">    <span class="keyword">return</span> func2;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">float</span> <span class="title">add</span> (<span class="params"><span class="keyword">float</span> a, <span class="keyword">float</span> b</span>)</span></div><div class="line">&#123;</div><div class="line">    printf(<span class="string">"in func add, %f + %f = %f\n"</span>, a, b, a + b);</div><div class="line">    <span class="keyword">return</span> a + b;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">float</span> <span class="title">minu</span> (<span class="params"><span class="keyword">float</span> a, <span class="keyword">float</span> b</span>) </span></div><div class="line">&#123;</div><div class="line">    printf(<span class="string">"in func min, %f - %f = %f\n"</span>, a, b, a - b);</div><div class="line">    <span class="keyword">return</span> a - b;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">typedef <span class="title">float</span> (<span class="params">*pfuncType</span>) (<span class="params"><span class="keyword">float</span>, <span class="keyword">float</span></span>)</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> (<span class="params"></span>) </span></div><div class="line">&#123;</div><div class="line"></div><div class="line">    <span class="comment">// 第一种赋值方法</span></div><div class="line">    <span class="keyword">int</span> (*pfunc1) () = func1;</div><div class="line">    <span class="comment">// 第一种调用方法</span></div><div class="line">    pfunc1();</div><div class="line">    <span class="comment">// 第二种调用方法</span></div><div class="line">    (*pfunc1)();</div><div class="line">    printf(<span class="string">"\n"</span>);</div><div class="line"></div><div class="line">    <span class="comment">// 第二种赋值方法</span></div><div class="line">    <span class="keyword">void</span> (*pfunc2) (<span class="keyword">int</span>, <span class="keyword">char</span>) = func2;</div><div class="line">    pfunc2(<span class="number">1</span>, <span class="string">'A'</span>);</div><div class="line">    (*pfunc2)(<span class="number">1</span>, <span class="string">'A'</span>);</div><div class="line">    printf(<span class="string">"\n"</span>);</div><div class="line"></div><div class="line">    <span class="comment">// 函数指针作为参数</span></div><div class="line">    func3(func2, <span class="number">1</span>, <span class="string">'B'</span>);</div><div class="line">    printf(<span class="string">"\n"</span>);</div><div class="line"></div><div class="line">    <span class="comment">// 函数指针作为参数的函数的赋值</span></div><div class="line">    <span class="keyword">void</span> (*pfunc3) (<span class="keyword">void</span> (*pp) (<span class="keyword">int</span>, <span class="keyword">char</span>), <span class="keyword">int</span>, <span class="keyword">char</span>) = func3;</div><div class="line">    pfunc3(func2, <span class="number">1</span>, <span class="string">'C'</span>);</div><div class="line">    printf(<span class="string">"\n"</span>);</div><div class="line"></div><div class="line">    <span class="comment">// 函数指针作为返回值</span></div><div class="line">    <span class="keyword">void</span> (*pfunc5) (<span class="keyword">int</span>, <span class="keyword">char</span>) = func4(<span class="number">3.33</span>);</div><div class="line">    pfunc5(<span class="number">1</span>, <span class="string">'D'</span>);</div><div class="line">    printf(<span class="string">"\n"</span>);</div><div class="line"></div><div class="line">    <span class="comment">// 函数指针数组</span></div><div class="line">    <span class="keyword">float</span> (*pfuncArr1[<span class="number">2</span>]) (<span class="keyword">float</span>, <span class="keyword">float</span>) = &#123;&amp;add, &amp;minu&#125;;</div><div class="line">    pfuncArr1[<span class="number">0</span>](<span class="number">1.2</span>, <span class="number">1.0</span>);</div><div class="line">    pfuncArr1[<span class="number">1</span>](<span class="number">1.2</span>, <span class="number">1.0</span>);</div><div class="line">    printf(<span class="string">"\n"</span>);</div><div class="line"></div><div class="line">    <span class="comment">// typedef 简化函数指针类型</span></div><div class="line">    pfuncType pfunc6 = &amp;add;</div><div class="line">    pfunc6(<span class="number">1.2</span>, <span class="number">1.0</span>);</div><div class="line">    pfuncType pfuncArr2[<span class="number">2</span>] = &#123;&amp;add, minu&#125;;</div><div class="line">    pfuncArr1[<span class="number">1</span>](<span class="number">1.2</span>, <span class="number">1.0</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line">输出:</div><div class="line">this is func1 call</div><div class="line">this is func1 call</div><div class="line"></div><div class="line">this is func2 call:1 A</div><div class="line">this is func2 call:1 A</div><div class="line"></div><div class="line">in func3</div><div class="line">this is func2 call:1 B</div><div class="line"></div><div class="line">in func3</div><div class="line">this is func2 call:1 C</div><div class="line"></div><div class="line">in func4, double: 3.330000</div><div class="line">this is func2 call:1 D</div><div class="line"></div><div class="line">in func add, 1.200000 + 1.000000 = 2.200000</div><div class="line">in func min, 1.200000 - 1.000000 = 0.200000</div><div class="line"></div><div class="line">in func add, 1.200000 + 1.000000 = 2.200000</div><div class="line">in func min, 1.200000 - 1.000000 = 0.200000</div><div class="line">*/</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/12/22/C-函数指针-简单使用/#more" rel="contents">
               Read more &raquo;
@@ -1159,7 +1295,7 @@
 
       
         
-          <p><a href="https://dev.aliyun.com/detail.html?repoId=1237">阿里云仓库</a></p>
+          <p><a href="https://dev.aliyun.com/detail.html?repoId=1237" target="_blank" rel="external">阿里云仓库</a></p>
 <p><strong>启动</strong>(要求认证)<br><code>docker run --name docker0 -d -p 27017:27017 mongo:latest --auth</code></p>
 <p><strong>添加用户</strong>(以mongo 客户端, admin身份登入; 也可以用bash, 再mongo )<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">docker</span> <span class="selector-tag">exec</span> <span class="selector-tag">-it</span> <span class="selector-tag">mongo0</span> <span class="selector-tag">mongo</span> <span class="selector-tag">admin</span></div><div class="line"><span class="selector-tag">docker</span> <span class="selector-tag">createUser</span>(&#123;</div><div class="line">    <span class="attribute">user</span>: <span class="string">'superuser'</span>,</div><div class="line">    <span class="attribute">pwd</span>: <span class="string">'123456'</span>,</div><div class="line">    <span class="attribute">roles</span>: [&#123;</div><div class="line">        <span class="attribute">role</span>: <span class="string">'root'</span>, <span class="attribute">db</span>: <span class="string">'admin'</span></div><div class="line">    &#125;]</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
 <p><strong>备份</strong></p>
@@ -1323,123 +1459,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/14/docker入门笔记/" itemprop="url">
-                  docker入门笔记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-12-14T23:21:56+08:00" content="2016-12-14">
-              2016-12-14
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/14/docker入门笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/12/14/docker入门笔记/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/14/docker入门笔记/" class="leancloud_visitors" data-flag-title="docker入门笔记">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>Docker is the world’s leading software containerization platform</p>
-</blockquote>
-<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p><strong>镜像</strong><br>Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。<br><em>分层存储</em>: 镜像并非是像一个 ISO 那样的打包文件，镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由一组文件系统组成，或者说，由多层文件系统联合组成。</p>
-<p><strong>容器</strong><br>镜像和容器, 就像类和实例一样. 镜像是静态的定义, 容器是镜像运行时的实体.<br>镜像是分层存储, 容器也是, 每一个容器运行时，是以镜像为基础层，在其上创建一个当前容器的存储层，我们可以称这个为容器运行时读写而准备的存储层为容器存储层。<br>容器存储层的生存周期和容器一样，容器消亡时，容器存储层也随之消亡。因此，任何保存于容器存储层的信息都会随容器删除而丢失。<br>按照 Docker 最佳实践的要求，容器不应该向其存储层内写入任何数据，容器存储层要保持无状态化。所有的文件写入操作，都应该使用 数据卷（Volume）、或者绑定宿主目录，在这些位置的读写会跳过容器存储层，直接对宿主(或网络存储)发生读写，其性能和稳定性更高。<br>数据卷的生存周期独立于容器，容器消亡，数据卷不会消亡。因此，使用数据卷后，容器可以随意删除、重新 run，数据却不会丢失。</p>
-<p><strong>仓库</strong><br>仓库是集中,分发镜像的服务, 一个 Docker Registry 中可以包含多个仓库（Repository）；每个仓库可以包含多个标签（Tag）；每个标签对应一个镜像。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/14/docker入门笔记/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1485,7 +1504,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">53</span>
+              <span class="site-state-item-count">54</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

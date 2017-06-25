@@ -261,6 +261,123 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/14/docker入门笔记/" itemprop="url">
+                  docker入门笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-12-14T23:21:56+08:00" content="2016-12-14">
+              2016-12-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/14/docker入门笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/12/14/docker入门笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/14/docker入门笔记/" class="leancloud_visitors" data-flag-title="docker入门笔记">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>Docker is the world’s leading software containerization platform</p>
+</blockquote>
+<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p><strong>镜像</strong><br>Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。<br><em>分层存储</em>: 镜像并非是像一个 ISO 那样的打包文件，镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由一组文件系统组成，或者说，由多层文件系统联合组成。</p>
+<p><strong>容器</strong><br>镜像和容器, 就像类和实例一样. 镜像是静态的定义, 容器是镜像运行时的实体.<br>镜像是分层存储, 容器也是, 每一个容器运行时，是以镜像为基础层，在其上创建一个当前容器的存储层，我们可以称这个为容器运行时读写而准备的存储层为容器存储层。<br>容器存储层的生存周期和容器一样，容器消亡时，容器存储层也随之消亡。因此，任何保存于容器存储层的信息都会随容器删除而丢失。<br>按照 Docker 最佳实践的要求，容器不应该向其存储层内写入任何数据，容器存储层要保持无状态化。所有的文件写入操作，都应该使用 数据卷（Volume）、或者绑定宿主目录，在这些位置的读写会跳过容器存储层，直接对宿主(或网络存储)发生读写，其性能和稳定性更高。<br>数据卷的生存周期独立于容器，容器消亡，数据卷不会消亡。因此，使用数据卷后，容器可以随意删除、重新 run，数据却不会丢失。</p>
+<p><strong>仓库</strong><br>仓库是集中,分发镜像的服务, 一个 Docker Registry 中可以包含多个仓库（Repository）；每个仓库可以包含多个标签（Tag）；每个标签对应一个镜像。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/14/docker入门笔记/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/14/安装docker/" itemprop="url">
                   安装docker
                 </a>
@@ -320,9 +437,9 @@
 
       
         
-          <p><a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/">ubuntu 安装Docker 指南 - 官网</a></p>
+          <p><a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/" target="_blank" rel="external">ubuntu 安装Docker 指南 - 官网</a></p>
 <p>在添加GPG 这一步报错， 无法获取<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">beim<span class="variable">@userver:</span>/etc/apt$ sudo apt-key adv \</div><div class="line">&gt;                --keyserver <span class="attribute">hkp</span>:<span class="comment">//ha.pool.sks-keyservers.net:80 \</span></div><div class="line">&gt;                --recv-keys <span class="number">58118</span>E89F3A912897C070ADBF76221572C52609D</div><div class="line"><span class="attribute">Executing</span>: /tmp/tmp.N2eCGO93Kl/gpg.<span class="number">1</span>.sh --keyserver</div><div class="line"><span class="attribute">hkp</span>:<span class="comment">//ha.pool.sks-keyservers.net:80</span></div><div class="line">--recv-keys</div><div class="line"><span class="number">58118</span>E89F3A912897C070ADBF76221572C52609D</div><div class="line"><span class="attribute">gpg</span>: requesting key <span class="number">2</span>C52609D from hkp server ha.pool.sks-keyservers.net</div><div class="line"><span class="attribute">gpg</span>: keyserver timed out</div><div class="line"><span class="attribute">gpg</span>: keyserver receive <span class="attribute">failed</span>: keyserver error</div></pre></td></tr></table></figure></p>
-<p>于是参考<a href="https://yeasy.gitbooks.io/docker_practice/content/install/ubuntu.html">Ubuntu、Debian 系列安装 Docker - gitbook</a></p>
+<p>于是参考<a href="https://yeasy.gitbooks.io/docker_practice/content/install/ubuntu.html" target="_blank" rel="external">Ubuntu、Debian 系列安装 Docker - gitbook</a></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/12/14/安装docker/#more" rel="contents">
               Read more &raquo;
@@ -434,10 +551,10 @@
 
       
         
-          <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><a href="https://github.com/shadowsocks/shadowsocks/blob/master/README.md">shadowsocks - Tutorial - Github</a></p>
+          <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><a href="https://github.com/shadowsocks/shadowsocks/blob/master/README.md" target="_blank" rel="external">shadowsocks - Tutorial - Github</a></p>
 <h1 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h1><p>给出一份客户端的配置文件<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># shadow.json</span></div><div class="line">&#123;</div><div class="line">    <span class="string">"server"</span>: <span class="string">"sg03-31.ssv7.net"</span>,</div><div class="line">    <span class="string">"server_port"</span>: <span class="number">40696</span>,</div><div class="line">    <span class="string">"local"</span>: <span class="string">"127.0.0.1"</span>,</div><div class="line">    <span class="string">"local_port"</span>: <span class="number">1080</span>,</div><div class="line">    <span class="string">"password"</span>: <span class="string">"your password"</span>,</div><div class="line">    <span class="string">"timeout"</span>: <span class="number">600</span>,</div><div class="line">    <span class="string">"method"</span>: <span class="string">"aes-256-cfb"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>执行命令<code>sslocal -c /home/beim/.shadow.json</code> 即可连接至服务器</p>
-<p>执行<code>gnome-session-properties</code> 命令, 将上一条命令加入到开机自启，也有其他办法加入自启，见<a href="http://blog.beim.site/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/">另一篇文章</a></p>
+<p>执行<code>gnome-session-properties</code> 命令, 将上一条命令加入到开机自启，也有其他办法加入自启，见<a href="http://blog.beim.site/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/" target="_blank" rel="external">另一篇文章</a></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/12/10/shadowsocks配置/#more" rel="contents">
               Read more &raquo;
@@ -1029,17 +1146,17 @@
 
       
         
-          <p><a href="https://docs.mongodb.com/master/tutorial/install-mongodb-on-ubuntu/?_ga=1.183956006.1858520870.1479944396">官网链接</a></p>
+          <p><a href="https://docs.mongodb.com/master/tutorial/install-mongodb-on-ubuntu/?_ga=1.183956006.1858520870.1479944396" target="_blank" rel="external">官网链接</a></p>
 <blockquote>
 <p>Ubuntu16的systemd启动服务在<code>/lib/systemd/system/mongod.service</code><br>MongoDB数据存储在 <code>/var/lib/mongodb</code><br>日志文件在 <code>/var/log/mongodb</code><br>配置文件在 <code>/etc/mongod.conf</code></p>
 </blockquote>
-<h1 id="security"><a href="#security" class="headerlink" title="security"></a>security</h1><p><a href="https://docs.mongodb.com/manual/tutorial/enable-authentication/">开启认证</a><br>在<code>/etc/mongod.conf</code>中增加<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">security:</span></div><div class="line"><span class="symbol">  authorization:</span> enabled</div></pre></td></tr></table></figure></p>
-<p><a href="https://docs.mongodb.com/manual/reference/method/db.createUser/">增加用户</a></p>
+<h1 id="security"><a href="#security" class="headerlink" title="security"></a>security</h1><p><a href="https://docs.mongodb.com/manual/tutorial/enable-authentication/" target="_blank" rel="external">开启认证</a><br>在<code>/etc/mongod.conf</code>中增加<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">security:</span></div><div class="line"><span class="symbol">  authorization:</span> enabled</div></pre></td></tr></table></figure></p>
+<p><a href="https://docs.mongodb.com/manual/reference/method/db.createUser/" target="_blank" rel="external">增加用户</a></p>
 <blockquote>
 <p>提示: shell下登陆后切换到对应的db进行auth, 在哪个db创建的用户就在哪个db进行auth<br>show users<br>db.auth<br>db.createUser<br>db.dropUser</p>
 </blockquote>
 <p>登陆<br><code>mongo dbName -u username -p password</code></p>
-<h1 id="others"><a href="#others" class="headerlink" title="others"></a>others</h1><p><a href="http://chenzhou123520.iteye.com/blog/1634676">mongod 后台启动</a> <code>mongod --fork --syslog</code></p>
+<h1 id="others"><a href="#others" class="headerlink" title="others"></a>others</h1><p><a href="http://chenzhou123520.iteye.com/blog/1634676" target="_blank" rel="external">mongod 后台启动</a> <code>mongod --fork --syslog</code></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/11/24/ubuntu下mongodb安装使用/#more" rel="contents">
               Read more &raquo;
@@ -1152,8 +1269,8 @@
       
         
           <p><img src="http://ob4a6y748.bkt.clouddn.com/seafile-2016-11-23%2010-04-44%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png" alt="效果图"></p>
-<p><a href="https://www.seafile.com/download/">官网下载</a></p>
-<p><a href="http://www.jianshu.com/p/d7635d0ecfbd">搭建教程</a></p>
+<p><a href="https://www.seafile.com/download/" target="_blank" rel="external">官网下载</a></p>
+<p><a href="http://www.jianshu.com/p/d7635d0ecfbd" target="_blank" rel="external">搭建教程</a></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/11/23/seafile-搭建私人网盘/#more" rel="contents">
               Read more &raquo;
@@ -1265,7 +1382,7 @@
 
       
         
-          <h1 id="chromium"><a href="#chromium" class="headerlink" title="chromium"></a>chromium</h1><h2 id="下载chromium"><a href="#下载chromium" class="headerlink" title="下载chromium"></a>下载chromium</h2><p>从<a href="https://github.com/scheib/chromium-latest-linux">github</a>上下载这几个脚本<br>放置在<code>/usr/local/src/</code>目录下</p>
+          <h1 id="chromium"><a href="#chromium" class="headerlink" title="chromium"></a>chromium</h1><h2 id="下载chromium"><a href="#下载chromium" class="headerlink" title="下载chromium"></a>下载chromium</h2><p>从<a href="https://github.com/scheib/chromium-latest-linux" target="_blank" rel="external">github</a>上下载这几个脚本<br>放置在<code>/usr/local/src/</code>目录下</p>
 <p>运行<code>./update.sh</code><br>此时将最新版本的chromium下载到了<code>/usr/local/src/chromium-latest-linux/latest</code>目录下</p>
 <h2 id="设置别名"><a href="#设置别名" class="headerlink" title="设置别名"></a>设置别名</h2><p><code>vi ~/.bashrc</code><br>在最后添加<br><code>alias chromium=&#39;/usr/local/src/chromium-latest-linux/run.sh&#39;</code></p>
 <p>这时在终端中输入<code>chromium</code>即可打开chromium浏览器</p>
@@ -1273,125 +1390,6 @@
 <h2 id="更改desktop下的chromium"><a href="#更改desktop下的chromium" class="headerlink" title="更改desktop下的chromium"></a>更改desktop下的chromium</h2><p><code>~/.local/share/applications</code>下找<code>chromium-browser.desktop</code>文件, 看其中的参数是否和安装的<code>run.sh</code>中的参数相同</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/11/14/ubuntu下安装chromium/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/08/计网实验准备/" itemprop="url">
-                  计网实验准备
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-08T23:47:44+08:00" content="2016-11-08">
-              2016-11-08
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/08/计网实验准备/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/11/08/计网实验准备/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/11/08/计网实验准备/" class="leancloud_visitors" data-flag-title="计网实验准备">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a><strong>实验目的</strong></h1><p>(1)按照图 4-1 所示,将网络设备用适当的线路连接好,注意 console 控制线和双绞<br>线不要混淆。<br>(2)通过“超级终端”软件连接到路由器或交换机的控制口,进入 IOS 系统。初步了<br>解 IOS 系统特性,为路由器或交换机配置名称、密码等,启用 telnet 服务,使以后的配置可<br>以通过 telnet 方式进行。<br>(3)通过 telnet 方式进入 IOS 的 CLI 配置界面,分别对三台网络设置进行适当的配置,<br>使局域网的四台计算机可以互相 ping 通。</p>
-<h1 id="实验说明"><a href="#实验说明" class="headerlink" title="实验说明"></a><strong>实验说明</strong></h1><ul>
-<li>本次实验划分了4个子网，分别为192.168.1.0/24,  2.2.2.0/24,  1.1.1.0/24,  202.118.232.0/24</li>
-<li>PC1, PC2, PC3, PC4均处于单独的冲突域中，因为它们都通过网络设备(交换机和三层交换机)隔开了，只有共享介质的设备(通过集线器连接)才处于同一冲突域。</li>
-<li>PC1和PC2在同一广播域，因为他们通过二层交换机相连，处于同一子网。PC3和PC4分别在单独的广播域中，因为他们处于不同的子网。</li>
-</ul>
-<h1 id="直通线和交叉线的区别"><a href="#直通线和交叉线的区别" class="headerlink" title="直通线和交叉线的区别"></a><strong>直通线和交叉线的区别</strong></h1><p>直通线，两端线序一样。<br>交叉线，一端为直通线的线序，另一端为白绿，绿，白橙，蓝，白蓝，橙，白棕，棕。<br>同种类型设备之间使用交叉线连接, 不同类型设备使用直通连接. <a href="http://www.360doc.com/content/10/0910/18/3266301_52693210.shtml">http://www.360doc.com/content/10/0910/18/3266301_52693210.shtml</a></p>
-<h1 id="telnet-和超级终端"><a href="#telnet-和超级终端" class="headerlink" title="telnet 和超级终端"></a><strong>telnet 和超级终端</strong></h1><p>通过telnet设置交换机是通过网络登录交换机，也叫带内管理，要求先配置交换机能登录及你电脑能通过网络连接访问到交换机。通过超级终端配置是电脑com口连接交换机console设置，不需要通过网络连接，故叫带外管理。通常初始设置要通过超级终端设置，设置好了后就可以通过telnet设置了。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/08/计网实验准备/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1466,7 +1464,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">53</span>
+              <span class="site-state-item-count">54</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

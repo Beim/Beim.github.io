@@ -261,6 +261,125 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/08/计网实验准备/" itemprop="url">
+                  计网实验准备
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-11-08T23:47:44+08:00" content="2016-11-08">
+              2016-11-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/08/计网实验准备/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/11/08/计网实验准备/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/11/08/计网实验准备/" class="leancloud_visitors" data-flag-title="计网实验准备">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a><strong>实验目的</strong></h1><p>(1)按照图 4-1 所示,将网络设备用适当的线路连接好,注意 console 控制线和双绞<br>线不要混淆。<br>(2)通过“超级终端”软件连接到路由器或交换机的控制口,进入 IOS 系统。初步了<br>解 IOS 系统特性,为路由器或交换机配置名称、密码等,启用 telnet 服务,使以后的配置可<br>以通过 telnet 方式进行。<br>(3)通过 telnet 方式进入 IOS 的 CLI 配置界面,分别对三台网络设置进行适当的配置,<br>使局域网的四台计算机可以互相 ping 通。</p>
+<h1 id="实验说明"><a href="#实验说明" class="headerlink" title="实验说明"></a><strong>实验说明</strong></h1><ul>
+<li>本次实验划分了4个子网，分别为192.168.1.0/24,  2.2.2.0/24,  1.1.1.0/24,  202.118.232.0/24</li>
+<li>PC1, PC2, PC3, PC4均处于单独的冲突域中，因为它们都通过网络设备(交换机和三层交换机)隔开了，只有共享介质的设备(通过集线器连接)才处于同一冲突域。</li>
+<li>PC1和PC2在同一广播域，因为他们通过二层交换机相连，处于同一子网。PC3和PC4分别在单独的广播域中，因为他们处于不同的子网。</li>
+</ul>
+<h1 id="直通线和交叉线的区别"><a href="#直通线和交叉线的区别" class="headerlink" title="直通线和交叉线的区别"></a><strong>直通线和交叉线的区别</strong></h1><p>直通线，两端线序一样。<br>交叉线，一端为直通线的线序，另一端为白绿，绿，白橙，蓝，白蓝，橙，白棕，棕。<br>同种类型设备之间使用交叉线连接, 不同类型设备使用直通连接. <a href="http://www.360doc.com/content/10/0910/18/3266301_52693210.shtml" target="_blank" rel="external">http://www.360doc.com/content/10/0910/18/3266301_52693210.shtml</a></p>
+<h1 id="telnet-和超级终端"><a href="#telnet-和超级终端" class="headerlink" title="telnet 和超级终端"></a><strong>telnet 和超级终端</strong></h1><p>通过telnet设置交换机是通过网络登录交换机，也叫带内管理，要求先配置交换机能登录及你电脑能通过网络连接访问到交换机。通过超级终端配置是电脑com口连接交换机console设置，不需要通过网络连接，故叫带外管理。通常初始设置要通过超级终端设置，设置好了后就可以通过telnet设置了。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/11/08/计网实验准备/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/04/JS-for-in遍历和prototype/" itemprop="url">
                   JS-for-in遍历和prototype
                 </a>
@@ -688,7 +807,7 @@ IBM 认为的
           <h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><hr>
 <h1 id="What-is-a-socket"><a href="#What-is-a-socket" class="headerlink" title="What is a socket?"></a>What is a socket?</h1><p>“Stream Sockets” and “Datagram Sockets” , which may be referred to as <code>SOCK_STRAM</code> and <code>SOCK_DGRAM</code><br>Datagram sockets are sometimes called “connectionless sockets”. (Though they can be <code>connect()</code>‘d if you really want)</p>
 <hr>
-<h1 id="IP-Addresses-structs-and-Data-Munging-转换"><a href="#IP-Addresses-structs-and-Data-Munging-转换" class="headerlink" title="IP Addresses, structs, and Data Munging(转换)"></a>IP Addresses, structs, and Data Munging(转换)</h1><h2 id="ipv6"><a href="#ipv6" class="headerlink" title="ipv6"></a>ipv6</h2><p>ipv6, 128 bits,  Lots of times with lots of zeros in it, and can be compressed between two colons.<br>For instance:<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">2001</span>:<span class="number">0</span><span class="attribute">db8</span>:<span class="attribute">c9d2</span>:<span class="number">0012</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0051</span></div><div class="line"><span class="number">2001</span>:<span class="attribute">db8</span>:<span class="attribute">c9d2</span>:<span class="number">12</span>::<span class="number">51</span></div><div class="line"></div><div class="line"><span class="number">2001</span>:<span class="number">0</span><span class="attribute">db8</span>:<span class="attribute">ab00</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span></div><div class="line"><span class="number">2001</span>:<span class="attribute">db8</span>:<span class="attribute">ab00</span>::</div><div class="line"></div><div class="line"># It<span class="string">'s loopback address, It always means "this machine I'</span>m running on now"</div><div class="line"><span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0001</span></div><div class="line">::<span class="number">1</span></div><div class="line"></div><div class="line"># there's an ipv4-compatibility mode for ipv6 <span class="attribute">addresses</div><div class="line"></span>::<span class="attribute">ffff</span>:<span class="number">192.0</span>.<span class="number">2.33</span></div></pre></td></tr></table></figure></p>
+<h1 id="IP-Addresses-structs-and-Data-Munging-转换"><a href="#IP-Addresses-structs-and-Data-Munging-转换" class="headerlink" title="IP Addresses, structs, and Data Munging(转换)"></a>IP Addresses, structs, and Data Munging(转换)</h1><h2 id="ipv6"><a href="#ipv6" class="headerlink" title="ipv6"></a>ipv6</h2><p>ipv6, 128 bits,  Lots of times with lots of zeros in it, and can be compressed between two colons.<br>For instance:<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">2001</span>:<span class="number">0</span><span class="attribute">db8</span>:<span class="attribute">c9d2</span>:<span class="number">0012</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0051</span></div><div class="line"><span class="number">2001</span>:<span class="attribute">db8</span>:<span class="attribute">c9d2</span>:<span class="number">12</span>::<span class="number">51</span></div><div class="line"></div><div class="line"><span class="number">2001</span>:<span class="number">0</span><span class="attribute">db8</span>:<span class="attribute">ab00</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span></div><div class="line"><span class="number">2001</span>:<span class="attribute">db8</span>:<span class="attribute">ab00</span>::</div><div class="line"></div><div class="line"># It<span class="string">'s loopback address, It always means "this machine I'</span>m running on now"</div><div class="line"><span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0000</span>:<span class="number">0001</span></div><div class="line">::<span class="number">1</span></div><div class="line"></div><div class="line"># there's an ipv4-compatibility mode for ipv6 <span class="attribute">addresses</span></div><div class="line">::<span class="attribute">ffff</span>:<span class="number">192.0</span>.<span class="number">2.33</span></div></pre></td></tr></table></figure></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/10/20/note-Beej-Network-Programming/#more" rel="contents">
               Read more &raquo;
@@ -801,7 +920,7 @@ IBM 认为的
       
         
           <figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span></div><div class="line">dir1/  makefile  o/  <span class="keyword">test</span>.cpp  <span class="keyword">test</span>.hpp</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> <span class="keyword">test</span>.cpp</div><div class="line">#<span class="keyword">include</span> <span class="string">"test.hpp"</span></div><div class="line"></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">int main() &#123;</div><div class="line">    int x(3);</div><div class="line">    int <span class="built_in">y</span>(5);</div><div class="line">    int c;</div><div class="line">    c = calculate(x, y);</div><div class="line">    cout &lt;&lt; c &lt;&lt; endl;</div><div class="line">&#125;</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> <span class="keyword">test</span>.hpp</div><div class="line">#<span class="keyword">include</span> &lt;iostream&gt;</div><div class="line">#<span class="keyword">include</span> <span class="string">"./dir1/test1.hpp"</span></div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span> dir1</div><div class="line">test1.cpp  test1.hpp</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> dir1/test1.cpp</div><div class="line">#<span class="keyword">include</span> <span class="string">"test1.hpp"</span></div><div class="line"></div><div class="line">int calculate(int <span class="keyword">const</span>&amp; a, int <span class="keyword">const</span>&amp; b) &#123;</div><div class="line">    int c;</div><div class="line">    c = a + b;</div><div class="line">    <span class="keyword">return</span> c;</div><div class="line">&#125;</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> dir1/test1.hpp </div><div class="line">#<span class="keyword">include</span> &lt;iostream&gt;</div><div class="line"></div><div class="line">int calculate(int <span class="keyword">const</span>&amp; a, int <span class="keyword">const</span>&amp; b);</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span> o/</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">cat</span> makefile</div><div class="line">mycplusplus: <span class="keyword">test</span>.o test1.o</div><div class="line">	<span class="keyword">g</span>++ o/test1.o o/<span class="keyword">test</span>.o -o mycplusplus</div><div class="line">test1.o : dir1/test1.cpp</div><div class="line">	<span class="keyword">g</span>++ -c dir1/test1.cpp -o o/test1.o</div><div class="line"><span class="keyword">test</span>.o : <span class="keyword">test</span>.cpp</div><div class="line">	<span class="keyword">g</span>++ -c <span class="keyword">test</span>.cpp -o o/<span class="keyword">test</span>.o</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ make</div><div class="line"><span class="keyword">g</span>++ -c <span class="keyword">test</span>.cpp -o o/<span class="keyword">test</span>.o</div><div class="line"><span class="keyword">g</span>++ -c dir1/test1.cpp -o o/test1.o</div><div class="line"><span class="keyword">g</span>++ o/test1.o o/<span class="keyword">test</span>.o -o mycplusplus</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span></div><div class="line">dir1/  makefile  mycplusplus*  o/  <span class="keyword">test</span>.cpp  <span class="keyword">test</span>.hpp</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ ./mycplusplus </div><div class="line">8</div><div class="line"></div><div class="line">~/usr/temp/<span class="keyword">test</span>-makefile$ <span class="keyword">l</span> o/</div><div class="line">test1.o  <span class="keyword">test</span>.o</div></pre></td></tr></table></figure>
-<p><a href="http://blog.csdn.net/hongkangwl/article/details/21328327">参考CSDN</a></p>
+<p><a href="http://blog.csdn.net/hongkangwl/article/details/21328327" target="_blank" rel="external">参考CSDN</a></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/10/18/cpp-makefile体验/#more" rel="contents">
               Read more &raquo;
@@ -914,19 +1033,19 @@ IBM 认为的
       
         
           <h1 id="语言相关"><a href="#语言相关" class="headerlink" title="语言相关"></a>语言相关</h1><h2 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h2><ul>
-<li><p><a href="https://www.npmjs.com/package/koa-router-static">koa-router-static - npm - 和koa-router 兼容的koa-static</a></p>
+<li><p><a href="https://www.npmjs.com/package/koa-router-static" target="_blank" rel="external">koa-router-static - npm - 和koa-router 兼容的koa-static</a></p>
 </li>
-<li><p><a href="https://github.com/node-webot/co-wechat">wechat for koa - github</a></p>
+<li><p><a href="https://github.com/node-webot/co-wechat" target="_blank" rel="external">wechat for koa - github</a></p>
 </li>
-<li><p><a href="https://blog.risingstack.com/writing-native-node-js-modules/">Writing Native Node.js Modules - Node.js at Scale</a></p>
+<li><p><a href="https://blog.risingstack.com/writing-native-node-js-modules/" target="_blank" rel="external">Writing Native Node.js Modules - Node.js at Scale</a></p>
 </li>
-<li><p><a href="https://blog.risingstack.com/async-await-node-js-7-nightly/">Experimenting With async/await in Node.js 7 Nightly</a></p>
+<li><p><a href="https://blog.risingstack.com/async-await-node-js-7-nightly/" target="_blank" rel="external">Experimenting With async/await in Node.js 7 Nightly</a></p>
 </li>
-<li><p><a href="https://blog.risingstack.com/nodejs-at-scale-npm-best-practices/">Node.js at Scale - npm Best Practices</a></p>
+<li><p><a href="https://blog.risingstack.com/nodejs-at-scale-npm-best-practices/" target="_blank" rel="external">Node.js at Scale - npm Best Practices</a></p>
 </li>
-<li><p><a href="https://cnodejs.org/topic/5640b80d3a6aa72c5e0030b6">体验异步的终极解决方案-ES7的Async/Await</a></p>
+<li><p><a href="https://cnodejs.org/topic/5640b80d3a6aa72c5e0030b6" target="_blank" rel="external">体验异步的终极解决方案-ES7的Async/Await</a></p>
 </li>
-<li><p><a href="http://morning.work/page/2016-05/how-to-write-a-nodejs-api-client-package.html">Nodejs 编写API 客户端</a></p>
+<li><p><a href="http://morning.work/page/2016-05/how-to-write-a-nodejs-api-client-package.html" target="_blank" rel="external">Nodejs 编写API 客户端</a></p>
 </li>
 </ul>
           <div class="post-more-link text-center">
@@ -1333,119 +1452,6 @@ IBM 认为的
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/06/cpp-泛型算法参考/" itemprop="url">
-                  cpp-泛型算法参考
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-10-06T20:35:37+08:00" content="2016-10-06">
-              2016-10-06
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/06/cpp-泛型算法参考/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/06/cpp-泛型算法参考/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/10/06/cpp-泛型算法参考/" class="leancloud_visitors" data-flag-title="cpp-泛型算法参考">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">visitors </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>所有的泛型算法(generic algorithm), 除了极少数外, 前两个参数皆为一组iterator, 用来标示欲遍历的容器(container) 元素的范围. 范围系为[iterator1, iterator2)</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> array_size = <span class="number">7</span>;</div><div class="line"><span class="keyword">int</span> iarray[array_size] = &#123;<span class="number">1</span>, <span class="number">10</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">14</span>, <span class="number">8</span>&#125;;</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vec(iarray, iarray + array_size);</div><div class="line"></div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it = find(vec.begin(), vec.end(), value);</div><div class="line"><span class="keyword">int</span> *pi = find(iarray, iarray + array_size, value);</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/06/cpp-泛型算法参考/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1491,7 +1497,7 @@ IBM 认为的
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">53</span>
+              <span class="site-state-item-count">54</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
