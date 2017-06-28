@@ -4,14 +4,14 @@
 
     
   <url>
-    <loc>https://beim.github.io/3017/01/01/2017-%E6%94%B6%E8%97%8F/</loc>
-    <lastmod>2017-06-28T02:37:28.066Z</lastmod>
+    <loc>https://beim.github.io/2017/06/28/RFC2616-note/</loc>
+    <lastmod>2017-06-28T06:53:44.648Z</lastmod>
     <data>
         <display>
-        <title>2017-收藏</title>
-        <pubTime>3017-01-01T02:31:59.000Z</pubTime>
+        <title>RFC2616-note</title>
+        <pubTime>2017-06-28T02:48:40.000Z</pubTime>
         
-        <tag>mark</tag>
+        <tag>Network</tag>
          
          
            
@@ -22,13 +22,30 @@
     
   <url>
     <loc>https://beim.github.io/2017/03/12/%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/</loc>
-    <lastmod>2017-06-27T12:51:46.956Z</lastmod>
+    <lastmod>2017-06-28T03:15:28.106Z</lastmod>
     <data>
         <display>
         <title>实习面试</title>
         <pubTime>2017-03-12T00:38:33.000Z</pubTime>
         
         <tag>Daily</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://beim.github.io/3017/01/01/2017-%E6%94%B6%E8%97%8F/</loc>
+    <lastmod>2017-06-28T02:37:28.066Z</lastmod>
+    <data>
+        <display>
+        <title>2017-收藏</title>
+        <pubTime>3017-01-01T02:31:59.000Z</pubTime>
+        
+        <tag>mark</tag>
          
          
            
@@ -871,14 +888,14 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/08/05/git%E5%91%BD%E4%BB%A4%E4%B9%8B-git-tag/</loc>
+    <loc>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
         <display>
-        <title>git命令之 git tag</title>
-        <pubTime>2016-08-05T02:13:10.000Z</pubTime>
+        <title>ubuntu 启动初始化</title>
+        <pubTime>2016-08-05T02:28:29.000Z</pubTime>
         
-        <tag>git</tag>
+        <tag>linux</tag>
          
          
            
@@ -905,14 +922,14 @@
 
     
   <url>
-    <loc>https://beim.github.io/2016/08/05/ubuntu-%E5%90%AF%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
+    <loc>https://beim.github.io/2016/08/05/git%E5%91%BD%E4%BB%A4%E4%B9%8B-git-tag/</loc>
     <lastmod>2016-08-16T13:46:31.750Z</lastmod>
     <data>
         <display>
-        <title>ubuntu 启动初始化</title>
-        <pubTime>2016-08-05T02:28:29.000Z</pubTime>
+        <title>git命令之 git tag</title>
+        <pubTime>2016-08-05T02:13:10.000Z</pubTime>
         
-        <tag>linux</tag>
+        <tag>git</tag>
          
          
            

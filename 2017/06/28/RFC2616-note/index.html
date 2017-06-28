@@ -66,7 +66,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Network," />
 
 
 
@@ -82,15 +82,19 @@
 
 
 
-<meta name="description" content="平常心，平常心。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="北冥945">
-<meta property="og:url" content="https://beim.github.io/archives/3017/01/index.html">
+<meta name="description" content="RFC Reader rfc2616 9 Method DefinitionsHTTP/1.1 常用方法定义Host 请求头(见14.23) 必须在所有HTTP/1.1 请求中出现。">
+<meta name="keywords" content="Network">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RFC2616-note">
+<meta property="og:url" content="https://beim.github.io/2017/06/28/RFC2616-note/index.html">
 <meta property="og:site_name" content="北冥945">
-<meta property="og:description" content="平常心，平常心。">
+<meta property="og:description" content="RFC Reader rfc2616 9 Method DefinitionsHTTP/1.1 常用方法定义Host 请求头(见14.23) 必须在所有HTTP/1.1 请求中出现。">
+<meta property="og:image" content="https://beim.github.io/images/RFC2616-note/head.jpg">
+<meta property="og:updated_time" content="2017-06-28T06:53:44.648Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="北冥945">
-<meta name="twitter:description" content="平常心，平常心。">
+<meta name="twitter:title" content="RFC2616-note">
+<meta name="twitter:description" content="RFC Reader rfc2616 9 Method DefinitionsHTTP/1.1 常用方法定义Host 请求头(见14.23) 必须在所有HTTP/1.1 请求中出现。">
+<meta name="twitter:image" content="https://beim.github.io/images/RFC2616-note/head.jpg">
 
 
 
@@ -111,11 +115,11 @@
 
 
 
-  <link rel="canonical" href="https://beim.github.io/archives/3017/01/"/>
+  <link rel="canonical" href="https://beim.github.io/2017/06/28/RFC2616-note/"/>
 
   <script type="text/javascript" src="/js/src/beim/test.js"></script>
 
-  <title> Archive | 北冥945 </title>
+  <title> RFC2616-note | 北冥945 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -136,7 +140,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,65 +241,197 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-       
-        
-      Nice! 55 posts in total. Keep on posting.
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
-      
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                RFC2616-note
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-06-28T10:48:40+08:00" content="2017-06-28">
+              2017-06-28
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/06/28/RFC2616-note/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/06/28/RFC2616-note/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/06/28/RFC2616-note/" class="leancloud_visitors" data-flag-title="RFC2616-note">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
+        <p><img src="/images/RFC2616-note/head.jpg" alt="head"></p>
+<p><a href="http://www.rfcreader.com/#rfc2616_line2342" target="_blank" rel="external">RFC Reader rfc2616</a></p>
+<h1 id="9-Method-Definitions"><a href="#9-Method-Definitions" class="headerlink" title="9 Method Definitions"></a>9 Method Definitions</h1><p>HTTP/1.1 常用方法定义<br>Host 请求头(见14.23) 必须在所有HTTP/1.1 请求中出现。</p>
+<a id="more"></a>
+<h2 id="9-1-Safe-and-Idempotent-Methods"><a href="#9-1-Safe-and-Idempotent-Methods" class="headerlink" title="9.1 Safe and Idempotent Methods"></a>9.1 Safe and Idempotent Methods</h2><h3 id="Safe-Methods"><a href="#Safe-Methods" class="headerlink" title="Safe Methods"></a>Safe Methods</h3><p>按照惯例，GET 和HEAD 方法不应该有除了<code>获取retrieval</code> 以外的动作意义。这些方法应该被认为是“安全”的。这允许用户代理以特殊的方式代表其他方法，如POST， PUT 和DELETE，使用户知道要求的是一个可能不安全的动作。</p>
+<p>自然，要保证server 在执行GET 请求时不产生副作用是不可能的；实际上，一些动态资源会考虑这个特性。用户并没有请求这些副作用，因此这些副作用对用户应该是不可见的。</p>
+<h3 id="Idempotent-Methods"><a href="#Idempotent-Methods" class="headerlink" title="Idempotent Methods"></a>Idempotent Methods</h3><p>方法也可以有“幂等”的性质（除了错误或者终止问题），即N&gt;0 次相同的请求和一次请求的副作用效果是一样的。GET，HEAD，PUT 和DELETE 方法是幂等的。同样，OPTIONS 和TRACE 不应该有副作用，因此也是幂等的。</p>
+<p>然而，一个幂等方法执行序列可能不是幂等的。例如，序列其中的一个结果依赖与同一个序列中之后改变的值，这个序列就不是幂等的。<br>没有副作用的序列是幂等的。</p>
+<h2 id="9-2-OPTIONS"><a href="#9-2-OPTIONS" class="headerlink" title="9.2 OPTIONS"></a>9.2 OPTIONS</h2><p>OPTIONS 方法用来表明请求一个请求/响应链上的通信选项信息。这个方法允许客户端去判定与资源相关的选项和/或需求，或服务器的能力，而不需要利用一个资源动作（POST，PUT，DELETE）或资源获取（GET）。</p>
+<p>OPTIONS 方法是不可缓存的。</p>
+<p>如果OPTIONS 请求包含一个entity-body（出现Content-Length 或者Transfer-Encoding），那么必须使用Content-Type 指定媒体类型。</p>
+<p>如果Request-URI 是一个星号(*)，那么OPTIONS 请求适用于服务器上通用的资源而不是特定的资源。因为服务器的通信选项通常依赖于资源，“* ” 请求只在“ping” 或者“no-op” 类型的方法有用。除了测试server 的能力以外干不了别的事情。例如，可以用来测试代理是否符合HTTP/1.1。</p>
+<p>如果Request-URI 不是星号，那么OPTIONS 请求只适用与URI 指定的资源通信时的选项。</p>
+<p>200 响应应该包含任何指定选项性质的头域，这些选项被server 实现，并适用与URI 指定的资源。（例如：Allow）。如果不包含response body，响应必须包含Content-Length 域，且值为0。</p>
+<p>Max-Forwards 请求头域可能用来针对请求链中的特定代理。当代理接到一个OPTIONS 请求，且URI 为absoluteURI，且该请求允许转发时，代理必须检查Max-Forwards 域。如果Max-Forwards 值是0,代理不能转发该消息；于此相反，代理应该回应自己的通信选项。如果Max-Fowards 域值为大于0的整数，则代理在转发时必须将该值减一。如果请求中没有Max-Forwards 域，则转发的请求也不能包含Max-Forwards 域。</p>
+<h2 id="9-3-GET"><a href="#9-3-GET" class="headerlink" title="9.3 GET"></a>9.3 GET</h2><p>GET 方法表示取回URI 所标识的信息。如果URI 指一个数据处理流程，则将处理的结果返回。</p>
+<p>如果请求信息中包含<code>If-Modified-Since</code>, <code>If-Unmodified-Since</code>, <code>If-Match</code>, <code>If-None-Match</code>, 或者<code>If-Range</code> 头，则GET 方法变成<code>conditional GET</code>。conditional GET 通过缓存减少不必要的网络使用。</p>
+<p>如果请求信息中包含<code>Range header</code>，则GET 方法变成<code>partial GET</code>。partial GET 请求只获取部分实体(见14.35)，以减少不必要的网络使用。</p>
+<p>只有当满足HTTP 缓存(见13) 要求时，GET 请求的响应是可缓存的。</p>
+<p>使用表单时的安全考量（见15.1.3）</p>
+<h2 id="9-4-HEAD"><a href="#9-4-HEAD" class="headerlink" title="9.4 HEAD"></a>9.4 HEAD</h2><p>HEAD 方法和GET 相同，除了server 不能在响应中返回message-body。HEAD 请求的响应头包含的元信息metainformation 与GET 请求一致。这个方法用来获取元信息而不进行entity 传输。通常用来测试超链接可用性，可访问性和最近的修改。</p>
+<p>HEAD 请求的响应是可缓存的，响应中包含的信息可能被用来更新对应资源之前的缓存实体。如果有新的值域与当前实体不同（如Content-Length, Content-MD5, ETag 或者Last-Modified），那么缓存必须将缓存条目视为过时的（stale）。</p>
+<h2 id="9-5-POST"><a href="#9-5-POST" class="headerlink" title="9.5 POST"></a>9.5 POST</h2><p>POST 被设计包含下面功能：</p>
+<ul>
+<li>已存在资源的注释</li>
+<li>发布消息给布告版，新闻组，邮件列表等</li>
+<li>提供一个数据块，如提交一个表单给一个数据处理过程</li>
+<li>通过一个追加操作来扩展数据库</li>
+</ul>
+<p>POST 方法实际的功能是由server 决定的，通常依赖于<code>Request-URI</code>。POST 的entity 是这个URI 的从属物，就像文件是包含它的目录的从属物一样。</p>
+<p>POST 方法所执行的动作可能不会对请求的URI 所标识的资源其作用。因此，返回状态码200(OK) 或者204(No Content) 是合适的，这也依赖响应是否包含实体。</p>
+<p>如果资源在源服务器上创建，应该返回201(Created)，并包含一个entity，这个entity 描述了请求的状态，新资源的引用，和一个Location 头（见14.30）</p>
+<p>这个方法的响应是不可缓存的，除非响应中包行合适的<code>Cache-Control</code> 或者<code>Expires</code> 头。然而，303(See Other) 响应可以用来引导用户客户端来获取一个可缓存的资源。</p>
+<p>POST 请求必须遵守8.2 中消息传送的要求。</p>
+<p>安全考量(见15.1.3)</p>
+
+      
+    </div>
+
+    <div>
+      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-3017">3017</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div></div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://ob4a6y748.bkt.clouddn.com/wxzf.jpg" alt="Beim WeChat Pay"/>
+          <p>微信打赏</p>
         </div>
       
       
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://ob4a6y748.bkt.clouddn.com/shoukuan.jpg" alt="Beim Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
+    </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Network/" rel="tag">#Network</a>
+          
+        </div>
+      
 
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/3017/01/01/2017-收藏/" itemprop="url">
-              
-                <span itemprop="name">2017-收藏</span>
-              
-            </a>
-        
-      </h1>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/25/seafile-with-docker/" rel="next" title="seafile-with-docker">
+                <i class="fa fa-chevron-left"></i> seafile-with-docker
+              </a>
+            
+          </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="3017-01-01T10:31:59+08:00"
-              content="3017-01-01" >
-          01-01
-        </time>
-      </div>
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/3017/01/01/2017-收藏/" rel="prev" title="2017-收藏">
+                2017-收藏 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
-    </header>
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -303,6 +439,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -322,8 +469,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/hand_zheng.jpg"
@@ -400,6 +556,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#9-Method-Definitions"><span class="nav-number">1.</span> <span class="nav-text">9 Method Definitions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#9-1-Safe-and-Idempotent-Methods"><span class="nav-number">1.1.</span> <span class="nav-text">9.1 Safe and Idempotent Methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Safe-Methods"><span class="nav-number">1.1.1.</span> <span class="nav-text">Safe Methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Idempotent-Methods"><span class="nav-number">1.1.2.</span> <span class="nav-text">Idempotent Methods</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-2-OPTIONS"><span class="nav-number">1.2.</span> <span class="nav-text">9.2 OPTIONS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-3-GET"><span class="nav-number">1.3.</span> <span class="nav-text">9.3 GET</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-4-HEAD"><span class="nav-number">1.4.</span> <span class="nav-text">9.4 HEAD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-5-POST"><span class="nav-number">1.5.</span> <span class="nav-text">9.5 POST</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -503,7 +670,9 @@
 
 
   
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
@@ -521,9 +690,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'beim';
-      var disqus_identifier = 'archives/3017/01/index.html';
-      var disqus_title = "";
-      var disqus_url = '';
+      var disqus_identifier = '2017/06/28/RFC2616-note/';
+      var disqus_title = "RFC2616-note";
+      var disqus_url = 'https://beim.github.io/2017/06/28/RFC2616-note/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
@@ -534,6 +703,8 @@
       }
 
       run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
       
     </script>
   
