@@ -82,18 +82,18 @@
 
 
 
-<meta name="description" content="RFC Reader rfc2616 9 Method DefinitionsHTTP/1.1 常用方法定义Host 请求头(见14.23) 必须在所有HTTP/1.1 请求中出现。">
+<meta name="description" content="RFC Reader rfc2616 [9 Method Definitions]HTTP/1.1 常用方法定义Host 请求头(见14.23) 必须在所有HTTP/1.1 请求中出现。 GET 和HEAD 可被缓存；OPTIONS，POST，PUT，DELETE 不可被缓存。">
 <meta name="keywords" content="Network">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RFC2616-note">
 <meta property="og:url" content="https://beim.github.io/2017/06/28/RFC2616-note/index.html">
 <meta property="og:site_name" content="北冥945">
-<meta property="og:description" content="RFC Reader rfc2616 9 Method DefinitionsHTTP/1.1 常用方法定义Host 请求头(见14.23) 必须在所有HTTP/1.1 请求中出现。">
+<meta property="og:description" content="RFC Reader rfc2616 [9 Method Definitions]HTTP/1.1 常用方法定义Host 请求头(见14.23) 必须在所有HTTP/1.1 请求中出现。 GET 和HEAD 可被缓存；OPTIONS，POST，PUT，DELETE 不可被缓存。">
 <meta property="og:image" content="https://beim.github.io/images/RFC2616-note/head.jpg">
-<meta property="og:updated_time" content="2017-06-28T06:53:44.648Z">
+<meta property="og:updated_time" content="2017-06-28T12:52:20.691Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RFC2616-note">
-<meta name="twitter:description" content="RFC Reader rfc2616 9 Method DefinitionsHTTP/1.1 常用方法定义Host 请求头(见14.23) 必须在所有HTTP/1.1 请求中出现。">
+<meta name="twitter:description" content="RFC Reader rfc2616 [9 Method Definitions]HTTP/1.1 常用方法定义Host 请求头(见14.23) 必须在所有HTTP/1.1 请求中出现。 GET 和HEAD 可被缓存；OPTIONS，POST，PUT，DELETE 不可被缓存。">
 <meta name="twitter:image" content="https://beim.github.io/images/RFC2616-note/head.jpg">
 
 
@@ -320,27 +320,28 @@
       
         <p><img src="/images/RFC2616-note/head.jpg" alt="head"></p>
 <p><a href="http://www.rfcreader.com/#rfc2616_line2342" target="_blank" rel="external">RFC Reader rfc2616</a></p>
-<h1 id="9-Method-Definitions"><a href="#9-Method-Definitions" class="headerlink" title="9 Method Definitions"></a>9 Method Definitions</h1><p>HTTP/1.1 常用方法定义<br>Host 请求头(见14.23) 必须在所有HTTP/1.1 请求中出现。</p>
+<h1 id="9-Method-Definitions"><a href="#9-Method-Definitions" class="headerlink" title="[9 Method Definitions]"></a>[9 Method Definitions]</h1><p>HTTP/1.1 常用方法定义<br>Host 请求头(见14.23) 必须在所有HTTP/1.1 请求中出现。</p>
+<p>GET 和HEAD 可被缓存；OPTIONS，POST，PUT，DELETE 不可被缓存。</p>
 <a id="more"></a>
-<h2 id="9-1-Safe-and-Idempotent-Methods"><a href="#9-1-Safe-and-Idempotent-Methods" class="headerlink" title="9.1 Safe and Idempotent Methods"></a>9.1 Safe and Idempotent Methods</h2><h3 id="Safe-Methods"><a href="#Safe-Methods" class="headerlink" title="Safe Methods"></a>Safe Methods</h3><p>按照惯例，GET 和HEAD 方法不应该有除了<code>获取retrieval</code> 以外的动作意义。这些方法应该被认为是“安全”的。这允许用户代理以特殊的方式代表其他方法，如POST， PUT 和DELETE，使用户知道要求的是一个可能不安全的动作。</p>
+<h2 id="9-1-Safe-and-Idempotent-Methods"><a href="#9-1-Safe-and-Idempotent-Methods" class="headerlink" title="[9.1 Safe and Idempotent Methods]"></a>[9.1 Safe and Idempotent Methods]</h2><h3 id="Safe-Methods"><a href="#Safe-Methods" class="headerlink" title="Safe Methods"></a>Safe Methods</h3><p>按照惯例，GET 和HEAD 方法不应该有除了<code>获取retrieval</code> 以外的动作意义。这些方法应该被认为是“安全”的。这允许用户代理以特殊的方式代表其他方法，如POST， PUT 和DELETE，使用户知道要求的是一个可能不安全的动作。</p>
 <p>自然，要保证server 在执行GET 请求时不产生副作用是不可能的；实际上，一些动态资源会考虑这个特性。用户并没有请求这些副作用，因此这些副作用对用户应该是不可见的。</p>
 <h3 id="Idempotent-Methods"><a href="#Idempotent-Methods" class="headerlink" title="Idempotent Methods"></a>Idempotent Methods</h3><p>方法也可以有“幂等”的性质（除了错误或者终止问题），即N&gt;0 次相同的请求和一次请求的副作用效果是一样的。GET，HEAD，PUT 和DELETE 方法是幂等的。同样，OPTIONS 和TRACE 不应该有副作用，因此也是幂等的。</p>
 <p>然而，一个幂等方法执行序列可能不是幂等的。例如，序列其中的一个结果依赖与同一个序列中之后改变的值，这个序列就不是幂等的。<br>没有副作用的序列是幂等的。</p>
-<h2 id="9-2-OPTIONS"><a href="#9-2-OPTIONS" class="headerlink" title="9.2 OPTIONS"></a>9.2 OPTIONS</h2><p>OPTIONS 方法用来表明请求一个请求/响应链上的通信选项信息。这个方法允许客户端去判定与资源相关的选项和/或需求，或服务器的能力，而不需要利用一个资源动作（POST，PUT，DELETE）或资源获取（GET）。</p>
+<h2 id="9-2-OPTIONS"><a href="#9-2-OPTIONS" class="headerlink" title="[9.2 OPTIONS]"></a>[9.2 OPTIONS]</h2><p>OPTIONS 方法用来表明请求一个请求/响应链上的通信选项信息。这个方法允许客户端去判定与资源相关的选项和/或需求，或服务器的能力，而不需要利用一个资源动作（POST，PUT，DELETE）或资源获取（GET）。</p>
 <p>OPTIONS 方法是不可缓存的。</p>
 <p>如果OPTIONS 请求包含一个entity-body（出现Content-Length 或者Transfer-Encoding），那么必须使用Content-Type 指定媒体类型。</p>
 <p>如果Request-URI 是一个星号(*)，那么OPTIONS 请求适用于服务器上通用的资源而不是特定的资源。因为服务器的通信选项通常依赖于资源，“* ” 请求只在“ping” 或者“no-op” 类型的方法有用。除了测试server 的能力以外干不了别的事情。例如，可以用来测试代理是否符合HTTP/1.1。</p>
 <p>如果Request-URI 不是星号，那么OPTIONS 请求只适用与URI 指定的资源通信时的选项。</p>
 <p>200 响应应该包含任何指定选项性质的头域，这些选项被server 实现，并适用与URI 指定的资源。（例如：Allow）。如果不包含response body，响应必须包含Content-Length 域，且值为0。</p>
 <p>Max-Forwards 请求头域可能用来针对请求链中的特定代理。当代理接到一个OPTIONS 请求，且URI 为absoluteURI，且该请求允许转发时，代理必须检查Max-Forwards 域。如果Max-Forwards 值是0,代理不能转发该消息；于此相反，代理应该回应自己的通信选项。如果Max-Fowards 域值为大于0的整数，则代理在转发时必须将该值减一。如果请求中没有Max-Forwards 域，则转发的请求也不能包含Max-Forwards 域。</p>
-<h2 id="9-3-GET"><a href="#9-3-GET" class="headerlink" title="9.3 GET"></a>9.3 GET</h2><p>GET 方法表示取回URI 所标识的信息。如果URI 指一个数据处理流程，则将处理的结果返回。</p>
+<h2 id="9-3-GET"><a href="#9-3-GET" class="headerlink" title="[9.3 GET]"></a>[9.3 GET]</h2><p>GET 方法表示取回URI 所标识的信息。如果URI 指一个数据处理流程，则将处理的结果返回。</p>
 <p>如果请求信息中包含<code>If-Modified-Since</code>, <code>If-Unmodified-Since</code>, <code>If-Match</code>, <code>If-None-Match</code>, 或者<code>If-Range</code> 头，则GET 方法变成<code>conditional GET</code>。conditional GET 通过缓存减少不必要的网络使用。</p>
 <p>如果请求信息中包含<code>Range header</code>，则GET 方法变成<code>partial GET</code>。partial GET 请求只获取部分实体(见14.35)，以减少不必要的网络使用。</p>
 <p>只有当满足HTTP 缓存(见13) 要求时，GET 请求的响应是可缓存的。</p>
 <p>使用表单时的安全考量（见15.1.3）</p>
-<h2 id="9-4-HEAD"><a href="#9-4-HEAD" class="headerlink" title="9.4 HEAD"></a>9.4 HEAD</h2><p>HEAD 方法和GET 相同，除了server 不能在响应中返回message-body。HEAD 请求的响应头包含的元信息metainformation 与GET 请求一致。这个方法用来获取元信息而不进行entity 传输。通常用来测试超链接可用性，可访问性和最近的修改。</p>
+<h2 id="9-4-HEAD"><a href="#9-4-HEAD" class="headerlink" title="[9.4 HEAD]"></a>[9.4 HEAD]</h2><p>HEAD 方法和GET 相同，除了server 不能在响应中返回message-body。HEAD 请求的响应头包含的元信息metainformation 与GET 请求一致。这个方法用来获取元信息而不进行entity 传输。通常用来测试超链接可用性，可访问性和最近的修改。</p>
 <p>HEAD 请求的响应是可缓存的，响应中包含的信息可能被用来更新对应资源之前的缓存实体。如果有新的值域与当前实体不同（如Content-Length, Content-MD5, ETag 或者Last-Modified），那么缓存必须将缓存条目视为过时的（stale）。</p>
-<h2 id="9-5-POST"><a href="#9-5-POST" class="headerlink" title="9.5 POST"></a>9.5 POST</h2><p>POST 被设计包含下面功能：</p>
+<h2 id="9-5-POST"><a href="#9-5-POST" class="headerlink" title="[9.5 POST]"></a>[9.5 POST]</h2><p>POST 被设计包含下面功能：</p>
 <ul>
 <li>已存在资源的注释</li>
 <li>发布消息给布告版，新闻组，邮件列表等</li>
@@ -351,8 +352,18 @@
 <p>POST 方法所执行的动作可能不会对请求的URI 所标识的资源其作用。因此，返回状态码200(OK) 或者204(No Content) 是合适的，这也依赖响应是否包含实体。</p>
 <p>如果资源在源服务器上创建，应该返回201(Created)，并包含一个entity，这个entity 描述了请求的状态，新资源的引用，和一个Location 头（见14.30）</p>
 <p>这个方法的响应是不可缓存的，除非响应中包行合适的<code>Cache-Control</code> 或者<code>Expires</code> 头。然而，303(See Other) 响应可以用来引导用户客户端来获取一个可缓存的资源。</p>
-<p>POST 请求必须遵守8.2 中消息传送的要求。</p>
+<p>POST 请求必须遵守（8.2 节）消息传输的要求。</p>
 <p>安全考量(见15.1.3)</p>
+<h2 id="9-6-PUT"><a href="#9-6-PUT" class="headerlink" title="[9.6 PUT]"></a>[9.6 PUT]</h2><p>PUT 方法请求将entity 存储在URI 标识下。如果URI 指定的资源已经存在，那么请求中的entity 被当作已经存在的资源的修改版本。如果不存在，可以为URI 创建新的资源。如果创建新的资源，返回201(Created)。如果修改已存在的资源，返回200(OK) 或者204(No Content)。如果请求URI 不能创建或者修改，应该返回合适的错误响应。entity 的接收者不能忽略任何<code>Content-*</code>（如Content-Range）头，如果不能理解或者没有实现，必须返回501(Not Implemented)。</p>
+<p>如果请求穿过缓存，且Request-URI 标识一个或多个当前缓存entity，那么这些项应该被当作过时的stale。PUT 方法的响应不可缓存。</p>
+<p>POST 和PUT 方法的根本区别是Request-URI 的含义不同。POST 请求的URI 标识的是会处理entity 的资源。该资源可能是数据处理流程，到其他协议的网关，或者单独接收注释的实体。于此相反，PUT 请求的URI 标识的是请求中的entity，用户代理知道URI 的含义，服务器不能将请求应用在其他资源上，如果服务器期望将请求应用于不同的URI，必须发送301(Moved Permanently) 响应；用户代理可以自己决定是否重定向请求。</p>
+<p>一个资源可能被许多不同的URI 标识。因此，一个对通用URI 的PUT 请求可能导致源服务器上多个URI 重定义。</p>
+<p>HTTP/1.1 没有定义PUT 方法对源服务器的状态影响。</p>
+<p>PUT 请求必须遵守（8.2 节）消息传输要求。</p>
+<h2 id="9-7-DELETE"><a href="#9-7-DELETE" class="headerlink" title="[9.7 DELETE]"></a>[9.7 DELETE]</h2><p>DELETE 方法请求源服务器删除Request-URI 标识的资源。这个方法可能源服务器上的人为干涉重写。即使返回成功，客户端也不能保证这个操作被执行。然而，服务器不应该指示成功，除非它将删除资源或者将资源移动到不可访问的位置。</p>
+<p>如果响应中包含描述成功的实体，那么返回200(OK)；如果DELETE 操作还没有执行，返回202(Accepted)；如果已经执行，但响应中不包含eintity，返回204(No Content)。</p>
+<p>如果请求穿过缓存，且Request-URI 标识一个或多个当前缓存entity，那么这些项应该被当作过时的stale。DELETE 方法的响应不可缓存。</p>
+<hr>
 
       
     </div>
@@ -563,7 +574,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#9-Method-Definitions"><span class="nav-number">1.</span> <span class="nav-text">9 Method Definitions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#9-1-Safe-and-Idempotent-Methods"><span class="nav-number">1.1.</span> <span class="nav-text">9.1 Safe and Idempotent Methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Safe-Methods"><span class="nav-number">1.1.1.</span> <span class="nav-text">Safe Methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Idempotent-Methods"><span class="nav-number">1.1.2.</span> <span class="nav-text">Idempotent Methods</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-2-OPTIONS"><span class="nav-number">1.2.</span> <span class="nav-text">9.2 OPTIONS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-3-GET"><span class="nav-number">1.3.</span> <span class="nav-text">9.3 GET</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-4-HEAD"><span class="nav-number">1.4.</span> <span class="nav-text">9.4 HEAD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-5-POST"><span class="nav-number">1.5.</span> <span class="nav-text">9.5 POST</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#9-Method-Definitions"><span class="nav-number">1.</span> <span class="nav-text">[9 Method Definitions]</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#9-1-Safe-and-Idempotent-Methods"><span class="nav-number">1.1.</span> <span class="nav-text">[9.1 Safe and Idempotent Methods]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Safe-Methods"><span class="nav-number">1.1.1.</span> <span class="nav-text">Safe Methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Idempotent-Methods"><span class="nav-number">1.1.2.</span> <span class="nav-text">Idempotent Methods</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-2-OPTIONS"><span class="nav-number">1.2.</span> <span class="nav-text">[9.2 OPTIONS]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-3-GET"><span class="nav-number">1.3.</span> <span class="nav-text">[9.3 GET]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-4-HEAD"><span class="nav-number">1.4.</span> <span class="nav-text">[9.4 HEAD]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-5-POST"><span class="nav-number">1.5.</span> <span class="nav-text">[9.5 POST]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-6-PUT"><span class="nav-number">1.6.</span> <span class="nav-text">[9.6 PUT]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-7-DELETE"><span class="nav-number">1.7.</span> <span class="nav-text">[9.7 DELETE]</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
